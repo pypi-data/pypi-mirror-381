@@ -1,0 +1,11 @@
+bgen/reader.cpython-312-x86_64-linux-musl.so,sha256=qbZXGaGxZiGNBgFXT4GLhKIxEUpMg51mk0EaFI7qWBQ,4310473
+bgen/writer.cpython-312-x86_64-linux-musl.so,sha256=iDkuj3C97EoF-kN5OtLmzleNqY-i0NUa68OSSOf7A9w,2898105
+bgen/__init__.py,sha256=YOTi27jSf2JtXYxFaZaX-O3_DN6bbgikoEZNMrQ-5zY,170
+bgen/index.py,sha256=djXqwSVpo8fDFgiABSO2xfbPecC9xu5WudGTVkuvZco,3789
+bgen-1.9.1.dist-info/WHEEL,sha256=AwHYJA1Do1jwgPIoLQR4DiHSeYY_vU6Ht9Vljq5Yt_M,112
+bgen-1.9.1.dist-info/top_level.txt,sha256=EoVKryxjZc0vkwDWjnOK0IP3dN4fg8YiKIkBcWB9pqw,5
+bgen-1.9.1.dist-info/METADATA,sha256=k8nz9xloPBBr8NOuY0ssQOHpo2cezjjMVy9BOj7OdPA,7298
+bgen-1.9.1.dist-info/RECORD,,
+bgen-1.9.1.dist-info/licenses/LICENSE.txt,sha256=8xqsNFTZC7SFBJM4k6bQw8tPn0zUKQJpZwdY6zSFBW0,1053
+bgen.libs/libstdc++-496613c0.so.6.0.32,sha256=AwZhL5WFT99I2Q6vIxXOhW7qddfuOZ1xecxiP9QTVY4,3494361
+bgen.libs/libgcc_s-a3a07607.so.1,sha256=5ptIUeAzZweNZrFehN0_Bb5B0FcJgux7NbAFoU8vwwo,148041
