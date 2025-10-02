@@ -1,0 +1,13 @@
+name: mmv-regionseg
+display_name: MMV-RegionSeg
+visibility: public
+categories: ["Segmentation", "Image Processing"]
+
+contributions:
+  commands:
+    - id: mmv-regionseg.make_qwidget
+      python_name: mmv_regionseg:ExampleQWidget
+      title: Make example QWidget
+  widgets:
+    - command: mmv-regionseg.make_qwidget
+      display_name: MMV-Region Segmentation

@@ -1,0 +1,14 @@
+napari<0.6.0,>=0.5.0
+numpy<2.0,>=1.23
+qtpy>=2.0
+scikit-image>=0.20
+tifffile>=2023.2.28
+
+[qt]
+pyqt5>=5.15
+
+[testing]
+tox>=4.0
+pytest>=7.0
+pytest-cov>=4.0
+pytest-qt>=4.0
