@@ -1,0 +1,10 @@
+README.md
+main.py
+pyproject.toml
+simple_backup.egg-info/PKG-INFO
+simple_backup.egg-info/SOURCES.txt
+simple_backup.egg-info/dependency_links.txt
+simple_backup.egg-info/entry_points.txt
+simple_backup.egg-info/requires.txt
+simple_backup.egg-info/top_level.txt
+tests/test_main.py

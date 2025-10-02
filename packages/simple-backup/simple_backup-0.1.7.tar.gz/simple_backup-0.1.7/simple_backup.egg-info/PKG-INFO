@@ -1,0 +1,157 @@
+Metadata-Version: 2.4
+Name: simple-backup
+Version: 0.1.7
+Summary: Простой инструмент для создания и восстановления бэкапов проектов в YAML формате
+Author-email: vpuhoff <vpuhoff92@gmail.com>
+Project-URL: Homepage, https://github.com/vpuhoff/simple-backup-tool
+Project-URL: Repository, https://github.com/vpuhoff/simple-backup-tool
+Keywords: backup,yaml,project,restore,cli
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: System :: Archiving :: Backup
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: click>=8.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0; extra == "dev"
+Requires-Dist: flake8>=6.0; extra == "dev"
+Requires-Dist: mypy>=1.0; extra == "dev"
+
+# Simple Backup
+
+Простой инструмент для создания и восстановления бэкапов проектов в YAML формате.
+
+## Установка
+
+```bash
+pip install simple-backup
+```
+
+> **Важно**: После установки используйте команду `simple-backup`, а НЕ `python -m simple-backup`!
+
+## Использование
+
+После установки пакета доступна команда `simple-backup` (НЕ `python -m simple-backup`).
+
+### Создание бэкапа
+
+```bash
+# Создать бэкап текущей директории
+simple-backup create backup.yml
+
+# Создать бэкап конкретной директории
+simple-backup create backup.yml --path /path/to/project
+
+# Подробный вывод
+simple-backup create backup.yml --verbose
+```
+
+### Восстановление из бэкапа
+
+```bash
+# Восстановить проект
+simple-backup restore backup.yml /path/to/restore
+
+# Предварительный просмотр
+simple-backup restore backup.yml /path/to/restore --preview
+
+# Принудительная перезапись
+simple-backup restore backup.yml /path/to/restore --force
+```
+
+## Примеры использования
+
+### Создание бэкапа проекта
+```bash
+cd /path/to/your/project
+simple-backup create project_backup.yml
+```
+
+### Перенос на другой компьютер
+1. Скопируйте `project_backup.yml` на другой компьютер
+2. Установите simple-backup: `pip install simple-backup`
+3. Восстановите проект: `simple-backup restore project_backup.yml /mnt/data/project_folder`
+
+## Поддерживаемые файлы
+
+- `.py` - Python файлы
+- `.md` - Markdown файлы
+- `.yml`, `.yaml` - YAML файлы
+- `.txt` - Текстовые файлы
+- `.json` - JSON файлы
+- `.toml` - TOML файлы
+- `.cfg`, `.ini` - Конфигурационные файлы
+
+## Исключаемые директории
+
+- `.venv`, `__pycache__`, `.git`
+- `node_modules`, `.pytest_cache`, `.mypy_cache`
+- `build`, `dist`
+- Все директории, начинающиеся с `.`
+
+## Особенности
+
+- ✅ Поддержка различных кодировок (UTF-8, CP1251, Latin-1)
+- ✅ Сохранение метаданных (размер файлов, дата изменения)
+- ✅ Прогресс-бары для длительных операций
+- ✅ Цветной вывод и эмодзи для лучшего UX
+- ✅ Предварительный просмотр перед восстановлением
+- ✅ Безопасная обработка ошибок
+
+## Требования
+
+- Python 3.9+
+- PyYAML
+- Click
+
+## Разработка
+
+### Установка для разработки
+
+```bash
+git clone https://github.com/yourusername/simple-backup.git
+cd simple-backup
+pip install -e .
+```
+
+### Тестирование
+
+```bash
+# Локальное тестирование
+simple-backup create test_backup.yml
+simple-backup restore test_backup.yml test_restore
+
+# Запуск тестов
+pytest
+```
+
+### CI/CD
+
+Проект использует GitHub Actions для автоматической сборки и публикации:
+
+- **CI**: Автоматическое тестирование на Python 3.9-3.12
+- **Release**: Автоматическая публикация на PyPI при создании релиза
+- **Auto Release**: Публикация при создании тега `v*`
+
+### Создание релиза
+
+1. Обновите версию в `pyproject.toml`
+2. Создайте тег: `git tag v0.1.0 && git push origin v0.1.0`
+3. GitHub Actions автоматически опубликует пакет на PyPI
+
+**Новый способ (без API токенов):** Настройте PyPI Trusted Publishers в настройках PyPI → Trusted Publishers
+
+Подробные инструкции в [.github/RELEASE_SETUP.md](.github/RELEASE_SETUP.md)
+
+## Лицензия
+
+MIT License
