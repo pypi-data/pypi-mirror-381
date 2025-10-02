@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+0.8.4
+-----
+
+* UA: actualize capabilities and facts at startup
