@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/testoooooo/__init__.py
+src/testoooooo/core.py
+src/testoooooo/log.py
+src/testoooooo/server.py
+src/testoooooo/utils.py
+src/testoooooo.egg-info/PKG-INFO
+src/testoooooo.egg-info/SOURCES.txt
+src/testoooooo.egg-info/dependency_links.txt
+src/testoooooo.egg-info/requires.txt
+src/testoooooo.egg-info/top_level.txt
+tests/test_main.py
