@@ -1,0 +1,3 @@
+[console_scripts]
+hfb = ben_test_package:hello_from_ben
+

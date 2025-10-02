@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: ben-test-package
+Version: 0.1.0
+Summary: Add your description here
+Author: Ben Payton
+Author-email: Ben Payton <bennyp2494@gmail.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+This is a test to publish

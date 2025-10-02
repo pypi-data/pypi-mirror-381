@@ -1,0 +1,6 @@
+ben_test_package/__init__.py,sha256=2e93eced6231a97e55195b8556f0aef223968244250465e7b932103ee0279661,96
+ben_test_package/main.py,sha256=420875af1d1980f799c08fa89c7254b4e1982cc3906f18486e40cd337e801ab7,49
+ben_test_package-0.1.0.dist-info/WHEEL,sha256=03f80d698bb4300c27bcafc3987ea73ef427fcb365e59e808e50d041a7f87b89,78
+ben_test_package-0.1.0.dist-info/entry_points.txt,sha256=863c2da87b60f7504d9e570d3eeeb8ebba28a89785775f6882d4d8a6ecc00bdb,57
+ben_test_package-0.1.0.dist-info/METADATA,sha256=b9fd2c75d8eab9133f2e7fa234671eec0c56acc834bc19bb6e777bb8b2541aff,252
+ben_test_package-0.1.0.dist-info/RECORD,,
