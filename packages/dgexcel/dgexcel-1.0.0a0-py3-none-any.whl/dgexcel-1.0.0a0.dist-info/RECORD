@@ -1,0 +1,11 @@
+dgexcel/__init__.py,sha256=UPjc2OfxDpffkj84BOKZZBgvBdP2UWEv1Z7fPYxCHJU,485
+dgexcel/base.py,sha256=xStvVHWG9h5WMvaB7PfuWlB6aMjIZt9Xc7GNXFAg7no,5707
+dgexcel/constants.py,sha256=Vs5xk0kmdkRL5SCGN_vccNBEgVX6aekc5-__gUf-ZzM,1405
+dgexcel/excel.py,sha256=Tzba0RD9kv9NF1OX_KKahYzUQUbxlF--QHP7LX1oY1o,18715
+dgexcel/excel_x.py,sha256=oWsq7bdHeYSJ8CqlmFiyTizfY5Yt5-oOAj1UOmPwEIs,11411
+dgexcel/utils.py,sha256=Dqaw2V-0UBGqQXiX689z2P-Ldwq-cBdn1TwUy_z66IE,2948
+dgexcel-1.0.0a0.dist-info/licenses/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+dgexcel-1.0.0a0.dist-info/METADATA,sha256=5pr1VsgOSHiFPnEf-Q_o1YWKA9NG36VU8Uo5WDFHh_M,9506
+dgexcel-1.0.0a0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+dgexcel-1.0.0a0.dist-info/top_level.txt,sha256=dRtDFvWeLMeK1BUOVfhaT7cYBfnBhPVP2Hx9pGWQzGk,8
+dgexcel-1.0.0a0.dist-info/RECORD,,
