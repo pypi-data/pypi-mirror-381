@@ -1,0 +1,2 @@
+[console_scripts]
+emoted = emoted.cli:main

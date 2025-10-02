@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+EmoTed.egg-info/PKG-INFO
+EmoTed.egg-info/SOURCES.txt
+EmoTed.egg-info/dependency_links.txt
+EmoTed.egg-info/entry_points.txt
+EmoTed.egg-info/requires.txt
+EmoTed.egg-info/top_level.txt
+emoted/__init__.py
+emoted/cli.py
+emoted/pi2.py

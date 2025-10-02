@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "EmoTed"
+version = "0.1.0"
+description = "Emoted — async extension/path checker (use responsibly)"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{name = "Tuhin Khan", email = "7uh1n1995@gmail.com"}]
+license = {text = "MIT"}
+dependencies = [
+  "aiohttp>=3.8.1"
+]
+
+[project.scripts]
+emoted = "emoted.cli:main"
