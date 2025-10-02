@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: ske
+Version: 0.1.1
+Summary: Simple XOR file encryptor (.ske)
+Author: sky
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-python
+Dynamic: summary
+
+# SKE
+
+Prosty program do szyfrowania plikĂłw XOR-em.
+
+## Instalacja
+
+```bash
+pip install .

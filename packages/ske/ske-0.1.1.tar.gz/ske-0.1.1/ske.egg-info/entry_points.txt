@@ -1,0 +1,2 @@
+[console_scripts]
+ske = ske.main:main
