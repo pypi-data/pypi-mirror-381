@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: aiophyn
+Version: 2025.10.1
+Summary: An asynchronous library for Phyn Smart Water devices
+License-Expression: MIT
+License-File: LICENSE
+Author: MizterB
+Author-email: 5458030+MizterB@users.noreply.github.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Dist: aiohttp (>=3.8.1,<4.0.0)
+Requires-Dist: boto3 (>=1.20.24,<2.0.0)
+Requires-Dist: pycognito (>=2022.8.0,<2023.0.0)
+Project-URL: Homepage, https://github.com/jordanruthe/aiophyn
+Project-URL: Issues, https://github.com/jordanruthe/aiophyn/issues
+Description-Content-Type: text/markdown
+
+# aiophyn
+
+An asynchronous library for Phyn Smart Water devices including Kohler's H2Wise+.
+
+This library is initially focused on supporting a Phyn integration for Home Assistant, providing:
+
+- Device state
+- Water consumption
+- Shutoff valve control
+- Get and set away mode
+
+## Acknowledgements
+
+This work follows the example of @bachya's excellent [aioflo](https://github.com/bachya/aioflo) library for Moen Flo devices.
+
