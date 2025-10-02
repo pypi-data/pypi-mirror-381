@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+TorchHook.egg-info/PKG-INFO
+TorchHook.egg-info/SOURCES.txt
+TorchHook.egg-info/dependency_links.txt
+TorchHook.egg-info/requires.txt
+TorchHook.egg-info/top_level.txt
+torchhook/__init__.py
+torchhook/hookmanager.py
+torchhook/utils.py
