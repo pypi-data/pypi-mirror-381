@@ -1,0 +1,10 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aws-durable-execution-sdk-python"
+version = "0.0.1-alpha"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/foo"]
