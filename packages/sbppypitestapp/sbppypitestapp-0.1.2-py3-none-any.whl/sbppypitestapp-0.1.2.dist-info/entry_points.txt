@@ -1,0 +1,3 @@
+[console_scripts]
+sbppypitestapp = sbppypitestapp.__main__:main
+
