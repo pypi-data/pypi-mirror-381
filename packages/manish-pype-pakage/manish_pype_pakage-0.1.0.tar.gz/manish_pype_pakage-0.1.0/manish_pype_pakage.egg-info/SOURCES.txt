@@ -1,0 +1,9 @@
+README.md
+setup.py
+manish_pype_pakage/__init__.py
+manish_pype_pakage/sigmoid_function.py
+manish_pype_pakage.egg-info/PKG-INFO
+manish_pype_pakage.egg-info/SOURCES.txt
+manish_pype_pakage.egg-info/dependency_links.txt
+manish_pype_pakage.egg-info/requires.txt
+manish_pype_pakage.egg-info/top_level.txt
