@@ -1,0 +1,13 @@
+fractal_client/__init__.py,sha256=mGoPL5QC9hw_tGv5lsEM4M_0NMrtig40cMpwnjY5kto,23
+fractal_client/authclient.py,sha256=7hMHC4Z2cqLoENsxDJogWwhFI841E9OeVWpcCw1reyk,2788
+fractal_client/client.py,sha256=Z_XbU9ue9oXNMK6KrhMup8eqvBsYwx6VkjHX5rQO_vw,5168
+fractal_client/config.py,sha256=aAdLla0k_SKZxzb0N84TODzZHxsAKEpgJ4qZyu7693k,1021
+fractal_client/interface.py,sha256=5GFZ03rSc2us9lQ1hepV9e4Y1CS7wsrBl9UaM-kzLOA,363
+fractal_client/parser.py,sha256=WHEFHV6ykBn7GTtaXEb-3VhVD5SLJkY8ZW2vByqo8oE,28106
+fractal_client/response.py,sha256=V2hdBLbk4ZZ9YyuV-2Kc5izyrVQjpOf0f5jvhdexv4E,3396
+fractal_client-2.10.1.dist-info/licenses/LICENSE,sha256=QKAharUuhxL58kSoLizKJeZE3mTCBnX6ucmz8W0lxlk,1576
+fractal_client-2.10.1.dist-info/METADATA,sha256=LGoH2Ejha6KgQkoKAoQskjzKoVziRyf24zts5YFBsUk,3510
+fractal_client-2.10.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+fractal_client-2.10.1.dist-info/entry_points.txt,sha256=Mvee6JmKWiL5Ja0MEID5MPnZUSlKTbPYLhvYRECSCMQ,55
+fractal_client-2.10.1.dist-info/top_level.txt,sha256=EhySRAPsFD3jqw96JW8NesW2IxiSus8_TsQCy9s6JZ8,15
+fractal_client-2.10.1.dist-info/RECORD,,
