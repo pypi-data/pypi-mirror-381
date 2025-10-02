@@ -1,0 +1,13 @@
+ci/transparency/ptag/spec/__init__.py,sha256=eALT06GVsi_cqQwarqMw56qyORr7lFL-uErX9GPi5xE,137
+ci/transparency/ptag/spec/__pycache__/__init__.cpython-312.pyc,sha256=aKiKsbBEpAa-_ysY_CTI3jpawencDOsvAO8HMgigX3k,373
+ci/transparency/ptag/spec/schemas/ptag.schema.json,sha256=DTUHQESMcg3nsUtseo0QTinaQqbmkEtdQlI-b3h8GCA,3744
+ci/transparency/ptag/spec/schemas/ptag_api.openapi.yaml,sha256=sUNlbv_XMk5QCwRoPkVUXZ3dojh5pH8RHz4RjuJfovc,7690
+ci/transparency/ptag/spec/schemas/ptag_series.schema.json,sha256=g1twsglJLzTiL_w_hKzL3VxeRRenqdTasfNimMIOznQ,7482
+civic_transparency_ptag_spec-0.2.2.data/data/share/civic-transparency-ptag-spec/CITATION.cff,sha256=d6woVoPCCJfy1wOSk6cGNsCs0DNFZzphdJcicUWQCZ0,437
+civic_transparency_ptag_spec-0.2.2.data/data/share/civic-transparency-ptag-spec/LICENSE,sha256=k5rPGIMKa2A4ucUornVXNNnn4ODYJzw44y1lSSgNMmE,1083
+civic_transparency_ptag_spec-0.2.2.data/data/share/civic-transparency-ptag-spec/README.md,sha256=K6HbmTCr9zqUGYSZgCT2-p2_VKXzhGMbNnhjHDpXhJI,2959
+civic_transparency_ptag_spec-0.2.2.dist-info/licenses/LICENSE,sha256=k5rPGIMKa2A4ucUornVXNNnn4ODYJzw44y1lSSgNMmE,1083
+civic_transparency_ptag_spec-0.2.2.dist-info/METADATA,sha256=RAD4kwJCIHvTC_L9MMJ2cqHhKLvMYLZ9C0rQ3MYAQuI,5275
+civic_transparency_ptag_spec-0.2.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+civic_transparency_ptag_spec-0.2.2.dist-info/top_level.txt,sha256=4Yz6-7DIt5CedRfM7s3dxN7HstNIP9KBMBXro1MaVu0,3
+civic_transparency_ptag_spec-0.2.2.dist-info/RECORD,,
