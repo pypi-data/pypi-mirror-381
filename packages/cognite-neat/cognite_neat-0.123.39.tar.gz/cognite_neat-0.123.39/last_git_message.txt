@@ -1,0 +1,34 @@
+Improve raw extractor (#1302)
+
+# Description
+
+Previously RAW extractor was not converting string content of keys to
+ideal type, this was only done for nested values (if value was dict).
+Furthermore, if key (e.g., `asset`) was holding connection (`Asset001`),
+we were creating two triples:
+
+```
+ns:instance_001 ns:asset ns:Asset001 .
+ns:instance_001 ns:asset Asset001'^^xsd:string .
+```
+
+which downstream when we are doing data model inference we would get
+that property `asset` is of multi value type (`string`, `connection`)
+
+In this PR these issues are now fixed, i.e. conversion to the ideal type
+is done for any string value, while if key hold connection only triple
+representing it is created (and not one holding data)
+
+## Bump
+
+- [x] Patch
+- [ ] Minor
+- [ ] Skip
+
+## Changelog
+### Improved
+
+- Improved RAW extractor to convert all string values (not just nested)
+to their ideal types and to generate only a single triple for
+connection-type keys, eliminating redundant string-typed triples that
+previously caused incorrect multi-type inferences.
