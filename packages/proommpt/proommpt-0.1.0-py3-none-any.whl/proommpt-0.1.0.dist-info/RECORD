@@ -1,0 +1,11 @@
+proommpt-0.1.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+proompt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+proompt/data.py,sha256=pZEBCk88Prs7ukAr9P64x-0IGsVtFXiioaheLjyv-G4,5902
+proompt/base/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+proompt/base/context.py,sha256=IgWitBbDdXVthkRKhSrcgmgoW_L9KY-ejC_TYM8_q_E,1918
+proompt/base/prompt.py,sha256=VVCxn0OlR7Gn2h6wtOXxhoF_7eQ8G4FTKm0cTP8K2gc,2279
+proompt/base/provider.py,sha256=ZMOPBnDunwuT0NODaQt1DryidwEP9UHkNsZCcGucOno,1001
+proommpt-0.1.0.dist-info/METADATA,sha256=YdOvXc_DbYQVus29w1TBW5VvpevZ3kGXe1cjO2tfCnc,10241
+proommpt-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+proommpt-0.1.0.dist-info/top_level.txt,sha256=p9OP5lVVCrtAIiK3gCUYzu3p_xcjYgKoDRbUYIxRRzI,8
+proommpt-0.1.0.dist-info/RECORD,,
