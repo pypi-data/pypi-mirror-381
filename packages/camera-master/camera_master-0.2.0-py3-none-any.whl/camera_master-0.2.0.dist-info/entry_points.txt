@@ -1,0 +1,6 @@
+[console_scripts]
+camera-attendance = camera_master.cli:attendance_cli
+camera-dashboard = camera_master.cli:dashboard_cli
+camera-emotion = camera_master.cli:emotion_cli
+camera-gesture = camera_master.cli:gesture_cli
+camera-master = camera_master.cli:main
