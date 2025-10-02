@@ -1,0 +1,6 @@
+nemo_library
+platformdirs
+bump2version
+pyodbc
+prefect
+duckdb
