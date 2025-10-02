@@ -1,0 +1,17 @@
+[project]
+name = "ben-test-package"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ben Payton", email = "bennyp2494@gmail.com" }
+]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+hfb = "ben_test_package:hello_from_ben"
+
+[build-system]
+requires = ["uv_build>=0.8.2,<0.9.0"]
+build-backend = "uv_build"
