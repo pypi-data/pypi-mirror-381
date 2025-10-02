@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+Ferrum/__init__.py
+Ferrum.egg-info/PKG-INFO
+Ferrum.egg-info/SOURCES.txt
+Ferrum.egg-info/dependency_links.txt
+Ferrum.egg-info/top_level.txt
