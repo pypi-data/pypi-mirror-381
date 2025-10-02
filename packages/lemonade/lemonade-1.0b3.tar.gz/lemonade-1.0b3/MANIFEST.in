@@ -1,0 +1,4 @@
+include MANIFEST.in
+include README.md
+include lemonade/lempar.tmpl
+recursive-include examples *.py *.y
