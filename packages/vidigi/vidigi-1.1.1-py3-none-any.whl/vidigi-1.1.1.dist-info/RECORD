@@ -1,0 +1,11 @@
+vidigi/__init__.py,sha256=8l-jwRLsMWe5bFBzdTCIvqQGvLmz4PiyuPkrsjMIebc,117
+vidigi/animation.py,sha256=ivl-Id_lKWgVUvk4KBLU_QJZrTnxtG-8bBL-4CX0q_Y,64865
+vidigi/ciw.py,sha256=4pNhqrj5n_YRbEupHsLPbb6W4PL5zFU8GRMr1wupSio,4387
+vidigi/logging.py,sha256=b8lsHPckEZgF4MVc_k8l2l3xrq6PQJey_-aqxhsjZeg,37399
+vidigi/prep.py,sha256=HsF0SPh1QQaywBkGAHZrIkSPyG1fQWbcPrsNGC_mBDA,37583
+vidigi/resources.py,sha256=tS5HF0U2u4hQk_OPrdCw3L2erfiGRzfsHNjCb9ipZd0,34636
+vidigi/utils.py,sha256=IzEUkVyFR1Ta4TUqj41p8KH8BiWI_aYO7m7dxId2iM4,7489
+vidigi-1.1.1.dist-info/METADATA,sha256=JG0woIhkZIjfNxdJDY6NJ5WSo_lJpgk0Jx-MzUylfa4,11048
+vidigi-1.1.1.dist-info/WHEEL,sha256=C2FUgwZgiLbznR-k0b_5k3Ai_1aASOXDss3lzCUsUug,87
+vidigi-1.1.1.dist-info/licenses/LICENSE.md,sha256=P0iZhbxSNUeLS8804JK-0Si8u0kG6Mn3YZBm2dEpQVc,1090
+vidigi-1.1.1.dist-info/RECORD,,
