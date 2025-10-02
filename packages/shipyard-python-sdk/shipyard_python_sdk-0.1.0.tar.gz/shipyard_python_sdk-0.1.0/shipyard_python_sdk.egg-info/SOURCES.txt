@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+shipyard/__init__.py
+shipyard/client.py
+shipyard/filesystem.py
+shipyard/python.py
+shipyard/session.py
+shipyard/shell.py
+shipyard/types.py
+shipyard/utils.py
+shipyard_python_sdk.egg-info/PKG-INFO
+shipyard_python_sdk.egg-info/SOURCES.txt
+shipyard_python_sdk.egg-info/dependency_links.txt
+shipyard_python_sdk.egg-info/requires.txt
+shipyard_python_sdk.egg-info/top_level.txt
