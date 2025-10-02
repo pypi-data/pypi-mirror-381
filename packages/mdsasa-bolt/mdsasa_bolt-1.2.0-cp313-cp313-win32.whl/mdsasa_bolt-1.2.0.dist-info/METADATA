@@ -1,0 +1,159 @@
+Metadata-Version: 2.4
+Name: mdsasa_bolt
+Version: 1.2.0
+Requires-Dist: biopython>=1.85
+Requires-Dist: freesasa>=2.2.1
+Requires-Dist: mdanalysis>=2.9.0
+Requires-Dist: numpy>=2.3.1
+Requires-Dist: pytest>=8.4.1
+Requires-Dist: rust-sasa-python>=0.2.5
+License-File: LICENSE
+Summary: This library allows the calculation of a solvent-accessible-surface area of a trajectory
+Keywords: molecular simulations,science,bioinformatics
+Author-email: Maxwell Campbell <max@hearthindustries.io>
+Maintainer-email: Maxwell Campbell <max@hearthindustries.io>
+License-Expression: GPL-2.0
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# MDSASA-Bolt ⚡️
+
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/maxall41/mdsasa-bolt/python.yml)
+![PyPI - Version](https://img.shields.io/pypi/v/mdsasa-bolt)
+![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/mdsasa-bolt)
+
+MDSASA-Bolt is a **high-performance Python library** for computing solvent accessible surface area (SASA) of molecular dynamics trajectories. It's a drop-in replacement for mdakit-sasa that leverages RustSASA under the hood to deliver dramatically improved performance while maintaining full compatibility with MDAnalysis workflows.
+
+# Features
+
+- ⚡️ **Ludicrous Speed**: **17x faster** than mdakit-sasa.
+- 🔄 **Drop-in Replacement**: Compatible with existing mdakit-sasa workflows.
+- 🧬 **MDAnalysis Integration**: Seamlessly works with MDAnalysis Universe and AtomGroup objects.
+- 🦀 **Powered by [RustSASA](https://github.com/maxall41/RustSASA)**: Leverages Rust's performance and safety.
+- 🧪 **Validated**: Tested against Freesasa/mdakit_sasa.
+- 📊 **Trajectory Analysis**: Built for analyzing entire MD trajectories efficiently
+- 🐍 **Pure Python API**: Familiar interface for Python developers
+
+# Quick Start
+
+## Installation
+
+```bash
+pip install mdsasa-bolt
+```
+
+## Basic Usage
+
+```python
+import MDAnalysis as mda
+from mdsasa_bolt import SASAAnalysis
+
+# Load your trajectory
+u = mda.Universe("topology.pdb", "trajectory.dcd")
+
+# Create SASA analysis
+sasa_analysis = SASAAnalysis(u, select="protein")
+
+# Run the analysis
+sasa_analysis.run()
+
+# Access results
+print(f"Mean total SASA: {sasa_analysis.results.mean_total_area:.2f} Ų")
+print(f"SASA per frame: {sasa_analysis.results.total_area}")
+print(f"SASA per residue: {sasa_analysis.results.residue_area}")
+```
+
+## Advanced Usage
+
+```python
+import MDAnalysis as mda
+from mdsasa_bolt import SASAAnalysis
+
+# Load trajectory
+u = mda.Universe("system.gro", "trajectory.xtc")
+
+# Analyze specific selection with custom frame range
+sasa_analysis = SASAAnalysis(
+    u,
+    select="resname LYS or resname ARG",  # Only basic residues
+)
+
+# Run analysis
+sasa_analysis.run(
+    start=100,                     # Start from frame 100
+    stop=1000,                     # End at frame 1000
+    step=10,                       # Analyze every 10th frame
+    probe_radius=1.4,              # Custom probe radius Default:1.4
+    n_points=960                   # Custom number of points Default: 960
+)
+
+# Results are available as numpy arrays
+total_sasa_per_frame = sasa_analysis.results.total_area
+residue_sasa_matrix = sasa_analysis.results.residue_area  # Shape: (n_frames, n_residues)
+mean_total_sasa = sasa_analysis.results.mean_total_area
+```
+
+# Performance Benchmarks 🚀
+
+Benchmarks were performed using molecular dynamics data for [4IAQ from the GPCRMD database](https://www.gpcrmd.org/view/85/). Hypefine (w/ runs =3) was used to measure the time taken. Results:
+
+| Method | Time | Speedup |
+|--------|------|---------|
+| **mdsasa-bolt** | **25.939 s ±  0.914 s** | **17x faster** |
+| mdakit-sasa | 450.930 s ±  1.215 s  | baseline |
+
+*Test system: MDAnalysisTests trajectory data*
+
+# Validation 📊
+
+MDSASA-Bolt has been thoroughly validated against reference implementations to ensure accuracy:
+
+![Comparing SASA results](https://github.com/maxall41/mdsasa-bolt/blob/main/bench/sasa_comparison.png)
+
+
+MDSASA-Bolt acheives a pearson correlation > 0.99 and an RMSE of 209.14 when compared against mdakit_sasa.
+
+# API Reference
+
+## SASAAnalysis
+
+The main analysis class that integrates with MDAnalysis.
+
+### Parameters
+
+- **universe_or_atomgroup** (*Universe* or *AtomGroup*): MDAnalysis Universe or AtomGroup to analyze
+- **select** (*str*, optional): Selection string for atoms (default: "all")
+- **start** (*int*, optional): First frame to analyze
+- **stop** (*int*, optional): Last frame to analyze
+- **step** (*int*, optional): Step size between frames
+
+### Results
+
+After calling `run()`, results are available in the `results` attribute:
+
+- **total_area** (*numpy.ndarray*): Total SASA for each frame
+- **residue_area** (*numpy.ndarray*): SASA per residue for each frame (shape: n_frames × n_residues)
+- **mean_total_area** (*float*): Mean total SASA across all frames
+
+# Contributing
+
+Contributions are welcome! Please feel free to submit pull requests and open issues. As this is an actively developed library, we encourage sharing your thoughts, ideas, suggestions, and feedback.
+
+# ⚠️ A Note on Compatibility with mdakit_sasa
+
+Inferring the element of an atom can be quite complicated. mdsasa-bolt does it's best to match the freesasa element inference algorithm, but it may not always be accurate, and may throw an error in some cases where Freesasa will work. Because of this we recommend that you use input files with explicit element information whenever possible.
+
+Also note that by default RustSASA **includes hydrogen atoms in SASA calculations** where FreeSASA excludes them.
+
+
+# License
+
+This project is licensed under the GNU General Public License v2.0 - see the [LICENSE](LICENSE) file for details.
+
+# Acknowledgments
+
+- Built on top of [RustSASA](https://github.com/maxall41/RustSASA) library
+- Integrates seamlessly with [MDAnalysis](https://www.mdanalysis.org/)
+- Inspired by the [mdakit-sasa](https://github.com/MDAnalysis/mdakit-sasa) project
+
