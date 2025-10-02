@@ -1,0 +1,2 @@
+image_path,PatientID,coordX,coordY,coordZ,label
+/home/suraj/Repositories/TumorImagingBench/data/dummy_0.nii.gz,61362,45.0,32.0,19.0,0
