@@ -1,0 +1,8 @@
+torchhook/__init__.py,sha256=WHbVcpzJnAmSQYBowVcGi2QVwDDuY-qv5jaGMeceBd8,70
+torchhook/hookmanager.py,sha256=qfqw0nlu7IZG6a4NlLZmtgvVLUG7BE6sWL8PizUlJUQ,18024
+torchhook/utils.py,sha256=SF5Hin9eTcU8R0lUuz7GBrzUG27d9qtQcRE14iJIG68,4994
+TorchHook-0.2.7.dist-info/LICENSE,sha256=NJddJc5LBDuOHJOGorpKWSas949IMBwh5CZgUNHoyDE,1068
+TorchHook-0.2.7.dist-info/METADATA,sha256=ElVMFu1PAYCH-kalJYIlhU-r1WdY7NedvP-6GW2aBmc,2930
+TorchHook-0.2.7.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+TorchHook-0.2.7.dist-info/top_level.txt,sha256=MlynFasxBwws09x2_5s-K0DrdCTOHJ7J0KxJwkyWoNk,10
+TorchHook-0.2.7.dist-info/RECORD,,
