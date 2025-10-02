@@ -1,0 +1,8 @@
+logie/__init__.py,sha256=XDbdaHsBp3aJ0n5xo37ZY-4x9dt47itLyKTxO9ibiwM,156
+logie/logutils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logie/logutils/logutils.py,sha256=beZFp6mzNmzeiQgybccmR9LSPfWxdwf5UUZPgyi7h98,7913
+test/test.py,sha256=VXsWV0_WItdBubhjcwxDzWZxjH2sXmaQ1SC1BaKApOA,450
+logie-0.1.7.dist-info/METADATA,sha256=21pdP7zOyYr6asQf3R9Z800gUW0MAU1D5kIrmUbPOhY,682
+logie-0.1.7.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+logie-0.1.7.dist-info/top_level.txt,sha256=qAooIcRJfPSmm-L7jNooyerHkM-Q9QMG7mu0gApIYbo,11
+logie-0.1.7.dist-info/RECORD,,
