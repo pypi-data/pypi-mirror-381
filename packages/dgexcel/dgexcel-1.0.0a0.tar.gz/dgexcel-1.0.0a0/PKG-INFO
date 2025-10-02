@@ -1,0 +1,328 @@
+Metadata-Version: 2.4
+Name: dgexcel
+Version: 1.0.0a0
+Summary: Пакет для работы с Excel файлами
+Home-page: https://gitlab.com/gng-group/dgdb.git
+Author: Malanris
+Author-email: Roman Rasputin <admin@roro.su>
+License: MIT License
+Project-URL: Homepage, https://gitlab.com/gng-group/dgexcel
+Project-URL: BugTracker, https://gitlab.com/gng-group/dgexcel/issues
+Keywords: sqlalchemy,client,postgresql,mssql,oracle
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Distributed Computing
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openpyxl>=3.0.0
+Provides-Extra: xls
+Requires-Dist: xlwt>=1.3.0; extra == "xls"
+Requires-Dist: xlrd>=2.0.0; extra == "xls"
+Provides-Extra: full
+Requires-Dist: openpyxl>=3.0.0; extra == "full"
+Requires-Dist: xlsxwriter>=3.0.0; extra == "full"
+Requires-Dist: xlwt>=1.3.0; extra == "full"
+Requires-Dist: xlrd>=2.0.0; extra == "full"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+
+# DGExcel
+
+Пакет для работы с Excel файлами с модульными зависимостями. Поддерживает как современные (.xlsx), так и старые (.xls) форматы Excel.
+
+## Особенности
+
+- 🚀 **Простой API** - единый интерфейс для всех форматов Excel
+- 📦 **Модульные зависимости** - устанавливайте только то, что нужно
+- ⚡ **Автоматическое определение формата** - по расширению файла
+- 🎨 **Поддержка стилей** - границы, шрифты, выравнивание
+- 📊 **Чтение и запись** - полная поддержка операций с Excel файлами
+- 🔄 **Обратная совместимость** - работа со старыми .xls файлами
+
+## Установка
+
+### Базовая установка (только .xlsx)
+```bash
+pip install dgexcel
+```
+
+### С поддержкой .xls файлов
+```bash
+pip install dgexcel[xls]
+```
+
+### Полная установка (все возможности)
+```bash
+pip install dgexcel[full]
+```
+
+## Быстрый старт
+
+### Создание простого Excel файла
+
+```python
+from dgexcel import create_excel
+
+data = [
+    {'name': 'John', 'age': 25, 'city': 'New York'},
+    {'name': 'Jane', 'age': 30, 'city': 'London'},
+    {'name': 'Bob', 'age': 35, 'city': 'Tokyo'}
+]
+
+# Создание xlsx файла (по умолчанию)
+create_excel(data, 'people.xlsx', header=['Name', 'Age', 'City'])
+
+# Создание xls файла (требует [xls])
+create_excel(data, 'people.xls', header=['Name', 'Age', 'City'])
+```
+
+### Использование классов ExcelX и Excel
+
+```python
+from dgexcel import ExcelX, Excel
+
+# Работа с xlsx файлами
+excel_x = ExcelX()
+excel_x.create_simple_excel(
+    'data.xlsx', 
+    [{'product': 'Laptop', 'price': 999}, {'product': 'Mouse', 'price': 25}],
+    column_names=['Product', 'Price'],
+    worksheet='Products'
+)
+
+# Работа с xls файлами (требует [xls])
+excel_old = Excel()
+excel_old.create_simple_excel(
+    'data.xls',
+    [{'product': 'Keyboard', 'price': 75}, {'product': 'Monitor', 'price': 200}],
+    column_names=['Product', 'Price'],
+    worksheet='Products'
+)
+```
+
+### Чтение Excel файлов
+
+```python
+from dgexcel import read_excel
+
+# Чтение xlsx файла
+data_xlsx = read_excel('people.xlsx', ['name', 'age', 'city'])
+print(data_xlsx)
+
+# Чтение xls файла (требует [xls])
+data_xls = read_excel('people.xls', ['name', 'age', 'city'])
+print(data_xls)
+```
+
+## Расширенное использование
+
+### Работа со стилями
+
+```python
+from dgexcel import ExcelX, BORDER, FONT
+
+excel = ExcelX()
+
+# Определение стилей
+header_style = {
+    'bold': True,
+    'font': {'size': 12, 'color': 'FFFFFF'},
+    'border': BORDER['all'],
+    'alignment': {'horizontal': 'center'}
+}
+
+cell_style = {
+    'border': BORDER['all'],
+    'alignment': {'horizontal': 'left'}
+}
+
+# Создание файла со стилями
+data = [['Laptop', 999], ['Mouse', 25]]
+excel.create_simple_excel(
+    'styled.xlsx',
+    data,
+    column_names=['Product', 'Price'],
+    styles=[header_style, cell_style]
+)
+```
+
+### Построчная работа с данными
+
+```python
+from dgexcel import ExcelX
+
+excel = ExcelX()
+excel.open_file('detailed.xlsx')
+
+# Выбор листа
+excel.select_worksheet('Data')
+
+# Добавление данных по ячейкам
+excel.add_cell(1, 1, 'Product', {'bold': True})
+excel.add_cell(1, 2, 'Price', {'bold': True})
+
+# Добавление строки
+excel.add_row(2, ['Laptop', 999])
+
+# Добавление столбца
+excel.add_column(3, [25, 75, 150], start_row=2)
+
+# Объединение ячеек
+excel.add_merge_cell(5, 1, 5, 3, 'Total', {'bold': True})
+
+# Сохранение файла
+excel.save_file()
+```
+
+### Настройка размеров ячеек
+
+```python
+from dgexcel import ExcelX
+
+excel = ExcelX()
+excel.open_file('formatted.xlsx')
+
+# Установка ширины столбцов
+excel.set_columns_width([20, 15, 10])
+
+# Установка высоты строк
+excel.set_rows_height([25, 20, 20, 20])
+
+# Настройка отдельной ячейки
+excel.set_cell_dimension(1, 1, height=30, width=25)
+
+excel.save_file()
+```
+
+## API Reference
+
+### Основные классы
+
+#### `ExcelX(filename=None)`
+Класс для работы с .xlsx файлами.
+
+**Методы:**
+- `open_file(filename, rewrite=True)` - открытие/создание файла
+- `create_simple_excel()` - быстрое создание файла
+- `add_worksheet(name)` - добавление листа
+- `select_worksheet(name)` - выбор активного листа
+- `add_cell(row, col, value, style)` - добавление ячейки
+- `add_row(row, values, start_col, styles)` - добавление строки
+- `add_column(col, values, start_row, styles)` - добавление столбца
+- `read_file()` - чтение данных из файла
+- `save_file()` - сохранение файла
+
+#### `Excel(filename=None)`
+Класс для работы с .xls файлами (требует `[xls]`).
+
+Имеет тот же API что и `ExcelX`.
+
+### Утилитные функции
+
+#### `create_excel(data, filename, header, column_width, worksheet, start_row, borders)`
+Универсальная функция для создания Excel файлов.
+
+#### `read_excel(filename, excel_header, sheet_name, int_columns, date_columns, start_row)`
+Универсальная функция для чтения Excel файлов.
+
+### Константы стилей
+
+#### `BORDER`
+Словарь с predefined стилями границ:
+- `BORDER['none']` - без границ
+- `BORDER['all']` - границы со всех сторон
+- `BORDER['left']`, `BORDER['right']`, etc. - границы с отдельных сторон
+
+#### `FONT`
+Настройки шрифтов по умолчанию.
+
+#### `NUMBER_FORMAT`
+Форматы чисел для дат и времени.
+
+## Примеры стилей
+
+```python
+# Заголовок таблицы
+header_style = {
+    'bold': True,
+    'border': BORDER['bottom'],
+    'alignment': {'horizontal': 'center', 'wrap_text': True}
+}
+
+# Ячейка с данными
+cell_style = {
+    'border': BORDER['all'],
+    'alignment': {'horizontal': 'left'}
+}
+
+# Числовой формат
+number_style = {
+    'number_format': '#,##0.00',
+    'alignment': {'horizontal': 'right'}
+}
+
+# Дата
+date_style = {
+    'number_format': 'dd.mm.yyyy',
+    'alignment': {'horizontal': 'center'}
+}
+```
+
+## Обработка ошибок
+
+```python
+from dgexcel import Excel, ImportError
+
+try:
+    excel = Excel()
+    excel.create_simple_excel('test.xls', [{'data': 'test'}])
+except ImportError as e:
+    print("Для работы с .xls файлами установите: pip install dgexcel[xls]")
+except Exception as e:
+    print(f"Ошибка: {e}")
+```
+
+## Миграция с divinegift версии
+
+Если вы использовали предыдущие версии пакета:
+
+```python
+# Старый код
+from divinegift.excel import create_excel, read_excel
+
+# Новый код
+from dgexcel import create_excel, read_excel
+
+# API остается совместимым!
+```
+
+## Поддержка
+
+- **Python**: 3.10+
+- **Форматы**: .xlsx, .xls
+- **Кодировка**: UTF-8
+
+## Лицензия
+
+MIT License
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Changelog
+
+### v1.0.0
+- Первый стабильный релиз
+- Поддержка .xlsx и .xls форматов
+- Модульная система зависимостей
+- Полный API для работы с Excel файлами

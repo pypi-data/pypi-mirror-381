@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+dgexcel/__init__.py
+dgexcel/base.py
+dgexcel/constants.py
+dgexcel/excel.py
+dgexcel/excel_x.py
+dgexcel/utils.py
+dgexcel.egg-info/PKG-INFO
+dgexcel.egg-info/SOURCES.txt
+dgexcel.egg-info/dependency_links.txt
+dgexcel.egg-info/not-zip-safe
+dgexcel.egg-info/requires.txt
+dgexcel.egg-info/top_level.txt
