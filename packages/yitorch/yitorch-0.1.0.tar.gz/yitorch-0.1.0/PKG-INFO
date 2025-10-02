@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: yitorch
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch>=2.8.0
+Requires-Dist: yitool>=0.1.0
+Dynamic: license-file
+
+# @yitech/yitorch 
+
+## 安装 uv 
+
+运行
+```bash
+# 使用官方安装脚本
+curl -LsSf https://astral.sh/uv/install.sh | sh
+# 或者使用 pip
+pip install uv
+```
+
+## 开发模式
+
+切换到项目根目录，运行
+```bash
+uv pip install -e .
+```

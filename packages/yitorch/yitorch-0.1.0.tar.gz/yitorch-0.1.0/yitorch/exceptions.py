@@ -1,0 +1,2 @@
+class YiTorchException(Exception):
+    pass
