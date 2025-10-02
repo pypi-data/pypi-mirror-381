@@ -1,0 +1,16 @@
+inzicht/__init__.py,sha256=25Hl-tfSZ5EGI7wrQSpkrzz9oHa3v2sCLYUiD4BWdlQ,609
+inzicht/aio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inzicht/aio/crud/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inzicht/aio/crud/factories.py,sha256=Vhim7CaDtkoUyYsZAfhnL8bctkXis9h3Mz0-WBN-64w,536
+inzicht/aio/crud/generic.py,sha256=aTzwbUgCF-VJ44O7PzoRaf-F48HzL_u9uSoJkgI-AKg,5646
+inzicht/aio/crud/interfaces.py,sha256=ayLp1oIn5Z7UM5Dgxob7olwhOMeo-YcbvQKd14a32SA,3556
+inzicht/crud/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inzicht/crud/errors.py,sha256=4Y_5IITtd5ls4wnJ711MIYCTEl4ruDaBO-uIyqym8UI,318
+inzicht/crud/factories.py,sha256=p-h-VQ02yPJenTlBctRk9opDQfJwCrM80WGhG6O-gqE,468
+inzicht/crud/generic.py,sha256=bvNlnupZRahXAieXK4ouWnjRubBD8oxc7AFHLQnpiIc,5255
+inzicht/crud/interfaces.py,sha256=pSzjRz7LoOWj1wYCuRzSHj2dRR4bhL01xmGBZRWfMXE,3499
+inzicht/declarative.py,sha256=OVb6Rc1WLRfw27kgZpIszh-6HLEsucfWGgI0RC1AtBI,1588
+inzicht/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inzicht-0.1.22.dist-info/METADATA,sha256=YkH-49jsiRH4fNtAVF2IBNt2T7fTyqHM56vbNOQV29w,1439
+inzicht-0.1.22.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+inzicht-0.1.22.dist-info/RECORD,,
