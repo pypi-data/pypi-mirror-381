@@ -1,0 +1,26 @@
+include README.md
+include LICENSE
+include CHANGELOG.md
+include pyproject.toml
+include MANIFEST.in
+recursive-include github_analyzer *.py
+recursive-include github_analyzer *.json
+recursive-include github_analyzer *.yaml
+recursive-include github_analyzer *.yml
+recursive-include github_analyzer *.toml
+include github_analyzer/py.typed
+
+# Exclude unnecessary files
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * *.orig
+recursive-exclude * *.rej
+recursive-exclude * *~
+recursive-exclude * *.bak
+recursive-exclude * *.swp
+recursive-exclude * .DS_Store
+exclude .gitignore
+exclude .pre-commit-config.yaml
+exclude tox.ini
+exclude Makefile
+global-exclude .git*
