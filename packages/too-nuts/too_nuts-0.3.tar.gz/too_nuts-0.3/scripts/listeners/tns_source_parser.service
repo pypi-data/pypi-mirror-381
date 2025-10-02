@@ -1,0 +1,12 @@
+[Unit]
+Description=ToO source catalogue listener
+
+[Service]
+Type=simple
+User=tobi
+ExecStart=/abs/path/to/python /abs/path/to/TNS_listener.py /abs/path/to/config.yml
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

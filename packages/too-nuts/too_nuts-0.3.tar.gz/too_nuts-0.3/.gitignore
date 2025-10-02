@@ -1,0 +1,49 @@
+# Git ignore fot ToO source parser software
+
+### Files to be ignored by git unless explicitly added
+
+## Images
+*.png
+*.pdf
+*.jpg
+
+## Data
+*.db
+*.json
+*.txt
+*.log
+*.xlsx
+*.kml
+*.csv
+*.ods
+*.zip
+*.tar.gz
+*.npz
+*.swp
+*.h5
+*.hdf5
+*.fits
+
+## Config files
+*.toml
+
+## Documentation build
+docs_b/*
+docs/api/generated/*.rst
+dist/*
+
+## Caches / Checkpoints, ...
+__pycache__*
+*.coverage
+*.egg-info
+*_version.py
+.DS_Store
+build
+_build
+*.pytest*
+*.conda*
+
+## Scripts
+scripts/too_obs/input/
+scripts/too_obs/output/
+scripts/too_obs/output/*/*

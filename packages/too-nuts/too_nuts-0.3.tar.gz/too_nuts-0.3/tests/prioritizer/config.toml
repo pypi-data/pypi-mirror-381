@@ -1,0 +1,89 @@
+title = "Tobias config"
+
+[calculation]
+start_time = "2023-05-13T00:00:00"
+schedule_period = "24 hour"
+time_increment = "1 min"
+rotation_time = "10 min"
+min_obs_time = "10 min"
+max_num_sources = 5
+exclusive = true
+
+[input_files]
+global_path = "src/nuts/Catalogs"
+kml_dir = "KML"
+trajectory_dir = "Trajectory"
+gcn_alerts_dir = "GCN"
+gcn_unknown_alerts_dir = "GCN/unknown"
+gcn_test_alerts_dir = "GCN_Test"
+tns_dir = "TNS"
+source_dir = "Sources"
+db_dir = "Database"
+priority_file = "Priorities.csv"
+tns_file = "tns_data.csv"
+tde_file = "TDE_6months.csv"
+steady_file = "SteadySources.csv"
+other_transients_file = "OtherTransients.csv"
+full_table_file = "Full.csv"
+full_clean_file = "Full_clean.csv"
+kml_file = "SPBKML728NT.kml"
+flight_log_file = "flight728nt.log"
+flight_sim_file = "simulated_traj_EUSO.csv"
+gcn_file = "GCN_alerts.csv"
+db_gcn = "GCN.csv"
+db_tns = "TNS.csv"
+db_othertransients = "OtherTransients.csv"
+db_steady = "SteadySources.csv"
+db_tde = "TDE.csv"
+db_other = "other.csv"
+db_combined = "Full.csv"
+db_test = "test.csv"
+
+[operation]
+utc_relation = "0h"
+
+[figures]
+fig_trajectories = "True"
+fig_exposure_maps = "True"
+
+[output]
+global_path = "./output/"
+run_path = "2023-05-14/"
+previous_observation_path = "2023-05-13/"
+all_file = "output.json"
+observable_file = "observable_output.json"
+scheduled_file = "prioritized_schedule.json"
+single_file = "single_output.json"
+observation_period_file = "observation_period_output.txt"
+
+[parameters.balloon]
+trajectory_type = "cst"
+const_lat = "-44.7 deg"
+const_long = "169.1 deg"
+const_height = "33000 m"
+kml_height = "33000 m"
+kml_url = "https://pinwheel.balloonfacility.org/Trajectory/SPBKML729NT.kml"
+
+[parameters.TNS]
+user_id = 2981
+user_name = "tobias_heibges"
+discovered_period_value = "7"
+discovered_period_units = "days"
+include_frb = 1
+format = "csv"
+num_page = 100
+merge_files = 1
+update_period = "1 hour"
+
+[parameters.detector]
+horizontal_offset_angle = "limb"
+sun_altitude_cut = "-18. deg"
+moon_altitude_cut = "0. deg"
+moon_illumination_cut = 0.05
+fov_az = "12.8 deg"
+fov_alt = "6.4 deg"
+lower_fov_cut = "-6.4 deg"
+upper_fov_cut = "0 deg"
+
+[parameters.scheduler]
+strategy_type = "strategy1"
