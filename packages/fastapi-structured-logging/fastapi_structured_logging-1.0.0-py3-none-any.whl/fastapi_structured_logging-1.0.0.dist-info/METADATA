@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: fastapi-structured-logging
+Version: 1.0.0
+Summary: fastapi structured logging middleware (accesslog, opentelemetry)
+Author-email: Damien Degois <damien@degois.info>
+Project-URL: homepage, https://github.com/babs/fastapi-structured-logging
+Classifier: Environment :: Web Environment
+Classifier: Framework :: FastAPI
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware
+Classifier: Topic :: Software Development
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.9
+Requires-Dist: structlog
+Requires-Dist: fastapi
+Requires-Dist: orjson
+Provides-Extra: otlp
+Requires-Dist: opentelemetry-api; extra == "otlp"
+Requires-Dist: opentelemetry-sdk; extra == "otlp"
+Provides-Extra: tests
+Requires-Dist: fastapi-structured-logging[otlp]; extra == "tests"
+Requires-Dist: pytest; extra == "tests"
