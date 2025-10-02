@@ -1,0 +1,2 @@
+[console_scripts]
+bundle-deps = python:install_deps
