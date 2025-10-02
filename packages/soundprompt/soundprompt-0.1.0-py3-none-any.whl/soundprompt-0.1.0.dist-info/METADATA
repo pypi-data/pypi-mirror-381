@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: soundprompt
+Version: 0.1.0
+Summary: Your sounds, triggered by AI prompts
+Author: Ethorbit
+Requires-Python: <4,>=3.11
+License-File: LICENSE
+Requires-Dist: tomli-w==1.2.0
+Requires-Dist: prompt-toolkit==3.0.52
+Requires-Dist: sentence-transformers==5.1.0
+Requires-Dist: chromadb==1.0.20
+Requires-Dist: pydub==0.25.1
+Requires-Dist: sounddevice==0.5.2
+Requires-Dist: pynput==1.8.1
+Provides-Extra: dev
+Requires-Dist: pre_commit==4.3.0; extra == "dev"
+Requires-Dist: add_license_header==2.4.0; extra == "dev"
+Requires-Dist: pyflakes>=3.4.0; extra == "dev"
+Requires-Dist: pylint>=3.3.8; extra == "dev"
+Requires-Dist: pycodestyle>=2.14.0; extra == "dev"
+Requires-Dist: flake8>=7.3.0; extra == "dev"
+Requires-Dist: python-lsp-server>=1.13.1; extra == "dev"
+Dynamic: license-file
