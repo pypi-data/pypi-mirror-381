@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "erabytse-veil"
+version = "0.1.0"
+description = "An ethical veil for image metadata — not deletion, but intentional protection."
+authors = [{name = "takouzlo", email = "f.bfalik@gmail.com"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "Pillow>=9.0.0",
+]
+
+[project.scripts]
+erabytse-veil = "erabytse_veil.veil:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
