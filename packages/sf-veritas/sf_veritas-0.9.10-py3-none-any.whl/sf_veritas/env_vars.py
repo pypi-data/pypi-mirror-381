@@ -1,0 +1,83 @@
+import logging
+import os
+
+from .utils import strtobool
+
+LITE_DEBUGGING = strtobool(os.getenv("LITE_DEBUGGING", "false"))
+SF_DEBUG = strtobool(os.getenv("SF_DEBUG", "false"))
+SF_DEBUG_TRACES = strtobool(os.getenv("SF_DEBUG_TRACES", "false"))
+SF_INTERNAL = strtobool(os.getenv("SF_INTERNAL", "false"))
+IS_SAILFISH_COLLECTOR = strtobool(os.getenv("IS_SAILFISH_COLLECTOR", "false"))
+PRINT_CONFIGURATION_STATUSES = strtobool(
+    os.getenv("PRINT_CONFIGURATION_STATUSES", "false")
+)
+# Exception Tools
+SAILFISH_EXCEPTION_LOCALS_HIDE_SELF = strtobool(
+    os.getenv("SAILFISH_EXCEPTION_LOCALS_HIDE_SELF", "true")
+)
+SAILFISH_EXCEPTION_LOCALS_HIDE_DUNDER = strtobool(
+    os.getenv("SAILFISH_EXCEPTION_LOCALS_HIDE_DUNDER", "true")
+)
+SAILFISH_EXCEPTION_LOCALS_HIDE_SUNDER = strtobool(
+    os.getenv("SAILFISH_EXCEPTION_LOCALS_HIDE_SUNDER", "true")
+)
+SAILFISH_EXCEPTION_STACK_DEPTH_LOCALS = int(
+    os.getenv("SAILFISH_EXCEPTION_STACK_DEPTH_LOCALS", "5")
+)
+SAILFISH_EXCEPTION_STACK_DEPTH_CODE_TRACE_DEPTH = os.getenv(
+    "SAILFISH_EXCEPTION_STACK_DEPTH_CODE_TRACE_DEPTH", "full"
+)
+SAILFISH_EXCEPTION_STACK_DEPTH_CODE_TRACE_TYPE = os.getenv(
+    "SAILFISH_EXCEPTION_STACK_DEPTH_CODE_TRACE_TYPE", "line"
+)
+SAILFISH_EXCEPTION_STACK_DEPTH_CODE_TRACE_TYPE_AT_OFFENSIVE_CALL = os.getenv(
+    "SAILFISH_EXCEPTION_STACK_DEPTH_CODE_TRACE_TYPE_AT_OFFENSIVE_CALL", "line"
+)
+SAILFISH_EXCEPTION_STACK_DEPTH_CODE_VALUES_AT_FULL_DEPTH_EXCEPTION = strtobool(
+    os.getenv(
+        "SAILFISH_EXCEPTION_STACK_DEPTH_CODE_VALUES_AT_FULL_DEPTH_EXCEPTION", "false"
+    )
+)
+SAILFISH_EXCEPTION_LOCALS_TYPES_TO_IGNORE = os.getenv(
+    "SAILFISH_EXCEPTION_LOCALS_TYPES_TO_IGNORE",
+    "strawberry.types.info.Info,graphql.type.definition.GraphQLResolveInfo,strawberry.field.StrawberryField",
+)
+SAILFISH_EXCEPTION_FETCH_BEYOND_OFFENDER_DEPTH = int(
+    os.getenv("SAILFISH_EXCEPTION_FETCH_BEYOND_OFFENDER_DEPTH", "3")
+)
+SAILFISH_EXCEPTION_FETCH_LOCALS_BEYOND_OFFENDER_DEPTH = int(
+    os.getenv(
+        "SAILFISH_EXCEPTION_FETCH_LOCALS_BEYOND_OFFENDER_DEPTH", "5"
+    )  # Sibyl launch - lower this
+)
+SAILFISH_EXCEPTION_FETCH_ABOVE_OFFENDER_DEPTH = int(
+    os.getenv(
+        "SAILFISH_EXCEPTION_FETCH_ABOVE_OFFENDER_DEPTH", "3"
+    )  # Sibyl launch - lower this
+)
+SAILFISH_EXCEPTION_FETCH_LOCALS_ABOVE_OFFENDER_DEPTH = int(
+    os.getenv(
+        "SAILFISH_EXCEPTION_FETCH_LOCALS_ABOVE_OFFENDER_DEPTH", "-1"
+    )  # Sibyl launch - lower this
+)
+SAILFISH_EXCEPTION_FETCH_ABOVE_OFFENDER_INCLUDE_INSTALLED_PACKAGES = strtobool(
+    os.getenv(
+        "SAILFISH_EXCEPTION_FETCH_ABOVE_OFFENDER_INCLUDE_INSTALLED_PACKAGES", "false"
+    )
+)
+
+
+def get_log_level():
+    if LOG_LEVEL_ENV_VAR == "DEBUG":
+        return logging.DEBUG
+    if LOG_LEVEL_ENV_VAR == "INFO":
+        return logging.INFO
+    if LOG_LEVEL_ENV_VAR == "WARN":
+        return logging.WARN
+    if LOG_LEVEL_ENV_VAR == "ERROR":
+        return logging.ERROR
+    return logging.CRITICAL
+
+
+LOG_LEVEL_ENV_VAR = os.getenv("LOG_LEVEL", "INFO")
+LOG_LEVEL = get_log_level()
