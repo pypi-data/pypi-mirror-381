@@ -1,0 +1,36 @@
+Metadata-Version: 2.4
+Name: viona
+Version: 0.1.0
+Summary: Orvix Games Viona AI modeli için resmi Python API istemcisi.
+Home-page: https://viona.orvixgames.com
+Author: Orvix Games
+Author-email: destek@orvixgames.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Viona Python API İstemcisi
+
+[![PyPI versiyonu](https://img.shields.io/pypi/v/viona.svg)](https://pypi.org/project/viona/)
+[![Lisans](https://img.shields.io/badge/Lisans-MIT-blue.svg)](LICENSE) 
+
+Viona, Orvix Games tarafından geliştirilen güçlü bir yapay zeka modeline erişim sağlayan resmi **Python API istemcisi**dir. Bu kütüphane, Viona modeline kolayca soru göndermenizi ve yanıtları almanızı sağlar.
+
+## Kurulum
+
+Viona istemcisini Python paket yöneticisi **pip** ile kolayca kurabilirsiniz:
+
+```bash
+pip install viona
