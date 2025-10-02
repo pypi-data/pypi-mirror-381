@@ -1,0 +1,16 @@
+foliotrack/Currency.py,sha256=jF4NlSPrSw_HnsxQUTsEWRJ7SCvnDunBSuaHWD1h4Uc,7706
+foliotrack/Equilibrate.py,sha256=KdsFsZkABTJLKcX6REBVNE15wtepqI2nyTsxqrvZ1oU,9052
+foliotrack/Portfolio.py,sha256=A85HjTF_aWORsZndY_BT91-kPyw4ZS0ldXFNkh4QWac,10071
+foliotrack/Security.py,sha256=7_x0b79dYzhbi1ofSsWqRF0gJKZiOLA6iDysCtEBge8,6702
+foliotrack/__init__.py,sha256=peTfNbOw5VzsJxFlPYqpyaf9W42T5gkDgJpxGK6-JbA,461
+foliotrack/data/currencies.json,sha256=Q7XDR1iYjifdoQfYhyn9_g-vnQpQj7dOcaauB21tEus,9150
+foliotrack-0.0.4.dist-info/licenses/LICENSE,sha256=rOqtrKfVPhwGXYbgT30yBiIBtmiANaKV0-8lyLbR0dE,11340
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/foliotrack/test_currency.py,sha256=NEUS4N7H-7rfFqbb8KUViXER-CH3VU6i4v-dl1lzwh0,1589
+tests/foliotrack/test_equilibrate.py,sha256=DWMcEKRcRsFv7_9JQwcnq4hL_7dn99zB-uEULOlDHgQ,1215
+tests/foliotrack/test_portfolio.py,sha256=QN2CzUsSjD7hIpRdZuLIkrVluk1Uj3gcUBsiWZmlwG4,4998
+tests/foliotrack/test_security.py,sha256=FbA3AzmJdKClha7ggFjs39uMaF8Hsk5Jj0dDofaZqTE,1861
+foliotrack-0.0.4.dist-info/METADATA,sha256=lYvIT-gYJt8Syn4s_ue5dKR_niAOXNb4qO9HbJzDPFU,7928
+foliotrack-0.0.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+foliotrack-0.0.4.dist-info/top_level.txt,sha256=Gls7RSIavnmLIGhMbuou6F88EjrnYG9wyJ6VYHFGzLM,17
+foliotrack-0.0.4.dist-info/RECORD,,
