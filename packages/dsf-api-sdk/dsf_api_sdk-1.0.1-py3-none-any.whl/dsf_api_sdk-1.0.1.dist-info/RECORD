@@ -1,0 +1,8 @@
+dsf_api_sdk/__init__.py,sha256=xKdU0bzCHZL9mNa7z0VbzXsCBwCtZVEiK_F9UtdJBbo,607
+dsf_api_sdk/client.py,sha256=okKbN3WllLtkW_fnzUoYQ5BbHzEJRHirvh6YYK1VUoc,7115
+dsf_api_sdk/exceptions.py,sha256=44FatdEKCTGKHlQb0m4bWbhxvSJ3Zo5otgLP8m9ZqbA,478
+dsf_api_sdk/models.py,sha256=H9r-QnBr5p_GALz3w6QnppUAR3L-vDZXsrby8DTqocw,1497
+dsf_api_sdk-1.0.1.dist-info/METADATA,sha256=NqTUAk9adFGwUHymW1hv35SQb4gWzu2opIpt7imzxig,11271
+dsf_api_sdk-1.0.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+dsf_api_sdk-1.0.1.dist-info/top_level.txt,sha256=lvQZDSjQtodMlmLrXhLuOxXIoUviDwkIUf5sz_Yky2E,12
+dsf_api_sdk-1.0.1.dist-info/RECORD,,
