@@ -1,0 +1,6 @@
+[console_scripts]
+new_bin = g4x_helpers.entrypoint:launch_new_bin
+redemux = g4x_helpers.entrypoint:launch_redemux
+resegment = g4x_helpers.entrypoint:launch_resegment
+tar_viewer = g4x_helpers.entrypoint:launch_tar_viewer
+update_bin = g4x_helpers.entrypoint:launch_update_bin
