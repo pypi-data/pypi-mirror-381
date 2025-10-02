@@ -1,0 +1,497 @@
+# Configuration for Ruff
+# See https://beta.ruff.rs/docs/settings for the detailed documentation.
+
+# List of rules to enable. See https://beta.ruff.rs/docs/rules/
+select = [
+    "F",  # Pyflakes
+    "E", "W", # pycodestyle, Errors and Warnings
+    "C90",  # mccabe
+    "I",  # isort
+    "N",  # pep8-naming
+    "D",  # pydocstyle
+    "UP",  # pyupgrade
+    "YTT",  # flake8-2020
+    "ANN",  # flake8-annotations
+    "ASYNC",  # flake8-async
+    "S",  # flake8-bandit
+    "BLE",  # flake8-blind-except
+    "FBT",  # flake8-boolean-trap
+    "B",  # flake8-bugbear
+    "A",  # flake8-builtins
+    "COM",  # flake8-commas
+    "CPY",  # Copyright-related rules
+    "C4",  # flake8-comprehensions
+    "DTZ",  # flake8-datetimez
+    "T10",  # flake8-debugger
+#    "DJ",  # flake8-django
+    "EM",  # flake8-errmsg
+    "EXE",  # flake8-executable
+    "FA",  # flake8-future-annotations
+    "ISC",  # flake8-implicit-str-concat
+    "ICN",  # flake8-import-conventions
+    "G",  # flake8-logging-format
+    "INP",  # flake8-no-pep420
+    "PIE",  # flake8-pie
+    "T20",  # flake8-print
+    "PYI",  # flake8-pyi
+    "PT",  # flake8-pytest-style
+    "Q",  # flake8-quotes
+    "RSE",  # flake8-raise
+    "RET",  # flake8-return
+    "SLF",  # flake8-self
+    "SLOT",  # flake8-slots
+    "SIM",  # flake8-simplify
+    "TID",  # flake8-tidy-imports
+    "TCH",  # flake8-type-checking
+    "INT",  # flake8-gettext
+    "ARG",  # flake8-unused-arguments
+    "PTH",  # flake8-use-pathlib
+    "TD",  # flake8-todos
+    "FIX",  # flake8-fixme
+    "ERA",  # eradicate
+    "PD",  # pandas-vet
+    "PGH",  # pygrep-hooks
+    "PL",  # Pylint
+    "PLC",  # Convention
+    "PLE",  # Error
+    "PLR",  # Refactor
+    "PLW",  # Warning
+    "TRY",  # tryceratops
+    "FLY",  # flynt
+    "NPY",  # NumPy-specific rules
+#    "AIR",  # Airflow
+    "PERF",  # Perflint
+    "RUF",  # Ruff-specific rules
+]
+
+# A list of rule codes or prefixes to ignore. Prefixes can specify exact rules (like F841), entire categories (like F), or anything in between.
+# When breaking ties between enabled and disabled rules (via select and ignore, respectively), more specific prefixes override less specific prefixes.
+ignore = [
+    "ANN101",  # Missing type annotation for self in method
+    "ANN102",  # Missing type annotation for cls in classmethod
+]
+
+# A list of allowed "confusable" Unicode characters to ignore when enforcing RUF001, RUF002, and RUF003.
+# Ex: ["−", "ρ", "∗"]  to allow minus-sign (U+2212), greek-small-letter-rho (U+03C1), and the asterisk-operator (U+2217)
+allowed-confusables = []
+
+
+# A list of builtins to treat as defined references, in addition to the system builtins.
+builtins = ["_"]
+
+# A path to the cache directory.
+# By default, Ruff stores cache results in a .ruff_cache directory in the current project root.
+# However, Ruff will also respect the RUFF_CACHE_DIR environment variable, which takes precedence over that default.
+# This setting will override even the RUFF_CACHE_DIR environment variable, if set.
+cache-dir = ".ruff_cache"
+
+# A regular expression used to identify "dummy" variables, or those which should be ignored when enforcing (e.g.) unused-variable rules.
+# The default expression matches _, __, and _var, but not _var_
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# A list of file patterns to exclude from linting. Use globstar patterns.
+exclude = [".bzr", ".direnv", ".eggs", ".git", ".git-rewrite", ".hg", ".mypy_cache", ".nox", ".pants.d", ".pytype", ".ruff_cache", ".svn", ".tox", ".venv", "__pypackages__", "_build", "buck-out", "build", "dist", "node_modules", "venv"]
+
+# A list of rule codes that are unsupported by Ruff, but should be preserved when (e.g.) validating # noqa directives.
+# Useful for retaining '# noqa' directives that cover plugins not yet implemented by Ruff.
+external = []
+
+# Enable autofix behavior by-default when running ruff (overridden by the --fix and --no-fix command-line flags).
+fix = false
+
+# A list of rule codes or prefixes to consider autofixable. By default, all rules are considered autofixable.
+fixable = ["ALL"]
+
+# Whether to enforce exclude and extend-exclude patterns, even for paths that are passed to Ruff explicitly.
+# Typically, Ruff will lint any paths passed in directly, even if they would typically be excluded.
+# Setting 'force-exclude = true' will cause Ruff to respect these exclusions unequivocally.
+# This is useful for pre-commit, which explicitly passes all changed files to the ruff-pre-commit plugin, regardless of whether they're marked as excluded by Ruff's own settings.
+force-exclude = false
+
+# The style in which violation messages should be formatted:
+# "text" (default), "grouped" (group messages by file), "json" (machine-readable), "junit" (machine-readable XML), "github" (GitHub Actions annotations),
+# "gitlab" (GitLab CI code quality report), "pylint" (Pylint text format) or "azure" (Azure Pipeline logging commands).
+output-format = "pylint"  # Replace "pylint" with a valid option supported by the TOML schema.
+
+# A list of file patterns to include when linting.
+# Inclusion are based on globs, and should be single-path patterns, like '*.pyw', to include any file with the '.pyw' extension.
+# pyproject.toml is included here not for configuration but because we lint whether e.g. the '[project]' matches the schema.
+include = ["*.py", "*.pyi", "**/pyproject.toml"]
+
+# The line length to use when enforcing long-lines violations (like E501).
+line-length = 79
+
+# Mark the specified directories as namespace packages. For the purpose of module resolution, Ruff will treat those directories as if they contained an __init__.py file.
+namespace-packages = []
+
+# Require a specific version of Ruff to be running (useful for unifying results across many environments, e.g., with a pyproject.toml file).
+# required-version = "0.3.0"
+
+# Whether to automatically exclude files that are ignored by .ignore, .gitignore, .git/info/exclude, and global gitignore files. Enabled by default.
+respect-gitignore = true
+
+# Whether to show an enumeration of all autofixed lint violations (overridden by the --show-fixes command-line flag).
+show-fixes = true
+
+# The source code paths to consider, e.g., when resolving first- vs. third-party imports.
+src = ["."]
+
+# The minimum Python version to target, e.g., when considering automatic code upgrades, like rewriting type annotations.
+# If omitted, and Ruff is configured via a pyproject.toml file, the target version will be inferred from its project.requires-python field (e.g., requires-python = ">=3.8").
+# If Ruff is configured via ruff.toml or .ruff.toml, no such inference will be performed.
+target-version = "py38"
+
+# A list of task tags to recognize (e.g., "TODO", "FIXME", "XXX").
+# Comments starting with these tags will be ignored by commented-out code detection (`ERA`), and skipped by line-length rules (`E501`) if ignore-overlong-task-comments is set to true.
+task-tags = ["TODO", "FIXME", "XXX"]
+
+# A list of modules whose imports should be treated equivalently to members of the typing module.
+# This is useful for ensuring proper type annotation inference for projects that re-export typing and typing_extensions members from a compatibility module.
+# If omitted, any members imported from modules apart from typing and typing_extensions will be treated as ordinary Python objects.
+typing-modules = []
+
+# A list of rule codes or prefixes to consider non-autofix-able. Ex: ["F401"] to disable autofixing for unused imports (`F401`).
+unfixable = ["B", "SIM", "TRY", "RUF"]  # removing any possibly-unsafe rules
+
+
+[format]
+# Configures the preferred quote character for strings. The recommended options are * double (default): Use double quotes " * single: Use single quotes '
+# In compliance with PEP 8 and PEP 257, Ruff prefers double quotes for triple quoted strings and docstrings even when using quote-style = "single".
+quote-style="double"
+
+# Ruff uses existing trailing commas as an indication that short lines should be left separate. If this option is set to true, the magic trailing comma is ignored.
+
+skip-magic-trailing-comma = true
+
+[flake8-annotations]
+# Whether to suppress `ANN401` for dynamically typed *args and **kwargs arguments.
+allow-star-arg-any = true
+
+# Whether to suppress `ANN*` rules for any declaration that hasn't been typed at all. This makes it easier to gradually add types to a codebase.
+ignore-fully-untyped = true
+
+# Whether to allow the omission of a return type hint for __init__ if at least one argument is annotated.
+mypy-init-return = true
+
+# Whether to suppress ANN000-level violations for arguments matching the "dummy" variable regex (like _).
+suppress-dummy-args = true
+
+# Whether to suppress ANN200-level violations for functions that meet either of the following criteria:
+#  - Contain no return statement.
+#  - Explicit return statement(s) all return None (explicitly or implicitly).
+suppress-none-returning = true
+
+
+[flake8-bandit]
+# Whether to disallow try-except-pass (S110) for specific exception types. By default, `try-except-pass` is only disallowed for `Exception` and `BaseException`.
+check-typed-exception = true
+
+
+# A list of directories to consider temporary.
+hardcoded-tmp-directory = ["/tmp", "/var/tmp", "/dev/shm"]
+
+
+[flake8-bugbear]
+# Additional callable functions to consider "immutable" when evaluating, e.g., the no-mutable-default-argument rule (`B006`) or no-function-call-in-dataclass-defaults rule (`RUF009`).
+extend-immutable-calls = []
+
+
+[flake8-builtins]
+# Ignore list of builtins.
+builtins-ignorelist = []
+
+
+[flake8-comprehensions]
+# Allow dict calls that make use of keyword arguments (e.g., dict(a=1, b=2)).
+allow-dict-calls-with-keyword-arguments = true
+
+[flake8-copyright]
+# Author to enforce within the copyright notice. If provided, the author must be present immediately following the copyright notice.
+author = "Spyder Project Contributors"
+
+# A minimum file size (in bytes) required for a copyright notice to be enforced. By default, all files are validated.
+min-file-size = 0
+
+# The regular expression used to match the copyright notice, compiled with the regex crate.
+# Defaults to match the following: - Copyright 2023 - Copyright (C) 2023 - Copyright 2021-2023 - Copyright (C) 2021-2023
+notice-rgx = "(?i)Copyright\\s+(\\(C\\)\\s+)?\\d{4}*([-,]\\d{4})*"
+
+
+[flake8-errmsg]
+# Maximum string length for string literals in exception messages.
+max-string-length = 0
+
+
+[flake8-gettext]
+# The function names to consider as internationalization calls.
+function-names = ["_"]
+
+
+[flake8-implicit-str-concat]
+# Whether to allow implicit string concatenations for multiline strings.
+# By default, implicit concatenations of multiline strings are allowed (but continuation lines, delimited with a backslash, are prohibited).
+# Note that setting `allow-multiline = false` should typically be coupled with disabling `explicit-string-concatenation` (ISC003).
+# Otherwise, both explicit and implicit multiline string concatenations will be seen as violations.
+allow-multiline = true
+
+
+[flake8-import-conventions]
+# A list of modules that are allowed to be imported from
+banned-from = ["typing"]
+
+[flake8-import-conventions.aliases]
+# The conventional aliases for imports. These aliases can be extended by the extend_aliases option.
+altair = "alt"
+numpy = "np"
+pandas = "pd"
+seaborn = "sns"
+scipy = "sp"
+"plotly.express" = "px"
+
+[flake8-import-conventions.banned-aliases]
+# A mapping from module to its banned import aliases.
+#"tensorflow.keras.backend" = ["K"]
+
+
+[flake8-pytest-style]
+# Boolean flag specifying whether @pytest.fixture() without parameters should have parentheses.
+# If the option is set to true (the default), @pytest.fixture() is valid and @pytest.fixture is invalid.
+# If set to false, @pytest.fixture is valid and @pytest.fixture() is invalid.
+fixture-parentheses = true
+
+# Boolean flag specifying whether @pytest.mark.foo() without parameters should have parentheses.
+# If the option is set to true (the default), @pytest.mark.foo() is valid and @pytest.mark.foo is invalid.
+# If set to false, @pytest.fixture is valid and @pytest.mark.foo() is invalid.
+mark-parentheses = true
+
+# Expected type for multiple argument names in @pytest.mark.parametrize. The following values are supported:
+#  - `csv` — a comma-separated list, e.g. @pytest.mark.parametrize('name1,name2', ...)
+#  - `tuple` (default) — e.g. @pytest.mark.parametrize(('name1', 'name2'), ...)
+#  - `list` — e.g. @pytest.mark.parametrize(['name1', 'name2'], ...)
+parametrize-names-type = "tuple"
+
+# Expected type for each row of values in @pytest.mark.parametrize in case of multiple parameters. The following values are supported:
+#  - `tuple` (default) — e.g. @pytest.mark.parametrize(('name1', 'name2'), [(1, 2), (3, 4)])
+#  - `list` — e.g. @pytest.mark.parametrize(('name1', 'name2'), [[1, 2], [3, 4]])
+parametrize-values-row-type = "tuple"
+
+# Expected type for the list of values rows in @pytest.mark.parametrize. The following values are supported:
+#  - `tuple` — e.g. @pytest.mark.parametrize('name', (1, 2, 3))
+#  - `list` (default) — e.g. @pytest.mark.parametrize('name', [1, 2, 3])
+parametrize-values-type = "list"
+
+# List of exception names that require a match= parameter in a pytest.raises() call.
+raises-require-match-for = ["BaseException", "Exception", "ValueError", "OSError", "IOError", "EnvironmentError", "socket.error"]
+
+
+[flake8-quotes]
+# Whether to avoid using single quotes if a string contains single quotes, or vice-versa with double quotes, as per PEP 8.
+# This minimizes the need to escape quotation marks within strings.
+avoid-escape = true
+
+# Quote style to prefer for docstrings (either "single" or "double").
+docstring-quotes = "double"
+
+# Quote style to prefer for inline strings (either "single" or "double").
+inline-quotes = "double"
+
+# Quote style to prefer for multiline strings (either "single" or "double").
+multiline-quotes = "double"
+
+
+[flake8-self]
+# A list of names to ignore when considering flake8-self violations.
+ignore-names = ["_make", "_asdict", "_replace", "_fields", "_field_defaults"]
+
+
+[flake8-tidy-imports]
+# Whether to ban all relative imports ("all"), or only those imports that extend into the parent module or beyond ("parents").
+ban-relative-imports = "all"
+
+[flake8-tidy-imports.banned-api]
+# Specific modules or module members that may not be imported or accessed.
+# Note that this rule is only meant to flag accidental uses, and can be circumvented via eval or importlib
+#"cgi".msg = "The cgi module is deprecated, see https://peps.python.org/pep-0594/#cgi."
+#"typing.TypedDict".msg = "Use typing_extensions.TypedDict instead."
+
+
+[flake8-type-checking]
+#Exempt certain modules from needing to be moved into type-checking blocks.
+exempt-modules = ["typing"]
+
+# Exempt classes that list any of the enumerated classes as a base class from needing to be moved into type-checking blocks.
+runtime-evaluated-base-classes = ["pydantic.BaseModel"]
+
+# Exempt classes decorated with any of the enumerated decorators from needing to be moved into type-checking blocks.
+runtime-evaluated-decorators = ["attrs.define", "attrs.frozen"]
+
+# Enforce TC001, TC002, and TC003 rules even when valid runtime imports are present for the same module.
+# See flake8-type-checking's [strict](https://github.com/snok/flake8-type-checking#strict) option.
+strict = false
+
+
+[flake8-unused-arguments]
+# Whether to allow unused variadic arguments, like *args and **kwargs.
+ignore-variadic-names = false
+
+
+[isort]
+# An override list of tokens to always recognize as a Class for order-by-type regardless of casing.
+classes = []
+
+# Combines as imports on the same line. See isort's combine-as-imports option.
+combine-as-imports = true
+
+# An override list of tokens to always recognize as a CONSTANT for order-by-type regardless of casing.
+constants = []
+
+# A list of modules to consider standard-library, in addition to those known to Ruff in advance.
+extra-standard-library = []
+
+# Forces all from imports to appear on their own line.
+force-single-line = false
+
+# Don't sort straight-style imports (like import sys) before from-style imports (like from itertools import groupby).
+# Instead, sort the imports by module, independent of import style.
+force-sort-within-sections = true
+
+# Force specific imports to the top of their appropriate section.
+force-to-top = []
+
+# Force import from statements with multiple members and at least one alias (e.g., import A as B) to wrap such that every line contains exactly one member.
+# For example, this formatting would be retained, rather than condensing to a single line:
+#  ```py
+#  from .utils import (
+#      test_directory as test_directory,
+#      test_id as test_id
+#  )
+#  ```
+# Note that this setting is only effective when combined with `combine-as-imports = true`.
+# When combine-as-imports isn't enabled, every aliased import from will be given its own line, in which case, wrapping is not necessary.
+force-wrap-aliases = true
+
+# A list of modules to separate into auxiliary block(s) of imports, in the order specified.
+forced-separate = ["tests"]
+
+# A list of modules to consider first-party, regardless of whether they can be identified as such via introspection of the local filesystem.
+known-first-party = ["spyder"]
+
+# A list of modules to consider being a local folder. Generally, this is reserved for relative imports (from . import module).
+#known-local-folder = ["src"]
+
+# A list of modules to consider third-party, regardless of whether they can be identified as such via introspection of the local filesystem.
+#known-third-party = ["src"]
+
+# The number of blank lines to place after imports. Use -1 for automatic determination.
+lines-after-imports = 2
+
+# The number of lines to place between "direct" and `import from` imports.
+lines-between-types = 0
+
+# A list of sections that should not be delineated from the previous section via empty lines.
+# value: list["future" | "standard-library" | "third-party" | "first-party" | "local-folder" | str]
+no-lines-before = ["future", "standard-library"]
+
+# Order imports by type, which is determined by case, in addition to alphabetically.
+order-by-type = true
+
+# Whether to place "closer" imports (fewer . characters, most local) before "further" imports (more . characters, least local), or vice versa.
+# The default ("furthest-to-closest") is equivalent to isort's reverse-relative default (reverse-relative = false);
+# setting this to "closest-to-furthest" is equivalent to isort's reverse-relative = true
+# value: "furthest-to-closest" | "closest-to-furthest"
+relative-imports-order = "furthest-to-closest"
+
+# Add the specified import line to all files.
+#required-imports = ["from __future__ import annotations"]
+
+# Override in which order the sections should be output. Can be used to move custom sections.
+section-order =  ["future", "standard-library", "third-party", "first-party", "local-folder"]
+
+
+# One or more modules to exclude from the single line rule.
+single-line-exclusions = ["os", "sys"]
+
+# If a comma is placed after the last member in a multi-line import, then the imports will never be folded into one line.
+split-on-trailing-comma = true
+
+# An override list of tokens to always recognize as a var for order-by-type regardless of casing.
+variables = []
+
+# A list of mappings from section names to modules. By default custom sections are output last, but this can be overridden with section-order.
+[isort.sections]
+#"flask" = ["flask"]
+
+
+[mccabe]
+# The maximum McCabe complexity to allow before triggering C901 errors.
+max-complexity = 8
+
+
+[pep8-naming]
+# A list of decorators that, when applied to a method, indicate that the method should be treated as a class method (in addition to the builtin `@classmethod`)
+# For example, Ruff will expect that any method decorated by a decorator in this list takes a `cls` argument as its first argument.
+classmethod-decorators = ["pydantic.validator"]
+
+
+# A list of names (or patterns) to ignore when considering pep8-naming violations.
+ignore-names =  ["setUp", "tearDown", "setUpClass", "tearDownClass", "setUpModule", "tearDownModule", "asyncSetUp", "asyncTearDown", "setUpTestData", "failureException", "longMessage", "maxDiff"]
+
+# A list of decorators that, when applied to a method, indicate that the method should be treated as a static method (in addition to the builtin @staticmethod).
+# For example, Ruff will expect that any method decorated by a decorator in this list has no self or `cls` argument.
+staticmethod-decorators = ["stcmthd"]  # Allow a shorthand alias, `@stcmthd`, to trigger static method treatment.
+
+
+[pycodestyle]
+# Whether line-length violations (E501) should be triggered for comments starting with task-tags (by default: ["TODO", "FIXME", and "XXX"]).
+ignore-overlong-task-comments = false
+
+# The maximum line length to allow for line-length violations within documentation (`W505`), including standalone comments.
+max-doc-length = 79
+
+
+[pydocstyle]
+# Whether to use Google-style or NumPy-style conventions or the PEP257 defaults when analyzing docstring sections.
+# value: "google" | "numpy" | "pep257"
+convention = "numpy"
+
+# Ignore docstrings for functions or methods decorated with the specified fully-qualified decorators.
+ignore-decorators = ["typing.overload"]
+
+# A list of decorators that, when applied to a method, indicate that the method should be treated as a property (in addition to the builtin @property and standard-library @functools.cached_property).
+# For example, Ruff will expect that any method decorated by a decorator in this list can use a non-imperative summary line.
+#property-decorators = ["gi.repository.GObject.Property"]
+
+
+[pyflakes]
+# Additional functions or classes to consider generic, such that any subscripts should be treated as type annotation (e.g., ForeignKey in django.db.models.ForeignKey["User"].
+#extend-generics = ["django.db.models.ForeignKey"]
+
+
+[pylint]
+# Constant types to ignore when used as "magic values" (see: `PLR2004`)
+# type: list["str" | "bytes" | "complex" | "float" | "int" | "tuple"]
+allow-magic-value-types = ["str", "bytes"]
+
+# Maximum number of arguments allowed for a function or method definition (see: PLR0913).
+max-args = 5
+
+# Maximum number of branches allowed for a function or method body (see: PLR0912).
+max-branches = 6
+
+# Maximum number of return statements allowed for a function or method body (see PLR0911)
+max-returns = 6
+
+# Maximum number of statements allowed for a function or method body (see: PLR0915).
+max-statements = 50
+
+[lint.extend-per-file-ignores]
+"**/tests/**/*.py" = [
+    # at least this three should be fine in tests:
+    "S101", # asserts allowed in tests...
+    "ARG", # Unused function args -> fixtures nevertheless are functionally relevant...
+    "FBT", # Don't care about booleans as positional arguments in tests, e.g. via @pytest.mark.parametrize()
+    # The below are debateable
+    "PLR2004", # Magic value used in comparison, ...
+    "S311", # Standard pseudo-random generators are not suitable for cryptographic purposes
+    "SLF001", # Ignore acessing private member
+]
