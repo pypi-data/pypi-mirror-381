@@ -1,0 +1,12 @@
+ipython
+pandas
+faiss-cpu
+sentence-transformers
+torch
+transformers[torch]
+accelerate
+google-generativeai>=0.5.4
+langchain>=0.2.0
+langchain-google-genai>=1.0.5
+langchain_experimental
+python-dotenv
