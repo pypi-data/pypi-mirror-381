@@ -1,0 +1,71 @@
+[project]
+name = "mdsasa_bolt"
+description = "This library allows the calculation of a solvent-accessible-surface area of a trajectory"
+license = "GPL-2.0"
+authors = [{ name = "Maxwell Campbell", email = "max@hearthindustries.io" }]
+maintainers = [{ name = "Maxwell Campbell", email = "max@hearthindustries.io" }]
+version = "1.2.0"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "biopython>=1.85",
+    "freesasa>=2.2.1",
+    "mdanalysis>=2.9.0",
+    "numpy>=2.3.1",
+    "pytest>=8.4.1",
+    "rust-sasa-python>=0.2.5",
+]
+keywords = ["molecular simulations", "science", "bioinformatics"]
+
+[tool.setuptools.packages.find]
+include = ["mdsasa_bolt*"]
+exclude = ["bench*", "tests*"]
+
+[dependency-groups]
+dev = ["ruff", "pytest", "MDAnalysisTests", "maturin"]
+
+[tool.ruff]
+exclude = ['tests/']
+line-length = 120
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D401",
+    "EM102",
+    "TRY003",
+    "D417",
+    "PLR2004",
+    "RUF001",
+    "ANN003",
+    "FBT003",
+    "S318",
+    "D100",
+    "FIX002",
+    "TD003",
+    "TD002",
+    "S314",
+    "FBT001",
+    "FBT002",
+    "D104",
+    "S101",
+    "S110",
+    "E722",
+    "G004",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.maturin]
+python-source = "mdsasa_bolt"
+module-name = "mdsasa_bolt.plumber"
+features = ["pyo3/extension-module"]
+
+[build-system]
+requires = ["maturin>=1.9,<2.0"]
+build-backend = "maturin"
