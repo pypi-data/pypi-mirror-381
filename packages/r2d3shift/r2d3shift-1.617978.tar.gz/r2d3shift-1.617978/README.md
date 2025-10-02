@@ -1,0 +1,119 @@
+# R2D3-Shift
+
+R2D3-Shift is a Python package designed to correct spectral shifts induced by the R2D3 sequence in 1.5-dimensional spectra, where one dimension is direct and the other is indirect with varying relaxation times. The R2D3 sequence can cause inhomogeneous thermal elevation across successive spectra (the tradeoff for varying relaxation times), resulting in non-linear spectral shifts for different compounds of the sample.
+
+## Shift Correction Methodology
+
+The core methodology involves detecting peaks in each spectrum, matching them across successive spectra, and extrapolating a shift map to correct the observed distortions. Peak detection combines standard algorithms with noise-based filtering to ensure robustness. Peaks are matched using a filtered Gale-Shapley algorithm, producing an irregular grid of shifts. This grid is then extrapolated to a full regular grid using linear radial basis function (RBF) interpolation. The resulting shift map is inverted and applied to realign the peaks and correct the spectra.
+
+## Setup
+
+### From source
+
+To install the minimal dependencies for using the package in Python:
+
+1. Create the conda environment:
+    ```bash
+    conda env create -f environment.yml
+    ```
+2. Activate the environment:
+    ```bash
+    conda activate R2D3-shift
+    ```
+3. Install the required dependencies:
+    ```bash
+    poetry install
+    ```
+
+For CLI usage, install the additional dependencies:
+
+4. Install optional CLI dependencies:
+    ```bash
+    poetry install --extras cli
+    ```
+
+### From PyPI
+
+To install the package directly from PyPI, use pip:
+
+```bash
+pip install r2d3shift
+```
+
+For CLI usage, ensure you have the optional dependencies installed:
+
+```bash
+pip install r2d3shift[cli]
+```
+
+## Usage Example
+
+Before running any code, ensure the conda environment is activated.
+
+### Python Package
+
+To process and correct a single spectrum loaded as a NumPy array, and store the corrected spectrum in a new array:
+
+```python
+# Assume `data` is a 2D numpy array and `freqs` is a 1D numpy array of frequencies
+from r2d3shift import Spectrum, Spectra, SparsePeaksShiftCorrector
+sp = Spectra(freqs, [Spectrum(row) for row in data])
+corrector = SparsePeaksShiftCorrector()
+csp = corrector.correct(sp)
+cdata = np.array([s.data for s in csp.spectra])
+```
+
+To process and correct all spectra in an archive and save the results to a new archive:
+
+```python
+from r2d3shift import SpectraArchiveIOHandler2D, SparsePeaksShiftCorrector
+handler = SpectraArchiveIOHandler2D()
+data = handler.load('path/to/archive.zip', '.csv')
+corrector = SparsePeaksShiftCorrector()
+corrected = {name: corrector.correct(sp) for name, sp in data.items()}
+handler.write('path/to/corrected_archive.zip', corrected)
+```
+
+To simulate a dataset with spectral shifts:
+
+```python
+from r2d3shift import GeneralExponentialShiftModel, ShiftedSpectraSimulator
+isochromats = [(2,0.1,0.025), (1,1.2,-0.35), (5,0.5,1)]
+shift_model = GeneralExponentialShiftModel(
+    beta=0.5, beta_std=0.3, max_shift=0.001,max_shift_std=0.01)
+ssim = ShiftedSpectraSimulator(shift_model)
+spectra = ssim(isochromats=isochromats, nb_indirect=10, acq_time=30, bw=1e3, 
+               pSNR=50, TR_min=0.2, TR_max=2, magnet_freq=400*1e6)
+```
+
+### Command Line Interface (CLI)
+
+Do not forget to install the optional CLI dependencies.
+
+To process a complete zip archive:
+
+```bash
+python -m r2d3shift process /path/to/archive.zip save /path/to/corrected.zip
+```
+
+To display correction results and validation metrics:
+
+```bash
+python -m r2d3shift process /path/to/archive.zip show
+```
+
+To simulate a dataset with spectral shifts:
+
+```bash
+python -m r2d3shift simulate /path/to/simulated.zip T1_1,T2_1,freq_1 T1_2,T2_2,freq_2 ...
+```
+
+For a full list of parameters, commands and help on CLI usage:
+
+```bash
+python -m r2d3shift [command] --help
+```
+
+## License
+
+This package is licensed under the CeCILL-2.1 license. See the [LICENSE](LICENSE) file for details.

@@ -1,0 +1,31 @@
+[project]
+name = "r2d3shift"
+version = "1.617978"
+description = "Fix the misalignments of spectra from R2D3 sequence due to varying thermal conditions."
+authors = [
+    {name = "Julien PONTABRY",email = "jpontabry@unistra.fr"}
+]
+license = "CECILL-2.1"
+license-files = ["LICENSE"]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy (>=2.3.1,<3.0.0)",
+    "scipy (>=1.16.1,<2.0.0)",
+]
+
+
+[project.optional-dependencies]
+cli = [
+    "click (>=8.2.1,<9.0.0)",
+    "matplotlib (>=3.10.3,<4.0.0)",
+    "seaborn (>=0.13.2,<0.14.0)",
+    "pandas (>=2.3.1,<3.0.0)",
+    "rich (>=14.1.0,<15.0.0)",
+    "rich-click (>=1.8.9,<2.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
