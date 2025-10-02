@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+examples/shopping_agent_demo.py
+zeroproof/__init__.py
+zeroproof/client.py
+zeroproof.egg-info/PKG-INFO
+zeroproof.egg-info/SOURCES.txt
+zeroproof.egg-info/dependency_links.txt
+zeroproof.egg-info/requires.txt
+zeroproof.egg-info/top_level.txt
