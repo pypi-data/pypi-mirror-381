@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: pyatmoweb
+Version: 0.0.2
+Summary: PyAtmoWeb helpers
+Author-email: Enno Henn <henn@ipfdd.de>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: requests
+Dynamic: license-file
