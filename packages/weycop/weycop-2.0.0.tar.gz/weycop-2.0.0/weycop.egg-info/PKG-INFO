@@ -1,0 +1,326 @@
+Metadata-Version: 2.4
+Name: weycop
+Version: 2.0.0
+Summary: Python client for WeyCP API - Multi-provider AI chat completions (Local/OpenAI/Anthropic)
+Home-page: https://github.com/weycop/weycop-python
+Author: WeyCP Team
+Author-email: apps@weycop.com
+Project-URL: Bug Tracker, https://github.com/weycop/weycop-python/issues
+Project-URL: Documentation, https://docs.weycop.com
+Project-URL: Homepage, https://weycop.com
+Keywords: weycop,ai,chat,completions,openai,anthropic,claude,llama,ollama,multi-provider,api
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx>=0.24.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: pytest-httpx>=0.21.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: flake8>=5.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# WeyCP Python Client
+
+[![PyPI version](https://badge.fury.io/py/weycop.svg)](https://badge.fury.io/py/weycop)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+The official Python client for **WeyCP API** chat completions created by Weycop.
+
+---
+
+## 🚀 Features
+
+* **Multi-Provider Support** – Use local models (Ollama), OpenAI, and Anthropic models.
+* **Familiar API Interface** – Easy-to-use chat completions API.
+* **Auto-Detection** – Automatically detects provider based on model name.
+* **Sync & Async support** – Use synchronous or asynchronous clients.
+* **Built-in error handling** – Comprehensive exception handling.
+* **Usage tracking** – Monitor token usage and costs across providers.
+* **Type hints** – Full type annotation support.
+* **High performance** – Optimized for concurrent requests.
+
+---
+
+## 📦 Installation
+
+```bash
+pip install weycop
+```
+
+---
+
+## ⚡ Quick Start
+
+### Synchronous Client
+
+```python
+from weycop import WeycopClient
+
+# Initialize client
+client = WeycopClient(api_key="your-api-key")
+
+# Simple chat with local model
+response = client.chat(
+    message="Hello, how are you?",
+    model="qwen3:4b-instruct",
+    system_prompt="You are a helpful assistant"
+)
+print(response)
+```
+
+### Multi-Provider Usage
+
+```python
+from weycop import WeycopClient, Message
+
+client = WeycopClient(api_key="your-api-key")
+
+# Local models (free)
+local_response = client.chat_local(
+    model="qwen3:4b-instruct",
+    messages=[Message("user", "Hello from local model!")]
+)
+
+# OpenAI models (requires OPENAI_API_KEY in server)
+openai_response = client.chat_openai(
+    model="gpt-4o",
+    messages=[Message("user", "Hello from OpenAI!")]
+)
+
+# Anthropic models (requires ANTHROPIC_API_KEY in server)
+anthropic_response = client.chat_anthropic(
+    model="claude-3-5-sonnet-20241022",
+    messages=[Message("user", "Hello from Anthropic!")]
+)
+
+# Auto-detection (provider detected from model name)
+auto_response = client.chat_completions_create(
+    model="gpt-4o",  # Automatically detected as "openai"
+    messages=[Message("user", "Auto-detected provider!")]
+)
+```
+
+### Asynchronous Client
+
+```python
+import asyncio
+from weycop import AsyncWeycopClient
+
+async def main():
+    async with AsyncWeycopClient(api_key="your-api-key") as client:
+        # Use any provider asynchronously
+        response = await client.chat_local(
+            model="qwen3:8b",
+            messages=[Message("user", "What is machine learning?")]
+        )
+        print(response.choices[0].message.content)
+
+asyncio.run(main())
+```
+
+---
+
+## 🧠 Supported Models
+
+### Local Models (Free)
+* `qwen3:4b-instruct` – Fast, efficient model for general conversations (4GB VRAM)
+* `qwen3:8b` – Advanced model with extended context (8.5GB VRAM)
+
+### OpenAI Models (Pay-per-token)
+* `gpt-3.5-turbo` – Fast and affordable ($0.0005/$0.0015 per 1K tokens)
+* `gpt-4o` – Advanced reasoning and analysis ($0.0025/$0.01 per 1K tokens)
+* `gpt-4o-mini` – Lightweight and fast ($0.00015/$0.0006 per 1K tokens)
+* `gpt-4` – Premium model for complex tasks ($0.03/$0.06 per 1K tokens)
+
+### Anthropic Models (Pay-per-token)
+* `claude-3-5-sonnet-20241022` – Most intelligent model ($0.003/$0.015 per 1K tokens)
+* `claude-3-5-haiku-20241022` – Fastest model ($0.00025/$0.00125 per 1K tokens)
+* `claude-3-opus-20240229` – Most powerful model ($0.015/$0.075 per 1K tokens)
+
+---
+
+## 🔍 Model Information
+
+```python
+# Get available models by provider
+models = client.get_available_models()
+print(models)
+# Output: {
+#   "local": ["qwen3:4b-instruct", "qwen3:8b"],
+#   "openai": ["gpt-3.5-turbo", "gpt-4o", "gpt-4o-mini"],
+#   "anthropic": ["claude-3-5-sonnet-20241022", ...]
+# }
+
+# Get detailed model information
+model_info = client.get_model_info("gpt-4o")
+print(f"Provider: {model_info.provider}")
+print(f"Context: {model_info.context_length} tokens")
+print(f"Cost: ${model_info.cost_per_1k_input_tokens}/1K input tokens")
+```
+
+---
+
+## 🛡️ Error Handling
+
+```python
+from weycop import WeycopClient, AuthenticationError, RateLimitError, APIError
+
+client = WeycopClient(api_key="your-key")
+
+try:
+    # Try different providers
+    response = client.chat_local("Hello", model="qwen3:4b-instruct")
+    print(response.choices[0].message.content)
+except AuthenticationError:
+    print("Invalid API key")
+except RateLimitError:
+    print("Rate limit exceeded")
+except APIError as e:
+    print(f"API error: {e}")
+```
+
+---
+
+## 🔄 Examples
+
+### Provider-Specific Usage
+
+```python
+from weycop import Message
+
+# Explicit provider specification
+completion = client.chat_completions_create(
+    model="gpt-4o",
+    provider="openai",  # Optional - auto-detected if omitted
+    messages=[
+        Message("system", "You are a helpful assistant"),
+        Message("user", "Explain quantum computing")
+    ],
+    max_tokens=200
+)
+```
+
+### System Prompts
+
+```python
+from weycop import Message
+
+completion = client.chat_completions_create(
+    model="qwen3:8b",
+    messages=[
+        Message("system", "You are a SQL expert. Only respond with SQL code."),
+        Message("user", "Get all users created in the last 30 days")
+    ]
+)
+```
+
+### Multi-turn Conversation
+
+```python
+messages = [
+    Message("system", "You are a helpful math tutor."),
+    Message("user", "What is 15 + 27?"),
+]
+
+completion = client.chat_completions_create(model="qwen3:4b-instruct", messages=messages)
+assistant_response = completion.choices[0].message.content
+messages.append(Message("assistant", assistant_response))
+
+messages.append(Message("user", "Now multiply that by 3"))
+completion = client.chat_completions_create(model="qwen3:4b-instruct", messages=messages)
+print(completion.choices[0].message.content)
+```
+
+### Cost Optimization
+
+```python
+# Free local models for development/testing
+dev_response = client.chat_local(
+    model="qwen3:4b-instruct", 
+    messages=[Message("user", "Test message")]
+)
+
+# Cost-effective cloud models for production
+prod_response = client.chat_openai(
+    model="gpt-4o-mini",  # Most affordable OpenAI model
+    messages=[Message("user", "Production query")]
+)
+
+# Premium models for complex tasks
+complex_response = client.chat_anthropic(
+    model="claude-3-5-sonnet-20241022",
+    messages=[Message("user", "Complex analysis task")]
+)
+```
+
+### Context Management
+
+```python
+with WeycopClient(api_key="your-key") as client:
+    response = client.chat("Hello!")
+    print(response)
+# Client is automatically closed
+```
+
+---
+
+## 🚀 Migration from v1.x
+
+If you're upgrading from v1.x, your existing code continues to work:
+
+```python
+# v1.x code (still works)
+response = client.chat_completions_create(
+    model="qwen3:4b-instruct",
+    messages=[{"role": "user", "content": "Hello"}]
+)
+
+# v2.x additions (new capabilities)
+response = client.chat_local(  # Provider-specific methods
+    model="qwen3:4b-instruct",
+    messages=[{"role": "user", "content": "Hello"}]
+)
+```
+
+---
+
+---
+
+## Support
+
+* Email: [apps@weycop.com](mailto:apps@weycop.com)
+
+---
+
+## 📜 License
+
+MIT License - see [LICENSE](LICENSE) file for details.
