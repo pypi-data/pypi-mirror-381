@@ -1,0 +1,5 @@
+pyqt6
+tgt
+praat-parselmouth
+numpy
+matplotlib
