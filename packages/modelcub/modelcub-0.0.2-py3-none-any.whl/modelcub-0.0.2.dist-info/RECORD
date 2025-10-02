@@ -1,0 +1,9 @@
+modelcub/__init__.py,sha256=P9IFXwNCDbHqA8rVVfWFSyxdNBSt2BXwwsdbM5tYFa8,239
+modelcub/cli.py,sha256=OU4c5Vjvl2KlfCveHuYJfj_R69ItOZjgM057_KQsBtA,773
+modelcub/commands/about.py,sha256=uTUuc4tnw7SdGGNUsz6AII0z5YIfuSHPY6z2jhyixWU,669
+modelcub/commands/init.py,sha256=XqMhKh7UrwkMUhXEuwPSWDZKS89lejURHWiRwFw17t8,1576
+modelcub-0.0.2.dist-info/METADATA,sha256=fDzjNrNhDlLCROXBZwZJHhXYQE5F8_01c87OqIIJBzg,339
+modelcub-0.0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+modelcub-0.0.2.dist-info/entry_points.txt,sha256=cUMEwQ0xfhWu3YZsEvRTxvWSNyFS-621L5taL4n_k1o,47
+modelcub-0.0.2.dist-info/top_level.txt,sha256=Jkj3bLFjPW-3hm_cRS6XG-479KIxrgr6vx4_iSPojUA,9
+modelcub-0.0.2.dist-info/RECORD,,
