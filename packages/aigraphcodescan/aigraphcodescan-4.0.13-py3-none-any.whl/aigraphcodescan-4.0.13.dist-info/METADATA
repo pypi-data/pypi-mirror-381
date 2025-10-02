@@ -1,0 +1,202 @@
+Metadata-Version: 2.4
+Name: aigraphcodescan
+Version: 4.0.13
+Summary: A tool for security review of code using graph-based analysis
+Author-email: Marcin Kozlowski <marcinguy@gmail.com>
+License-Expression: AGPL-3.0-only
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: neo4j>=4.0.0
+Requires-Dist: fast_graphrag>=0.0.4
+Requires-Dist: logging
+Requires-Dist: argparse
+Dynamic: license-file
+
+
+# AIGraphCodeScan
+
+**AIGraphCodeScan** is a tool designed for performing security reviews of codebases using graph analysis. The package utilizes **Neo4j** and **Fast GraphRAG** to query and visualize relationships within the code, helping identify potential security risks and vulnerabilities by analyzing the structure and flow of the code.
+
+---
+
+## Features
+
+- **Graph-based Code Analysis**: Leverages graph theory to analyze code relationships and interactions.
+- **Neo4j Integration**: Stores and queries code structure and data flow in a Neo4j graph database.
+- **Flexible LLM Backend**: Supports any model compatible with **LiteLLM** (e.g., Gemini, GPT-4, Claude) for graph creation and vulnerability querying.
+- **Security Review**: Helps identify potential security vulnerabilities based on the code's structure and relationships.
+
+---
+
+## Installation
+
+### Prerequisites
+
+Ensure you have Python 3.6 or higher installed. You will also need a **Neo4j** instance running to store and query code-related data.
+
+### Installation Steps
+
+Clone the repository and install the required dependencies:
+
+```bash
+git clone [https://github.com/marcinguy-web/aigraphcodescan.git](https://github.com/marcinguy-web/aigraphcodescan.git)
+cd aigraphcodescan
+pip install -e .
+````
+
+### Requirements
+
+  - Python 3.6+
+  - `neo4j >= 4.0.0`
+  - `fast_graphrag >= 0.1.0`
+
+-----
+
+## Usage
+
+### Running the Scan
+
+Once installed, you can use the `aigraphcodescan` command to run the security review.
+
+```bash
+# Example using a specified directory, graph location, and the Gemini model
+aigraphcodescan \
+    --directory=/home/user/vulncode \
+    --graphdirectory=/home/user/aigraphcodescan/vulncode_graph \
+    --model=gemini/gemini-2.5-pro \
+    --debug
+```
+
+  * **`--directory`**: The directory with source code to analyze (required).
+  * **`--graphdirectory`**: Directory to store generated graphs. Defaults to `./.graph` in the current location.
+  * **`--model`**: The LiteLLM model string to use (e.g., `gemini/gemini-2.5-flash`, `openai/gpt-4o`).
+  * **`--debug`**: Enables more detailed logging output.
+  * **`--json-output`**: Outputs findings to standard output as JSON, bypassing Neo4j storage.
+
+### Environment Variables
+
+You must export environment variables for the chosen LLM API key and Neo4j connection details:
+
+```bash
+# 1. LLM API Key (using OpenAI as an example, but adjust for your chosen model)
+export OPENAI_API_KEY="sk-..."
+export LLM_MODEL="openai/gpt-4o" # Optional: set the default LLM model here
+
+# 2. Neo4j Settings
+export NEO4J_URI="bolt://localhost:7687"
+export NEO4J_USER="neo4j"
+export NEO4J_PASSWORD="password"
+```
+
+### Graph Structure (What's Stored)
+
+The primary components stored in the knowledge graph are:
+
+  * **Nodes**: These represent entities in your data, such as functions, methods, variables, and files. Each node has properties, like its name or type.
+  * **Edges**: These represent the relationships between the nodes. For example, an edge might connect a "Function" node to an "Input" node with the relationship "TAINTED\_BY".
+  * **Embeddings**: Vector embeddings of the text data are also stored. These numerical representations help the RAG process understand semantic similarity, crucial for query-answering.
+
+### Neo4j Setup and Visualization
+
+**AIGraphCodeScan** requires the **APOC plugin** to be enabled on your Neo4j server for mass-creating nodes and relationships efficiently.
+
+You can use a Docker command to quickly spin up a Neo4j server with the necessary configuration:
+
+```bash
+docker run -p 7474:7474 -p 7687:7687 -d -e NEO4J_AUTH=neo4j/password -e NEO4JLABS_PLUGINS='["apoc"]' neo4j:5
+```
+
+Neo4j's visualization software **Neo4j Browser** can be used to graphically look at the generated Code Property Graph (CPG) nodes and edges. Access it at `http://localhost:7474`.
+
+-----
+
+## Automated Setup and Scan
+
+This guide explains how to use the provided shell script to automate the installation of dependencies and the execution of the `aigraphcodescan` security review tool.
+
+### Prerequisites
+
+  * A compatible operating system (Ubuntu/Debian-based Linux or macOS).
+  * `sudo` access for Docker installation (on Linux).
+  * `pip` and `python3` installed.
+
+### How the Script Works
+
+The `setup_and_run_aigraphcodescan.sh` script performs the following actions:
+
+1.  **Argument Check**: Verifies that you have provided a target directory to scan.
+2.  **Docker Check**: Checks if Docker is installed. If not, it attempts to install it on Ubuntu/Debian Linux. On macOS, it will prompt you to install it manually.
+3.  **Neo4j Container**: Checks for a running Neo4j container. If one is not found, it automatically starts a new one with the necessary **APOC plugin** and default credentials.
+4.  **`aigraphcodescan` Installation**: Checks if the command is available. If not, it installs it from PyPI using `pip`.
+5.  **OpenAI API Key**: It looks for an `OPENAI_API_KEY` in a file at `~/.openai_api_key`. If the file doesn't exist, it will interactively prompt you for the key and save it securely.
+6.  **Environment Variables**: Exports the required environment variables for Neo4j and the OpenAI API key.
+7.  **Scan Execution**: Runs the `aigraphcodescan` command with the provided directory, a default graph directory, and the debug flag.
+
+### Usage
+
+1.  **Make the script executable:**
+
+    ```bash
+    chmod +x setup_and_run_aigraphcodescan.sh
+    ```
+
+2.  **Run the script:**
+    Execute the script, providing the path to the directory containing the code you want to scan.
+
+    ```bash
+    ./setup_and_run_aigraphcodescan.sh --directory /path/to/your/code
+    ```
+
+    Replace `/path/to/your/code` with the actual directory you wish to scan.
+
+### Notes
+
+  * **Permissions**: On Linux, you might need to run `sudo usermod -aG docker $USER` after the first-time Docker installation and then log out and log back in to run Docker commands without `sudo`.
+  * **Neo4j Browser**: Once the script starts the Neo4j container, you can access the Neo4j Browser for visualization at **http://localhost:7474**. Use the username `neo4j` and the password `password` to log in.
+  * **Graph Directory**: The graph data will be saved in a new directory named after your scanned directory, appended with `_graph` (e.g., `/path/to/your/code_graph`).
+
+-----
+
+## The Difficulty of Building a CPG/DFG
+
+Building robust Code Property Graphs (CPGs) or Data Flow Graphs (DFGs) involves much more than just traversing an Abstract Syntax Tree (AST):
+
+  * **Parsing and Lexing**: Requires a robust parser that can handle all the quirks and edge cases of the target programming language.
+  * **Symbol Resolution**: The tool needs to know what every variable and function name refers to, even across different files or modules. This is a hard problem known as symbol resolution or name binding.
+  * **Interprocedural Analysis**: To be truly useful, the graphs must analyze the flow of data and control between different functions. This requires tracking data from a function's arguments to its return values and identifying which functions call which others.
+  * **Handling of Aliases and Pointers**: Languages like C have pointers and aliasing, which make data flow analysis exceptionally difficult, requiring sophisticated algorithms to correctly track "tainted" data.
+
+### LLMs and Graph Generation
+
+Yes, an LLM can create a **simplified** CPG or DFG from source code. However, there are significant caveats for security analysis:
+
+  * **Limited Scope**: The LLM's graph will be based on its understanding of the code's syntax and its training data. It will struggle with larger, more complex projects involving multiple files, external libraries, and dynamic behaviors.
+  * **Inaccuracy and Hallucination**: LLMs can hallucinate or misinterpret code, leading to incorrect or incomplete graphs. They do not truly "execute" the code or have a formal model of its behavior.
+  * **Security Concerns**: For security-critical applications like SAST, the generated graph must be 100% accurate. A single missed data flow edge could hide a critical vulnerability. An LLM's output cannot be trusted for this purpose without extensive, manual verification.
+
+In the case of this approach (LLM + GraphRAG), success hinges on how well the nodes, edges, sinks, and tainting/sanitization paths are identified by the underlying LLM.
+
+-----
+
+## Example Workflow
+
+1.  **Run the security scan**: Use the `aigraphcodescan` command to analyze your codebase, specifying your preferred LLM.
+2.  **Review findings**: Based on the graph analysis and the LLM's query response, the tool will provide insights into potential security vulnerabilities, such as insecure data flows or exposed endpoints.
+3.  **Improve your code**: Use the output to guide security improvements in your codebase.
+
+-----
+
+## Contributing
+
+We welcome contributions to **AIGraphCodeScan**. If you find a bug or have a suggestion, please open an issue or submit a pull request.
+
+-----
+
+## License
+
+This project is licensed under the AGPL 3.0 License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
+
+
