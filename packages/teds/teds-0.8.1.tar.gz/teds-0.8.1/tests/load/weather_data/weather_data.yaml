@@ -1,0 +1,184 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Weather Data Collection Schema"
+type: object
+properties:
+  stations:
+    type: array
+    items:
+      $ref: "#/$defs/WeatherStation"
+  observations:
+    type: array
+    items:
+      $ref: "#/$defs/WeatherObservation"
+  forecasts:
+    type: array
+    items:
+      $ref: "#/$defs/WeatherForecast"
+$defs:
+  WeatherStation:
+    type: object
+    examples:
+      - station_id: "550e8400-e29b-41d4-a716-446655440001"
+        name: "San Francisco International Airport"
+        location:
+          latitude: 37.6213
+          longitude: -122.3790
+        elevation_meters: 3.7
+        station_type: "automatic"
+        operator: "National Weather Service"
+        installation_date: "2010-05-15"
+        sensors: []
+    properties:
+      station_id:
+        type: string
+        format: uuid
+      name:
+        type: string
+        maxLength: 100
+      location:
+        $ref: "../iot_sensors/iot_sensors.yaml#/$defs/Device/properties/location"
+      elevation_meters:
+        type: number
+      station_type:
+        type: string
+        enum: ["automatic", "manual", "cooperative", "buoy", "aircraft"]
+      operator:
+        type: string
+      installation_date:
+        type: string
+        format: date
+      sensors:
+        type: array
+        items:
+          $ref: "../iot_sensors/iot_sensors.yaml#/$defs/Device"
+    required: ["station_id", "name", "location", "elevation_meters", "station_type"]
+  WeatherObservation:
+    type: object
+    examples:
+      - observation_id: "550e8400-e29b-41d4-a716-446655440010"
+        station_id: "550e8400-e29b-41d4-a716-446655440001"
+        timestamp: "2024-03-15T14:30:00Z"
+        temperature_celsius: 18.5
+        humidity_percent: 72.0
+        pressure_hpa: 1013.25
+        wind_speed_kmh: 12.8
+        wind_direction_degrees: 225
+        precipitation_mm: 0.0
+        visibility_km: 16.0
+        cloud_cover_percent: 25.0
+        weather_conditions: ["partly_cloudy"]
+    properties:
+      observation_id:
+        type: string
+        format: uuid
+      station_id:
+        type: string
+        format: uuid
+      timestamp:
+        type: string
+        format: date-time
+      temperature_celsius:
+        type: number
+        minimum: -80
+        maximum: 60
+      humidity_percent:
+        type: number
+        minimum: 0
+        maximum: 100
+      pressure_hpa:
+        type: number
+        minimum: 850
+        maximum: 1085
+      wind_speed_kmh:
+        type: number
+        minimum: 0
+        maximum: 500
+      wind_direction_degrees:
+        type: number
+        minimum: 0
+        maximum: 360
+      precipitation_mm:
+        type: number
+        minimum: 0
+      visibility_km:
+        type: number
+        minimum: 0
+        maximum: 50
+      cloud_cover_percent:
+        type: number
+        minimum: 0
+        maximum: 100
+      weather_conditions:
+        type: array
+        items:
+          type: string
+          enum: ["clear", "partly_cloudy", "cloudy", "rain", "snow", "fog", "thunderstorm", "hail"]
+    required: ["observation_id", "station_id", "timestamp", "temperature_celsius", "humidity_percent", "pressure_hpa"]
+  WeatherForecast:
+    type: object
+    examples:
+      - forecast_id: "550e8400-e29b-41d4-a716-446655440020"
+        location:
+          latitude: 37.6213
+          longitude: -122.3790
+        forecast_date: "2024-03-16"
+        issued_time: "2024-03-15T18:00:00Z"
+        forecast_periods:
+          - period_start: "2024-03-16T06:00:00Z"
+            period_end: "2024-03-16T18:00:00Z"
+            temperature_high_celsius: 22.0
+            temperature_low_celsius: 15.0
+            precipitation_probability: 20.0
+            precipitation_amount_mm: 0.5
+            wind_speed_kmh: 15.0
+            conditions: "partly_cloudy"
+    properties:
+      forecast_id:
+        type: string
+        format: uuid
+      location:
+        $ref: "../iot_sensors/iot_sensors.yaml#/$defs/Device/properties/location"
+      forecast_date:
+        type: string
+        format: date
+      issued_time:
+        type: string
+        format: date-time
+      forecast_periods:
+        type: array
+        items:
+          $ref: "#/$defs/ForecastPeriod"
+        minItems: 1
+    required: ["forecast_id", "location", "forecast_date", "issued_time", "forecast_periods"]
+  ForecastPeriod:
+    type: object
+    properties:
+      period_start:
+        type: string
+        format: date-time
+      period_end:
+        type: string
+        format: date-time
+      temperature_high_celsius:
+        type: number
+        minimum: -80
+        maximum: 60
+      temperature_low_celsius:
+        type: number
+        minimum: -80
+        maximum: 60
+      precipitation_probability:
+        type: number
+        minimum: 0
+        maximum: 100
+      precipitation_amount_mm:
+        type: number
+        minimum: 0
+      wind_speed_kmh:
+        type: number
+        minimum: 0
+        maximum: 500
+      conditions:
+        type: string
+        enum: ["sunny", "partly_cloudy", "cloudy", "rain", "snow", "thunderstorms", "fog"]
+    required: ["period_start", "period_end", "temperature_high_celsius", "temperature_low_celsius", "conditions"]

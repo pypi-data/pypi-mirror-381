@@ -1,0 +1,444 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Music Streaming Platform Schema"
+type: object
+examples:
+  - users:
+      - user_id: "550e8400-e29b-41d4-a716-446655440001"
+        username: "music_lover2024"
+        email: "sarah.music@email.com"
+        name:
+          first_name: "Sarah"
+          last_name: "Johnson"
+        date_of_birth: "1995-06-15"
+        country: "US"
+        subscription_type: "premium"
+        subscription_start: "2024-01-15T00:00:00Z"
+        subscription_end: "2025-01-15T00:00:00Z"
+        listening_history:
+          - track_id: "550e8400-e29b-41d4-a716-446655440020"
+            played_at: "2024-10-01T14:30:00Z"
+            duration_played: 180
+            completed: true
+        preferences:
+          favorite_genres: ["pop", "rock", "indie"]
+          explicit_content: false
+          audio_quality: "high"
+          autoplay: true
+        created_at: "2024-01-15T10:00:00Z"
+        last_active: "2024-10-01T15:45:00Z"
+    artists:
+      - artist_id: "550e8400-e29b-41d4-a716-446655440010"
+        name: "Taylor Swift"
+        bio: "American singer-songwriter known for her narrative songwriting and genre versatility"
+        country: "US"
+        genres: ["pop", "country", "indie"]
+        debut_year: 2006
+        verified: true
+        monthly_listeners: 85000000
+        image_url: "https://music.example.com/artists/taylor-swift.jpg"
+        social_media:
+          instagram: "@taylorswift"
+          twitter: "@taylorswift13"
+          website: "https://taylorswift.com"
+    albums:
+      - album_id: "550e8400-e29b-41d4-a716-446655440015"
+        title: "1989 (Taylor's Version)"
+        artist_id: "550e8400-e29b-41d4-a716-446655440010"
+        release_date: "2023-10-27"
+        album_type: "studio"
+        genre: "pop"
+        total_tracks: 21
+        duration_seconds: 4680
+        cover_art_url: "https://music.example.com/covers/1989-tv.jpg"
+        label: "Taylor Swift Productions"
+        producer: "Taylor Swift, Jack Antonoff"
+        explicit: false
+    tracks:
+      - track_id: "550e8400-e29b-41d4-a716-446655440020"
+        title: "Shake It Off (Taylor's Version)"
+        artist_id: "550e8400-e29b-41d4-a716-446655440010"
+        album_id: "550e8400-e29b-41d4-a716-446655440015"
+        track_number: 6
+        duration_seconds: 219
+        genre: "pop"
+        explicit: false
+        isrc: "USCJY2359876"
+        audio_url: "https://music.example.com/audio/shake-it-off-tv.mp3"
+        preview_url: "https://music.example.com/preview/shake-it-off-tv.mp3"
+        lyrics: "I stay out too late, got nothing in my brain..."
+        play_count: 1250000000
+        popularity: 95
+        release_date: "2023-10-27"
+        available_markets: ["US", "CA", "GB", "AU"]
+    playlists:
+      - playlist_id: "550e8400-e29b-41d4-a716-446655440030"
+        name: "My Favorites 2024"
+        description: "A collection of my favorite songs discovered this year"
+        user_id: "550e8400-e29b-41d4-a716-446655440001"
+        public: true
+        collaborative: false
+        track_ids: ["550e8400-e29b-41d4-a716-446655440020"]
+        total_tracks: 1
+        total_duration_seconds: 219
+        cover_image_url: "https://music.example.com/playlists/my-favorites-2024.jpg"
+        created_at: "2024-01-20T12:00:00Z"
+        updated_at: "2024-10-01T14:30:00Z"
+        follower_count: 25
+        tags: ["favorites", "2024", "pop"]
+properties:
+  users:
+    type: array
+    items:
+      $ref: "#/$defs/User"
+  artists:
+    type: array
+    items:
+      $ref: "#/$defs/Artist"
+  albums:
+    type: array
+    items:
+      $ref: "#/$defs/Album"
+  tracks:
+    type: array
+    items:
+      $ref: "#/$defs/Track"
+  playlists:
+    type: array
+    items:
+      $ref: "#/$defs/Playlist"
+$defs:
+  User:
+    type: object
+    properties:
+      user_id:
+        type: string
+        format: uuid
+      username:
+        type: string
+        pattern: "^[a-zA-Z0-9_]{3,20}$"
+      email:
+        type: string
+        format: email
+      name:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/PersonName"
+      date_of_birth:
+        type: string
+        format: date
+      country:
+        type: string
+        pattern: "^[A-Z]{2}$"
+      subscription_type:
+        type: string
+        enum: ["free", "premium", "family", "student"]
+      subscription_start:
+        type: string
+        format: date
+      subscription_end:
+        type: string
+        format: date
+      listening_preferences:
+        $ref: "#/$defs/ListeningPreferences"
+      followers_count:
+        type: integer
+        minimum: 0
+      following_count:
+        type: integer
+        minimum: 0
+    required: ["user_id", "username", "email", "name", "subscription_type"]
+  ListeningPreferences:
+    type: object
+    properties:
+      preferred_genres:
+        type: array
+        items:
+          type: string
+          enum: ["rock", "pop", "hip_hop", "electronic", "classical", "jazz", "country", "r_and_b", "indie", "metal", "folk", "reggae", "blues", "punk"]
+        maxItems: 5
+      audio_quality:
+        type: string
+        enum: ["low", "normal", "high", "lossless"]
+        default: "normal"
+      explicit_content:
+        type: boolean
+        default: true
+      crossfade_duration:
+        type: integer
+        minimum: 0
+        maximum: 12
+      volume_normalization:
+        type: boolean
+        default: true
+  Artist:
+    type: object
+    properties:
+      artist_id:
+        type: string
+        format: uuid
+      name:
+        type: string
+        maxLength: 100
+      biography:
+        type: string
+        maxLength: 2000
+      genres:
+        type: array
+        items:
+          type: string
+        uniqueItems: true
+      country:
+        type: string
+        pattern: "^[A-Z]{2}$"
+      formation_date:
+        type: string
+        format: date
+      band_members:
+        type: array
+        items:
+          $ref: "#/$defs/BandMember"
+      social_media:
+        type: object
+        properties:
+          spotify_url:
+            type: string
+            format: uri
+          youtube_url:
+            type: string
+            format: uri
+          instagram:
+            type: string
+          twitter:
+            type: string
+      verified:
+        type: boolean
+        default: false
+      monthly_listeners:
+        type: integer
+        minimum: 0
+      total_plays:
+        type: integer
+        minimum: 0
+    required: ["artist_id", "name", "genres"]
+  BandMember:
+    type: object
+    properties:
+      member_id:
+        type: string
+        format: uuid
+      name:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/PersonName"
+      role:
+        type: string
+        enum: ["vocals", "guitar", "bass", "drums", "keyboard", "producer", "songwriter"]
+      join_date:
+        type: string
+        format: date
+      leave_date:
+        type: string
+        format: date
+    required: ["member_id", "name", "role", "join_date"]
+  Album:
+    type: object
+    properties:
+      album_id:
+        type: string
+        format: uuid
+      title:
+        type: string
+        maxLength: 100
+      artist_id:
+        type: string
+        format: uuid
+      release_date:
+        type: string
+        format: date
+      album_type:
+        type: string
+        enum: ["studio", "live", "compilation", "ep", "single"]
+      genre:
+        type: string
+      total_tracks:
+        type: integer
+        minimum: 1
+      duration_seconds:
+        type: integer
+        minimum: 1
+      cover_art_url:
+        type: string
+        format: uri
+      record_label:
+        type: string
+        maxLength: 100
+      producer:
+        type: string
+        maxLength: 100
+      copyright:
+        type: string
+        maxLength: 200
+      explicit:
+        type: boolean
+        default: false
+      total_plays:
+        type: integer
+        minimum: 0
+    required: ["album_id", "title", "artist_id", "release_date", "album_type", "total_tracks", "duration_seconds"]
+  Track:
+    type: object
+    properties:
+      track_id:
+        type: string
+        format: uuid
+      title:
+        type: string
+        maxLength: 100
+      artist_id:
+        type: string
+        format: uuid
+      album_id:
+        type: string
+        format: uuid
+      track_number:
+        type: integer
+        minimum: 1
+      duration_seconds:
+        type: integer
+        minimum: 1
+      file_url:
+        type: string
+        format: uri
+      preview_url:
+        type: string
+        format: uri
+      lyrics:
+        type: string
+        maxLength: 10000
+      explicit:
+        type: boolean
+        default: false
+      isrc:
+        type: string
+        pattern: "^[A-Z]{2}[A-Z0-9]{3}[0-9]{7}$"
+      composers:
+        type: array
+        items:
+          type: string
+      featured_artists:
+        type: array
+        items:
+          type: string
+          format: uuid
+      audio_features:
+        $ref: "#/$defs/AudioFeatures"
+      play_count:
+        type: integer
+        minimum: 0
+      skip_count:
+        type: integer
+        minimum: 0
+    required: ["track_id", "title", "artist_id", "album_id", "track_number", "duration_seconds", "file_url"]
+  AudioFeatures:
+    type: object
+    properties:
+      tempo:
+        type: number
+        minimum: 50
+        maximum: 200
+      key:
+        type: integer
+        minimum: 0
+        maximum: 11
+      mode:
+        type: integer
+        enum: [0, 1]
+      time_signature:
+        type: integer
+        minimum: 3
+        maximum: 7
+      energy:
+        type: number
+        minimum: 0
+        maximum: 1
+      danceability:
+        type: number
+        minimum: 0
+        maximum: 1
+      valence:
+        type: number
+        minimum: 0
+        maximum: 1
+      acousticness:
+        type: number
+        minimum: 0
+        maximum: 1
+      instrumentalness:
+        type: number
+        minimum: 0
+        maximum: 1
+      liveness:
+        type: number
+        minimum: 0
+        maximum: 1
+      speechiness:
+        type: number
+        minimum: 0
+        maximum: 1
+      loudness:
+        type: number
+        minimum: -60
+        maximum: 0
+  Playlist:
+    type: object
+    properties:
+      playlist_id:
+        type: string
+        format: uuid
+      name:
+        type: string
+        maxLength: 100
+      description:
+        type: string
+        maxLength: 300
+      owner_id:
+        type: string
+        format: uuid
+      public:
+        type: boolean
+        default: true
+      collaborative:
+        type: boolean
+        default: false
+      created_date:
+        type: string
+        format: date-time
+      updated_date:
+        type: string
+        format: date-time
+      cover_image_url:
+        type: string
+        format: uri
+      tracks:
+        type: array
+        items:
+          $ref: "#/$defs/PlaylistTrack"
+      followers_count:
+        type: integer
+        minimum: 0
+      total_duration_seconds:
+        type: integer
+        minimum: 0
+    required: ["playlist_id", "name", "owner_id", "public", "created_date", "tracks"]
+  PlaylistTrack:
+    type: object
+    properties:
+      track_id:
+        type: string
+        format: uuid
+      added_date:
+        type: string
+        format: date-time
+      added_by:
+        type: string
+        format: uuid
+      position:
+        type: integer
+        minimum: 0
+    required: ["track_id", "added_date", "added_by", "position"]

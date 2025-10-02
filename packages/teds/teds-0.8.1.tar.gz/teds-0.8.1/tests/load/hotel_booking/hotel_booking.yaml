@@ -1,0 +1,229 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Hotel Booking Management Schema"
+type: object
+examples:
+  - hotels:
+      - hotel_id: "550e8400-e29b-41d4-a716-446655440001"
+        name: "Grand Pacific Resort"
+        address:
+          street: "1500 Ocean Boulevard"
+          city: "Miami Beach"
+          state: "Florida"
+          postal_code: "33139"
+          country: "United States"
+        star_rating: 5
+        amenities: ["wifi", "pool", "gym", "spa", "restaurant", "bar", "parking", "concierge"]
+        rooms:
+          - room_id: "550e8400-e29b-41d4-a716-446655440010"
+            room_number: "1205"
+            room_type: "deluxe"
+            capacity: 2
+            price_per_night:
+              amount: 450.00
+              currency: "USD"
+            amenities: ["Ocean view", "King bed", "Balcony", "Mini bar", "Coffee machine"]
+            available: true
+          - room_id: "550e8400-e29b-41d4-a716-446655440011"
+            room_number: "2010"
+            room_type: "suite"
+            capacity: 4
+            price_per_night:
+              amount: 850.00
+              currency: "USD"
+            amenities: ["Ocean view", "Separate living room", "Kitchen", "Jacuzzi", "Butler service"]
+            available: true
+        contact:
+          name:
+            first_name: "Isabella"
+            last_name: "Rodriguez"
+          relationship: "Hotel Manager"
+          phone: "+13055551234"
+          email: "manager@grandpacific.com"
+    bookings:
+      - booking_id: "550e8400-e29b-41d4-a716-446655440020"
+        confirmation_number: "GPR001"
+        hotel_id: "550e8400-e29b-41d4-a716-446655440001"
+        room_id: "550e8400-e29b-41d4-a716-446655440010"
+        guest_id: "550e8400-e29b-41d4-a716-446655440030"
+        check_in_date: "2024-12-20"
+        check_out_date: "2024-12-23"
+        nights: 3
+        total_amount:
+          amount: 1350.00
+          currency: "USD"
+        payment:
+          payment_id: "pay_gpr001"
+          method: "credit_card"
+          amount:
+            amount: 1350.00
+            currency: "USD"
+          status: "completed"
+          transaction_date: "2024-10-01T15:30:00Z"
+          payment_provider: "stripe"
+          reference_number: "ch_3NZ8pI2eZvKYlo2C0987654321"
+        status: "confirmed"
+        special_requests: "Late check-in requested, ocean view preferred, anniversary celebration - please prepare room with flowers and champagne"
+    guests:
+      - guest_id: "550e8400-e29b-41d4-a716-446655440030"
+        name:
+          first_name: "David"
+          last_name: "Anderson"
+        email: "david.anderson@email.com"
+        phone: "+12125559876"
+        address:
+          street: "789 Manhattan Avenue"
+          city: "New York"
+          state: "New York"
+          postal_code: "10025"
+          country: "United States"
+        loyalty_number: "GPR-GOLD-123456"
+        preferences:
+          room_type: "deluxe"
+          floor_preference: "high"
+          bed_type: "king"
+          smoking: false
+          dietary_restrictions: ["Vegetarian", "Gluten-free"]
+properties:
+  hotels:
+    type: array
+    items:
+      $ref: "#/$defs/Hotel"
+  bookings:
+    type: array
+    items:
+      $ref: "#/$defs/Booking"
+  guests:
+    type: array
+    items:
+      $ref: "#/$defs/Guest"
+$defs:
+  Hotel:
+    type: object
+    properties:
+      hotel_id:
+        type: string
+        format: uuid
+      name:
+        type: string
+        maxLength: 100
+      address:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/Address"
+      star_rating:
+        type: integer
+        minimum: 1
+        maximum: 5
+      amenities:
+        type: array
+        items:
+          type: string
+          enum: ["wifi", "pool", "gym", "spa", "restaurant", "bar", "parking", "pet_friendly", "business_center", "concierge"]
+      rooms:
+        type: array
+        items:
+          $ref: "#/$defs/Room"
+      contact:
+        $ref: "../healthcare_records/healthcare_records.yaml#/$defs/EmergencyContact"
+    required: ["hotel_id", "name", "address", "star_rating", "rooms"]
+  Room:
+    type: object
+    properties:
+      room_id:
+        type: string
+        format: uuid
+      room_number:
+        type: string
+      room_type:
+        type: string
+        enum: ["standard", "deluxe", "suite", "presidential", "family", "accessible"]
+      capacity:
+        type: integer
+        minimum: 1
+        maximum: 8
+      price_per_night:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/Money"
+      amenities:
+        type: array
+        items:
+          type: string
+      available:
+        type: boolean
+        default: true
+    required: ["room_id", "room_number", "room_type", "capacity", "price_per_night"]
+  Booking:
+    type: object
+    properties:
+      booking_id:
+        type: string
+        format: uuid
+      confirmation_number:
+        type: string
+        pattern: "^[A-Z0-9]{6}$"
+      hotel_id:
+        type: string
+        format: uuid
+      room_id:
+        type: string
+        format: uuid
+      guest_id:
+        type: string
+        format: uuid
+      check_in_date:
+        type: string
+        format: date
+      check_out_date:
+        type: string
+        format: date
+      nights:
+        type: integer
+        minimum: 1
+      total_amount:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/Money"
+      payment:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/Payment"
+      status:
+        type: string
+        enum: ["confirmed", "checked_in", "checked_out", "cancelled", "no_show"]
+      special_requests:
+        type: string
+        maxLength: 500
+    required: ["booking_id", "confirmation_number", "hotel_id", "room_id", "guest_id", "check_in_date", "check_out_date", "total_amount", "status"]
+  Guest:
+    type: object
+    properties:
+      guest_id:
+        type: string
+        format: uuid
+      name:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/PersonName"
+      email:
+        type: string
+        format: email
+      phone:
+        type: string
+        pattern: "^\\+?[1-9]\\d{1,14}$"
+      address:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/Address"
+      loyalty_number:
+        type: string
+      preferences:
+        $ref: "#/$defs/GuestPreferences"
+    required: ["guest_id", "name", "email", "phone"]
+  GuestPreferences:
+    type: object
+    properties:
+      room_type:
+        type: string
+        enum: ["standard", "deluxe", "suite"]
+      floor_preference:
+        type: string
+        enum: ["low", "high", "no_preference"]
+      bed_type:
+        type: string
+        enum: ["single", "double", "queen", "king"]
+      smoking:
+        type: boolean
+        default: false
+      dietary_restrictions:
+        type: array
+        items:
+          type: string

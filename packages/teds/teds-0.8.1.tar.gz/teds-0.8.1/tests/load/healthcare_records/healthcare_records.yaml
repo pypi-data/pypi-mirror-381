@@ -1,0 +1,172 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Healthcare Records Schema"
+type: object
+examples:
+  - patients:
+      - patient_id: "550e8400-e29b-41d4-a716-446655440001"
+        name:
+          first_name: "Sarah"
+          middle_name: "Elizabeth"
+          last_name: "Miller"
+        date_of_birth: "1985-07-20"
+        gender: "female"
+        blood_type: "A+"
+        allergies: ["Penicillin", "Shellfish", "Latex"]
+        emergency_contact:
+          name:
+            first_name: "Michael"
+            last_name: "Miller"
+          relationship: "Spouse"
+          phone: "+15551234567"
+          email: "michael.miller@email.com"
+    medical_records:
+      - record_id: "550e8400-e29b-41d4-a716-446655440010"
+        patient_id: "550e8400-e29b-41d4-a716-446655440001"
+        visit_date: "2024-09-15"
+        diagnosis:
+          - code: "Z00.0"
+            description: "Encounter for general adult medical examination without abnormal findings"
+            severity: "mild"
+          - code: "E11.9"
+            description: "Type 2 diabetes mellitus without complications"
+            severity: "moderate"
+        medications:
+          - name: "Metformin"
+            dosage: "500mg"
+            frequency: "Twice daily with meals"
+            start_date: "2024-09-15"
+            end_date: "2025-09-15"
+          - name: "Lisinopril"
+            dosage: "10mg"
+            frequency: "Once daily"
+            start_date: "2024-09-15"
+        vitals:
+          temperature: 36.8
+          blood_pressure:
+            systolic: 128
+            diastolic: 82
+          heart_rate: 72
+          weight: 68.5
+properties:
+  patients:
+    type: array
+    items:
+      $ref: "#/$defs/Patient"
+  medical_records:
+    type: array
+    items:
+      $ref: "#/$defs/MedicalRecord"
+$defs:
+  Patient:
+    type: object
+    properties:
+      patient_id:
+        type: string
+        format: uuid
+      name:
+        $ref: "../../ecommerce_platform/ecommerce.yaml#/$defs/PersonName"
+      date_of_birth:
+        type: string
+        format: date
+      gender:
+        type: string
+        enum: ["male", "female", "other", "unknown"]
+      blood_type:
+        type: string
+        enum: ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
+      allergies:
+        type: array
+        items:
+          type: string
+      emergency_contact:
+        $ref: "#/$defs/EmergencyContact"
+    required: ["patient_id", "name", "date_of_birth"]
+  MedicalRecord:
+    type: object
+    properties:
+      record_id:
+        type: string
+        format: uuid
+      patient_id:
+        type: string
+        format: uuid
+      visit_date:
+        type: string
+        format: date
+      diagnosis:
+        type: array
+        items:
+          $ref: "#/$defs/Diagnosis"
+      medications:
+        type: array
+        items:
+          $ref: "#/$defs/Medication"
+      vitals:
+        $ref: "#/$defs/VitalSigns"
+    required: ["record_id", "patient_id", "visit_date"]
+  EmergencyContact:
+    type: object
+    properties:
+      name:
+        type: string
+      relationship:
+        type: string
+      phone:
+        type: string
+        pattern: "^\\+?[1-9]\\d{1,14}$"
+    required: ["name", "relationship", "phone"]
+  Diagnosis:
+    type: object
+    properties:
+      code:
+        type: string
+        pattern: "^[A-Z][0-9]{2}\\.[0-9]$"
+      description:
+        type: string
+      severity:
+        type: string
+        enum: ["mild", "moderate", "severe", "critical"]
+    required: ["code", "description"]
+  Medication:
+    type: object
+    properties:
+      name:
+        type: string
+      dosage:
+        type: string
+      frequency:
+        type: string
+      start_date:
+        type: string
+        format: date
+      end_date:
+        type: string
+        format: date
+    required: ["name", "dosage", "frequency"]
+  VitalSigns:
+    type: object
+    properties:
+      temperature:
+        type: number
+        minimum: 35
+        maximum: 42
+      blood_pressure:
+        type: object
+        properties:
+          systolic:
+            type: integer
+            minimum: 70
+            maximum: 200
+          diastolic:
+            type: integer
+            minimum: 40
+            maximum: 130
+        required: ["systolic", "diastolic"]
+      heart_rate:
+        type: integer
+        minimum: 40
+        maximum: 200
+      weight:
+        type: number
+        minimum: 0
+        maximum: 300

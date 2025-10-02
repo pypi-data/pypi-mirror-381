@@ -1,0 +1,250 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Restaurant Point of Sale Schema"
+type: object
+properties:
+  menu_items:
+    type: array
+    items:
+      $ref: "#/$defs/MenuItem"
+  orders:
+    type: array
+    items:
+      $ref: "#/$defs/Order"
+  tables:
+    type: array
+    items:
+      $ref: "#/$defs/Table"
+  staff:
+    type: array
+    items:
+      $ref: "#/$defs/Staff"
+$defs:
+  MenuItem:
+    type: object
+    examples:
+      - item_id: "550e8400-e29b-41d4-a716-446655440001"
+        name: "Grilled Salmon"
+        description: "Fresh Atlantic salmon grilled to perfection, served with seasonal vegetables and rice pilaf"
+        category: "entree"
+        price:
+          amount: 28.95
+          currency: "USD"
+        cost:
+          amount: 12.50
+          currency: "USD"
+        ingredients: ["salmon", "rice", "broccoli", "carrots", "olive oil", "lemon"]
+        allergens: ["fish"]
+        available: true
+        preparation_time: 18
+        calories: 450
+    properties:
+      item_id:
+        type: string
+        format: uuid
+      name:
+        type: string
+        maxLength: 100
+      description:
+        type: string
+        maxLength: 500
+      category:
+        type: string
+        enum: ["appetizer", "entree", "dessert", "beverage", "side"]
+      price:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/Money"
+      cost:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/Money"
+      ingredients:
+        type: array
+        items:
+          type: string
+      allergens:
+        type: array
+        items:
+          type: string
+          enum: ["gluten", "dairy", "nuts", "soy", "eggs", "shellfish", "fish"]
+      available:
+        type: boolean
+        default: true
+      preparation_time:
+        type: integer
+        minimum: 1
+      calories:
+        type: integer
+        minimum: 0
+    required: ["item_id", "name", "category", "price", "available"]
+  Order:
+    type: object
+    examples:
+      - order_id: "550e8400-e29b-41d4-a716-446655440010"
+        order_number: 142
+        table_id: "550e8400-e29b-41d4-a716-446655440020"
+        server_id: "550e8400-e29b-41d4-a716-446655440030"
+        items:
+          - item_id: "550e8400-e29b-41d4-a716-446655440001"
+            quantity: 2
+            unit_price:
+              amount: 28.95
+              currency: "USD"
+            total_price:
+              amount: 57.90
+              currency: "USD"
+            modifications: ["no vegetables", "extra lemon"]
+            status: "preparing"
+        subtotal:
+          amount: 57.90
+          currency: "USD"
+        tax_amount:
+          amount: 5.21
+          currency: "USD"
+        tip_amount:
+          amount: 12.00
+          currency: "USD"
+        total_amount:
+          amount: 75.11
+          currency: "USD"
+        payment_method: "credit_card"
+        status: "preparing"
+        order_time: "2024-03-15T18:30:00Z"
+        special_instructions: "Table celebrating anniversary"
+    properties:
+      order_id:
+        type: string
+        format: uuid
+      order_number:
+        type: integer
+        minimum: 1
+      table_id:
+        type: string
+        format: uuid
+      server_id:
+        type: string
+        format: uuid
+      items:
+        type: array
+        items:
+          $ref: "#/$defs/OrderItem"
+        minItems: 1
+      subtotal:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/Money"
+      tax_amount:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/Money"
+      tip_amount:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/Money"
+      total_amount:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/Money"
+      payment_method:
+        type: string
+        enum: ["cash", "credit_card", "debit_card", "mobile_pay"]
+      status:
+        type: string
+        enum: ["pending", "preparing", "ready", "served", "paid", "cancelled"]
+      order_time:
+        type: string
+        format: date-time
+      ready_time:
+        type: string
+        format: date-time
+      special_instructions:
+        type: string
+        maxLength: 200
+    required: ["order_id", "order_number", "table_id", "server_id", "items", "total_amount", "status", "order_time"]
+  OrderItem:
+    type: object
+    properties:
+      item_id:
+        type: string
+        format: uuid
+      quantity:
+        type: integer
+        minimum: 1
+      unit_price:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/Money"
+      total_price:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/Money"
+      modifications:
+        type: array
+        items:
+          type: string
+      status:
+        type: string
+        enum: ["ordered", "preparing", "ready", "served"]
+    required: ["item_id", "quantity", "unit_price", "total_price", "status"]
+  Table:
+    type: object
+    properties:
+      table_id:
+        type: string
+        format: uuid
+      table_number:
+        type: integer
+        minimum: 1
+      capacity:
+        type: integer
+        minimum: 1
+        maximum: 20
+      location:
+        type: string
+        enum: ["dining_room", "patio", "bar", "private_room"]
+      status:
+        type: string
+        enum: ["available", "occupied", "reserved", "cleaning"]
+      current_order_id:
+        type: string
+        format: uuid
+    required: ["table_id", "table_number", "capacity", "location", "status"]
+  Staff:
+    type: object
+    examples:
+      - staff_id: "550e8400-e29b-41d4-a716-446655440030"
+        employee_id: "EMP-2024-001"
+        name:
+          first_name: "Emily"
+          last_name: "Johnson"
+        role: "server"
+        hourly_rate:
+          amount: 15.50
+          currency: "USD"
+        hire_date: "2024-01-15"
+        status: "active"
+        shift:
+          start_time: "17:00"
+          end_time: "23:00"
+          days: ["friday", "saturday", "sunday"]
+    properties:
+      staff_id:
+        type: string
+        format: uuid
+      employee_id:
+        type: string
+      name:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/PersonName"
+      role:
+        type: string
+        enum: ["server", "cook", "manager", "host", "bartender", "busser"]
+      hourly_rate:
+        $ref: "../ecommerce_platform/ecommerce.yaml#/$defs/Money"
+      hire_date:
+        type: string
+        format: date
+      status:
+        type: string
+        enum: ["active", "inactive", "terminated"]
+      shift:
+        $ref: "#/$defs/Shift"
+    required: ["staff_id", "employee_id", "name", "role", "hourly_rate", "hire_date", "status"]
+  Shift:
+    type: object
+    properties:
+      start_time:
+        type: string
+        pattern: "^([01]?[0-9]|2[0-3]):[0-5][0-9]$"
+      end_time:
+        type: string
+        pattern: "^([01]?[0-9]|2[0-3]):[0-5][0-9]$"
+      days:
+        type: array
+        items:
+          type: string
+          enum: ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+    required: ["start_time", "end_time", "days"]
