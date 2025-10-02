@@ -1,0 +1,20 @@
+import rubxy
+
+from rubxy import handlers
+from rubxy.filters import Filter
+from typing import Optional
+
+class OnMessage:
+    def on_message(
+        self: "rubxy.Client",
+        filters: Optional[Filter] = None,
+        group: int = 0
+    ):
+        def decorator(func):
+            self.add_handler(
+                handlers.MessageHandler(func, filters),
+                group=group
+            )
+            
+            return func
+        return decorator
