@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: QUARK-plugin-myqlm
+Version: 0.0.1
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://github.com/srmaschek/QUARK-plugin-myqlm
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: quark-framework>=0.3.7
+Requires-Dist: QUARK-plugin-ghz
+Requires-Dist: myqlm>=1.11.3
+Requires-Dist: myqlm-interop>=1.10.0
+Dynamic: license-file
+
+# QUARK-plugin-myqlm
+
+This QUARK-plugin provides access to myQLM (https://myqlm.github.io/) functionalities.
+
+Access to the myQLM QPU simulators is provided via the QUARK-module "MyQLMDigitalQPU".
+
+As an example application you can use the GHZ module from QUARK-plugin-ghz with the mapping "GHZtoQaptivaCircuit". A corresponding QUARK-configuration is given in configs/ghz_demo_cfg.yml.
