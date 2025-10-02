@@ -1,0 +1,9 @@
+bgen/__init__.py,sha256=r2ED6l2uRh_nftPidX-iAEcH9ezBs78klCDhzqrRWmw,177
+bgen/index.py,sha256=A1NoSSrhwvA-y694n2Gz4vteZLLkKdh9R7ZlmQmbgnI,3896
+bgen/reader.cp38-win_amd64.pyd,sha256=le5hdGNHai4yP-XeNIsb0DtYvKbJ4RI63RndqZhB4Ic,643584
+bgen/writer.cp38-win_amd64.pyd,sha256=oM3kUmXV1JzqpBZRuY-lLk_WkV1sREZ1WXjqBohdIfs,555520
+bgen-1.9.3rc5.dist-info/LICENSE.txt,sha256=f7hfMFyzXfeRRzRLAparHoAAb9CDxAczK0gm0jwmWSA,1072
+bgen-1.9.3rc5.dist-info/METADATA,sha256=AYD0ggGzKSqxoRyPlMlQvI1nLLAQMSR4ehbYBfOi6_w,7252
+bgen-1.9.3rc5.dist-info/WHEEL,sha256=2M046GvC9RLU1f1TWyM-2sB7cRKLhAC7ucAFK8l8f24,99
+bgen-1.9.3rc5.dist-info/top_level.txt,sha256=EoVKryxjZc0vkwDWjnOK0IP3dN4fg8YiKIkBcWB9pqw,5
+bgen-1.9.3rc5.dist-info/RECORD,,
