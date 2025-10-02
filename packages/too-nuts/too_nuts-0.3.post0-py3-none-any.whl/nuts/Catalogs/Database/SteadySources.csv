@@ -1,0 +1,121 @@
+;event_type;event_id;publisher;publisher_id;coordinates.dec;coordinates.ra;detection_time;priority;params.redshift;params.distance;params.radius;params.remarks
+steady1;Steady GC;Galactic center;TeVCat;steady1;-29d00m36s;266d24m36s;2023-01-01T00:00:00.000;0;;8 kpc;;steady
+steady2;Steady Galaxy ;LMC;n/a;steady2;-69d45m36s;80d53m24s;2023-01-01T00:00:00.000;0;0.000875;50 kpc;;steady
+steady3;Steady hotspot;Old TA Hotspot;n/a;steady3;40d30m00s;144d00m00s;2023-01-01T00:00:00.000;0;;;25;steady
+steady4;Steady hotspot;New TA Hotspot;n/a;steady4;36d00m00s;17d24m00s;2023-01-01T00:00:00.000;0;;;20;steady
+steady5;Steady Starburst;IC 342;n/a;steady5;68d06m00s;56d42m00s;2023-01-01T00:00:00.000;0;0.000077;;;steady
+steady6;Steady Starburst;M 83;n/a;steady6;-29d52m12s;204d15m00s;2023-01-01T00:00:00.000;0;0.001733;;;steady
+steady7;Steady Starburst;M 82;n/a;steady7;69d40m48s;148d58m12s;2023-01-01T00:00:00.000;0;0.00073;;;steady
+steady8;Steady Seyfert;NGC 1068;n/a;steady8;-0d00m04.68s;40d40m12s;2023-01-01T00:00:00.000;0;0.00381;;;steady
+steady9;Steady Seyfert;Circinus;n/a;steady9;-65d20m24s;213d18m00s;2023-01-01T00:00:00.000;0;;;;steady
+steady10;Steady Seyfert;NGC 4945;n/a;steady10;-49d28m12s;196d21m36s;2023-01-01T00:00:00.000;0;0.001797;;;steady
+steady11;Steady Seyfert;NGC 253;n/a;steady11;-25d17m24s;11d53m24s;2023-01-01T00:00:00.000;0;0.000864;;;steady
+steady12;Steady Seyfert;Cen A;n/a;steady12;-43d01m12s;201d21m36s;2023-01-01T00:00:00.000;0;0.001826;;;steady
+steady13;Steady Blazar;Mrk 421;WEBT;steady13;38d12m36s;166d06m36s;2023-01-01T00:00:00.000;0;0.030021;;;steady
+steady14;Steady Blazar;Mrk 501;WEBT;steady14;39d45m36s;253d28m12s;2023-01-01T00:00:00.000;0;0.033663;;;steady
+steady15;Steady Blazar;3C 371;WEBT;steady15;69d49m12s;271d42m36s;2023-01-01T00:00:00.000;0;0.051;;;steady
+steady16;Steady Blazar;BL Lacertae;WEBT;steady16;42d16m48s;330d40m48s;2023-01-01T00:00:00.000;0;0.0686;;;steady
+steady17;Steady Blazar;1ES 2344+514;WEBT;steady17;51d42m00s;356d46m12s;2023-01-01T00:00:00.000;0;0.044;;;steady
+steady18;Steady HBL;H 1426+428;TeVCat;steady18;42d40m12s;217d08m24s;2023-01-01T00:00:00.000;0;0.129;;;steady
+steady19;Steady HBL;1ES 1959+650;TeVCat;steady19;65d09m00s;300d00m00s;2023-01-01T00:00:00.000;0;0.048;;;steady
+steady20;Steady HBL;1ES 1440+122;TeVCat;steady20;12d00m00s;220d48m36s;2023-01-01T00:00:00.000;0;0.163058;;;steady
+steady21;Steady HBL;PKS 2155-304;TeVCat;steady21;-30d13m12s;329d43m12s;2023-01-01T00:00:00.000;0;0.116;;;steady
+steady22;Steady HBL;1ES 1218+304;TeVCat;steady22;30d11m24s;185d21m36s;2023-01-01T00:00:00.000;0;0.182;;;steady
+steady23;Steady HBL;1ES 1101-232;TeVCat;steady23;-23d30m00s;165d54m00s;2023-01-01T00:00:00.000;0;0.186;;;steady
+steady24;Steady HBL;PKS 2005-489;TeVCat;steady24;-48d49m48s;302d21m36s;2023-01-01T00:00:00.000;0;0.071;;;steady
+steady25;Steady HBL;H 2356-309;TeVCat;steady25;-30d37m12s;359d47m24s;2023-01-01T00:00:00.000;0;0.165;;;steady
+steady26;Steady HBL;PG 1553+113;TeVCat;steady26;11d11m24s;238d56m24s;2023-01-01T00:00:00.000;0;;;;steady
+steady27;Steady HBL;Markarian 180;TeVCat;steady27;70d09m36s;174d06m36s;2023-01-01T00:00:00.000;0;0.045;;;steady
+steady28;Steady HBL;1ES 0229+200;TeVCat;steady28;20d16m12s;38d13m12s;2023-01-01T00:00:00.000;0;0.1396;;;steady
+steady29;Steady HBL;PKS 0548-322;TeVCat;steady29;-32d16m12s;87d39m36s;2023-01-01T00:00:00.000;0;0.069;;;steady
+steady30;Steady HBL;1ES 0347-121;TeVCat;steady30;-11d58m48s;57d21m00s;2023-01-01T00:00:00.000;0;0.188;;;steady
+steady31;Steady HBL;1ES 1011+496;TeVCat;steady31;49d25m48s;153d46m12s;2023-01-01T00:00:00.000;0;0.212;;;steady
+steady32;Steady HBL;RGB J0152+017;TeVCat;steady32;1d46m48s;28d08m24s;2023-01-01T00:00:00.000;0;0.08;;;steady
+steady33;Steady HBL;1ES 0806+524;TeVCat;steady33;52d19m12s;122d30m00s;2023-01-01T00:00:00.000;0;0.138;;;steady
+steady34;Steady HBL;RGB J0710+591;TeVCat;steady34;59d09m00s;107d36m36s;2023-01-01T00:00:00.000;0;0.125;;;steady
+steady35;Steady HBL;PKS 1424+240;TeVCat;steady35;23d47m24s;216d45m00s;2023-01-01T00:00:00.000;0;;;;steady
+steady36;Steady HBL;RBS 0413;TeVCat;steady36;18d45m36s;49d57m00s;2023-01-01T00:00:00.000;0;0.19;;;steady
+steady37;Steady HBL;1ES 0414+009;TeVCat;steady37;1d05m24s;64d13m12s;2023-01-01T00:00:00.000;0;0.287;;;steady
+steady38;Steady HBL;PKS 0447-439;TeVCat;steady38;-43d50m24s;72d22m12s;2023-01-01T00:00:00.000;0;0.343;;;steady
+steady39;Steady HBL;SHBL J001355.9-185406;TeVCat;steady39;-18d53m24s;3d28m12s;2023-01-01T00:00:00.000;0;0.095;;;steady
+steady40;Steady HBL;RX J0648.7+1516;TeVCat;steady40;15d16m12s;102d11m24s;2023-01-01T00:00:00.000;0;0.179;;;steady
+steady41;Steady HBL;B3 2247+381;TeVCat;steady41;38d25m48s;342d31m48s;2023-01-01T00:00:00.000;0;0.1187;;;steady
+steady42;Steady HBL;HESS J1943+213;TeVCat;steady42;21d18m00s;295d58m48s;2023-01-01T00:00:00.000;0;;;;steady
+steady43;Steady HBL;1RXS J101015.9-311909;TeVCat;steady43;-31d18m36s;152d33m36s;2023-01-01T00:00:00.000;0;0.142639;;;steady
+steady44;Steady HBL;1ES 1312-423;TeVCat;steady44;-42d36m00s;198d44m24s;2023-01-01T00:00:00.000;0;0.105;;;steady
+steady45;Steady HBL;1ES 1215+303;TeVCat;steady45;30d06m00s;184d27m00s;2023-01-01T00:00:00.000;0;0.131;;;steady
+steady46;Steady HBL;1ES 1741+196;TeVCat;steady46;19d33m00s;266d00m00s;2023-01-01T00:00:00.000;0;0.084;;;steady
+steady47;Steady HBL;1ES 0033+595;TeVCat;steady47;59d47m24s;8d49m12s;2023-01-01T00:00:00.000;0;0.467;;;steady
+steady48;Steady HBL;1ES 1727+502;TeVCat;steady48;50d13m12s;262d04m48s;2023-01-01T00:00:00.000;0;0.055;;;steady
+steady49;Steady HBL;KUV 00311-1938;TeVCat;steady49;-19d21m00s;8d24m00s;2023-01-01T00:00:00.000;0;;;;steady
+steady50;Steady HBL;PKS 0301-243;TeVCat;steady50;-24d07m48s;45d51m00s;2023-01-01T00:00:00.000;0;0.2657;;;steady
+steady51;Steady HBL;H 1722+119;TeVCat;steady51;11d52m12s;261d16m12s;2023-01-01T00:00:00.000;0;;;;steady
+steady52;Steady HBL;RBS 0723;TeVCat;steady52;11d33m36s;131d48m00s;2023-01-01T00:00:00.000;0;0.198;;;steady
+steady53;Steady HBL;RGB J2243+203;TeVCat;steady53;20d19m12s;340d58m12s;2023-01-01T00:00:00.000;0;;;;steady
+steady54;Steady HBL;PKS 1440-389;TeVCat;steady54;-39d08m24s;221d00m00s;2023-01-01T00:00:00.000;0;0.1385;;;steady
+steady55;Steady HBL;1ES 2037+521;TeVCat;steady55;52d19m48s;309d51m00s;2023-01-01T00:00:00.000;0;0.053;;;steady
+steady56;Steady HBL;PGC 2402248;TeVCat;steady56;51d54m00s;113d21m36s;2023-01-01T00:00:00.000;0;0.065;;;steady
+steady57;Steady HBL;1ES 2322-409;TeVCat;steady57;-40d39m36s;351d12m00s;2023-01-01T00:00:00.000;0;0.1736;;;steady
+steady58;Steady HBL;TXS 0210+515;TeVCat;steady58;51d45m00s;33d34m12s;2023-01-01T00:00:00.000;0;0.049;;;steady
+steady59;Steady HBL;TXS 1515-273;TeVCat;steady59;-27d31m48s;229d31m12s;2023-01-01T00:00:00.000;0;0.1284;;;steady
+steady60;Steady HBL;1ES 0502+675;TeVCat;steady60;67d37m12s;76d58m48s;2023-01-01T00:00:00.000;0;0.34;;;steady
+steady61;Steady HBL;1ES 0647+250;TeVCat;steady61;25d03m00s;102d41m24s;2023-01-01T00:00:00.000;0;;;;steady
+steady62;Steady HBL;RGB J0136+391;TeVCat;steady62;39d06m00s;24d08m24s;2023-01-01T00:00:00.000;0;;;;steady
+steady63;Steady HBL;MS 1221.8+2452;TeVCat;steady63;24d36m36s;186d06m00s;2023-01-01T00:00:00.000;0;0.218;;;steady
+steady64;Steady HBL;RX J1136.5+6737;TeVCat;steady64;67d37m12s;174d07m48s;2023-01-01T00:00:00.000;0;0.1342;;;steady
+steady65;Steady HBL;1RXS J023832.6-311658;TeVCat;steady65;-31d16m48s;39d38m24s;2023-01-01T00:00:00.000;0;0.232;;;steady
+steady66;Steady HBL;1RXS J081201.8+023735;TeVCat;steady66;2d37m48s;123d00m36s;2023-01-01T00:00:00.000;0;0.1721;;;steady
+steady67;Steady HBL;MRC 0910-208;TeVCat;steady67;-21d03m36s;138d15m00s;2023-01-01T00:00:00.000;0;0.19802;;;steady
+steady68;Steady HBL;1RXS J195815.6-301119;TeVCat;steady68;-30d11m24s;299d33m36s;2023-01-01T00:00:00.000;0;0.119329;;;steady
+steady69;Steady HBL;RGB J2042+244;TeVCat;steady69;24d27m00s;310d31m12s;2023-01-01T00:00:00.000;0;;;;steady
+steady70;Steady IBL;3C 66A;TeVCat;steady70;43d02m24s;35d40m12s;2023-01-01T00:00:00.000;0;0.34;;;steady
+steady71;Steady IBL;W Comae;TeVCat;steady71;28d13m48s;185d22m48s;2023-01-01T00:00:00.000;0;0.102;;;steady
+steady72;Steady IBL;MAGIC J2001+435;TeVCat;steady72;43d52m48s;300d18m36s;2023-01-01T00:00:00.000;0;0.1739;;;steady
+steady73;Steady IBL;S5 0716+714;TeVCat;steady73;71d20m24s;110d28m12s;2023-01-01T00:00:00.000;0;;;;steady
+steady74;Steady IBL;VER J0521+211;TeVCat;steady74;21d12m36s;80d26m24s;2023-01-01T00:00:00.000;0;;;;steady
+steady75;Steady IBL;S2 0109+22;TeVCat;steady75;22d44m24s;18d01m12s;2023-01-01T00:00:00.000;0;;;;steady
+steady76;Steady IBL;S3 1227+25;TeVCat;steady76;25d18m00s;187d33m36s;2023-01-01T00:00:00.000;0;0.135;;;steady
+steady77;Steady IBL;B2 1811+31;TeVCat;steady77;31d44m24s;273d24m00s;2023-01-01T00:00:00.000;0;0.117;;;steady
+steady78;Steady IBL;PKS 0903-57;TeVCat;steady78;-57d34m48s;136d13m12s;2023-01-01T00:00:00.000;0;0.695;;;steady
+steady79;Steady LBL;AP Librae;TeVCat;steady79;-24d22m12s;229d25m12s;2023-01-01T00:00:00.000;0;0.049;;;steady
+steady80;Steady LBL;OT 081;TeVCat;steady80;9d39m00s;267d53m24s;2023-01-01T00:00:00.000;0;0.322;;;steady
+steady81;Steady FSRQ;3C 279;TeVCat;steady81;-5d47m24s;194d03m00s;2023-01-01T00:00:00.000;0;0.5362;;;steady
+steady82;Steady FSRQ;PKS 1510-089;TeVCat;steady82;-9d06m36s;228d13m12s;2023-01-01T00:00:00.000;0;0.361;;;steady
+steady83;Steady FSRQ;4C +21.35;TeVCat;steady83;21d22m48s;186d13m48s;2023-01-01T00:00:00.000;0;0.432;;;steady
+steady84;Steady FSRQ;S3 0218+35;TeVCat;steady84;35d56m24s;35d16m12s;2023-01-01T00:00:00.000;0;0.954;;;steady
+steady85;Steady FSRQ;PKS 1441+25;TeVCat;steady85;25d01m48s;220d59m24s;2023-01-01T00:00:00.000;0;0.939;;;steady
+steady86;Steady FSRQ;PKS 0736+017;TeVCat;steady86;1d36m00s;114d49m12s;2023-01-01T00:00:00.000;0;0.18941;;;steady
+steady87;Steady FSRQ;B2 1420+32;TeVCat;steady87;32d23m24s;215d37m48s;2023-01-01T00:00:00.000;0;0.682;;;steady
+steady88;Steady FSRQ;TON 0599;TeVCat;steady88;29d15m00s;179d52m48s;2023-01-01T00:00:00.000;0;0.7247;;;steady
+steady89;Steady FSRQ;PKS 0346-27;TeVCat;steady89;-27d49m12s;57d09m36s;2023-01-01T00:00:00.000;0;0.991;;;steady
+steady90;Steady FRI;M 87;TeVCat;steady90;12d24m00s;187d42m00s;2023-01-01T00:00:00.000;0;0.0044;;;steady
+steady91;Steady FRI;NGC 1275;TeVCat;steady91;41d30m36s;49d57m00s;2023-01-01T00:00:00.000;0;0.017559;;;steady
+steady92;Steady FRI;3C 264;TeVCat;steady92;19d36m36s;176d16m12s;2023-01-01T00:00:00.000;0;0.021718;;;steady
+steady93;Steady FRB;FRB 20190212A;n/a;steady93;81d24m00s;276d06m00s;2023-01-01T00:00:00.000;0;0.28;;;steady
+steady94;Steady FRB;FRB 20190208A;n/a;steady94;47d00m00s;283d30m00s;2023-01-01T00:00:00.000;0;0.53;;;steady
+steady95;Steady FRB;FRB 20190417A;n/a;steady95;59d19m12s;294d50m24s;2023-01-01T00:00:00.000;0;;;;steady
+steady96;Steady FRB;FRB 20181119A;n/a;steady96;65d08m24s;190d30m00s;2023-01-01T00:00:00.000;0;;;;steady
+steady97;Steady FRB;FRB 20180301A;n/a;steady97;4d33m36s;93d10m48s;2023-01-01T00:00:00.000;0;;;;steady
+steady98;Steady FRB;FRB 20180814A;n/a;steady98;73d40m12s;65d35m24s;2023-01-01T00:00:00.000;0;;;;steady
+steady99;Steady FRB;FRB 20190303A;n/a;steady99;48d07m12s;207d59m24s;2023-01-01T00:00:00.000;0;0.11;;;steady
+steady100;Steady FRB;FRB 20200120E;n/a;steady100;68d49m48s;149d29m24s;2023-01-01T00:00:00.000;0;;;;steady
+steady101;Steady FRB;FRB 20180916B;n/a;steady101;65d42m36s;29d30m00s;2023-01-01T00:00:00.000;0;0.0337;;;steady
+steady102;Steady FRB;FRB 20190520B;n/a;steady102;-11d17m24s;240d31m12s;2023-01-01T00:00:00.000;0;;;;steady
+steady103;Steady FRB;FRB 20201124A;n/a;steady103;26d03m36s;77d00m36s;2023-01-01T00:00:00.000;0;0.0979;;;steady
+steady104;Steady FRB;FRB 20121102A;n/a;steady104;33d05m24s;83d02m24s;2023-01-01T00:00:00.000;0;;;;steady
+steady105;Steady MSC;Westerlund I;TeVCat;steady105;-45d51m00s;251d46m12s;2023-01-01T00:00:00.000;0;;3.2 kpc;1.1;steady
+steady106;Steady MSC;Westerlund II;TeVCat;steady106;-57d45m36s;155d59m24s;2023-01-01T00:00:00.000;0;;8 kpc;0.18;steady
+steady107;Steady SNR;SNR G106.3+02.7;TeVCat;steady107;60d49m48s;336d52m12s;2023-01-01T00:00:00.000;0;;0.8 kpc;"0.27,0.18";steady
+steady108;Steady cloud;Cygnus Cocoon;n/a;steady108;41d10m12s;307d10m12s;2023-01-01T00:00:00.000;0;;1.4 kpc;6.0 (tbc);steady
+steady109;Steady PWN;Crab Nebula;LHAASO;steady109;22d03m00s;83d33m00s;2023-01-01T00:00:00.000;0;;2 kpc;0.0145;steady
+steady110;Steady;LHAASO J1825-1326;LHAASO;steady110;-13d27m00s;276d27m00s;2023-01-01T00:00:00.000;0;;;;steady
+steady111;Steady;LHAASO J1839-0545;LHAASO;steady111;-5d45m00s;279d57m00s;2023-01-01T00:00:00.000;0;;;;steady
+steady112;Steady;LHAASO J1843-0338;LHAASO;steady112;-3d39m00s;280d45m00s;2023-01-01T00:00:00.000;0;;;;steady
+steady113;Steady;LHAASO J1849-0003;LHAASO;steady113;-0d03m00s;282d21m00s;2023-01-01T00:00:00.000;0;;;;steady
+steady114;Steady;LHAASO J1908+0621;LHAASO;steady114;6d21m00s;287d03m00s;2023-01-01T00:00:00.000;0;;;;steady
+steady115;Steady;LHAASO J1929+1745;LHAASO;steady115;17d45m00s;292d15m00s;2023-01-01T00:00:00.000;0;;;;steady
+steady116;Steady;LHAASO J1956+2845;LHAASO;steady116;28d45m00s;299d03m00s;2023-01-01T00:00:00.000;0;;;;steady
+steady117;Steady;LHAASO J2018+3651;LHAASO;steady117;36d51m00s;304d45m00s;2023-01-01T00:00:00.000;0;;;;steady
+steady118;Steady;LHAASO J2032+4102;LHAASO;steady118;41d03m00s;308d03m00s;2023-01-01T00:00:00.000;0;;;;steady
+steady119;Steady;LHAASO J2108+5157;LHAASO;steady119;51d57m00s;317d09m00s;2023-01-01T00:00:00.000;0;;;;steady
+steady120;Steady;LHAASO J2226+6057;LHAASO;steady120;60d57m00s;336d45m00s;2023-01-01T00:00:00.000;0;;;;steady
