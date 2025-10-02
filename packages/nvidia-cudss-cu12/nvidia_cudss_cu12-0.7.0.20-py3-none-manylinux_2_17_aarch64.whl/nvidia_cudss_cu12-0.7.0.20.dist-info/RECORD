@@ -1,0 +1,12 @@
+nvidia/cu12/include/cudss.h,sha256=fN51VvNeUBPZQ1zHnPxiFOwukQu5B0dAZTUhdaiT2p4,14470
+nvidia/cu12/include/cudss_distributed_interface.h,sha256=uj3ClGfx3SwZXv8_fUnjjAf4ScQBnNrM8G2u2bMOIik,4161
+nvidia/cu12/include/cudss_threading_interface.h,sha256=GR_kpCbk2IcvDT-_ho9aNLMYocKfRKW5c6mAPVf-ciE,1039
+nvidia/cu12/lib/libcudss.so.0,sha256=hlaZGTzmeLUDKCVM8iyixh5BYYCPUB2b8JATu8_ZjvI,106959521
+nvidia/cu12/lib/libcudss_commlayer_nccl.so.0,sha256=y_DscCZVCKbeYuie7KCE2iYGcP4m510E_iW4zDOmxWE,990249
+nvidia/cu12/lib/libcudss_commlayer_openmpi.so.0,sha256=193gyUDYsv2yHsay8EQs1XTQQB_FDwwf37QODJqWSP0,977768
+nvidia/cu12/lib/libcudss_mtlayer_gomp.so.0,sha256=fGKxYyvBZ4S27nnA2HWqWs40AG-P4mWTjZ7_SbXS5NM,977248
+nvidia_cudss_cu12-0.7.0.20.dist-info/licenses/LICENSE.txt,sha256=sY1d1L0sPUulNajDTHQ0YQNF_lxIfV8nc7aiMDXlWcc,24274
+nvidia_cudss_cu12-0.7.0.20.dist-info/METADATA,sha256=r92kq6MPcNrsDV4xoy06e7HcnQeFi48rFBVrogaTqwk,1754
+nvidia_cudss_cu12-0.7.0.20.dist-info/WHEEL,sha256=LeTwKT1lN7ubAMWheDdHsiColyDmhkk0X0RwVwWGLH8,110
+nvidia_cudss_cu12-0.7.0.20.dist-info/top_level.txt,sha256=fTkAtiFuL16nUrB9ytDDtpytz2t0B4NvYTnRzwAhO14,7
+nvidia_cudss_cu12-0.7.0.20.dist-info/RECORD,,
