@@ -1,0 +1,11 @@
+genai_labnote/__init__.py,sha256=xQkd66YDNkFQy7_sj8rDSEQ2l7C8mIObrgyitvaqwN8,437
+genai_labnote/agent.py,sha256=JNMZevll5nhh9BOsrtbfAzxS-eI4KFFzdpYQ0hpxau0,1774
+genai_labnote/core.py,sha256=PCD8JrQ5wBJehx9TsNBbcAhgREGpNsgOw-GCHO6clHs,2068
+genai_labnote/llm.py,sha256=dicok5xuhXhQEFUovAe-xXs_BnF2IEIyKpb_X2oC0BU,911
+genai_labnote/magic.py,sha256=tx2wjCkKLSlbBtevzuRSWVnI1vmCb4u6f3dDIuJVcbI,877
+genai_labnote/storage.py,sha256=JrdxUROis7knvZO2Y7q8CRdS1e5my5_1z81cslUvMEE,2827
+genai_labnote-0.2.0.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+genai_labnote-0.2.0.dist-info/METADATA,sha256=zrKW_pigqs3IFczrYNsVRdem3DenEaZNeYah5C-nwkk,1151
+genai_labnote-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+genai_labnote-0.2.0.dist-info/top_level.txt,sha256=7sqs-1HU0_RrMCOr-1sfOltMIoX5WKwsq6BA6cwYQd4,14
+genai_labnote-0.2.0.dist-info/RECORD,,
