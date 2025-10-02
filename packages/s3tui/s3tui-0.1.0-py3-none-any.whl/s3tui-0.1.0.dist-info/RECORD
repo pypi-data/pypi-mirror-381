@@ -1,0 +1,15 @@
+s3tui/__init__.py,sha256=qw66IUPWmo80bUfyB5VrgnVDqWsY9hA6nb5MfeuDIw8,118
+s3tui/__main__.py,sha256=PaKfb_IHgZ3SsXOzgsFhhcFkCilaLzo9XeQc_iA8OxE,318
+s3tui/app.py,sha256=7mDQzpUQIcEzL9XE-GPc6wZI_NkHaVOlEtr8sHgThnU,23498
+s3tui/libs/__init__.py,sha256=2sXhHLyNGwM_a0Y73kLmshJwCdGyNmme4zxw6ngWnWs,80
+s3tui/libs/s3_client.py,sha256=_tSgZEh1rem2v5ayBGRMzi-oxKcj3IVJfD4n-OV_fhE,2183
+s3tui/ui/__init__.py,sha256=F2ajpOHR9Zy31Z3bkJ8Qe0D53GyisjE0mAjXxC7w5UE,178
+s3tui/ui/dialogs.py,sha256=RBh-RbJkpwaUuu2b9PfZP2Pi5tzluOXImuKcoUC_sFQ,4007
+s3tui/ui/list_view.py,sha256=iqSN6dnWd0IdHq-mxxi6pST5M9WfjMVTcP1RHvhGqI8,1270
+s3tui/utils/__init__.py,sha256=gPB5SokI9nnYNjzVq-95KdjPu7Dv4alGSVkufL__oQ8,98
+s3tui/utils/clipboard.py,sha256=-1EYMij-EI1SbY8fa9ASN57eklzftr770CJMvDV4kSM,1995
+s3tui-0.1.0.dist-info/METADATA,sha256=0k8rjw6NXlZyJC-QPScpnEp6BQXAY_fnVfZg8i7q5yo,3310
+s3tui-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+s3tui-0.1.0.dist-info/entry_points.txt,sha256=quQaUfgZxPRhmWKLLRHhwkOTHQWRxNpYg5K0UoQUUrc,46
+s3tui-0.1.0.dist-info/top_level.txt,sha256=Iyr_d0zxE5QOXy5PsC2kuemi9HKTTjfMkZATRTGUQWs,6
+s3tui-0.1.0.dist-info/RECORD,,
