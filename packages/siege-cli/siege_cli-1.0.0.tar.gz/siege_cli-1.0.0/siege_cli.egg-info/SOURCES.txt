@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+siege.py
+siege_cli.egg-info/PKG-INFO
+siege_cli.egg-info/SOURCES.txt
+siege_cli.egg-info/dependency_links.txt
+siege_cli.egg-info/entry_points.txt
+siege_cli.egg-info/requires.txt
+siege_cli.egg-info/top_level.txt

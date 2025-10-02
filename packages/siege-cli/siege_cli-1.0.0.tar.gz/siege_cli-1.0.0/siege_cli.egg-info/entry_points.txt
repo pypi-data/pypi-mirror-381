@@ -1,0 +1,2 @@
+[console_scripts]
+siege-cli = siege:package
