@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: kalibr
+Version: 0.1.10
+Summary: Kalibr SDK – expose once, run everywhere (GPT, Claude, MCP)
+Home-page: https://kalibr.systems
+Author: Kalibr
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: requests
+Dynamic: home-page
+Dynamic: requires-python
