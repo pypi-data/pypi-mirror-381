@@ -1,0 +1,11 @@
+LICENSE,sha256=QzOPTPJGpPWAOo0q6jTS1J8hFe6k1FBKHQUxyhDk2Tk,1083
+README.md,sha256=cZPfq04x983Z4zpG5IF5NcTiTb715BvsF5sUQ8dU2jA,8993
+polars_u256_plugin-0.2.2.dist-info/METADATA,sha256=8oojnH8v6ETwtEDmnCdZLInaVuxAYIU88EcxqzpUED4,9809
+polars_u256_plugin-0.2.2.dist-info/WHEEL,sha256=EmbG9zyqShfWQD8iunhabgzlMZGQwxFV_zZkaywLDn0,127
+polars_u256_plugin-0.2.2.dist-info/licenses/LICENSE,sha256=QzOPTPJGpPWAOo0q6jTS1J8hFe6k1FBKHQUxyhDk2Tk,1083
+polars_u256_plugin/__init__.py,sha256=wyuk5HqECIUay1cdZR_TwyCAi3PgBy7ynB5or7gF5CE,13938
+polars_u256_plugin/_internal.abi3.so,sha256=lM2rBOBaOv_tqLRSAiDE8i7LnwWN4yULGHUSi9CH_xs,13678272
+polars_u256_plugin/display.py,sha256=lUNAR5KAgXMqE_Mv-A_37-Ksup3Oep0UmVT_QCML_U0,6131
+polars_u256_plugin/expr_namespace.py,sha256=RN8ECYtvH_AH2oJdqcSm-1TtM3a98knrqI71mvjNXB8,8206
+polars_u256_plugin/py.typed,sha256=CA5EtomMU3AeF5kCZtLVi-yAq0impqMbeEBageG4xmo,45
+polars_u256_plugin-0.2.2.dist-info/RECORD,,
