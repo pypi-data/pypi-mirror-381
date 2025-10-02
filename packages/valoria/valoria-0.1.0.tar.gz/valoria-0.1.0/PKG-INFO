@@ -1,0 +1,123 @@
+Metadata-Version: 2.4
+Name: valoria
+Version: 0.1.0
+Summary: Outils pour gérer fichiers: structure, tmp, permissions, nettoyage, dépendances, chmod
+Author: GameurDev
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+````markdown
+# Valoria
+
+**Valoria** est un ensemble d’outils Python pour gérer et nettoyer vos fichiers et répertoires.  
+Il permet de :  
+- Afficher la structure des fichiers  
+- Supprimer les fichiers temporaires (`*.tmp`)  
+- Vérifier les permissions des fichiers  
+- Supprimer fichiers vides et doublons  
+- Analyser les dépendances Python  
+- Modifier les permissions des fichiers (`chmod`)  
+
+---
+
+## Installation
+
+### Prérequis
+- Python 3.8 ou supérieur
+- Pip
+
+### Installation depuis le dépôt
+```bash
+git clone https://github.com/votre-repo/valoria.git
+cd valoria
+pip install -e .
+````
+
+> Le package est maintenant disponible en ligne de commande via la commande `fichier`.
+
+---
+
+## Usage CLI
+
+```bash
+fichier [options] [répertoire]
+```
+
+### Options disponibles
+
+| Option          | Description                                        |
+| --------------- | -------------------------------------------------- |
+| `-structure`    | Affiche la structure des fichiers du répertoire    |
+| `-tmp`          | Supprime tous les fichiers temporaires (`*.tmp`)   |
+| `-license`      | Affiche la LICENSE du package                      |
+| `-perm`         | Vérifie les permissions des fichiers               |
+| `-clean`        | Supprime fichiers vides et doublons                |
+| `-dependencies` | Analyse les dépendances Python                     |
+| `-chmod <mode>` | Change les permissions des fichiers (ex: 755, u+x) |
+| `-interactive`  | Mode interactif pour `chmod`                       |
+| `directory`     | Répertoire à traiter (défaut : répertoire courant) |
+
+---
+
+## Exemples
+
+### Afficher la structure des fichiers
+
+```bash
+fichier -structure /chemin/vers/repertoire
+```
+
+### Supprimer tous les fichiers temporaires
+
+```bash
+fichier -tmp /chemin/vers/repertoire
+```
+
+### Vérifier les permissions
+
+```bash
+fichier -perm /chemin/vers/repertoire
+```
+
+### Nettoyer le répertoire (fichiers vides et doublons)
+
+```bash
+fichier -clean /chemin/vers/repertoire
+```
+
+### Analyser les dépendances Python
+
+```bash
+fichier -dependencies /chemin/vers/repertoire
+```
+
+### Modifier les permissions en mode non interactif
+
+```bash
+fichier -chmod 755 /chemin/vers/repertoire
+```
+
+### Mode interactif pour chmod
+
+```bash
+fichier -interactive /chemin/vers/repertoire
+```
+
+---
+
+## Licence
+
+Ce projet est sous licence **MIT**. Voir la commande :
+
+```bash
+fichier -license
+```
+
+---
+
+## Auteur
+
+**GameurDev**
+Version : 0.1.0
+```

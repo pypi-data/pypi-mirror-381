@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+valoria/__init__.py
+valoria/chmod.py
+valoria/clean.py
+valoria/cli.py
+valoria/dependencies.py
+valoria/license.py
+valoria/perm.py
+valoria/structure.py
+valoria/tmp.py
+valoria.egg-info/PKG-INFO
+valoria.egg-info/SOURCES.txt
+valoria.egg-info/dependency_links.txt
+valoria.egg-info/entry_points.txt
+valoria.egg-info/top_level.txt

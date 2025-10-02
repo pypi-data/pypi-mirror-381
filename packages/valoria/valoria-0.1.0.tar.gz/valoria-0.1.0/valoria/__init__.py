@@ -1,0 +1,10 @@
+from . import structure
+from . import tmp
+from . import license
+from . import perm
+from . import clean
+from . import dependencies
+from . import chmod
+
+__version__ = "0.0.1"
+__author__ = "GameurDev"
