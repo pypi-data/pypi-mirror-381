@@ -1,0 +1,11 @@
+biem_helmholtz_sphere/__init__.py,sha256=ShXQBVjyiSOHxoQJS2BvNG395W4KZfqMxZWBAR0MZrE,22
+biem_helmholtz_sphere/__main__.py,sha256=5jcREmGEova7-5W2fyr5EWUjFGndtOHy3LNy5sAc-2o,129
+biem_helmholtz_sphere/cli.py,sha256=RSDcFm6oNar9J0hDAeWlFrqgXcGPsQ6tpzsNQkcVVZA,206
+biem_helmholtz_sphere/main.py,sha256=j2h8YoaIyvMAosyxXlV3rlWEQ7x1yvnZWhdjVG4vXdU,82
+biem_helmholtz_sphere/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+biem_helmholtz_sphere-0.0.0.dist-info/licenses/LICENSE,sha256=ucvJa2sGRE8rDhBWVH3HrT1LjSIx2NJ_IRNF1iCZnrs,1073
+biem_helmholtz_sphere-0.0.0.dist-info/METADATA,sha256=OlqrGBY4ERQ1P_REps8G5VsMX-Dvohzyxnfe3cU7WM0,4520
+biem_helmholtz_sphere-0.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+biem_helmholtz_sphere-0.0.0.dist-info/entry_points.txt,sha256=A8ZSIr45HIVvQj8B2CQx38O0GcfbkCbi8lfDjsemVOE,72
+biem_helmholtz_sphere-0.0.0.dist-info/top_level.txt,sha256=XUD8qLOhOQ9oMrRMHj_1Bys9-IkqEwYb6LLinAM_OMs,22
+biem_helmholtz_sphere-0.0.0.dist-info/RECORD,,
