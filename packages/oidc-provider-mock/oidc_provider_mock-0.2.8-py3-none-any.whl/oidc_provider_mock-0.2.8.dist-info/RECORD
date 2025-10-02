@@ -1,0 +1,16 @@
+oidc_provider_mock/__init__.py,sha256=KEmZSxXowoPMEbZ6D0lE3MSo0jqdKTbt6g6p_XYJAls,202
+oidc_provider_mock/__main__.py,sha256=oTx_ZrTfIzj5tBu963IBLpu-PlWjVc39PcwU2TWSB5c,5754
+oidc_provider_mock/_app.py,sha256=RKL3RF424xLIPuRtPz8KGLVcqJTFSQV-dKoKADMonqg,22940
+oidc_provider_mock/_client.py,sha256=a6Ctp_HgolvaITMos3BOwE3bMToz3yj-0scxiK8t3Lo,2692
+oidc_provider_mock/_client_lib.py,sha256=rWGtRVs6qmiDzKK5_BAgk09o_EvHkcVQKaff3EiXA4I,11256
+oidc_provider_mock/_server.py,sha256=pW3h0TqGkyVdzqoL37gGSdptuUJriHv7nquKA_8V1iw,2285
+oidc_provider_mock/_storage.py,sha256=-8McKWaBmP4lJZYDwfZ_3TyYisO1WQJ2_UlcX08us6c,7781
+oidc_provider_mock/templates/_base.html,sha256=BxCqPpJW1PxzomlFHasSzW8Ov5ejVAIv81e2X7kBi2c,296
+oidc_provider_mock/templates/authorization_form.html,sha256=Y0Cz21n2si4BDb7WW3oKMz3WGDSeCI--G9OQO9wWqZ8,1032
+oidc_provider_mock/templates/error.html,sha256=_S8VrR3Xz7kddeXTaHo_xZd8jerdK2kZVyTKOQlylYk,204
+oidc_provider_mock/templates/index.html,sha256=AwBhH1jvd-qkxOIm6-WTm9lAQYQ-HBr_byJNd3E00aQ,447
+oidc_provider_mock-0.2.8.dist-info/METADATA,sha256=GMcMiY-DEdXU2pZIq6GYuH6kEHyykkz_9QyIle2Vob8,6074
+oidc_provider_mock-0.2.8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+oidc_provider_mock-0.2.8.dist-info/entry_points.txt,sha256=yBUSVz1BlE0MEa9-cPUC6aSVDyvylSeT3mtoLYWutZ8,71
+oidc_provider_mock-0.2.8.dist-info/licenses/LICENSE.txt,sha256=CdY-oB9AtriT252vmx32P16I0W0_AqEDAFKnI4albeM,1060
+oidc_provider_mock-0.2.8.dist-info/RECORD,,
