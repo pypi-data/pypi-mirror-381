@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+celar/__main__.py
+celar/celar.tcss
+celar.egg-info/PKG-INFO
+celar.egg-info/SOURCES.txt
+celar.egg-info/dependency_links.txt
+celar.egg-info/entry_points.txt
+celar.egg-info/requires.txt
+celar.egg-info/top_level.txt
