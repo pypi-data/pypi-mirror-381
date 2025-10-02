@@ -1,0 +1,8 @@
+sage/__init__.py,sha256=WfJyMIKiBAfmfRdUK27ak5950g5K_dNO88Zm40pTb98,768
+sage/_version.py,sha256=QwyBwynVxv-lOvV4CKwVKSD7rJl30eioq74gWv7AqF4,166
+sage/runtime/__init__.py,sha256=CtNzyVkWN3_0iHAJFF4rilWcUGz7ifkKLQZd2pjwn0o,47
+sage/runtime/sugar.py,sha256=bxnkObHRiU3e8LWn6Hz8wGIvcy4lJLXi1swnld5gzsk,2421
+isage-0.1.5.1.dist-info/METADATA,sha256=UjCpnN9-fiSCcOVgOqi-TRk1T-6UkoRR9rSYOIJh9HU,4039
+isage-0.1.5.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+isage-0.1.5.1.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+isage-0.1.5.1.dist-info/RECORD,,
