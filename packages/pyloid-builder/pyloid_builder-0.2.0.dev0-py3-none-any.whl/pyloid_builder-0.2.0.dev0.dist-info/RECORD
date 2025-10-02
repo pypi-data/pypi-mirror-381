@@ -1,0 +1,6 @@
+pyloid_builder/__Init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyloid_builder/optimizer.py,sha256=FfiHeMa50BLqQyVkNsPQoTOu2zsHS_iaTPUh-X_5GjY,7309
+pyloid_builder/pyinstaller.py,sha256=PE0cuWXgXOhJFkO7jfNqaKtuEmsuEtBdGyeayBZXiD4,5942
+pyloid_builder-0.2.0.dev0.dist-info/METADATA,sha256=vXSne8cTIKvxMtOzS8TPr0URIIYkz_hwRe1NKvoLFy4,318
+pyloid_builder-0.2.0.dev0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pyloid_builder-0.2.0.dev0.dist-info/RECORD,,
