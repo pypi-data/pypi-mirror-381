@@ -1,0 +1,3 @@
+[console_scripts]
+pga = py_github_analyzer.cli:main
+py-github-analyzer = py_github_analyzer.cli:main
