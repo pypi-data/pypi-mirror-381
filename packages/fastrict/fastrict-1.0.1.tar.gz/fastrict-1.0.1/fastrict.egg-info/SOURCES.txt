@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+fastrict.egg-info/PKG-INFO
+fastrict.egg-info/SOURCES.txt
+fastrict.egg-info/dependency_links.txt
+fastrict.egg-info/requires.txt
+fastrict.egg-info/top_level.txt
+tests/__init__.py
+tests/test_basic.py
