@@ -1,0 +1,63 @@
+name: Language Server Tests
+
+on:
+  pull_request:
+    branches: [ "master" ]
+    paths:
+      - pyproject.toml
+      - uv.lock
+      - src/**
+      - tests/**
+  
+jobs:
+  language-server-tests:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup environment
+        # Actions use only the folder name (with an action.yml inside)
+        # https://github.com/orgs/community/discussions/26245#discussioncomment-5962450
+        # https://docs.github.com/en/actions/tutorials/creating-a-composite-action#creating-an-action-metadata-file
+        uses: ./.github/actions/py-setup
+
+      - name: Run tests
+        if: success() && hashFiles('tests/**') != ''
+        # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepstimeout-minutes
+        # Limit step run-time to 3 minutes
+        timeout-minutes: 3
+        run: uv run pytest
+  language-server-lint:
+    # Since these don't verify runtime properties the platform doesn't matter, as it does in tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup environment
+        # Actions use only the folder name (with an action.yml inside)
+        # https://github.com/orgs/community/discussions/26245#discussioncomment-5962450
+        # https://docs.github.com/en/actions/tutorials/creating-a-composite-action#creating-an-action-metadata-file
+        uses: ./.github/actions/py-setup
+
+      - name: Run lint check
+        run: uv run ruff check
+  language-server-format:
+    # Since these don't verify runtime properties the platform doesn't matter, as it does in tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup environment
+        # Actions use only the folder name (with an action.yml inside)
+        # https://github.com/orgs/community/discussions/26245#discussioncomment-5962450
+        # https://docs.github.com/en/actions/tutorials/creating-a-composite-action#creating-an-action-metadata-file
+        uses: ./.github/actions/py-setup
+
+      - name: Run format check
+        run: uv run ruff format --check
