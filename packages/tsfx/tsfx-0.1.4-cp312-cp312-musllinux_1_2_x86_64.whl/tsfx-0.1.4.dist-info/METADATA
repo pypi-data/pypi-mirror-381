@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: tsfx
+Version: 0.1.4
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: polars==1.32.0
+Requires-Dist: pyarrow
+Requires-Dist: maturin ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: tsfresh ; extra == 'bench'
+Requires-Dist: pandas ; extra == 'bench'
+Requires-Dist: plotly ; extra == 'examples'
+Requires-Dist: qdrant-client ; extra == 'examples'
+Requires-Dist: jupyter ; extra == 'examples'
+Requires-Dist: notebook ; extra == 'examples'
+Requires-Dist: numpy ; extra == 'examples'
+Requires-Dist: scikit-learn ; extra == 'examples'
+Requires-Dist: tsfx[dev,bench,examples] ; extra == 'all'
+Provides-Extra: dev
+Provides-Extra: bench
+Provides-Extra: examples
+Provides-Extra: all
+Requires-Python: >=3.9
