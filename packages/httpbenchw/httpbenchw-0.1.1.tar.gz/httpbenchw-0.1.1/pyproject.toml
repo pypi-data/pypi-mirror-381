@@ -1,0 +1,5 @@
+[project]
+name = "httpbenchw"
+version = "0.1.1"
+description = "Lightweight HTTP load testing tool."
+readme = "README.md"

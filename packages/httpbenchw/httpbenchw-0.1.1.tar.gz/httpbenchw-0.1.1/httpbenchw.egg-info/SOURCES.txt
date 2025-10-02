@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+httpbenchw/__init__.py
+httpbenchw/main.py
+httpbenchw.egg-info/PKG-INFO
+httpbenchw.egg-info/SOURCES.txt
+httpbenchw.egg-info/dependency_links.txt
+httpbenchw.egg-info/top_level.txt
