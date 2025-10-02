@@ -1,0 +1,16 @@
+pyROGER/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyROGER/models.py,sha256=3vUL12KzzbV9Ing0fv7P0gu8JxSK9FYjzDCjm_Jh-j4,3449
+pyROGER/roger.py,sha256=jbxt3KnUYbTPqx8sBZVHpZscyaZfieXmgLudCrMyhd8,8485
+pyROGER/dataset/HighMassRoger1_KNN.joblib,sha256=EyEyCdED2Y9NlFE35ABIVl-x2BGOG6Wp7aWrxFwWU1w,1016262
+pyROGER/dataset/HighMassRoger1_RF.joblib,sha256=eLb-FETR-vLaWYfhInNqt_dW3612MJcyRFgmhXXfO7c,116625
+pyROGER/dataset/HighMassRoger1_SVM.joblib,sha256=VDQt4Tv28LfSn69UgGTMpoG8rQ9Cv9fPQZjSEtN_Qsk,1312543
+pyROGER/dataset/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyROGER/dataset/highMass_testset_roger1.csv,sha256=iIxEGrpiWvqDgJFI4UWp-dzWrkiHV1s-Heomu_cvxqo,44465
+pyROGER/dataset/highMass_trainset_roger1.csv,sha256=b0BXo_3oTh8AGHocmlkfCHmtpDo0Hioqb8UxqWIiguo,400264
+pyROGER/dataset/highmass_testset_roger1.csv,sha256=iIxEGrpiWvqDgJFI4UWp-dzWrkiHV1s-Heomu_cvxqo,44465
+pyROGER/dataset/roger2_KNN.joblib,sha256=xQLN787MBJEox9rlZWxcOx3-Z6qWHhuKD9CKxEoG_70,31411382
+pyroger-2.0.1.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyroger-2.0.1.dist-info/METADATA,sha256=w5k-zQXU--AoH87mvdD-FIGW5VJdJd32Oefy65901jU,4651
+pyroger-2.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pyroger-2.0.1.dist-info/top_level.txt,sha256=oJGyj9JYSTCJnJpltgaBuafMYbnFFo05Mib7wrL5e_M,33
+pyroger-2.0.1.dist-info/RECORD,,
