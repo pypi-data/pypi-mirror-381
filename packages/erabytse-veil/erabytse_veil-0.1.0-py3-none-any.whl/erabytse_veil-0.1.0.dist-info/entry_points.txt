@@ -1,0 +1,2 @@
+[console_scripts]
+erabytse-veil = erabytse_veil.veil:main
