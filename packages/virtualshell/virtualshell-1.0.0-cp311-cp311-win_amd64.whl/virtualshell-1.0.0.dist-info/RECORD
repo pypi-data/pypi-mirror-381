@@ -1,0 +1,9 @@
+virtualshell/__init__.py,sha256=8PE1B8yiMyZg2gwG18EvXt2vDEflvBeAdh7mNn58-GE,912
+virtualshell/_core.cp311-win_amd64.pyd,sha256=JXsNHyFiMFET0-ghxmZbXpKiguaqZ_hX9FBAfTDDJXQ,400384
+virtualshell/_version.py,sha256=ZgAXEMjAMZx3cZroB6PgojYwdhTZjPbU5RqZEfdYQv0,17
+virtualshell/errors.py,sha256=fDblFND_Lz37HV5l6eKCkWXvrPXnI9_FfZs0bpEYFIU,196
+virtualshell/shell.py,sha256=iHEFnbY3ggR2G-VpxAHrP3RVx3nYy1S2VxxLUTLRHa4,20915
+virtualshell-1.0.0.dist-info/METADATA,sha256=C0_uXHh7-Lxslvmqo8JBOW1M5gK8D1YieCEVQgWf21c,20087
+virtualshell-1.0.0.dist-info/WHEEL,sha256=oXhHG6ewLm-FNdEna2zwgy-K0KEl4claZ1ztR4VTx0I,106
+virtualshell-1.0.0.dist-info/licenses/LICENSE,sha256=34HMvl-jxuw-TVFRK7do9XGJkawVmiiwmPGFfZACBpI,11548
+virtualshell-1.0.0.dist-info/RECORD,,
