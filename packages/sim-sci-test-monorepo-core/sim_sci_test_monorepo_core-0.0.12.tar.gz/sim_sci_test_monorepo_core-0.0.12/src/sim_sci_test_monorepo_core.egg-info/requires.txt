@@ -1,0 +1,12 @@
+vivarium_build_utils<3.0.0,>=2.0.1
+
+[dev]
+pytest>=7.0
+black
+isort
+flake8
+
+[docs]
+sphinx>=5.0
+sphinx-rtd-theme
+sphinx-autodoc-typehints
