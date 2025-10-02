@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+elemai/__init__.py
+elemai.egg-info/PKG-INFO
+elemai.egg-info/SOURCES.txt
+elemai.egg-info/dependency_links.txt
+elemai.egg-info/requires.txt
+elemai.egg-info/top_level.txt
