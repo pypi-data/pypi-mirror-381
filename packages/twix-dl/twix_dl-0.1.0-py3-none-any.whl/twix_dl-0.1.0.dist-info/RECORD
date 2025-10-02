@@ -1,0 +1,12 @@
+twix_dl/__init__.py,sha256=r9x0xAUuEmXP_EbbOwx19HD-cTBg8FKmJlGxmTLO3pI,203
+twix_dl/async_client.py,sha256=UhZmjLrGlYmnA8-k9Jpxt6btK4qHXYXyZEsXmZ0jYCo,5593
+twix_dl/downloader.py,sha256=YviTtLVN_gKHw3M_pkMHk16H8YX5TIuHBBGqanRgcG8,318
+twix_dl/models.py,sha256=3w676RWqsOG8edDDiXTEDWJKSXw1J4X1K8cBqCrpXro,1544
+twix_dl/sync_client.py,sha256=H5s5NVaU-yfvpoy_knet2MC5B_9-Q0aBP57mXgtYeGI,1431
+twix_dl/user_agent.py,sha256=j-l2hgSMVyyJmthZCwnoHjntvLzXxP2aiRUCXFY-Hgw,2469
+twix_dl/utils.py,sha256=PFhwhVsgmBzB8iiCKKIp5IDTxmzXTw3v95yCb5o9i7w,117
+twix_dl-0.1.0.dist-info/licenses/LICENSE,sha256=CRXve2DwgMt90fnpDjSrxOfQnDud526WWtVDk6XXqB4,1066
+twix_dl-0.1.0.dist-info/METADATA,sha256=HFi9H0SrEoDBPMItQIaiD-qI224JyyWEu3SyrNdkwT8,1754
+twix_dl-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+twix_dl-0.1.0.dist-info/top_level.txt,sha256=GDWUmuh3J54WTiY0XnJXy6rjp8nb0LucQXvqCxdzU7Y,8
+twix_dl-0.1.0.dist-info/RECORD,,
