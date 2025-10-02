@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: loxodo-curses
+Version: 0.17.4
+Summary: A Password Safe V3 compatible password vault
+Project-URL: homepage, https://github.com/shamilbi/loxodo-curses
+Author-email: Shamil Bikineyev <shamilbi@gmail.com>, Christoph Sommer <mail@christoph-sommer.de>
+License-Expression: GPL-2.0+
+License-File: LICENSE.txt
+Keywords: password manager,privacy,security
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Security
+Requires-Python: >=3.9
+Requires-Dist: mintotp
+Description-Content-Type: text/x-rst
+
+loxodo-curses
+=============
+
+`loxodo-curses` is a curses frontend to `Password Safe`_ V3 compatible Password Vault.
+A fork of `loxodo`_.
+
+.. _Password Safe: https://www.pwsafe.org/
+.. _loxodo: https://github.com/sommer/loxodo
