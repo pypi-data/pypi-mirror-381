@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: ppef
+Version: 1.0.2
+Summary: Partitioned Elias-Fano encoding for sequences of nondecreasing integers
+Author-email: Alec Heckert <alecheckert@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Dist: numpy
+Dynamic: license-file
