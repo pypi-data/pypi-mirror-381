@@ -1,0 +1,12 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bclearer-core"
+version = "0.1.7"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "Mesbah Khan", email = "khanm@ontoledgy.io" }]
+dependencies = []

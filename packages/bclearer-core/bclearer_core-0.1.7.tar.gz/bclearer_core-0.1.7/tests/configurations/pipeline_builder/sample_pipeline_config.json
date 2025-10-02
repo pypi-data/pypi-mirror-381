@@ -1,0 +1,74 @@
+{
+  "domain_name": "example_domain_2",
+  "pipelines": [
+    {
+      "name": "example_pipeline_1",
+      "thin_slices": [
+        {
+          "name": "thin_slice_1",
+          "stages": [
+            {
+              "name": "1c_collect",
+              "sub_stages": [],
+              "b_units": ["ca_b_unit", "cb_b_unit"]
+            },
+            {
+              "name": "2l_load",
+              "sub_stages": [],
+              "b_units": ["la_b_unit", "lb_b_unit"]
+            },
+            {
+              "name": "3e_evolve",
+              "sub_stages": [
+                {
+                  "name": "sub_stage_1",
+                  "b_units": ["ea1_b_unit", "ea2_b_unit"]
+                },
+                {
+                  "name": "sub_stage_2",
+                  "b_units": ["eb1_b_unit", "eb2_b_unit"]
+                }
+              ],
+              "b_units": []
+            },
+            {
+              "name": "4a_assimilate",
+              "sub_stages": [],
+              "b_units": ["aa_b_unit"]
+            },
+            {
+              "name": "5r_reuse",
+              "sub_stages": [],
+              "b_units": ["ra_b_unit"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "example_pipeline_2",
+      "thin_slices": [
+        {
+          "name": "data_processor",
+          "stages": [
+            {
+              "name": "1c_collect",
+              "sub_stages": [
+                {
+                  "name": "data_extraction",
+                  "b_units": ["extractor_b_unit"]
+                }
+              ],
+              "b_units": ["collector_b_unit"]
+            },
+            {
+              "name": "2l_load",
+              "sub_stages": [],
+              "b_units": ["loader_b_unit"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
