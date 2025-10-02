@@ -1,0 +1,6 @@
+django_language_server-5.2.1.data/scripts/djls,sha256=3W4BMRTmQ69oh0fnOE8_1wSFuWSEkPjR_nwv3TgObZg,8243248
+django_language_server-5.2.1.dist-info/METADATA,sha256=IsKZxg-nYgS1HU0QW3Qji-iSH9B1aJ15J3adwuqadHw,10481
+django_language_server-5.2.1.dist-info/WHEEL,sha256=65ETeUr_DgHPjIWfgTjvPCTyYsbLKOg286hWVS2njmw,104
+django_language_server-5.2.1.dist-info/licenses/LICENSE,sha256=sXWO7NOt5qjT4Fe_f4jUBOaXHsxp0Mk0xkPViqpZQ18,10693
+rust-toolchain.toml,sha256=yQXnSmabxVHPt8Hx6K6YdEADw0CDedsnsVaB3VSEdwk,29
+django_language_server-5.2.1.dist-info/RECORD,,
