@@ -1,0 +1,8 @@
+README.md
+darkbin.py
+setup.py
+darkbin.egg-info/PKG-INFO
+darkbin.egg-info/SOURCES.txt
+darkbin.egg-info/dependency_links.txt
+darkbin.egg-info/entry_points.txt
+darkbin.egg-info/top_level.txt
