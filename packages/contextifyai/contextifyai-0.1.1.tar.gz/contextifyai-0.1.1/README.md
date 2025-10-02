@@ -1,0 +1,369 @@
+# ContextifyAI
+
+**Drop-in replacement for Vercel AI SDK with automatic tracking + editable prompts.**
+
+Change one line → Get tracking. Change one more → Get editable prompts.
+
+🌐 **Live Demo**: [Dashboard](https://promptflow-ez9ndjop6-sanjevvishnus-projects.vercel.app) | [API](https://backend-black-six-59.vercel.app/docs)
+
+---
+
+## The Problem
+
+You're using Vercel AI SDK and want to:
+- Track your LLM calls (latency, costs, responses)
+- Edit prompts without code changes
+- Let non-technical team members improve prompts
+
+## The Solution
+
+ContextifyAI is a **drop-in replacement** for `ai-sdk-python` with 3 stages:
+
+### Stage 1: Vercel AI SDK (Your Current Code)
+```python
+from ai_sdk import generate_text, anthropic
+
+model = anthropic("claude-3-5-sonnet-20241022", api_key=api_key)
+result = generate_text(model=model, prompt="What is AI?")
+```
+❌ No tracking | ❌ Hardcoded prompts
+
+### Stage 2: ContextifyAI Drop-in (1 Line Change)
+```python
+from contextifyai import generate_text, anthropic  # <-- ONLY CHANGE
+
+model = anthropic("claude-3-5-sonnet-20241022", api_key=api_key)
+result = generate_text(model=model, prompt="What is AI?")
+```
+✅ Automatic tracking | ❌ Still hardcoded prompts
+
+### Stage 3: Editable Prompts (2 Line Changes Total)
+```python
+from contextifyai import generate_text, anthropic  # <-- Change 1
+
+model = anthropic("claude-3-5-sonnet-20241022", api_key=api_key)
+result = generate_text(model=model, prompt_template="ai_explanation")  # <-- Change 2
+```
+✅ Automatic tracking | ✅ **Edit prompts from dashboard without code changes!**
+
+---
+
+## Installation
+
+```bash
+pip install contextifyai
+```
+
+Or install from GitHub:
+```bash
+pip install git+https://github.com/sanjevvishnu/contextifyAI.git
+```
+
+---
+
+## What You Get
+
+| Feature | Vercel AI SDK | ContextifyAI |
+|---------|--------------|--------------|
+| **Works** | ✅ | ✅ |
+| **Same API** | ✅ | ✅ |
+| **Code changes** | - | 1 line (import) |
+| **Tracking** | ❌ | ✅ Automatic |
+| **Dashboard** | ❌ | ✅ localhost:3001 |
+| **Latency** | ❌ | ✅ Measured |
+| **Cost** | ❌ | ✅ Calculated |
+| **Prompt versioning** | ❌ | ✅ Built-in |
+
+---
+
+## Migration Guide
+
+### Step 1: Install
+
+```bash
+pip install contextifyai
+```
+
+### Step 2: Change Import
+
+```diff
+- from ai_sdk import generate_text, anthropic
++ from contextifyai import generate_text, anthropic
+```
+
+### Step 3: Done!
+
+That's it. Everything else stays exactly the same.
+
+---
+
+## Example
+
+```python
+from contextifyai import generate_text, anthropic
+import os
+
+# Setup (same as Vercel AI SDK)
+api_key = os.getenv("ANTHROPIC_API_KEY")
+model = anthropic("claude-3-5-sonnet-20241022", api_key=api_key)
+
+# All your existing code works:
+
+# Simple
+result = generate_text(model=model, prompt="Hello")
+
+# With temperature
+result = generate_text(
+    model=model,
+    prompt="Write a poem",
+    temperature=0.9
+)
+
+# With system instruction
+result = generate_text(
+    model=model,
+    system="You are a helpful teacher",
+    prompt="Explain AI"
+)
+
+# Every call is automatically tracked!
+# View at: http://localhost:3001
+```
+
+---
+
+## Run the Demos
+
+### 🚀 Complete Production Demo (RECOMMENDED)
+```bash
+# Comprehensive demo explaining the entire flow
+python examples/complete_demo.py
+```
+
+This demo:
+- Makes 5 different LLM calls (customer support, code review, creative writing, data analysis, translation)
+- Explains what happens in the backend server for each call
+- Shows how the dashboard UI gets updated
+- Verifies all calls were tracked successfully
+- **Includes detailed code comments explaining the entire architecture**
+
+### Demo 1: Before vs After (Tracking)
+```bash
+# Before - no tracking
+python examples/before_vercel_only.py
+
+# After - automatic tracking (1 line changed)
+python examples/after_contextifyai.py
+
+# Open dashboard to see tracked calls
+open https://promptflow-ez9ndjop6-sanjevvishnus-projects.vercel.app
+```
+
+### Demo 2: Editable Prompts
+```bash
+# Run with templates
+python examples/with_templates.py
+
+# Edit template in dashboard
+# Click "Prompt Templates" tab → Edit template
+
+# Run again - see updated prompt (NO CODE CHANGES!)
+python examples/with_templates.py
+```
+
+---
+
+## Features
+
+### 🎯 Drop-in Replacement (Stage 2)
+- Same API as `ai-sdk-python`
+- 1 line change (import)
+- Automatic tracking
+- Dashboard at http://localhost:3001
+
+### 📝 Editable Prompts (Stage 3)
+- Edit prompts from dashboard
+- No code deploys needed
+- Non-technical users can improve prompts
+- A/B testing without code changes
+- Template versioning
+
+### 📊 Analytics Dashboard
+- View all LLM calls
+- Track latency, tokens, costs
+- Search and filter calls
+- Edit prompt templates
+
+---
+
+## Configuration
+
+### Environment Variables (Recommended)
+
+```bash
+# Required
+ANTHROPIC_API_KEY=sk-ant-...
+# or
+OPENAI_API_KEY=sk-...
+
+# Optional (use production backend)
+PROMPTFLOW_URL=https://backend-black-six-59.vercel.app
+PROMPTFLOW_API_KEY=pk_test_123456
+
+# Or run locally
+# PROMPTFLOW_URL=http://localhost:8000
+# PROMPTFLOW_API_KEY=pk_test_123456
+```
+
+### Programmatic (Optional)
+
+```python
+from contextifyai import configure
+
+# Use production backend
+configure(
+    promptflow_url="https://backend-black-six-59.vercel.app",
+    promptflow_api_key="pk_test_123456"
+)
+
+# Or local backend
+# configure(
+#     promptflow_url="http://localhost:8000",
+#     promptflow_api_key="pk_test_123456"
+# )
+```
+
+---
+
+## Architecture
+
+```
+Your Code
+    ↓
+ContextifyAI (thin wrapper)
+    ↓
+Vercel AI SDK (ai-sdk-python)
+    ↓
+LLM Provider (OpenAI, Anthropic)
+
+Tracking (parallel) →  PromptFlow Backend → Dashboard
+```
+
+---
+
+## FAQ
+
+**Q: Will this break my existing code?**
+
+A: No. ContextifyAI wraps Vercel AI SDK, so if your code works now, it will keep working.
+
+**Q: What if PromptFlow backend is down?**
+
+A: Tracking fails silently. Your code continues to work normally.
+
+**Q: Does this slow down my app?**
+
+A: ~5ms overhead per call for tracking. Negligible.
+
+**Q: Can I turn off tracking?**
+
+A: Yes, just switch back to `from ai_sdk import ...`
+
+**Q: Do I need to change my code besides the import?**
+
+A: No. Everything else stays exactly the same.
+
+**Q: What Vercel AI SDK features are supported?**
+
+A: Currently `generate_text()`, `anthropic()`, `openai()`. Streaming and tool calling coming soon.
+
+---
+
+## Roadmap
+
+- ✅ v0.1.0: Drop-in replacement for `generate_text()`
+- 🔄 v0.2.0: Streaming support
+- 🔄 v0.3.0: Tool calling support
+- 🔄 v0.4.0: More providers (Cohere, Google, etc.)
+
+---
+
+## Documentation
+
+- **[DEMO_COMPARISON.md](DEMO_COMPARISON.md)** - Before/After comparison demo
+- **[MIGRATION_GUIDE.md](MIGRATION_GUIDE.md)** - Complete migration from Vercel AI SDK
+- **[TEMPLATE_DEMO.md](TEMPLATE_DEMO.md)** - Editable prompts demonstration
+- **[CODE_COMPARISON.md](CODE_COMPARISON.md)** - Exact code differences side-by-side
+
+---
+
+## Repository Structure
+
+```
+contextifyAI/
+├── contextifyai/          # Python package (pip install)
+│   ├── config.py         # Configuration management
+│   └── vercel_compatible.py  # Wrapped Vercel AI SDK functions
+├── dashboard/            # Next.js frontend (Vercel)
+│   └── app/             # Dashboard with dark mode
+├── backend/              # FastAPI backend (Vercel)
+│   └── app/             # Tracking API
+└── examples/            # Usage examples
+    ├── before_vercel_only.py
+    ├── after_contextifyai.py
+    └── with_templates.py
+```
+
+## Running Locally
+
+### Backend
+```bash
+cd backend
+pip install -r requirements.txt
+python server.py
+# Runs on http://localhost:8000
+```
+
+### Dashboard
+```bash
+cd dashboard
+npm install
+npm run dev
+# Runs on http://localhost:3000
+```
+
+## License
+
+MIT
+
+---
+
+## Summary
+
+✅ **One line change** → Full tracking
+
+```diff
+- from ai_sdk import generate_text, anthropic
++ from contextifyai import generate_text, anthropic
+```
+
+✅ **Same API** → No code changes
+
+✅ **Same results** → Works exactly the same
+
+✅ **Plus tracking** → Dashboard, analytics, versioning
+
+---
+
+**Get started now:**
+
+```bash
+pip install contextifyai
+```
+
+Then change your import and you're done! 🎉
+
+**Live Resources:**
+- 📦 [PyPI Package](https://pypi.org/project/contextifyai/)
+- 📊 [Dashboard Demo](https://dashboard-jhpnnpgvy-sanjevvishnus-projects.vercel.app)
+- 🔧 [API Backend](https://backend-black-six-59.vercel.app/docs)

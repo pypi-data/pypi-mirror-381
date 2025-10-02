@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+contextifyai/__init__.py
+contextifyai/config.py
+contextifyai/vercel_compatible.py
+contextifyai.egg-info/PKG-INFO
+contextifyai.egg-info/SOURCES.txt
+contextifyai.egg-info/dependency_links.txt
+contextifyai.egg-info/requires.txt
+contextifyai.egg-info/top_level.txt
