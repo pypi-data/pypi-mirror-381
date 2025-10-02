@@ -1,0 +1,8 @@
+include vendor/libcue/*.[hly]
+include pylibcue/*.pyx
+include pylibcue/*.pxd
+include Makefile
+include CHANGELOG.rst
+graft tests/testdata
+
+exclude pylibcue/*.c
