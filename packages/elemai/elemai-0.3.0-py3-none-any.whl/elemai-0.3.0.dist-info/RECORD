@@ -1,0 +1,12 @@
+elemai/__init__.py,sha256=SZ8x_hxXFsK4bS7us5gbqdpWKQAZwRSgKUp3wcieDeY,587
+elemai/chat.py,sha256=DCq7t0ZqGT8JZeYw6IKMqt85H02weDvnxkmMAWhagxQ,8101
+elemai/client.py,sha256=wQxP_8MAXx6ttq2-b1zd5NtZ7xvZ4Mc2oy_lQGWjXU8,6315
+elemai/config.py,sha256=gbE9qxxXWHZTnwerQj5xYWu1pAFrZnfiypKsQd0Vi_E,6341
+elemai/sentinel.py,sha256=EgvUaU_ACAQS1M_7VIBHSm8bv3jOWWhWO_7yx0oFUyk,12633
+elemai/task.py,sha256=33kRaWGC7fXk6wcWsAwEjvHJzxb7aTFbcSm1ROmF1Sg,23238
+elemai/template.py,sha256=Tn4wlNJFIXO7LRUpbj62woErRIPEZ3_npQfFW5cLn0o,23155
+elemai-0.3.0.dist-info/licenses/LICENSE,sha256=Btzdu2kIoMbdSp6OyCLupB1aRgpTCJ_szMimgEnpkkE,1056
+elemai-0.3.0.dist-info/METADATA,sha256=T3IIcuAMclrLUOvWkeaAe9PcOVciEmyThQLR4Bt1jfc,7534
+elemai-0.3.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+elemai-0.3.0.dist-info/top_level.txt,sha256=v5DcbvDoFHKcqjfLBuqRDM6beSQMKGp9qO4QVoQq_jY,7
+elemai-0.3.0.dist-info/RECORD,,
