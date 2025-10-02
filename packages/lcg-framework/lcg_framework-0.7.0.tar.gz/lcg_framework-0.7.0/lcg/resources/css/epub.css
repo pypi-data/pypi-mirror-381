@@ -1,0 +1,39 @@
+/* Minimalistic style sheet used specifically for the EPUB export */
+
+table.lcg-fieldset {
+    margin-bottom: .4em;
+}
+table.lcg-fieldset th {
+    white-space: nowrap;
+    vertical-align: top;
+    text-align: left;
+}
+table.lcg-fieldset td {
+    vertical-align: top;
+}
+
+table.lcg-table {
+    border-collapse: collapse;
+}
+table.lcg-table td, table.lcg-table th {
+    padding: .4em;
+}
+img.left-aligned {
+    float: left;
+    margin-right: 1em;
+}
+img.right-aligned {
+    float: right;
+    margin-left: 1em;
+}
+.exercise {
+    margin-top: 0.8em;
+}
+.exercise ol.choices {
+    list-style-type: lower-alpha;
+}
+.exercise .answers {
+    color: #6a6a6a;
+    font-size: 0.9em;
+    margin-top: 0.6em;
+}

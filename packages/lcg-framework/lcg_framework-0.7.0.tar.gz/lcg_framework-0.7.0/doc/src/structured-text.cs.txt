@@ -1,0 +1,1196 @@
+# -*- coding: utf-8; mode: structured-text -*-
+# Copyright (C) 2005-2012 OUI Technology Ltd.
+# Copyright (C) 2019, 2021 Tomáš Cerha <t.cerha@gmail.com>
+# This is part of the LCG Documentation.
+# See the file index.en.txt for copying conditions.
+# Note: The examples (surronded by ---- lines) are displayed in a fixed
+# width font with wrapping disabled.  Please, wrap all examples to 65
+# characters to prevent this document taking too much horizontal space.
+
+@parameter footer
+@center
+\- @PAGE@ -
+@end footer
+
+= Příručka formátování strukturovaného textu =
+
+Tento dokument popisuje formát strukturovaného textu používaného v rámci
+[http://www.freebsoft.org/lcg LCG].
+
+Obsah: @TOC(1)@
+
+
+== Úvod ==
+
+Strukturovaný text je velmi jednoduchá sada pravidel jak formátovat obyčejný
+textový dokument.  Toto formátování umožňuje v textu vyznačit logickou
+strukturu kapitol, odstavců, odrážkových seznamů atd.
+
+Konstrukce mají převážně logický, nikoliv prezentační charakter.  To znamená že
+o jejich vhodnosti se nerozhodujeme podle toho, jak chceme aby text vypadal,
+ale podle jeho logického významu.  Například nadpis nepoužíváme proto, že
+chceme zobrazit tučný text velkým písmem, ale proto, že jde o název následující
+ucelené sekce dokumentu.
+
+Prezentační vlastnosti jednotlivých logických prvků lze systematicky měnit
+pomocí stylů a jejich volba je tedy na vlastním obsahu zcela nezávislá.  To je
+jeden z hlavních předpokladů konzistence výsledného dokumentu a snadné
+orientace uživatele.
+
+Další výhodou tohoto přístupu je to, že zdrojový text zůstává snadno čitelný a
+můžeme jej upravovat bez potřeby nějakého konkrétního softwarového nástroje.
+Libovolný textový editor dobře poslouží.  To činí dokumenty zcela přenosnými,
+neutrálními k prostředí a přístupnými.  Množství různých cílových formátů může
+být vygenerováno z jednoho zdrojového dokumentu.
+
+Nepochopení a nerespektování základního principu oddělení logické a prezentační
+stránky dokumentu může u uživatelů zvyklých formátovat dokumenty vizuálně vést
+až k jisté počáteční frustraci, ale jakmile si zvyknete na to, že vaším úkolem
+je text jen vhodně označit a způsob jeho prezentace přenecháte počítači,
+zjistíte, že vás tento způsob práce nesvazuje, ale naopak osvobozuje.  Můžete
+se plně věnovat obsahové stránce dokumentu a o prezentaci se staráte jen
+minimálně.  To se ovšem neobejde bez znalosti zákonitostí, podle kterých
+počítač jednotlivé logické celky v textu rozeznává.  Proto se nyní věnujme
+vysvětlení všech často používaných konstrukcí.
+
+
+== Stručný přehled nejdůležitějších konstrukcí == overview
+
+Následující text obsahuje pouze stručnou a odlehčenou formu popisu
+nejdůležitějších konstrukcí.  Detailní popis všech konstrukcí a jejich možností
+naleznete v druhé části tohoto dokumentu nazvané [#complete-manual].
+
+Obsah: @TOC@
+
+
+=== Odstavce ===
+
+Odstavec je každý celistvý blok textu.  Kdykoliv vynecháte prázdný řádek,
+znamená to že začínáte nový odstavec (nebo jinou konstrukci).  Konce řádků a
+vícenásobné mezery uvnitř odstavce jsou ignorovány -- veškerý text odstavce
+vystupuje jako jeden celek a bude zformátován tak, aby odpovídal šířce
+výstupního média (např. okna prohlížeče).
+
+
+=== Kapitoly === sections
+
+Kapitoly umožňují vytvářet hierarchickou strukturu obsahu.  Strukturu kapitol
+je potom možné vypsat ve formě hierarchického [#toc obsahu] a umožnit tak
+snadnou navigaci v rámci této struktury (podobně jako je tomu v tomto návodu).
+
+Kapitola začíná nadpisem.  Nadpis je na začátku a na konci řádku obklopen
+rovnítky.  Úroveň nadpisu v hierarchii je určena počtem rovnítek (viz příklad).
+	 
+*Příklad:*
+
+------
+ = Hlavní nadpis =
+
+ Text na hlavní úrovni dokumentu.
+
+ == První kapitola ==
+
+ Tento odstavec patří do první kapitoly.
+
+ === Podkapitola první kapitoly ===
+
+ Text podkapitoly.
+
+ == Druhá kapitola ==
+
+ Text druhé kapitoly, atd.
+
+----- 
+
+Každá kapitola také může mít jednoznačný identifikátor, který můžeme využít při
+odkazování na tuto kapitolu.  Více viz [#sections] a [#links].
+
+
+=== Odrážkové seznamy ===
+
+Odrážkové seznamy jsou vhodné pro vyjádření výčtů.  Jednotlivé položky výčtu
+mohou být krátká hesla, nebo i delší texty, nemohou však obsahovat více
+odstavců.  Mohou však obsahovat další vnořené seznamy.
+
+*Příklad:*
+
+------
+ * kočka
+ * pes
+ * křeček
+------
+
+Toto bude zobrazeno jako:
+
+ * kočka
+ * pes
+ * křeček
+
+Seznamy mohou být také vnořené, položky mohou být číslované atd.  Více viz
+[#bullet-lists] a [#ordered-lists].
+
+
+=== Seznamy definic ===
+
+Seznam definic je vhodné použít kdykoliv potřebujeme vyjádřit posloupnost
+určitých termínů či názvů a k~nim se vztahujících podrobnějších vysvětlení.
+
+*Příklad:*
+------
+Krkonošský národní park
+  Krkonošský národní park se rozprostírá v~severovýchodní části
+  Čech při hranici s~Polskem.  Jeho rozloha je 54~969~ha a byl
+  založen roku 1963.
+
+Národní park Šumava
+  Národní park a chráněná krajinná oblast Šumava leží při
+  jihozápadní hranici České republiky se Spolkovou republikou
+  Německo a Rakouskem.  NP byl založen roku 1991 a jeho rozloha
+  činí 69~030~ha.
+  
+------
+
+Krkonošský národní park
+  Krkonošský národní park se rozprostírá v~severovýchodní části
+  Čech při hranici s~Polskem.  Jeho rozloha je 54~969~ha a byl
+  založen roku 1963.
+
+Národní park Šumava
+  Národní park a chráněná krajinná oblast Šumava leží při
+  jihozápadní hranici České republiky se Spolkovou republikou
+  Německo a Rakouskem.  NP byl založen roku 1991 a jeho rozloha
+  činí 69~030~ha.
+
+
+=== Sledy položek ===
+
+Sled položek je vhodný k vyjádření obecné skupiny dvojic souvisejících údajů.
+Ve své podstatě jsou podobné seznamům definic, ale jsou vhodnější tam, kde jde
+o dvojice typu název/hodnota (oproti termín/vysvětlení).
+
+*Příklad:*
+
+------
+:Telefon: 254 354 645
+:Fax:     254 354 648
+:e-mail:  info@vasedomena.cz
+------
+
+Toto bude zobrazeno jako:
+
+:Telefon: 254 354 645
+:Fax:     254 354 648
+:e-mail:  info@vasedomena.cz
+
+Více podrobností viz [#field-sets].
+
+
+=== Odkazy ===
+
+Odkazy umožňují hypertextové provázání dokumentů a jejich částí.  Zapisují se
+pomocí hranatých závorek.  Každý odkaz má svůj cíl a může mít i explicitní
+název (text zobrazený v místě odkazu) a popis (zobrazený jako bublinová
+nápověda).  Cíl je první část textu uvnitř závorek, název může následovat za
+první mezerou a popis za rourou (znak „|“).  Pokud není název určen explicitně,
+systém doplní název cílového dokumentu nebo kapitoly, pokud to lze).  Některé
+typy odkazů jsou rozpoznány automaticky, takže hranaté závorky u nich nejsou
+potřeba.
+
+*Příklady*:
+
+-----
+ * odkaz na jiný dokument: [intro]
+ * odkaz na jinou kapitolu stejného dokumentu: [#bullet-lists]
+ * s explicitním názvem: [#bullet-lists kapitola o odrážkách]
+ * s popisem (bublina):
+   [#bullet-lists odrážky | používání odrážkových seznamů]
+ * externí odkaz:
+   [http://www.freebsoft.org Free(b)soft laboratoř]
+ * automatický odkaz: http://www.gnu.org
+ * e-mailová adresa: vasejmeno@vasedomena.cz
+-----
+
+Výsledné odkazy:
+
+ * odkaz na jiný dokument: [intro]
+ * odkaz na jinou kapitolu stejného dokumentu: [#bullet-lists]
+ * s explicitním názvem: [#bullet-lists kapitola o odrážkách]
+ * s popisem (bublina):
+   [#bullet-lists odrážky | používání odrážkových seznamů]
+ * externí odkaz:
+   [http://www.freebsoft.org Free(b)soft laboratoř]
+ * automatický odkaz: http://www.gnu.org
+ * e-mailová adresa: vasejmeno@vasedomena.cz
+
+Více podrobností viz [#links].
+
+
+=== Obrázky ===
+
+Odkazy, jejichž cílem je obrázek, automaticky zobrazí tento obrázek v těle
+dokumentu.  Odkazy, které mají obrázek na místě názvu odkazu se zobrazí jako
+tento obrázek, ale nadále fungují jako odkaz.
+
+-----
+ * jednoduchý obrázek:
+   [http://www.google.com/accounts/google_white.gif]
+ * s alternativním textem:
+   [http://www.google.com/accounts/google_white.gif Google logo]
+ * jednoduchý odkaz s obrázkem:
+   [http://www.opensource.org
+    http://www.opensource.org/trademarks/open_source_button.png]
+ * odkaz s obrázkem, textem a popisem:
+   [http://www.opensource.org
+    http://www.opensource.org/trademarks/open_source_button.png 
+    OSI | Open Source Iniciativa]
+-----
+
+Výsledné obrázky:
+
+ * jednoduchý obrázek: [http://www.google.com/accounts/google_white.gif]
+ * s alternativním textem: [http://www.google.com/accounts/google_white.gif Google logo]
+ * jednoduchý odkaz s obrázkem: [http://www.opensource.org http://www.opensource.org/trademarks/open_source_button.png]
+ * odkaz s obrázkem, textem a popisem: [http://www.opensource.org
+   http://www.opensource.org/trademarks/open_source_button.png 
+   OSI | Open Source Iniciativa]
+
+Více podrobností viz [#images].
+
+=== Audio a Video ===
+
+Odkazy na zvukové nahrávky ve formátu MP3 budou v mít HTML výstupu podobu
+běžného odkazu, ale tento odkaz bude fungovat jako ovládací prvek přehrávače,
+který se zobrazí v pravém dolním rohu okna prohlížeče.  Podporováno je i plně
+zpřístupněné ovládání z klávesnice.  Více viz [#audio].
+
+Podobně jako obrázky, budou rozpoznány také vložené video soubory ve formátu
+OGV, MP4, WEBM a 3GP a odkazy na videa ze služeb YouTube a Vimeo.  Tyto odkazy
+budou zobrazeny ve formě přehrávače příslušného videa.  Více viz [#video].
+
+
+== Obecná doporučení ==
+
+ * Seznamte se s podporovanými konstrukcemi a využívejte vždy ty, které se pro
+   daný účel nejlépe hodí.  Skoro vše se sice dá napsat jako jeden dlouhý
+   odstavec textu, ale využitím prvků, jako jsou odrážkové seznamy, seznamy
+   definic apod. lze text podstatně zpřehlednit a odlehčit.  Také uživatelům
+   zpřístupňujících technologií tím výrazně usnadňujete orientaci a navigaci.
+
+ * Nikdy nezneužívejte žádnou logickou konstrukci čistě k dosažení určitých
+   prezentačních vlastností (typu nebo velikosti písma, odsazení apod), pokud
+   daný obsah neodpovídá logickému určení této konstrukce.  Zkuste se znovu
+   zamyslet nad strukturou informací a zvolit jednu z podporovaných možností.
+
+ * Tabulky používejte pouze v případě, že žádný jiný způsob vyjádření není
+   vhodný a že se skutečně jedná o tabulková data.  Často lze tabulku vyjádřit
+   například i pomocí vnořených seznamů.  Tato forma může být mnohdy vhodnější
+   pro uživatele zpřístupňujících technologií.
+ 
+ * V maximální míře využívejte hypertextové provázání jednotlivých dokumentů
+   (stránek) a kapitol.  Více viz [#links].
+ 
+ * Pokud se některé informace opakují na více místech, oddělte je do samostatné
+   jednotky (kapitoly, dokumentu), na kterou se potom můžete odkazovat.
+ 
+ * Vyvarujte se dlouhých souvětí.  Krátké a jasné věty se mnohem lépe čtou.
+
+ * Nezneužívejte možností zvýrazňování textu.  Text hýřící se mnoha druhy písma
+   přestává být přehledný.
+
+
+###############################################################################
+###############################################################################
+
+== Kompletní příručka formátování == complete-manual
+
+
+Tato sekce detailně popisuje všechny podporované konstrukce, jejich možnosti a
+způsob zápisu.  [#overview] poskytuje zjednodušený popis.
+
+Obsah: @TOC@
+
+
+=== Blokové konstrukce ===
+
+Blokové konstrukce ovlivňují vlastní strukturu dokumentu.  Říkáme jim blokové,
+protože se většinou sestávají z bloků textu.  Naproti tomu
+[#inline-constructs], pracují s textem uvnitř těchto bloků.
+
+==== Kapitoly ====
+
+Jak je popsáno v kapitole [#overview], kapitoly utvářejí hierarchickou
+strukturu dokumentu.
+
+Nadpis kapitoly označujeme pomocí rovnítek obklopujících název z obou stran.
+Počet rovnítek určuje úroveň kapitoly v rámci hierarchie.
+
+*Příklad:*
+------
+ = Hlavní nadpis =
+
+ Veškerý obsah následující za nadpisem patří do dané kapitoly,
+ dokud není nalezen nadpis další kapitoly.  Zde může být použit
+ libovolný počet odstavců nebo jakýchkoliv jiných konstrukcí.
+
+ == První kapitola ==
+
+ Protože tento nadpis má více rovnítek, jde o nadpis, který v
+ rámci hierarchie logicky spadá do předchozí kapitoly.
+
+ === Podkapitola první kapitoly ===
+
+ Tento text patří do podkapitoly první kapitoly.
+
+ == Druhá kapitola ==
+
+ Toto je druhá kapitola stejné úrovně jako první kapitola.
+----- 
+
+Je /důležité/, aby mezi nadpisem a rovnítky byla z každé strany jedna mezera,
+jinak nebude nadpis správně rozpoznán.
+
+
+==== Kotvy ==== anchors
+
+Kapitolu můžeme také označit jednoznačným identifikátorem (kotvou) a ten potom
+použít v odkazech.  Identifikátor nesmí obsahovat znaky s diakritikou, mezery a
+jiné speciální znaky.  Povolená jsou písmena, číslice, pomlčky a podtržítka.
+Kotvu zapíšeme na konec řádku nadpisu kapitoly oddělenou jednou mezerou.
+
+*Příklad:*
+------
+ == Úvod == uvod
+------
+
+Kotva potom může být použita v odkazech na tuto kapitolu.  Například odkaz
+\[#intro] bude odkazovat na výše uvedenou kapitolu.  Název kapitoly bude
+automaticky doplněn jako název odkazu.  Více viz [#links].
+
+
+==== Obsah ==== toc
+
+Obsah je hierarchický výpis kapitol dokumentu nebo jeho části.  Je to
+důležitý navigační prvek (jednotlivé položky tvoří odkazy do příslušných
+kapitol).  Do dokumentu jej vložíme pomocí makra =@TOC@= (z anglického „Table
+of Contents“).
+
+*Příklad:*
+
+-----
+Obsah: @TOC@
+-----
+
+Tato řádka zdrojového dokumentu bude na výstupu nahrazena obsahem.  Text
+před dvojtečkou bude tvořit jeho nadpis a ve výpisu budou obsaženy všechny
+kapitoly nacházející se v hierarchii pod aktuální kapitolou, ve které je makro
+použito.  To znamená že je možné vytvářet také lokální obsahy pro jednotlivé
+části hierarchie.
+
+Obsah na začátku kapitoly [#complete-manual] byl vytvořen stejným způsobem.
+
+=@TOC@= vytváří obsah v rámci jednoho dokumentu.  Kromě toho je
+možné použít také makro =@NodeIndex@=, které vytvoří obsah
+dokumentů v rámci jejich struktury (tam, kde je LCG použito ke zpracování
+celých struktur dokumentů).
+
+Výchozí podoba obsahu je hierarchická.  Můžete však také omezit hloubku této
+hierarchie.  Toho dosáhnete udáním celého čísla v kulatých závorkách, jako
+v následujícím příkladu:
+
+-----
+Obsah: @TOC(1)@
+-----
+
+Tím vytvoříte výpis obsahující pouze položky na nejvyšší úrovni hierarchie.
+Obsah na začátku tohoto dokumentu byl vytvořen stejným způsobem.
+
+
+==== Odrážkové seznamy ==== bullet-lists
+
+Odrážkové seznamy jsou vyznačeny hvězdičkou, nebo pomlčkou na začátku každé
+položky.  Odsazení určuje úroveň vnoření.
+
+*Příklad:*
+
+------
+ * kočky
+   - domácí
+   - divoké
+ * psi
+   * malí
+   * velcí
+ * žáby
+------
+
+Toto bude zobrazeno jako:
+
+ * kočky
+   - domácí
+   - divoké
+ * psi
+   * malí
+   * velcí
+ * žáby
+
+
+==== Uspořádané seznamy ==== ordered-lists
+
+Uspořádané seznamy fungují podobně jako [#bullet-lists], ale jednotlivé položky
+jsou označeny pořadovým číslem, nebo písmenem.
+
+*Příklad:*
+
+------
+ * Obecná pravidla:
+   1. Delší text položky může být rozdělen na více řádků, pokud
+      je zachováno patřičné odsazení.
+   2. Pro odsazení je možné použít tabelátory a mezery.  Jeden
+      tabelátor odpovídá osmi mezerám.  Pokud váš editor umožňuje
+      nastavit šířku tabelátoru, dbejte na to, aby byla nastavena
+      na 8, nebo si nastavte převod tabelátorů na mezery.
+   3. Položka seznamu může obsahovat jeden nebo více odstavců
+      textu.
+   4. Prázdné řádky mezi položkami jsou možné, ale nemají žádný
+      vliv na výsledný dokument.  Jde čistě o vaši volbu.
+
+ * Pravidla pro uspořádané seznamy:
+   0. Čísla ve zdrojovém textu dokumentu jsou ignorována.
+      Výstupní číslování je prováděno automaticky.  Proto můžete
+      například označit všechny položky nulou.  I v tom případě
+      budou výstupní položky číslovány od jedničky vzestupně.
+      Tím vám odpadá starost o udržování správných hodnot čísel
+      při úpravách dokumentu.  Pokud však chcete, nic vám nebrání
+      používat skutečná pořadová čísla.
+   0. Namísto čísel můžete použít také písmena pro abecedně
+      řazené seznamy.
+ * Míchání různých typů seznamů:
+   a) Existují v zásadě tři druhy seznamů:
+      (1) neuspořádané (odrážkové)
+      (2) číselně uspořádané
+      (3) abecedně uspořádané
+   b) Kdykoliv přejdete z jednoho typu na jiný (v rámci stejné
+      úrovně odsazení), je předchozí seznam ukončen a pořadí je
+      počítáno od počátku.
+   c. Nezáleží na tom, jestli pro uvození čísla či písmena
+      používáte ve zdrojovém textu tečku nebo kulaté závorky.
+      Způsob zobrazení seznamů ve výstupním dokumentu je dán
+      stylem.
+      
+------
+
+Toto bude zobrazeno jako:
+
+ * Obecná pravidla:
+   1. Delší text položky může být rozdělen na více řádků, pokud
+      je zachováno patřičné odsazení.
+   2. Pro odsazení je možné použít tabelátory a mezery.  Jeden
+      tabelátor odpovídá osmi mezerám.  Pokud váš editor umožňuje
+      nastavit šířku tabelátoru, dbejte na to, aby byla nastavena
+      na 8, nebo si nastavte převod tabelátorů na mezery.
+   3. Položka seznamu může obsahovat jeden nebo více odstavců
+      textu.
+   4. Prázdné řádky mezi položkami jsou možné, ale nemají žádný
+      vliv na výsledný dokument.  Jde čistě o vaši volbu.
+
+ * Pravidla pro uspořádané seznamy:
+   0. Čísla ve zdrojovém textu dokumentu jsou ignorována.
+      Výstupní číslování je prováděno automaticky.  Proto můžete
+      například označit všechny položky nulou.  I v tom případě
+      budou výstupní položky číslovány od jedničky vzestupně.
+      Tím vám odpadá starost o udržování správných hodnot čísel
+      při úpravách dokumentu.  Pokud však chcete, nic vám nebrání
+      používat skutečná pořadová čísla.
+   0. Namísto čísel můžete použít také písmena pro abecedně
+      řazené seznamy.
+ * Míchání různých typů seznamů:
+   a) Existují v zásadě tři druhy seznamů:
+      (1) neuspořádané (odrážkové)
+      (2) číselně uspořádané
+      (3) abecedně uspořádané
+   b) Kdykoliv přejdete z jednoho typu na jiný (v rámci stejné
+      úrovně odsazení), je předchozí seznam ukončen a pořadí je
+      počítáno od počátku.
+   c. Nezáleží na tom, jestli pro uvození čísla či písmena
+      používáte ve zdrojovém textu tečku nebo kulaté závorky.
+      Způsob zobrazení seznamů ve výstupním dokumentu je dán
+      stylem.
+
+
+==== Seznamy definic ==== definition-lists
+
+Seznam definic vyjadřuje posloupnost určitých termínů a k nim se vztahujících
+podrobnějších vysvětlení.  Každá položka se skládá z termínu a k němu
+náležícího vysvětlení.  Jednotlivé položky jsou oddělené prázdnými řádky.
+
+Termín nesmí přesahovat rozsah jednoho řádku.  Vysvětlení následuje
+bezprostředně za ním a je odsazeno alespoň jednou mezerou.  Vysvětlení může být
+víceřádkové, pokud jsou všechny řádky náležitě odsazeny.
+
+*Příklad*:
+
+------
+LCG (Learning Content Generator)
+  LCG je softwarový nástroj schopný zpracovat strukturovaná
+  textová a multimediální data a vyprodukovat jejich výstupní
+  prezentaci vhodnou k použití v on-line nebo off-line výukovém
+  prostředí.
+
+Wiking
+  Wiking je systém správy obsahu s vysokým stupňem zpřístupnění,
+  který je postaven nad databázovým toolkitem Pytis a LCG.  
+------
+
+Toto bude zobrazeno jako:
+
+LCG (Learning Content Generator)
+  LCG je softwarový nástroj schopný zpracovat strukturovaná
+  textová a multimediální data a vyprodukovat jejich výstupní
+  prezentaci vhodnou k použití v on-line nebo off-line výukovém
+  prostředí.
+
+Wiking
+  Wiking je systém správy obsahu s vysokým stupněm zpřístupnění,
+  který je postaven nad databázovým toolkitem Pytis a LCG.
+
+
+==== Sledy položek ==== field-sets
+
+Sledy položek mohou být obecně použity pro zápis datových dvojic, kde první
+položka každé dvojice je název a druhá položka je odpovídající hodnota.
+Název je z obou stran obklopen dvojtečkami.  Hodnoty mohou být víceřádkové,
+pokud jsou správně odsazeny.
+
+*Příklad:*
+
+------
+:Datum narození: 30. 8. 1975
+:Adresa:
+   Důlní 23//
+   Ostrava
+:Povolání: Uhlobaron
+------
+
+Toto bude zobrazeno jako:
+
+:Datum narození: 30. 8. 1975
+:Adresa:
+   Důlní 23//
+   Ostrava
+:Povolání: Uhlobaron
+
+
+==== Předformátovaný text ==== preformatted-text
+
+Pokud text obklopíte shora i zdola řádkem o pěti a více pomlčkách, je vše
+uvnitř tohoto bloku považováno za předformátovaný text.  Tento text nebude dále
+formátován, ale bude ponecháno jeho původní formátování, včetně všech mezer,
+řádkových zlomů a odsazení.  Text je zkrátka zobrazen přesně tak, jak je
+zapsán.
+
+*Příklad:*
+
+------
+ ------
+  bla   bla
+   x     y
+   1     2
+ ------
+------
+
+Toto bude zobrazeno jako:
+
+------
+ bla   bla
+  x     y
+  1     2
+------
+
+Všechny příklady v tomto návodu jsou zapsány jako předformátovaný text.
+
+
+==== Tabulky ====
+
+Můžete vytvářet také jednoduché pravidelné tabulky se shodným počtem buněk
+v každém řádku.  Každý řádek tabulky je jeden řádek vstupního textu.
+K oddělení buněk je používán znak svislé čáry „|“.  Tento znak také označuje
+začátek a konec řádku tabulky.  Jestliže je bezprostředně za znakem svislé čáry
+pomlčka, je na tomto místě vytvořena vodorovná čára (ne nutně ve všech
+výstupních formátech).
+
+*Příklad:*
+
+------
+|        | *Výška*  | *Váha*   | *Pohlaví* |
+|------------------------------------------|
+| Pavel  |   189 cm |    73 kg | muž       |
+| Jana   |   164 cm |    78 kg | žena      |
+------
+
+|        | *Výška*  | *Váha*   | *Pohlaví* |
+|------------------------------------------|
+| Pavel  |   189 cm |    73 kg | muž       |
+| Jana   |   164 cm |    78 kg | žena      |
+
+/Záhlaví sloupců/ je rozpoznáno automaticky, pokud celý první řádek obsahuje
+pouze buňky tučným písmem, nebo prázdné buňky, jako ve výše uvedeném příkladu.
+
+/Zarovnání buněk/ je také detekováno — pokud je odsazení (počet mezer a
+tabelátorů) na levé straně větší než na pravé, je buňka zarovnána vpravo.
+Zarovnání a šířku sloupců lze také definovat explicitně vložením speciálního
+řádku obsahujícího buňky tvaru jako =<r20>= nebo =<c>=, kde písmeno může být
+jedno z =l= (left — vlevo), =r= (right — vpravo), =c= (center — uprostřed) a
+nepovinné číslo určuje šířku sloupce ve znacích.  Odsazení mezerami a
+tabelátory uvnitř buněk je v případě přítomnosti takového řádku ignorováno a
+tento řádek se také neobjeví na výstupu.  Některé výstupní formáty mohou tuto
+definici zarovnání a šířek ignorovat.
+
+Pokud chcete některé sloupce tabulky oddělit svislými čárami, můžete použít
+jinou formu definičního řádku obsahujícího buňky tvaru =<= (čára nalevo od
+sloupce), =>= (čára napravo od sloupce), =<>= (čára na obou stranách).  Některé
+výstupní formáty nemusí svislé čáry podporovat.
+
+*Příklad tabulky s definičními řádky:*
+
+------
+| <>     | <        |          | >         |
+| <l10>  | <r>      | <r10>    | <l>       |
+|        | *Výška*  | *Váha*   | *Pohlaví* |
+|------------------------------------------|
+| Pavel  |   189 cm |    73 kg | muž       |
+| Jana   |   164 cm |    78 kg | žena      |
+------
+
+| <>     | <        |          | >         |
+| <l10>  | <r>      | <r10>    | <l>       |
+|        | *Výška*  | *Váha*   | *Pohlaví* |
+|------------------------------------------|
+| Pavel  |   189 cm |    73 kg | muž       |
+| Jana   |   164 cm |    78 kg | žena      |
+
+
+==== Horizontální pozice ====
+
+Můžete říci, že následující prvek má být umístěn nalevo, resp. napravo,
+resp. vycentrován, když před ním na samostatném řádku uvedete značku =@left=,
+resp. =@right=, resp. =@center=.  Horizontální umístění prvků je v současné
+době podporováno pouze u tabulek a odstavců a nemusí být podporováno všemi
+výstupními formáty.
+
+*Příklad:*
+
+-----
+@left
+Tento text bude umístěn nalevo.
+
+@right
+Tento text bude umístěn napravo.
+-----
+
+@left
+Tento text bude umístěn nalevo.
+
+@right
+Tento text bude umístěn napravo.
+
+
+=== Řádkové konstrukce === inline-constructs
+
+Řádkové konstrukce jsou využívány uvnitř jednotlivých bloků textu.  Neovlivňují
+vlastní strukturu dokumentu, ale umožňují používání různých prvků v rámci
+textových bloků.
+
+==== Zvýrazňování textu ====
+
+Můžete používat /zvýrazněný text/, *silně zvýrazněný text*, _podtržený text_,
+=písmo s pevnou šířkou znaku=, /*nebo jejich _kombinace_*/.
+
+Zdrojový text pro výše uvedený odstavec by vypadal následovně:
+
+-----
+Můžete používat /zvýrazněný text/, *silně zvýrazněný text*,
+_podtržený text_, =písmo s pevnou šířkou znaku=, /*nebo jejich
+_kombinace_*/.
+-----
+
+
+==== Odkazy ==== links
+
+Odkazy umožňují hypertextové provázání dokumentů a jejich částí.  Zapisují se
+pomocí hranatých závorek a mají následující strukturu:
+
+=\[<cíl-odkazu> <název-odkazu> | <popis-odkazu>]=
+
+Cíl odkazu
+  Tvoří první část uvnitř hranatých závorek až do první mezery.  Může to být
+  identifikátor dokumentu, kapitoly, nebo externí URL.  Více viz příklady níže.
+
+Název odkazu
+  Název určuje text zobrazený v místě odkazu.  Pokud není uveden, systém se
+  pokusí doplnit název automaticky (v závislosti na typu cíle odkazu, jak je
+  popsáno níže).  Pokud je v místě názvu uveden obrázek, bude odkaz zobrazen
+  jako [#image-links obrázkový odkaz].
+
+Popis odkazu
+  Je také nepovinný, oddělený znakem roury „|“ od názvu odkazu.  Prezentace
+  závisí na druhu výstupního média.  Např. v HTML je popis ve většině
+  prohlížečů zobrazen jako bublinová nápověda (tooltip).
+
+Cílem odkazů mohou být:
+
+Místní dokument
+  Místní dokumenty (jiné dokumenty ve stejné hierarchii) jsou odkazovány přímo
+  pomocí svých identifikátorů.  Název dokumentu je potom automaticky použit
+  jako název odkazu (pokud nebyl určen explicitní název v hranatých závorkách).
+
+Místní kapitola
+  Kapitoly jsou odkazovány prostřednictvím kotev (více viz [#anchors]).  Kotvu
+  v odkazu uvodíme mřížkou.  Pokud jde o kotvu v rámci jiného dokumentu, před
+  mřížku ještě připojíme jeho identifikátor.  Název kapitoly je potom použit
+  pro automatické doplnění názvu odkazu.
+
+Externí cíl
+  Cíl, který není rozpoznán jako místní dokument nebo kapitola je považován za
+  externí URL.  Název v takovém případě není doplňován automaticky.  Pokud není
+  uveden explicitně, bude URL zobrazeno také jako název odkazu.
+
+Obrázek
+  Pokud je cíl odkazu rozpoznán jako obrázek, odkaz je zobrazen jako [#images
+  obrázek v těle dokumentu].
+
+*Příklady:*
+------
+ * Místní dokument: 
+   - automatický název: [intro]
+   - explicitní název: [intro Úvod do LCG]
+ * Místní kapitola:
+   - stejný dokument: [#anchors]
+   - jiný dokument: [usage#run]
+   - explicitní název:
+     [#links Použití odkazů v dokumentech]
+   - popis: [#links Odkazy | Kompletní popis použití odkazů
+     ve strukturovaném textu LCG]
+ * Externí odkaz:
+   - [http://www.gnu.org GNU | Domovská stránka GNU projektu]
+------
+
+ * Místní dokument: 
+   - automatický název: [intro]
+   - explicitní název: [intro Úvod do LCG]
+ * Místní kapitola:
+   - stejný dokument: [#anchors]
+   - jiný dokument: [usage#run]
+   - explicitní název: [#links Použití odkazů v dokumentech]
+   - popis: [#links Odkazy | Kompletní popis použití odkazů
+     ve strukturovaném textu LCG]
+ * Externí odkaz:
+   - [http://www.gnu.org GNU | Domovská stránka GNU projektu]
+
+
+==== Automatické odkazy ==== automatic-links
+
+Externí odkazy začínající na URL schema, jako např. '\http://', jsou rozpoznány
+automaticky, takže není třeba použít hranatých závorek, pokud nechcete
+definovat explicitní název nebo popis odkazu.   Také e-mailové adresy jsou
+automaticky zobrazeny formou odkazu.
+
+------
+Navštivte domovskou stránku projektu GNU na adrese
+http://www.gnu.org, případně kontaktujte bill@microsoft.com pro
+více informací.
+------
+
+
+==== Obrázky ==== images
+
+Obrázky jsou speciálním případem [#links odkazů].  Libovolný odkaz, jehož cílem
+je obrázek bude automaticky zobrazen jako obrázek v těle dokumentu.  Obrázky
+jsou rozeznávány podle přípony.  Momentálně jsou podporovány obrázky typu JPEG,
+PNG a GIF.
+
+*Příklad*:
+------
+http://www.google.com/images/logo_sm.gif
+------
+
+http://www.google.com/images/logo_sm.gif
+
+Pokud je určen název odkazu, bude použit jako alternativní text obrázku pro
+potřeby zpřístupnění.  Případný popis odkazu bude v alternativním textu také
+obsažen (viz. příklad níže).
+
+*Příklad*:
+------
+[http://www.gnu.org/graphics/heckert_gnu.small.png GNU logo |
+Pohledná hlava pakoně s typickou bradkou a zatočenými rohy
+umocňujícími chytré vzezření]
+------
+
+[http://www.gnu.org/graphics/heckert_gnu.small.png GNU logo | Pohledná hlava
+pakoně s typickou bradkou a zatočenými rohy umocňujícími chytré vzezření]
+
+[<http://www.opensource.org/trademarks/opensource/web/opensource-55x48.jpg]
+Obrázky mohou být také zarovnány vpravo nebo vlevo od textu, který za nimi v
+dokumentu následuje.  Jednoduše použijte znaménko „je menší“, resp. „je větší“
+(levá a pravá špičatá závorka) před názvem obrázku uvnitř hranatých závorek.
+Logo OSI po levé straně tohoto odstavce bylo zapsáno následovně:
+
+------
+[<http://www.opensource.org/trademarks/open_source_button.png]
+Obrázky mohou být také zarovnány ...
+------
+
+Způsob zobrazení obrázků může být dále ovlivněn pomocí stylů.  V HTML výstupu
+má každý obrázek přiřazenu třídu (atribut `class') podle jména souboru obrázku
+bez přípony.  Například obrázek `\http://www.google.com/images/logo_sm.gif' tak
+bude mít automaticky nastavenu třídu `logo_sm'.
+
+
+==== Obrázkové odkazy ==== image-links
+
+Obrázkové odkazy jsou kombinací odkazu a obrázku, prezentované v podobě
+obrázku, který funguje jako odkaz.  Vytvoříme je uvedením obrázku (souboru nebo
+externího URL) na místě názvu odkazu.
+
+Textový název (použitý jako alternativní text) a popis (pro bublinovou
+nápovědu) mohou následovat v obvyklé formě.
+
+------
+[http://www.google.com
+ http://www.google.com/accounts/google_white.gif]
+[http://www.opensource.org
+ http://www.opensource.org/trademarks/open_source_button.png
+OSI logo | Open Source Iniciativa]
+------
+
+[http://www.google.com http://www.google.com/accounts/google_white.gif]
+[http://www.opensource.org http://www.opensource.org/trademarks/open_source_button.png
+OSI logo | Open Source Iniciativa]
+
+Obrázkové odkazy mohou být zarovnány vpravo či vlevo a používat styly podobně
+jako běžné obrázky (viz výše).
+
+
+==== Audio ==== audio
+
+Odkaz na zvukový soubor ve formátu MP3 bude v HTML výstupu zobrazen jako běžný
+odkaz, ale tento odkaz bude fungovat jako ovládací prvek přehrávače, který se
+zobrazí v pravém dolním rohu okna prohlížeče.  Tento jediný přehrávač je
+používán pro přehrávání všech nahrávek přítomných ve stránce, takže v jednu
+chvíli bude přehrávána vždy jen jedna nahrávka.
+
+Podporováno je i plně zpřístupněné ovládání z klávesnice.  Následující
+klávesové příkazy jsou dostupné pokud je kurzor umístěn na odkazu:
+ * Mezerník — Spustit/pozastavit přehrávání
+ * Šipka vlevo — Převinout vpřed
+ * Šipka vpravo — Převinou zpět
+ * Šipka nahoru — Zvýšit hlasitost
+ * Šipka dolů — Ztišit
+
+Protože není možné zaručit dodržení technických požadavků (viz níže) při
+distribuci této dokumentace, ukázku neobsahují živou ukázku přehrávače, ale
+jednoduchý odkaz, jako je ten následující by měl fungovat,
+
+-----
+Pokud máte zájem, [recording.mp3 poslechněte si nahrávku].
+-----
+
+Pokud nefunguje, podívejte se do technických požadavků.
+
+/Poznámka:/ Přehrávač momentálně není používán pro externí odkazy.  Pouze
+lokální soubory budou fungovat jak je popsáno.
+
+
+==== Video ==== video
+
+Video lze do LCG stránek vkládat buď lokálně jako soubor ve formátu OGV, MP4,
+WEBM a 3GP nebo jako odkaz na služby YouTube nebo Vimeo (viz níže). V obou
+případech se však při použití HTML výstupu uživateli ve výsledné stránce
+zobrazí vložený přehrávač, ve kterém je možné video přímo spustit.
+
+Velikost videopřehrávače můžete v případě lokálních souvorů ovlivnit podobným
+způsobem jako velikost obrázků (za jménem dvojtečka a šířka x výška)
+
+Pokud je místo názvu linku uveden obrázek, bude tento obrázek použit
+jako náhled (dokud uživatel nespustí přehrávání, bude přehrávač zobrazovat
+tento obrázek).
+
+/Poznámka:/ Přehrávač momentálně není používán pro externí odkazy.
+Tak, jak je popsáno, budou fungovat pouze lokální soubory. Jak vkládat
+videa z veřejných služeb typu YouTube a Vimeo je popsáno níže.
+
+===== Vkládání videa z YouTube a Vimeo =====
+
+Odkaz na video na stránkách YouTube nebo Vimeo se v HTML výstupu
+zobrazí jako vložený přehrávač. Není zapotřebí žádný speciální kód,
+postačuje uvést příslušné URI:
+
+-----
+https://www.youtube.com/watch?v=BMUiFMZr7vk
+-----
+
+https://www.youtube.com/watch?v=BMUiFMZr7vk
+
+Podobně fungují i odkazy na Vimeo:
+
+-----
+http://www.vimeo.com/8719387
+-----
+
+http://www.vimeo.com/8719387
+
+Velikost videa je možné explicitně nastavit podobně jako u obrázků (přidáním
+šířka x výška v pixelech za dvojtečkou).
+
+-----
+[https://www.youtube.com/watch?v=Wl98eZpkp-c:400x300]
+-----
+
+[https://www.youtube.com/watch?v=Wl98eZpkp-c:400x300]
+
+/Poznámka:/ Tento způsob vkládání videa má výhodu v nulových technických
+požadavcích na straně serveru.
+
+==== Interaktivní cvičení ====
+
+
+Možnosti vkládání interaktivních cvičení jsou momentálně popsány pouze v
+anglické verzi tohoto manuálu.
+
+
+==== Vertikální mezery ====
+
+Vertikální mezery mohou být vloženy pomocí značky =\@vspace= určující velikost
+vertikální mezery v milimetrech:
+
+-----
+@vspace 20mm
+-----
+
+Tato značka by měla být používána pouze v případech, kdy je opravdu nutné
+uvádět pevnou vertikální mezeru.  V mnoha případech je pro vložení vertikální
+mezery vhodnější použít jiné prostředky, jako např. logické značky, zarovnání
+nebo styly.
+
+==== Čísla stran ====
+
+Do hlavičky nebo patičky stránky můžete vložit číslo aktuální stránky,
+resp. celkový počet stran, pomocí značek =\@PAGE@=, resp. =\@PAGES@=.  Pozor,
+to funguje jen v hlavičkách a patičkách a jen v těch výstupních formátech, kde
+dochází ke stránkování (tj. např. v PDF, ale nikoliv v HTML).
+
+
+=== Další vlastnosti ===
+
+==== Potlačování speciálního významu zápisu ==== escape
+
+Interpretaci speciálního významu libovolné zde popsané konstrukce můžete
+potlačit pomocí zpětného lomítka.
+
+*Příklad:*
+
+------
+
+Lomítka jsou běžně používána pro /zvýraznění/, nicméně někdy
+chcete právě lomítka, jako \/např. zde\/.  Dvojité zpětné lomítko
+může být použito před řídícím znakem pokud skutečně chceme
+zobrazit právě \\/zpětné lomítko/ (kdekoliv jinde v textu mohou
+být zpětná lomítka používána bez omezení).  Další příklady
+použití zpětného lomítka: \*jedno* \\*dvě* \\\*tři* \\\\*čtyři*
+\\\\\*pět*.
+
+------
+
+Toto bude zobrazeno jako:
+
+Lomítka jsou běžně používána pro /zvýraznění/, nicméně někdy
+chcete právě lomítka, jako \/např. zde\/.  Dvojité zpětné lomítko
+může být použito před řídícím znakem pokud skutečně chceme
+zobrazit právě \\/zpětné lomítko/ (kdekoliv jinde v textu mohou
+být zpětná lomítka používána bez omezení).  Další příklady
+použití zpětného lomítka: \*jedno* \\*dvě* \\\*tři* \\\\*čtyři*
+\\\\\*pět*.
+
+
+==== Vynucený řádkový zlom ====
+
+Dvě lomítka vynutí řádkový zlom:
+
+------
+Tato věta bude // uprostřed zalomena.
+------
+
+Tato věta bude // uprostřed zalomena.
+
+
+==== Horizontální čára ====
+
+Horizontální čáru uděláme jako čtyři pomlčky na samostatné řádce obklopené
+prázdnými řádkami.
+
+*Příklad:*
+
+------
+Nad
+
+----
+
+Pod
+------
+
+Toto bude zobrazeno jako:
+
+Nad
+
+----
+
+Pod
+
+
+==== Hlavičky a patičky stránek ====
+
+Pomocí následujících parametrů můžete nastavit obsah hlaviček a patiček
+stránek:
+
+\@parameter header TEXT
+  Text, který se má objevit v hlavičce každé stránky.
+
+\@parameter first_page_header TEXT
+  Hlavička první strany dokumentu.  Pokud tento parametr není uveden, použije
+  se na první straně stejná hlavička jako na ostatních stranách.
+  
+\@parameter footer TEXT
+  Text, který se má objevit v patičce každé stránky.
+
+\@parameter background TEXT
+  Text, který se má objevit na pozadí každé stránky.
+
+Pokud je text delší nebo komplikovanější, můžete použít víceřádkovou definici
+parametru, např.:
+
+-----
+@parameter footer
+@center
+@PAGE@/@PAGES@
+@end footer
+-----
+
+Hlavičky a patičky stránek mají smysl pouze u některých výstupních formátů a ne
+ve všech výstupních formátech jsou podporovány.
+
+
+==== Prezentační vlastnosti ====
+
+Pomocí značky =@parameter= můžete nastavit i některé další vlastnosti
+dokumentu:
+
+\@parameter font_size ČÍSLO
+  Změna výchozí velikosti fontu jejím vynásobením uvedeným číslem.
+
+\@parameter font_name NÁZEV
+  Název výchozího fontu dokumentu, např. =DejaVu= nebo =Bitstream Vera=.
+  V závislosti na instalaci systému uvedený font může a nemusí být dostupný.
+  Není-li dostupný, je použit jiný font.
+
+\@parameter font_family NÁZEV
+  Název výchozí rodiny fontů dokument, může být =SERIF=, =SANS_SERIF= nebo
+  =FIXED_WIDTH=.
+
+\@parameter heading_font_family NÁZEV
+  To samé jako font_family, akorát platí pouze pro nadpisy.
+
+\@parameter noindent JEDNIČKA_NEBO_NULA
+  Je-li uvedena jednička (=1=), první řádky odstavců nejsou odsazeny.  Je-li
+  uvedena nula (=0=), první řádky odstavců jsou odsazeny.
+
+\@parameter line_spacing ČÍSLO
+  Řádkování bude nastaveno na uvedený násobek velikosti aktuálního fontu.
+
+Ne všechny tyto vlastnosti mají význam ve všech výstupních formátech.  Také
+nemusí být všemi výstupními formáty podporovány a mohou jimi být ignorovány.
+
+
+==== Proměnné ====
+
+Můžete si definovat pojmenovaný text (proměnnou) pro pozdější použití, typicky
+opakované:
+
+------
+@define pi 3.14
+@define repeated_text
+Jedna z nejznámějších matematických konstant je π.
+Její hodnota je $pi.
+@end repeated_text
+
+$repeated_text
+
+Opakuji: $repeated_text
+
+@define pi 3.14159
+Zkusíme být o něco přesnější:
+$repeated_text
+------
+
+Toto bude zobrazeno jako:
+
+@define pi 3.14
+@define repeated_text
+Jedna z nejznámějších matematických konstant je π.
+Její hodnota je $pi.
+@end repeated_text
+
+$repeated_text
+
+Opakuji: $repeated_text
+
+@define pi 3.14159
+Zkusíme být o něco přesnější:
+$repeated_text
+
+Jména proměnných (jako =pi= nebo =repeated_text=) mohou obsahovat pouze malá
+písmena anglické abecedy a podtržítka.  Příslušný text je standardní
+strukturovaný text.  Všimněte si, že ve víceřádkové verzi definice je text
+interpretován jako blok, zatímco v jednořádkové verzi může být text vložen
+i dovnitř odstavce.  Definice proměnné platí od jejího prvního výskytu až do
+případné jiné definice proměnné téhož jména.
+
+
+==== Komentáře ====
+
+Můžete „zakomentovat“ libovolný text pomocí křížku „#“ na začátku řádky.  Tím
+vyřadíme danou řádku z dalšího zpracování a řádka se tedy na výstupu vůbec
+neobjeví.
+
+------
+ První řádek.
+ # Tyto dva řádky
+ # jsou „zakomentovány“.
+ Poslední řádek.
+------
+
+Toto bude zobrazeno jako:
+
+První řádek.
+# Tyto dva řádky
+# jsou „zakomentovány“.
+Poslední řádek.
+
+
+=== Zavržené vlastnosti ===
+
+Následující vlastnosti jsou nyní zachovány pro zpětnou kompatibilitu, ale
+neměly by být v nových textech používány, protože byly zavrženy a v budoucích
+verzích LCG budou zcela zrušeny.
+
+==== Nedělitelná mezera ====
+
+Znak vlnky „\~“ je interpretován jako nedělitelná mezera (zakazující řádkový
+zlom).  Namísto vlnky nyní používejte příslušný znak Unicode (+U00A0).  Rozumné
+editory by jej dokonce měly doplňovat automaticky.  Vyvarujte se prosím použití
+vlnek, které již v budoucnu nebudou interpretovány jako nedělitelné mezery.
+
+==== Dlouhá pomlčka ====
+
+Dvojitá pomlčka (znak mínus) je interpretován jako dlouhá pomlčka.  Použijte
+příslušný znak Unicode „EM DASH“ (+U00A0) pro vytvoření pomlčky šířky písmene
+M.  Vyvarujte se použití dvojitých obyčejných pomlček ve významu dlouhé pomlčky.
+
