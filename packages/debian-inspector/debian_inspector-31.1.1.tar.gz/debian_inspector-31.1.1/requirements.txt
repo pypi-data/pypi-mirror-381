@@ -1,0 +1,4 @@
+attrs==25.3.0
+chardet==5.2.0
+pip==25.2
+setuptools==80.9.0
