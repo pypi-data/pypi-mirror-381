@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "qrcodegenpy-shankonduru"
+version = "1.0.0"
+description = "A comprehensive QR Code Generator library with CLI, Streamlit UI, and robust testing"
+authors = ["Shan Konduru <shankonduru@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/shankonduru/qrcodegenpy"
+repository = "https://github.com/shankonduru/qrcodegenpy"
+documentation = "https://github.com/shankonduru/qrcodegenpy/blob/main/README.md"
+keywords = ["qr-code", "qr-generator", "barcode", "python", "cli", "streamlit"]
+packages = [{include = "qrcodegenpy_shankonduru"}]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Utilities",
+]
+
+[tool.poetry.scripts]
+qrgen = "qrcodegenpy_shankonduru.cli:cli"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+qrcode = "^7.4.2"
+pillow = "^10.2.0"
+streamlit = "^1.30.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+pytest-html = "^4.1.1"
+safety = "^3.0.0"
+bandit = "^1.7.5"
+pip-audit = "^2.6.0"
+build = "^1.0.0"
+twine = "^4.0.0"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/shankonduru/qrcodegenpy/issues"
+"Source Code" = "https://github.com/shankonduru/qrcodegenpy"
+"Documentation" = "https://github.com/shankonduru/qrcodegenpy/blob/main/README.md"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
