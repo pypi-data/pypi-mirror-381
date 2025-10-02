@@ -1,0 +1,81 @@
+[tool.poetry]
+name = "opshin"
+version = "0.25.0"
+description = "A simple pythonic programming language for Smart Contracts on Cardano"
+authors = ["nielstron <niels@opshin.dev>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/opshin/opshin"
+documentation = "https://opshin.opshin.dev/"
+keywords = ["python", "language", "programming-language", "compiler", "validator", "smart-contracts", "cardano"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Compilers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+packages = [{include = "opshin"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9.0, <4.0"
+uplc = ">=1.0.13"
+pluthon = ">=1.1.4"
+pycardano = ">=0.13.0"
+frozenlist2 = ">=1.0.0"
+ordered-set = ">=4.1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+hypothesis = ">=6.98.2"
+parameterized = ">=0.9.0"
+black = "^25.1.0"
+pre-commit = ">=3.3.2"
+coverage = ">=7.0"
+pytest = ">=7.3.1"
+pyyaml = "^6.0.3"
+
+[tool.poetry.scripts]
+opshin = "opshin.__main__:main"
+
+[build-system]
+requires = ["setuptools", "poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.run]
+branch = true
+source = ["opshin"]
+omit = [
+    "opshin/prelude.py", # Prelude is not meant to be run directly
+    "opshin/prelude_v3.py", # Prelude is not meant to be run directly
+]
+
+[tool.coverage.report]
+# Regexes for lines to exclude from consideration
+exclude_also = [
+    # Don't complain if tests don't hit defensive assertion code:
+    "raise NotImplementedError",
+
+    # Don't complain if non-runnable code isn't run:
+    "if __name__ == .__main__.:",
+
+    # Don't complain about abstract methods, they aren't run:
+    "@(abc\\.)?abstractmethod",
+
+    # Don't complain about missing debug-only code:
+    "def __repr__",
+
+    # Don't complain about missing type-checking-only code:
+    "if typing\\.TYPE_CHECKING:",
+    "if TYPE_CHECKING:",
+
+    # Don't complain about wrapped builtins, they aren't run:
+    "@wraps_builtin",
+    ]
+
+ignore_errors = true
+
