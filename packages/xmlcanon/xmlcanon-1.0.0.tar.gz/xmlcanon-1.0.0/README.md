@@ -1,0 +1,339 @@
+# xmlcanon - XML Canonicalization для Python
+
+[![Python Version](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Tests](https://img.shields.io/badge/tests-14%20passed-brightgreen.svg)](tests/)
+
+Реализация трансформации Exclusive XML Canonicalization согласно спецификации W3C для использования в XML подписях по стандарту ГОСТ.
+
+## Описание
+
+Этот модуль реализует алгоритм Exclusive XML Canonicalization (ExcC14N), который является критически важным компонентом для создания XML цифровых подписей. Модуль создан на основе анализа библиотеки GostCryptography для обеспечения совместимости с российскими стандартами цифровой подписи.
+
+## Структура модуля
+
+```
+xmlcanon/
+├── xmlcanon/                    # Основной пакет
+│   ├── __init__.py             # Публичный API
+│   ├── transform.py            # Основная логика ExcC14N
+│   └── exceptions.py           # Пользовательские исключения
+├── tests/                      # Тесты
+│   ├── __init__.py
+│   └── test_transform.py       # 14 unit тестов
+├── examples/                   # Примеры использования
+│   ├── __init__.py
+│   ├── basic_usage.py          # Базовые примеры
+│   ├── gost_integration.py     # Интеграция с ГОСТ
+│   └── performance_test.py     # Тесты производительности
+├── docs/                       # Документация
+│   ├── CHANGELOG.md            # История изменений
+│   └── CONTRIBUTING.md         # Руководство разработчика
+├── setup.py                    # Установочный скрипт
+├── requirements.txt            # Зависимости
+├── MANIFEST.in                 # Файлы для включения в пакет
+├── LICENSE                     # MIT лицензия
+└── README.md                   # Основная документация
+```
+
+## Основные особенности
+
+- ✅ **Полная совместимость** с W3C спецификацией Exclusive XML Canonicalization
+- ✅ **Исключение неиспользуемых пространств имен** - ключевая особенность ExcC14N
+- ✅ **Принудительное включение** определенных пространств имен
+- ✅ **Корректная сортировка атрибутов** согласно канонизации
+- ✅ **Правильное экранирование** текста и значений атрибутов
+- ✅ **Поддержка вложенных структур** любой сложности
+- ✅ **Обработка ошибок** и валидация входных данных
+- ✅ **Совместимость с lxml и стандартной библиотекой**
+- ✅ **14 unit тестов** покрывают все сценарии
+
+## Установка
+
+### Установка из PyPI
+
+```bash
+pip install xmlcanon
+```
+
+### Установка с опциональными зависимостями
+
+```bash
+# С поддержкой lxml (рекомендуется для лучшей производительности)
+pip install xmlcanon[lxml]
+
+# Для разработки
+pip install xmlcanon[dev]
+```
+
+### Установка из исходного кода
+
+```bash
+git clone https://github.com/imdeniil/xmlcanon.git
+cd xmlcanon
+pip install -e .
+```
+
+### Зависимости
+
+- **Python 3.6+**
+- **lxml >= 4.0.0** (опционально, рекомендуется для лучшей производительности)
+
+## Быстрый старт
+
+### Простое использование
+
+```python
+from xmlcanon import canonicalize_xml
+
+xml_input = '''<root xmlns:ns="http://example.com/ns">
+    <ns:element attr="value">Содержимое</ns:element>
+</root>'''
+
+canonicalized = canonicalize_xml(xml_input)
+print(canonicalized)
+```
+
+### Расширенное использование
+
+```python
+from xmlcanon import XmlCanonicalizer
+
+# Создание канонизатора с принудительным включением пространств имен
+canonicalizer = XmlCanonicalizer(
+    inclusive_ns_prefixes=['force', 'include']
+)
+
+canonicalized = canonicalizer.transform(xml_input)
+```
+
+## API Reference
+
+### `canonicalize_xml(xml_input, inclusive_ns_prefixes=None)`
+
+Удобная функция для быстрого применения XML канонизации.
+
+**Параметры:**
+- `xml_input` (str): Исходный XML документ
+- `inclusive_ns_prefixes` (List[str], optional): Префиксы пространств имен для принудительного включения
+
+**Возвращает:**
+- `str`: Канонизированный XML
+
+**Исключения:**
+- `InvalidXMLError`: При некорректном входном XML
+- `TransformationError`: При ошибке трансформации
+
+### `class XmlCanonicalizer`
+
+Основной класс для выполнения XML канонизации.
+
+#### `__init__(inclusive_ns_prefixes=None)`
+
+**Параметры:**
+- `inclusive_ns_prefixes` (List[str], optional): Список префиксов пространств имен для принудительного включения
+
+#### `transform(xml_input)`
+
+Применяет канонизацию к XML документу.
+
+**Возвращает:**
+- `str`: Канонизированный XML
+
+### Исключения
+
+```python
+from xmlcanon.exceptions import InvalidXMLError, TransformationError
+
+try:
+    result = canonicalize_xml(xml_input)
+except InvalidXMLError as e:
+    print(f"Некорректный XML: {e}")
+except TransformationError as e:
+    print(f"Ошибка трансформации: {e}")
+```
+
+## Примеры использования
+
+### Пример 1: Исключение неиспользуемых пространств имен
+
+```python
+from xmlcanon import canonicalize_xml
+
+xml_input = '''<root xmlns:used="http://used.com"
+                    xmlns:unused="http://unused.com">
+    <used:element>Только used используется</used:element>
+</root>'''
+
+result = canonicalize_xml(xml_input)
+# Результат НЕ будет содержать xmlns:unused
+```
+
+### Пример 2: SOAP структура (как в ГИИС ДМДК)
+
+```python
+soap_xml = '''<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                                xmlns:ns="urn://xsd.dmdk.goznak.ru/exchange/1.0">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ns:SendDealRequest>
+            <ns:RequestData id="body">
+                <content>Данные для подписи</content>
+            </ns:RequestData>
+        </ns:SendDealRequest>
+    </soapenv:Body>
+</soapenv:Envelope>'''
+
+canonicalized = canonicalize_xml(soap_xml)
+# Готово для применения следующих трансформаций (например, СМЭВ)
+```
+
+### Пример 3: Принудительное включение пространств имен
+
+```python
+from xmlcanon import XmlCanonicalizer
+
+xml_input = '''<root xmlns:force="http://force.com"
+                    xmlns:used="http://used.com">
+    <used:element>Только used используется в содержимом</used:element>
+</root>'''
+
+canonicalizer = XmlCanonicalizer(inclusive_ns_prefixes=['force'])
+result = canonicalizer.transform(xml_input)
+# Результат БУДЕТ содержать xmlns:force несмотря на неиспользование
+```
+
+## Тестирование
+
+```bash
+# Запуск всех тестов
+python -m pytest tests/
+
+# Запуск с покрытием
+python -m pytest tests/ --cov=xmlcanon --cov-report=html
+
+# Запуск конкретного теста
+python -m pytest tests/test_transform.py::TestXmlCanonicalizer::test_simple_element
+```
+
+### Покрытие тестами
+
+- ✅ Базовые операции с элементами и атрибутами
+- ✅ Обработка пространств имен (объявления, исключения, включения)
+- ✅ Сортировка атрибутов и пространств имен
+- ✅ Экранирование текста и значений атрибутов
+- ✅ Реальные SOAP структуры (ГИИС ДМДК)
+- ✅ Обработка ошибок
+
+## Интеграция с XML подписями
+
+Этот модуль предназначен для использования в качестве первой трансформации при создании XML подписей по ГОСТ:
+
+```python
+def create_gost_xml_signature(xml_data, certificate):
+    # 1. Применяем XML канонизацию
+    canonicalized = canonicalize_xml(xml_data)
+
+    # 2. Применяем СМЭВ трансформацию (отдельный модуль)
+    smev_transformed = apply_smev_transform(canonicalized)
+
+    # 3. Вычисляем хеш ГОСТ
+    digest = compute_gost_digest(smev_transformed)
+
+    # 4. Создаем подпись
+    signature = create_gost_signature(digest, certificate)
+
+    return signature
+```
+
+## Соответствие спецификациям
+
+- ✅ **W3C Exclusive XML Canonicalization Version 1.0** - полное соответствие
+- ✅ **XML-DSig спецификация** - поддержка трансформаций для подписей
+- ✅ **ГОСТ стандарты** - совместимость с российскими криптографическими стандартами
+
+## Производительность
+
+### Характеристики
+- Обработка XML документов до 1MB
+- Оптимизация для типичных SOAP структур
+- Минимальное потребление памяти
+- Поддержка больших документов через потоковую обработку (планируется)
+
+### Бенчмарки
+- Малый XML (< 1KB): ~0.001 сек
+- Средний XML (10-50KB): ~0.005 сек
+- Большой XML (100KB+): ~0.020 сек
+
+## Разработка
+
+### Настройка среды разработки
+
+```bash
+# Клонирование репозитория
+git clone https://github.com/imdeniil/xmlcanon.git
+cd xmlcanon
+
+# Создание виртуального окружения
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# или
+venv\Scripts\activate  # Windows
+
+# Установка в режиме разработки
+pip install -e ".[dev]"
+```
+
+### Код стиль
+
+```bash
+# Форматирование кода
+black xmlcanon/ tests/ examples/
+
+# Проверка стиля
+flake8 xmlcanon/ tests/ examples/
+
+# Проверка типов
+mypy xmlcanon/
+```
+
+## Документация
+
+- **README**: Основная документация (этот файл)
+- **LLM Guide**: [Quick Start для LLM](docs/LLM_GUIDE.md) - краткое руководство для быстрого старта
+- **CONTRIBUTING**: [Руководство для разработчиков](docs/CONTRIBUTING.md)
+- **CHANGELOG**: [История изменений](docs/CHANGELOG.md)
+
+## Вклад в развитие
+
+Модуль открыт для доработок и улучшений:
+
+- **Issues**: [GitHub Issues](https://github.com/imdeniil/xmlcanon/issues)
+- **Pull Requests**: приветствуются улучшения
+- **Документация**: в [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)
+- **Стиль кода**: Black + PEP 8
+
+## Лицензия
+
+Этот проект распространяется под лицензией MIT. См. файл [LICENSE](LICENSE) для подробностей.
+
+## Контакты и поддержка
+
+- **PyPI**: https://pypi.org/project/xmlcanon/
+- **GitHub**: https://github.com/imdeniil/xmlcanon
+- **Issues**: https://github.com/imdeniil/xmlcanon/issues
+- **Email**: keemor821@gmail.com
+- **Автор**: Daniil (imdeniil)
+
+## История изменений
+
+### v1.0.0
+- Первый релиз
+- Полная реализация ExcC14N согласно W3C спецификации
+- Поддержка lxml и стандартной библиотеки
+- Полное покрытие тестами (14 тестов)
+- Совместимость с ГОСТ стандартами
+
+---
+
+**Создано на основе анализа библиотеки GostCryptography**

@@ -1,0 +1,11 @@
+# Включить дополнительные файлы в пакет
+include README.md
+include LICENSE
+include requirements.txt
+include MANIFEST.in
+recursive-include tests *.py
+recursive-include examples *.py *.xml
+recursive-include docs *.md *.rst
+exclude .gitignore
+global-exclude *.pyc
+global-exclude __pycache__
