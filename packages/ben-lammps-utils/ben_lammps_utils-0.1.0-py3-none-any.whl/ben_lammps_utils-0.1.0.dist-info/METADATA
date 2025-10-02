@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: ben-lammps-utils
+Version: 0.1.0
+Summary: Add your description here
+Author: Ben
+Author-email: Ben <bennyp2494@gmail.com>
+Requires-Dist: matplotlib>=3.9.4
+Requires-Dist: pandas>=2.3.2
+Requires-Dist: tqdm>=4.67.1
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
