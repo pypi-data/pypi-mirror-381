@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+NOTICE
+README.md
+pyproject.toml
+qaptiva_demo_config.yml
+.github/workflows/release.yml
+src/QUARK_plugin_ghz.egg-info/PKG-INFO
+src/QUARK_plugin_ghz.egg-info/SOURCES.txt
+src/QUARK_plugin_ghz.egg-info/dependency_links.txt
+src/QUARK_plugin_ghz.egg-info/requires.txt
+src/QUARK_plugin_ghz.egg-info/top_level.txt
+src/quark_plugin_ghz/__init__.py
+src/quark_plugin_ghz/ghz.py
