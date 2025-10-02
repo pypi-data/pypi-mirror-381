@@ -1,0 +1,9 @@
+virtualshell/_core.cpython-313-darwin.so,sha256=-z6cAOJBB8Kd_nw7Rz1ASA6Al8D6xAkHdack8vMFRvE,753576
+virtualshell/_version.py,sha256=ZgAXEMjAMZx3cZroB6PgojYwdhTZjPbU5RqZEfdYQv0,17
+virtualshell/shell.py,sha256=iHEFnbY3ggR2G-VpxAHrP3RVx3nYy1S2VxxLUTLRHa4,20915
+virtualshell/__init__.py,sha256=8PE1B8yiMyZg2gwG18EvXt2vDEflvBeAdh7mNn58-GE,912
+virtualshell/errors.py,sha256=lWOmidPiGKLef_pB-gelAF-3UbgX9Tmvu0s7JgmOg_k,193
+virtualshell-1.0.0.dist-info/RECORD,,
+virtualshell-1.0.0.dist-info/WHEEL,sha256=Ny8c49zad7QzNwThj0sWKGp3PbtGInTXpBihXmgrGX8,146
+virtualshell-1.0.0.dist-info/METADATA,sha256=C0_uXHh7-Lxslvmqo8JBOW1M5gK8D1YieCEVQgWf21c,20087
+virtualshell-1.0.0.dist-info/licenses/LICENSE,sha256=7RNZIZ-wB2I1pFb_4uWOXYStIFAwxbGLypaZuW-AKis,11347
