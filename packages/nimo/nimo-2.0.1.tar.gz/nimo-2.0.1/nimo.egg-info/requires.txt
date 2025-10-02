@@ -1,0 +1,5 @@
+matplotlib
+numpy
+physbo>=3.0.0
+scikit-learn
+scipy
