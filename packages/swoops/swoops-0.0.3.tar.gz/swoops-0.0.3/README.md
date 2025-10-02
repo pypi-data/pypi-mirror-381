@@ -1,0 +1,120 @@
+
+# SWOOPS Optimization GUI
+
+## Setup, Workflows, Orchestrate, Optimize, Plot, Surrogates
+
+#### Author: Jason Krist
+
+#### Date: October 1st, 2025
+
+## Description
+
+SWOOPS is an in-progress Graphical User Interface (GUI) designed for parametric optimization. Each letter of SWOOPS stands for a feature set that is within the scope of the tool. [Swoops](https://www.mariowiki.com/Swoop) are also the name for the bats in super mario, hence the mascot for the tool is a swoop named Zippy, which is an homage to the Microsoft Office Assistance [Clippy](https://en.wikipedia.org/wiki/Office_Assistant).
+
+SWOOPS is a culmination of everything I want in an optimization GUI. I am not happy with the current state of optimization interfaces:
+
+- custom tools have high tech debt and steep learning curves
+- COTS tools are expensive, lack necessary configurability, and prioritize supporting tools in their ecosystem
+- COTS tools have architectures which make interoperability with open source optimization frameworks difficult
+- open source frameworks have little to no GUIs
+- unfriendly user experiences across the board
+
+These experiences have lead me to the "Core Tenets"  of SWOOPS below.
+
+## Core Tenets
+
+1. Democratize Optimization
+1. Prioritize User Experience
+1. Seamless Automation
+1. Make Lasting Contributions
+1. Free and Open Source Core Program
+1. Modularity is a Must
+1. Encourage Community Collaboration
+
+## Feature Sets
+
+1. Setup - prepare files or processes for optimization, which includes file parsers and workflow templates
+1. Workflows - specify tasks, inputs, outputs, and dependencies of a workflow
+1. Orchestrate - export and execute a workflow. See progress as it completes.
+1. Optimize - specify constraints, objectives, algorithms, and check optimization progress as it runs
+1. Plot - create user-defined plots from existing data sets or optimization results
+1. Surrogates - create and test surrogate models for utilizing in multi-fidelity optimization
+
+## Architectural Choices
+
+- Python due to the breadth of experience for develops in this field, and it is the language of choice for existing frameworks
+- Primarily target desktop platform for architectural simplicity
+- QT (Pyside6) chosen for being the most robust, feature rich, and cross-platform Desktop GUI Framework in Python
+
+## Install
+
+```
+pip install swoops
+```
+
+## Usage (Incomplete)
+
+python test_app.py
+
+![Dark Mode](https://raw.githubusercontent.com/jkrist2696/swoops/refs/heads/master/images/gui_example.png)
+
+![Light Mode](https://raw.githubusercontent.com/jkrist2696/swoops/refs/heads/master/images/gui_example_light.png)
+
+Add more GUI usage steps and images here.
+
+### Python In-Line Usage (Incomplete)
+
+Probably don't need this section.
+
+### Command Line Usage (Incomplete)
+
+swoops [-h] [-file FILE] [-b] 
+
+## Roadmap
+
+#### Complete
+
+1. Backend data structures which can represent most optimization setups
+1. Widgets
+    1. Docked windows - each widget is nested in a dockable window
+    1. Tree View - visualize nested data structures or file system
+    1. Edit Window - visualize and edit all attributes of a data structure
+    1. Table View - visualize and edit a large set of entities and their attributes in a table
+    1. Web View - load local HTML files (Plotly, N2 Diagram) or online web pages
+    1. Plot View - load interactive Matplotlib plots
+    1. Python Code Editor - text edit python scripts
+1. Undoablility for Data Structure and Widget related changes (new, delete, edit)
+1. Tabs which can contain different widgets and layouts
+1. Rudimentary export script for swoops data structures to GEMSEO optimization format
+
+#### In Progress
+
+1. Block Diagram Viewer - visualize Workflow, Dependencies, and data flow
+1. Get App fully functional for simple demos. This encompasses many small To-Do's
+1. Python Command Window - run python commands in-session and see results
+
+#### Future Plans
+
+1. File Parser for defining variable locations in input or output files
+1. Workflow "Templates" can be created with Empty values which are highlighted to user to complete
+1. Create a "Library" of common tasks with drag-and-drop functionality
+1. User-Friendly, Documented Python API
+1. Custom optimization orchestrator with modular optimizer interface
+1. "Zippy" button opens a helper overlay for tutorials and trainings
+1. Out-of-the-Box interoperability with [GEMSEO](https://gemseo.readthedocs.io/en/stable/index.html), [OpenMDAO](https://openmdao.org/newdocs/versions/latest/main.html#), and [Pymoo](https://pymoo.org/). Potentially work on supporting [Philote](https://mdo-standards.github.io/Philote-MDO/intro.html), [CSDL](https://lsdolab.github.io/csdl/), and [SUAVE](https://suave.stanford.edu/).
+
+## Read The Docs (Incomplete)
+
+Download "docs" folder or [check preview](https://www.google.com).
+
+## Contributing
+
+Message me on Github.
+
+## License
+
+[GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
+
+## Copyright:
+
+(c) 2025, Jason Krist
