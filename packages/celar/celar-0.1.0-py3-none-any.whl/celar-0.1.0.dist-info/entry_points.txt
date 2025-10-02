@@ -1,0 +1,2 @@
+[console_scripts]
+clear = celar.__main__:main
