@@ -1,0 +1,9 @@
+test_pppppp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test_pppppp/core.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test_pppppp/log.py,sha256=MZf9jCZsiRoAq8v4FxVnJqeSXxgzAiiKf7mxz6bFtwM,4263
+test_pppppp/server.py,sha256=fPAosQIU0d7gxICiALl8u6QwbLI4cawVFyoRYebRES0,2827
+test_pppppp/utils.py,sha256=Pi6-tconaDYaYV5E-Bb-gt9jDasqcVnNBAjpdXtGY5I,25
+test_pppppp-0.1.1.dist-info/METADATA,sha256=6XHZbnXasVE6laaC33fSCbKbsFqS6sSoYc76xAFWTj8,418
+test_pppppp-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+test_pppppp-0.1.1.dist-info/top_level.txt,sha256=zCbQgB2TQLoHvniLEOzGAEPtewxwMhzxdhnnS5CGilM,12
+test_pppppp-0.1.1.dist-info/RECORD,,
