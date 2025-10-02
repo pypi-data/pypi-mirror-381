@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:medium.com)",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)",
+      "Bash(pip install:*)",
+      "Bash(xcode-mcp-server:*)",
+      "mcp__uvx__get_project_schemes",
+      "Bash(say:*)",
+      "Bash(osascript:*)",
+      "Read(//Users/andrew/Downloads/Xcode_26_RC.app/Contents/**)",
+      "Read(//Applications/Xcode.app/Contents/Resources/**)",
+      "Bash(plutil:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(sdef:*)",
+      "Bash(chmod:*)",
+      "Bash(xcrun xcresulttool get:*)",
+      "mcp__xcode-mcp-server__build_project",
+      "Bash(python:*)",
+      "Bash(bash:*)",
+      "Bash(xcrun simctl list:*)",
+      "Bash(python3:*)",
+      "Bash(find:*)",
+      "Bash(wc:*)",
+      "Bash(git log:*)",
+      "Bash(pip3 show:*)",
+      "Read(//Users/andrew/.local/lib/**)",
+      "Read(//Users/andrew/Library/Python/3.9/lib/python/site-packages/**)",
+      "Read(//Users/andrew/Library/**)",
+      "WebSearch",
+      "Bash(uv pip list:*)",
+      "Bash(tree:*)"
+    ],
+    "deny": []
+  }
+}
