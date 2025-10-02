@@ -1,0 +1,15 @@
+pluthon/__init__.py,sha256=XvqcXyAolpC3M_omhORkwqYkJr8hUZa8yJnhuVD0FNo,720
+pluthon/compiler_config.py,sha256=GxC58Zv7rja5U1XHgab0vC020z2Is8KdKW4tWLtmwBk,2181
+pluthon/pluthon_ast.py,sha256=dQOKY5WNUVIQ3qCzPWafwA_4AbBfocnvf4oQodJEYA8,5497
+pluthon/pluthon_functional_data.py,sha256=fGM1G1-KeSkvBZmPFCUk3dHl86mZQ4ODEljxjFy7-EM,2984
+pluthon/pluthon_sugar.py,sha256=aJKLH1yFk64JVscdRrK9cIR7OcjDYaDjCHo3TyGMUZM,33638
+pluthon/tools.py,sha256=UIJ8SXTX-P_FtIuKR83FQ_7iqWoaopnHoCry2IC4W9k,1380
+pluthon/util.py,sha256=tCyRIF4ZTpEBQ1mRNiR16HRx-ivExlzeHRdx_W9OyEA,5084
+pluthon/optimize/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pluthon/optimize/constant_index_access_list.py,sha256=J8a9NIcEx9LX-SHPu2rDIKa4AAl7uF400v3RHBr3zbA,930
+pluthon/optimize/patterns.py,sha256=UdS4TDXgGeE0Hpu3zIA1r594MKBTbDV25mgxd-RkB1I,9675
+pluthon/optimize/remove_trace.py,sha256=JgHFbpauM9VR8rDl3_GZ1bftZaxfjQYwWk2-tAYK3rs,505
+pluthon-1.1.4.dist-info/METADATA,sha256=dEa7mbc1pMMP44ofOywLNuzJQbmtLRKkbg2TjDQ4lTk,2117
+pluthon-1.1.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pluthon-1.1.4.dist-info/top_level.txt,sha256=UUSBl3T8XrBkpcAUmxeObCcOvfMAMgwnfK0AtsHT7ro,13
+pluthon-1.1.4.dist-info/RECORD,,
