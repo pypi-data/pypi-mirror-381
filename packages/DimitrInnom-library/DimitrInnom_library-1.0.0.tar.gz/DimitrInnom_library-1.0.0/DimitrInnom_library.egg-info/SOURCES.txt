@@ -1,0 +1,7 @@
+setup.py
+D_package/__init__.py
+D_package/base.py
+DimitrInnom_library.egg-info/PKG-INFO
+DimitrInnom_library.egg-info/SOURCES.txt
+DimitrInnom_library.egg-info/dependency_links.txt
+DimitrInnom_library.egg-info/top_level.txt
