@@ -1,0 +1,2 @@
+[console_scripts]
+swordfish = reahl.swordfish.main:run_application

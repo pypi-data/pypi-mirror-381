@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/reahl/swordfish/__init__.py
+src/reahl/swordfish/main.py
+src/reahl_swordfish.egg-info/PKG-INFO
+src/reahl_swordfish.egg-info/SOURCES.txt
+src/reahl_swordfish.egg-info/dependency_links.txt
+src/reahl_swordfish.egg-info/entry_points.txt
+src/reahl_swordfish.egg-info/requires.txt
+src/reahl_swordfish.egg-info/top_level.txt
