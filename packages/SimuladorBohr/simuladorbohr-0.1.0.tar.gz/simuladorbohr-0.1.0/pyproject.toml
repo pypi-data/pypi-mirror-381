@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SimuladorBohr"
+version = "0.1.0"
+description = "Librería en Python para cálculos y visualización del modelo atómico de Bohr para el átomo de hidrogéno e hidrogenoides."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+  { name = "Daniel Felipe Ramirez Cabrera", email = "danielpiperc05@gmail.com" },
+  { name = "Santiago Criollo Bermudez", email = "santicriollo@hotmail.com" },
+  { name = "Nicolas Alexei Duran Amariles", email = "amidamarulas@gmail.com" }
+]
+keywords = ["physics", "bohr", "quantum", "atomic-model", "education"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Education",
+  "Topic :: Scientific/Engineering :: Physics",
+  "License :: OSI Approved :: MIT License"
+]
+
+dependencies = ["numpy>=1.20", "matplotlib>=3.5"]
+
+[project.urls]
+Homepage = "https://github.com/amidamarulas/SimuladorBohr.git"
+Repository = "https://github.com/amidamarulas/SimuladorBohr.git"
+Issues = "https://github.com/amidamarulas/SimuladorBohr.git"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["SimuladorBohr*"]
