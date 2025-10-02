@@ -1,0 +1,11 @@
+fastapi>=0.68.0
+pydantic>=1.8.0
+cryptography>=3.4.0
+python-multipart>=0.0.5
+
+[dev]
+pytest>=7.0.0
+pytest-cov>=3.0.0
+black>=22.0.0
+flake8>=4.0.0
+mypy>=0.950
