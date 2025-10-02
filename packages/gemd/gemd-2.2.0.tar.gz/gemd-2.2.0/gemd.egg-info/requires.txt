@@ -1,0 +1,22 @@
+deprecation<3,>=2.1.0
+importlib-resources<7,>=5.3
+pint<0.25,>=0.24.4
+typing_extensions<5,>=4.8
+
+[scripts]
+packaging
+sphinx-rtd-theme==1.0.0
+sphinx==5.0.0
+sphinxcontrib-apidoc==0.3.0
+
+[tests]
+pytest<9,>=8.0.0
+
+[tests.demo]
+pandas<3,>=2.0.3
+
+[tests.entity.bounds]
+pandas<3,>=2.0.3
+
+[tests.entity.bounds:python_version <= "3.10"]
+numpy<2,>=1.24.4
