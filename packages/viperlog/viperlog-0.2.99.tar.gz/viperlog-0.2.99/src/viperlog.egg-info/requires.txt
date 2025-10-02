@@ -1,0 +1,17 @@
+
+[all]
+viperlog-console-plugin==0.2.99
+viperlog-http-plugin==0.2.99
+viperlog-dnxlogger-plugin==0.2.99
+
+[console]
+viperlog-console-plugin==0.2.99
+
+[core]
+viperlog
+
+[dnxlogging]
+viperlog-dnxlogger-plugin==0.2.99
+
+[http]
+viperlog-http-plugin==0.2.99
