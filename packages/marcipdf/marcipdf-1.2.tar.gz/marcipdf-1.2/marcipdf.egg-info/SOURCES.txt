@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+marcipdf/__init__.py
+marcipdf/pdf2image.py
+marcipdf/pdf2text.py
+marcipdf.egg-info/PKG-INFO
+marcipdf.egg-info/SOURCES.txt
+marcipdf.egg-info/dependency_links.txt
+marcipdf.egg-info/top_level.txt
