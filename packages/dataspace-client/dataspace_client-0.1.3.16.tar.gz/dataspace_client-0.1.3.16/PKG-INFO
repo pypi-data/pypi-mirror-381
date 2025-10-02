@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: dataspace-client
+Version: 0.1.3.16
+Summary: Client for a publish/subscribe dataspace (MQTT-based) with convenience helpers.
+Author: Anton Gustafsson
+Author-email: anton.gustafsson@ri.se
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Requires-Dist: paho-mqtt>=1.5.0
+Requires-Dist: pytz
+Provides-Extra: dataframe
+Requires-Dist: pandas<3.0,>=2.2.2; extra == "dataframe"
+Provides-Extra: vis
+Requires-Dist: trimesh>=4.4.9; extra == "vis"
+Provides-Extra: all
+Requires-Dist: pandas<3.0,>=2.2.2; extra == "all"
+Requires-Dist: trimesh>=4.4.9; extra == "all"
