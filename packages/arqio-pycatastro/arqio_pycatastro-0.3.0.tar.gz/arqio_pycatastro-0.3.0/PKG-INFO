@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: arqio_pycatastro
+Version: 0.3.0
+Summary: Python client for SedeCatastro APIs
+Author-email: Tamay Gündüz <tamaygz@github.com>
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: requests
+Dynamic: license-file

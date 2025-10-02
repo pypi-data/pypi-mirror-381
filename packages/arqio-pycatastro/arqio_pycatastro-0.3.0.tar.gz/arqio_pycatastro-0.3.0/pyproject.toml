@@ -1,0 +1,12 @@
+[project]
+name = "arqio_pycatastro"
+version = "0.3.0"
+description = "Python client for SedeCatastro APIs"
+authors = [{name = "Tamay Gündüz", email = "tamaygz@github.com"}]
+requires-python = ">=3.9"
+dependencies = [
+    "requests"
+]
+
+[project.scripts]
+pycatastro = "pycatastro.cli:main"
