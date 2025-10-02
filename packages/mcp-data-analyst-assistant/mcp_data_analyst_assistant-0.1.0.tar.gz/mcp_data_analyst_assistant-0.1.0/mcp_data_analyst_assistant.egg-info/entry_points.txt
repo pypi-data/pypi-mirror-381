@@ -1,0 +1,2 @@
+[console_scripts]
+mcp_data_analyzer_assistant = mcp_data_analyzer_assistant.cli:main
