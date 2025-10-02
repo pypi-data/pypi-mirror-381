@@ -1,0 +1,11 @@
+LICENSE
+README.rst
+pyproject.toml
+tifonts/__init__.py
+tifonts/font_loader.py
+tifonts/text_renderer.py
+tifonts.egg-info/PKG-INFO
+tifonts.egg-info/SOURCES.txt
+tifonts.egg-info/dependency_links.txt
+tifonts.egg-info/requires.txt
+tifonts.egg-info/top_level.txt
