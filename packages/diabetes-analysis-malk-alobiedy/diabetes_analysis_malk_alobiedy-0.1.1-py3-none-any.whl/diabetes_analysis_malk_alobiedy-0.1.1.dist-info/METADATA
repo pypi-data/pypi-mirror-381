@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: diabetes-analysis-malk-alobiedy
+Version: 0.1.1
+Summary: A package for diabetes analysis
+Author: Waleed Alobiedy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+
