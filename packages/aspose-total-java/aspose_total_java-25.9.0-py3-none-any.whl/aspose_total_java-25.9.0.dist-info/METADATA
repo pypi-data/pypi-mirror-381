@@ -1,0 +1,80 @@
+Metadata-Version: 2.4
+Name: aspose-total-java
+Version: 25.9.0
+Summary: Meta-package for Aspose.Total for Python via Java (aggregate dependencies).
+Author-email: Aspose <total@aspose.com>
+License-Expression: LicenseRef-Proprietary
+Project-URL: Homepage, https://products.aspose.com/total/python-java/
+Project-URL: Docs, https://docs.aspose.com/total/python-java/
+Project-URL: Releases, https://releases.aspose.com/total/python-java/
+Project-URL: ReleaseNotes, https://releases.aspose.com/total/python-java/release-notes/
+Project-URL: FreeSupport, https://forum.aspose.com/
+Keywords: Aspose,Total,Java bridge,file formats,conversion,PDF,Excel,BarCode
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Operating System :: OS Independent
+Requires-Python: <3.14,>=3.8
+Description-Content-Type: text/markdown
+License-File: license.txt
+Requires-Dist: aspose-cells==25.9.0
+Requires-Dist: aspose-diagram==25.9.0
+Requires-Dist: aspose-ocr-python-java==25.2.0
+Requires-Dist: aspose-pdf-for-python-via-java==24.9
+Requires-Dist: aspose-barcode-for-python-via-java==25.9.0
+Requires-Dist: JPype1==1.4.1
+Dynamic: license-file
+
+[Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/total/python-java) | [Docs](https://docs.aspose.com/total/pythonjava/) | [Demos](https://products.aspose.app/total/family) | [Examples](https://aspose.github.io/) | [Download](https://downloads.aspose.com/total/pythonjava) | [Blog](https://blog.aspose.com/category/total/) | [Releases](https://releases.aspose.com/) | [Free Support](https://forum.aspose.com/c/total/7) | [Temporary License](https://purchase.aspose.com/temporary-license)
+
+Aspose.Total for Python via Java is a complete package of powerful and easy-to-use document processing libraries for Python developers using the Java bridge. With this collection, you can create, edit, convert, and render a wide range of file formats such as Excel®, Visio®, PDF, Presentations, Barcodes, and more directly from your Python applications, without relying on Microsoft Office® or other third-party software.
+
+This release includes the following:
+
+# [Aspose.BarCode for Python via Java](https://releases.aspose.com/3d/python-net/) (v25.9.0)
+
+Generate and recognize 1D & 2D barcodes including EAN, UPC, Code128, Code39, QR, MicroQR, DataMatrix, PDF417, Aztec, and GS1. Control image attributes such as size, resolution, rotation, borders, captions, and checksum. Detect barcodes at any angle, scan specific regions, and export results in multiple image formats (JPEG, PNG, BMP, GIF, TIFF).
+
+```python
+pip install aspose-barcode-for-python-via-java==25.9.0
+```
+
+# [Aspose.Cells for Python via Java](https://releases.aspose.com/cells/python-java/) (v25.9.0)
+
+Create, manipulate, convert, and render Excel® workbooks. Work with charts, Pivot Tables, conditional formatting, and sparklines. Convert worksheets, ranges, and charts to PDF or images, manage formulas, Smart Markers, and workbook/worksheet protection. Supports XLS, XLSX, XLSM, XLTX, ODS, CSV, TXT, JSON, HTML, MHTML and export to PDF, XPS, SVG, and common image formats.
+
+```python
+pip install aspose-cells==25.7
+```
+
+# [Aspose.Diagram for Python via Java](https://releases.aspose.com/diagram/python-java/) (v25.9.0)
+
+Build, edit, and convert Microsoft Visio® diagrams without Visio®. Manage shapes, comments, hyperlinks, and inter-convert VSD, VSS, VST, VDX, VSDX, VSTX, VSSX, VSTM, VSSM formats. Export pages or shapes as PDF, XPS, HTML, or images (JPEG, PNG, BMP, SVG, TIFF, GIF, EMF).
+
+```python
+pip install aspose-diagram==25.9.0
+```
+
+# [Aspose.OCR for Python via Java](https://releases.aspose.com/ocr/python-java/) (v25.9.0)
+
+A high-accuracy OCR engine to recognize text in 28+ languages including Latin, Cyrillic, and Asian scripts. Extract text from images, scans, PDFs, and bulk documents even if they are rotated, distorted, or noisy. Built-in pre/post processing improves accuracy and automatically corrects spelling errors.
+
+```python
+pip install aspose-ocr-python-java==25.2.0
+```
+
+# [Aspose.PDF for Python via Java](https://releases.aspose.com/pdf/pythonjava/) (v25.9.0)
+
+Generate, edit, convert, and secure PDF documents programmatically. Convert XML, images, and PCL files to PDF or export PDFs to DOC, DOCX, XLS, XLSX, PPTX, HTML, SVG, EPUB, and more. Manage annotations, bookmarks, forms (FDF, XFDF, XFA, XML), watermarks, and metadata. Concatenate PDFs and apply encryption or field flattening without Adobe Acrobat®.
+
+```python
+pip install aspose-pdf-for-python-via-java==24.9
+```
