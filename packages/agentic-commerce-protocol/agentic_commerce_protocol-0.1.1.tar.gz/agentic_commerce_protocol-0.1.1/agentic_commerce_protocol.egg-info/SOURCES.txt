@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+agentic_commerce_protocol/__init__.py
+agentic_commerce_protocol/types.py
+agentic_commerce_protocol.egg-info/PKG-INFO
+agentic_commerce_protocol.egg-info/SOURCES.txt
+agentic_commerce_protocol.egg-info/dependency_links.txt
+agentic_commerce_protocol.egg-info/top_level.txt
