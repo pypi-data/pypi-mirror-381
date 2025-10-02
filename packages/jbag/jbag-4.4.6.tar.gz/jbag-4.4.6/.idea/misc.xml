@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="sdkName" value="Python 3.9" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Remote Python 3.11.6 (sftp://ubuntu@10.21.22.72:9788/home/ubuntu/miniconda3/envs/py11/bin/python)" project-jdk-type="Python SDK" />
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="88000" />
+  </component>
+</project>
