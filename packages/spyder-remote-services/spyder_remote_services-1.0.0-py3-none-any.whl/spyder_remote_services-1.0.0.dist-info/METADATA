@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: spyder-remote-services
+Version: 1.0.0
+Summary: A Jupyter Server Extension Providing Support for Spyder Remote Services
+Author-email: Hendrik Louzada <hendriklouzada@gmail.com>
+License-File: AUTHORS.txt
+License-File: LICENSE.txt
+Keywords: jupyter,spyder
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Requires-Dist: envs-manager<1.0.0
+Requires-Dist: jupyter-client<9.0,>=8.6.2
+Requires-Dist: jupyter-server<3.0,>=2.14.2
+Requires-Dist: orjson<4.0,>=3.10.12
+Provides-Extra: test
+Requires-Dist: pytest>=7.3.1; extra == 'test'
+Requires-Dist: ruff>=0.4.1; extra == 'test'
