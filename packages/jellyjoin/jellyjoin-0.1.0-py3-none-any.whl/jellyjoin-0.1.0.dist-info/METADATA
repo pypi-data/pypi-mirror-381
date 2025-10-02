@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: jellyjoin
+Version: 0.1.0
+Summary: Utilities for dataset similarity and joins
+Author-email: Oran Looney <olooney@gmail.com>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: jellyfish>=1.2.0
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: scipy>=1.13.0
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: matplotlib>=3.8.4; extra == "dev"
+Dynamic: license-file
+
+Jellyjoin Package
+=================
+
+"Jellyjoin: the softest of joins."
