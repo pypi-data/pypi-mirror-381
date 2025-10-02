@@ -1,0 +1,4 @@
+[console_scripts]
+autoclustal = autoclustal.bin.autoclustal:main
+autoclustal-grapher = autoclustal.bin.grapher:main
+autoclustal-visualize = autoclustal.bin.visualize:main
