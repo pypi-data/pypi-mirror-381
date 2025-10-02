@@ -1,0 +1,9 @@
+test_ppcvvv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test_ppcvvv/core.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test_ppcvvv/log.py,sha256=MZf9jCZsiRoAq8v4FxVnJqeSXxgzAiiKf7mxz6bFtwM,4263
+test_ppcvvv/server.py,sha256=fPAosQIU0d7gxICiALl8u6QwbLI4cawVFyoRYebRES0,2827
+test_ppcvvv/utils.py,sha256=Pi6-tconaDYaYV5E-Bb-gt9jDasqcVnNBAjpdXtGY5I,25
+test_ppcvvv-0.1.1.dist-info/METADATA,sha256=vFmfZFz53WNr6K_KimyddVGc1h7nt-8hlfzkN-kro6M,418
+test_ppcvvv-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+test_ppcvvv-0.1.1.dist-info/top_level.txt,sha256=JWwHmA5Q45z8fdZTLoP-f4Jj3NyV6krLlxl6IoN7cvU,12
+test_ppcvvv-0.1.1.dist-info/RECORD,,
