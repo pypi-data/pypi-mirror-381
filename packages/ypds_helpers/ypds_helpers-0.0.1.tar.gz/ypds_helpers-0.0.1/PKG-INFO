@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: ypds_helpers
+Version: 0.0.1
+Project-URL: Documentation, https://github.com/Kaldarinz/ypds_helpers#readme
+Project-URL: Issues, https://github.com/Kaldarinz/ypds_helpers/issues
+Project-URL: Source, https://github.com/Kaldarinz/ypds_helpers
+Author-email: Anton Popov <a.popov.fizteh@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: <=3.13
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: phik
+Requires-Dist: scikit-learn
+Requires-Dist: seaborn
+Description-Content-Type: text/markdown
+
+# ypds_helpers
+
+[![PyPI - Version](https://img.shields.io/pypi/v/ypds-helpers.svg)](https://pypi.org/project/ypds-helpers)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/ypds-helpers.svg)](https://pypi.org/project/ypds-helpers)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install ypds-helpers
+```
+
+## License
+
+`ypds-helpers` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
