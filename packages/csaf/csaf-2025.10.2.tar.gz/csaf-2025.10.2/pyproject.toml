@@ -1,0 +1,113 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csaf"
+version = "2025.10.2"
+description = "Common Security Advisory Framework (CSAF) Verification, Validation, and Application Programming Interface (API)."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Stefan Hagen", email = "stefan@hagen.link" }]
+maintainers = [{ name = "Stefan Hagen", email = "stefan@hagen.link" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries",
+]
+keywords = [
+    "code-generation",
+    "developer-tools",
+    "validation",
+    "verification",
+]
+dependencies = [
+    "jmespath >= 1.0.1",
+    "jsonschema >= 4.23.0",
+    "langcodes >= 3.5.0",
+    "lazr.uri >= 1.0.7",
+    "msgspec >= 0.18.6",
+    "pydantic >= 2.10.3",
+    "referencing >= 0.35.1",
+    "scooby >= 0.10.0",
+    "setuptools >= 75.6.0",
+    "typer >= 0.15.1",
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["black", "coverage", "hypothesis", "mypy", "pytest", "pytest-cov", "pytest-flake8", "ruff"]
+
+[project.urls]
+Homepage = "https://git.sr.ht/~sthagen/csaf"
+Bug-Tracker = "https://todo.sr.ht/~sthagen/csaf"
+Documentation = "https://codes.dilettant.life/docs/csaf"
+Source-Code = "https://git.sr.ht/~sthagen/csaf"
+Test-Coverage = "https://codes.dilettant.life/coverage/csaf"
+
+[project.scripts]
+csaf = "csaf.cli:app"
+
+[tool.setuptools.packages.find]
+include = [
+  "csaf",
+  "csaf.mandatory",
+  "csaf.schema_proxy",
+]
+exclude = ["test*"]
+
+[tool.black]
+line-length = 120
+skip-string-normalization = true
+target-version = [ "py39", "py310", "py311", "py312", "py313" ]
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+precision = 2
+exclude_lines = [ "pragma: no cover", "raise NotImplementedError", "if TYPE_CHECKING:", "@overload" ]
+omit = [ "*/__main__.py" ]
+
+[tool.mypy]
+strict = true
+implicit_reexport = true
+
+[tool.pytest]
+testpaths = "test"
+filterwarnings = "error"
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+line-length = 120
+exclude = [ ".direnv", ".eggs", ".git", ".mypy_cache", ".ruff_cache", ".venv", "__pypackages__", "bin", "dist", "venv" ]
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [ "E", "F", "Q" ]
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "single"
+
+[tool.ruff.lint.flake8-import-conventions.aliases]
+altair = "alt"
+"matplotlib.pyplot" = "plt"
+numpy = "np"
+pandas = "pd"
+seaborn = "sns"
+
+[tool.ruff.lint.mccabe]
+max-complexity = 42
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = [ "E402" ]
