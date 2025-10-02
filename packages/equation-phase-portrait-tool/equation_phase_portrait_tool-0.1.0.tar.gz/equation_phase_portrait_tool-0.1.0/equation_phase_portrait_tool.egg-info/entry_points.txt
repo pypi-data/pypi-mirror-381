@@ -1,0 +1,3 @@
+[console_scripts]
+eqpp-server = backend.cli:main
+equation-phase-portrait-tool = equation_phase_portrait_tool.__main__:main
