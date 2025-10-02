@@ -1,0 +1,185 @@
+{
+    "name": "tyger",
+    "displayName": "Tyger",
+    "description": "Linting support for python files using `tyger`.",
+    "version": "0.1.2",
+    "preview": true,
+    "serverInfo": {
+        "name": "Tyger",
+        "module": "tyger"
+    },
+    "publisher": "pleiad",
+    "license": "MIT",
+    "homepage": "https://github.com/pleiad/tyger-extension",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pleiad/tyger-extension.git"
+    },
+    "bugs": {
+        "url": "https://github.com/pleiad/tyger-extension/issues"
+    },
+    "galleryBanner": {
+        "color": "#1e415e",
+        "theme": "dark"
+    },
+    "keywords": [
+        "python",
+        "tyger"
+    ],
+    "engines": {
+        "vscode": "^1.78.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Linters"
+    ],
+    "extensionDependencies": [
+        "ms-python.python"
+    ],
+    "capabilities": {
+        "virtualWorkspaces": {
+            "supported": false,
+            "description": "Virtual Workspaces are not supported with Tyger."
+        }
+    },
+    "activationEvents": [
+        "onLanguage:python",
+        "workspaceContains:*.py"
+    ],
+    "main": "./dist/extension.js",
+    "scripts": {
+        "vscode:prepublish": "npm run package",
+        "compile": "webpack",
+        "watch": "webpack --watch",
+        "package": "webpack --mode production --devtool source-map --config ./webpack.config.js",
+        "compile-tests": "tsc -p . --outDir out",
+        "watch-tests": "tsc -p . -w --outDir out",
+        "pretest": "npm run compile-tests && npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "format-check": "prettier --check 'src/**/*.ts' 'build/**/*.yml' '.github/**/*.yml'",
+        "test": "node ./out/test/runTest.js",
+        "vsce-package": "vsce package -o tyger.vsix"
+    },
+    "contributes": {
+        "configuration": {
+            "properties": {
+                "tyger.args": {
+                    "default": [],
+                    "description": "Arguments passed in. Each argument is a separate item in the array.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "scope": "resource",
+                    "type": "array"
+                },
+                "tyger.path": {
+                    "default": [],
+                    "description": "When set to a path to tyger binary, extension will use that. NOTE: Using this option may slowdown server response time.",
+                    "scope": "resource",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "tyger.severity": {
+                    "description": "Mapping of Tyger message types to VS Code diagnostics severity levels as displayed in the Problems window. The keys are the severity names used by Tyger, and the values are the corresponding VS Code diagnostic severity names. Error names can be changed too. Example: {\"TypeMismatchError\": \"Warning\", \"Error\": \"Error\", \"Warning\": \"Warning\", \"Information\": \"Information\", \"Hint\": \"Hint\"}.",
+                    "default": {
+                        "error": "Error",
+                        "warning": "Warning",
+                        "info": "Information",
+                        "hint": "Hint"
+                    },
+                    "additionalProperties": {
+                        "type": "string",
+                        "enum": [
+                            "Error",
+                            "Hint",
+                            "Information",
+                            "Warning"
+                        ]
+                    },
+                    "scope": "resource",
+                    "type": "object"
+                },
+                "tyger.importStrategy": {
+                    "default": "useBundled",
+                    "description": "Defines which Tyger binary to be used to lint the Python files. When set to `useBundled`, the extension will always use the bundled version of `tyger` which comes with the extension. When set to `fromEnvironment`, the extension will try to use `tyger` from the currently selected environment, falling back to the bundled version only if `tyger` is not available in the environment.",
+                    "enum": [
+                        "useBundled",
+                        "fromEnvironment"
+                    ],
+                    "enumDescriptions": [
+                        "Always use the bundled version of `tyger`.",
+                        "Use `tyger` from environment, fallback to bundled version only if `tyger` not available in the environment."
+                    ],
+                    "scope": "window",
+                    "type": "string"
+                },
+                "tyger.interpreter": {
+                    "default": [],
+                    "description": "When set to a path to python executable, extension will use that to launch the server and any subprocess.",
+                    "scope": "resource",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "tyger.showNotifications": {
+                    "default": "off",
+                    "description": "Controls when notifications are shown by this extension.",
+                    "enum": [
+                        "off",
+                        "onError",
+                        "onWarning",
+                        "always"
+                    ],
+                    "enumDescriptions": [
+                        "All notifications are turned off, any errors or warning are still available in the logs.",
+                        "Notifications are shown only in the case of an error.",
+                        "Notifications are shown for errors and warnings.",
+                        "Notifications are show for anything that the server chooses to show."
+                    ],
+                    "scope": "machine",
+                    "type": "string"
+                },
+                "tyger.lintingDelay": {
+                    "default": 500,
+                    "description": "Delay in milliseconds before linting is triggered after typing.",
+                    "scope": "resource",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 10000
+                }
+            }
+        },
+        "commands": [
+            {
+                "title": "Restart Server",
+                "category": "Tyger",
+                "command": "tyger.restart"
+            }
+        ]
+    },
+    "dependencies": {
+        "@vscode/python-extension": "^1.0.5",
+        "fs-extra": "^11.2.0",
+        "vscode-languageclient": "^8.1.0"
+    },
+    "devDependencies": {
+        "@types/fs-extra": "^11.0.4",
+        "@types/vscode": "1.78.0",
+        "@types/glob": "^8.1.0",
+        "@types/node": "20.x",
+        "@typescript-eslint/eslint-plugin": "^6.17.0",
+        "@typescript-eslint/parser": "^6.17.0",
+        "@vscode/test-electron": "^2.3.8",
+        "@vscode/vsce": "^2.22.0",
+        "eslint": "^8.56.0",
+        "glob": "^10.3.10",
+        "prettier": "^3.1.1",
+        "typescript": "^5.3.3",
+        "ts-loader": "^9.5.1",
+        "webpack": "^5.89.0",
+        "webpack-cli": "^5.1.4"
+    }
+}
