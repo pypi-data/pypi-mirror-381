@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=80", "wheel", "pip>=24.0", "pybind11"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "fasttext-community"
+version = "0.10.8"
+description = "fasttext Python bindings"
+readme = { file = "python/README.rst", content-type = "text/x-rst" }
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Nurzhan Muratkhan", email = "nurzhanmuratkhan@gmail.com" }
+]
+urls = { "Homepage" = "https://github.com/munlicode/fasttext-community" }
+dependencies = ["pybind11>=2.2", "setuptools>=0.7.0", "numpy"]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Software Development",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+dev = ["pytest", "build", "twine"]
+
+[tool.setuptools.packages.find]
+where = ["python/fasttext_module"]
