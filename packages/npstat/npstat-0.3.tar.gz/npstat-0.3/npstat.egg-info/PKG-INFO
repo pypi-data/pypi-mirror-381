@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: npstat
+Version: 0.3
+Summary: Statistical hypothesis testing package
+Author: OsAfzal
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Dynamic: author
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
