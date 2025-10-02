@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: secchecker
+Version: 0.1.1
+Summary: A CLI tool to detect secrets in repositories for maintaining best security practices.
+Author-email: Vishnu Prashanth <vishnu7stanite@gmail.com>
+License-File: LICENSE
+Dynamic: license-file
