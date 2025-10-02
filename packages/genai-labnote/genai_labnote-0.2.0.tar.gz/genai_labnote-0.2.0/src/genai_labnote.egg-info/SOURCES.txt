@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/genai_labnote/__init__.py
+src/genai_labnote/agent.py
+src/genai_labnote/core.py
+src/genai_labnote/llm.py
+src/genai_labnote/magic.py
+src/genai_labnote/storage.py
+src/genai_labnote.egg-info/PKG-INFO
+src/genai_labnote.egg-info/SOURCES.txt
+src/genai_labnote.egg-info/dependency_links.txt
+src/genai_labnote.egg-info/requires.txt
+src/genai_labnote.egg-info/top_level.txt
+tests/test_core.py
