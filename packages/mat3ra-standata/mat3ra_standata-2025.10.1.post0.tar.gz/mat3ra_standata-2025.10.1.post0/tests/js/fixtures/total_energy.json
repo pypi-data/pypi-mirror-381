@@ -1,0 +1,12 @@
+{
+  "name": "Total Energy",
+  "subworkflows": [
+    {
+      "name": "Total Energy",
+      "application": {
+        "name": "espresso"
+      },
+      "properties": ["total_energy"]
+    }
+  ]
+}
