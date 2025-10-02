@@ -1,0 +1,9 @@
+.idea
+__pycache__
+*-info
+venv
+*.toml
+!pyproject.toml
+*.json
+!.devcontainer/devcontainer.json
+*.sqlite3*

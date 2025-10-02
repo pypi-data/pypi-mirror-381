@@ -1,0 +1,58 @@
+[project]
+name = "les-louisdelatech"
+version = "0.5.3"
+description = "LouisDeLaTech is a discord bot manager for Lyon e-Sport"
+readme = "README.md"
+authors = [
+    {name = "Ludovic Ortega", email = "ludovic.ortega@lyon-esport.fr"},
+    {name = "Etienne 'PoPs' G.", email = "etienne.guilluy@lyon-esport.fr"},
+    {name = "Pierre 'DrumSlayer' Sarret", email = "pierre.sarret@lyon-esport.fr"}
+]
+keywords = ["google", "discord"]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: CEA CNRS Inria Logiciel Libre License, version 2.1 (CeCILL-2.1)",
+    "Topic :: Utilities",
+]
+
+requires-python = ">=3.9,<4.0.0"
+dependencies = [
+    "discord-py~=2.6.3",
+    "Jinja2~=3.1.6",
+    "google-api-python-client~=2.183.0",
+    "google-auth-httplib2~=0.2.0",
+    "requests-oauthlib~=2.0.0",
+    "pyotp~=2.9.0",
+    "tortoise-orm~=0.25.1",
+    "aiosqlite~=0.21.0",
+    "cryptography~=46.0.2",
+    "sentry-sdk~=2.39.0",
+    "httpx~=0.28.1",
+    "unidecode~=1.4.0",
+    "phonenumbers~=9.0.15",
+]
+
+[project.urls]
+Homepage = "https://github.com/lyon-esport/LouisDeLaTech"
+Repository = "https://github.com/lyon-esport/LouisDeLaTech"
+Issues = "https://github.com/lyon-esport/LouisDeLaTech/issues"
+
+[project.optional-dependencies]
+dev = [
+    "ruff~=0.13.2"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/les_louisdelatech"]
