@@ -1,0 +1,7 @@
+django-torque
+pgvector
+orjson
+luqum
+
+[dev]
+pytest
