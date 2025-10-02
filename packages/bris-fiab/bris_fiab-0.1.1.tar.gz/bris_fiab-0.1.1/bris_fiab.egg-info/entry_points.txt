@@ -1,0 +1,5 @@
+[anemoi.inference.inputs]
+downscaled_mars = bris_fiab.anemoi_plugins.inference.downscale:DownscaledMarsInput
+
+[anemoi.inference.pre_processors]
+apply_adiabatic_corrections = bris_fiab.anemoi_plugins.inference.apply_adiabatic_corrections:AdiabaticCorrectionPreProcessor
