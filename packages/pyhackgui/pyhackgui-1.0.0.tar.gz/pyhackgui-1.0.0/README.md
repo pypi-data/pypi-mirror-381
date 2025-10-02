@@ -1,0 +1,165 @@
+# PyHackGUI
+
+一个专为游戏外挂界面设计的Python GUI库，基于pygame构建，支持透明窗口、高DPI、中文显示等特性。
+
+## 特性
+
+- 🎮 **专为游戏设计**: 支持透明窗口覆盖，适用于游戏辅助工具
+- 🖥️ **高DPI支持**: 自动处理Windows高DPI缩放
+- 🇨🇳 **中文友好**: 完美支持中文字体显示
+- 🎨 **丰富控件**: 按钮、滑块、复选框、下拉框、颜色选择器等
+- 🖱️ **全局输入**: 支持全局鼠标和键盘事件捕获
+- 📦 **易于使用**: 简洁的API设计，快速上手
+
+## 安装
+
+```bash
+pip install pyhackgui
+```
+
+## 快速开始
+
+```python
+from pyhackgui import PyHackGUI
+import time
+
+class MyGUI(PyHackGUI):
+    def __init__(self):
+        super().__init__("我的游戏界面")
+        self.show_menu = True
+        
+    def draw_content(self):
+        # 显示FPS
+        super().draw_content()
+        
+        if self.show_menu:
+            # 创建一个面板
+            panel = self.panel("main_panel", "主菜单", (50, 50), (300, 400))
+            
+            if panel['visible'] and not panel.get('minimized'):
+                # 在面板内容区域绘制控件
+                content = panel['content_rect']
+                base_x = content.x // self.dpi_scale
+                base_y = content.y // self.dpi_scale
+                
+                # 按钮示例
+                if self.button("btn1", (base_x + 10, base_y + 10), (120, 30), "点击我"):
+                    print("按钮被点击了!")
+                
+                # 滑块示例
+                value = getattr(self, 'slider_value', 50.0)
+                self.slider_value = self.slider_float("slider1", (base_x + 10, base_y + 50), 
+                                                    (150, 20), value, 0.0, 100.0, "值: %.1f")
+                
+                # 复选框示例
+                checked = getattr(self, 'checkbox_state', False)
+                self.checkbox_state = self.checkbox("cb1", (base_x + 10, base_y + 80), 
+                                                  checked, "启用功能")
+
+if __name__ == "__main__":
+    gui = MyGUI()
+    gui.run()
+```
+
+## 主要控件
+
+### 面板 (Panel)
+```python
+panel = self.panel("panel_name", "标题", (x, y), (width, height), 
+                   movable=True, closable=True, minimizable=True)
+```
+
+### 按钮 (Button)
+```python
+if self.button("btn_name", (x, y), (width, height), "按钮文本"):
+    # 按钮被点击时的处理
+    pass
+```
+
+### 滑块 (Slider)
+```python
+value = self.slider_float("slider_name", (x, y), (width, height), 
+                         current_value, min_val, max_val, "格式: %.1f")
+```
+
+### 复选框 (Checkbox)
+```python
+checked = self.checkbox("cb_name", (x, y), checked_state, "复选框文本")
+```
+
+### 下拉框 (ComboBox)
+```python
+selected_index = self.combo("combo_name", (x, y), width, 
+                           ["选项1", "选项2", "选项3"], current_index)
+```
+
+### 颜色选择器 (Color Picker)
+```python
+color = self.color_picker("color_name", (x, y), (r, g, b, a), with_alpha=True)
+```
+
+### 文本输入框 (Text Input)
+```python
+text = self.text_input("input_name", (x, y), (width, height), 
+                      placeholder="请输入...", initial="初始值")
+```
+
+## 绘制功能
+
+### 基本图形
+```python
+# 绘制线条
+self.draw_line((x1, y1), (x2, y2), (r, g, b, a), width=2)
+
+# 绘制矩形
+self.draw_rect((x, y), (width, height), (r, g, b, a), thickness=1)
+self.draw_filled_rect((x, y), (width, height), (r, g, b, a))
+
+# 绘制圆形
+self.draw_circle((x, y), radius, (r, g, b, a), thickness=1)
+
+# 绘制文本
+self.draw_text("文本内容", (x, y), (r, g, b, a), size=16)
+```
+
+### 游戏专用功能
+```python
+# ESP方框
+self.draw_esp_box((x, y), (width, height), (r, g, b, a), thickness=2)
+
+# 准星
+self.draw_crosshair((x, y), size=10, gap=4, thickness=1, (r, g, b, a))
+
+# 射线
+self.draw_tracer((target_x, target_y), (r, g, b, a), from_bottom=True)
+
+# FOV圆圈
+self.draw_fov_circle((x, y), radius, (r, g, b, a))
+
+# 进度条
+self.draw_progress_bar((x, y), (width, height), value, min_val, max_val)
+```
+
+## 系统要求
+
+- Python 3.7+
+- Windows 操作系统
+- pygame 2.0.0+
+- pywin32 227+
+
+## 许可证
+
+MIT License
+
+## 贡献
+
+欢迎提交Issue和Pull Request！
+
+## 更新日志
+
+### v1.0.0
+- 初始版本发布
+- 支持基本GUI控件
+- 透明窗口覆盖功能
+- 高DPI支持
+- 中文字体支持

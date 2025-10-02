@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyhackgui"
+version = "1.0.0"
+description = "通过PYHACKGUI库，您可以简单地绘制一个HACK界面"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "LiangYu", email = "liangyu0611@gmail.com"}
+]
+maintainers = [
+    {name = "LiangYu", email = "liangyu0611@gmail.com"}
+]
+keywords = ["gui", "pygame", "game", "hack", "overlay", "transparent", "window"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Games/Entertainment",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: Microsoft :: Windows",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "pygame>=2.0.0",
+    "pywin32>=227",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/pyhackgui"
+Repository = "https://github.com/yourusername/pyhackgui"
+Documentation = "https://github.com/yourusername/pyhackgui/wiki"
+"Bug Reports" = "https://github.com/yourusername/pyhackgui/issues"
+
+[tool.setuptools]
+packages = ["pyhackgui"]
+
+[tool.setuptools.package-data]
+pyhackgui = ["*.py"]

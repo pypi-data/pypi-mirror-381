@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+pyhackgui/__init__.py
+pyhackgui/core.py
+pyhackgui.egg-info/PKG-INFO
+pyhackgui.egg-info/SOURCES.txt
+pyhackgui.egg-info/dependency_links.txt
+pyhackgui.egg-info/not-zip-safe
+pyhackgui.egg-info/requires.txt
+pyhackgui.egg-info/top_level.txt
