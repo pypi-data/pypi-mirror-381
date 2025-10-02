@@ -1,0 +1,2 @@
+[console_scripts]
+notemate-files = notemate_files.cli:main
