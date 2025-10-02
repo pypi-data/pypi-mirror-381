@@ -1,0 +1,2 @@
+[console_scripts]
+pycatastro = pycatastro.cli:main

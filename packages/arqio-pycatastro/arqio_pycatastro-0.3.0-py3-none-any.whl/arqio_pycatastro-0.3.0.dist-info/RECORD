@@ -1,0 +1,16 @@
+arqio_pycatastro-0.3.0.dist-info/licenses/LICENSE,sha256=3qi53ikfPTHtE8b6zjYBQlRdypHStXnSvh2PFi7E9cM,112
+pycatastro/__init__.py,sha256=VQml9B4rkxH4hzzyCv8RA1DxMcxO0T0MxXHIlzJ3TuQ,155
+pycatastro/cli.py,sha256=GwCiBJ1KzL4yPa7enS5hw5ylVPO9FQRJH4Fuk_-OEuc,33004
+pycatastro/client.py,sha256=0DCg_5hywGfs7joyCkrVpiufBEjTN9KJR7C1FKaXgzQ,15892
+pycatastro/http_client.py,sha256=ukhvSEH0ILcqhYlpoeIrXpgZUn-2HaiNYcycHJkbM7Y,3969
+pycatastro/models.py,sha256=5ZUUbxIxi1xcckCfXDUmfq3L4L0P4E1fQZr1qPEtQQM,4070
+pycatastro/tipos.py,sha256=t5DXTKyaAkKrC-c3IYXyd3cNEaMpQfKqVzr7lqNGYiA,5703
+pycatastro/endpoints/__init__.py,sha256=KLxr7unrH8D0lupsgp_JJ82u18pZseUvUxgIcMLc1RI,18
+pycatastro/endpoints/callejero.py,sha256=AYfJgpnV2ghHM_HPVdTlcXo1_moGfMjhDL5PBf1I3iw,4385
+pycatastro/endpoints/coordenadas.py,sha256=lei_2a4NitOaMmLmweT8CNOeG8_T-vlWoBlD9cOiyXE,2095
+pycatastro/endpoints/detallada.py,sha256=2Ljj4BBYiH-ccmhbcdcfD5TK58ucbqGxyKe8G86wlbY,5636
+arqio_pycatastro-0.3.0.dist-info/METADATA,sha256=ZStc4zZ67_wAXJUAejBY43vPkwS0tY8UDb1Eous7-a8,246
+arqio_pycatastro-0.3.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+arqio_pycatastro-0.3.0.dist-info/entry_points.txt,sha256=6iszWv37EafwniPMZJHFOqq1FKsDhcXr6FMEXpxzDqU,51
+arqio_pycatastro-0.3.0.dist-info/top_level.txt,sha256=-4Qm1Bv3QmLRN5L1xcUrfn5tt4mZWMsDsylEb6Ej-N0,11
+arqio_pycatastro-0.3.0.dist-info/RECORD,,
