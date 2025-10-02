@@ -1,0 +1,3 @@
+[console_scripts]
+fs-git = mcp_server.cli.main:app
+fs-git-mcp = mcp_server.server_fastmcp_new:main
