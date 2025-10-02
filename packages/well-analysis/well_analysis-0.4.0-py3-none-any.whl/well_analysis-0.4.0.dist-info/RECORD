@@ -1,0 +1,21 @@
+well_analysis/__init__.py,sha256=8h_mPhy9jbBaMvypiUJ3buTHCbJNvbosg8tlnTbxufM,60
+well_analysis/core.py,sha256=qB-CCg5_06ZXhRSpVv-iALcwLXkNgwtrwDXHk9vW0RI,15064
+well_analysis/_impl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+well_analysis/_impl/_add_black_oil.py,sha256=sxkBFIEfRuUgaDRsW5NVvGl729-B-u7SluL3YUOJuC0,1170
+well_analysis/_impl/_add_gas_lift.py,sha256=A8gn7QfD4-WBLwELzlDVFNOrZznN6LsF8__Fe2TbDng,717
+well_analysis/_impl/_create_ipr.py,sha256=yEyUCXXjhmzfzsoMF-YTXeYpu3F2qaSelIrtHR5QDgk,2248
+well_analysis/_impl/_install_new_glv.py,sha256=JQ9lfoO3lZ39pwFun2chVxrz0i0LoQx2jb6P-K9oYFg,2000
+well_analysis/_impl/_ipr_vlp_matching.py,sha256=SEpLzke3XVmt79g9_vbEInKpBaw5Uvnrcvpsc1k2Q6M,3791
+well_analysis/_impl/_logger.py,sha256=NiBoGxP1KtDHOBb-W_ILRZTjKVbqqEJSylXjx237NOQ,326
+well_analysis/_impl/_perform_pt_analysis.py,sha256=RzgHtDivPud2chnm7SQwJBhgdXMpQrL0vAv4M5Zbfh4,6440
+well_analysis/_impl/_perform_sensitivity.py,sha256=8zc7Ao5L0Xie3NPlso0969Mv9PR6BYO7ejx5d0oO7l4,6272
+well_analysis/_impl/_plot_operating_point.py,sha256=JNy35zio0GyzQriktHXibOsr3cr8eyzw4lXHN7xPF-o,4784
+well_analysis/_impl/_plot_utility.py,sha256=waOQAimtazrOtwWXEEBdeyuf4mPo4AkRNqsCi54y5EU,1382
+well_analysis/_impl/_pt_analysis_for_vlp.py,sha256=dBSNbj2qPpKkRP52sBjxcH7PZK9zC6aEQnQI5GY5Q0I,2146
+well_analysis/_impl/core.py,sha256=qB-CCg5_06ZXhRSpVv-iALcwLXkNgwtrwDXHk9vW0RI,15064
+well_analysis/_impl/well_analysis copy.py,sha256=_gf5P9URxZhVQ0mV1Xd0AWL9Sdyb3smvIcnC_wDFCrM,4592
+well_analysis/_impl/well_analysis.py,sha256=yndpxCyx1BbxYF2YkgVhb5l9cZ5ClcTftTm-Vk7l9Ho,8274
+well_analysis-0.4.0.dist-info/METADATA,sha256=03LtY5aHIeUMoJWGWznwFVW7BAc8gtFwAbz278BegH4,3944
+well_analysis-0.4.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+well_analysis-0.4.0.dist-info/top_level.txt,sha256=adfK0a0UgB9vlaNW3waII3S4PJhOw3JYk2D3JmOFgac,14
+well_analysis-0.4.0.dist-info/RECORD,,
