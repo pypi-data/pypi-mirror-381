@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/gvmrpc/__init__.py
+src/gvmrpc/__version__.py
+src/gvmrpc/client.py
+src/gvmrpc/server.py
+src/gvmrpc.egg-info/PKG-INFO
+src/gvmrpc.egg-info/SOURCES.txt
+src/gvmrpc.egg-info/dependency_links.txt
+src/gvmrpc.egg-info/entry_points.txt
+src/gvmrpc.egg-info/requires.txt
+src/gvmrpc.egg-info/top_level.txt

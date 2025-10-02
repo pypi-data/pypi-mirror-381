@@ -1,0 +1,42 @@
+[project]
+name = "gvmrpc"
+authors = [
+    { name="Ben Nassif", email="bennassif@gmail.com" }
+]
+
+dynamic = ["version"]
+
+description = "GVM RPC Server and Client"
+readme = "README.md"
+
+requires-python = ">=3.10"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development",
+    "Programming Language :: Python :: 3",
+]
+keywords = [
+    "greenbone", "rpc", "gvm", "server", "client"
+]
+
+license = "MIT"
+license-files = [
+    "LICEN[CS]E"
+]
+
+dependencies = [
+    "lxml",
+    "python-gvm"
+]
+
+[tool.setuptools.dynamic]
+version = { attr = "gvmrpc.__version__.__version__" }
+
+[project.scripts]
+run-gvmrpc = "run:run_server"
+
+[project.urls]
+homepage = "https://github.com/bnassif/gvm-rpc"
+issues = "https://github.com/bnassif/gvm-rpc/issues"
