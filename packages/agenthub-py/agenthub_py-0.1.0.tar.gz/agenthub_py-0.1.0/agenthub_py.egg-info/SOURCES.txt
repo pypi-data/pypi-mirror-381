@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+agenthub/__init__.py
+agenthub_py.egg-info/PKG-INFO
+agenthub_py.egg-info/SOURCES.txt
+agenthub_py.egg-info/dependency_links.txt
+agenthub_py.egg-info/top_level.txt
