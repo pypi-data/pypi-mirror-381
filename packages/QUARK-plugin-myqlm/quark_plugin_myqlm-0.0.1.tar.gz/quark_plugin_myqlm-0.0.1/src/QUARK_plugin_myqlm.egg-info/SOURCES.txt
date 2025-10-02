@@ -1,0 +1,15 @@
+.gitignore
+LICENSE
+NOTICE
+README.md
+pyproject.toml
+.github/workflows/release.yml
+configs/ghz_demo_cfg.yml
+src/QUARK_plugin_myqlm.egg-info/PKG-INFO
+src/QUARK_plugin_myqlm.egg-info/SOURCES.txt
+src/QUARK_plugin_myqlm.egg-info/dependency_links.txt
+src/QUARK_plugin_myqlm.egg-info/requires.txt
+src/QUARK_plugin_myqlm.egg-info/top_level.txt
+src/quark_plugin_myqlm/__init__.py
+src/quark_plugin_myqlm/devices.py
+src/quark_plugin_myqlm/mappings.py

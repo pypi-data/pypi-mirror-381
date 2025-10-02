@@ -1,0 +1,4 @@
+quark-framework>=0.3.7
+QUARK-plugin-ghz
+myqlm>=1.11.3
+myqlm-interop>=1.10.0
