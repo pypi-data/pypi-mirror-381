@@ -1,0 +1,46 @@
+[build-system]
+# Minimum requirements for the build system to execute.
+requires = ["setuptools>=61.2", "wheel"]
+
+[project]
+name = "OpenSimula"
+version = "0.5.0"
+requires-python = ">=3.12"
+authors = [
+  { name="Juan F. Coronel", email="jfc@us.es" },
+]
+description = "Component-based time simulation environment in Python"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "dash>=3.2.0",
+    "dash-ag-grid>=32.3.2",
+    "dash-bootstrap-components>=2.0.4",
+    "nbformat>=5.10.4",
+    "numpy>=2.3.3",
+    "openpyxl>=3.1.5",
+    "pandas>=2.3.2",
+    "plotly>=6.3.0",
+    "psychrolib>=2.5.0",
+    "scipy>=1.16.2",
+    "shapely>=2.1.1",
+    "tqdm>=4.67.1",
+    "triangle>=20250106",
+    "vedo>=2025.5.4",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.30.1",
+    "mkdocs>=1.6.1",
+    "pytest>=8.4.2",
+]
+
+[tool.setuptools]
+packages.find.include = ['src*','mkdocs*','docs*']
+packages.find.exclude = ['test*','ipynb*','ASHRAE_140*','mets*','venv*']
+include-package-data = false
