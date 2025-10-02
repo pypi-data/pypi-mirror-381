@@ -1,0 +1,8 @@
+gitpure-1.0.0.dist-info/METADATA,sha256=AmIt6BJWP2ye-FUEYkRKzZJVbwegz8XVAIvYbMArVmE,5464
+gitpure-1.0.0.dist-info/WHEEL,sha256=Iz7QqxpWQRXToFIDkGspPPKDuV_klwuhW8ziiU5jhR8,96
+gitpure-1.0.0.dist-info/licenses/LICENSE,sha256=SIJEt25LmxzShXdFNpvEiVhLAyVzfsdiRMhNU3U8DNo,1086
+gitpure/__init__.py,sha256=pBX_EzrNHWBjqJHS3q15EG7uggKwK8bhi32dp_4klIM,111
+gitpure/__init__.pyi,sha256=byIjb4fCD90CBQL7S0Uf0elJy_K0qB-Z8tGXD89rRjw,2800
+gitpure/gitpure.cp310-win_amd64.pyd,sha256=gOM0x0918Z4-HME-pGH6zYcIKFpDtun5K7bBxQrEHUk,9814016
+gitpure/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitpure-1.0.0.dist-info/RECORD,,
