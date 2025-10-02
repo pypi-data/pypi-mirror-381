@@ -1,0 +1,12 @@
+paho-mqtt>=1.5.0
+pytz
+
+[all]
+pandas<3.0,>=2.2.2
+trimesh>=4.4.9
+
+[dataframe]
+pandas<3.0,>=2.2.2
+
+[vis]
+trimesh>=4.4.9
