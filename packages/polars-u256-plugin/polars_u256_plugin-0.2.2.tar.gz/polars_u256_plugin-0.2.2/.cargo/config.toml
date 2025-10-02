@@ -1,0 +1,4 @@
+## macOS: allow unresolved Python symbols to be resolved at runtime by the
+## interpreter when building cdylib/extension modules (PyO3 / maturin).
+[target.'cfg(target_vendor = "apple")']
+rustflags = ["-C", "link-arg=-undefined", "-C", "link-arg=dynamic_lookup"]
