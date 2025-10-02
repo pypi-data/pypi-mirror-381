@@ -1,0 +1,298 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="mb-6">
+    <a href="/dependent/{{ dep_folder }}" class="text-blue-600 hover:text-blue-800 font-medium">← Back to {{ dep_name }}</a>
+</div>
+
+<div class="flex gap-6">
+    <!-- Main Gallery -->
+    <div class="flex-1 bg-white rounded-lg shadow p-6">
+        <h2 class="text-xl font-semibold text-gray-900 mb-6">Gallery for {{ dep_name }}</h2>
+        
+        <!-- Gallery Grid -->
+        <div id="gallery" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            <!-- Items will be loaded dynamically -->
+        </div>
+        
+        <!-- Loading indicator -->
+        <div id="loading" class="text-center py-8 hidden">
+            <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+            <p class="mt-2 text-gray-600">Loading...</p>
+        </div>
+    </div>
+    
+    <!-- Timeline -->
+    <div class="w-48 bg-white rounded-lg shadow p-4 sticky top-8 h-fit max-h-screen overflow-hidden">
+        <h3 class="text-sm font-semibold text-gray-900 mb-4">Timeline</h3>
+        <div class="relative">
+            <div id="timeline" class="space-y-2 max-h-96 overflow-y-auto">
+                <!-- Timeline items will be loaded dynamically -->
+            </div>
+            <div id="currentDate" class="mt-4 p-2 bg-blue-50 rounded text-xs text-blue-800 font-medium text-center">
+                Current: <span id="currentDateText">-</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="mediaModal" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center" onclick="closeModal()">
+    <div class="max-w-full max-h-full p-4" onclick="event.stopPropagation()">
+        <div id="modalContent"></div>
+        <button class="absolute top-4 right-4 text-white text-2xl" onclick="closeModal()">&times;</button>
+        <button id="modalPrev" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-75" onclick="prevMedia()">&lt;</button>
+        <button id="modalNext" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-75" onclick="nextMedia()">&gt;</button>
+    </div>
+</div>
+
+<script>
+let allSnapshots = {{ snapshots | tojson }};
+let uniqueDates = {{ dates | tojson }};
+let loadedItems = 0;
+let itemsPerLoad = 20;
+let modalMediaItems = [];
+let currentModalIndex = 0;
+
+let virtualStartIndex = 0; // Track where our loaded content starts in the full dataset
+let datePositions = {}; // Map dates to their positions in the gallery
+
+function createGalleryItem(snapshot, index) {
+    const mediaType = snapshot.media_type || 'image';
+    const noteAttr = snapshot.note && snapshot.note !== 'None' ? snapshot.note.replace(/'/g, "\\'") : '';
+    
+    return `
+        <div class="gallery-item relative cursor-pointer group" data-date="${snapshot.date}" data-index="${index}" onclick="openModal('/media/{{ dep_folder }}/${snapshot.attachment_id}', '${mediaType}', '${noteAttr}')">
+            <div class="w-full h-48 bg-gray-200 rounded-lg overflow-hidden" data-src="/media/{{ dep_folder }}/${snapshot.attachment_id}" data-type="${mediaType}">
+                <div class="w-full h-full flex items-center justify-center text-gray-400 text-sm">Loading...</div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-xs p-1 rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                ${snapshot.date}
+            </div>
+        </div>
+    `;
+}
+
+
+
+function loadVisibleImages() {
+    const placeholders = document.querySelectorAll('[data-src]:not(.loaded)');
+    const viewportHeight = window.innerHeight;
+    const scrollTop = window.scrollY;
+    
+    placeholders.forEach(placeholder => {
+        const rect = placeholder.getBoundingClientRect();
+        const placeholderTop = rect.top + scrollTop;
+        
+        // Load if placeholder is within viewport or close to it
+        if (placeholderTop < scrollTop + viewportHeight + 500 && placeholderTop > scrollTop - 500) {
+            const src = placeholder.getAttribute('data-src');
+            const type = placeholder.getAttribute('data-type');
+            
+            if (type === 'image') {
+                placeholder.innerHTML = `<img src="${src}" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\"w-full h-full flex items-center justify-center text-red-400 text-sm\">Failed to load</div>'">`;
+            } else if (type === 'video') {
+                placeholder.innerHTML = `<video class="w-full h-full object-cover" muted preload="metadata"><source src="${src}" type="video/mp4"></video><div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 pointer-events-none"><div class="w-8 h-8 bg-white rounded-full flex items-center justify-center"><span class="text-black text-lg">▶</span></div></div>`;
+            }
+            
+            placeholder.classList.add('loaded');
+        }
+    });
+}
+
+function buildModalMediaItems() {
+    modalMediaItems = [];
+    // Build from all snapshots since they're all loaded
+    allSnapshots.forEach(snapshot => {
+        modalMediaItems.push({
+            src: `/media/{{ dep_folder }}/${snapshot.attachment_id}`,
+            type: snapshot.media_type || 'image',
+            note: snapshot.note && snapshot.note !== 'None' ? snapshot.note : ''
+        });
+    });
+}
+
+
+
+function openModal(src, type, note = '') {
+    // Build media items list from currently loaded snapshots
+    buildModalMediaItems();
+    
+    currentModalIndex = modalMediaItems.findIndex(item => item.src === src);
+    showModalMedia();
+    document.getElementById('mediaModal').classList.remove('hidden');
+}
+
+function showModalMedia() {
+    const content = document.getElementById('modalContent');
+    const prevBtn = document.getElementById('modalPrev');
+    const nextBtn = document.getElementById('modalNext');
+    
+    if (modalMediaItems.length === 0) return;
+    
+    const item = modalMediaItems[currentModalIndex];
+    const noteHtml = item.note && item.note !== 'None' ? `<p class="text-white text-center mt-4 px-4">${item.note}</p>` : '';
+    
+    if (item.type === 'image') {
+        content.innerHTML = `<img src="${item.src}" class="max-w-full" style="max-height: calc(100vh - 8rem); object-fit: contain;" onclick="event.stopPropagation()">${noteHtml}`;
+    } else if (item.type === 'video') {
+        content.innerHTML = `<video controls class="max-w-full" style="max-height: calc(100vh - 8rem); object-fit: contain;" onclick="event.stopPropagation()"><source src="${item.src}" type="video/mp4"></video>${noteHtml}`;
+    }
+    
+    prevBtn.style.display = modalMediaItems.length > 1 ? 'flex' : 'none';
+    nextBtn.style.display = modalMediaItems.length > 1 ? 'flex' : 'none';
+}
+
+function prevMedia() {
+    if (modalMediaItems.length > 1) {
+        currentModalIndex = currentModalIndex === 0 ? modalMediaItems.length - 1 : currentModalIndex - 1;
+        showModalMedia();
+    }
+}
+
+function nextMedia() {
+    if (modalMediaItems.length > 1) {
+        currentModalIndex = (currentModalIndex + 1) % modalMediaItems.length;
+        showModalMedia();
+    }
+}
+
+function closeModal() {
+    document.getElementById('mediaModal').classList.add('hidden');
+    document.getElementById('modalContent').innerHTML = '';
+}
+
+
+
+
+
+
+
+
+
+
+
+// Load visible images on scroll and update timeline
+window.addEventListener('scroll', () => {
+    loadVisibleImages();
+    updateCurrentDate();
+});
+
+function createTimeline() {
+    const timeline = document.getElementById('timeline');
+    timeline.innerHTML = '';
+    
+    // Group dates by month-year
+    const monthGroups = {};
+    uniqueDates.forEach(date => {
+        const dateObj = new Date(date);
+        const monthKey = `${dateObj.getFullYear()}-${String(dateObj.getMonth() + 1).padStart(2, '0')}`;
+        if (!monthGroups[monthKey]) {
+            monthGroups[monthKey] = {
+                year: dateObj.getFullYear(),
+                month: dateObj.toLocaleDateString('en-US', { month: 'long' }),
+                firstDate: date
+            };
+        }
+    });
+    
+    // Sort by date
+    const sortedMonths = Object.entries(monthGroups).sort(([a], [b]) => a.localeCompare(b));
+    
+    sortedMonths.forEach(([monthKey, monthData]) => {
+        const timelineItem = document.createElement('div');
+        timelineItem.className = 'timeline-item cursor-pointer p-2 text-xs rounded hover:bg-blue-50 transition-colors';
+        timelineItem.setAttribute('data-month', monthKey);
+        timelineItem.setAttribute('data-first-date', monthData.firstDate);
+        timelineItem.innerHTML = `
+            <div class="font-medium text-gray-900">${monthData.month}</div>
+            <div class="text-gray-500">${monthData.year}</div>
+        `;
+        
+        timelineItem.addEventListener('click', () => scrollToMonth(monthData.firstDate));
+        timeline.appendChild(timelineItem);
+    });
+}
+
+function scrollToMonth(firstDate) {
+    const firstItemWithDate = document.querySelector(`[data-date="${firstDate}"]`);
+    if (firstItemWithDate) {
+        firstItemWithDate.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+function updateCurrentDate() {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const scrollTop = window.scrollY;
+    const viewportHeight = window.innerHeight;
+    const viewportCenter = scrollTop + viewportHeight / 2;
+    
+    let currentDate = null;
+    let closestDistance = Infinity;
+    
+    galleryItems.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        const itemCenter = rect.top + scrollTop + rect.height / 2;
+        const distance = Math.abs(itemCenter - viewportCenter);
+        
+        if (distance < closestDistance) {
+            closestDistance = distance;
+            currentDate = item.getAttribute('data-date');
+        }
+    });
+    
+    if (currentDate) {
+        const dateObj = new Date(currentDate);
+        const currentMonth = `${dateObj.getFullYear()}-${String(dateObj.getMonth() + 1).padStart(2, '0')}`;
+        const displayDate = dateObj.toLocaleDateString('en-US', { 
+            month: 'long',
+            year: 'numeric'
+        });
+        document.getElementById('currentDateText').textContent = displayDate;
+        
+        // Highlight current month in timeline
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            item.classList.remove('bg-blue-100', 'border-l-4', 'border-blue-500');
+            if (item.getAttribute('data-month') === currentMonth) {
+                item.classList.add('bg-blue-100', 'border-l-4', 'border-blue-500');
+            }
+        });
+    }
+}
+
+// Create all gallery items at once
+function loadAllItems() {
+    const gallery = document.getElementById('gallery');
+    const loading = document.getElementById('loading');
+    
+    console.log('Loading all items:', allSnapshots.length);
+    loading.classList.remove('hidden');
+    
+    // Create all gallery items at once
+    allSnapshots.forEach((snapshot, index) => {
+        const itemHtml = createGalleryItem(snapshot, index);
+        if (itemHtml) {
+            gallery.insertAdjacentHTML('beforeend', itemHtml);
+        }
+    });
+    
+    loadedItems = allSnapshots.length;
+    loading.classList.add('hidden');
+    
+    // Build modal media items
+    buildModalMediaItems();
+    
+    // Load visible images
+    loadVisibleImages();
+}
+
+// Initial load
+loadAllItems();
+createTimeline();
+
+// Initial current date update
+setTimeout(() => {
+    updateCurrentDate();
+}, 100);
+</script>
+{% endblock %}

@@ -1,0 +1,298 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="mb-6">
+    <a href="/dependent/{{ dep_folder }}/month/{{ report.date[:7] }}" class="text-blue-600 hover:text-blue-800 font-medium">← Back to {{ report.date[:7] }}</a>
+</div>
+
+<div class="bg-white rounded-lg shadow p-6">
+    <div class="border-b border-gray-200 pb-4 mb-6">
+        <h2 class="text-2xl font-bold text-gray-900">{{ dep_name }} - {{ report.date }}</h2>
+    </div>
+    
+    {% if report.teacher_notes %}
+    <div class="mb-8">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <span class="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+            Teacher Notes
+        </h3>
+        {% for note in report.teacher_notes %}
+        <div class="bg-green-50 border-l-4 border-green-400 p-4 mb-4">
+            <p class="text-gray-800">{{ note.note }}</p>
+            {% if note.actor %}
+            <p class="text-sm text-gray-600 mt-2">By: {{ note.actor }} at {{ note.capture_time }}</p>
+            {% endif %}
+            {% if note.attachment_id %}
+                {% if is_image(note.attachment_id, dep_folder) %}
+                <img src="/media/{{ dep_folder }}/{{ note.attachment_id }}"
+                     class="mt-3 max-w-sm rounded-lg shadow-sm" 
+                     onerror="this.style.display='none';">
+                {% elif is_video(note.attachment_id, dep_folder) %}
+                <video controls class="mt-3 max-w-sm rounded-lg shadow-sm">
+                    <source src="/media/{{ dep_folder }}/{{ note.attachment_id }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                {% endif %}
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% if report.activities %}
+    <div class="mb-8">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <span class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
+            Activities
+        </h3>
+        {% for activity in report.activities %}
+        {% set outer_loop = loop.index %}
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+            {% if activity.description %}
+            <p class="text-gray-800 mb-2">{{ activity.description }}</p>
+            {% endif %}
+            {% if activity.subject_names %}
+            <div class="flex flex-wrap gap-2 mb-3">
+                {% for subject in activity.subject_names %}
+                <span class="px-2 py-1 bg-yellow-200 text-yellow-800 text-xs rounded-full">{{ subject }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% if activity.snapshots %}
+            <div class="carousel relative bg-white rounded p-3 mb-2" data-carousel="{{ outer_loop }}">
+                <div class="carousel-container overflow-hidden">
+                    <div class="carousel-track flex transition-transform duration-300">
+                        {% for snapshot in activity.snapshots %}
+                        <div class="carousel-slide flex-shrink-0 w-1/3 px-3">
+                            <div class="bg-gray-50 rounded-lg p-3 h-full">
+                                {% if snapshot.note %}
+                                <p class="text-gray-700 mb-2 text-sm">{{ snapshot.note }}</p>
+                                {% endif %}
+                                {% if snapshot.attachment_id %}
+                                    {% if is_image(snapshot.attachment_id, dep_folder) %}
+                                    <div class="relative cursor-pointer" onclick="openModal('/media/{{ dep_folder }}/{{ snapshot.attachment_id }}', 'image')">
+                                        <img src="/media/{{ dep_folder }}/{{ snapshot.attachment_id }}"
+                                             class="w-full h-96 object-cover rounded-lg shadow-sm" 
+                                             onerror="this.style.display='none';">
+                                    </div>
+                                    {% elif is_video(snapshot.attachment_id, dep_folder) %}
+                                    <div class="relative cursor-pointer" onclick="openModal('/media/{{ dep_folder }}/{{ snapshot.attachment_id }}', 'video')">
+                                        <video class="w-full h-96 object-cover rounded-lg shadow-sm" muted>
+                                            <source src="/media/{{ dep_folder }}/{{ snapshot.attachment_id }}" type="video/mp4">
+                                        </video>
+                                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 rounded-lg">
+                                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                                <span class="text-black text-lg">▶</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                {% endif %}
+                                {% if snapshot.created_by %}
+                                <p class="text-xs text-gray-600 mt-2">By: {{ snapshot.created_by.first_name }} {{ snapshot.created_by.last_name }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% if activity.snapshots|length > 1 %}
+                <button class="carousel-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-r" onclick="prevSlide({{ outer_loop }})">&lt;</button>
+                <button class="carousel-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-l" onclick="nextSlide({{ outer_loop }})">&gt;</button>
+                <div class="carousel-dots flex justify-center mt-2 space-x-2">
+                    {% for snapshot in activity.snapshots %}
+                    <button class="w-2 h-2 rounded-full bg-gray-300 {{ 'bg-blue-500' if loop.first else '' }}" onclick="goToSlide({{ outer_loop }}, {{ loop.index0 }})"></button>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% if report.snapshots %}
+    <div class="mb-8">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <span class="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+            Snapshots
+        </h3>
+        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+            <div class="carousel relative bg-white rounded p-3 mb-2" data-carousel="snapshots">
+                <div class="carousel-container overflow-hidden">
+                    <div class="carousel-track flex transition-transform duration-300">
+                        {% for snapshot in report.snapshots %}
+                        <div class="carousel-slide flex-shrink-0 w-1/3 px-3">
+                            <div class="bg-gray-50 rounded-lg p-3 h-full">
+                                {% if snapshot.attachment_id %}
+                                    {% if is_image(snapshot.attachment_id, dep_folder) %}
+                                    <div class="relative cursor-pointer" onclick="openModal('/media/{{ dep_folder }}/{{ snapshot.attachment_id }}', 'image', '{{ snapshot.note|e }}')">
+                                        <img src="/media/{{ dep_folder }}/{{ snapshot.attachment_id }}"
+                                             class="w-full h-96 object-cover rounded-lg shadow-sm" 
+                                             onerror="this.style.display='none';">
+                                    </div>
+                                    {% elif is_video(snapshot.attachment_id, dep_folder) %}
+                                    <div class="relative cursor-pointer" onclick="openModal('/media/{{ dep_folder }}/{{ snapshot.attachment_id }}', 'video', '{{ snapshot.note|e }}')">
+                                        <video class="w-full h-96 object-cover rounded-lg shadow-sm" muted>
+                                            <source src="/media/{{ dep_folder }}/{{ snapshot.attachment_id }}" type="video/mp4">
+                                        </video>
+                                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 rounded-lg">
+                                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                                <span class="text-black text-lg">▶</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                {% endif %}
+                                {% if snapshot.note %}
+                                <p class="text-gray-700 mt-2 text-sm">{{ snapshot.note }}</p>
+                                {% endif %}
+                                {% if snapshot.created_by %}
+                                <p class="text-xs text-gray-600 mt-2">By: {{ snapshot.created_by.first_name }} {{ snapshot.created_by.last_name }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% if report.snapshots|length > 1 %}
+                <button class="carousel-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-r" onclick="prevSlide('snapshots')">&lt;</button>
+                <button class="carousel-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-l" onclick="nextSlide('snapshots')">&gt;</button>
+                <div class="carousel-dots flex justify-center mt-2 space-x-2">
+                    {% for snapshot in report.snapshots %}
+                    <button class="w-2 h-2 rounded-full bg-gray-300 {{ 'bg-blue-500' if loop.first else '' }}" onclick="goToSlide('snapshots', {{ loop.index0 }})"></button>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<!-- Modal -->
+<div id="mediaModal" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center" onclick="closeModal()">
+    <div class="max-w-full max-h-full p-4" onclick="event.stopPropagation()">
+        <div id="modalContent"></div>
+        <button class="absolute top-4 right-4 text-white text-2xl" onclick="closeModal()">&times;</button>
+        <button id="modalPrev" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-75" onclick="prevMedia()">&lt;</button>
+        <button id="modalNext" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-75" onclick="nextMedia()">&gt;</button>
+    </div>
+</div>
+
+<script>
+let currentSlides = {};
+let modalMediaItems = [];
+let currentModalIndex = 0;
+
+function nextSlide(carouselId) {
+    const carousel = document.querySelector(`[data-carousel="${carouselId}"]`);
+    const track = carousel.querySelector('.carousel-track');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelectorAll('.carousel-dots button');
+    
+    if (!currentSlides[carouselId]) currentSlides[carouselId] = 0;
+    const maxSlide = Math.max(0, slides.length - 3);
+    currentSlides[carouselId] = Math.min(currentSlides[carouselId] + 1, maxSlide);
+    
+    track.style.transform = `translateX(-${currentSlides[carouselId] * 33.333}%)`;
+    updateDots(dots, currentSlides[carouselId]);
+}
+
+function prevSlide(carouselId) {
+    const carousel = document.querySelector(`[data-carousel="${carouselId}"]`);
+    const track = carousel.querySelector('.carousel-track');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelectorAll('.carousel-dots button');
+    
+    if (!currentSlides[carouselId]) currentSlides[carouselId] = 0;
+    currentSlides[carouselId] = Math.max(currentSlides[carouselId] - 1, 0);
+    
+    track.style.transform = `translateX(-${currentSlides[carouselId] * 33.333}%)`;
+    updateDots(dots, currentSlides[carouselId]);
+}
+
+function goToSlide(carouselId, slideIndex) {
+    const carousel = document.querySelector(`[data-carousel="${carouselId}"]`);
+    const track = carousel.querySelector('.carousel-track');
+    const dots = carousel.querySelectorAll('.carousel-dots button');
+    
+    const maxSlide = Math.max(0, carousel.querySelectorAll('.carousel-slide').length - 3);
+    currentSlides[carouselId] = Math.min(slideIndex, maxSlide);
+    track.style.transform = `translateX(-${currentSlides[carouselId] * 33.333}%)`;
+    updateDots(dots, currentSlides[carouselId]);
+}
+
+function updateDots(dots, activeIndex) {
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('bg-blue-500', index === activeIndex);
+        dot.classList.toggle('bg-gray-300', index !== activeIndex);
+    });
+}
+
+function openModal(src, type, note = '') {
+    // Build media items list from current page
+    modalMediaItems = [];
+    document.querySelectorAll('[onclick*="openModal"]').forEach(element => {
+        const onclickAttr = element.getAttribute('onclick');
+        const match = onclickAttr.match(/openModal\('([^']+)', '([^']+)'(?:, '([^']*)')?\)/);
+        if (match) {
+            modalMediaItems.push({
+                src: match[1],
+                type: match[2],
+                note: match[3] && match[3] !== 'None' ? match[3] : ''
+            });
+        }
+    });
+    
+    // Find current index
+    currentModalIndex = modalMediaItems.findIndex(item => item.src === src);
+    
+    showModalMedia();
+    document.getElementById('mediaModal').classList.remove('hidden');
+}
+
+function showModalMedia() {
+    const modal = document.getElementById('mediaModal');
+    const content = document.getElementById('modalContent');
+    const prevBtn = document.getElementById('modalPrev');
+    const nextBtn = document.getElementById('modalNext');
+    
+    if (modalMediaItems.length === 0) return;
+    
+    const item = modalMediaItems[currentModalIndex];
+    const noteHtml = item.note && item.note !== 'None' ? `<p class="text-white text-center mt-4 px-4">${item.note}</p>` : '';
+    
+    if (item.type === 'image') {
+        content.innerHTML = `<img src="${item.src}" class="max-w-full" style="max-height: calc(100vh - 8rem); object-fit: contain;" onclick="event.stopPropagation()">${noteHtml}`;
+    } else if (item.type === 'video') {
+        content.innerHTML = `<video controls class="max-w-full" style="max-height: calc(100vh - 8rem); object-fit: contain;" onclick="event.stopPropagation()"><source src="${item.src}" type="video/mp4"></video>${noteHtml}`;
+    }
+    
+    // Show/hide navigation buttons
+    prevBtn.style.display = modalMediaItems.length > 1 ? 'flex' : 'none';
+    nextBtn.style.display = modalMediaItems.length > 1 ? 'flex' : 'none';
+}
+
+function prevMedia() {
+    if (modalMediaItems.length > 1) {
+        currentModalIndex = currentModalIndex === 0 ? modalMediaItems.length - 1 : currentModalIndex - 1;
+        showModalMedia();
+    }
+}
+
+function nextMedia() {
+    if (modalMediaItems.length > 1) {
+        currentModalIndex = (currentModalIndex + 1) % modalMediaItems.length;
+        showModalMedia();
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('mediaModal');
+    modal.classList.add('hidden');
+    document.getElementById('modalContent').innerHTML = '';
+}
+</script>
+{% endblock %}
