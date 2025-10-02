@@ -1,0 +1,15 @@
+scipreprocess/__init__.py,sha256=yiHY3SMXl8XqcpXCCpKu8AD2LKdilBu0_COQ4MytL60,528
+scipreprocess/acronyms.py,sha256=CdXIFCrNlzxB1vUQxvC3rhVtDZjynbQ4LBolcRfIiQM,2371
+scipreprocess/config.py,sha256=EjCOWTZsUQwW_a_YRrlu3BBsxWpT_Q2GXWG6R5q43O4,1010
+scipreprocess/features.py,sha256=0XrWvfbhJmJqHUe012KJtm3YCqSe5TK2QPRwFWEivLo,1672
+scipreprocess/models.py,sha256=JKSCcrE0Co7Ta1Xzt-Oju_LnPxvXGZ-H8BPAvo4ZGSk,682
+scipreprocess/parsers.py,sha256=GcSzUdgzj-yO9M3l4ATD7-PdOoTRWGC3VwOcN6oYilo,13637
+scipreprocess/pipeline.py,sha256=F8gB32n_8uj7fMyHMXQ4OBZGUZWGZ4l6YzkjUk_IUjw,8893
+scipreprocess/preprocessing.py,sha256=6bSZRc5snNuHtEHUn1NGevxHBBngFSuDQztv0mC37iM,4545
+scipreprocess/sectioning.py,sha256=8iILOz91qzzxz5wmZoIiudTyzkZNYOXmiRoZqiS-_0s,7633
+scipreprocess/utils.py,sha256=hWgQ4ro3D0EKD6H8x31i9nO2t3MrWJKxGjp4Fvm0ZJo,3289
+scipreprocess-0.1.0.dist-info/licenses/LICENSE,sha256=5TWzXQOujiF5Mz9TNB5GMEpUnQQBllsK7fSPrJaAxl8,1077
+scipreprocess-0.1.0.dist-info/METADATA,sha256=SCNRzyBRGeR7HrAniUI1BMiBpG10v36u6KLPGPO_ipA,9951
+scipreprocess-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+scipreprocess-0.1.0.dist-info/top_level.txt,sha256=VAxEHTkroFv96irAbMhgoddZQI5DktJKV7h_zA-pT7c,14
+scipreprocess-0.1.0.dist-info/RECORD,,
