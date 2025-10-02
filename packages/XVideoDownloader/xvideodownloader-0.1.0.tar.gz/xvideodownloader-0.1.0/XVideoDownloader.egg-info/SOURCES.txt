@@ -1,0 +1,9 @@
+pyproject.toml
+setup.py
+XVideoDownloader.egg-info/PKG-INFO
+XVideoDownloader.egg-info/SOURCES.txt
+XVideoDownloader.egg-info/dependency_links.txt
+XVideoDownloader.egg-info/requires.txt
+XVideoDownloader.egg-info/top_level.txt
+xdownloader/__init__.py
+xdownloader/main.py

@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: XVideoDownloader
+Version: 0.1.0
+Summary: Python wrapper for X (Twitter) video downloader API
+Author: 0600011
+Author-email: 0600011 <09192006a@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourname/XVideoDownloader
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.0.0
+Dynamic: author
