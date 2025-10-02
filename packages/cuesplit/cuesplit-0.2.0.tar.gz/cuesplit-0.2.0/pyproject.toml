@@ -1,0 +1,32 @@
+[project]
+name = "cuesplit"
+version = "0.2.0"
+requires-python = ">=3.10"
+dependencies = ["pylibcue>=0.5.0"]
+authors = [
+  {name = "Cycloctane", email = "Cycloctane@octane.top"},
+]
+description = "Split and tag CD audio files with information from CUE sheets."
+readme = "README.rst"
+license = "GPL-2.0-only"
+license-files = ["COPYING"]
+keywords = ["cue", "libcue", "ffmpeg", "audio", "music", "cd", "metadata", "tag"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Topic :: Utilities",
+  "Topic :: Multimedia",
+  "Topic :: Multimedia :: Sound/Audio :: CD Audio",
+  "Topic :: Multimedia :: Sound/Audio :: Conversion",
+  "Topic :: Multimedia :: Sound/Audio :: CD Audio :: CD Ripping",
+  "Programming Language :: Python :: 3",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: MacOS",
+]
+
+[project.scripts]
+cuesplit = "cuesplit:cuesplit_cli"
+
+[project.urls]
+Homepage = "https://github.com/Cycloctane/cuesplit"
+Repository = "https://github.com/Cycloctane/cuesplit.git"

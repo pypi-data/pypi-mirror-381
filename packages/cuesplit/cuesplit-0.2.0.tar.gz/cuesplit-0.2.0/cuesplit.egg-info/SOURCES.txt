@@ -1,0 +1,10 @@
+COPYING
+README.rst
+cuesplit.py
+pyproject.toml
+cuesplit.egg-info/PKG-INFO
+cuesplit.egg-info/SOURCES.txt
+cuesplit.egg-info/dependency_links.txt
+cuesplit.egg-info/entry_points.txt
+cuesplit.egg-info/requires.txt
+cuesplit.egg-info/top_level.txt
