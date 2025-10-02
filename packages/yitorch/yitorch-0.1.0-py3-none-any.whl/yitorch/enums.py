@@ -1,0 +1,1 @@
+from yitool.enums import YiEnum
