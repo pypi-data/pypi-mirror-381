@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: cmlibs.merger
+Version: 0.4.0
+Summary: Merge together datapoints or points from different exf file using CMLibs Zinc.
+Author-email: Hugh Sorby <h.sorby@auckland.ac.nz>
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://cmlibs.org
+Project-URL: Repository, https://github.com/CMLibs-Python/cmlibs.merger
+Keywords: Merge,CMLibs,Zinc
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: cmlibs.utils
+Requires-Dist: cmlibs.zinc>=4.2.0
+Dynamic: license-file
+
+
+=============
+CMLibs Merger
+=============
+
+CMLibs merger:  This software can be found on PyPi and installed with the following command::
+
+  pip install cmlibs.merger
