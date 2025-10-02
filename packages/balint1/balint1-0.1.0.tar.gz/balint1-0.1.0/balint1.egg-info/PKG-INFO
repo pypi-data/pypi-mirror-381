@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: balint1
+Version: 0.1.0
+Summary: Páros vagy páratlan szám eldöntő modul
+Author: A TE NEVED
+Author-email: te@email.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary
