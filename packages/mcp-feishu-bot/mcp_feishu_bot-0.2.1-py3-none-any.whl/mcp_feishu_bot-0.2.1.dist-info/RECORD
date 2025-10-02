@@ -1,0 +1,12 @@
+mcp_feishu_bot/__init__.py,sha256=JvMj6DkD3U2lAgSh7husH_nfIutb4FvUseNwQ5Ry4nk,424
+mcp_feishu_bot/bitable.py,sha256=InxH09xzd7jcHDsyTvaXivOs97xbvxfKBInq9_w__BU,52947
+mcp_feishu_bot/client.py,sha256=-y2djjT5C9cRczEEaOYsUjFQU5HQj8STU3m9J6kUeso,7655
+mcp_feishu_bot/drive.py,sha256=u2_Q_NcEGVb9zs6wgWaBsFNPgFLCXF-3qLlAu4yAxGA,8851
+mcp_feishu_bot/main.py,sha256=N19TNd-4MhM1wWydHiDGxrdBzvUsFSsE8xQZVeMnfhw,16317
+mcp_feishu_bot/message.py,sha256=trqFBvZ4zdcvmSJIdo5RCJdyuqcuXa8Js9peCXQEO34,12586
+mcp_feishu_bot/utils.py,sha256=IjBvee4Z3K9x66Wm30dJVj7Y_VuDr-cm0YVJ985tI6E,16786
+mcp_feishu_bot-0.2.1.dist-info/METADATA,sha256=3Ua2eky7iNZmiS9F9jDXSX6aAI6Qpj9xk9S1Zvg-fjE,2625
+mcp_feishu_bot-0.2.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mcp_feishu_bot-0.2.1.dist-info/entry_points.txt,sha256=2ks1zKUzYbw11mhdjg3HFcy5Uz3_rwUaOfN5RbSuSls,60
+mcp_feishu_bot-0.2.1.dist-info/top_level.txt,sha256=J5gjiHpItazWFwcsMk4z3__vfgfR6yotchERs8u9aOE,15
+mcp_feishu_bot-0.2.1.dist-info/RECORD,,
