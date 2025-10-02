@@ -1,0 +1,13 @@
+pdf_anonymizer_core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdf_anonymizer_core/call_llm.py,sha256=yfkXTrCNHluI1wOiDr_rCJ3T4m0fPkophI7__-6zM08,3428
+pdf_anonymizer_core/conf.py,sha256=qK8HAvSFjzh99xbJmlHB_MrBcNP0eVlYUJXri0IfRgo,1434
+pdf_anonymizer_core/core.py,sha256=eEbJAf7QyW0m_ztYmdKuEr__ut91jp45yJJRkup4zMM,5533
+pdf_anonymizer_core/load_and_extract.py,sha256=Cv7w0mClBbVIo9t-KS4wEi_D_FVEI72OPeEq342coiQ,3186
+pdf_anonymizer_core/utils.py,sha256=m3SgYQd5-kDCz0pLESndzaL9mjJdrF6-m40ZS9P8vRc,7153
+pdf_anonymizer_core/prompts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdf_anonymizer_core/prompts/detailed.py,sha256=0TL_obXxmnjIHVsnE6wmXvPqiuZ1Qq3MuA1yW4XX9FQ,2893
+pdf_anonymizer_core/prompts/simple.py,sha256=WwdWX_YMLCrRUGwnSqCv7TX7toDvbm0T7Xp1Hb-IewU,933
+pdf_anonymizer_core-0.3.0.dist-info/METADATA,sha256=qBBs3RsfNM1p2AGTImDhOb_9UbpcfrBLoAJhIQYqKtY,2690
+pdf_anonymizer_core-0.3.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pdf_anonymizer_core-0.3.0.dist-info/top_level.txt,sha256=l2rp39rsHTSCnafWvg_goMFD13peeZRnWvK8If7slrQ,20
+pdf_anonymizer_core-0.3.0.dist-info/RECORD,,
