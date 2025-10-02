@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: isage-common
+Version: 0.1.5
+Summary: SAGE Core Common Utilities
+Author-email: SAGE Team <info@sage-ai.org>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/sage-ai/sage
+Project-URL: Documentation, https://sage-ai.org/docs
+Project-URL: Repository, https://github.com/sage-ai/sage
+Project-URL: Issues, https://github.com/sage-ai/sage/issues
+Keywords: ai,sage,machine learning,artificial intelligence,core,utilities
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: psutil>=6.1.0
+Requires-Dist: dill>=0.3.8
+
+# SAGE Common Utilities
+
+Core common utilities for the SAGE project. This package contains the essential shared components that are used across all SAGE packages.
+
+## Core Modules
+
+- **utils.config**: Configuration management utilities
+- **utils.logging**: Logging framework and formatters  
+- **utils.network**: Network utilities and TCP clients/servers
+- **utils.serialization**: Serialization utilities including dill support
+- **utils.system**: System utilities for environment and process management
+- **_version**: Version management
+
+## Installation
+
+```bash
+pip install isage-common
+```
+
+## Usage
+
+```python
+from sage.common.utils.logging.custom_logger import get_logger
+from sage.common.utils.config.loader import ConfigLoader
+
+logger = get_logger(__name__)
+config = ConfigLoader("config.yaml")
+```
