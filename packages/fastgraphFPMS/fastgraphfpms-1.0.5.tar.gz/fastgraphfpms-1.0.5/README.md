@@ -1,0 +1,156 @@
+# fastgraphFPMS
+
+**fastgraphFPMS** is a Python library for graph theory and algorithms, built with a high-performance C++ core.  
+It provides a flexible way to load graphs from files (multiple formats supported) and run many classical graph algorithms efficiently from Python.
+
+---
+
+## Installation
+
+Install directly from PyPI:
+
+```bash
+pip install fastgraphFPMS
+````
+
+Requirements:
+
+* Python 3.8+
+* (Automatically handled) precompiled C++ extension for your platform
+
+---
+
+## Features
+
+* **Multiple input formats** (auto-detected):
+
+  * Adjacency matrix
+  * CSR 3-list format (`HeadSucc`, `Succ`, `WeightsSucc`)
+  * Explicit edge triples (`u v w`)
+  * Per-line adjacency list (`u v w v w …`)
+* **Efficient CSR backend** in C++ (`HeadSucc`, `Succ`, `WeightsSucc`) with automatic predecessors construction
+* **Algorithms included**:
+
+  * Connected components (CC), strongly connected components (SCC)
+  * Bipartiteness checks
+  * Minimum spanning tree: Prim, Kruskal
+  * Shortest paths: Dijkstra (variants), Bellman–Ford, Sedgewick–Vitter
+  * All pairs shortest paths: Floyd–Warshall
+  * Eulerian path / circuit
+  * Hamiltonian path / circuit
+  * Graph coloring heuristics (Greedy, Welsh–Powell, DSATUR, chromatic helpers)
+  * Max flow: Ford–Fulkerson, Edmonds–Karp
+  * Traversals: BFS, DFS
+
+---
+
+## Usage example (Python)
+
+```python
+from fastgraphFPMS import Graph
+
+# Load a graph from file (auto-detected format)
+g = Graph("examples/csr_three_line.txt")
+
+print("Number of nodes:", g.num_nodes)
+
+# Connected components
+cc_count, cc_nodes = g.find_cc()
+print("Connected components:", cc_count)
+
+# Dijkstra from node 0
+distances, predecessors = g.dijkstra(0)
+print("Shortest path to node 3:", distances[3])
+```
+
+---
+
+## Supported file formats
+
+### 1) CSR three-line format
+
+```
+0 2 5 6 8 9 9
+1 3 2 3 4 5 2 4 5
+2 4 1 2 2 2 2 1 2
+```
+
+### 2) Adjacency matrix
+
+```
+6
+0 2 0 4 0 0
+0 0 1 2 2 0
+0 0 0 0 0 2
+0 0 2 0 1 0
+0 0 0 0 0 2
+0 0 0 0 0 0
+```
+
+### 3) Explicit triples
+
+```
+6
+0 1 2
+0 3 4
+1 2 1
+```
+
+### 4) Per-line adjacency lists
+
+```
+0 1 2 3 4
+1 2 1 3 2
+```
+
+---
+
+## Build from source
+
+If you want to build locally (instead of installing via pip):
+
+```bash
+git clone <repo-url>
+cd fastgraphFPMS
+pip install .
+```
+
+This will build the C++ core with `pybind11` and install the Python package.
+
+---
+
+## Contributing
+
+Contributions are welcome!
+Ideas:
+
+* Extend algorithm coverage
+* Improve Pythonic API
+* Add more graph input/output formats
+* Documentation and tutorials
+
+Please open an issue or PR in the repository.
+
+---
+
+## License
+
+Copyright (c) 2025 Drogo Flavio
+
+Permission est hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
