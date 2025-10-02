@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: genai_labnote
+Version: 0.1.0
+Summary: An AI-powered lab notebook for Jupyter/Colab.
+Author: aniruddha
+License: MIT License
+Project-URL: Homepage, https://github.com/aniruddha-dhawale/genai-lab-notebook
+Project-URL: Issues, https://github.com/aniruddha-dhawale/genai-lab-notebook/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ipython
+Requires-Dist: pandas
+Requires-Dist: faiss-cpu
+Requires-Dist: sentence-transformers
+Requires-Dist: torch
+Requires-Dist: transformers[torch]
+Requires-Dist: accelerate
+Requires-Dist: google-generativeai>=0.5.4
+Requires-Dist: langchain>=0.2.0
+Requires-Dist: langchain-google-genai>=1.0.5
+Requires-Dist: langchain_experimental
+Requires-Dist: python-dotenv
+Dynamic: license-file
