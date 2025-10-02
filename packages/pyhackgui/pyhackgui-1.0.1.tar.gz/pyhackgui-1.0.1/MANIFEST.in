@@ -1,0 +1,8 @@
+# 包含在分发包中的文件
+include README.md
+include LICENSE
+include requirements.txt
+include pyproject.toml
+recursive-include pyhackgui *.py
+global-exclude __pycache__
+global-exclude *.py[co]

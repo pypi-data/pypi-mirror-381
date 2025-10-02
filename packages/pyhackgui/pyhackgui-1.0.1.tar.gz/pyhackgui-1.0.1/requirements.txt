@@ -1,0 +1,3 @@
+# PyHackGUI 依赖包
+pygame>=2.0.0
+pywin32>=227
