@@ -1,0 +1,17 @@
+satchip/__init__.py,sha256=DkU2HslOU85Y5ApBtRVjLkYAtgejVpE7h1cHQbmFWl8,221
+satchip/chip_data.py,sha256=-3PPpbY_9DV3FAVFPoyxL5R1keCGagQXoeOolK2wkwU,4855
+satchip/chip_hls.py,sha256=SrWRHPK30rYN7d7H-HckJJ2FdRo0WtXI95SkvguEjmc,5625
+satchip/chip_label.py,sha256=hh7OPKYN7jbp3gAVdciqwrZZoQjTK96cEOX5wyXoufs,3268
+satchip/chip_sentinel1rtc.py,sha256=rgoNH_iBLIwDpHS_pfF3nxlAJbe4Wn3E7YAP-d8JYHs,6584
+satchip/chip_sentinel2.py,sha256=4EHCn1QRE07JVcejm9xtZr8dspcPJxq4u_Ym-iPUzpA,7575
+satchip/chip_view.py,sha256=TAqtYwuFmQmHcSxAKUm1JyLUYMqmKnATdShFOo2DUwY,2334
+satchip/chip_xr_base.py,sha256=HAcCxDSZRv5GqToqpTDT42drOVjfqv0ctj-6lq5udlQ,716
+satchip/major_tom_grid.py,sha256=uZIMGRS2iGB738EvKP2aP9DS4lS07HGZsTGlkCqDUmE,10562
+satchip/terra_mind_grid.py,sha256=8JR4tSEKMmCKi0noH6ZCwFDJ5hp7yXW2zsj1Buk-ig0,5415
+satchip/utils.py,sha256=FDqSQymEgKGKJg2gdq60s_HjQeTui7M1qrFdv0uIRpU,1461
+satchip-0.4.0.dist-info/licenses/LICENSE,sha256=LB9Dg1g8p-PtVBbCIKMkQqOQnb058xA73FekZ2AOwZ0,1525
+satchip-0.4.0.dist-info/METADATA,sha256=U6blfyRUprN4mENltnvpuEulcMFzOnlMhETtwIvvdmQ,7071
+satchip-0.4.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+satchip-0.4.0.dist-info/entry_points.txt,sha256=sVuC-nINxTOlxReEuOFyrrnw4ZJEXACd-GKQLf-b6GA,122
+satchip-0.4.0.dist-info/top_level.txt,sha256=bfZLhExoxjrq0PkqKcla4mReQlXt72VHj6b3aQtOO8A,8
+satchip-0.4.0.dist-info/RECORD,,
