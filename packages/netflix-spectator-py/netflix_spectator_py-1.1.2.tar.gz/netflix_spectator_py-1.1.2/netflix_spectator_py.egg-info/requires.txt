@@ -1,0 +1,7 @@
+
+[dev]
+check-manifest
+mypy
+pylint
+pytest-cov
+pytest
