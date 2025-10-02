@@ -1,0 +1,23 @@
+[project]
+name = "noaithx"
+version = "0.0.2"
+requires-python = ">=3.0"
+authors = [
+  {name = "Ryan Harvey", email = "rkharvey@mekapaedia.com"},
+]
+description = "Silly little utility for outputting anti-AI comments to make those forced AI code reviews more fun"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICEN[CS]E.*"]
+keywords = ["toy", "comments"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Homepage = "https://github.com/Mekapaedia/noaithx"
+Repository = "https://github.com/Mekapaedia/noaithx.git"
+
+[project.scripts]
+noaithx = "noaithx.main:main"
