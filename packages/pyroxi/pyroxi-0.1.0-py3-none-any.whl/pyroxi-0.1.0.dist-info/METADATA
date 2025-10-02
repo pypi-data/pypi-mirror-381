@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: pyroxi
+Version: 0.1.0
+Summary: A Python package for connecting to a proxy and sending packets.
+Project-URL: Homepage, https://github.com/bettercallninja/pyroxi
+Project-URL: Repository, https://github.com/bettercallninja/pyroxi
+Project-URL: Bug Reports, https://github.com/bettercallninja/pyroxi/issues
+Project-URL: Source, https://github.com/bettercallninja/pyroxi
+Author: bettercallninja
+License: MIT
+License-File: LICENSE
+Keywords: network,packets,proxy
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: Proxy Servers
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: System :: Networking
+Requires-Python: >=3.7
+Requires-Dist: aiohttp>=3.8.0
+Requires-Dist: httpx>=0.24.0
+Requires-Dist: pytest>=7.0.0
+Requires-Dist: requests>=2.25.1
+Requires-Dist: setuptools>=68.0.0
+Description-Content-Type: text/markdown
+
+# pyroxi
+A package for high-speed proxy using
