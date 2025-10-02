@@ -1,0 +1,3 @@
+[console_scripts]
+dbbasic-video = dbbasic_video.cli:main
+dbvideo = dbbasic_video.cli:main
