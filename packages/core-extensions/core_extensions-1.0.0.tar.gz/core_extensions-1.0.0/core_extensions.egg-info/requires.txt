@@ -1,0 +1,6 @@
+core-mixins>=2.0.0
+core-tests>=2.0.1
+tenacity>=8.0.0
+
+[dev]
+core-dev-tools>=1.0.1
