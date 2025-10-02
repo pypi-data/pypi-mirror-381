@@ -1,0 +1,11 @@
+structlog
+fastapi
+orjson
+
+[otlp]
+opentelemetry-api
+opentelemetry-sdk
+
+[tests]
+fastapi-structured-logging[otlp]
+pytest
