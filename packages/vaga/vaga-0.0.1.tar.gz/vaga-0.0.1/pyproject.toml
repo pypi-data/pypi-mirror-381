@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vaga" 
+version = "0.0.1"
+
+authors = [
+    { name = "Emerson Laurentino", email = "emerson@laurentino.co" },
+]
+
+description = "Python library for the Vaga Link API."
+
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 1 - Planning", 
+]
+
+[project.urls]
+homepage = "https://vagaslink.com/"
+source = "https://github.com/laurentino-co/vaga-python"
+issues = "https://github.com/laurentino-co/vaga-python/issues"
