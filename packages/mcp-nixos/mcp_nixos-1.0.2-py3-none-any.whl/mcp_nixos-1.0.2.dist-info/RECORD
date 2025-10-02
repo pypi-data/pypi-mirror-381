@@ -1,0 +1,7 @@
+mcp_nixos/__init__.py,sha256=dsJBNvDN--4kLqk32TdCieWpCu7MpD1ykD54A1Kqn5s,497
+mcp_nixos/server.py,sha256=A4H4i2OFcfaOHvuOmo9vSOfLFXAwY4aTCQfjoW9iHJM,69767
+mcp_nixos-1.0.2.dist-info/METADATA,sha256=uotm5vS9DvwD4pVVcKhhEW4C0YeiwzXWO7Sqtc4vucU,11196
+mcp_nixos-1.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_nixos-1.0.2.dist-info/entry_points.txt,sha256=ycOrggsRhF3ye_PYsk6rtJkFRFzqB0x-pGsAz33Oe4E,52
+mcp_nixos-1.0.2.dist-info/licenses/LICENSE,sha256=WvYSqkThbyAj-Lb08LxUMEZ3D0on4VwGM6ojFCt5aFU,1070
+mcp_nixos-1.0.2.dist-info/RECORD,,
