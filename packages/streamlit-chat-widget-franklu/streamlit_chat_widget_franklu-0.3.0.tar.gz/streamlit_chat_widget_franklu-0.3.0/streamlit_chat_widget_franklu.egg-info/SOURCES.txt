@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+streamlit_chat_widget/__init__.py
+streamlit_chat_widget_franklu.egg-info/PKG-INFO
+streamlit_chat_widget_franklu.egg-info/SOURCES.txt
+streamlit_chat_widget_franklu.egg-info/dependency_links.txt
+streamlit_chat_widget_franklu.egg-info/requires.txt
+streamlit_chat_widget_franklu.egg-info/top_level.txt
