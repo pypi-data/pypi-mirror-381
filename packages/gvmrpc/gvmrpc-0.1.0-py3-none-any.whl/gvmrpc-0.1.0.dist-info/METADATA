@@ -1,0 +1,138 @@
+Metadata-Version: 2.4
+Name: gvmrpc
+Version: 0.1.0
+Summary: GVM RPC Server and Client
+Author-email: Ben Nassif <bennassif@gmail.com>
+License-Expression: MIT
+Project-URL: homepage, https://github.com/bnassif/gvm-rpc
+Project-URL: issues, https://github.com/bnassif/gvm-rpc/issues
+Keywords: greenbone,rpc,gvm,server,client
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: lxml
+Requires-Dist: python-gvm
+Dynamic: license-file
+
+# GVM RPC
+[![Pypi](https://img.shields.io/pypi/v/gvm-rpc)](https://pypi.org/project/gvm-rpc)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://raw.githubusercontent.com/bnassif/gvm-rpc/main/LICENSE)
+![GitHub Release Date](https://img.shields.io/github/release-date/bnassif/gvm-rpc)
+
+A simple RPC server and client using Python's `xmlrpc.server` and `xmlrpc.client` in tandem with Greenbone's `python-gvm` package.
+
+## Installation
+```bash
+# PyPi Installation
+pip install gvm-rpc
+# GitHub Installation
+python -m pip install git+'https://github.com/bnassif/gvm-rpc.git'
+```
+
+## Usage
+
+### Client
+The client, once imported, works exactly like the `gvm.protocols.gmp.Gmp` object.
+
+Functions called against the client are proxied through the XML-RPC server where it is then sent to gvmd.sock for processing.
+The returned `lxml.etree` objects are transformed to strings in transport, and transformed back into `lxml.etree` by the client.
+
+> ***Note**:
+Because the `GvmServerProxy` object just relays attempted `obj.__getattr__()` calls, IDE's will not be aware of potential Gmp calls.  
+Consult the [`python-gvm` usage documentation](https://greenbone.github.io/python-gvm/api/gmpv224.html) for available functions and parameters.*
+
+#### Basic Usage
+
+```python
+from gvmrpc.client import GvmServerProxy
+
+hostname = 'http://localhost:8000'
+username = 'user'
+password = 'secret'
+
+client = GvmServerProxy(username, password, host)
+
+# From here on, the client behaves similarly to the Gmp object
+
+client.get_version()
+client.get_targets()
+...
+
+# It is also possible to handle multiple calls at once using the custom MultiCall class
+from .client import MultiCall
+
+# Create a MutliCall instance
+multi_call = MultiCall()
+
+# Add calls to the MultiCall object
+multi_call.get_version()
+multi_call.get_targets()
+
+# Execute the commands
+multi_call()
+```
+
+#### Secure Usage
+When the server is secured by an SSL, which it should **always** be because of Basic auth, it is necessary to assign an SSL context to the client.
+
+```python
+from gvmrpc.client import GvmServerProxy
+import ssl # We'll need this module
+
+hostname = 'http://localhost:8000'
+username = 'user'
+password = 'secret'
+
+# Create the context object
+context = ssl.SSLContext(protocol=ssl.PROTOCOL_TLS)
+
+# Bind the SSLContext to the client
+client = GvmServerProxy(username, password, host, ssl_context=context)
+```
+
+
+### Server
+The server runs as a daemon on the GVS server you wish to manage.
+
+The recommended deployment option is to use the accompanying Docker Image if running GVS in Docker.  
+Otherwise, the server can also be run as a system-level service.
+
+For details on flags available at runtime for both deployments, consult the [`run.py`](run.py) script in the repo root.
+
+#### Container Usage
+
+When running GVM RPC as a sidecar container, it is important to bind the `gvmd_socket_vol` volume in the appropriate place.
+
+You will likely also want to expose this container with an SSL-terminating reverse proxy like nginx to secure usage.
+
+For an example on deploying the container as a sidecar via Docker Compose overrides, reference [this example file](include/docker-compose.override.yml).
+
+#### System-Level Service
+
+Running GVM RPC as a service involves additional overhead on maintaining the Python environment it will run in.
+
+It is not recommended to use this option unless you know what you are doing.
+
+For an example on how to do this with systemd, reference [this example service](include/gvm-xmlrpc.service).
+
+#### Available Options
+
+The provided runtime script defaults to serving without an SSL. Please review the options below and secure the server as necessary.
+
+| flag | default | description|
+|------|---------|------------|
+| `--address` | `127.0.0.1` | The local address to listen on |
+| `--port` | `8000` | The local port to listen on |
+| `--socket` | `/gvmd/gvmd.sock` | The path to the GVM socket |
+| `--ssl-cert` | | The path to the SSL certificate to be used |
+| `--ssl-key` | | The path to the SSL key to be used |
+
+> ***Note**: The SSL certificate and key must both be supplied or not supplied*
+
+## License
+MIT - Feel free to use, extend, and contribute.

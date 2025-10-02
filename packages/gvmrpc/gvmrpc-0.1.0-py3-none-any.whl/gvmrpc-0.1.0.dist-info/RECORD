@@ -1,0 +1,10 @@
+gvmrpc/__init__.py,sha256=rSB-vN6MYDFN1nx7nuuQoggZvEFYvMmhtUSEUv3wQkA,62
+gvmrpc/__version__.py,sha256=i56UlGoAjeIEVVZlU6YDFWwcRLu23p6qTMxZp0L1Ax8,41
+gvmrpc/client.py,sha256=nvLQVR7WmqoQGtzYBE8EHN2OyQGKkICz8aQB7w-JECI,4189
+gvmrpc/server.py,sha256=Eg-bDIKuxC4rn3MGp9uRzADeTZ-Bntbz5hjTvois4ng,4200
+gvmrpc-0.1.0.dist-info/licenses/LICENSE,sha256=HTFv0FOODhOYnyoXWkxiEotmK5FNI43sgwp5YibWHMo,1078
+gvmrpc-0.1.0.dist-info/METADATA,sha256=cfrNxsIGHZwX_DS1M5C0WyQMVLtkV_Vgd00soITYers,4855
+gvmrpc-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+gvmrpc-0.1.0.dist-info/entry_points.txt,sha256=Wt5dAgTbNANu8UksDtZzebWZZpXekU1Q-GG2zudLJrs,46
+gvmrpc-0.1.0.dist-info/top_level.txt,sha256=OkL5DQfRXTEqrHd8li5XDWks3AFr5znextpSgZtX-W8,7
+gvmrpc-0.1.0.dist-info/RECORD,,
