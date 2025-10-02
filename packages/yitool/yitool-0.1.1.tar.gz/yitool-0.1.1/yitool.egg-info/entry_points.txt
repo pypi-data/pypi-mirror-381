@@ -1,0 +1,2 @@
+[console_scripts]
+yitool = yitool.__main__:main
