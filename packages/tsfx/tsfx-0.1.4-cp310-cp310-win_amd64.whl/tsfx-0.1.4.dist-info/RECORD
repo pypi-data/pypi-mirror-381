@@ -1,0 +1,8 @@
+tsfx-0.1.4.dist-info/METADATA,sha256=t2gAdi0Hew_fC3bXwNhHlE3iTOburZUUd_eiy56Fc8g,1008
+tsfx-0.1.4.dist-info/WHEEL,sha256=Iz7QqxpWQRXToFIDkGspPPKDuV_klwuhW8ziiU5jhR8,96
+tsfx/__init__.py,sha256=ezWFUdm2DTK6oCIbPRNGn8175-6givjfFep6USZAK2s,123
+tsfx/_tsfx.py,sha256=yOtx13EaRS9zK1vxQqcoGHvUudN__MrhzqJYGuG48hw,597
+tsfx/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tsfx/tsfx.cp310-win_amd64.pyd,sha256=V_c9DRZiMkhUSwzZ3lMMGsIkhVbVoQthMhPjUUsOr9M,71111168
+tsfx/tsfx.pyi,sha256=akmqLA00qghRXhMcLFa56YjSTg5aGzaWFmE8CFwLDTs,1052
+tsfx-0.1.4.dist-info/RECORD,,
