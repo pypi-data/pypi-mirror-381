@@ -1,0 +1,8 @@
+pandas<3
+orjson
+xarray
+covjson-pydantic
+conflator
+rasterio
+scipy
+pre-commit
