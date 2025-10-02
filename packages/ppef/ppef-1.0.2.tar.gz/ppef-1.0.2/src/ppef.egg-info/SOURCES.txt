@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+include/ppef.h
+src/bindings.cpp
+src/ppef.cpp
+src/ppef.egg-info/PKG-INFO
+src/ppef.egg-info/SOURCES.txt
+src/ppef.egg-info/dependency_links.txt
+src/ppef.egg-info/requires.txt
+src/ppef.egg-info/top_level.txt
+tests/test_bindings.py
