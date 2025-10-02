@@ -1,0 +1,15 @@
+.gitignore
+LICENSE
+NOTICE
+README.md
+pyproject.toml
+.github/workflows/release.yml
+src/mqss_config.yml
+src/QUARK_plugin_mqss.egg-info/PKG-INFO
+src/QUARK_plugin_mqss.egg-info/SOURCES.txt
+src/QUARK_plugin_mqss.egg-info/dependency_links.txt
+src/QUARK_plugin_mqss.egg-info/requires.txt
+src/QUARK_plugin_mqss.egg-info/top_level.txt
+src/quark_plugin_mqss/__init__.py
+src/quark_plugin_mqss/circuit_provider.py
+src/quark_plugin_mqss/job_execution.py

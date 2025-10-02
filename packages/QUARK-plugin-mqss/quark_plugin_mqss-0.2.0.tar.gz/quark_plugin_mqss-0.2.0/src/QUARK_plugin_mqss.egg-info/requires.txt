@@ -1,0 +1,3 @@
+quark-framework>=0.4.2
+qiskit>=2.1.2
+mqss-qiskit>=0.2.0

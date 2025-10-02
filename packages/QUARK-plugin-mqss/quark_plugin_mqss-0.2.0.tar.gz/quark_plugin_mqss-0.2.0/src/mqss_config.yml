@@ -1,0 +1,7 @@
+plugins: [
+    "quark_plugin_mqss"
+    ]
+
+pipeline: [
+    "circuit_provider", "job_execution"
+]

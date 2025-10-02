@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: QUARK-plugin-mqss
+Version: 0.2.0
+License-Expression: Apache-2.0
+Project-URL: Homepage, https://github.com/QUARK-framework/QUARK-plugin-mqss
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: quark-framework>=0.4.2
+Requires-Dist: qiskit>=2.1.2
+Requires-Dist: mqss-qiskit>=0.2.0
+Dynamic: license-file
+
+# QUARK-plugin-mqss
+
+### Provided Modules:
+
+| Module           | Upstream Interface            | Downstream Interface                  |
+|------------------|-------------------------------|---------------------------------------|
+| circuit_provider | None                          | quark.interface_types.circuit |
+| job_execution    | quark.interface_types.circuit | None                                  |
