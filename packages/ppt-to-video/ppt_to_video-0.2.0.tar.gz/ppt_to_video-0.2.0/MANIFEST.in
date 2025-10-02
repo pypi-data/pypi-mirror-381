@@ -1,0 +1,7 @@
+include README.md
+
+recursive-include src *
+recursive-include tests *
+recursive-include docs *
+
+global-exclude __pycache__ *.pyc *.pyo
