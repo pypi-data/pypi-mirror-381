@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "sf-veritas"
+version = "0.9.10"
+description = "Middleware for Django, Flask, and FastAPI to intercept requests, logs, and exceptions."
+authors = ["Eric Meadows <em@sailfishqa.com>"]
+readme = "README.md"
+keywords = ["publishToPublic"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+deepmerge = "^1.1.1"
+fire = "^0.7.0"
+ntplib = "^0.4.0"
+pydantic = "^2.9.2"
+requests = "^2.25.1"
+tldextract = "^5.1.2"
+python-dateutil = "^2.9.0.post0"
+
+[tool.poetry.extras]
+django = ["django"]
+flask = ["flask"]
+fastapi = ["fastapi"]
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+
+[tool.poetry.scripts]
+sf-veritas = "sf_veritas.cli:fire_main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
