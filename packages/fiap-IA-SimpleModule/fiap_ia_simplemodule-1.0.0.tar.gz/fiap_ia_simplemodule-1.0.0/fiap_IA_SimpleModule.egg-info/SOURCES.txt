@@ -1,0 +1,9 @@
+README.md
+setup.py
+cursoFiap/__init__.py
+cursoFiap/core.py
+fiap_IA_SimpleModule.egg-info/PKG-INFO
+fiap_IA_SimpleModule.egg-info/SOURCES.txt
+fiap_IA_SimpleModule.egg-info/dependency_links.txt
+fiap_IA_SimpleModule.egg-info/top_level.txt
+tests/test_core.py
