@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "erabytse-sweep"
+version = "0.1.0"
+description = "A ritualistic tool to recycle digital clutter with intention."
+authors = [{name = "takouzlo", email = "f.bfalik@gmail.com"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities",
+    "Intended Audience :: End Users/Desktop",
+]
+
+[project.scripts]
+erabytse-sweep = "erabytse.sweep:main"
