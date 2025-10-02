@@ -1,0 +1,11 @@
+nvidia/cu13/bin/cudss64_0.dll,sha256=1zqmboxrmmoAbroRc4sz9meJ8ML7467mdgMG8nzWjgE,86624768
+nvidia/cu13/bin/cudss_mtlayer_vcomp140.dll,sha256=gi_T_oRcC6n18KiWzRVY2Wwm0w7IWZ121cfXYQFBgSo,16896
+nvidia/cu13/include/cudss.h,sha256=UFycZv6QPYCbzD5aQoWkyP261bCiCtNib5uRJKS9Ba0,14785
+nvidia/cu13/include/cudss_distributed_interface.h,sha256=stvjlgqhRlpozCQt5eBJuixBvZxC8FVNZhJrM8fbLbw,4251
+nvidia/cu13/include/cudss_threading_interface.h,sha256=TlZ4ST-gle7VcexZ6WpT9oNCA3yxXjaLRjI_8PXTx2A,1070
+nvidia/cu13/lib/cudss.lib,sha256=81uewT6UDrpFERgLI2NfSVoqTz5ImFD7eWyTazdQf8U,9132
+nvidia/cu13/lib/cudss_mtlayer_vcomp140.lib,sha256=l2Sidt4NAYKHvUQ9SaWLn9pcSHJoqaJ86kSNAh2BGPs,2496
+nvidia_cudss_cu13-0.7.0.20.dist-info/METADATA,sha256=t0XuQtZilyoKUx7r4IE7v5k3he23RpoeE52SIDoNCkQ,1706
+nvidia_cudss_cu13-0.7.0.20.dist-info/WHEEL,sha256=ZjXRCNaQ9YSypEK2TE0LRB0sy2OVXSszb4Sx1XjM99k,97
+nvidia_cudss_cu13-0.7.0.20.dist-info/top_level.txt,sha256=fTkAtiFuL16nUrB9ytDDtpytz2t0B4NvYTnRzwAhO14,7
+nvidia_cudss_cu13-0.7.0.20.dist-info/RECORD,,
