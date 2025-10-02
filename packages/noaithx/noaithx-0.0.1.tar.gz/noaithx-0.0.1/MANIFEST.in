@@ -1,0 +1,3 @@
+include noaithx/content/*.json
+include noaithx/content/opener.txt
+include noaithx/content/closer.txt
