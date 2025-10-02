@@ -1,0 +1,61 @@
+[project]
+name = "mkdocs-include-stubs-plugin"
+dynamic = ["version"]
+authors = [
+  {name = "Davide Marchegiani", email="davide.marchegiani@anu.edu.au"},
+]
+maintainers = [
+    {name = "Davide Marchegiani", email="davide.marchegiani@anu.edu.au"},
+]
+description = "Mkdocs plugin to include stubs (single pages) from multiple GitHub branches of a repo within a mkdocs website build."
+license = { file = "LICENSE" }
+keywords = ["mkdocs", "plugin", "mkdocs plugin", "access-nri"]
+requires-python = ">=3.11"
+dependencies = [
+    "beautifulsoup4>=4.13.4",
+    "mkdocs>=1.6",
+    "termcolor>=3.0",
+    "versioneer>=0.28",
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ipykernel>=6.0",
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "pytest-subprocess>=1.5.3",
+]
+
+[project.urls]
+Repository = "https://github.com/ACCESS-NRI/mkdocs_include_stubs_plugin"
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools>64",
+    "versioneer[toml]",
+]
+
+[project.entry-points."mkdocs.plugins"]
+include-stubs = "include_stubs.plugin:IncludeStubsPlugin"
+
+[project.scripts]
+mkdocs = "include_stubs.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+[tool.versioneer]
+VCS = "git"
+style = "pep440"
+versionfile_source = "src/include_stubs/_version.py"
+versionfile_build = "include_stubs/_version.py"
+tag_prefix = ""
+parentdir_prefix = "mkdocs-include-stubs-plugin-"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+testpaths = ["tests/"]
+addopts = "--cov=src --cov-report=term-missing"
