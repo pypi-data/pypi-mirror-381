@@ -1,0 +1,2 @@
+[console_scripts]
+dora-policy-inference = dora_policy_inference.main:main
