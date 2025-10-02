@@ -1,0 +1,2 @@
+recursive-include src/doc_to_benchmark/static *
+include README.md
