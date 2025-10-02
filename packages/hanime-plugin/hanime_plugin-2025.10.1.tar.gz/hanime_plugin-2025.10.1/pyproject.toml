@@ -1,0 +1,16 @@
+[project]
+name = "hanime-plugin"
+version = "2025.10.01"
+description = "hanime extractor plugin for yt-dlp"
+authors = [
+  { name = "Cynthia", email = "cynthia2048@proton.me" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+
+[tool.poetry]
+packages = [{ include = "yt_dlp_plugins" }]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
