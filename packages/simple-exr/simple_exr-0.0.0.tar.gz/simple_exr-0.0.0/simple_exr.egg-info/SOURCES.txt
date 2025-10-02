@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+simple_exr/__init__.py
+simple_exr/core.py
+simple_exr.egg-info/PKG-INFO
+simple_exr.egg-info/SOURCES.txt
+simple_exr.egg-info/dependency_links.txt
+simple_exr.egg-info/requires.txt
+simple_exr.egg-info/top_level.txt
