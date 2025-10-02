@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: modelcub
+Version: 0.0.1
+Summary: Train and deploy AI models in minutes — zero config.
+Author: Seif Boukerdenna
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# 🐻 ModelCub
+From cub to beast — a tiny CLI to get you started.
+
+## Install (editable)
+```bash
+pip install -e .
