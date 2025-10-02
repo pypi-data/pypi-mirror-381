@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/ootrain/__init__.py
+src/ootrain.egg-info/PKG-INFO
+src/ootrain.egg-info/SOURCES.txt
+src/ootrain.egg-info/dependency_links.txt
+src/ootrain.egg-info/top_level.txt
