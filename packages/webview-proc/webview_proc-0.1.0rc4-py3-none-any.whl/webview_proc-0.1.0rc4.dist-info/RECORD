@@ -1,0 +1,8 @@
+webview_proc/.gitignore,sha256=tWvEr3sBkY2ODntRp4_IUz3cidH-xu1efiOQK9DfK04,12
+webview_proc/__init__.py,sha256=8POd7U-AihHtAW--WMBu6RRyw6LRn00vAyYW_R8lcZI,298
+webview_proc/_version.py,sha256=jood7Jjfli4IDUK8dEEYXMWIjBDuvF49znNVIQ9muLA,714
+webview_proc/webview_proc.py,sha256=O41zuR597UOysFCKi0e0pSY08l9f-NCVmd0YkPFsExU,19375
+webview_proc-0.1.0rc4.dist-info/METADATA,sha256=-zS0fk3YySDzBwbe_n7lTqQRKjM1lMUGR3aFlv6ep-k,4255
+webview_proc-0.1.0rc4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+webview_proc-0.1.0rc4.dist-info/licenses/LICENSE,sha256=lq7rgrQN_Q5M7FiH3xus5gitMCK4UCInOx8wMs8cdoY,1074
+webview_proc-0.1.0rc4.dist-info/RECORD,,
