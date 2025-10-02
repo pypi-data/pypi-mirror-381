@@ -1,0 +1,169 @@
+# -*- coding: utf-8; mode: structured-text -*-
+
+= Page Management =
+
+Overview:
+
+  * Page content can be directly edited as an ``LCG structured text'' document.
+    The format is described in the [/_doc/lcg/structured-text formatting
+    manual].
+
+  * Images, external documents, sound recordings, videos and other types of
+    additional content may be included within a page using [#attachments].
+
+  * [modules Extension modules] can be used for embedding ``smart'' content
+    within a page.
+
+  * Pages can be arranged into a hierarchy, which is automatically respected by
+    site navigation menus.
+
+  * The content of each page can be defined in multiple language variants.
+
+Table of Contents: @TOC@
+
+
+== Main menu management ==
+
+The main menu is generated automatically by the system according to page
+hierarchy and order.  See also [navigation] for more information about menus
+from the point of view of a website visitor.
+
+Positioning a page within the main menu is controlled by certain values within
+page ``Global options'' (these settings apply to all language variants of given
+page).  Use the button ``Options'' in page actions menu to change these values.
+
+The field /Parent/ defines the immediately upper page in the hierarchy.  You
+can leave it blank to put the page to the top level.
+
+The field /Menu order/ defines the order of pages at the same hierarchy level.
+Pages will be ordered according to this number so that pages with lower values
+will appear first.  If you leave this field blank when creating a new page, the
+number will be assigned automatically to put the page to the end of the
+corresponding menu hierarchy level (as set by "Parent").
+
+If you check the /Hidden/ checkbox, the page will not appear in the main menu.
+Such page can be still displayed if the user enters its explicit address (see
+[#uris]) or if you create a link from some other page (recommended).  So hiding
+pages only controls their presence in the menu and has no effect on security or
+availability of the page itself.
+
+
+== Page URIs == uris
+
+Page URI (address of the page as seen from outside) is determined by the
+/identifier/.  The page with an identifier set to "mypage", for example, will
+have the followin address (URI): "\http://www.yourdomain.com/mypage"
+
+You need to fill in a valid identifier for each new page.  It is not possible
+to change the identifier later, since this would break all links to this page
+from the internet (including search engines), so please think twice before
+choosing an identifier.  You should also remember, that the identifier is the
+same for all language variants of the page, so it is a good practise to use
+English names for them (at least for multilingual sites which have an English
+version).
+
+The URIs intentionaly ignore the page hierarchy -- the page "subpage", which is
+a subpage of "page" will still have the URI
+"\http://www.yourdomain.com/subpage", not
+"\http://www.yourdomain.com/page/subpage".  This approach allows you to make
+changes in page hierarchy without breaking external links.
+
+
+== Page states ==
+
+The page state (displayed in WMI) can have one of the following values:
+
+   * /Not published/ ... The page is not published in the current language so
+     the visitors can not access it.
+
+   * /Changed/ ... The page is published in the current language, but the
+     content was modified since last publication, so visitors still get the
+     previous content.
+
+   * /OK/ ... The page is published and up to date.
+
+
+== Published/unpublished pages ==
+
+It is possible to control the availability of each page by
+publishing/unpublishing it using the corresponding action buttons.  An
+unpublished page exist in the database, so it is possible to work on its
+content, but it is not visible to website visitors.  Unpublished pages only
+appear in the WMI.
+
+The state of publication can be controlled independently for each language
+variant.  The changes always apply just for the current language, so it is
+necessary to switch the language to be able to publish/unpublish items in other
+languages.  This feature in fact allows you to have a different set of pages
+available in each language variant of the website.
+
+
+== Access control (private pages) ==
+
+Private pages are only accessible to logged in users (only registered users
+enabled by the administrator are able to log in).  A private page may appear in
+the menu, so anyone can see that it exists, but only authorized users will be
+able display it.  Private items must still be published to become available for
+the website visitors (these two properties are independent).
+
+
+== Attachments == attachments
+
+Attachments are external files attached to pages.  You can attach images,
+documents, sound recordings, videos etc.
+
+
+You can manage page attachments through the item "Attachments" in the menu of
+actions at the bottom of each page (this menu appears only when you are logged
+in and you have the privileges for given page).  Here you can add new
+attachments or edit the existing ones.
+
+You can supply a title and description for each attachment apart from the
+actual file.  Title and description are not mandatory, but it is recommended to
+fill them out.  Title, if supplied, will be automatically used instead of the
+filename when the attachment link is displayed on the page.  The description is
+used in the automatic attchements list (see below) and as link tooltip.  Images
+are displayed inline and the title and description are used as its ALT/LONGDESC
+attributes.
+
+There are two ways to use the attachments within the page content: @TOC@
+
+=== Automatic attachment lists ===
+
+If you leave the field ``Listed'' checked in the attachment properties, the
+attachment will be listed automatically.  If you provide a title, this title
+will appear in the list instead of the filename.  If you provide a description,
+it will appear in the list.
+
+Please note that the title and description are language specific texts, so when
+you enter them, they are used only for the current language.  You will need to
+switch the language and enter the values again to supply their multiple
+language variants.
+
+The attachment file, on the other hand, is independent on the language, so
+uploading a new file changes the attachment for all language variants of the
+page.
+
+
+=== Explicit references ===
+
+You can refer to any attachment by simply putting its filename into square
+brackets anywhere within the page text.  Images will be automatically displayed
+inline, for other file types a link will be created.  Thus a reference to a PDF
+document will automatically open the document in user's browser (or PDF viewer)
+and a reference to an MP3 file will start playback when the user clicks the
+link.
+
+/Example:/
+
+When you create a new attachment by uploading a file 'image.jpg', you can
+include this file within the page by the following reference:
+
+-----
+[image.jpg]
+-----
+
+Attachment links are treated as any other links within the LCG structured text
+document.  You can specify an explicit title, enforce image alignment etc.  See
+the [/_doc/lcg/structured-text formatting manual] for more information.
+

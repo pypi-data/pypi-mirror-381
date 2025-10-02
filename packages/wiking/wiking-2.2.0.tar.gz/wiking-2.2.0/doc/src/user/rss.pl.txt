@@ -1,0 +1,19 @@
+# -*- coding: utf-8; mode: structured-text -*-
+
+== Kanały (RSS) ==
+
+Technologia odczytywania nagłÂówków wiadomości (Web Feeds) pozwala użytkownikom
+internetu na zapisywanie się do specyficznych źródeł zwanych kanały RSS, aby
+otrzymać szybki przegląd wiadomości, artykułÂów czy innych informacji. Odwiedź
+http://pl.wikipedia.org/wiki/RSS po więcej informacji o RSS.
+
+Niektóre przeglądarki mają wbudowane wspomaganie dla RSS, inne wymagają
+zainstalowania czytników RSS jako zewnętrznych aplikacji bądź używania serwisów
+internetowych jak na przykład: >>[http://my.yahoo.com My Yahoo!]<<,
+>>[http://reader.google.com/ Google Reader]<< lub >>[http://www.bloglines.com/
+Bloglines]<<.
+
+Wiking umożliwia odczytywanie obiektów z róÂżnych sekcji witryny internetowej
+używając protokołu RSS. ŁÂącze RSS znajduje się ponad każdą sekscją
+wspomagającą ten protokoł. Można użyć tego adresu dla ustawienia swojego
+czytnika RSS.

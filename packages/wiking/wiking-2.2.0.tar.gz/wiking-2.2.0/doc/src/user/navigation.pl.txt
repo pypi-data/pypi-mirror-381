@@ -1,0 +1,130 @@
+# -*- coding: utf-8; mode: structured-text -*-
+
+= Nawigacja =
+
+Spis Treści: @TOC@
+
+
+== GłÂówne menu nawigacyjne == menus
+
+GłÂówne menu nawigacyjne znajduje się na górze strony jako szereg łÂączy. W
+przypadku zmodyfikowanego stylu moze to wyglądać zupełnie inaczej, ale cel
+pozostaje ten sam. Jest to lista łÂączy do naistotniejszych sekcji
+witryny. Aktywny obiekt jest wizualnie zaznaczony. W przeglądarce tekstowej
+gdzie wizualne zaznaczenie może być pominięte taki aktywny obiekt zaznaczony
+jest gwiazdką. Zapewnia to użytkownikowi orientacje w położeniu w danej
+chwili. Ponieważ menu jest powtarzane na każdej stronie, można je przeskoczyć
+-- spojrz na [#skip].
+
+
+== Skróty kluczami == shortcuts
+
+Uwzględniono kilka skrótów kluczami (klucze dostępu) ułatwiające nawigacje:
+
+  * *1* ... przejdź do strony domowej
+  * *2* ... przeskocz powtarzającą się treśc (przejdź do właściwej treści)
+  * *3* ... przeskocz do menu głÂównego
+  * *9* ... wejdź do/opuśÂć zarządzający interfejs Wikinga
+  * *0* ... pokaż Oświadczenie o Dostępności
+
+Użycie w róÂżnych przeglądarkach:
+
+  * Internet Explorer -- Alt + numer Enter
+  * Firefox 1.x, Mozilla, Netscape 7+  -- Alt + numer
+  * Konqueror -- naciśnij i uwolnij Ctrl, numer
+  * Opera -- Shift + Esc + numer
+  * Safari, Firefox, Mozilla, Netscape, Omniweb (on Mac OS X) -- Ctrl +
+    numer
+
+Skróty kluczami nie powinny być uważane za zasadniczą formę nawigacji. Ich
+użycie zmienia się w zależności od przeglądarki, a niektóre z nich wogóle ich
+nie uwzględniają. Dodatkowo, jesli powiazanie kluczy jest niestandardowe to
+zachowanie tych skrótów może być inne na róÂżnych stronach.
+
+Wiele technologii specjalistycznych stosuje swoje własne funkcje nawigacyjne i
+one winny być zawsze preferowane. Jeśli na przykład treśÂć strony rozpoczyna
+się od nagłÂówka to funkcja odnalezienia nagłÂówka stosowana przez
+specjalistyczna technologie winna być użyta.
+
+
+== Przeskocz powtarzającą się treśÂć == skip
+
+Pewne częÂści strony powtarzają się -- pojawiają sie na każdej stronie witryny
+i z reguły nie zmieniają się. Te powtarzające się częÂści to:
+
+  * [#menus]
+  * [#languages]
+  * [#panels]
+
+Wiking wprowadza kilka funkcji upraszczających nawigacje strony z
+uwzględnieniem powtarzającej się treści.  "Przeskocz" łÂącza może być użyte w
+przeglądarka tekstowych. Piersze łÂącze umieszczone na początku strony
+umożliwia przeskoczenie wszelkiej powtarzającej się treści. Następnie każdy z
+powtarzających się fragmentów może być przeskakiwany indiwidualnie.
+
+Również [#shortcuts] pozwalają na przeskakiwanie powtarzającej się treści.
+
+
+== Spisy Treści ==
+
+Bardziej złożone strony o kilkunastu sekcjach (takie jak ta) zwykle używają
+spisu treści. Spis treści oddaje strukture chierachiczną sekcji jako grupy
+łÂączy pozwalając na bezpośrednie przemieszczenie się do rządanej sekcji.
+NagłÂówek każdej sekcji stanowi łÂącze umieszczane w spisie treści. Taka funkcja
+może znacząco ułatwić poruszanie się szczególnie w dłuższym tekście. Można to
+wypróbować na tej sronie.
+
+Niektóre strony mogą używac wielokrotnych spisów treści zależnie od poziomu w
+chierachii danej strony. W takich razach, back-reference łÂącze od nagłÂówka
+danej sekcji prowadzi do najbliższego, wyżej położonego spisu treści w
+chierarchii. 
+
+
+== Wybór Języków == languages
+
+Wiking wspóÂłpracuje z wieloma językami.
+
+Wybór języka dla danego użytkownika dokonywany jest automatycznie na bazie
+techniki [http://en.wikipedia.org/wiki/Content_negotiation Content
+Negotiation]. Technika opiera sie na wyborze języka używanej przeglądarki. Dla
+przykładu, anglojęzyczny użytkownik powinien wybrać angielski jako języ
+podstawowy przeglądarki plus dodatkową ilośÂć języków, którymi posłuje się
+tenże użytkownik.
+
+Wybór języka dokonywany jest na tej bazie. Jeśli żÂądana strona jest
+udostepniana w jednym z wybranym przez użytkownika przeglądarki języków,
+pierszy wariant językowy jest wyświetlany użytkownikowi. Jeśli żaden z językow
+nie może być zaoferowany, błÂędna strona 406 (Not Acceptable) jest wyświetlana
+użytkownikowi i może on dokonać samodzielnego wyboru z pośród oferowanych
+języków.
+
+Poza automatycznym wyborem opisanym powyżej, użytkownik może dokonać wyboru
+języka z menu językowego. To menu wyświetlone jest w prawym górnym rogu strony
+(przy nie zmienionym stylu), kiedy występuje kilka wariantów językowych danej
+witryny. Jeśli występuje tylko jeden wariant językowy to menu językowe nie
+pojawia się. Menu to jest umieszczone za raz pod głÂównym menu nawigacyjnym w
+przeglądarkach tekstowych. Ponieważ grupa języków może być róÂżna dla każdej ze
+stron to i menu wyboru języka będzie się róÂżnić. BieżÂący język jak również
+aktywny obiekt z menu są zaznaczone wizualnie bądź przy pomocy gwiazdki dla
+przeglądarek tekstowych.
+
+Jesli ciastka są aktywne to ręcznie wybrany język będzie preferowanym językiem
+nawet bardziej niż preferencje zawarte w przeglądarce. Taka funkcja pozwala na
+nadpisanie ustawień przeglądarki co może być korzystne w sytuacjach jak
+korzystanie z kawiarenek internetowych czy publicznych terminalii. Jednakże,
+ustawienia przeglądarki powinny być preferowaną metodą.
+
+
+== Panele == panels
+
+Panele są oknami krótkich informacji, które są wyświetlane na prawej cześci
+strony przy niezmienionym stylu. Okna te zwykle przedstawiają najistotniejsze
+informacje dla danej witryny. Panele są niezmienione na każdej stronie witryny
+internetowej. Na przykład panel wiadomości może wyświetlać wiadomośÂć z
+łÂączani do bardziej szczegóÂłowego omówienia w sekcji wiadomości.
+
+Panele mogą być ukrywane przy użyciu łÂącza "ukryj panele" znajdującego się nad
+nimi. To ustawienie pozostaje tak dlugo do puki panele nie zostana przywrócone
+co może być zrobione poprzez łÂącze "pokaż panele" o ile ciastka w przeglądarce
+są aktywne. Naturalnie, jeśli panele nie są używane to nie są wyświetlane na
+stronie.

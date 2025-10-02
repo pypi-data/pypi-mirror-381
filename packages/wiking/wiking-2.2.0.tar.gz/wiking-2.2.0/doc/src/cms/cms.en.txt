@@ -1,0 +1,9 @@
+# -*- coding: utf-8; mode: structured-text -*-
+
+= Wiking Content Management System =
+
+Wiking CMS is an application built on top of the Wiking web application
+development platform.
+
+Table of Contents: @NodeIndex@
+

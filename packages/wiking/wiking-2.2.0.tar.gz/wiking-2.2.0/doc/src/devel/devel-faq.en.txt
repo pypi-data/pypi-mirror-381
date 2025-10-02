@@ -1,0 +1,239 @@
+# -*- coding: utf-8; mode: structured-text -*-
+
+= Frequently Asked Questions =
+
+Index: @TOC@
+
+== General ==
+
+=== How to start with wiking programming ===
+
+One of the available resources with useful basic information is
+,,Rukověť wikingového programátora'' in
+file_qa.cs.txt. Unfortunatelly, this document is only available in
+Czech, an old eastern European language which only about 10 milion
+people worldwide can understand.
+
+=== How do I override a built-in module? ===
+
+It may be necessary to customize the behavior implemented by an existing Wiking
+(or Wiking CMS) module.  This may be achieved by defining a new module derived
+from the built-in module.  This module must be exported in by your `\__init__py'
+under the same name as the original module.  If the *Python* module with the
+customized version of the Wiking module appears earlier in =cfg.modules= than
+the Python module with its original definition (such as `wiking.cms'), the
+customized module will take precedence.  Wiking distinguishes its modules just
+by name.
+
+
+== User Interface ==
+
+=== How do I create an item in the main menu outside WMI? ===
+
+The main menu in Wiking CMS is defined by the hierarchy of pages as managed
+through the CMS.  Wiking CMS extensions (modules derived from
+`wiking.cms.CMSExtension') may only define a submenu of the menu item of the
+corresponding page as described in the following question.
+
+=== How do I define a page submenu outside WMI? ===
+
+Submenu may be defined by Wiking CMS extension modules (derived from
+`wiking.cms.CMSExtension').  This submenu is automatically added to the main
+menu (defined by the hierarchy of CMS pages) when the extension module is
+active (the page using this extension is displayed).
+
+The menu is normally defined through the attribute `CMSExtension.\_MENU'
+as a sequence of `CMSExtension.MenuItem' instances.
+
+Redefining the method `Embeddable.submenu()' (returning `wiking.MenuItem'
+instances) would be a more powerful solution, but this is discouraged, since its
+proper implementation is not trivial.  The menu defined through
+`CMSExtension.\_MENU' can also be dynamic to certain extent, so redefining
+`Embeddable.submenu()' should be rarely needed.
+
+=== How do I add module to a WMI menu? ===
+
+The top level menu (main sections at the top of the page) is defined by
+`WikingManagementInterface.\_SECTIONS'.
+
+A module can be added to the submenu of a concrete main section by defining
+class attributes `WMI_SECTION' and `WMI_ORDER'.
+
+=== How do I change primary link destinations in list forms? ===
+
+Redefine `\_link_provider' method of the module.
+
+=== How can I present field content as a link? ===
+
+You can use `\_link_provider' as well.
+
+=== What is `cid' argument in `\_link_provider'? ===
+
+Column id to generate the link for.  In case a link for the whole record should
+be generated, `cid' is `None'.
+
+=== How to discard original item ids in global actions invoked from items? ===
+
+Set `allow_referer=False' argument in the `Action' constructor.
+
+=== How to add an action button that invokes an action of another module? ===
+
+If there is no need to transfer form data from one module (let's say
+PreviousModule) to another (let's say NextModule), the easiest way is to define
+some special action in PreviousModule and use HTTP redirection.  For example:
+
+     def action_something_special(self, req):
+         uri = self._module('UpperModule).submodule_uri(req, 'NextModule')
+         return req.redirect(wiking.make_uri(uri, action='desiredaction'))
+
+=== How do I display field values using a special formatting? ===
+
+Create new virtual field with a custom data type.
+
+=== How to localize displayed field values, e.g. float numbers? ===
+
+Derive a new data type from the original value data type.  Then use an instance
+of a class derived from `lcg.Localizable' as a return result of the type's
+`_export' method.
+
+=== How to prevent line breaking inside view field values? ===
+
+Use non-breakable spaces instead of plain spaces.
+
+=== How to make a nested form inside a related form? ===
+
+In the nested form module: Make sure the form field specification referencing
+to the parent form sets `codebook' argument to the parent form module.
+
+In the parent form module: Define `bindings'.  If the nested forms items are to
+be clickable, `bindings' must contain `id' argument defining the url part
+string referring to the nested form items.
+
+=== How to add a form summary text at the beginning or end of a nested form? ===
+
+Redefine `related' method in the nested form module.
+
+=== How to define global condition ===
+
+A global condition restricts the set of values displayed in the
+tables. The table then only contains values that match this condition.
+
+A /static/ global condition can be defined through the 'condition'
+parameter in table specification.
+
+For /dynamic/ global condition redefine the _condition method for the
+appropriate class. Simple example can be found in the module
+wiking-boards.
+
+This condition should be added with pd.AND() to the existing
+condition of the parent class as in this example:
+
+------
+  super_condition = super(ThisClass, self)._condition(req, **kwargs)
+  if super_condition:
+      condition = pd.AND(super_condition, condition)
+------
+
+=== How to get an URI of a module ===
+
+In applications built on top of Wiking CMS there are two basic cases.
+
+If the module is directly related to a webpage (either statically or through a
+CMS page) and is used only once in the whole website, use
+'Request.module_uri()'.
+
+If the module is only accessible through bindings to another module or is not
+directly related to any other module, 'module_uri()' returns None and it is
+necessary to construct the URI manually based on 'Request.server_uri()' and/or
+'Request.module_uri()' of a related module which is directly related to a
+webpage.
+
+Example of the later case from wiking-boards:
+------
+  board_uri = self._module('WikingBoards').link(req, record['board_id'])
+  uri = req.server_uri() + board_uri + '/threads/%s' % (record['thread_id'].value(),)
+------
+ 
+In any case, study 'wiking.cms.Application.module_uri()' (which is called by
+'wiking.Request.module_uri()' internally) to get more information.
+
+== Working with Data ==
+
+=== How do I get the logged-in user in a field computer function? ===
+
+Computer functions of Pytis computed fields receive the current
+`wiking.PytisModule.Record' (derived from `pytis.presentation.PresentedRow') as
+an argument.  This class has the method `req()' which may be used to access the
+current request and its method `user()' to get the information about the current
+authenticated user: `record.req().user()'.
+
+=== How can I change a single column database value in form processing? ===
+
+Assuming you need to make a change to a database by setting a value of the
+column `foo' within a Wiking module form processing method where form `record'
+instance is available.  The easiest way to do this is as follows:
+
+------
+  try:
+      record.update(foo=new_foo)
+  except pd.DBException, e:
+      req.message(unicode(e.exception()), type=req.ERROR)
+      ....
+  else:
+      req.message(_("Foo was successfully updated."), type=req.ERROR)
+------
+
+=== How do I call a database function? ===
+
+Specify the function in module's `_DB_FUNCTIONS' dictionary and then use the
+module's `_call_db_function()' method to call it.
+
+=== Is it possible to perform a muti-stage database operation atomically? ===
+
+It is possible to use the class `pytis.data.DBTransactionDefault' and pass it as
+an argument to database operations.  Wiking currently doesn't provide any higher
+level interface to simplify the usage of transactions.
+
+Using transactions can be, however, often avoided by performing the dependent
+operations within the database rules and/or triggers.  This way the operations
+are completely hidden from Pytis and Wiking.  This practice may lead to a
+cleaner design in certain situations (better separation of the database and
+application logic), but there will definitely be examples of the opposite case
+so any feedback on this topic is welcome.
+
+=== How to define the key column of a module table? ===
+
+Define the `key' attribute of the module specification or put the key column to
+the first position in `fields'.
+
+== Pytis ==
+
+=== How to access another module ===
+
+It is possible to address another module through the method
+'self._module()'.  An example can be found in
+'WbThreadsCommon._send_notification_email'.
+
+------
+  # Get the email of a particular user identified by _user_uid_
+  email = self._module('Users').user(req, uid=thread_for_user).email()
+------
+
+== Troubleshooting ==
+
+=== The application produces strange errors after update from CVS, what's that? ===
+
+ 1. Check that you have the latest CVS versions of all other components -- lcg,
+    pytis, wiking, other wiking applications.
+
+ 2. Check that the web server user has access rights to all used components.
+
+=== Why do I get an error about a non existing database column after database creation? ===
+
+Database objects for Wiking and all installed modules/extensions must be
+initialized.
+
+=== How to make visible resources/ from another tree? ===
+
+Either link it into the Wiking tree or set the `resource_path' configuration
+variable.

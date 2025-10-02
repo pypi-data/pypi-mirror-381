@@ -1,0 +1,18 @@
+# -*- coding: utf-8; mode: structured-text -*-
+
+== Webové kanály (RSS) ==
+
+Technologie RSS umožňuje uživatelům Internetu přihlásit se k odběru novinek z
+webu, který nabízí RSS zdroj (též RSS feed, RSS kanál).  Více o RSS viz
+např. [http://cs.wikipedia.org/wiki/RSS Wikipedia].
+
+Některé prohlížeče obsahují přímo zabudovanou podporu pro odebírání RSS kanálů,
+s ostatními si budete muset nainstalovat RSS čtečku jako externí program.
+Další možností je používat k odebírání webovou službu jako
+[http://www.seznam.cz Seznam], [http://www.clanky.cz Články.cz], nebo
+[http://www.bloglines.com/ Bloglines].
+
+Systém Wiking umožňuje k položkám z různých částí portálu přistupovat právě
+pomocí technologie RSS.  V příslušné sekci naleznete vždy na konci výpisu
+položek informaci o RSS kanálu a odkaz.  Adresu tohoto odkazu použijte k
+nastavení vaší RSS čtečky.

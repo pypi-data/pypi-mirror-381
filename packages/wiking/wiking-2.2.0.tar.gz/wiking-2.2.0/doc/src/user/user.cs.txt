@@ -1,0 +1,9 @@
+# -*- coding: utf-8; mode: structured-text -*-
+
+= Příručka návštěvníka portálu =
+
+Tato sekce popisuje uživatelské rozhraní aplikací používajících platformu
+Wiking z pohledu návštěvníka webových stránek.
+
+Obsah: @NodeIndex(2)@
+

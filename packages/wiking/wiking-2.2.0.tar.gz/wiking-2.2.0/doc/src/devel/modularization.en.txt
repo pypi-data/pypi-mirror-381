@@ -1,0 +1,98 @@
+# -*- coding: utf-8; mode: structured-text -*-
+
+= Modularization =
+
+The extensibility of Wiking is based on modularization.
+
+
+Table Of Contents: @TOC@
+
+
+== What is a Wiking Module ==
+
+Wiking modules are implemented as Python classes.  Particular modules are
+refered by their name and there are simple rules how their definitions are
+located (see below).
+
+Wiking handler creates instances of these classes and uses them for handling
+requests.  These instances are persistent, so that one instance is typically
+used for handling multiple requests.  Sharing of module instances is always
+limited to just one Wiking application (typically one virtual host).
+
+
+== The Application Module ==
+
+The central module, which controls the application behavior is the module named
+'Application'.  Wiking handler uses its different methods in different phases
+ot request processing, such as authentication, content generation, error
+handling etc.
+
+Thus a new Wiking application is implemented by deriving a new 'Application'
+module from the default 'Application' class.  All phases of request processing
+can be overridden by overriding its methods.  See [application] for details.
+
+
+== Predefined Modules ==
+
+A typical application will use other modules and postpone the processing of
+certain phases of the request to them.  The default implementation of the
+Application module is no exception (see [application] for more information
+about the default implementation of application methods).
+
+Wiking also provides a set of predefined modules, which implement various
+common usecases for typical applications.  For example there is a module
+implementing Cookie based authentication, module serving stylesheets from files
+(including color theme substitution), module serving documents from static
+files of structured text, etc.  Documentation for these modules is not yet
+included in the manual, so please see the source code and the relevant Python
+docstrings in files 'modules.py' and 'db.py'.
+
+
+== How Wiking Locates Available Modules ==
+
+/Note on terminology:/ The text below uses the term /module/ in two contexts.
+One is for Wiking module -- a Python class implementing part of Wiking
+functionality, other is for Python module -- a collection of Python definitions
+and statements typically represented by a Python source file.  Wiking module
+classes are defined within Python modules.
+
+Wiking always looks for its modules by their name.  To locate the module
+'Application' Wiking searches for the definition of a class named 'Application'
+in the "search path".  This search path consists of a list of Python modules
+which are searched in the defined order.  The search path is defined by the
+configuration option '=modules='.
+
+This technique makes it possible to configure each virtual host to use custom
+set of modules (see [config] for more information).
+
+The default search path consist of just one module -- =wiking.cms=.  So if you
+don't override '=modules=' in your configuration, the site will run the Wiking
+CMS application.
+
+
+== Adding Custom Modules to Wiking CMS ==
+
+Example definition of a new embeddable module:
+-----
+import wiking, wiking.cms
+
+class UserAgentInfo(wiking.Module, wiking.cms.Embeddable):
+    """Extend page content by including the information about the user's browser."""
+    _TITLE = _("User Agent Info")
+    
+    def embed(self, req):
+    	agent = req.header('User-Agent', _("unknown"))
+        return [lcg.TextContent(_("Your browser is:") +' '+ agent)]
+-----
+
+Install this module within your Python path as 'uainfo' and set '=modules=' as
+follows:
+
+-----
+modules = ('wiking.cms', 'uainfo')
+-----
+
+The module "User Agent Info" should now automatically become available in Wiking
+CMS for embedding within page content.
+
+

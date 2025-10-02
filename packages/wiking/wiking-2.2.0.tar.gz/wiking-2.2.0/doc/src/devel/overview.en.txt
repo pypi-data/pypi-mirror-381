@@ -1,0 +1,82 @@
+# -*- coding: utf-8; mode: structured-text; fill-column: 80 -*-
+
+= Overview =
+
+Index: @TOC@
+
+== Technology ==
+
+Wiking is written in Python and makes use of two other important components:
+
+ * *LCG* ... provides content abstraction, internationalization support and HTML
+   generation.  See the [http://www.freebsoft.org/lcg|LCG project website].
+
+ * *Pytis* ... provides data abstraction, modularization and database access
+   (the current implementation uses the PostgreSQL database backend).  See the
+   [http://www.freebsoft.org/pytis|Pytis project website].
+
+Apache/mod_python and WSGI web server interfaces are supported, so any WSGI
+compliant server environment should work (although only Apache/mod_python and
+Apache/mod_wsgi are tested).
+
+
+== What Wiking provides ==
+
+Web page abstraction
+  The application developer does not need to care about the HTML output, page
+  layout and other low level issues.  He just defines the structure of the menu,
+  main page content, panels, list of available languages and other higher level
+  properties of the resulting page and Wiking renders (exports) it.  The
+  rendering can still be influenced by extending the default exporter, but the
+  application code doesn't care about it.  Also all content is defined as a
+  hierarchy of Python objects.  Generic content elements, such as paragraphs of
+  text, sections or images, or even more complicated elements such as database
+  forms exist and their default rendering is implemented.  Developers can also
+  define their own content classes with custom rendering.
+
+Authentication mechanisms
+  Wiking implements the low level details of common authentication mechanisms
+  (currently cookie based password authentication and certificate
+  authentication).  The application only needs to implement the verification of
+  authentication credentials (i.e. verify that a given password corresponds to
+  given login name).
+
+Authorization 
+  HTTP requests are normally resolved into calling particular methods of Wiking
+  modules with particular arguments.  Wiking checks authorization before calling
+  these methods, and the application developer may implement arbitrary
+  authorization logic to decide about user's access to any module/method
+  (eventually taking also the argument values into account).
+
+ 
+Internationalization
+  Wiking uses the LCG's deferred translation mechanism in connection with
+  gettext catalogs.  Complete localization of user interface strings, date/time,
+  numeric and monetary values is supported.  Localization is again handled
+  automatically within the Wiking handler, so it is transparent for the
+  application developer.  Translations of common parts of the user interface
+  already exist in a number of languages so the amount of translations needed
+  for an application may be dramatically reduced.
+
+Error handling
+  Wiking automatically handles error states.  Detailed exception tracebacks can
+  be logged or sent by email.  Again, the application may define custom error
+  handling routines.  Wiking also defines exception classes for typical HTTP
+  error states (such as 404 Not Found) and handles these exceptions
+  specifically.
+
+Pytis support
+  The class =wiking.PytisModule= makes it possible to create Wiking modules
+  which serve a content stored in a relational database using the abstraction
+  provided by the Pytis toolkit.  Wiking can be also considered a web interface
+  to the Pytis toolkit, but in principle Wiking doesn't depend on Pytis.  Wiking
+  may be used without pytis support (for the features mentioned above), but
+  Pytis based modules belong to its strongest weapons.  Pytis modules are based
+  on abstract specification of database object bindings which then allow Pytis
+  forms to automatically generate a user interface to access and modify the
+  database contents.  Different types of forms for browsing the database records
+  and their manipulation exist.  The relational nature of the data can also be
+  completely hidden by the Wiking module to provide specific rendering and
+  custom access to the data.  An example of this approach may be the Wiking CMS,
+  where the CMS pages are in fact pytis database records, but are rendered as
+  web page contents.
