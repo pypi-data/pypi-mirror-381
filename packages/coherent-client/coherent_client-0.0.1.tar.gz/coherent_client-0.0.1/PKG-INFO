@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: coherent-client
+Version: 0.0.1
+Summary: An API client for the coherent network that implements authentication and general requests
+Author-email: coherentvolition <coherentvolition@protonmail.com>
+Project-URL: Homepage, https://github.com/Coherent-Volition-Inc/coherent-client
+Project-URL: Issues, https://github.com/Coherent-Volition-Inc/coherent-client
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pyjwt[crypto]
+Requires-Dist: python-dotenv
+
+# Coherent Client
+
+_An implementation of a minimal client for the Coherent network_
