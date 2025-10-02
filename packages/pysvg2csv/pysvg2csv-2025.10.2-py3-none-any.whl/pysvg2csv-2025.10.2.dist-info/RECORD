@@ -1,0 +1,10 @@
+pysvg2csv/__init__.py,sha256=xV36DE3VP1i5TtOyUfggyqXdQKNFthZpaonEVEEhZRk,118
+pysvg2csv/core/__init__.py,sha256=-mATqA-fa1RW82DOMfwkgNGdFQ0yUMLhwYYhGZwAuHc,23
+pysvg2csv/core/svg2csv.py,sha256=M3AQs2bkR3-qdpkuncfGPhgi-5u64U2tAVN1FVGqhoQ,3696
+pysvg2csv/utils/__init__.py,sha256=alIDGBnxWH4JvP-UW-7N99seBBi0r1GV1h8f1ERFBec,21
+pysvg2csv/utils/utils.py,sha256=DMUBjGikOm-DEjV7dxgJfE7Bduk4EwsbhmJZWXej7RI,1500
+pysvg2csv-2025.10.2.dist-info/licenses/LICENSE,sha256=lhVpM_GB9zC5aWJs2UJxXPO1yVXUpaSyjvzSRLAjmbY,1080
+pysvg2csv-2025.10.2.dist-info/METADATA,sha256=tRmR0p-c4VzmR3ymjgPmteA8YrWQ3iCfpAfgtVvDzNU,8262
+pysvg2csv-2025.10.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pysvg2csv-2025.10.2.dist-info/top_level.txt,sha256=G55tA7x0Qd9Y23VSlyosJfsmvY7U9qLAmT_tulFqJBI,10
+pysvg2csv-2025.10.2.dist-info/RECORD,,
