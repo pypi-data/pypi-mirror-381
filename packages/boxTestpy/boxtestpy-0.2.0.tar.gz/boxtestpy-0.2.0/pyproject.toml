@@ -1,0 +1,46 @@
+[project]
+name = "boxTestpy"
+version = "0.2.0"
+description = "Beginner-friendly side-by-side boxplots and two-sample tests (t-test / Mann–Whitney)."
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+license-files = ["LICENSE"]
+
+dependencies = [
+  "numpy>=1.21",
+  "pandas>=1.3",
+  "matplotlib>=3.4",
+  "scipy>=1.7"
+]
+
+authors = [
+  {name = "Arkaprabha Sau", email = "arka.doctor@gmail.com"}
+]
+
+maintainers = [
+  {name = "Arkaprabha Sau"},
+  {name = "Santanu Phadikar"},
+  {name = "Ishita Bhakta"}
+]
+
+# Modern classifiers (without license)
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Scientific/Engineering :: Information Analysis"
+]
+
+[project.urls]
+Homepage = "https://github.com/arka1985"
+Repository = "https://github.com/arka1985/boxTestpy"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.optional-dependencies]
+plotting = ["seaborn>=0.11"]

@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/boxTestpy.egg-info/PKG-INFO
+src/boxTestpy.egg-info/SOURCES.txt
+src/boxTestpy.egg-info/dependency_links.txt
+src/boxTestpy.egg-info/requires.txt
+src/boxTestpy.egg-info/top_level.txt
+src/boxtestpy/__init__.py
+src/boxtestpy/plotting.py
+src/boxtestpy/stats.py
+tests/test_basic.py
