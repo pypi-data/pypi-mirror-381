@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/python/opencua/__init__.py
+src/python/opencua.egg-info/PKG-INFO
+src/python/opencua.egg-info/SOURCES.txt
+src/python/opencua.egg-info/dependency_links.txt
+src/python/opencua.egg-info/top_level.txt

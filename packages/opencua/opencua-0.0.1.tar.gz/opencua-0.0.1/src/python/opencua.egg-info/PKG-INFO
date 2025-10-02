@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: opencua
+Version: 0.0.1
+Summary: OpenCUA package
+Home-page: https://github.com/yourusername/opencua
+Author: 
+Author-email: 
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: home-page
+Dynamic: requires-python
+
+# OpenCUA
+
+OpenCUA - A package available for both JavaScript and Python.
+
+## Installation
+
+### JavaScript/Node.js
+```bash
+npm install opencua
+```
+
+### Python
+```bash
+pip install opencua
+```
+
+## Usage
+
+### JavaScript
+```javascript
+const opencua = require('opencua');
+```
+
+### Python
+```python
+import opencua
+```
+
+## License
+
+MIT
