@@ -1,0 +1,3 @@
+[console_scripts]
+santok = santok:main
+santok-cli = santok:main
