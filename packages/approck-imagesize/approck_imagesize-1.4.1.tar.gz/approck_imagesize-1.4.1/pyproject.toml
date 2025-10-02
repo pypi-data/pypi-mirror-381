@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "approck-imagesize"
+version = "1.4.1"
+description = "Getting image size from png/jpeg/jpeg2000/gif file"
+authors = ["Yoshiki Shibukawa <yoshiki@shibu.jp>", "Aleksey Dalekin <ald@approck.pro>"]
+readme = "README.rst"
+packages = [
+    { include = "imagesize" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
