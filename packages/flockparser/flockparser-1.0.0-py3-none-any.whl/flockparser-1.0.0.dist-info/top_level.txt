@@ -1,0 +1,11 @@
+adaptive_parallelism
+benchmark_comparison
+docs
+flock_ai_api
+flock_mcp_server
+flock_webui
+flockparsecli
+gpu_controller
+gpu_router_daemon
+intelligent_gpu_router
+vram_monitor
