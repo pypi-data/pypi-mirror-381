@@ -1,0 +1,77 @@
+Metadata-Version: 2.4
+Name: chest_form_api_endstone
+Version: 1.0.0
+Summary: Chest Form API for Endstone
+Author: GlacieTeam
+Keywords: endstone,chest_form_api
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: rapidnbt>=1.1.5
+Requires-Dist: bedrock-protocol-packets>=0.0.5
+
+# ChestForm
+Chest Form API for Endstone
+
+[![PyPI - Version](https://img.shields.io/pypi/v/chest_form_api_endstone)](https://pypi.org/project/chest_form_api_endstone)
+[![Python](https://img.shields.io/pypi/pyversions/chest_form_api_endstone?logo=python&logoColor=white)](https://www.python.org/)  
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/chest_form_api_endstone)](https://pypi.org/project/chest_form_api_endstone/)
+
+## Install
+```bash
+pip install chest_form_api_endstone
+```
+
+## Quick Start 🚀
+Example
+```Python
+from endstone import Player
+from chest_form_api_endstone import ChestForm
+
+class MyPlugin(Plugin):
+    # ... (other methods)
+
+    def on_command(self, sender: CommandSender, command: Command, _):
+        match command.name:
+            case "chest":
+                if isinstance(sender, Player):
+                    form = ChestForm(self, "Test Form")
+                    form.fill_slots(
+                        "minecraft:bedrock",
+                        display_name="Test Item",
+                        lore=["1111", "22222"],
+                        enchants={"lure": 12234, "flame": 11345},
+                    )
+
+                    def call_back(player: Player, index: int):
+                        player.send_message("114514")
+                        form.send_to(player)
+
+                    form.set_slot(3, "minecraft:diamond_block", call_back)
+                    form.send_to(player)
+                            else:
+                                sender.send_error_message(
+                                    "This command can only be executed by player."
+                                )
+                return False
+        return True
+```
+
+## Used Libraries 📖
+| Library                  | License  | Link                                                     |
+| ------------------------ | -------- | -------------------------------------------------------- |
+| RapidNBT                 | MPL-2.0  | <https://github.com/GlacieTeam/RapidNBT>                 |
+| bedrock-protocol-packets | MPL-2.0  | <https://github.com/GlacieTeam/bedrock-protocol-packets> |
+
+---
+
+
+### Copyright © 2025 GlacieTeam. All rights reserved.
