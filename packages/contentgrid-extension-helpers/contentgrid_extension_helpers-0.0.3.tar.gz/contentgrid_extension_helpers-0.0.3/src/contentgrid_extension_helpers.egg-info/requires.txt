@@ -1,0 +1,9 @@
+requests<3,>=2.20.0
+uri-template<2
+fastapi>=0.111
+PyJWT>2
+cryptography>45
+contentgrid_hal_client>=0.1
+contentgrid_application_client>=0.1
+contentgrid_management_client>=0.1
+pydantic<3,>=2
