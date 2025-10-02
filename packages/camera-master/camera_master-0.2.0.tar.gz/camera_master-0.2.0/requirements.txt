@@ -1,0 +1,23 @@
+# Core dependencies
+opencv-python>=4.8.0
+mediapipe>=0.10.0
+deepface>=0.0.79
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+pyttsx3>=2.90
+streamlit>=1.28.0
+gradio>=3.50.0
+
+# Deep learning backends
+tf-keras>=2.15.0
+tensorflow>=2.15.0
+
+# Additional utilities
+pillow>=10.0.0
+scipy>=1.11.0
+scikit-learn>=1.3.0
+
+# Optional cloud sync
+# firebase-admin>=6.2.0
+# supabase>=1.0.0
