@@ -1,0 +1,10 @@
+scruby/__init__.py,sha256=GOVcjXmcOEDBbJQJDJlQq-x3M-VGJaMSN278EXsl2po,884
+scruby/aggregation.py,sha256=x_9ZJQHJHDISxRvddS5A2Hb0saIcfPTh1Veyf2KgX8A,2919
+scruby/constants.py,sha256=3LZfcxcuRqwzoB0-iogLMjKBZRdxfWJmTbyPwVRhQgY,1007
+scruby/db.py,sha256=_-2h6x1WkND52q-lDGYBFcQJ_7Mwxq3Rh4ZFfqIinsQ,21100
+scruby/errors.py,sha256=aHQri4LNcFVQrSHwjyzb1fL8O49SwjYEU4QgMOo4uyA,622
+scruby/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scruby-0.14.2.dist-info/METADATA,sha256=vWhruXyj6cQyhPbXjMsUnz-j3L92eImp_R1QxX16BH0,10925
+scruby-0.14.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+scruby-0.14.2.dist-info/licenses/LICENSE,sha256=2zZINd6m_jNYlowdQImlEizyhSui5cBAJZRhWQURcEc,1095
+scruby-0.14.2.dist-info/RECORD,,
