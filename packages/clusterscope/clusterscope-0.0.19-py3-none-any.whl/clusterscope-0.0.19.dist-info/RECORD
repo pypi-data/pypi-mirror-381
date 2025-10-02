@@ -1,0 +1,16 @@
+clusterscope/__init__.py,sha256=UueXQNFFOpEOw6v9JuPWfNa0GopIJx42DXrCPTwAr_M,490
+clusterscope/cache.py,sha256=M0ny9luF7nnV_zDpOnaD-Z_BdvJ9otd6HNHW8lDsMNI,2825
+clusterscope/cli.py,sha256=1lCF710zl6edI0WpbWvsibxR-161n68VAQGn0GGtFaU,7977
+clusterscope/cluster_info.py,sha256=nNL5yfQpKEMwCKJXva9KlokLOr7nX4EzSeuCB_7uFiw,34684
+clusterscope/job_info.py,sha256=-YG9N9xGfrSf74lmPrTjMhvE4Okk800NcYDQ6vL6UOU,5671
+clusterscope/lib.py,sha256=vMvBtbygYUhnykArODY2hKtvZwYlEnfEOsr1Hyvgzoc,2894
+clusterscope/parser.py,sha256=9RyUgFu7FJSjArt-JhHNZ54OnAIG6QO_9AShyAxVefM,590
+clusterscope/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clusterscope/shell.py,sha256=Y9ostJ_2Nu0D7OunvwvSQO9UNt2gHCFUd4yxBz0xVT0,1452
+clusterscope/slurm/partition.py,sha256=-HJDXrIAVUXus8BDE4RV_6iHlHYNObqOJ7E8P2H4S5U,1143
+clusterscope-0.0.19.dist-info/licenses/LICENSE,sha256=gRKgajAtbKIMcsMQP9hCCsod9YmCuMay2RW1wVT-tDU,1065
+clusterscope-0.0.19.dist-info/METADATA,sha256=A5q4ydE9PaslSeVD06oz3q37Mne1x89NR7QHP9OTdVQ,3170
+clusterscope-0.0.19.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+clusterscope-0.0.19.dist-info/entry_points.txt,sha256=jZ9BMSfF6rvodnR38WSGb6OrmrOgV9wuY8yspaoTFSY,49
+clusterscope-0.0.19.dist-info/top_level.txt,sha256=Y1pHhG0dJm6nlAz1PSsUgfPTE6SLP7OkH-WwydyLN-8,13
+clusterscope-0.0.19.dist-info/RECORD,,
