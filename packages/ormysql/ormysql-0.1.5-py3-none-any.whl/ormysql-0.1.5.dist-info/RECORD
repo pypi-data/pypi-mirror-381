@@ -1,0 +1,12 @@
+ormysql/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ormysql/base.py,sha256=w26uDEZ2atsrzN1Ei9dGZbQ_ep8EriMlziqn0qgejMo,6161
+ormysql/db.py,sha256=OOI3QlCL9nCqZz5jhpZGAePK6AcVv4n-uZXIjoPNZy4,8328
+ormysql/fields.py,sha256=0yX9kqmSiVj3T7oTNg2pkf8olZhbMLv7UHMsOuSYMUs,8065
+ormysql/migrate.py,sha256=bmTjaFOZ5R9A5CJQlBElf59l6NQ2LecaodpLyM0kC5o,4417
+ormysql/query.py,sha256=17BkfAolynxwegGQKDSVijWC4gxCFtm377p3xcrjxMs,16176
+ormysql/relations.py,sha256=qDiZqIxG-AIiSl1ccFhViMQlIK5T0mv_4D3Rx7sJyzs,3180
+ormysql-0.1.5.dist-info/licenses/LICENSE,sha256=xChbN26tHod-4H0P09yHTRFia1a3bCfgFqZl5zwiEL4,1172
+ormysql-0.1.5.dist-info/METADATA,sha256=-N-hN8wX8AieVzL3ViO7CitKi7gfCUgvjP4zj6fYd7o,15924
+ormysql-0.1.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ormysql-0.1.5.dist-info/top_level.txt,sha256=dbbcwfisr6ABPj3mv1-pgGDHkRF5qbaLII3eNvrxETI,8
+ormysql-0.1.5.dist-info/RECORD,,
