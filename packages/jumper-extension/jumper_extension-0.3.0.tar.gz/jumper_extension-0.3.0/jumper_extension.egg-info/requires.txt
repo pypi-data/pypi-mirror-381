@@ -1,0 +1,14 @@
+ipython
+matplotlib
+pandas
+numpy
+psutil
+itables
+ipywidgets
+jinja2
+
+[test]
+pytest
+pytest-mock
+pytest-cov
+pynvml
