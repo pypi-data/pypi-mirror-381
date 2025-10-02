@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+bclearer.egg-info/PKG-INFO
+bclearer.egg-info/SOURCES.txt
+bclearer.egg-info/dependency_links.txt
+bclearer.egg-info/entry_points.txt
+bclearer.egg-info/requires.txt
+bclearer.egg-info/top_level.txt

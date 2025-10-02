@@ -1,0 +1,2 @@
+[console_scripts]
+bclearer-pipeline-builder = bclearer_core.pipeline_builder.cli:run_cli

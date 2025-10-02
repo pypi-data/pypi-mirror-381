@@ -1,0 +1,169 @@
+Metadata-Version: 2.4
+Name: bclearer
+Version: 0.1.6
+Summary: A collection of interop, core, and orchestration services for the bclearer framework
+Author-email: Mesbah Khan <khanm@ontoledgy.io>
+Requires-Python: <4.0,>=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools<76.0.0,>=75.1.0
+Requires-Dist: pandas<3.0.0,>=2.2.3
+Requires-Dist: gitpython<4.0.0,>=3.1.43
+Requires-Dist: xlsxwriter<4.0.0,>=3.2.0
+Requires-Dist: xlrd<3.0.0,>=2.0.1
+Requires-Dist: chardet<6.0.0,>=5.2.0
+Requires-Dist: h5py<4.0.0,>=3.11.0
+Requires-Dist: tables<4.0.0,>=3.10.1
+Requires-Dist: radon<7.0.0,>=6.0.1
+Requires-Dist: numpy<3.0.0,>=2.1.1
+Requires-Dist: pyodbc<6.0.0,>=5.1.0
+Requires-Dist: pylint<4.0.0,>=3.3.0
+Requires-Dist: kafka-python-ng<3.0.0,>=2.2.2
+Requires-Dist: psutil<7.0.0,>=6.0.0
+Requires-Dist: networkx<4.0,>=3.3
+Requires-Dist: msaccessdb<2.0.0,>=1.0.0
+Requires-Dist: lxml<6.0.0,>=5.3.0
+Requires-Dist: pyspark<4.0.0,>=3.5.2
+Requires-Dist: delta-spark<4.0.0,>=3.2.0
+Requires-Dist: deltalake<1.0.0,>=0.20.0
+Requires-Dist: fastparquet<2025.0.0,>=2024.5.0
+Requires-Dist: basexclient<9.0.0,>=8.4.4
+Requires-Dist: pytest<9.0.0,>=8.3.3
+Requires-Dist: openpyxl<4.0.0,>=3.1.5
+Requires-Dist: neo4j<6.0.0,>=5.24.0
+Requires-Dist: pycozo==0.7.6
+Requires-Dist: cozo-embedded==0.7.6
+Requires-Dist: graphviz<0.21.0,>=0.20.3
+Requires-Dist: psycopg2-binary<3.0.0,>=2.9.9
+Requires-Dist: ruff<0.7.0,>=0.6.8
+Requires-Dist: black<25.0.0,>=24.8.0
+Requires-Dist: pre-commit<4.0.0,>=3.8.0
+Requires-Dist: isort<6.0.0,>=5.13.2
+Requires-Dist: pymongo<5.0.0,>=4.10.0
+Requires-Dist: docker<8.0.0,>=7.1.0
+Requires-Dist: faker<31.0.0,>=30.1.0
+Requires-Dist: filelock<4.0.0,>=3.19.1
+Requires-Dist: pyyaml<7.0.0,>=6.0.2
+Requires-Dist: pyshacl<0.31.0,>=0.30.1
+Requires-Dist: tqdm<5.0.0,>=4.66.5
+Requires-Dist: untangle<2.0.0,>=1.2.1
+Requires-Dist: sqlalchemy<3.0.0,>=2.0.35
+Requires-Dist: influxdb-client==1.49.0
+Requires-Dist: fastapi<1.0.0,>=0.104.0
+Requires-Dist: uvicorn[standard]<1.0.0,>=0.24.0
+Requires-Dist: bclearer-interop-services
+Requires-Dist: bclearer-core
+Requires-Dist: bclearer-orchestration-services
+Requires-Dist: bnop
+Dynamic: license-file
+
+# bclearer pipeline development libraries
+
+**bclearer_libraries** is a modular Pipeline Development Kit (PDK) providing services for core functionality, interop services, and orchestration services. This PDK is designed to offer seamless integration and extendability for the bclearer platform, enabling effective orchestration, data interoperability, and core utilities.
+
+## Features
+
+- **Core Services**: Provides essential functionality for configuration management, constants handling, and other core utilities.
+- **Interop Services**: Facilitates data interoperability and communication between different services and systems.
+- **Orchestration Services**: Manages workflows and service orchestration to coordinate processes within the bclearer ecosystem.
+
+## Modules
+
+The SDK is divided into the following major modules:
+
+### 1. Core (`bclearer_libraries.core`)
+This module includes utilities for configuration management and core functionality:
+
+- **Configuration Managers**: Handles configuration setup and management.
+- **Constants**: Provides a centralized location for constant values used across services.
+
+Usage example:
+```python
+from bclearer_libraries.core.bclearer_core import SomeCoreClass
+
+core_instance = SomeCoreClass()
+core_instance.do_something()
+```
+
+### 2. Interop Services (bclearer_libraries.interop_services)
+This module facilitates data interoperability and interactions between services.
+
+bclearer_interop_services: Contains services for interacting with external systems or databases.
+Usage example:
+
+```python
+from bclearer_libraries.interop_services.bclearer_interop_services import (
+    SomeInteropClass,
+)
+
+interop_instance = SomeInteropClass()
+interop_instance.integrate_with_service()
+```
+
+### 3. Orchestration Services (bclearer_libraries.orchestration_services)
+This module manages orchestration processes, coordinating workflows and services.
+
+bclearer_orchestration_services: Contains utilities for managing and orchestrating services in your workflow.
+Usage example:
+
+```python
+from bclearer_libraries.orchestration_services.bclearer_orchestration_services import (
+    SomeOrchestrationClass,
+)
+
+orchestration_instance = SomeOrchestrationClass()
+orchestration_instance.manage_workflow()
+```
+
+Installation
+To install bclearer_libraries, run the following:
+
+bash
+Copy code
+pip install bclearer_libraries
+This will install all necessary modules and dependencies required to use the SDK.
+
+## Requirements
+Python 3.6+
+Other dependencies as listed in requirements.txt (e.g., neo4j, pandas)
+Usage
+After installation, you can start using the SDK by importing the relevant modules:
+
+``` python
+from bclearer_libraries.core.bclearer_core import SomeCoreClass
+from bclearer_libraries.interop_services.bclearer_interop_services import (
+    SomeInteropClass,
+)
+from bclearer_libraries.orchestration_services.bclearer_orchestration_services import (
+    SomeOrchestrationClass,
+)
+```
+
+Each module has its own set of features and functionality, so refer to the documentation or the module-specific sections above for detailed usage instructions.
+
+## Testing
+The project includes a suite of unit and integration tests. You can run the tests using:
+
+```bash
+pytest
+```
+
+Tests are located in the tests/ directory under each module.
+
+
+### Contributing
+Contributions are welcome! Please follow these steps if you would like to contribute:
+
+Fork the repository.
+Create a feature branch (git checkout -b feature/my-feature).
+Commit your changes (git commit -am 'Add my feature').
+Push to the branch (git push origin feature/my-feature).
+Create a new Pull Request.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+### Contact
+For any issues, questions, or suggestions, feel free to contact the maintainers at:
+
+Mesbah Khan
+Your Email: khanm@ontoledgy.io
