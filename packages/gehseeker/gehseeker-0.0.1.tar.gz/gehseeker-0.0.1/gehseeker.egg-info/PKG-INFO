@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: gehseeker
+Version: 0.0.1
+Summary: InsideOpt Seeker Distribution for GEH on Windows
+Author: Meinolf Sellmann
+Author-email: info@insideopt.com
+Keywords: insideopt,seeker,optimization
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.11.0
+License-File: LICENSE.rst
+License-File: AUTHORS.rst
+
+================
+insideopt-seeker
+================
+
+InsideOpt Seeker GEH on Windows Distribution
+
+Credits
+-------
+
+This package was created with Cookiecutter_.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
