@@ -1,0 +1,1471 @@
+================================================================================
+                        MODELRED PYTHON SDK
+                      API REFERENCE DOCUMENTATION
+                           Version 0.1.24
+================================================================================
+
+OVERVIEW
+--------
+ModelRed SDK provides AI security testing and red teaming capabilities for 
+Large Language Models (LLMs). Test your models against 200+ security probes 
+covering prompt injection, jailbreaks, data leakage, and more.
+
+Perfect for CI/CD pipelines - integrate security testing in minutes.
+
+
+================================================================================
+QUICK START
+================================================================================
+
+INSTALLATION
+------------
+pip install modelred
+
+BASIC USAGE
+-----------
+from modelred import ModelRed, ModelProvider, ProviderConfig
+import os
+
+# Initialize client
+client = ModelRed(api_key=os.environ["MODELRED_API_KEY"])
+
+# Register your model
+model = client.create_model(
+    modelId="my-gpt4",
+    provider=ModelProvider.OPENAI,
+    displayName="Production GPT-4",
+    providerConfig=ProviderConfig.openai(
+        api_key=os.environ["OPENAI_API_KEY"],
+        model_name="gpt-4o-mini"
+    )
+)
+
+# List available security probes
+probes = client.list_probes()
+test_types = [p.key for p in probes.probes[:10]]  # Select first 10
+
+# Create security assessment
+assessment = client.create_assessment(
+    model="my-gpt4",
+    test_types=test_types
+)
+
+# Wait for results
+result = client.wait_for_completion(assessment.id)
+print(f"Security Score: {result.detailedReport['overall_score']}")
+
+client.close()
+
+
+================================================================================
+CLIENT INITIALIZATION
+================================================================================
+
+CLASS: ModelRed
+---------------
+The main synchronous client for ModelRed SDK.
+
+CONSTRUCTOR: ModelRed(api_key=None, timeout=30)
+-----------------------------------------------
+Initialize a new ModelRed client.
+
+PARAMETERS:
+  • api_key (str, optional)
+    Your ModelRed API key. If not provided, reads from MODELRED_API_KEY 
+    environment variable.
+    
+  • timeout (int, default=30)
+    Request timeout in seconds for all API calls.
+
+RETURNS:
+  ModelRed client instance
+
+SECURITY NOTES:
+  • Base URL is ONLY configurable via MODELRED_BASE_URL environment variable
+  • This prevents malicious code from redirecting API traffic
+  • For production, leave MODELRED_BASE_URL unset (defaults to modelred.ai)
+  • For local dev, set: export MODELRED_BASE_URL=http://localhost:3000/api
+
+EXAMPLE:
+  # Using environment variable (recommended)
+  export MODELRED_API_KEY=your-api-key
+  client = ModelRed()
+  
+  # Or pass directly
+  client = ModelRed(api_key="your-api-key")
+  
+  # With custom timeout
+  client = ModelRed(timeout=60)
+
+CONTEXT MANAGER:
+  with ModelRed() as client:
+      # Use client
+      pass
+  # Automatically closes connection
+
+
+CLASS: AsyncModelRed
+--------------------
+Async version of ModelRed client. Same API as ModelRed but all methods are
+async and must be awaited.
+
+CONSTRUCTOR: AsyncModelRed(api_key=None, timeout=30)
+----------------------------------------------------
+Same parameters as ModelRed.
+
+EXAMPLE:
+  async with AsyncModelRed() as client:
+      model = await client.create_model(...)
+      assessment = await client.create_assessment(...)
+      result = await client.wait_for_completion(assessment.id)
+
+
+================================================================================
+MODELS API
+================================================================================
+
+Models represent your AI systems under test. Each model has provider-specific
+configuration (API keys, model names, endpoints).
+
+
+METHOD: create_model()
+----------------------
+Register a new model for security testing.
+
+SIGNATURE:
+  create_model(
+      modelId: str,
+      provider: ModelProvider,
+      displayName: str,
+      providerConfig: Dict[str, Any],
+      description: str = None
+  ) -> Model
+
+PARAMETERS:
+  • modelId (str, required)
+    Unique identifier for this model in your organization.
+    Use lowercase with hyphens (e.g. "production-gpt4", "claude-dev").
+    
+  • provider (ModelProvider, required)
+    Model provider enum. Options:
+      - ModelProvider.OPENAI
+      - ModelProvider.ANTHROPIC
+      - ModelProvider.AZURE
+      - ModelProvider.GOOGLE
+      - ModelProvider.HUGGINGFACE
+      - ModelProvider.REST
+      - ModelProvider.BEDROCK
+      - ModelProvider.SAGEMAKER
+    
+  • displayName (str, required)
+    Human-readable name shown in dashboard.
+    
+  • providerConfig (dict, required)
+    Provider-specific configuration dictionary.
+    Use ProviderConfig helper methods (see Provider Configuration section).
+    
+  • description (str, optional)
+    Optional model description for documentation.
+
+RETURNS:
+  Model object with fields:
+    - id: Database ID
+    - modelId: Your unique identifier
+    - provider: Provider name
+    - displayName: Display name
+    - description: Description (if provided)
+    - isActive: Whether model is active (default: true)
+    - testCount: Number of assessments run
+    - lastTested: Datetime of last assessment
+    - createdAt: Creation timestamp
+    - updatedAt: Last update timestamp
+
+ERRORS:
+  • ValidationError: Invalid parameters
+  • ConflictError: Model with this modelId already exists
+  • AuthenticationError: Invalid API key
+  • AuthorizationError: Insufficient permissions
+
+EXAMPLE:
+  from modelred import ModelRed, ModelProvider, ProviderConfig
+  
+  client = ModelRed()
+  
+  # OpenAI model
+  model = client.create_model(
+      modelId="prod-gpt4",
+      provider=ModelProvider.OPENAI,
+      displayName="Production GPT-4",
+      providerConfig=ProviderConfig.openai(
+          api_key=os.environ["OPENAI_API_KEY"],
+          model_name="gpt-4o-mini"
+      ),
+      description="Production chatbot model"
+  )
+  
+  # Anthropic model
+  model = client.create_model(
+      modelId="claude-assistant",
+      provider=ModelProvider.ANTHROPIC,
+      displayName="Claude Assistant",
+      providerConfig=ProviderConfig.anthropic(
+          api_key=os.environ["ANTHROPIC_API_KEY"],
+          model_name="claude-3-5-sonnet-20241022"
+      )
+  )
+
+IDEMPOTENCY:
+  If a model with the same modelId already exists, this method raises
+  ConflictError. Catch this to handle existing models:
+  
+  try:
+      model = client.create_model(modelId="my-model", ...)
+  except ConflictError:
+      model = client.get_model("my-model")
+
+
+METHOD: get_model()
+-------------------
+Retrieve an existing model by identifier.
+
+SIGNATURE:
+  get_model(model_identifier: str) -> Model
+
+PARAMETERS:
+  • model_identifier (str, required)
+    Model ID or modelId to retrieve.
+
+RETURNS:
+  Model object (same as create_model return value)
+
+ERRORS:
+  • NotFoundError: Model does not exist
+  • AuthenticationError: Invalid API key
+
+EXAMPLE:
+  model = client.get_model("prod-gpt4")
+  print(f"Model: {model.displayName}")
+  print(f"Tests run: {model.testCount}")
+
+
+METHOD: list_models()
+---------------------
+List all models in your organization.
+
+SIGNATURE:
+  list_models() -> List[Model]
+
+PARAMETERS:
+  None
+
+RETURNS:
+  List of Model objects, sorted by creation date (newest first)
+
+ERRORS:
+  • AuthenticationError: Invalid API key
+
+EXAMPLE:
+  models = client.list_models()
+  for model in models:
+      print(f"• {model.displayName} ({model.provider})")
+      print(f"  Tests: {model.testCount}, Active: {model.isActive}")
+
+
+================================================================================
+ASSESSMENTS API
+================================================================================
+
+Assessments are security test runs. Create an assessment to test your model
+against selected probes, then wait for results.
+
+
+METHOD: create_assessment()
+---------------------------
+Create a new security assessment.
+
+SIGNATURE:
+  create_assessment(
+      model: str,
+      test_types: List[str],
+      priority: Priority = Priority.NORMAL
+  ) -> Assessment
+
+PARAMETERS:
+  • model (str, required)
+    Model ID or modelId to test.
+    
+  • test_types (List[str], required)
+    List of probe keys to run. Get these from list_probes().
+    Minimum 1 probe, maximum depends on your subscription tier.
+    
+  • priority (Priority, optional, default=Priority.NORMAL)
+    Assessment priority. Options:
+      - Priority.LOW: Runs when system has spare capacity
+      - Priority.NORMAL: Standard queue processing (default)
+      - Priority.HIGH: Prioritized processing (premium tiers only)
+
+RETURNS:
+  Assessment object with fields:
+    - id: Assessment unique ID
+    - modelId: Model being tested
+    - status: Current status (QUEUED, RUNNING, COMPLETED, FAILED, CANCELLED)
+    - testTypes: List of probe keys
+    - priority: Priority level
+    - progress: Completion percentage (0-100)
+    - createdAt: Creation timestamp
+    - completedAt: Completion timestamp (null until complete)
+    - detailedReport: Results dictionary (null until complete)
+    - errorMessage: Error details (null unless failed)
+
+ERRORS:
+  • ValidationError: Invalid parameters
+  • NotFoundError: Model does not exist
+  • SubscriptionLimitError: Exceeded concurrent assessment limit
+  • AuthenticationError: Invalid API key
+
+EXAMPLE:
+  # Get available probes
+  probes = client.list_probes()
+  
+  # Select probes by category
+  injection_probes = [p.key for p in probes.probes 
+                      if p.category == "prompt_injection"]
+  
+  # Create assessment
+  assessment = client.create_assessment(
+      model="prod-gpt4",
+      test_types=injection_probes,
+      priority=Priority.NORMAL
+  )
+  
+  print(f"Assessment created: {assessment.id}")
+  print(f"Status: {assessment.status.value}")
+
+PROBE SELECTION STRATEGIES:
+  # Quick smoke test (5-10 probes)
+  quick_probes = [p.key for p in probes.probes[:10]]
+  
+  # By severity
+  critical_probes = [p.key for p in probes.probes 
+                     if p.severity == "critical"]
+  
+  # By category
+  medical_probes = [p.key for p in probes.probes 
+                    if p.category == "medical_ethics"]
+  
+  # Combined filters
+  critical_injection = [p.key for p in probes.probes
+                        if p.severity == "critical" 
+                        and "injection" in p.category]
+
+
+METHOD: get_assessment()
+------------------------
+Check assessment status and retrieve results.
+
+SIGNATURE:
+  get_assessment(assessment_id: str) -> Assessment
+
+PARAMETERS:
+  • assessment_id (str, required)
+    Assessment ID returned from create_assessment()
+
+RETURNS:
+  Assessment object with current status and results (if completed)
+
+ERRORS:
+  • NotFoundError: Assessment does not exist
+  • AuthenticationError: Invalid API key
+
+EXAMPLE:
+  assessment = client.get_assessment("assess_abc123")
+  
+  if assessment.status == AssessmentStatus.COMPLETED:
+      print(f"Score: {assessment.detailedReport['overall_score']}")
+  elif assessment.status == AssessmentStatus.RUNNING:
+      print(f"Progress: {assessment.progress}%")
+  elif assessment.status == AssessmentStatus.FAILED:
+      print(f"Error: {assessment.errorMessage}")
+
+
+METHOD: list_assessments()
+--------------------------
+List recent assessments.
+
+SIGNATURE:
+  list_assessments(limit: int = None) -> List[Assessment]
+
+PARAMETERS:
+  • limit (int, optional)
+    Maximum number of assessments to return. If not specified, returns all.
+
+RETURNS:
+  List of Assessment objects, sorted by creation date (newest first)
+
+ERRORS:
+  • AuthenticationError: Invalid API key
+
+EXAMPLE:
+  # Get last 10 assessments
+  recent = client.list_assessments(limit=10)
+  
+  for assessment in recent:
+      print(f"{assessment.id}: {assessment.status.value}")
+
+
+METHOD: wait_for_completion()
+------------------------------
+Wait for assessment to complete, polling for status updates.
+
+SIGNATURE:
+  wait_for_completion(
+      assessment_id: str,
+      timeout_minutes: int = 60,
+      poll_interval: int = 10,
+      progress_callback: Callable = None
+  ) -> Assessment
+
+PARAMETERS:
+  • assessment_id (str, required)
+    Assessment ID to wait for
+    
+  • timeout_minutes (int, optional, default=60)
+    Maximum time to wait before raising TimeoutError
+    
+  • poll_interval (int, optional, default=10)
+    Seconds between status checks. Lower values = more API calls.
+    Recommended: 5-30 seconds depending on urgency.
+    
+  • progress_callback (callable, optional)
+    Function called on each status update. Receives Assessment object.
+    Useful for logging progress in CI/CD pipelines.
+
+RETURNS:
+  Completed Assessment object with detailedReport populated
+
+ERRORS:
+  • TimeoutError: Assessment did not complete within timeout
+  • NotFoundError: Assessment does not exist
+  • AuthenticationError: Invalid API key
+
+EXAMPLE:
+  # Simple usage
+  result = client.wait_for_completion("assess_abc123")
+  print(f"Completed with score: {result.detailedReport['overall_score']}")
+  
+  # With progress logging
+  def log_progress(assessment):
+      print(f"[{assessment.status.value}] {assessment.progress}% complete")
+  
+  result = client.wait_for_completion(
+      "assess_abc123",
+      timeout_minutes=30,
+      poll_interval=5,
+      progress_callback=log_progress
+  )
+  
+  # CI/CD usage
+  result = client.wait_for_completion(assessment.id)
+  score = result.detailedReport['overall_score']
+  
+  if score < 80:
+      print(f"❌ Security score too low: {score}/100")
+      sys.exit(1)
+  else:
+      print(f"✅ Security score passed: {score}/100")
+
+
+================================================================================
+PROBES API
+================================================================================
+
+Probes are security tests that check for specific vulnerabilities. Each probe
+sends targeted prompts to your model and analyzes responses.
+
+
+METHOD: list_probes()
+---------------------
+List all security probes available for your subscription tier.
+
+SIGNATURE:
+  list_probes(category: str = None) -> ProbesIndex
+
+PARAMETERS:
+  • category (str, optional)
+    Filter by category. Options:
+      - "universal": Basic security tests (all tiers)
+      - "prompt_injection": Injection attacks
+      - "jailbreak": Jailbreak attempts
+      - "data_leakage": Information disclosure
+      - "medical_ethics": Healthcare compliance (professional tier+)
+      - "legal_ethics": Legal compliance (professional tier+)
+      - "financial_compliance": Financial regulations (enterprise tier+)
+      - "cyber_operations": Advanced attacks (enterprise tier+)
+
+RETURNS:
+  ProbesIndex object with fields:
+    - probes: List of Probe objects
+    - probe_categories: List of available categories
+    - tier_definitions: Dict of tier information
+    
+  Each Probe object contains:
+    - key: Unique probe identifier (use in create_assessment)
+    - display_name: Human-readable name
+    - description: What the probe tests
+    - category: Probe category
+    - severity: "low", "medium", "high", or "critical"
+    - tier: Required subscription tier
+    - tags: List of related tags
+
+ERRORS:
+  • AuthenticationError: Invalid API key
+
+EXAMPLE:
+  # Get all available probes
+  probes_index = client.list_probes()
+  print(f"Available probes: {len(probes_index.probes)}")
+  print(f"Categories: {', '.join(probes_index.probe_categories)}")
+  
+  # Get probes by category
+  medical = client.list_probes(category="medical_ethics")
+  print(f"Medical ethics probes: {len(medical.probes)}")
+  
+  # Display probe details
+  for probe in probes_index.probes[:5]:
+      print(f"\n• {probe.display_name}")
+      print(f"  Key: {probe.key}")
+      print(f"  Category: {probe.category}")
+      print(f"  Severity: {probe.severity}")
+      print(f"  Description: {probe.description}")
+
+TIER-BASED FILTERING:
+  The SDK automatically returns probes for your subscription tier.
+  You cannot access probes outside your tier - this is enforced server-side.
+  
+  Tiers:
+    - Free: ~30 universal probes
+    - Professional: ~100 probes (universal + specialized)
+    - Enterprise: 200+ probes (all categories)
+
+
+================================================================================
+PROVIDER CONFIGURATION
+================================================================================
+
+ProviderConfig class provides helper methods to create provider-specific
+configuration dictionaries. This ensures correct parameter formats.
+
+
+CLASS: ProviderConfig
+---------------------
+Static factory methods for provider configurations.
+
+
+METHOD: ProviderConfig.openai()
+-------------------------------
+OpenAI / OpenAI-compatible model configuration.
+
+SIGNATURE:
+  ProviderConfig.openai(
+      api_key: str,
+      model_name: str = "gpt-4o-mini",
+      organization: str = None
+  ) -> dict
+
+PARAMETERS:
+  • api_key (str, required): OpenAI API key (starts with "sk-")
+  • model_name (str, default="gpt-4o-mini"): Model identifier
+  • organization (str, optional): OpenAI organization ID
+
+SUPPORTED MODELS:
+  - gpt-4o, gpt-4o-mini
+  - gpt-4, gpt-4-turbo
+  - gpt-3.5-turbo
+
+EXAMPLE:
+  config = ProviderConfig.openai(
+      api_key=os.environ["OPENAI_API_KEY"],
+      model_name="gpt-4o-mini"
+  )
+
+
+METHOD: ProviderConfig.anthropic()
+----------------------------------
+Anthropic Claude configuration.
+
+SIGNATURE:
+  ProviderConfig.anthropic(
+      api_key: str,
+      model_name: str = "claude-3-5-sonnet-20241022"
+  ) -> dict
+
+PARAMETERS:
+  • api_key (str, required): Anthropic API key
+  • model_name (str, default="claude-3-5-sonnet-20241022"): Model identifier
+
+SUPPORTED MODELS:
+  - claude-3-5-sonnet-20241022
+  - claude-3-5-haiku-20241022
+  - claude-3-opus-20240229
+
+EXAMPLE:
+  config = ProviderConfig.anthropic(
+      api_key=os.environ["ANTHROPIC_API_KEY"],
+      model_name="claude-3-5-sonnet-20241022"
+  )
+
+
+METHOD: ProviderConfig.azure()
+------------------------------
+Azure OpenAI configuration.
+
+SIGNATURE:
+  ProviderConfig.azure(
+      api_key: str,
+      endpoint: str,
+      deployment_name: str,
+      api_version: str = "2024-06-01"
+  ) -> dict
+
+PARAMETERS:
+  • api_key (str, required): Azure OpenAI API key
+  • endpoint (str, required): Azure endpoint URL
+  • deployment_name (str, required): Azure deployment name
+  • api_version (str, default="2024-06-01"): Azure API version
+
+EXAMPLE:
+  config = ProviderConfig.azure(
+      api_key=os.environ["AZURE_OPENAI_KEY"],
+      endpoint="https://my-resource.openai.azure.com",
+      deployment_name="gpt-4-deployment",
+      api_version="2024-06-01"
+  )
+
+
+METHOD: ProviderConfig.openrouter()
+-----------------------------------
+OpenRouter configuration (unified LLM API).
+
+SIGNATURE:
+  ProviderConfig.openrouter(
+      api_key: str,
+      model_name: str,
+      base_url: str = "https://openrouter.ai/api/v1"
+  ) -> dict
+
+PARAMETERS:
+  • api_key (str, required): OpenRouter API key
+  • model_name (str, required): Full model path
+  • base_url (str, default="https://openrouter.ai/api/v1"): API endpoint
+
+SUPPORTED MODELS:
+  - anthropic/claude-3.5-sonnet
+  - google/gemini-pro-1.5
+  - meta-llama/llama-3.1-70b-instruct
+  - And 100+ more (see openrouter.ai/docs)
+
+EXAMPLE:
+  config = ProviderConfig.openrouter(
+      api_key=os.environ["OPENROUTER_API_KEY"],
+      model_name="anthropic/claude-3.5-sonnet"
+  )
+
+
+METHOD: ProviderConfig.grok()
+-----------------------------
+xAI Grok configuration.
+
+SIGNATURE:
+  ProviderConfig.grok(
+      api_key: str,
+      model_name: str = "grok-beta"
+  ) -> dict
+
+PARAMETERS:
+  • api_key (str, required): xAI API key
+  • model_name (str, default="grok-beta"): Model identifier
+
+EXAMPLE:
+  config = ProviderConfig.grok(
+      api_key=os.environ["XAI_API_KEY"],
+      model_name="grok-beta"
+  )
+
+
+METHOD: ProviderConfig.google()
+-------------------------------
+Google Gemini configuration.
+
+SIGNATURE:
+  ProviderConfig.google(
+      api_key: str,
+      model_name: str,
+      generation_config: dict = None,
+      safety_settings: list = None
+  ) -> dict
+
+PARAMETERS:
+  • api_key (str, required): Google AI Studio API key
+  • model_name (str, required): Model identifier
+  • generation_config (dict, optional): Generation parameters
+  • safety_settings (list, optional): Safety configuration
+
+SUPPORTED MODELS:
+  - gemini-2.0-flash-exp
+  - gemini-1.5-pro
+  - gemini-1.5-flash
+
+EXAMPLE:
+  config = ProviderConfig.google(
+      api_key=os.environ["GOOGLE_API_KEY"],
+      model_name="gemini-2.0-flash-exp",
+      generation_config={"temperature": 0.7, "max_output_tokens": 1024}
+  )
+
+
+================================================================================
+DATA MODELS
+================================================================================
+
+ENUM: ModelProvider
+-------------------
+Supported model providers.
+
+VALUES:
+  • ModelProvider.OPENAI
+  • ModelProvider.ANTHROPIC
+  • ModelProvider.AZURE
+  • ModelProvider.GOOGLE
+  • ModelProvider.HUGGINGFACE
+  • ModelProvider.REST
+  • ModelProvider.BEDROCK
+  • ModelProvider.SAGEMAKER
+
+
+ENUM: AssessmentStatus
+----------------------
+Assessment lifecycle states.
+
+VALUES:
+  • AssessmentStatus.QUEUED: Waiting to start
+  • AssessmentStatus.RUNNING: Currently executing
+  • AssessmentStatus.COMPLETED: Successfully finished
+  • AssessmentStatus.FAILED: Error occurred
+  • AssessmentStatus.CANCELLED: User cancelled
+
+
+ENUM: Priority
+--------------
+Assessment priority levels.
+
+VALUES:
+  • Priority.LOW: Background processing
+  • Priority.NORMAL: Standard queue (default)
+  • Priority.HIGH: Prioritized (premium tiers)
+
+
+CLASS: Model
+------------
+Represents a registered AI model.
+
+FIELDS:
+  • id (str): Database ID
+  • modelId (str): Your unique identifier
+  • provider (str): Provider name
+  • modelName (str): Provider's model name
+  • displayName (str): Human-readable name
+  • description (str): Optional description
+  • isActive (bool): Whether model is active
+  • lastTested (datetime): Last assessment date
+  • testCount (int): Number of assessments run
+  • createdAt (datetime): Creation timestamp
+  • updatedAt (datetime): Last update timestamp
+
+
+CLASS: Assessment
+-----------------
+Represents a security assessment run.
+
+FIELDS:
+  • id (str): Assessment unique ID
+  • modelId (str): Model being tested
+  • status (AssessmentStatus): Current status
+  • testTypes (List[str]): Probe keys being run
+  • priority (Priority): Priority level
+  • progress (int): Completion percentage (0-100)
+  • createdAt (datetime): Creation timestamp
+  • completedAt (datetime): Completion timestamp
+  • detailedReport (dict): Results (when completed)
+  • errorMessage (str): Error details (when failed)
+
+DETAILED REPORT STRUCTURE:
+  {
+    "overall_score": 85,  # 0-100 security score
+    "risk_level": "medium",  # low, medium, high, critical
+    "total_tests": 50,
+    "passed_tests": 42,
+    "failed_tests": 8,
+    "probes": [
+      {
+        "key": "reverse_psychology",
+        "displayName": "Reverse Psychology",
+        "category": "prompt_injection",
+        "severity": "high",
+        "total_cases": 10,
+        "passed_cases": 8,
+        "failed_cases": 2,
+        "pass_rate": 80.0,
+        "findings": [...]
+      },
+      ...
+    ],
+    "vulnerabilities": [
+      {
+        "probe": "data_leakage_01",
+        "severity": "critical",
+        "description": "Model leaked training data",
+        "recommendation": "Implement output filtering"
+      },
+      ...
+    ]
+  }
+
+
+CLASS: Probe
+------------
+Represents a security test probe.
+
+FIELDS:
+  • key (str): Unique identifier (use in create_assessment)
+  • display_name (str): Human-readable name
+  • description (str): What the probe tests
+  • category (str): Probe category
+  • severity (str): "low", "medium", "high", "critical"
+  • tier (str): Required subscription tier
+  • tags (List[str]): Related tags
+
+
+CLASS: ProbesIndex
+------------------
+Container for available probes.
+
+FIELDS:
+  • probes (List[Probe]): Available probe objects
+  • probe_categories (List[str]): Available categories
+  • tier_definitions (dict): Tier information
+
+
+================================================================================
+EXCEPTIONS
+================================================================================
+
+All exceptions inherit from ModelRedError base class.
+
+EXCEPTION: ModelRedError
+------------------------
+Base exception for all SDK errors.
+
+
+EXCEPTION: ValidationError
+--------------------------
+Invalid request parameters.
+
+EXAMPLE:
+  try:
+      assessment = client.create_assessment(model="", test_types=[])
+  except ValidationError as e:
+      print(f"Invalid parameters: {e}")
+
+
+EXCEPTION: AuthenticationError
+------------------------------
+Invalid or missing API key.
+
+EXAMPLE:
+  try:
+      client = ModelRed(api_key="invalid")
+      client.list_models()
+  except AuthenticationError:
+      print("Check your API key")
+
+
+EXCEPTION: AuthorizationError
+-----------------------------
+Insufficient permissions for requested action.
+
+
+EXCEPTION: NotFoundError
+------------------------
+Requested resource does not exist.
+
+EXAMPLE:
+  try:
+      model = client.get_model("nonexistent")
+  except NotFoundError:
+      print("Model not found")
+
+
+EXCEPTION: ConflictError
+------------------------
+Resource already exists (duplicate creation).
+
+EXAMPLE:
+  try:
+      client.create_model(modelId="existing-model", ...)
+  except ConflictError:
+      print("Model already exists")
+
+
+EXCEPTION: RateLimitError
+-------------------------
+API rate limit exceeded. Wait and retry.
+
+
+EXCEPTION: SubscriptionLimitError
+---------------------------------
+Subscription limit reached (e.g. max concurrent assessments).
+
+EXAMPLE:
+  try:
+      assessment = client.create_assessment(...)
+  except SubscriptionLimitError as e:
+      print(f"Limit reached: {e}")
+      print("Wait for existing assessments to complete")
+
+
+EXCEPTION: ServerError
+----------------------
+Internal server error (5xx). Retry with backoff.
+
+
+EXCEPTION: NetworkError
+-----------------------
+Network connectivity issues.
+
+
+ERROR HANDLING BEST PRACTICES:
+  from modelred import (
+      ModelRed,
+      ValidationError,
+      ConflictError,
+      SubscriptionLimitError
+  )
+  
+  try:
+      client = ModelRed()
+      
+      # Handle duplicate models
+      try:
+          model = client.create_model(modelId="my-model", ...)
+      except ConflictError:
+          model = client.get_model("my-model")
+      
+      # Handle subscription limits
+      try:
+          assessment = client.create_assessment(...)
+      except SubscriptionLimitError:
+          print("Too many concurrent assessments, waiting...")
+          time.sleep(60)
+          assessment = client.create_assessment(...)
+      
+      result = client.wait_for_completion(assessment.id)
+      
+  except ValidationError as e:
+      print(f"Invalid request: {e}")
+  except AuthenticationError:
+      print("Invalid API key")
+  except NetworkError as e:
+      print(f"Network error: {e}")
+  finally:
+      client.close()
+
+
+================================================================================
+CI/CD INTEGRATION
+================================================================================
+
+GITHUB ACTIONS EXAMPLE
+----------------------
+name: AI Security Testing
+
+on: [push, pull_request]
+
+jobs:
+  security-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      
+      - name: Install dependencies
+        run: |
+          pip install modelred
+      
+      - name: Run security assessment
+        env:
+          MODELRED_API_KEY: ${{ secrets.MODELRED_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python security_test.py
+
+
+JENKINS EXAMPLE
+---------------
+pipeline {
+    agent any
+    environment {
+        MODELRED_API_KEY = credentials('modelred-api-key')
+        OPENAI_API_KEY = credentials('openai-api-key')
+    }
+    stages {
+        stage('Security Test') {
+            steps {
+                sh '''
+                    pip install modelred
+                    python security_test.py
+                '''
+            }
+        }
+    }
+}
+
+
+GITLAB CI EXAMPLE
+-----------------
+security-test:
+  image: python:3.9
+  script:
+    - pip install modelred
+    - python security_test.py
+  variables:
+    MODELRED_API_KEY: $MODELRED_API_KEY
+    OPENAI_API_KEY: $OPENAI_API_KEY
+
+
+CI/CD SCRIPT (security_test.py)
+--------------------------------
+#!/usr/bin/env python3
+"""CI/CD security testing script."""
+
+import os
+import sys
+from modelred import (
+    ModelRed,
+    ModelProvider,
+    ProviderConfig,
+    ConflictError,
+    AssessmentStatus
+)
+
+def main():
+    client = ModelRed()
+    
+    # Register model (or use existing)
+    try:
+        model = client.create_model(
+            modelId="ci-model",
+            provider=ModelProvider.OPENAI,
+            displayName="CI Test Model",
+            providerConfig=ProviderConfig.openai(
+                api_key=os.environ["OPENAI_API_KEY"],
+                model_name="gpt-4o-mini"
+            )
+        )
+        print(f"✓ Model registered: {model.modelId}")
+    except ConflictError:
+        model = client.get_model("ci-model")
+        print(f"✓ Using existing model: {model.modelId}")
+    
+    # Get critical probes
+    probes = client.list_probes()
+    critical_probes = [p.key for p in probes.probes 
+                       if p.severity == "critical"][:10]
+    
+    print(f"✓ Running {len(critical_probes)} critical security probes")
+    
+    # Create assessment
+    assessment = client.create_assessment(
+        model="ci-model",
+        test_types=critical_probes
+    )
+    print(f"✓ Assessment started: {assessment.id}")
+    
+    # Wait for completion with progress
+    def log_progress(a):
+        print(f"  [{a.status.value}] {a.progress}% complete")
+    
+    result = client.wait_for_completion(
+        assessment.id,
+        timeout_minutes=30,
+        poll_interval=10,
+        progress_callback=log_progress
+    )
+    
+    # Check results
+    if result.status == AssessmentStatus.COMPLETED:
+        report = result.detailedReport
+        score = report['overall_score']
+        risk = report['risk_level']
+        
+        print(f"\n{'='*60}")
+        print(f"Security Score: {score}/100")
+        print(f"Risk Level: {risk.upper()}")
+        print(f"Tests: {report['passed_tests']}/{report['total_tests']} passed")
+        print(f"{'='*60}\n")
+        
+        # Fail CI if score too low
+        THRESHOLD = 70
+        if score < THRESHOLD:
+            print(f"❌ FAILED: Security score {score} below threshold {THRESHOLD}")
+            sys.exit(1)
+        else:
+            print(f"✅ PASSED: Security score {score} meets threshold {THRESHOLD}")
+            sys.exit(0)
+    else:
+        print(f"❌ Assessment failed: {result.errorMessage}")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()
+
+
+================================================================================
+ENVIRONMENT VARIABLES
+================================================================================
+
+VARIABLE: MODELRED_API_KEY
+--------------------------
+Your ModelRed API key (required).
+Get this from: https://app.modelred.ai/api-keys
+
+EXAMPLE:
+  export MODELRED_API_KEY=mr_abc123...
+
+
+VARIABLE: MODELRED_BASE_URL
+---------------------------
+API base URL (optional, for development only).
+Default: https://app.modelred.ai
+
+FOR LOCAL DEVELOPMENT:
+  export MODELRED_BASE_URL=http://localhost:3000/api
+
+FOR PRODUCTION:
+  Leave unset (defaults to production URL)
+
+SECURITY NOTE:
+  This is ONLY configurable via environment variable (not in code) to prevent
+  malicious code from redirecting API traffic.
+
+
+VARIABLE: MODELRED_TIMEOUT
+--------------------------
+Request timeout in seconds (optional).
+Default: 30
+
+EXAMPLE:
+  export MODELRED_TIMEOUT=60
+
+
+VARIABLE: MODELRED_MAX_RETRIES
+------------------------------
+Maximum retry attempts for failed requests (optional).
+Default: 3
+
+EXAMPLE:
+  export MODELRED_MAX_RETRIES=5
+
+
+VARIABLE: MODELRED_RETRY_BACKOFF
+--------------------------------
+Initial backoff delay in seconds for retries (optional).
+Default: 0.5
+
+EXAMPLE:
+  export MODELRED_RETRY_BACKOFF=1.0
+
+
+================================================================================
+BEST PRACTICES
+================================================================================
+
+1. API KEY MANAGEMENT
+   ✓ Always use environment variables for API keys
+   ✓ Never commit API keys to version control
+   ✓ Rotate API keys regularly
+   ✓ Use separate keys for dev/staging/production
+
+2. MODEL REGISTRATION
+   ✓ Use descriptive modelId (e.g. "production-gpt4", "staging-claude")
+   ✓ Handle ConflictError for existing models
+   ✓ Set meaningful displayName for dashboard visibility
+
+3. PROBE SELECTION
+   ✓ Start with critical severity probes
+   ✓ Filter by category relevant to your use case
+   ✓ Run comprehensive tests before production deployment
+   ✓ Quick tests in CI (10-20 probes), full tests nightly (all probes)
+
+4. ASSESSMENT MANAGEMENT
+   ✓ Use wait_for_completion() for synchronous testing
+   ✓ Set reasonable timeouts (typical: 5-30 minutes)
+   ✓ Implement progress callbacks for long-running tests
+   ✓ Check subscription limits before creating many assessments
+
+5. ERROR HANDLING
+   ✓ Always wrap API calls in try/except blocks
+   ✓ Handle ConflictError for idempotent operations
+   ✓ Retry on NetworkError with exponential backoff
+   ✓ Log errors for debugging
+
+6. CI/CD INTEGRATION
+   ✓ Use exit codes for pass/fail (sys.exit(1) on failure)
+   ✓ Set security score thresholds appropriate for your risk level
+   ✓ Run quick tests on every commit, full tests nightly
+   ✓ Store API keys in CI secrets/vault
+
+7. PERFORMANCE
+   ✓ Close client when done (or use context manager)
+   ✓ Reuse models across assessments (don't recreate)
+   ✓ Use appropriate poll_interval (5-30s depending on urgency)
+   ✓ Consider async client for high-concurrency scenarios
+
+
+================================================================================
+ADVANCED USAGE
+================================================================================
+
+ASYNC CLIENT
+------------
+For high-concurrency applications or async frameworks (FastAPI, aiohttp):
+
+import asyncio
+from modelred import AsyncModelRed, ModelProvider, ProviderConfig
+
+async def run_security_test():
+    async with AsyncModelRed() as client:
+        # All methods are async and must be awaited
+        model = await client.create_model(
+            modelId="async-model",
+            provider=ModelProvider.OPENAI,
+            displayName="Async Model",
+            providerConfig=ProviderConfig.openai(
+                api_key=os.environ["OPENAI_API_KEY"],
+                model_name="gpt-4o-mini"
+            )
+        )
+        
+        probes = await client.list_probes()
+        test_types = [p.key for p in probes.probes[:10]]
+        
+        assessment = await client.create_assessment(
+            model="async-model",
+            test_types=test_types
+        )
+        
+        result = await client.wait_for_completion(assessment.id)
+        return result
+
+# Run in event loop
+result = asyncio.run(run_security_test())
+
+
+PARALLEL ASSESSMENTS
+--------------------
+Test multiple models concurrently:
+
+from modelred import ModelRed
+import concurrent.futures
+
+def test_model(model_id, test_types):
+    client = ModelRed()
+    assessment = client.create_assessment(
+        model=model_id,
+        test_types=test_types
+    )
+    result = client.wait_for_completion(assessment.id)
+    client.close()
+    return result
+
+models = ["model-a", "model-b", "model-c"]
+probes = client.list_probes()
+test_types = [p.key for p in probes.probes[:10]]
+
+with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
+    futures = [executor.submit(test_model, m, test_types) for m in models]
+    results = [f.result() for f in futures]
+
+
+CUSTOM PROGRESS TRACKING
+-------------------------
+Track assessment progress in database or external system:
+
+import time
+from datetime import datetime
+
+class ProgressTracker:
+    def __init__(self, assessment_id):
+        self.assessment_id = assessment_id
+        self.start_time = datetime.now()
+        self.last_progress = 0
+    
+    def __call__(self, assessment):
+        elapsed = (datetime.now() - self.start_time).seconds
+        progress_delta = assessment.progress - self.last_progress
+        
+        # Log to database
+        db.insert({
+            "assessment_id": self.assessment_id,
+            "status": assessment.status.value,
+            "progress": assessment.progress,
+            "elapsed_seconds": elapsed,
+            "timestamp": datetime.now()
+        })
+        
+        # Estimate time remaining
+        if progress_delta > 0:
+            rate = progress_delta / 10  # per poll interval
+            remaining = (100 - assessment.progress) / rate * 10
+            print(f"Progress: {assessment.progress}% (est. {remaining}s remaining)")
+        
+        self.last_progress = assessment.progress
+
+tracker = ProgressTracker(assessment.id)
+result = client.wait_for_completion(
+    assessment.id,
+    progress_callback=tracker
+)
+
+
+FILTERED PROBE SELECTION
+-------------------------
+Advanced probe filtering strategies:
+
+probes = client.list_probes()
+
+# By multiple categories
+categories = ["prompt_injection", "jailbreak", "data_leakage"]
+selected = [p.key for p in probes.probes if p.category in categories]
+
+# By severity threshold (high and critical only)
+selected = [p.key for p in probes.probes 
+            if p.severity in ["high", "critical"]]
+
+# By tags (assuming tags exist)
+selected = [p.key for p in probes.probes 
+            if "healthcare" in p.tags or "HIPAA" in p.tags]
+
+# Random sampling for quick tests
+import random
+all_keys = [p.key for p in probes.probes]
+quick_sample = random.sample(all_keys, min(20, len(all_keys)))
+
+# Tiered testing strategy
+def get_tiered_probes(tier):
+    probes = client.list_probes()
+    
+    if tier == "quick":
+        # 5-10 critical probes
+        return [p.key for p in probes.probes 
+                if p.severity == "critical"][:10]
+    
+    elif tier == "standard":
+        # 20-30 high/critical probes
+        return [p.key for p in probes.probes 
+                if p.severity in ["high", "critical"]][:30]
+    
+    elif tier == "comprehensive":
+        # All probes
+        return [p.key for p in probes.probes]
+    
+    return []
+
+# Use in CI
+if os.environ.get("CI_COMMIT_BRANCH") == "main":
+    test_types = get_tiered_probes("comprehensive")
+else:
+    test_types = get_tiered_probes("quick")
+
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+ISSUE: "AuthenticationError: Invalid API key"
+SOLUTION:
+  1. Check API key is correct: https://app.modelred.ai/api-keys
+  2. Verify environment variable: echo $MODELRED_API_KEY
+  3. Check for whitespace: MODELRED_API_KEY="$(cat key.txt | tr -d '\n')"
+
+ISSUE: "NetworkError: Connection refused"
+SOLUTION:
+  1. Check internet connection
+  2. Verify MODELRED_BASE_URL (should be unset for production)
+  3. Check firewall/proxy settings
+
+ISSUE: "SubscriptionLimitError: Maximum concurrent assessments reached"
+SOLUTION:
+  1. Wait for existing assessments to complete
+  2. Upgrade subscription tier for higher limits
+  3. List assessments: client.list_assessments()
+
+ISSUE: "ConflictError: Model already exists"
+SOLUTION:
+  Handle idempotently:
+  try:
+      model = client.create_model(...)
+  except ConflictError:
+      model = client.get_model(modelId)
+
+ISSUE: "TimeoutError: Assessment did not complete"
+SOLUTION:
+  1. Increase timeout: wait_for_completion(timeout_minutes=120)
+  2. Check assessment status manually: client.get_assessment(id)
+  3. Contact support if assessment is stuck
+
+ISSUE: "ValidationError: Invalid test_types"
+SOLUTION:
+  1. Verify probe keys exist: probes = client.list_probes()
+  2. Check for typos in probe keys
+  3. Ensure probes are available in your tier
+
+ISSUE: Assessment shows progress but no results
+SOLUTION:
+  Results are only available when status is COMPLETED.
+  Check: result.status == AssessmentStatus.COMPLETED
+
+
+================================================================================
+SUPPORT & RESOURCES
+================================================================================
+
+DOCUMENTATION
+  • Main Docs: https://docs.modelred.ai
+  • API Reference: https://docs.modelred.ai/api
+  • Probe Catalog: https://app.modelred.ai/probes
+
+SUPPORT
+  • Email: support@modelred.ai
+  • Discord: https://discord.gg/modelred
+  • GitHub Issues: https://github.com/modelred/python-sdk
+
+DASHBOARD
+  • Web App: https://app.modelred.ai
+  • API Keys: https://app.modelred.ai/api-keys
+  • Usage: https://app.modelred.ai/usage
+
+LINKS
+  • PyPI Package: https://pypi.org/project/modelred
+  • Source Code: https://github.com/modelred/python-sdk
+  • Changelog: https://github.com/modelred/python-sdk/blob/main/CHANGELOG.md
+
+
+================================================================================
+END OF API REFERENCE
+================================================================================
+Version: 0.1.24
+Last Updated: October 2025
