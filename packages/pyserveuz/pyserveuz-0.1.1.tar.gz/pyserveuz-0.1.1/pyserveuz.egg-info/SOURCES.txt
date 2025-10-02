@@ -1,0 +1,7 @@
+README.md
+setup.py
+pyserveuz.egg-info/PKG-INFO
+pyserveuz.egg-info/SOURCES.txt
+pyserveuz.egg-info/dependency_links.txt
+pyserveuz.egg-info/requires.txt
+pyserveuz.egg-info/top_level.txt
