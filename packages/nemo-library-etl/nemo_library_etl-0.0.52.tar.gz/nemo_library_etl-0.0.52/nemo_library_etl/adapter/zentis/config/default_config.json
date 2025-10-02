@@ -1,0 +1,11 @@
+{
+    "config_version": "0.0.1",
+    "extract_active": true,
+    "transform_active": true,
+    "load_active": true,
+    "extract": {
+        "tables": {}
+    },
+    "transform": {},
+    "load": {}
+}
