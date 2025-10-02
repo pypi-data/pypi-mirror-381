@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/modelcub/__init__.py
+src/modelcub/cli.py
+src/modelcub.egg-info/PKG-INFO
+src/modelcub.egg-info/SOURCES.txt
+src/modelcub.egg-info/dependency_links.txt
+src/modelcub.egg-info/entry_points.txt
+src/modelcub.egg-info/top_level.txt
+src/modelcub/commands/about.py
+src/modelcub/commands/init.py

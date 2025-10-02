@@ -1,0 +1,2 @@
+[console_scripts]
+modelcub = modelcub.cli:main
