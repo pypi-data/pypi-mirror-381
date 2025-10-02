@@ -1,0 +1,18 @@
+[project]
+name = "mcp-data-analyzer-assistant"
+version = "0.1.5"
+description = "通用分析助手"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=1.15.0",
+    "openpyxl>=3.1.5",
+    "pandas>=2.3.3",
+    "seaborn>=0.13.2",
+    "twine>=6.2.0",
+]
+[project.scripts]
+mcp-data-analyzer-assistant = "mcp_data_analyzer_assistant.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mcp_data_analyzer_assistant"]
