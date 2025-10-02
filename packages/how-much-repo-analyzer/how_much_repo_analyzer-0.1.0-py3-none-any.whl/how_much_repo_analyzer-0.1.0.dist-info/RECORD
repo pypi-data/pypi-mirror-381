@@ -1,0 +1,14 @@
+how_much/__init__.py,sha256=yhA0btS--CB0H_aajBiImNjv6lMxHT7DbvFOOw_Ha30,126
+how_much/cli.py,sha256=xxagUrUX8Npfv8mGLJmJ2jAxsUWeMVejC7U11dLhfqk,4596
+how_much/ignore.py,sha256=aHctL-vt9zjvnXE1yxiijUXiyx7g1nrvYcUGejlY-lE,2211
+how_much/main.py,sha256=icl6N-DIgjqrkoKRNwlp0qeOr_xGB1SrW28GRTErkY8,4144
+how_much/stats/__init__.py,sha256=3yc7VjiaAVhNjpyebX-u92YBHVf_WT_GMZ_eX6uY-QU,84
+how_much/stats/base_stat.py,sha256=Rq0Yb4rEAHTSqBT_BmoUrPCHtBktd-FHlCCxcxbGfX8,1335
+how_much/stats/comment_stats.py,sha256=d4Rfbo4p6vprHX4At0OnbKQvNu-A-tIZWDalruj3vUQ,2683
+how_much/stats/core_stats.py,sha256=eIqBmVErGQmEqjYpsYeFO2mTxTkPfMdFLdfxGkPlYKA,1824
+how_much/stats/file_counter.py,sha256=UD2NRZx5oByUGETciTejDQ8mtTnFqq8l5LAX0HTQ5KE,525
+how_much_repo_analyzer-0.1.0.dist-info/entry_points.txt,sha256=_ZxtV8FKqNWqU2_k-M2h2BpZat1so_oXj_bYPbu4JbU,45
+how_much_repo_analyzer-0.1.0.dist-info/LICENSE,sha256=mmq-4anX8GH3ou2tdYyL68AypJMO7P9sNS2AEO-VOo4,1087
+how_much_repo_analyzer-0.1.0.dist-info/METADATA,sha256=f7SF-iXd7yLwVkCfUhiwFTlRTQg2HWT0QH-ci3E4gDE,2306
+how_much_repo_analyzer-0.1.0.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+how_much_repo_analyzer-0.1.0.dist-info/RECORD,,

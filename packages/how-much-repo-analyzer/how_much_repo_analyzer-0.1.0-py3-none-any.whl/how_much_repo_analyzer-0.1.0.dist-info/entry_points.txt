@@ -1,0 +1,3 @@
+[console_scripts]
+how-much=how_much.cli:app
+
