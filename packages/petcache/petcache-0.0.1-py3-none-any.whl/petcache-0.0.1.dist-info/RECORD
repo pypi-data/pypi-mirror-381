@@ -1,0 +1,9 @@
+petcache/__init__.py,sha256=hGHNURNGJBy16MJlGKULpEwdP7G3oXSgkAFfItS6VFU,81
+petcache/__main__.py,sha256=46IQhRjOfAQQKZnEIeAJWlahWcQUJ9iZp4ZGqr6_gJo,1773
+petcache/__version__.py,sha256=ugyuFliEqtAwQmH4sTlc16YXKYbFWDmfyk87fErB8-8,21
+petcache/api.py,sha256=isDjV1c1-qBZp1wnAMh0hdBQdWbOraKRXZPzUpmwV_s,3753
+petcache/cache.py,sha256=HjaVt_TrzfHssJfu2wwQZD6Z_DdOoNWXHysTWgyW8kM,6669
+petcache-0.0.1.dist-info/METADATA,sha256=0hn8vUSMUD9ULVZKtdd0B5ri9YXyKOSbVDcPlEgtGkY,6777
+petcache-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+petcache-0.0.1.dist-info/licenses/LICENSE,sha256=ndULaLc-ex-UTwALr2oTYIaCxpBYf_OW45UhnmMaTdg,164
+petcache-0.0.1.dist-info/RECORD,,
