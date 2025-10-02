@@ -1,0 +1,2 @@
+[console_scripts]
+cosim_toolbox = cosim_toolbox._commands:cosim_toolbox
