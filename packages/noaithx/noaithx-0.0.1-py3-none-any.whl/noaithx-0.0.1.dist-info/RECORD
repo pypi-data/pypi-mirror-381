@@ -1,0 +1,16 @@
+noaithx/__init__.py,sha256=acgy-_26ABdY7vP7FLzwnPDSFTZPRVIQbMGKBd7J_0g,140
+noaithx/__main__.py,sha256=4rngtsfRe8uuplAOzG_zfDYMiiKpb_egxRMTFXQbCKY,83
+noaithx/commentbuilder.py,sha256=mhnLHPFkrZm9Yt6dTtHWm96UNUTorosxCWqB_IqMFnk,3737
+noaithx/commenter.py,sha256=phEG3h04Q-YUKSYj7HCb03GZKpUJUFhiD3R6kVzAdnc,12929
+noaithx/commentgen.py,sha256=YMxGvFdBBG-myke26rXnfbduiyhv-oln_vz1bb7TySI,679
+noaithx/content.py,sha256=qglODg1rgjjnmpTYooOUd28_Hl-2OFBmHU0KuLASZ5g,2888
+noaithx/main.py,sha256=Qtj59pLOjCXNoMiyfYcuUK-PZhLswF3X336UzRXdFV4,1662
+noaithx/content/closer.txt,sha256=5ZDrL8P5qEl1dbX-DKAlJ-PZXsCVmuivHQXDho0oClI,34
+noaithx/content/maths.json,sha256=cY2Q2AS-dwuC13c8zcUo6CVBTxnstrnXsJTOkwhqm7g,594
+noaithx/content/opener.txt,sha256=c3BkrcQUbfe6wZAT-V-WAY9rG76XOunwRIVu5X5uc-s,103
+noaithx/content/silly.json,sha256=emlnFrE9TqTyQJg6HRJxuYu-q7ktTIM3c3-XNVzkYQA,272
+noaithx-0.0.1.dist-info/METADATA,sha256=MoqUIDgZo0AYkvgC7mzVFklpn-54czYaWliaP64tbW8,4252
+noaithx-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+noaithx-0.0.1.dist-info/entry_points.txt,sha256=YSYrxu90oW_Vr6PzmTf1NrFRBH7YL8KSw20eWU-ARAY,46
+noaithx-0.0.1.dist-info/top_level.txt,sha256=kM0-n-vZh-KW-KBZEnnnJmcf9UbB9MkBbqVeOEuFyr4,8
+noaithx-0.0.1.dist-info/RECORD,,

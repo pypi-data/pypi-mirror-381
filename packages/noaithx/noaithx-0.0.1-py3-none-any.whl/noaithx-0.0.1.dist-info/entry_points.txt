@@ -1,0 +1,2 @@
+[console_scripts]
+noaithx = noaithx.main:main
