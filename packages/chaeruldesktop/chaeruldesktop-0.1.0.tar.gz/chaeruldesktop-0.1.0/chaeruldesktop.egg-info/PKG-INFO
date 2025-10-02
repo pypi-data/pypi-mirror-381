@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: chaeruldesktop
+Version: 0.1.0
+Summary: Komponen GUI sederhana berbasis CustomTkinter untuk aplikasi desktop Python
+Home-page: https://github.com/chaerul24/chaeruldesktop
+Author: Chaerul
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: customtkinter
+Requires-Dist: pillow
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Custom Tkinter UI Components
+
+Repo ini berisi kumpulan komponen UI untuk Python menggunakan `tkinter` dan `customtkinter`.  
+Memudahkan pembuatan aplikasi desktop dengan tampilan modern dan fungsi tambahan seperti input dengan ikon, tombol toggle password, progress bar, dan lainnya.
+
+---
+
+## Fitur
+
+- **Config window** — Fungsi `config` untuk membuat window utama dengan judul dan ukuran fleksibel.
+- **TextView** — Label teks dengan custom warna dan font.
+- **ButtonView** — Tombol dengan warna dan radius yang bisa dikustomisasi.
+- **InputView** — Input field dengan placeholder, ikon di kiri, dan tombol toggle mata untuk password.
+- **ProgressView** — Progress bar standar menggunakan `ttk`.
+- **ImageViewPilLow** — Menampilkan gambar dengan PIL dan `tkinter`.
+- **AppDesktop** — Kerangka aplikasi sederhana untuk mengatur layout dan posisi widget.
+
+---
+
+## Instalasi
+
+Pastikan kamu sudah install Python 3.x dan pip.  
+Install dependencies berikut:
+
+```bash
+pip install customtkinter pillow
+python -m build
