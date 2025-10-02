@@ -1,0 +1,9 @@
+bgen-1.9.3rc4.dist-info/RECORD,,
+bgen-1.9.3rc4.dist-info/WHEEL,sha256=qxQkdhERtGxJzqnVOBnucx1aUmU2n3HmuzYdln_LyOw,109
+bgen-1.9.3rc4.dist-info/top_level.txt,sha256=EoVKryxjZc0vkwDWjnOK0IP3dN4fg8YiKIkBcWB9pqw,5
+bgen-1.9.3rc4.dist-info/METADATA,sha256=md1LKFwDf8WAiEdaMmslq1iVDtI9CDIHbrvm5IlN7uM,7301
+bgen-1.9.3rc4.dist-info/licenses/LICENSE.txt,sha256=8xqsNFTZC7SFBJM4k6bQw8tPn0zUKQJpZwdY6zSFBW0,1053
+bgen/reader.cpython-311-darwin.so,sha256=-9U7wFlbIeOZU9bfLHfexohGVigRdaiEJAn7En8zWAs,1140832
+bgen/index.py,sha256=djXqwSVpo8fDFgiABSO2xfbPecC9xu5WudGTVkuvZco,3789
+bgen/__init__.py,sha256=YOTi27jSf2JtXYxFaZaX-O3_DN6bbgikoEZNMrQ-5zY,170
+bgen/writer.cpython-311-darwin.so,sha256=fneULoxXpoTgNb3M0n4K0D-coZHsbwCeQ5f8m26TK20,1026688
