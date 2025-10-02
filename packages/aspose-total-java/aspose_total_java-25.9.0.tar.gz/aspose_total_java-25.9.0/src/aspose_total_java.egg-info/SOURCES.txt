@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+license.txt
+pyproject.toml
+src/aspose_total_java/__init__.py
+src/aspose_total_java.egg-info/PKG-INFO
+src/aspose_total_java.egg-info/SOURCES.txt
+src/aspose_total_java.egg-info/dependency_links.txt
+src/aspose_total_java.egg-info/requires.txt
+src/aspose_total_java.egg-info/top_level.txt

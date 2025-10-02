@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aspose-total-java"
+version = "25.9.0"
+description = "Meta-package for Aspose.Total for Python via Java (aggregate dependencies)."
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.8,<3.14"
+
+license = "LicenseRef-Proprietary"
+license-files = ["license.txt"]
+
+authors = [{ name = "Aspose", email = "total@aspose.com" }]
+keywords = ["Aspose", "Total", "Java bridge", "file formats", "conversion", "PDF", "Excel", "BarCode"]
+
+# ✅ Barcode is now always installed
+dependencies = [
+  "aspose-cells==25.9.0",
+  "aspose-diagram==25.9.0",
+  "aspose-ocr-python-java==25.2.0",
+  "aspose-pdf-for-python-via-java==24.9",
+  "aspose-barcode-for-python-via-java==25.9.0",
+  "JPype1==1.4.1",
+]
+
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Libraries",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://products.aspose.com/total/python-java/"
+Docs = "https://docs.aspose.com/total/python-java/"
+Releases = "https://releases.aspose.com/total/python-java/"
+ReleaseNotes = "https://releases.aspose.com/total/python-java/release-notes/"
+FreeSupport = "https://forum.aspose.com/"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]

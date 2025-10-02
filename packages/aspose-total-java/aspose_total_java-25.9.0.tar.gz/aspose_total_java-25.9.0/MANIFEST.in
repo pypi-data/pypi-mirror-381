@@ -1,0 +1,13 @@
+include README.md
+include license.txt
+include pyproject.toml
+graft src
+
+prune build
+prune dist
+prune .venv
+prune venv
+prune .venv-*
+prune __pycache__
+prune *.egg-info
+recursive-exclude * __pycache__ *.py[cod] .DS_Store Thumbs.db
