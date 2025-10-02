@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ai_dbug/__init__.py
+ai_dbug/analyzer.py
+ai_dbug/core.py
+ai_dbug/formatter.py
+ai_dbug/knowledge_base.py
+ai_dbug.egg-info/PKG-INFO
+ai_dbug.egg-info/SOURCES.txt
+ai_dbug.egg-info/dependency_links.txt
+ai_dbug.egg-info/requires.txt
+ai_dbug.egg-info/top_level.txt
+tests/__init__.py
+tests/test_ai_dbug.py
