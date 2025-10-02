@@ -1,0 +1,84 @@
+Metadata-Version: 2.4
+Name: behind-api-client
+Version: 1.0.663
+Summary: Generated API client for Behind API
+Home-page: https://github.com/hank/behind-api-client
+Author: Henry Fisher
+Author-email: henry.fisher.kundy@gmail.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.31.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Behind API Client - Python
+
+Auto-generated API client for Behind API.
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+Or install the package:
+
+```bash
+pip install -e .
+```
+
+## Usage
+
+```python
+from behind_api_client import BehindApiClient
+
+# Initialize the client
+api_client = BehindApiClient("https://api.behind.ai:6002", "your-access-token")
+
+# Use the API
+result = api_client.zecamp10.v10.message.send(
+    email="user@example.com",
+    recipient_name="John Doe",
+    account_name="my_account",
+    template_name="welcome",
+    data={},
+    time=""
+)
+```
+
+## Structure
+
+The API client follows this structure:
+- `api_client.{app}.{version}.{endpoint}.{method}(params)`
+
+For example:
+- `api_client.zecamp10.v10.companies.get(...)`
+- `api_client.raet.v10.cv.create(...)`
+
+Note: Hyphenated app names are converted to snake_case (e.g., `web-harvester` becomes `web_harvester`).
+
+## Event Handlers
+
+```python
+api_client.on_expired(lambda data: print("Token expired"))
+api_client.on_reject(lambda data: print(f"Rejected: {data}"))
+api_client.on_too_many_requests(lambda data: print(f"Rate limited: {data}"))
+```
