@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/proommpt.egg-info/PKG-INFO
+src/proommpt.egg-info/SOURCES.txt
+src/proommpt.egg-info/dependency_links.txt
+src/proommpt.egg-info/requires.txt
+src/proommpt.egg-info/top_level.txt
+src/proompt/__init__.py
+src/proompt/data.py
+src/proompt/base/__init__.py
+src/proompt/base/context.py
+src/proompt/base/prompt.py
+src/proompt/base/provider.py
+tests/test_context.py
+tests/test_prompt.py
+tests/test_provider.py
