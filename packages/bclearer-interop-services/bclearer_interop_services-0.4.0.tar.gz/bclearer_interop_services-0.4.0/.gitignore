@@ -1,0 +1,60 @@
+#IDE specific files
+.vs/
+.vscode/
+.idea/
+.venv/
+
+# Node dependencies
+node_modules/
+
+# React build output
+ui/build/
+ui/dist/
+*.tsbuildinfo
+
+# Environment files
+ui/.env.local
+ui/.env.development.local
+ui/.env.test.local
+ui/.env.production.local
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+
+# Distribution and build directories
+*.egg-info/
+dist
+
+#github
+
+.ruff_cache/
+.pytest_cache/
+
+#ui
+.run/
+
+# log files
+*.log
+*.tmp
+*.bak
+
+#Example Pipelines
+
+pipelines/boson/data/
+
+
+# Test data
+
+
+/libraries/interop_services/tests/data/logs/
+/libraries/interop_services/tests/data/output/
+/libraries/interop_services/tests/configurations/
+/libraries/interop_services/tests/data/input/delimited_text/generated_files/
+
+/libraries/core/tests/data/output/
+.playwright-mcp/after-fix-attempt.png
+.playwright-mcp/sequence-editor-issue.png

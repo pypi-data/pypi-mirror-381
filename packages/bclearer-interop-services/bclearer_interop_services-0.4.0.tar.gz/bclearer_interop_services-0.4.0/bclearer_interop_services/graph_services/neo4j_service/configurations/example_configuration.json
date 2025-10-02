@@ -1,0 +1,44 @@
+{
+  "default": {
+    "uri": "neo4j://localhost:7687",
+    "database_name": "neo4j",
+    "user_name": "neo4j",
+    "password": "test",
+    "retry": {
+      "max_attempts": 3,
+      "delay_seconds": 1
+    },
+    "features": {
+      "encryption": false,
+      "aura": false
+    }
+  },
+  "development": {
+    "uri": "neo4j://dev-server:7687",
+    "database_name": "neo4j_dev",
+    "user_name": "dev",
+    "password": "dev_password",
+    "retry": {
+      "max_attempts": 5,
+      "delay_seconds": 1
+    },
+    "features": {
+      "encryption": false,
+      "aura": false
+    }
+  },
+  "production": {
+    "uri": "neo4j+s://prod.neo4j.io",
+    "database_name": "neo4j",
+    "user_name": "prod",
+    "password": "prod_password",
+    "retry": {
+      "max_attempts": 5,
+      "delay_seconds": 2
+    },
+    "features": {
+      "encryption": true,
+      "aura": true
+    }
+  }
+}

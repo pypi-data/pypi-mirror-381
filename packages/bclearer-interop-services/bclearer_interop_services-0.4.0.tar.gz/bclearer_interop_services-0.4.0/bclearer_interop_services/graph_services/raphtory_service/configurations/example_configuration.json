@@ -1,0 +1,11 @@
+{
+  "default": {
+    "graph_directory": "/path/to/graphs",
+    "memory_limit_gb": 16,
+    "enable_persistence": true,
+    "graphql_enabled": false,
+    "graphql_port": 8000,
+    "embedding_cache_dir": "./embeddings",
+    "embedding_model": "thenlper/gte-small"
+  }
+}
