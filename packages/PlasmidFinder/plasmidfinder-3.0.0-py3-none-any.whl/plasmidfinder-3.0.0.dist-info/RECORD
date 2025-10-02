@@ -1,0 +1,11 @@
+plasmidfinder-3.0.0.dist-info/METADATA,sha256=TAhoLkyQ-nr-31SeT-n7A-TYgyy-TthA7IPjJ02KNJ4,11220
+plasmidfinder-3.0.0.dist-info/WHEEL,sha256=9P2ygRxDrTJz3gsagc0Z96ukrxjr-LFBGOgv3AuKlCA,90
+plasmidfinder-3.0.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+plasmidfinder-3.0.0.dist-info/licenses/LICENSE,sha256=8q_SGAyD_CufqtdBWZ3-IJX9JVffLkeYc7-Hr2LPER0,524
+plasmidfinder/__init__.py,sha256=EPmgXOdWKks5S__ZMH7Nu6xpAeVrZpfxaFy4pykuyeI,22
+plasmidfinder/__main__.py,sha256=4UuHxUjLjoYUWMYKpZs9CuokYCgdHWxrai6toK6YjO0,20447
+plasmidfinder/cge/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plasmidfinder/cge/config.py,sha256=CBv45tgTQXWxxYiFSSJcLlBS1CV8vj9RQBRriF_5Nso,1961
+plasmidfinder/environment_variables.md,sha256=JZq8PXCHdgXczx_pyddNXxQUNcgm8u86htKErZQcpVs,958
+plasmidfinder/functions.py,sha256=PFrhvEP4iP_5kbjuJY6gkA2_PO2sHBMeTo6t9cJC4yI,8909
+plasmidfinder-3.0.0.dist-info/RECORD,,
