@@ -1,0 +1,3 @@
+[console_scripts]
+sage = sage.tools.cli.main:app
+sage-dev = sage.tools.cli.commands.dev:app
