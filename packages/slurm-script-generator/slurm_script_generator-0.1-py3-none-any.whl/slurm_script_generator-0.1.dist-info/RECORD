@@ -1,0 +1,8 @@
+slurm_script_generator/main.py,sha256=MJ5DJ5QgFoko_B-D1UQHYh2JhG8wjuCglJ5RhXAhJJ4,6670
+slurm_script_generator/sbatch.py,sha256=DcTuzyWkt7mXEcofQbM7ydajBJ4CdTTtGiPW-cQTJMs,1938
+slurm_script_generator/sbatch_parser.py,sha256=BAtuooI5ARRMpIjNfhgGspDmLs9ngITGbQZNEsP0TBU,14699
+slurm_script_generator-0.1.dist-info/METADATA,sha256=bj7GI7TVdWQwHUBIjvTQuwLeKAWVFRZokaBaECrp9rI,13072
+slurm_script_generator-0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+slurm_script_generator-0.1.dist-info/entry_points.txt,sha256=3hkDhrBEjwGBvRoUfVj2M3PVT_tqyvlgixg0EgmN1IM,75
+slurm_script_generator-0.1.dist-info/top_level.txt,sha256=3ltSu_DVIP0Ot4g-cBH-fDyoSTwieTZWDeBuHTX2xuY,23
+slurm_script_generator-0.1.dist-info/RECORD,,
