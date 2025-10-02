@@ -1,0 +1,14 @@
+<html>
+<head><title>404 Not Found</title></head>
+<body>
+<h1>404 Not Found</h1>
+<ul>
+<li>Code: NoSuchKey</li>
+<li>Message: The specified key does not exist.</li>
+<li>Key: v0.27.7/full/micropip-0.8.0-py3-none-any.whl</li>
+<li>RequestId: 9N87CGPX5KEKWB50</li>
+<li>HostId: R0mI7c3yyrHK+v4GdS2VrRlfTT9e0vXlnB53qjKYxZZc/BkxoHHfQKOk7BRJO/jBr76uJSM9330=</li>
+</ul>
+<hr/>
+</body>
+</html>
