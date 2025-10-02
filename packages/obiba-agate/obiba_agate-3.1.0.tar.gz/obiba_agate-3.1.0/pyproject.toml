@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "obiba-agate"
+version = "3.1.0"
+description = "OBiBa/Agate python client."
+authors = ["Yannick Marcon <yannick.marcon@obiba.org>"]
+license = "GPL-v3"
+readme = "README.md"
+packages = [{include = "obiba_agate"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "^2.31.0"
+urllib3 = "1.26.19"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.2.2"
+
+[tool.poetry.scripts]
+agate = 'obiba_agate.console:run'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
