@@ -1,0 +1,12 @@
+select.sphinxnotes-lilypond {
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+audio.sphinxnotes-lilypond {
+    /* width is dynamiclly set by HTML attributes, see :meth:`html_visit_lily_node` */
+    margin-top: 5px;
+    border-radius: 5px;
+}

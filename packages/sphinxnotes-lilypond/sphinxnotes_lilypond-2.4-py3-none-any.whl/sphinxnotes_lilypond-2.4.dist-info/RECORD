@@ -1,0 +1,14 @@
+sphinxnotes/lilypond/__init__.py,sha256=WRZt6YdMfvVEQLxBvhin-7yYUuuyuPwdmnlcF3k5Lgg,16589
+sphinxnotes/lilypond/jianpu.py,sha256=DjhjgGHk7DMWkkPN2BBFQvxolJDMII6yASlNyCilE5Y,556
+sphinxnotes/lilypond/lilypond.py,sha256=C1eeyy5EY1rVAJ_ddhmJ0thIpcQf3jOVYoqHbpcfvVg,7158
+sphinxnotes/lilypond/meta.py,sha256=VGarZcayA2vuI7EatksL5iMHRNed1euo7S_2Yuy6lvY,976
+sphinxnotes/lilypond/midi.py,sha256=3jDeohnK4SDsBsb-ttzlmMsfHYDaNVb8F7ebNTIz5tw,2386
+sphinxnotes/lilypond/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sphinxnotes/lilypond/static/__init__.py,sha256=TvInjH5Yp8fTDdnQRAeyCL2I_kz6uFcq2KHrvGy1JcA,684
+sphinxnotes/lilypond/static/sphinxnotes-lilypond.css,sha256=cPpS01C9c7EOdHkrsu1BH5sxA_sIfrYumMFhE9OqrTQ,277
+sphinxnotes/lilypond/static/sphinxnotes-lilypond.js,sha256=yNsfvejjlM-yRDRlUVpOHtA-sUN2LJgbV5w0hopE_kU,579
+sphinxnotes_lilypond-2.4.dist-info/licenses/LICENSE,sha256=qzBYbEjaCFA436d7HCic7gQPd2eBKpIdvTshhNKy2n8,1520
+sphinxnotes_lilypond-2.4.dist-info/METADATA,sha256=CMzqwKPmcr0bt0L8EPBj3kLwZ2VClDfNLpOaU8MmAFg,3147
+sphinxnotes_lilypond-2.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+sphinxnotes_lilypond-2.4.dist-info/top_level.txt,sha256=V-VWtuPpvntuonwz7_KceUnT4-CbPR1gJ26BTFpvcJI,12
+sphinxnotes_lilypond-2.4.dist-info/RECORD,,
