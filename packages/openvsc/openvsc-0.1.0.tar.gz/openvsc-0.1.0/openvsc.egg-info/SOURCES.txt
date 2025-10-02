@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+openvsc/__init__.py
+openvsc/cli.py
+openvsc.egg-info/PKG-INFO
+openvsc.egg-info/SOURCES.txt
+openvsc.egg-info/dependency_links.txt
+openvsc.egg-info/entry_points.txt
+openvsc.egg-info/top_level.txt

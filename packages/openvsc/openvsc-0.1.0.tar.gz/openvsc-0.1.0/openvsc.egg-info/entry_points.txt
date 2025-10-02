@@ -1,0 +1,2 @@
+[console_scripts]
+openvsc = openvsc.cli:main
