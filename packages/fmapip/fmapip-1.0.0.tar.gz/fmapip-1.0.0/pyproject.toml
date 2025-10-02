@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fmapip"
+version = "1.0.0"
+description = "FlorestMessangerAPIPlus"
+readme = "README.md"
+authors = [
+    {name = "hpasus8"},
+]
+requires-python = ">=3.10"
+dependencies = ["florestmessangerapi"]
+license = "MIT"
+keywords = ["fmapi", "florest", "florestmessanger", "florestmessangerapi", "fmapi+", "florestmessanger+", "florestmessangerplus"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Homepage = "https://florestmsgs-florestdev4185.amvera.io/api_docs/python/plus"

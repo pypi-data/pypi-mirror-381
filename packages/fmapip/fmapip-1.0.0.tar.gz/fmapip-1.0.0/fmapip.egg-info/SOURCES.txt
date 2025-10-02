@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+fmapip/__init__.py
+fmapip/bot.py
+fmapip/message.py
+fmapip.egg-info/PKG-INFO
+fmapip.egg-info/SOURCES.txt
+fmapip.egg-info/dependency_links.txt
+fmapip.egg-info/requires.txt
+fmapip.egg-info/top_level.txt
