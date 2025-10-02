@@ -1,0 +1,32 @@
+checkpoint: share/bris-metnorway-malawi-0_025-n320-20251001.ckpt
+
+date: "2025-04-06"
+
+lead_time: 0
+
+input:
+  cutout:
+    lam_0:
+      mars:
+        log: true
+        grid: "0.025/0.025"
+        area: "-8/30/-22/43"
+        pre_processors:
+          - apply_adiabatic_corrections
+    global:
+      mars:
+        log: true
+      mask: 'global/cutout_mask'
+
+post_processors:
+  - accumulate_from_start_of_forecast:
+      accumulations:
+        - tp 
+
+output:
+  tee:
+    outputs:
+      - printer
+      - extract_lam:
+          output:
+            netcdf: out.nc
