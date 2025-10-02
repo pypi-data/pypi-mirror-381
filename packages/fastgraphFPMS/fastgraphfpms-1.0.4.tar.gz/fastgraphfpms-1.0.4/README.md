@@ -1,0 +1,287 @@
+````markdown
+# fastgraphFPMS
+
+**fastgraphFPMS** — compact, fast graph utilities in C++ using a CSR (Compressed Sparse Row) representation.  
+This repository provides a flexible graph file reader (auto-detects several common formats) and many classical graph algorithms (shortest paths, MST, connected components, Euler/Hamilton utilities, coloring heuristics, max-flow, BFS/DFS, …).
+
+> Quick install (if the package is published to PyPI):
+```bash
+pip install fastgraphFPMS
+````
+
+If no pip package is available, please follow **Build / Install from source** below.
+
+---
+
+## Table of contents
+
+* [What is this](#what-is-this)
+* [Highlights / Features](#highlights--features)
+* [Supported input formats (examples)](#supported-input-formats-examples)
+* [Quick C++ example](#quick-c-example)
+* [Build / Install from source](#build--install-from-source)
+* [API overview (selected)](#api-overview-selected)
+* [Testing & examples](#testing--examples)
+* [Contributing](#contributing)
+* [License](#license)
+
+---
+
+## What is this
+
+`fastgraphFPMS` provides a compact `Graph` class (CSR style) and implements a broad set of algorithms commonly used in graph processing. The library is focused on performance and simple integration into C++ projects. It includes a robust loader that attempts to auto-detect several input formats including a 3-line CSR format (`HeadSucc`, `Succ`, `WeightsSucc`) and adjacency matrices.
+
+---
+
+## Highlights / Features
+
+* CSR internal representation: `HeadSucc`, `Succ`, `WeightsSucc`.
+* Automatic construction of predecessor arrays: `HeadPred`, `Pred`, `WeightsPred`.
+* Degree bookkeeping: `DemiDegreExt` (out-degree) and `DemiDegreInt` (in-degree).
+* Loader auto-detection for multiple file formats.
+* Algorithms implemented (non-exhaustive):
+
+  * Connected components (CC), Strongly connected components (SCC)
+  * Bipartiteness testing
+  * Minimum Spanning Tree: Prim & Kruskal
+  * Single-source shortest paths: Dijkstra (+bucket), Sedgewick–Vitter, Bellman–Ford
+  * All-pairs: Floyd–Warshall
+  * Eulerian path/circuit detection & construction
+  * Hamiltonian path/circuit utilities (backtracking)
+  * Graph coloring heuristics: Greedy, Welsh–Powell, DSATUR; chromatic helpers
+  * Max flow: Ford–Fulkerson & Edmonds–Karp
+  * BFS & DFS traversals
+
+---
+
+## Supported input formats (examples)
+
+The loader tries formats in a robust order and falls back when necessary.
+
+### 1) CSR three-line format (HeadSucc / Succ / WeightsSucc)
+
+Recommended if you want to provide a CSR representation directly. The first 3 non-empty lines are parsed as three integer lists.
+
+```
+0 2 5 6 8 9 9
+1 3 2 3 4 5 2 4 5
+2 4 1 2 2 2 2 1 2
+```
+
+* Interpreted as:
+
+  * `HeadSucc = [0,2,5,6,8,9,9]`  → `num_nodes = 6`
+  * `Succ = [1,3,2,3,4,5,2,4,5]`
+  * `WeightsSucc = [2,4,1,2,2,2,2,1,2]`
+
+Constraints:
+
+* `HeadSucc` must have `num_nodes + 1` entries.
+* `HeadSucc.back()` must equal `Succ.size()`.
+* Node indices are **0-based**.
+
+### 2) Adjacency matrix (first line `N` then N rows of N integers)
+
+Zeros represent "no edge" in matrix format.
+
+```
+6
+0 2 0 4 0 0
+0 0 1 2 2 0
+0 0 0 0 0 2
+0 0 2 0 1 0
+0 0 0 0 0 2
+0 0 0 0 0 0
+```
+
+### 3) Explicit triples (first line `N`, then triples `u v w`)
+
+Any whitespace grouping is allowed; parser expects triples after the first line.
+
+```
+6
+0 1 2
+0 3 4
+1 2 1
+2 5 2
+3 4 1
+4 5 2
+```
+
+### 4) Per-line adjacency lists (fallback)
+
+Each non-empty line: `u neighbor1 weight1 neighbor2 weight2 ...`
+
+```
+0 1 2 3 4
+1 2 1 3 2
+2 5 2
+3 2 2 4 1
+4 5 2
+```
+
+---
+
+## Quick C++ example
+
+```cpp
+#include "graph.h"
+#include <iostream>
+
+using namespace fastgraphfpms;
+using namespace std;
+
+int main() {
+    // Loads graph from file and auto-detects the format
+    Graph g("examples/csr_three_line.txt");
+
+    cout << "Nodes: " << g.get_num_nodes() << endl;
+
+    // Connected components example
+    auto cc = g.find_cc();
+    cout << "Connected components: " << cc.first << endl;
+
+    // Dijkstra from source 0 (example)
+    auto res = g.dijkstra(0);
+    if (holds_alternative<pair<vector<int>,vector<int>>>(res)) {
+        auto p = get<pair<vector<int>,vector<int>>>(res);
+        const vector<int>& dist = p.first;
+        for (size_t i = 0; i < dist.size(); ++i) {
+            cout << "dist[" << i << "] = " << dist[i] << endl;
+        }
+    }
+
+    return 0;
+}
+```
+
+---
+
+## Build / Install from source
+
+If the `pip` package is not published, build the library from source (CMake example):
+
+```bash
+git clone <repo-url>
+cd fastgraphFPMS
+
+mkdir build
+cd build
+cmake ..
+make -j
+sudo make install    # optional: installs headers and library system-wide
+```
+
+Then compile your example program linking to the built library. Example:
+
+```bash
+g++ -std=c++17 example.cpp -I/usr/local/include -L/usr/local/lib -lfastgraphfpms -o example
+```
+
+Adjust include/library paths according to your install.
+
+> Note: The repository does not ship Python bindings by default. To make `pip install fastgraphFPMS` available, add Python bindings (e.g., via `pybind11`) and publish to PyPI.
+
+---
+
+## API overview (selected / high-level)
+
+Constructors
+
+* `Graph()` — empty graph
+* `Graph(const vector<vector<int>>& matrix)` — build from adjacency matrix
+* `Graph(const vector<int>& HeadSucc, const vector<int>& Succ, const vector<int>& Weights)` — build from CSR arrays
+* `Graph(const string& filename)` — load from file (auto-detection)
+
+File I/O
+
+* `void load_from_file(const string& filename);`
+* `void save_to_file(const string& filename) const;`
+* `void save_to_file_adjacency_list(const string& filename) const;`
+
+Selected algorithms & queries
+
+* `int get_num_nodes() const;`
+* `pair<int,vector<vector<int>>> find_cc() const;`
+* `pair<int,vector<vector<int>>> find_scc() const;`
+* `pair<int, vector<tuple<int,int,int>>> prim() const;`
+* `pair<int, vector<tuple<int,int,int>>> kruskal() const;`
+* `dijkstra()`, `dijkstra_bucket()`, `sedgewick_vitter()`, `bellman_ford()`
+* `floyd_warshall()`
+* `find_eulerian_path()`, `find_eulerian_circuit()`
+* `find_hamiltonian_path()`, `find_hamiltonian_circuit()`
+* `greedy_coloring()`, `welsh_powell_coloring()`, `dsatur_coloring()`, `chromatic_number()`
+* `max_flow_ford_fulkerson()`, `max_flow_edmonds_karp()`
+* `bfs()`, `dfs()`
+
+Check `graph.h` for exact signatures and return types.
+
+---
+
+## Testing & examples
+
+Suggested examples to include in `examples/`:
+
+* `matrix_example.txt` (adjacency matrix)
+* `csr_three_line.txt` (three-line CSR)
+* `triples.txt` (explicit triples)
+* `adjlist.txt` (per-line adjacency)
+
+Add unit tests that:
+
+* load each format and assert `get_num_nodes()` and degree counts
+* verify algorithm outputs on small graphs (connected components, MST weight, shortest path lengths)
+
+Set up CI with CMake and `ctest` or GitHub Actions.
+
+---
+
+## Contributing
+
+Contributions are welcome. Ways to contribute:
+
+* Add Python bindings (pybind11) and publish to PyPI
+* Add tests and CI
+* Improve input detection or add `format_hint` option to `load_from_file`
+* Add more sample programs and tutorials
+
+Please open issues and pull requests against the repository.
+
+---
+
+## Contact / support
+
+Open an issue with:
+
+* the input file you used
+* the exact command or code that failed
+* platform and compiler information
+
+Attach a minimal reproducer file when possible.
+
+---
+
+## License
+
+Copyright (c) 2025 Drogo Flavio
+
+Permission est hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+```
+```
