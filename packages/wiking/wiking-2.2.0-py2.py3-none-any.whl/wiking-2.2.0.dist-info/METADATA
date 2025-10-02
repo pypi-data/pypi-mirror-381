@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: wiking
+Version: 2.2.0
+Summary: Wiking — Python web application development framework
+Author-email: Tomas Cerha <cerha@truecode.cz>
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+License-File: COPYING
+Requires-Dist: pytis
+Requires-Dist: lcg[all]
+Requires-Dist: uwsgi
+Requires-Dist: dnspython ; extra == "cms"
+Requires-Dist: pbkdf2 ; extra == "cms"
+Provides-Extra: cms
+
+# Wiking
+
+Wiking is a Python web application development framework.
+
+Wiking comes together with Wiking CMS -- an extensible content management
+system built on top of this framework.
+
+
+## License
+
+Wiking is Free Software, distributed under the terms of the **GNU General Public
+License v2 (GPLv2)**.  See the `COPYING` file for details.
+
+
+## Installation
+
+Wiking is a pure Python library running on Python 3.5 or later and
+may be installed simply by `pip install wiking`.
+
+## Usage
+
+Documentation is included in the package.  To generate the HTML version, run
+`make doc` from the package root directory.
+
