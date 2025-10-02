@@ -1,0 +1,8 @@
+pyloid_adapter/__Init__.py,sha256=YQxL6bARg9kPqMDLL7Bqc2gXi7SHUmaLyqeX2ZOcjBs,106
+pyloid_adapter/base_adapter.py,sha256=PY4W8iKZ4fQJBngiadH1WhJrwRBUW_yvFgqhAUGCPr4,5573
+pyloid_adapter/context.py,sha256=W2HlLWTxufrRQOWnijtQ7fqoq4tdRTI4iZzkIHLU-dk,1368
+pyloid_adapter/fastapi_adapter.py,sha256=Cl_zKE1SV_HwflzT3B0IbjMda6hNw9ntYctw5jMsnuY,3232
+pyloid_adapter/utils.py,sha256=kgO0aC7d_wwz_XR89gymw5ixcGRPVSUAXsqGwergXtQ,6077
+pyloid_adapter-0.2.0.dist-info/METADATA,sha256=iQasuRSuPROZgKR5ELOAjYT2HpvT0WYyXIcc3MrErr0,471
+pyloid_adapter-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pyloid_adapter-0.2.0.dist-info/RECORD,,
