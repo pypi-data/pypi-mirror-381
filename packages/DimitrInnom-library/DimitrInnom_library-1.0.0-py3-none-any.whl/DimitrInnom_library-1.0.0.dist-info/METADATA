@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: DimitrInnom-library
+Version: 1.0.0
+Summary: A simple example package
+Author: Dimitri
+Author-email: dimitri.kvateladze.1@iliauni.edu.ge
+Requires-Python: >=3.6
+
