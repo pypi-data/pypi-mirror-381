@@ -1,0 +1,2 @@
+[console_scripts]
+browser-timeliner = browser_timeliner.cli:main
