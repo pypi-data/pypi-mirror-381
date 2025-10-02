@@ -1,0 +1,14 @@
+ppt_to_video-0.2.0.dist-info/licenses/LICENSE,sha256=K-8Nj2CJLmpcYAm9PFsgM_SQ4FmBlxKbklkBpSToOrI,1068
+pptx_to_video/__init__.py,sha256=noLIgNhOwgi83OHjSQP3xl9V3ktInMkiIjRriemrY4c,106
+pptx_to_video/__main__.py,sha256=PC2Bnx2-pEQobwNqolUEfiCa37HhkJFkDCg1ELvc_Kc,1107
+pptx_to_video/cli.py,sha256=Rd9SJAn5nu5mp4EAFVh6-u6tZRf62bKZvJ70Jk97Bvo,839
+pptx_to_video/language_codes.py,sha256=cQPICMDj3C4PIArfmI_zVnFwRlEkwXJXSveaeV2fCRc,566
+pptx_to_video/logger.py,sha256=s0inUy7HFQY5zq6YUFuzpTJBdczgcLyICSitIRk6h5c,419
+pptx_to_video/powerpoint.py,sha256=ncK5I5_iykyJmlBd7Ll66XOyoXoURki-bdlgGRYtweQ,1124
+pptx_to_video/powerpoint_engine.py,sha256=wPlNqDT6JlvF0XnMj5l18CRw6e41rMZVHI0ee5-eNOc,5266
+pptx_to_video/video_constructer.py,sha256=43WcXSDi-eMWW1zA9lAK19BxulTr5fhTeKGt4OnU_dY,5751
+ppt_to_video-0.2.0.dist-info/METADATA,sha256=qvowcact2TzEgc1YrRQIV03N75_USl8GQv7aTJBblNI,4096
+ppt_to_video-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ppt_to_video-0.2.0.dist-info/entry_points.txt,sha256=kqj7YZCwEG1eui2WyR50jjzs4HD-dbf-UtpM5FGLSYI,62
+ppt_to_video-0.2.0.dist-info/top_level.txt,sha256=2ImprO5RPBTQz1Eik42FYuDg3yntzxufmlk0OQM2x9g,14
+ppt_to_video-0.2.0.dist-info/RECORD,,
