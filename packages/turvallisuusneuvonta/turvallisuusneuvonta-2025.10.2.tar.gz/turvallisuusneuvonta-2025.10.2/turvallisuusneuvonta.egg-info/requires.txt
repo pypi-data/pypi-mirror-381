@@ -1,0 +1,16 @@
+jmespath>=1.0.1
+langcodes>=3.5.0
+lazr.uri>=1.0.7
+msgspec>=0.18.6
+pydantic>=2.10.3
+typer>=0.15.1
+
+[dev]
+black
+coverage
+hypothesis
+mypy
+pytest
+pytest-cov
+pytest-flake8
+ruff
