@@ -1,0 +1,44 @@
+[project]
+name = "django-flatpages-extra"
+version = "1.0"
+description = "A drop-in enhancement for Django's contrib.flatpages"
+readme = "README.md"
+authors = [
+    { name = "Baptiste Mispelon", email = "bmispelon@gmail.com" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "pygments>=2.19.2",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Django",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+    "Framework :: Django :: 5.2",
+    "Framework :: Django :: 6.0",
+]
+
+[project.urls]
+Homepage = "https://codeberg.org/bmispelon/django-flatpages-extra"
+Repository = "https://codeberg.org/bmispelon/django-flatpages-extra"
+Issues = "https://codeberg.org/bmispelon/django-flatpages-extra/issues"
+
+[build-system]
+requires = ["uv_build>=0.7.13,<0.8"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "flatpages_extra"
+
+[dependency-groups]
+dev = [
+    "coverage>=7.9.2",
+    "model-bakery>=1.20.5",
+    "ruff>=0.12.5",
+]
+
+[tool.ruff.lint]
+extend-select = [
+  "I",  # sort imports
+]
