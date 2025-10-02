@@ -1,0 +1,7 @@
+README.md
+setup.cfg
+setup.py
+Figure_area_calculator.egg-info/PKG-INFO
+Figure_area_calculator.egg-info/SOURCES.txt
+Figure_area_calculator.egg-info/dependency_links.txt
+Figure_area_calculator.egg-info/top_level.txt
