@@ -1,0 +1,2 @@
+[console_scripts]
+s3tui = s3tui.__main__:main
