@@ -1,0 +1,65 @@
+image: python:3.10
+
+stages:
+  - check
+  - test
+  - deploy
+
+check:hooks:
+  stage: check
+  allow_failure: true
+  before_script:
+    - pip install pre-commit
+  script:
+    - pre-commit run --all-files --verbose --show-diff-on-failure
+
+
+test:py310:
+  stage: test
+  before_script:
+    - pip3 install tox
+  script:
+    - tox -v -e py310
+
+test:py311:
+  extends: test:py310
+  image: python:3.11
+  script:
+    - tox -v -e py311
+
+test:py312:
+  extends: test:py310
+  image: python:3.12
+  script:
+    - tox -v -e py312
+
+test:py313:
+  extends: test:py310
+  image: python:3.13
+  script:
+    - tox -v -e py313
+
+pages:
+  stage: deploy
+  script:
+    - pip install .
+    - pip install -r docs/requirements
+    - sphinx-build -b html docs public
+  artifacts:
+    paths:
+      - public
+    expire_in: 5 min
+#  only:
+#    - main
+#    - tags
+
+deployPiPy:
+  stage: deploy
+  script:
+    - python -m pip install --upgrade build
+    - python -m pip install --upgrade twine
+    - python -m build
+    - python -m twine check dist/*
+    - TWINE_PASSWORD=${PYPI_TOKEN} TWINE_USERNAME=__token__ python -m twine upload --non-interactive dist/*
+  only:
+    - tags

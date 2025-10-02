@@ -1,0 +1,74 @@
+Alert name,Priority value,Follow up time in days
+ICECUBE,2,30
+ICECUBE BRONZE,2,30
+ICECUBE GOLD,2,30
+ICECUBE Astrotrack Bronze,2,30
+ICECUBE Astrotrack Gold,2,30
+IC-HAWC,2,30
+LVC Preliminary,2,30
+LVC Initial Skymap,2,30
+LVC Update Skymap,2,30
+LVC Retraction,2,30
+GRB,5,30
+MAXI,5,30
+MAXI Position,5,30
+SuperAGILE GRB Position,5,30
+SuperAGILE GRB Ground Position,5,30
+HAWC,5,30
+HAWC Burst Monitor,5,30
+Fermi-LAT Position,5,30
+Fermi LAT Offline Position,5,30
+Fermi-GBM Position,5,30
+Fermi GBM Flight Position,5,30
+Fermi GBM Final Position,5,30
+Fermi-GBM Flight Position,5,30
+INTEGRAL,5,30
+INTEGRAL Refined,5,30
+INTEGRAL Offline,5,30
+INTEGRAL Wakeup,0,30
+Swift-BAT GRB Position,5,30
+SLSN,6,30
+SLSN-I,6,30
+SLSN-II,6,30
+FBOT,6,15
+SN,6,15
+SN I,6,15
+SN II,6,15
+SN IIn,6,15
+SN IIn-pec,6,15
+SN IIp,6,15
+SN IIb,6,15
+SN II-pec,6,15
+SN Ib,6,15
+SN Ib-pec,6,15
+SN Ib-Ca-rich,6,15
+SN Ibn,6,15
+SN Ibn/Icn,6,15
+SN Ib/c,6,15
+SN Ic,6,15
+SN Ic-pec,6,15
+SN Ic-BL,6,15
+SN Icn,6,15
+SN Ien,6,15
+TDE,3,365
+TDE-H-He,3,365
+TDE-He,3,365
+ATels,4,365
+Blazar,4,365
+Flaring Blazar,4,365
+Flaring AGN,4,365
+AGN,7,365
+Galaxy,7,365
+FRB,8,365
+STEADY,8,1000
+TEST LVC Preliminary,0,30
+TEST LVC Initial Skymap,0,30
+TEST LVC Update Skymap,0,30
+MAXI Test Position,0,30
+SuperAGILE GRB Test Position,0,30
+Fermi-GBM Test Position,0,30
+TEST INTEGRAL Refined,0,30
+TEST INTEGRAL Offline,0,30
+TEST INTEGRAL Wakeup,0,30
+Fermi-LAT Test Position,0,30
+Swift-BAT GRB Test Position,0,30

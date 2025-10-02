@@ -1,0 +1,114 @@
+# Config file for the Target of Opportunity (ToO) pipeline
+
+title = "Test config file"
+
+[files]
+global_path = "tests/test_data/"
+
+[files.general]
+directory = "General"
+gcn_file = "GCN_alerts.csv"
+priority_file = "Priorities.csv"
+
+[files.trajectories]
+directory = "Trajectories"
+kml_file = "test.kml"
+log_file = "test.log"
+sim_file = "test_sim_traj.csv"
+
+[files.database]
+directory = "Database"
+gcn = "GCN.csv"
+tns = "TNS.csv"
+other = "OtherTransients.csv"
+steady = "SteadySources.csv"
+tde = "TDE.csv"
+combined = "Full.csv"
+cleaned = "Full_clean.csv"
+
+[files.listener]
+directory = "Listeners"
+gcn_alerts_dir = "GCN"
+gcn_unknown_alerts_dir = "GCN/unknown"
+gcn_test_alerts_dir = "GCN_Test"
+gcn_file = "GCN.csv"
+tns_dir = "TNS"
+tns_file = "TNS.csv"
+
+[files.pointing]
+directory = "Pointing"
+tilt_file = "tilt.csv"
+yaw_file = "729NT_EUSO_GPSCompass_AttitudeData.csv"
+
+[settings.calculation]
+start_time = "2023-05-15T00:00:00.000"
+calculation_period = "24.0 h"
+time_increment = "10.0 min"
+utc_relation = "0.0 h"
+num_observation_windows = "1"
+merge_listeners_database = "False"
+
+[settings.tns]
+user_id = 2981
+user_name = "tobias_heibges"
+discovered_period_value = "1"
+discovered_period_units = "days"
+include_frb = 1
+format = "csv"
+num_page = 100
+merge_files = 1
+update_period = "1.0 h"
+
+[settings.detector]
+trajectory_type = "cst"
+const_lat = "-44.7 deg"
+const_long = "169.1 deg"
+const_height = "33000.0 m"
+kml_height = "33000.0 m"
+kml_url = "https://pinwheel.balloonfacility.org/Trajectory/SPBKML729NT.kml"
+
+[settings.observation]
+horizontal_offset_angle = "limb"
+sun_altitude_cut = "-18.0 deg"
+moon_altitude_cut = "-1.0 deg"
+moon_illumination_cut = 0.05
+fov_az = "12.8 deg"
+fov_alt = "6.4 deg"
+lower_fov_cut = "-6.4 deg"
+upper_fov_cut = "-0.0 deg"
+
+[settings.scheduler]
+strategy_priority_sort = true
+strategy_obstime = true
+strategy_obsprev = false
+strategy_priority_max = "3"
+rotation_time = "10.0 min"
+min_obs_time = "15.0 min"
+max_num_sources = 5
+exclusive = true
+
+[output]
+global_path = "tests"
+directory = "test_output"
+config_file = "config.toml"
+log_file = "log.log"
+previous_observation_path = "2023-05-13"
+
+[output.plots]
+directory = "Plots"
+
+[output.plots.detector]
+directory = "Detector"
+plot_format = "pdf"
+
+[output.plots.source]
+directory = "Source"
+plot_format = "pdf"
+
+[output.observations]
+directory = "Observations"
+all_file = "all_output.json"
+observable_file = "observable_output.json"
+scheduled_file = "scheduled_output.json"
+single_file = "single_output.json"
+observation_period_file = "observation_period_output.csv"

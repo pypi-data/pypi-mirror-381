@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<!-- Begin Style Definitions -->
+<Style id="line1">
+<LineStyle>
+<color>ff0000ff</color>
+<width>2</width>
+</LineStyle>
+</Style>
+<Style id="line2">
+<LineStyle>
+<color>ff00ffff</color>
+<width>2</width>
+</LineStyle>
+</Style>
+<Style id="line3">
+<LineStyle>
+<color>ffffffff</color>
+<width>2</width>
+</LineStyle>
+</Style>
+<Style id="line4">
+<LineStyle>
+<color>ffffffff</color>
+<width>3</width>
+</LineStyle>
+</Style>
+<Style id="TrajLabels">
+<IconStyle>
+<color>ff0000ff</color>
+<scale>1</scale>
+<Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href></Icon>
+</IconStyle>
+</Style>
+<Style id="DVLabels">
+<IconStyle>
+<color>ff00ffff</color>
+<scale>0.7</scale>
+<Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+</IconStyle>
+<LabelStyle>
+<scale>0</scale>
+</LabelStyle>
+</Style>
+<Style id="TrajLabelsPress">
+<IconStyle>
+<color>ffffffff</color>
+<scale>1</scale>
+<Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_square.png</href></Icon>
+</IconStyle>
+</Style>
+<Style id="DVLabelsPress">
+<IconStyle>
+<color>ffffffff</color>
+<scale>0.7</scale>
+<Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+</IconStyle>
+<LabelStyle>
+<scale>0</scale>
+</LabelStyle>
+</Style>
+<Folder>
+<name>TRAJECTORY</name>
+<Placemark>
+<name>FLOAT PHASE</name>
+<styleUrl>#line1</styleUrl>
+<LineString>
+<coordinates>
+-169.657,-46.834
+-158.41547,-45.37649
+-148.10661,-44.30599
+-137.18852,-43.67616
+-125.41447,-42.96429
+-113.15817,-42.71022
+-100.33456,-42.04472
+-88.38155,-41.68612
+-76.22281,-41.69017
+-63.53116,-42.07653
+-50.3012,-43.02003
+-36.80583,-44.7701
+-23.0071,-44.84155
+-8.5397,-45.55127
+5.87946,-44.73155
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<styleUrl>#TrajLabels</styleUrl>
+<name>
+05/11/23 12Z
+</name>
+<description>
+Speed
+79.2 kts
+</description>
+<Point>
+<coordinates>
+-169.657,-46.834
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#TrajLabels</styleUrl>
+<name>
+05/11/23 18Z
+</name>
+<description>
+Speed
+73.8 kts
+</description>
+<Point>
+<coordinates>
+-158.41547,-45.37649
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#TrajLabels</styleUrl>
+<name>
+05/12/23 00Z
+</name>
+<description>
+Speed
+78.7 kts
+</description>
+<Point>
+<coordinates>
+-148.10661,-44.30599
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#TrajLabels</styleUrl>
+<name>
+05/12/23 06Z
+</name>
+<description>
+Speed
+85.9 kts
+</description>
+<Point>
+<coordinates>
+-137.18852,-43.67616
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#TrajLabels</styleUrl>
+<name>
+05/12/23 12Z
+</name>
+<description>
+Speed
+89.8 kts
+</description>
+<Point>
+<coordinates>
+-125.41447,-42.96429
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#TrajLabels</styleUrl>
+<name>
+05/12/23 18Z
+</name>
+<description>
+Speed
+94.9 kts
+</description>
+<Point>
+<coordinates>
+-113.15817,-42.71022
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#TrajLabels</styleUrl>
+<name>
+05/13/23 00Z
+</name>
+<description>
+Speed
+89.0 kts
+</description>
+<Point>
+<coordinates>
+-100.33456,-42.04472
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#TrajLabels</styleUrl>
+<name>
+05/13/23 06Z
+</name>
+<description>
+Speed
+90.7 kts
+</description>
+<Point>
+<coordinates>
+-88.38155,-41.68612
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#TrajLabels</styleUrl>
+<name>
+05/13/23 12Z
+</name>
+<description>
+Speed
+94.5 kts
+</description>
+<Point>
+<coordinates>
+-76.22281,-41.69017
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#TrajLabels</styleUrl>
+<name>
+05/13/23 18Z
+</name>
+<description>
+Speed
+97.8 kts
+</description>
+<Point>
+<coordinates>
+-63.53116,-42.07653
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#TrajLabels</styleUrl>
+<name>
+05/14/23 00Z
+</name>
+<description>
+Speed
+98.7 kts
+</description>
+<Point>
+<coordinates>
+-50.3012,-43.02003
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#TrajLabels</styleUrl>
+<name>
+05/14/23 06Z
+</name>
+<description>
+Speed
+97.8 kts
+</description>
+<Point>
+<coordinates>
+-36.80583,-44.7701
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#TrajLabels</styleUrl>
+<name>
+05/14/23 12Z
+</name>
+<description>
+Speed
+102. kts
+</description>
+<Point>
+<coordinates>
+-23.0071,-44.84155
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#TrajLabels</styleUrl>
+<name>
+05/14/23 18Z
+</name>
+<description>
+Speed
+101. kts
+</description>
+<Point>
+<coordinates>
+-8.5397,-45.55127
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<styleUrl>#TrajLabels</styleUrl>
+<name>
+05/15/23 00Z
+</name>
+<description>
+Speed
+106. kts
+</description>
+<Point>
+<coordinates>
+5.87946,-44.73155
+</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>DESCENT VECTORS</name>
+<Folder>
+<name>
+05/11/23 12Z
+</name>
+<Placemark>
+<styleUrl>#line2</styleUrl>
+<LineString>
+<coordinates>
+-169.657,-46.834
+-168.752321283801,-47.2084989355838
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Payload DV</name>
+<description>
+121 deg / 43.4 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-168.752321283801,-47.2084989355838
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Balloon DV</name>
+<description>
+121 deg / 14.5 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-169.355440427934,-46.9588329785279
+</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>
+05/11/23 18Z
+</name>
+<Placemark>
+<styleUrl>#line2</styleUrl>
+<LineString>
+<coordinates>
+-158.41547,-45.37649
+-157.409202210385,-45.8212942782317
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Payload DV</name>
+<description>
+122 deg / 50.1 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-157.409202210385,-45.8212942782317
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Balloon DV</name>
+<description>
+122 deg / 16.7 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-158.080047403462,-45.5247580927439
+</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>
+05/12/23 00Z
+</name>
+<Placemark>
+<styleUrl>#line2</styleUrl>
+<LineString>
+<coordinates>
+-148.10661,-44.30599
+-147.388510992128,-44.4642092729133
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Payload DV</name>
+<description>
+107 deg / 32.3 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-147.388510992128,-44.4642092729133
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Balloon DV</name>
+<description>
+107 deg / 10.8 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-147.867243664042,-44.3587297576378
+</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>
+05/12/23 06Z
+</name>
+<Placemark>
+<styleUrl>#line2</styleUrl>
+<LineString>
+<coordinates>
+-137.18852,-43.67616
+-136.811434652081,-43.6227728375918
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Payload DV</name>
+<description>
+79 deg / 16.7 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-136.811434652081,-43.6227728375918
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Balloon DV</name>
+<description>
+79 deg / 5.6 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-137.062824884027,-43.6583642791973
+</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>
+05/12/23 12Z
+</name>
+<Placemark>
+<styleUrl>#line2</styleUrl>
+<LineString>
+<coordinates>
+-125.41447,-42.96429
+-125.022071322683,-42.6946297980557
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Payload DV</name>
+<description>
+47 deg / 23.6 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-125.022071322683,-42.6946297980557
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Balloon DV</name>
+<description>
+47 deg / 7.9 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-125.283670440894,-42.8744032660186
+</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>
+05/12/23 18Z
+</name>
+<Placemark>
+<styleUrl>#line2</styleUrl>
+<LineString>
+<coordinates>
+-113.15817,-42.71022
+-112.756233983787,-42.2342420736228
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Payload DV</name>
+<description>
+32 deg / 33.5 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-112.756233983787,-42.2342420736228
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Balloon DV</name>
+<description>
+32 deg / 11.2 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-113.024191327929,-42.5515606912076
+</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>
+05/13/23 00Z
+</name>
+<Placemark>
+<styleUrl>#line2</styleUrl>
+<LineString>
+<coordinates>
+-100.33456,-42.04472
+-100.032518643498,-41.8551796463248
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Payload DV</name>
+<description>
+50 deg / 17.6 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-100.032518643498,-41.8551796463248
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Balloon DV</name>
+<description>
+50 deg / 5.9 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-100.233879547833,-41.9815398821083
+</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>
+05/13/23 06Z
+</name>
+<Placemark>
+<styleUrl>#line2</styleUrl>
+<LineString>
+<coordinates>
+-88.38155,-41.68612
+-87.4960120212801,-42.0706269658042
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Payload DV</name>
+<description>
+120 deg / 45.9 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-87.4960120212801,-42.0706269658042
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Balloon DV</name>
+<description>
+120 deg / 15.3 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-88.08637067376,-41.8142889886014
+</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>
+05/13/23 12Z
+</name>
+<Placemark>
+<styleUrl>#line2</styleUrl>
+<LineString>
+<coordinates>
+-76.22281,-41.69017
+-75.1960380875371,-41.7441643125483
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Payload DV</name>
+<description>
+94 deg / 46.2 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-75.1960380875371,-41.7441643125483
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Balloon DV</name>
+<description>
+94 deg / 15.4 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-75.8805526958457,-41.7081681041828
+</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>
+05/13/23 18Z
+</name>
+<Placemark>
+<styleUrl>#line2</styleUrl>
+<LineString>
+<coordinates>
+-63.53116,-42.07653
+-62.6916393930215,-41.7971349684998
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Payload DV</name>
+<description>
+66 deg / 41 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-62.6916393930215,-41.7971349684998
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Balloon DV</name>
+<description>
+66 deg / 13.7 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-63.2513197976738,-41.9833983228333
+</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>
+05/14/23 00Z
+</name>
+<Placemark>
+<styleUrl>#line2</styleUrl>
+<LineString>
+<coordinates>
+-50.3012,-43.02003
+-49.62829513114,-42.6731174387515
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Payload DV</name>
+<description>
+55 deg / 36.1 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-49.62829513114,-42.6731174387515
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Balloon DV</name>
+<description>
+55 deg / 12 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-50.0768983770467,-42.9043924795838
+</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>
+05/14/23 06Z
+</name>
+<Placemark>
+<styleUrl>#line2</styleUrl>
+<LineString>
+<coordinates>
+-36.80583,-44.7701
+-36.2541366133909,-45.0566716316161
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Payload DV</name>
+<description>
+126 deg / 29.1 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-36.2541366133909,-45.0566716316161
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Balloon DV</name>
+<description>
+126 deg / 9.7 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-36.6219322044636,-44.8656238772054
+</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>
+05/14/23 12Z
+</name>
+<Placemark>
+<styleUrl>#line2</styleUrl>
+<LineString>
+<coordinates>
+-23.0071,-44.84155
+-22.2684524589475,-45.0654353311806
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Payload DV</name>
+<description>
+113 deg / 34.2 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-22.2684524589475,-45.0654353311806
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Balloon DV</name>
+<description>
+113 deg / 11.4 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-22.7608841529825,-44.9161784437269
+</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>
+05/14/23 18Z
+</name>
+<Placemark>
+<styleUrl>#line2</styleUrl>
+<LineString>
+<coordinates>
+-8.5397,-45.55127
+-7.24299736346815,-45.745642415305
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Payload DV</name>
+<description>
+102 deg / 55.8 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-7.24299736346815,-45.745642415305
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Balloon DV</name>
+<description>
+102 deg / 18.6 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+-8.10746578782271,-45.6160608051017
+</coordinates>
+</Point>
+</Placemark>
+</Folder>
+<Folder>
+<name>
+05/15/23 00Z
+</name>
+<Placemark>
+<styleUrl>#line2</styleUrl>
+<LineString>
+<coordinates>
+5.87946,-44.73155
+6.97477411146556,-44.7041855616302
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Payload DV</name>
+<description>
+88 deg / 46.8 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+6.97477411146556,-44.7041855616302
+</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Balloon DV</name>
+<description>
+88 deg / 15.6 nm
+</description>
+<styleUrl>#DVLabels</styleUrl>
+<Point>
+<coordinates>
+6.24456470382185,-44.7224285205434
+</coordinates>
+</Point>
+</Placemark>
+</Folder>
+</Folder>
+</Document>
+</kml>

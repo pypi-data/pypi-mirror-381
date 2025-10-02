@@ -1,0 +1,9 @@
+
+[input_files]
+global_path = "../../src/too_parser/Catalogs/"
+flight_log_file = "flight728nt.log"
+
+
+[parameters]
+[parameters.balloon]
+trajectory_type = "log"  # cst, kml, log, sim
