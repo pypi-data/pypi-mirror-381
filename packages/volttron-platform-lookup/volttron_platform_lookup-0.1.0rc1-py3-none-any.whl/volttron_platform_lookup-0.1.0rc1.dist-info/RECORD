@@ -1,0 +1,7 @@
+platform_lookup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+platform_lookup/app.py,sha256=b6mIWTjg4UG87ua9Ur8vpnwiIzJXa-GuLBF8lNsFTWQ,13011
+volttron_platform_lookup-0.1.0rc1.dist-info/LICENSE,sha256=SztTiS3v8xe7S2Rdm0vLoXOkf4lg3Li58drmx8F1NhM,11927
+volttron_platform_lookup-0.1.0rc1.dist-info/METADATA,sha256=LLD-xZ3ct09Ws_Q_lHTA4TjDYY1Y6Lh1Hq8FbsMs4dM,4236
+volttron_platform_lookup-0.1.0rc1.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+volttron_platform_lookup-0.1.0rc1.dist-info/entry_points.txt,sha256=QWQHCP91f6sFHrA1zBFUO9h9Vahbv9vtw2mD3qLmYgA,69
+volttron_platform_lookup-0.1.0rc1.dist-info/RECORD,,

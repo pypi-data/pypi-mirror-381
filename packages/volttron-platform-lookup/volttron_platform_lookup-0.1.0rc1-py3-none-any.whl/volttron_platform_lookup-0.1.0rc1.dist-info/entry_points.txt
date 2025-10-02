@@ -1,0 +1,3 @@
+[console_scripts]
+volttron-platform-lookup=platform_lookup.app:main
+
