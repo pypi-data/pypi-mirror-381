@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+nowledge_mem.egg-info/PKG-INFO
+nowledge_mem.egg-info/SOURCES.txt
+nowledge_mem.egg-info/dependency_links.txt
+nowledge_mem.egg-info/entry_points.txt
+nowledge_mem.egg-info/requires.txt
+nowledge_mem.egg-info/top_level.txt
+server/main.py
