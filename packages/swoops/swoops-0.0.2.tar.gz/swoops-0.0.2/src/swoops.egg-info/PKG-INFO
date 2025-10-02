@@ -1,0 +1,124 @@
+Metadata-Version: 2.4
+Name: swoops
+Version: 0.0.2
+Author-email: Jason Krist <jkrist2696@gmail.com>
+License-Expression: GPL-3.0-or-later
+Project-URL: Homepage, https://github.com/jkrist2696/swoops
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: future>=1.0.0
+Requires-Dist: Pygments>=2.16.1
+Requires-Dist: PySide6>=6.6.3
+Requires-Dist: PySide6_Addons>=6.6.3
+Requires-Dist: PySide6_Essentials>=6.6.3
+Requires-Dist: QtAwesome>=1.2.3
+Requires-Dist: qtconsole>=5.5.0
+Requires-Dist: tomli
+Requires-Dist: tomli_w
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: sympy
+Requires-Dist: scipy
+Dynamic: license-file
+
+
+# SWOOPS Optimization GUI
+
+## Setup, Workflows, Orchestrate, Optimize, Plotting, Surrogates
+
+#### Author: Jason Krist
+
+#### Date: October 1st, 2025
+
+## Description
+
+SWOOPS is an in-progress Graphical User Interface (GUI) designed for parametric optimization. Each letter of SWOOPS stands for a feature set that is within the scope of the tool. [Swoops](https://www.mariowiki.com/Swoop) are also the name for the bats in super mario, hence the mascot for the tool is a swoop named Zippy, which is an homage to the Microsoft Office Assistance [Clippy](https://en.wikipedia.org/wiki/Office_Assistant).
+
+SWOOPS is a culmination of everything I want in an optimization GUI. I have tired of the current state of optimization tooling: The high tech debt and learning curve of custom tools. The expense, inconfigurability, and vendor lock-in of COTS tools. And the unfriendly user experience across the board. My conclusions and design philosophy are summarized in the "Core Tenets" section below.
+
+## Install
+
+```
+pip install swoops
+```
+
+## Usage (Incomplete)
+
+python test_app.py
+
+![Dark Mode](https://raw.githubusercontent.com/jkrist2696/swoops/refs/heads/master/images/gui_example.png)
+
+![Light Mode](https://raw.githubusercontent.com/jkrist2696/swoops/refs/heads/master/images/gui_example_light.png)
+
+Add more GUI usage steps and images here.
+
+### Python In-Line Usage (Incomplete)
+
+Probably don't need this section.
+
+### Command Line Usage (Incomplete)
+
+swoops [-h] [-file FILE] [-b] 
+
+## Core Tenets
+
+1. Democratize Optimization
+1. Prioritize User Experience
+1. Seamless Automation
+1. Make Lasting Contributions
+1. Free and Open Source Core Program
+1. Modularity is a Must
+1. Encourage Community Collaboration
+
+## Roadmap
+
+### Complete
+
+1. Backend data structures which can represent most optimization setups
+1. Widgets
+    1. Docked windows - each widget is nested in a dockable window
+    1. Tree View - visualize nested data structures or file system
+    1. Edit Window - visualize and edit all attributes of a data structure
+    1. Table View - visualize and edit a large set of entities and their attributes in a table
+    1. Web View - load local HTML files (Plotly, N2 Diagram) or online web pages
+    1. Plot View - load interactive Matplotlib plots
+    1. Python Code Editor - text edit python scripts
+1. Undoablility for Data Structure and Widget related changes (new, delete, edit)
+1. Tabs which can contain different widgets and layouts
+1. Rudimentary export script for swoops data structures to GEMSEO optimization format
+
+### In Progress
+
+1. Block Diagram Viewer
+1. Get App fully functional for simple demos. This encompasses many small To-Do's.
+1. Python Command Window
+1. User-Friendly Python API
+
+### Future Plans
+
+1. File Parser for defining variable locations in input or output files
+1. Create a "Library" of common tasks with drag-and-drop
+1. Custom optimization orchestrator with modular optimizer interface
+1. "Zippy" button opens a helper overlay for tutorials and trainings
+1. Improve interoperability with [GEMSEO](https://gemseo.readthedocs.io/en/stable/index.html), [OpenMDAO](https://openmdao.org/newdocs/versions/latest/main.html#), [Pymoo](https://pymoo.org/), and possible [Philote](https://mdo-standards.github.io/Philote-MDO/intro.html) and [SUAVE](https://suave.stanford.edu/)
+
+## Read The Docs (Incomplete)
+
+Download "docs" folder or [check preview](https://www.google.com).
+
+## Contributing
+
+Message me on Github.
+
+## License
+
+[GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
+
+## Copyright:
+
+(c) 2025, Jason Krist
