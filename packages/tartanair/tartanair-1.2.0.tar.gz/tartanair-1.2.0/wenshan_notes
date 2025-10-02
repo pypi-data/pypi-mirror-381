@@ -1,0 +1,7 @@
+Upload to pypi
+- python -m build
+- python3 -m twine upload --repository pypi dist/*
+
+Build doc:
+make man
+make html
