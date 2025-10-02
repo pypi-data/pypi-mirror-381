@@ -1,0 +1,11 @@
+uapg/__init__.py,sha256=e1VPEdSMjbR_Aucr_Kr0g_6EXw4fP0dTW4ve1M1jypo,687
+uapg/cli.py,sha256=STvozG0k7DTPjbKgnin79ChUug1PlZeUI-0aYHr749Y,15381
+uapg/db_manager.py,sha256=Ttl1apA_-nNyK76id4p87Ys_AAsgHPIgjbOiNPQHQDo,54935
+uapg/history_pgsql.py,sha256=mLTKMs0yBJYEtn99-NyUE3xydtVWvsE1nxTs9LTbSgw,68089
+uapg/history_timescale.py,sha256=UX405VnTVn3yeKs21WJ_xjoLgA2k4f1b4nWurNnKMV8,83606
+uapg/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uapg-0.1.6.dist-info/licenses/LICENSE,sha256=WSUq0LN9jASyrgYfrymJ4YW53yIOJr_HMFdZL9NboHI,1064
+uapg-0.1.6.dist-info/METADATA,sha256=oYQs3xwvlzavWSZDi5yqcEBjLWX6sw5qXPnFOSJs8Z8,8030
+uapg-0.1.6.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+uapg-0.1.6.dist-info/top_level.txt,sha256=iXwZmd2hrmrC22q6smwqIMFo84F4oJFVHxc2NjxiQmo,5
+uapg-0.1.6.dist-info/RECORD,,
