@@ -1,0 +1,90 @@
+[project]
+name = "gsw-xarray"
+version = "0.5.0"
+description = "Drop in wrapper for gsw which adds CF standard name and units attributes to xarray results"
+authors = [
+    { name = "Andrew Barna", email = "abarna@gmail.com" },
+    { name = "Romain Caneill", email = "romain.caneill@ens-lyon.org" },
+]
+requires-python = ">=3.11"
+readme = "README.rst"
+license = "BSD-3-Clause"
+dependencies = [
+    "xarray>=2023.09",
+    "gsw>=3.6.18; python_version <= '3.12'",
+    "gsw>=3.6.20; python_version == '3.13'",
+    "gsw>=3.6.20; python_version == '3.14'",
+    "cf-xarray>=0.8",
+]
+
+[project.optional-dependencies]
+pint = [
+    "Pint>=0.24.4",
+    "pint-xarray>=0.6",
+]
+
+[project.urls]
+Repository = "https://github.com/DocOtak/gsw-xarray"
+Documentation = "https://gsw-xarray.readthedocs.io/"
+
+[dependency-groups]
+dev = [
+    "pytest>=6.2.5; python_version <= '3.13'",
+    "pytest>=8.4.0; python_version >= '3.14'",
+    "pre-commit>=2.17.0,<3",
+    "jupyterlab>=4.0.4",
+    "netCDF4>=1.6.5; python_version <= '3.12'",
+    "netCDF4>=1.7.2; python_version == '3.13'",
+    "toml>=0.10.2",
+    "dask>=2023.1.0",
+    "ruff>=0.4.5,<0.5",
+]
+docs = [
+    "Sphinx>=8",
+    "furo>=2022.1.2",
+    "nbsphinx>=0.9.2",
+    "ipykernel>=6.29.4",
+    "netCDF4>=1.6.5; python_version <= '3.12'",
+    "netCDF4>=1.7.2; python_version == '3.13'",
+    "Pint>=0.24.4",
+    "pint-xarray>=0.6",
+    "dask>=2023.1.0",
+]
+
+[tool.uv]
+default-groups = [
+    "dev",
+    "docs",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+# Same as Black.
+line-length = 88
+indent-width = 4
+
+[tool.ruff.lint]
+# Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
+# Unlike Flake8, Ruff doesn't enable pycodestyle warnings (`W`) or
+# McCabe complexity (`C901`) by default.
+select = ["E4", "E7", "E9", "F", "I"]
+ignore = []
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+
+# Like Black, respect magic trailing commas.
+skip-magic-trailing-comma = false
+
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
