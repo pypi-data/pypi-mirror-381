@@ -1,0 +1,23 @@
+[project]
+name = "boxTestpy"
+version = "0.1.0"
+description = "Beginner-friendly side-by-side boxplots and two-sample tests (t-test / Mann–Whitney)."
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"  # <-- simple string
+license-files = ["LICENSE"]  # optional but recommended
+dependencies = [
+  "numpy>=1.21",
+  "pandas>=1.3",
+  "matplotlib>=3.4",
+  "scipy>=1.7"
+]
+
+authors = [
+  {name = "Arkaprabha Sau", email = "arka.doctor@gmail.com"},
+  {name = "Santanu Phadikar"},
+  {name = "Ishita Bhakta"}
+]
+
+[project.optional-dependencies]
+plotting = ["seaborn>=0.11"]
