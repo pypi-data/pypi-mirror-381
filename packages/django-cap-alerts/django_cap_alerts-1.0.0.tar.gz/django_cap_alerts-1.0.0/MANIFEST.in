@@ -1,0 +1,16 @@
+include README.md
+include LICENSE
+include requirements.txt
+include requirements-dev.txt
+recursive-include docs *.md
+recursive-include cap_alerts/migrations *.py
+recursive-include cap_alerts/engage *.py
+recursive-include cap_alerts/meteoalarm *.py
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .git*
+global-exclude .DS_Store
+global-exclude *.egg-info
+
+
+
