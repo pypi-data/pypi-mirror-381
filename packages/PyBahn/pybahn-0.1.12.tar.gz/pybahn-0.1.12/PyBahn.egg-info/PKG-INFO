@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: PyBahn
+Version: 0.1.12
+Summary: A Python library for interacting with Deutsche Bahn data.
+Author: qwwesq
+License-File: LICENSE
+Requires-Dist: requests>=2.31.0
+Requires-Dist: reportlab>=4.0.0
+Dynamic: license-file
