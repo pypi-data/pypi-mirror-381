@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "datapythonstreamlit"
+version = "0.1.0"
+description = "📊 Streamlit Data Analyzer"
+authors = ["sambhav302005 <sambhav302005@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [{ include = "data_analyzer", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0"
+streamlit = "^1.38.0"
+pandas = "^2.0"
+numpy = "^1.26"
+matplotlib = "^3.9"
+
+[tool.poetry.scripts]
+data-analyzer = "data_analyzer.app:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
