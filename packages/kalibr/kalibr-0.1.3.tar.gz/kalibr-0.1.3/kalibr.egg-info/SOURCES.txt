@@ -1,0 +1,8 @@
+pyproject.toml
+setup.py
+kalibr.egg-info/PKG-INFO
+kalibr.egg-info/SOURCES.txt
+kalibr.egg-info/dependency_links.txt
+kalibr.egg-info/entry_points.txt
+kalibr.egg-info/requires.txt
+kalibr.egg-info/top_level.txt
