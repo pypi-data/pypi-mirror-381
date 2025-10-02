@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: vaga
+Version: 0.0.1
+Summary: Python library for the Vaga Link API.
+Project-URL: homepage, https://vagaslink.com/
+Project-URL: source, https://github.com/laurentino-co/vaga-python
+Project-URL: issues, https://github.com/laurentino-co/vaga-python/issues
+Author-email: Emerson Laurentino <emerson@laurentino.co>
+License: MIT
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Vaga Link Python Library
+
+The Vaga Link Python library provides convenient access to the Vaga Link API from applications written in the Python language. It includes a pre-defined set of classes for API resources that initialize themselves dynamically from API responses which makes it compatible with a wide range of versions of the Vaga Link API.
+
