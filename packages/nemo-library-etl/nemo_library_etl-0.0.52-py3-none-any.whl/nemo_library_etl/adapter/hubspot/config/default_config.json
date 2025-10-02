@@ -1,0 +1,12 @@
+{
+    "config_version": "0.0.1",
+    "extract_active": true,
+    "transform_active": true,
+    "load_active": true,
+    "deal_pipelines": ["*"],
+    "extract": {
+        "tables": {}
+    },
+    "transform": {},
+    "load": {}
+}
