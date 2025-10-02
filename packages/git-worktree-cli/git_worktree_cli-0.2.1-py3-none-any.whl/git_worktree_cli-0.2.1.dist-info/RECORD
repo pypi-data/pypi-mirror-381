@@ -1,0 +1,11 @@
+git_worktree_cli-0.2.1.dist-info/licenses/LICENSE,sha256=FDd05a_vRg02KYWScKuzwu_yTxVbdpm04y9NE4AihuY,1065
+wt/__init__.py,sha256=u5bzHC2tt0G_RjudSzSXjpBAthGfcquGXXTlL56A0iM,114
+wt/__main__.py,sha256=_iF-qDbDRXgLjrVN6CSOnpq9Mazs9qrvFHlowyy6Lfs,120
+wt/cli.py,sha256=4AROorWtEz00ftHEBUywrakYRrmhTYTlgOL1ntr7i_I,4468
+wt/launchers.py,sha256=2_GTgmWVJW5Y3xTiIv_3-5gzDZ9YfpMTPPRKq51hG7k,7444
+wt/worktree.py,sha256=WvXsoHLVcTTCyccHEEUgR-7xVR-xSxtStOBW5oMDQSg,7065
+git_worktree_cli-0.2.1.dist-info/METADATA,sha256=TsxXiBTNWx0Py8BU1H5KU5h9oEcpDF-WJQRjiCKUkDg,436
+git_worktree_cli-0.2.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+git_worktree_cli-0.2.1.dist-info/entry_points.txt,sha256=xXko64NB79iEssa3CgkfmveSvLkbxSuRhax3WHA1dWw,34
+git_worktree_cli-0.2.1.dist-info/top_level.txt,sha256=NLrqdVZ1Ld4ojdkek14uV4gNZlKDDHCTlBUc_xDLmho,3
+git_worktree_cli-0.2.1.dist-info/RECORD,,
