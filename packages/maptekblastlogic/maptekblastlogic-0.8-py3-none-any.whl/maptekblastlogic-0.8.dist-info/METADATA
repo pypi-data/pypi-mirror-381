@@ -1,0 +1,127 @@
+Metadata-Version: 2.3
+Name: maptekblastlogic
+Version: 0.8
+Summary: Client for Maptek BlastLogic server.
+License: Maptek End User License Agreement
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: <4,>=3.8
+Requires-Dist: attrs>=21.3.0
+Requires-Dist: httpx<0.28.0,>=0.20.0
+Requires-Dist: python-dateutil<3,>=2.8.0
+Description-Content-Type: text/markdown
+
+# maptekblastlogic
+This is a client library for accessing the BlastLogic Server Integration API.
+
+This package enables you to connect to an API that has been created on the
+Maptek BlastLogic Server to integrate third party systems, custom software,
+scripts and tools with the BlastLogic ecosystem. The primary focus of the API
+is to facilitate adding backfilling, dipping and loaded charge deck data.
+
+This package was generated using the
+[open-python-client package](https://pypi.org/project/openapi-python-client/) package
+with minimal modifications.
+
+The API component of the BlastLogic Server is a separate licensable component.
+This means this package will not function without a number of BlastLogic Extend
+licences equal to the number of sites on the server.
+## Configuration
+In order to be able to use the BlastLogic Extend API, an API key needs to be
+generated for the BlastLogic server that you will be wanting to access and work
+with.
+
+The API key is essentially like a username and password and authenticates your
+requests with the BlastLogic server.
+
+Log into the web interface for BlastLogic Server and click on "User Keys". On this
+page click the "New" button to generate a key.
+
+When creating the key, provide a useful description so you know what the key
+was for, such as saying "Python Blast Truck Integration". If you are not sure
+exactly what you are building, consider "Python Experiment".
+
+Copy the key to your password manager as once the key is generated the server
+won't tell you what it is again.
+
+**WARNING** Do not store the API key within the Python script itself.\
+Doing this means anyone you share the script with will be able to interact
+with the BlastLogic Server as you. Read it from another file or from a password
+storage service.
+
+
+### Example Script
+The following can be used to test that the package was installed and the API
+key is set-up. It can also be used as a starting point for your script.
+
+The script use Python's built in [getpass](https://docs.python.org/3/library/getpass.html)
+library to provide a prompt on the command line where the user can enter their token.
+It is more robust to use the 3rd party [keyring](https://pypi.org/project/keyring/)
+package to store your key securely.
+
+Once you have generated the key, you will need to create an `AuthenticatedClient` object to
+connect the Python Script to the server:
+
+```python
+server_url = "your_server_address_here"
+token = getpass.getpass("Token for BlastLogic Server:")
+with AuthenticatedClient(
+    base_url=f"{server_url}/api",
+    raise_on_unexpected_status=True,
+    token=token,
+) as client:
+    ...
+```
+
+Where in the above snippet the server_url is the URL for your BlastLogic Server. Once
+a script is connected the server, you can interact with the server through the functions
+defined in the subpackages of `maptekblastlogic.api`. For example, to print the status of
+all sites on the server:
+
+```python
+import getpass
+
+from maptekblastlogic import AuthenticatedClient
+from maptekblastlogic.api.sites import get_sites
+from maptekblastlogic.models import ErrorModel
+
+token = getpass.getpass("Token for BlastLogic Server:")
+with AuthenticatedClient(
+    base_url=f"{server_url}/api",
+    raise_on_unexpected_status=True,
+    token=token,
+) as client:
+    sites = get_sites.sync(client=client)
+    if isinstance(sites, ErrorModel):
+        raise RuntimeError(
+            "Error when reading sites:",
+            sites.title,
+            "\n",
+            sites.details,
+        )
+    if not sites:
+        raise RuntimeError("No sites found on server.")
+
+    for site in sites:
+        print(site.name)
+        print("Site Code:", site.site_code)
+        print("Is active", site.is_active)
+        print("=~" * 10)
+```
+
+* The first lines import packages (libraries) to be used in the script.
+   This is common for Python scripts.
+* The getpass.getpass() line causes the script to ask for an API token.
+* The client is set-up with the token and the URL To the BlastLogic server
+   to connect to.\
+   This needs to be replaced with the URL of the server that you have access to.
+* Next the list of sites is requested.
+* If there was an error it is raised as an error.
+* If there are no sites, it raises an error to say there are no sites.
+* Otherwise, for each site, it prints out the name of the site and site code if
+  it is active.
+
+See the `maptekblastlogic.api` package for other operations available on the server.
+
+Another useful reference is the API specification, which can be seen by going to
+`<server_url>/api/swagger` in a web browser.
