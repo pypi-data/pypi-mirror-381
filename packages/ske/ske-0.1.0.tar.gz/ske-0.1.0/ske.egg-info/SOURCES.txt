@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+SKE/__init__.py
+SKE/main.py
+ske.egg-info/PKG-INFO
+ske.egg-info/SOURCES.txt
+ske.egg-info/dependency_links.txt
+ske.egg-info/entry_points.txt
+ske.egg-info/top_level.txt
