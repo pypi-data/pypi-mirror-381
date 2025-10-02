@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if profile %}
+<div class="bg-white rounded-lg shadow p-6 mb-8">
+    <h2 class="text-xl font-semibold text-gray-900 mb-4">Parent Profile</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+            <p class="text-sm text-gray-600">Name</p>
+            <p class="font-medium">{{ profile.first_name }} {{ profile.last_name }}</p>
+        </div>
+        <div>
+            <p class="text-sm text-gray-600">Email</p>
+            <p class="font-medium">{{ profile.email }}</p>
+        </div>
+        {% if profile.employer %}
+        <div>
+            <p class="text-sm text-gray-600">Employer</p>
+            <p class="font-medium">{{ profile.employer }}</p>
+        </div>
+        {% endif %}
+        {% if profile.mobile_phone %}
+        <div>
+            <p class="text-sm text-gray-600">Mobile Phone</p>
+            <p class="font-medium">{{ profile.mobile_phone }}</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+
+<div class="bg-white rounded-lg shadow p-6">
+    <h2 class="text-xl font-semibold text-gray-900 mb-6">Select a Dependent</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for dependent in dependents %}
+        <a href="/dependent/{{ dependent.folder }}" class="block">
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ dependent.first_name }} {{ dependent.last_name }}</h3>
+                <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Stage:</span> {{ dependent.stage|title }}</p>
+                <p class="text-sm text-gray-600"><span class="font-medium">ID:</span> {{ dependent.id }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

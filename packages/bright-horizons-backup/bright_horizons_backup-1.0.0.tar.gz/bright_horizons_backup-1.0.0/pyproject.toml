@@ -1,0 +1,160 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bright-horizons-backup"
+version = "1.0.0"
+description = "A Python client for backing up daily reports and photos from Bright Horizons daycare centers"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Hadrien Glaude", email = "hadrien.glaude@gmail.com"}
+]
+maintainers = [
+    {name = "Hadrien Glaude", email = "hadrien.glaude@gmail.com"}
+]
+keywords = ["bright-horizons", "daycare", "backup", "scraping", "childcare"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP :: Browsers",
+    "Topic :: System :: Archiving :: Backup",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.8.1"
+dependencies = [
+    "playwright>=1.40.0",
+    "httpx>=0.25.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+viewer = [
+    "flask>=2.0.0",
+]
+test = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-mock>=3.10.0",
+    "pytest-cov>=4.0.0",
+]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-mock>=3.10.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+    "tox>=4.0.0",
+    "build>=0.10.0",
+    "twine>=4.0.0",
+    "pre-commit>=3.0.0",
+    "bandit>=1.7.0",
+    "safety>=3.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/marsuleouf/bright-horizons-backup"
+Repository = "https://github.com/marsuleouf/bright-horizons-backup"
+Issues = "https://github.com/marsuleouf/bright-horizons-backup/issues"
+Changelog = "https://github.com/marsuleouf/bright-horizons-backup/blob/main/CHANGELOG.md"
+
+[project.scripts]
+bright-horizons-backup = "bright_horizons_backup.cli:main"
+bright-horizons-viewer = "bright_horizons_backup.viewer:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bright_horizons_backup = ["templates/*"]
+
+[tool.black]
+line-length = 120
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+# mypy configuration is in mypy.ini
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-v",
+    "--tb=short",
+    "--strict-markers",
+    "--disable-warnings",
+]
+markers = [
+    "asyncio: marks tests as async",
+    "slow: marks tests as slow",
+    "integration: marks tests as integration tests",
+]
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["tests/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+]
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py39,py310,py311,py312,lint
+isolated_build = true
+
+[testenv]
+extras = viewer
+deps = 
+    pytest
+    pytest-asyncio
+    pytest-mock
+    pytest-cov
+commands = pytest --cov=bright_horizons_backup --cov-report=term-missing {posargs}
+
+[testenv:cov]
+commands = pytest --cov=bright_horizons_backup --cov-report=html --cov-report=term
+
+[testenv:lint]
+deps = 
+    black
+    isort
+    flake8
+    mypy
+commands = 
+    black --check src tests
+    isort --check-only src tests
+    flake8 src tests
+    mypy src
+
+[testenv:security]
+deps =
+    bandit
+    safety
+commands =
+    bandit -r src/
+    safety check
+"""

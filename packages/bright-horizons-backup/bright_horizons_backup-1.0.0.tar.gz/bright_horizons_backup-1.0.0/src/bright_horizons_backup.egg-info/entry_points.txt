@@ -1,0 +1,3 @@
+[console_scripts]
+bright-horizons-backup = bright_horizons_backup.cli:main
+bright-horizons-viewer = bright_horizons_backup.viewer:main

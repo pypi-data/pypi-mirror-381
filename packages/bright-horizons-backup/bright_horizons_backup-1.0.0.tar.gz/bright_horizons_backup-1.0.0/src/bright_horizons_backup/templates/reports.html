@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a href="/" class="back-link">← Back to Dependents</a>
+<h2>Daily Reports for {{ dep_name }}</h2>
+
+{% for report in reports %}
+<div class="report-card">
+    <div class="date">{{ report.date }}</div>
+    
+    {% if report.teacher_notes %}
+    <div class="section">
+        <div class="section-title">Teacher Notes</div>
+        {% for note in report.teacher_notes %}
+        <div class="note teacher-note">
+            <div>{{ note.note }}</div>
+            {% if note.actor %}
+            <div class="meta">By: {{ note.actor }} at {{ note.capture_time }}</div>
+            {% endif %}
+            {% if note.attachment_id %}
+            <img src="/media/{{ dep_folder }}/{{ note.attachment_id }}" class="media" onerror="this.style.display='none';">
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% if report.activities %}
+    <div class="section">
+        <div class="section-title">Activities</div>
+        {% for activity in report.activities %}
+        <div class="activity">
+            {% if activity.description %}
+            <div>{{ activity.description }}</div>
+            {% endif %}
+            {% if activity.subject_names %}
+            <div class="meta">Subjects: {{ activity.subject_names | join(', ') }}</div>
+            {% endif %}
+            {% for snapshot in activity.snapshots %}
+            <div class="snapshot">
+                {% if snapshot.note %}
+                <div>{{ snapshot.note }}</div>
+                {% endif %}
+                {% if snapshot.attachment_id %}
+                <img src="/media/{{ dep_folder }}/{{ snapshot.attachment_id }}" class="media" onerror="this.style.display='none';">
+                {% endif %}
+                {% if snapshot.created_by %}
+                <div class="meta">By: {{ snapshot.created_by.first_name }} {{ snapshot.created_by.last_name }} at {{ snapshot.capture_time }}</div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% if report.snapshots %}
+    <div class="section">
+        <div class="section-title">Snapshots</div>
+        {% for snapshot in report.snapshots %}
+        <div class="snapshot">
+            {% if snapshot.note %}
+            <div>{{ snapshot.note }}</div>
+            {% endif %}
+            {% if snapshot.attachment_id %}
+            <img src="/media/{{ dep_folder }}/{{ snapshot.attachment_id }}" class="media" onerror="this.style.display='none';">
+            {% endif %}
+            {% if snapshot.created_by %}
+            <div class="meta">By: {{ snapshot.created_by.first_name }} {{ snapshot.created_by.last_name }} at {{ snapshot.capture_time }}</div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endfor %}
+{% endblock %}
