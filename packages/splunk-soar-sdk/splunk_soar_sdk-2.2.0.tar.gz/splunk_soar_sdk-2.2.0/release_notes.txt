@@ -1,0 +1,21 @@
+# [2.2.0](https://github.com/phantomcyber/splunk-soar-sdk/compare/2.1.1...2.2.0) (2025-10-01)
+
+
+### Features
+
+* render as option ([08405b5](https://github.com/phantomcyber/splunk-soar-sdk/commit/08405b5b38d3df1239fecf7ddc8175727c9b2827))
+
+
+
+
+
+# [2.2.0](https://github.com/phantomcyber/splunk-soar-sdk/compare/2.1.1...2.2.0) (2025-10-01)
+
+
+### Features
+
+* render as option ([08405b5](https://github.com/phantomcyber/splunk-soar-sdk/commit/08405b5b38d3df1239fecf7ddc8175727c9b2827))
+
+
+
+
