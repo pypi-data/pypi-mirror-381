@@ -1,0 +1,50 @@
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+.coverage
+coverage.xml
+htmlcov/
+
+# Virtual environments
+.venv/
+.env/
+venv/
+.python-version
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# Tooling caches
+.hatch/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Browser history artifacts and large datasets
+History
+places.sqlite
+*.sqlite
+*.db
+*.wal
+*.shm
+timeline.csv
+browser_chromium_result_*.csv
+browser_preferences_result_*.csv
+browser_timeliner_zip_*/
+
+# Archives and raw exports
+*.zip
+
+# Logs and reports
+*.log
+*.tmp
