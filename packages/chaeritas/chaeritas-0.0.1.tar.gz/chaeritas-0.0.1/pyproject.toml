@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chaeritas"
+version = "0.0.1"
+description = "Skeleton package for chaeritas"
+authors = [{ name="Chaeyun Ko", email="chaeyuniris@gmail.com"}]
+license = {text = "AGPL-3.0"}
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/chaeritas/chaeritas"
