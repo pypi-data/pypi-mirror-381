@@ -1,0 +1,15 @@
+lockss/turtles/__init__.py,sha256=9arhPOwCemb5EemdFE4gisbpLEE6bPqOBGi1yOXJmIA,1827
+lockss/turtles/__main__.py,sha256=BqRTG3dejCgLh87UJ1Os9DD9unxnQkOdUQM6eqWS3Sg,1680
+lockss/turtles/app.py,sha256=Rxbsq10A830D1r99a5tqLVYWM3bJZ2Org-JKjXD-2Mk,16689
+lockss/turtles/cli.py,sha256=ZijrjwW1VXtmRvTDpfLnLvq9aL0CfK-F6mglk04RihI,20887
+lockss/turtles/plugin.py,sha256=HT01Er9-odvJ4lF8DNC7TV4uxSqTw44UBe02Jgj5xMs,11065
+lockss/turtles/plugin_registry.py,sha256=ZGlVnhP831hmqLQ9cJueUAXlZWQ67rm0cs6U91F7STc,11943
+lockss/turtles/plugin_set.py,sha256=Q-d-UfZM8I6f-z4TeYe8jdBbhPv0r4ro2H24oNd8Syc,15898
+lockss/turtles/util.py,sha256=8EyWvzTLNycQM_ZKCtWm8FpKJSrwaCSWh8006UYq6vU,2498
+unittest/lockss/turtles/__init__.py,sha256=hrgWx4GaP-hhPBuRlbLndJnOQmZicKCLaP-dQTCu1sQ,3162
+unittest/lockss/turtles/test_plugin_set.py,sha256=q6JmooDR-wijAQ8x9DWKTNB6Of4EOr3Dgq8oaX0LTpQ,4179
+lockss_turtles-0.6.0.dev21.dist-info/LICENSE,sha256=O9ONND4uDxY_jucI4jZDf2liAk05ScEJaYu-Al7EOdQ,1506
+lockss_turtles-0.6.0.dev21.dist-info/METADATA,sha256=2HRA5jwOYJaTyU4wXqaIBzQg4aKlxdjTdl9lqL3aT9w,39692
+lockss_turtles-0.6.0.dev21.dist-info/WHEEL,sha256=b4K_helf-jlQoXBBETfwnf4B04YC67LOev0jo4fX5m8,88
+lockss_turtles-0.6.0.dev21.dist-info/entry_points.txt,sha256=25BAVFSBRKWAWiXIGZgcr1ypt2mV7nj31Jl8WcNZZOk,51
+lockss_turtles-0.6.0.dev21.dist-info/RECORD,,
