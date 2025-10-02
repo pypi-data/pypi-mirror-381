@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "camera-master"
+version = "0.1.0"
+description = "AI-powered education monitoring system with face recognition, gesture detection, and emotion analysis"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "RNS", email = "contact@example.com"}
+]
+keywords = ["face-recognition", "gesture-detection", "emotion-analysis", "education", "ai", "computer-vision"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+dependencies = [
+    "opencv-python>=4.8.0",
+    "mediapipe>=0.10.0",
+    "deepface>=0.0.79",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "matplotlib>=3.7.0",
+    "pyttsx3>=2.90",
+    "streamlit>=1.28.0",
+    "gradio>=3.50.0",
+    "tf-keras>=2.15.0",
+    "pillow>=10.0.0",
+    "scipy>=1.11.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.7.0",
+    "flake8>=6.1.0",
+    "mypy>=1.5.0",
+]
+
+[project.scripts]
+camera-master = "camera_master.cli:main"
+camera-attendance = "camera_master.cli:attendance_cli"
+camera-gesture = "camera_master.cli:gesture_cli"
+camera-emotion = "camera_master.cli:emotion_cli"
+camera-dashboard = "camera_master.cli:dashboard_cli"
+
+[project.urls]
+Homepage = "https://github.com/RNSsanjay/camera-master"
+Documentation = "https://github.com/RNSsanjay/camera-master#readme"
+Repository = "https://github.com/RNSsanjay/camera-master"
