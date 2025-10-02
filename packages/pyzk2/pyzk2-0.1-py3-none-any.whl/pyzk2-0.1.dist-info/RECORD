@@ -1,0 +1,13 @@
+pyzk2/__init__.py,sha256=FjnrBuMgNDYLAhfQaSWA7p9jNiEAKNDHfxaaCIPTwUA,64
+pyzk2/attendance.py,sha256=3pCTtz8REQK9E-7mPvdTwT4NZmHugdZJE7ummmfIAgY,558
+pyzk2/base.py,sha256=gIAiQTxou8BtcWdIxmNTjZL1aKE4u6kpteNApaE3FYI,62288
+pyzk2/const.py,sha256=rWEqOjNTbNx1bjcIJa30mxNzt31nb-n9dXGeyeGCr1M,6138
+pyzk2/exception.py,sha256=dNq7IRV_F_nKWWtR2yIYUby32Dqpwfcqzp27LSFYxcs,189
+pyzk2/finger.py,sha256=fTnpBYkMZVkVX1PMhatAJo4n7CTZVq9uv_8UKCkzMf8,1766
+pyzk2/user.py,sha256=JThvuXlQGf3QqxZe9HGsBzeKtCX8-ujWKS52eqR0MPA,1965
+pyzk2-0.1.dist-info/licenses/LICENSE,sha256=OduPms8DZZWiVm6j_lYLx71l2HSfCI4PSk7y-KbLSzQ,18026
+pyzk2-0.1.dist-info/licenses/LICENSE.txt,sha256=OduPms8DZZWiVm6j_lYLx71l2HSfCI4PSk7y-KbLSzQ,18026
+pyzk2-0.1.dist-info/METADATA,sha256=Cek-FmHKNXrzFTdl5x-SnJTC34IY3EhG1R6WCr9TWhs,1925
+pyzk2-0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pyzk2-0.1.dist-info/top_level.txt,sha256=7fio8nG0JB8sMKTlezR2LERcHfZ0Z52xEq_Zf-_2iJ0,6
+pyzk2-0.1.dist-info/RECORD,,
