@@ -1,0 +1,12 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bclearer-orchestration-services"
+version = "0.2.4"
+description = ""
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Mesbah Khan", email = "khanm@ontoledgy.io" }]
+dependencies = []
