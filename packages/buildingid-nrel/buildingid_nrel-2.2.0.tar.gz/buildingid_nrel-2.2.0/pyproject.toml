@@ -1,0 +1,53 @@
+[build-system]
+requires = ["poetry-core>=2.0.1"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "buildingid-nrel"
+version = "2.2.0"
+description = "Unique Building Identifier (UBID)"
+readme = "README.rst"
+authors = [
+    "Mark Borkum <mark.borkum@pnnl.gov>",
+    "Nicholas Long <nicholas.long@nrel.gov>",
+    "Katherine Fleming <katherine.fleming@nrel.gov>",
+    ]
+license = "BSD-2-Clause"
+homepage = "https://github.com/SEED-platform/buildingid-nrel"
+repository = "https://github.com/SEED-platform/buildingid-nrel"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: GIS",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+packages = [
+    { include = "buildingid" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.14"
+click = "<8.2"
+click_log = "^0.4.0"
+openlocationcode = "^1.0"
+pandas = ">=2.2.2,<3"
+pyqtree = "^1.0"
+shapely = "<2.1"
+tqdm = "^4.67"
+
+[tool.poetry.group.dev.dependencies]
+check-manifest = "^0.50.0"
+coverage = "^7.10"
+pytest = "^8.4"
+pytest-cov = "^7.0.0"
+pre-commit = "^4.3"
+mypy = "^1.17"
+
+[tool.poetry.scripts]
+buildingid = "buildingid.command_line:cli"
