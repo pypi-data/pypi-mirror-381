@@ -1,0 +1,2 @@
+[console_scripts]
+darkbin = darkbin.cli:main
