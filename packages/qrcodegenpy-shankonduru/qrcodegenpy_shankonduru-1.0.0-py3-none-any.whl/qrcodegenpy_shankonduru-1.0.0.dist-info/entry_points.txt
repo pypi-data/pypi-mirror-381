@@ -1,0 +1,3 @@
+[console_scripts]
+qrgen=qrcodegenpy_shankonduru.cli:cli
+
