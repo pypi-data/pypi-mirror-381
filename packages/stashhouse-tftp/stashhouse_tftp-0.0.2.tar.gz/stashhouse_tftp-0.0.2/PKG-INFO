@@ -1,0 +1,71 @@
+Metadata-Version: 2.4
+Name: stashhouse-tftp
+Version: 0.0.2
+Summary: StashHouse plugin for Trivial File Transfer Protocol (TFTP)
+Project-URL: Homepage, https://github.com/Jayson-Fong/stashhouse-tftp
+Project-URL: Issues, https://github.com/Jayson-Fong/stashhouse-tftp/issues
+Author-email: Jayson Fong <jayson.fong@gatech.edu>
+License: MIT
+License-File: LICENSE
+Classifier: Development Status :: 1 - Planning
+Classifier: Framework :: AsyncIO
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Communications :: File Sharing
+Classifier: Typing :: Typed
+Requires-Python: >=3.11
+Requires-Dist: py3tftp==1.3.0
+Requires-Dist: stashhouse==0.0.4
+Description-Content-Type: text/markdown
+
+<!--suppress HtmlDeprecatedAttribute-->
+<div align="center">
+   <h1>🌴 StashHouse: TFTP Plugin</h1>
+</div>
+
+<hr />
+
+<div align="center">
+
+[💼 Purpose](#purpose) | [🛡️ Security](#security)
+
+</div>
+
+<hr />
+
+# Purpose
+
+A plugin for [StashHouse](https://pypi.org/project/stashhouse/) to offer the Trivial File Transfer Protocol (TFTP).
+
+Registers a plugin named `tftp` and provides a `--tftp.port` argument to configure the port to listen on. The plugin
+will prevent read access to files and only enable writing.
+
+# Usage
+
+This package is a plugin for [StashHouse](https://pypi.org/project/stashhouse/). To install the program:
+
+```shell
+python3 -m pip install 'stashhouse[tftp]'
+```
+
+The following command-line arguments are available:
+```
+--tftp.port: Port to listen on (default: 9069)
+--tftp.ack-timeout: Timeout for each ACK. (default: 0.5)
+--tftp.conn-timeout: Timeout before aborting a connection. (default: 3)
+```
+
+For example, to start the TFTP server on port 8069
+```shell
+stashhouse -e tftp --tftp.port 8069
+```
+
+# Security
+
+The TFTP protocol lacks modern security mechanisms, such as authentication and encryption. Any file transfers involving
+TFTP may traverse through the network in a plain-text form. It is not recommended to use or expose TFTP over an insecure
+network such as the internet.
