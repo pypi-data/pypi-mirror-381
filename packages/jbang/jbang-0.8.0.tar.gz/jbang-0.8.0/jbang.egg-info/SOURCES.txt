@@ -1,0 +1,13 @@
+README.md
+setup.py
+jbang/__init__.py
+jbang/__main__.py
+jbang/jbang.py
+jbang.egg-info/PKG-INFO
+jbang.egg-info/SOURCES.txt
+jbang.egg-info/dependency_links.txt
+jbang.egg-info/entry_points.txt
+jbang.egg-info/not-zip-safe
+jbang.egg-info/requires.txt
+jbang.egg-info/top_level.txt
+tests/test_jbang.py
