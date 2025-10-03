@@ -1,0 +1,16 @@
+plone.recipe.zeoserver-2.0.4-py2.7-nspkg.pth,SHA256=SL2XGz1wpwn_wEek10Z7PmMUVigUC2P4OmpKTWzBARc,1688
+plone/recipe/zeoserver/__init__.py,SHA256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plone/recipe/zeoserver/ctl.py,SHA256=RNgvFSycQS9dGb3SUm8gp7uqQvLjdrE0AO1P1-idwdk,1119
+plone/recipe/zeoserver/pack.py,SHA256=ehNAWNqzOASljZzEdX6S5RlPDfp8G_tkEhjl5XSOvkc,2177
+plone/recipe/zeoserver/recipe.py,SHA256=l7ynW5eK-51rcBo5g3vagPjClzpNomDe_kpPvhhnCP4,20777
+plone/recipe/zeoserver/runzeo.bat,SHA256=g8t8edIM02iWt1QYsUV8ddN2d3Lv_5SxG7ax0EMHOlo,287
+plone/recipe/zeoserver/zeoservice.py.in,SHA256=I_Jy7R5iTuM8PoPzNKqy1vW-KsVA2FmDSPC-R3vLq08,4217
+plone/recipe/zeoserver/tests/__init__.py,SHA256=CBkJ4eTOV_cxi6hV8G76v0bDQ7yZO4-XtwFESCLofqU,26
+plone/recipe/zeoserver/tests/test_docs.py,SHA256=6sJvLjLgFp4XzAvCGWWnYvAY-cVayoY-sqT66nzjhJ4,1586
+plone/recipe/zeoserver/tests/zeoserver.txt,SHA256=dZCMxj-h0boDgu9A-yR-c4ryf_CASAdDZq1--VdfHBg,15957
+plone.recipe.zeoserver-2.0.4.dist-info/METADATA,SHA256=MBcPCz2ZT5CyKJDK_nNYCMstwqUE8cTpgDXM6MX4BTI,15244
+plone.recipe.zeoserver-2.0.4.dist-info/WHEEL,SHA256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+plone.recipe.zeoserver-2.0.4.dist-info/entry_points.txt,SHA256=rGWGnYWtwjM0aT8nYufFeQmxgEwFLhakIBapS1L3gsU,62
+plone.recipe.zeoserver-2.0.4.dist-info/namespace_packages.txt,SHA256=w-3LjpJyWhLxhR-yr2J1wNc0yz3eqI-H0E4erv1QOdY,19
+plone.recipe.zeoserver-2.0.4.dist-info/top_level.txt,SHA256=56bqrkG-vurYD0l15D71FPiDL7L3QqkfRWkYkdyS7WM,6
+plone.recipe.zeoserver-2.0.4.dist-info/RECORD,,
