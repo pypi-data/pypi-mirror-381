@@ -1,0 +1,15 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_builder.py,sha256=0pWLXwcJa9pwvW4TKyjMp5JhVhBHUaw8iyOgJ9Fo6Ws,1628
+tests/test_parser.py,sha256=ncIc7OHIaR1iKz3tHtnc02rbtu3jZmh3BIKmGjEph18,1865
+treef/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+treef/builder.py,sha256=gGdNeYMhdThyNeVAu7SRYRKWIJ0qob1rQPle1HsPKO8,1438
+treef/cli.py,sha256=4VRMVXsuHXHZbPD96HWHs9iXpuh0FepIlDEquOkOhjQ,5820
+treef/exceptions.py,sha256=k0-LiL_2kRMuZDGJmxC-LY6qBsGXUV6Zo6c9L7irOKg,514
+treef/logger.py,sha256=NaiqfdHRMNXmcyu1uzEsRS5N3B32DUCDa2BUB1017xg,734
+treef/parser.py,sha256=tLJIfuPhXjVy_CpkwSURWI56ju4g9eHYIuf7Bj6BliI,2814
+treef-0.1.0.dist-info/licenses/LICENSE,sha256=7O28jdA6mdodhJI2teanhMFkL_8gQa9NzcH9SMJRVw8,11557
+treef-0.1.0.dist-info/METADATA,sha256=5hxSoYdGmx0uLUr7TZ1kaIag_P6XMTk-H-DulVvnKBg,5292
+treef-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+treef-0.1.0.dist-info/entry_points.txt,sha256=oV5wTltYZF7ky4X32cX_j4lD3c5gQh_i7KlCd-btUjY,41
+treef-0.1.0.dist-info/top_level.txt,sha256=ja6aPRfD1VQPuhMAwwEEz6b1cfMUvOtYslB6PD_xHsM,12
+treef-0.1.0.dist-info/RECORD,,
