@@ -1,0 +1,2 @@
+[console_scripts]
+celar = celar.__main__:main
