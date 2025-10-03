@@ -1,0 +1,11 @@
+grpc_boilerplate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+grpc_boilerplate/connectionstring.py,sha256=6_qDXJoG9wHEnl7LYql6Xin-u2HiepfI7RXa8ECz9so,1867
+grpc_boilerplate/constants.py,sha256=23mIgSGixObH-USqUKJRy19gvvHj5IzKMeyrXFEGs54,70
+grpc_boilerplate/grpcio_aio_tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+grpc_boilerplate/grpcio_aio_tools/client.py,sha256=6ZxKgGM97iIENuB_eDYFhZZHefF--ix26yjAFcgI6js,2966
+grpc_boilerplate/grpcio_tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+grpc_boilerplate/grpcio_tools/client.py,sha256=EZmEjwJwvM4EIDKBULlAqPChBYvD57gbtq52qvcflp0,2919
+grpc_boilerplate/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+grpc_boilerplate-0.12.dist-info/METADATA,sha256=OTkFyRDFlp4B1WO6_OtYAdSZ-FBnbo86KrTw51J-RxM,568
+grpc_boilerplate-0.12.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+grpc_boilerplate-0.12.dist-info/RECORD,,
