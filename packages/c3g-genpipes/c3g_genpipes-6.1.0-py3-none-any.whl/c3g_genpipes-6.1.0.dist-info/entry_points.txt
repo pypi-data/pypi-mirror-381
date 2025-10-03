@@ -1,0 +1,5 @@
+[console_scripts]
+genpipes = genpipes.__main__:main
+
+[gui_scripts]
+
