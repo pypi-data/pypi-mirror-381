@@ -1,0 +1,16 @@
+Cython
+psycopg2-binary
+orjson
+python-dotenv
+asyncio-pool
+psutil
+unsync
+redis
+persistqueue
+PyYAML
+kazoo
+tqdm
+asyncpg
+websockets
+fastapi
+uvicorn
