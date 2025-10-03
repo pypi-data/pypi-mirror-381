@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kalibr"
+version = "0.1.15"
+description = "Kalibr SDK – expose once, run everywhere (GPT, Claude, MCP)"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+  "fastapi",
+  "uvicorn",
+  "pydantic"
+]
+
+[project.scripts]
+kalibr = "kalibr.__main__:main"
