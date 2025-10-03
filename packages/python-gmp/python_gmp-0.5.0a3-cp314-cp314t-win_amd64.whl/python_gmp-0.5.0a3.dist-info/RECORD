@@ -1,0 +1,10 @@
+gmp.cp314t-win_amd64.dll.a,sha256=vyqHK25xtCTJug4exBJvPmle0_1LKo575RJIOyasQ2A,1676
+gmp.cp314t-win_amd64.pyd,sha256=F8VBeJZMdB9J02jh1uXnFRioFpG2IiwG40JNYiMFnZw,172961
+python_gmp-0.5.0a3.data/platlib/libgcc_s_seh-1.dll,sha256=1tpM-hmVu1L0DawZCrNtsdD1017zD3iDIb4NnEIWYBg,101376
+python_gmp-0.5.0a3.data/platlib/libgmp-10.dll,sha256=Wcg6PUXoOozGTcg5YII8F81cJ1yKgNUooc0YWEdmV6s,1073671
+python_gmp-0.5.0a3.data/platlib/libwinpthread-1.dll,sha256=4BuOhf1nwrhh9k1MzH32B1m1iapBAACij6K4SiCJF1s,54784
+python_gmp-0.5.0a3.dist-info/DELVEWHEEL,sha256=yCD483n2PzxeCuLqG4MOFRXvOPP5290OYLEtofR6NhE,477
+python_gmp-0.5.0a3.dist-info/METADATA,sha256=1l4BbQCkJjIlOzcNMigZrSWzmysMHrnquZgbKPick3I,5902
+python_gmp-0.5.0a3.dist-info/RECORD,,
+python_gmp-0.5.0a3.dist-info/WHEEL,sha256=bptiEuhFO_SRCWh6pKadvOBI9eKlFVzU5R6pIzoecmk,86
+python_gmp-0.5.0a3.dist-info/licenses/LICENSE,sha256=VYvuIwcGxeL_yRf79N3QDxWLyLoE6KakR9rIbh25zUs,1101
