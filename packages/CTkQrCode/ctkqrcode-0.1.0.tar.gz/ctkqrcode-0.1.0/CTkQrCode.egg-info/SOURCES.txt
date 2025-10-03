@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+CTkQrCode/__init__.py
+CTkQrCode/ctkqrcode.py
+CTkQrCode.egg-info/PKG-INFO
+CTkQrCode.egg-info/SOURCES.txt
+CTkQrCode.egg-info/dependency_links.txt
+CTkQrCode.egg-info/requires.txt
+CTkQrCode.egg-info/top_level.txt

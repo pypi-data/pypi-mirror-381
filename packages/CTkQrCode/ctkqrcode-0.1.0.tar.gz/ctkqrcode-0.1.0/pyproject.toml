@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CTkQrCode"
+version = "0.1.0"
+description = "A CustomTkinter widget for generating customizable QR Codes easily."
+readme = "README.md"
+requires-python = ">=3.6"
+
+authors = [
+  { name = "Matin", email = "matinyarzadeh13@gmail.com" }
+]
+
+license = "MIT"
+keywords = ["customtkinter", "qrcode", "widget", "gui"]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development",
+]
+
+
+dependencies = [
+    "qrcode",
+    "customtkinter",
+    "Pillow"
+]
+
+[tool.setuptools]
+packages = ["CTkQrCode"]
+
+[project.urls]
+"Homepage" = "https://github.com/hu-matin/CTkQrCode"
+"Bug Tracker" = "https://github.com/hu-matin/CTkQrCode/issues"
