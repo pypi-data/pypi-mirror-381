@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: labric
+Version: 0.1.0
+Summary: A Python package - more functionality coming soon
+Author-email: Connor <co.hogan12@gmail.com>
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# labric
+
+A Python package - more functionality coming soon.
+
+## Installation
+
+```bash
+pip install labric
+```
+
+## Usage
+
+More details coming soon!

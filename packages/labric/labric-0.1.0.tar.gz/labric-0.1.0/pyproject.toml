@@ -1,0 +1,14 @@
+[project]
+name = "labric"
+version = "0.1.0"
+description = "A Python package - more functionality coming soon"
+readme = "README.md"
+authors = [
+    { name = "Connor", email = "co.hogan12@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
