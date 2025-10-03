@@ -1,0 +1,9 @@
+README.md
+setup.py
+cursofiap/__init__.py
+cursofiap/core.py
+cursofiap_utils_luest.egg-info/PKG-INFO
+cursofiap_utils_luest.egg-info/SOURCES.txt
+cursofiap_utils_luest.egg-info/dependency_links.txt
+cursofiap_utils_luest.egg-info/top_level.txt
+tests/test_core.py
