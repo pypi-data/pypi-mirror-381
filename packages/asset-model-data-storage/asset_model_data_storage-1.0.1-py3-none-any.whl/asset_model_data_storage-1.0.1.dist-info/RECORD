@@ -1,0 +1,15 @@
+asset_model_data_storage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asset_model_data_storage/data_storage_handler.py,sha256=cLuCAeD5GEDSK2iUtXv7C0HNb84AgmY8N-eKAi70ZAE,2745
+asset_model_data_storage/data_storage_service.py,sha256=7jv4B9nirXN6HSjL-6MtT9hLgd_oi-WY-PDtXmcZOVI,4992
+asset_model_data_storage/s3_data_storage_service.py,sha256=ZXpPu5lP-2HpOMaIkxel3VZiPpbbStxABfuMLpiEDB8,7628
+asset_model_data_storage/system_data_storage_service.py,sha256=95lkVjXG323p2ULPoJG-VXzJ-YoM5qc7I2322D0zyqk,4755
+asset_model_data_storage-1.0.1.dist-info/licenses/LICENSE,sha256=TQhoWK5ty-smK_AamdQjZlblYyLHZVmSgLZYu1rfR6k,1068
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_data_storage_handler.py,sha256=K0Vzluul4VHzEHFa9rW0IIJqssz8MOiHd3iDAanaDio,1163
+tests/test_data_storage_service.py,sha256=z7mXgq2KruFx0OLFjmPGgsDs5x1_thp9jyg5njUM1C0,4449
+tests/test_s3_data_storage_service.py,sha256=sj_Nj6SoNJdX2X9AfRBmDOEH2GHwaG0Cnbb13Knns2k,4270
+tests/test_system_data_storage_service.py,sha256=s6qkkJUnh2ydAOyfVuwudkq4bJPCxRijkuGoOnZwc7U,2596
+asset_model_data_storage-1.0.1.dist-info/METADATA,sha256=sz3l5jcoC3nwVxTaKdzGe7iNZDd_WfZ7jm2SyaaJ06Q,5804
+asset_model_data_storage-1.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+asset_model_data_storage-1.0.1.dist-info/top_level.txt,sha256=SDWlfeqLZ03PeQITO4Rt9DoLp7Xn9vWF2BP5Kxo5IYA,31
+asset_model_data_storage-1.0.1.dist-info/RECORD,,
