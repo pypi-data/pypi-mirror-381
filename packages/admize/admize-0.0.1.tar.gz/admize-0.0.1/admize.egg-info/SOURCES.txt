@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.py
+admize/__init__.py
+admize.egg-info/PKG-INFO
+admize.egg-info/SOURCES.txt
+admize.egg-info/dependency_links.txt
+admize.egg-info/top_level.txt
