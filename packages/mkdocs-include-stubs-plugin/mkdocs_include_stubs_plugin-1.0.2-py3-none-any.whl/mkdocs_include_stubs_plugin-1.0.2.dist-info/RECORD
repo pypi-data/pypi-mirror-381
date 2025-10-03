@@ -1,0 +1,13 @@
+include_stubs/__init__.py,sha256=8tT-j5gbJBYfk_RCj9mfAt9o6vrLsqRs7kt3WGnRSAc,72
+include_stubs/_version.py,sha256=Z4K-UTIY33_xLP1pzS2WyAz2Mep6Wp7-cPzEjujTv0U,497
+include_stubs/cli.py,sha256=zPku49vHtC6cer1UZd5ATPfPFf_7i82JEdDrNl_DyAU,9591
+include_stubs/config.py,sha256=CmFVHJgglviEfpuqX6OIwqNPNTl2QHuscdBOKce3GIA,2565
+include_stubs/logging.py,sha256=5akddWFkrUvbmEZZaLkwPTRTlGJz7bcVBrClCxJW3Yw,2429
+include_stubs/plugin.py,sha256=t9pMdSyd6Io-sdGj7gvP18IorpuageCJ8fb8aRxEKkA,6758
+include_stubs/utils.py,sha256=4Qv5V3FHqtLcTdKo6IwiBbfkbz1bW-JfMQIvMoEb4ZE,31945
+mkdocs_include_stubs_plugin-1.0.2.dist-info/licenses/LICENSE,sha256=mHdI95-ri3YCyf6GXfvHi_5U1MxQGEZTAQUQm0qmsW8,582
+mkdocs_include_stubs_plugin-1.0.2.dist-info/METADATA,sha256=6VW0lWhEUb5js8ktnhgmKJodO70yreYXoPCSZXg4IEw,1622
+mkdocs_include_stubs_plugin-1.0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mkdocs_include_stubs_plugin-1.0.2.dist-info/entry_points.txt,sha256=XJakrfMseT5t1TYR5Zsnh6WMMDUpM9-2Qh3Y5j8oN-4,124
+mkdocs_include_stubs_plugin-1.0.2.dist-info/top_level.txt,sha256=vIb9TMdUH72DMOBmc5qpscxK7dX7b4vby6GfAFFFpCc,14
+mkdocs_include_stubs_plugin-1.0.2.dist-info/RECORD,,
