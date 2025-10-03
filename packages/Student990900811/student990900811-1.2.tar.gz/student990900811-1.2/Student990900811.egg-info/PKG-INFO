@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: Student990900811
+Version: 1.2
+Summary: This is just a package
+Author: Noman
+Author-email: mnomanansari99@gmail.com
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary
