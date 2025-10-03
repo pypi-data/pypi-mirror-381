@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bcml-ai"
+version = "0.0.2"
+description = "The BCML Python library."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Darin Tanner", email = "bcml@example.com" }]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: OS Independent",
+  "License :: OSI Approved :: GNU Affero General Public License v3",
+]
+
+[project.urls]
+Homepage = "https://example.com"
+
+# --- Important bits for Hatchling + src layout ---
+[tool.hatch.build.targets.wheel]
+# Tell Hatchling which package directory to include in the wheel
+packages = ["src/bcml"]
+
+[tool.hatch.build.targets.sdist]
+# Make sure source dist includes your code and metadata
+include = [
+  "src/bcml",
+  "README.md",
+  "LICENSE",
+  "pyproject.toml",
+]
