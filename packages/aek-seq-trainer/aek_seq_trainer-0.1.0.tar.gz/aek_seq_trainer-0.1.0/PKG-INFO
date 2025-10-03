@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: aek-seq-trainer
+Version: 0.1.0
+Summary: AI sequence trainer
+Home-page: https://github.com/yourusername/aek-seq-trainer
+Author: Alp Emre Karaahmet
+Author-email: alpemrekaraahmet@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch>=2.0
+Requires-Dist: scikit-learn>=1.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/alpemre8/aek-img-trainer/main/logo.png" alt="AEK Image Trainer Logo" width="400"/>
+  
+  # AEK Seq Trainer
+  
+  AI sequence trainer library 
+</div>
+
+
+
+# Installation
