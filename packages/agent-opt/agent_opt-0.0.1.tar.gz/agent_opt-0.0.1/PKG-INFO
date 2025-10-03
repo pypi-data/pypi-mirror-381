@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: agent-opt
+Version: 0.0.1
+Summary: A library for prompt optimization.
+Author-email: Future AGI <hello@futureagi.io>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: ai-evaluation>=0.1.9
+Requires-Dist: gepa>=0.0.17
+Requires-Dist: litellm>=1.35.2
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: openai>=1.108.2
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: optuna>=3.6.1
+Requires-Dist: fi>=0.0.2
+
+# agent-opts
+Agent Optimization Library
