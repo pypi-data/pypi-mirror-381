@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "topsisx-arpit-102203499"                
+version = "0.1.0"
+description = "A simple, typed TOPSIS implementation with a CLI."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "Arpit Jain"}]
+keywords = ["topsis", "mcdm", "decision-making"]
+dependencies = ["numpy>=1.22", "pandas>=1.5"]
+
+[project.urls]
+Homepage = "https://github.com/jarpit2003/topsisx"
+Repository = "https://github.com/jarpit2003/topsisx"
+
+[project.scripts]
+topsisx = "topsisx.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/topsisx"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]
