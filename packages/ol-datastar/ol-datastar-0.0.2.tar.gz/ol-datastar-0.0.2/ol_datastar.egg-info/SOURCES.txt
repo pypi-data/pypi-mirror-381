@@ -1,0 +1,12 @@
+setup.py
+datastar/__init__.py
+datastar/datastar.py
+datastar/frog_platform.py
+datastar/macro.py
+datastar/project.py
+datastar/task.py
+ol_datastar.egg-info/PKG-INFO
+ol_datastar.egg-info/SOURCES.txt
+ol_datastar.egg-info/dependency_links.txt
+ol_datastar.egg-info/requires.txt
+ol_datastar.egg-info/top_level.txt
