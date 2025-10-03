@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "te_quiz"
+version = "1.1.0"
+description = "A package for evaluating quiz results and communication styles"
+authors = ["Garima Jain <igarimajain26@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+keywords = ["quiz", "evaluation", "communication", "assessment"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+packages = [{include = "te_quiz"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
