@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+label_studio_sso/__init__.py
+label_studio_sso/apps.py
+label_studio_sso/backends.py
+label_studio_sso/middleware.py
+label_studio_sso.egg-info/PKG-INFO
+label_studio_sso.egg-info/SOURCES.txt
+label_studio_sso.egg-info/dependency_links.txt
+label_studio_sso.egg-info/requires.txt
+label_studio_sso.egg-info/top_level.txt
