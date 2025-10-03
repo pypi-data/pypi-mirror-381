@@ -1,0 +1,195 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "santok"
+version = "1.0.5"
+description = "Advanced multi-format tokenization system with numerology, hashing, compression, and embeddings"
+readme = "FULL_README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Santosh chavala", email = "chavalasantosh@hotmail.com"}
+]
+maintainers = [
+    {name = "Santosh chavala", email = "chavalasantosh@hotmail.com"}
+]
+keywords = [
+    "tokenization", "nlp", "text-processing", "numerology", "hashing", 
+    "compression", "embeddings", "concurrent-processing", "text-analysis",
+    "pattern-recognition", "anomaly-detection", "reconstruction", "bpe",
+    "subword", "character-level", "word-level", "syllable", "frequency",
+    "fnv", "murmur", "cityhash", "xxhash", "lz77", "huffman", "rle"
+]
+classifiers = [
+    # Development Status
+    "Development Status :: 5 - Production/Stable",
+    
+    # Intended Audience
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Information Technology",
+    
+    # Topic
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+    
+    # License
+    "License :: OSI Approved :: MIT License",
+    
+    # Programming Language
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    
+    # Operating System
+    "Operating System :: OS Independent",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    
+    # Environment
+    "Environment :: Console",
+    "Environment :: Other Environment",
+    
+    # Natural Language
+    "Natural Language :: English",
+]
+requires-python = ">=3.7"
+dependencies = [
+    # No external dependencies - pure Python implementation
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=21.0",
+    "flake8>=3.8",
+    "mypy>=0.800",
+]
+docs = [
+    "sphinx>=4.0",
+    "sphinx-rtd-theme>=0.5",
+    "myst-parser>=0.15",
+]
+performance = [
+    "psutil>=5.8",  # For memory monitoring
+    "numpy>=1.20",  # For advanced numerical operations (optional)
+]
+all = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=21.0",
+    "flake8>=3.8",
+    "mypy>=0.800",
+    "sphinx>=4.0",
+    "sphinx-rtd-theme>=0.5",
+    "myst-parser>=0.15",
+    "psutil>=5.8",
+    "numpy>=1.20",
+]
+
+[project.urls]
+Homepage = "https://github.com/chavalasantosh/santok"
+Documentation = "https://github.com/chavalasantosh/santok/tree/main/docs"
+Repository = "https://github.com/chavalasantosh/santok.git"
+"Bug Tracker" = "https://github.com/chavalasantosh/santok/issues"
+Changelog = "https://github.com/chavalasantosh/santok/blob/main/CHANGELOG.md"
+
+[project.scripts]
+santok = "santok:main"
+santok-cli = "santok:main"
+
+[tool.setuptools]
+packages = ["santok"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+santok = ["*.md", "docs/*.md"]
+
+# Version is set statically in [project] section above
+
+# Black configuration
+[tool.black]
+line-length = 88
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311', 'py312']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+# isort configuration
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["santok"]
+
+# pytest configuration
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --strict-markers --strict-config"
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+# Coverage configuration
+[tool.coverage.run]
+source = ["santok"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "setup.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+
+# MyPy configuration
+[tool.mypy]
+python_version = "3.7"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
