@@ -1,0 +1,11 @@
+reqman/__init__.py,sha256=p3mzHPQPR6uCRnH63qCng3RHfNw24ACZJB8m9Vw8ZHc,70006
+reqman/__main__.py,sha256=aqL2tfqycX8aY04QEA9339MrbD5KuZ8UmbYhhI14ric,786
+reqman/com.py,sha256=iNlSdHkurHnrUa0ZWAPxLXzMEw5XgmLcO3K6rGCS3-I,6046
+reqman/common.py,sha256=LPukOUGs2qCEvNb33YFow50dCVnUOxxOvF042Il0Hlg,1163
+reqman/env.py,sha256=oq5eanYvBumTGy_8QMxdNWwBI1QeXKSJ2LACFu8zbnI,18205
+reqman/testing.py,sha256=6TzTA4rfIMY4mvWDnAmoKs-zYz_A-9STqq39av1I9tI,7065
+reqman/xlib.py,sha256=7mzonbYZrmOYyWgsyfGpD1Fi28o-_4tfZKte8RtXXmk,2038
+reqman-3.4.1.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+reqman-3.4.1.dist-info/entry_points.txt,sha256=nz6O7wAYqyhx7_U12hjB8QXddU_i8K41ddg-deV9FgI,49
+reqman-3.4.1.dist-info/METADATA,sha256=ozeruCZNzleySaXnu-H1mSLuYx4w9imCYpUZSItMGd0,30235
+reqman-3.4.1.dist-info/RECORD,,
