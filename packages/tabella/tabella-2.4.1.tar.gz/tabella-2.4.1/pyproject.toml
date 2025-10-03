@@ -1,0 +1,113 @@
+[project]
+name = "tabella"
+version = "2.4.1"
+description = "Open-RPC API hosting and interactive documentation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [{ name = "Matthew Burkard", email = "matthewjburkard@gmail.com" }]
+classifiers = [
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Software Development",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+dependencies = [
+  "case-switcher>=1.3.13",
+  "httpx>=0.28.1",
+  "jinja2>=3.1.6",
+  "lorem-pysum>=1.4.11",
+  "openrpc>=10.5.0",
+  "openrpcclientgenerator>=0.49.0",
+  "pydantic>=2.11.9",
+  "starlette>=0.48.0",
+  "uvicorn>=0.37.0",
+]
+
+[project.urls]
+homepage = "https://gitlab.com/mburkard/tabella"
+repository = "https://gitlab.com/mburkard/tabella"
+
+[project.scripts]
+tabella = "tabella:main"
+
+[dependency-groups]
+dev = [
+  "phonenumbers>=9.0.15",
+  "pydantic-extra-types>=2.10.5",
+  "pydantic[email]>=2.11.9",
+  "websockets>=15.0.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.11,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.basedpyright]
+strict = ["**"]
+venvPath = "./"
+venv = ".venv"
+reportAny = "none"
+reportExplicitAny = "none"
+reportImplicitStringConcatenation = "none"
+reportUnannotatedClassAttribute = "none"
+
+[tool.ruff]
+lint.select = [
+  "ARG",
+  "ASYNC",
+  "B",
+  "C4",
+  "D",
+  "E",
+  "EM",
+  "ERA",
+  "F",
+  "FBT",
+  "FA",
+  "FLY",
+  "FIX",
+  "ICN",
+  "INT",
+  "ISC",
+  "N",
+  "PL",
+  "PTH",
+  "PYI",
+  "Q",
+  "RET",
+  "S",
+  "SIM",
+  "T10",
+  "TD",
+  "TRY",
+]
+lint.ignore = [
+  "PLR0913",  # Too many arguments.
+  "D203",  # Requires blank line before class doc-string.
+  "D213",  # Requires first doc string line on a new line.
+  "F841",  # Covered by pyright
+  "B007",  # Covered by pyright
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+  "FBT001",  # Positional boolean arguments
+  "FBT002",  # Positional boolean arguments
+  "S101",  # Checks for use of assert.
+  "S105",  # Hard-coded password.
+  "D",  # Documentation.
+]
+
+[tool.setuptools.packages.find]
+where = [
+  "src/tabella/static/vs2015.min.css",
+  "src/tabella/static/vs.min.css",
+  "src/tabella/static/highlight.min.js",
+  "src/tabella/static/htmx.js",
+  "src/tabella/static/output.css",
+]
