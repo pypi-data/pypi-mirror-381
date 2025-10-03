@@ -1,0 +1,82 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.mp4
+
+# C extensions
+*.so
+*.dylib
+
+# Distribution / packaging
+.Python
+build/
+_skbuild/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.claude/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+CLAUDE.md
+PYPI_GUIDE.md
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Nanobind
+*.pyd
+_viteo*.so
+
+# Poetry
+poetry.lock
+
+# scikit-build
+_cmake_test_compile/
