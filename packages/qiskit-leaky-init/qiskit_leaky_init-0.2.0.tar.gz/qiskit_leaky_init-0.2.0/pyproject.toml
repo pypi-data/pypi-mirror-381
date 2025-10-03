@@ -1,0 +1,27 @@
+[project]
+name = "qiskit-leaky-init"
+version = "0.2.0"
+description = "A transpilation plugin for Qiskit with a modified init stage that encodes (classical) information adding RZGates to auxiliary qubits"
+authors = [
+    {name = "Iyán Méndez Veiga", email = "me@iyanmv.com"},
+]
+dependencies = [
+    "qiskit>=1.0,<2.3",
+    "qiskit-ibm-runtime>=0.25.0",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+qiskit_leaky_init = ["*.png"]
+
+[project.entry-points."qiskit.transpiler.init"]
+leaky_init = "qiskit_leaky_init:LeakyInitPlugin"
