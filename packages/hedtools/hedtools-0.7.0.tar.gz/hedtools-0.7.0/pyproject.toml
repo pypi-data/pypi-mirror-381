@@ -1,0 +1,113 @@
+[build-system]
+requires = ["setuptools>=42", "versioneer[toml]"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hedtools"
+dynamic = ["version"]
+description = "HED validation, summary, and analysis tools for annotating events and experimental metadata."
+readme = "README.md"
+authors = [
+    { name = "VisLab" },
+    { name = "Ian Callanan" },
+    { name = "Monique Dennisen"},
+    { name = "Jeremy Cockfield" },
+    { name = "Alexander Jones" },
+    { name = "Owen Winterberg" },
+    { name = "Kay Robbins", email = "Kay.Robbins@utsa.edu" },
+]
+maintainers = [
+    { name = "Kay Robbins", email = "Kay.Robbins@utsa.edu" },
+]
+license = {text = "MIT"}
+keywords = ["HED", "hierarchical event descriptors", "validation", "neuroscience", "BIDS", "events", "metadata", "annotation"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+]
+
+requires-python = ">=3.9"
+
+dependencies = [
+    "defusedxml",
+    "et-xmlfile",
+    "inflect",
+    "jsonschema",
+    "matplotlib>=3.9.0",
+    "numpy",
+    "openpyxl",
+    "pandas",
+    "portalocker",
+    "python-dateutil",
+    "pytz",
+    "semantic-version",
+    "six",
+    "wordcloud==1.9.4"
+]
+
+[project.urls]
+"Homepage" = "https://www.hedtags.org/"
+"Documentation" = "https://www.hedtags.org/hed-python/"
+"Repository" = "https://github.com/hed-standard/hed-python/"
+"Bug Tracker" = "https://github.com/hed-standard/hed-python/issues"
+"Changelog" = "https://github.com/hed-standard/hed-python/blob/main/CHANGELOG.md"
+"HED Resources" = "https://www.hed-resources.org"
+
+[project.optional-dependencies]
+dev = [
+    "flake8>=6.0.0",
+    "codespell>=2.2.0",
+]
+docs = [
+    "sphinx>=7.0.0",
+    "furo>=2023.9.10",
+    "sphinx-copybutton>=0.5.2",
+    "myst-parser>=2.0.0",
+    "sphinx-autodoc-typehints>=1.24.0",
+    "linkify-it-py>=2.0.0",
+]
+test = [
+    "coverage>=7.0.0",
+]
+
+[project.scripts]
+run_remodel = "hed.tools.remodeling.cli.run_remodel:main"
+run_remodel_backup = "hed.tools.remodeling.cli.run_remodel_backup:main"
+run_remodel_restore = "hed.tools.remodeling.cli.run_remodel_restore:main"
+validate_bids = "hed.scripts.validate_bids:main"
+hed_validate_schemas = "hed.scripts.validate_schemas:main"
+hed_update_schemas = "hed.scripts.convert_and_update_schema:main"
+hed_add_ids = "hed.scripts.add_hed_ids:main"
+hed_create_ontology = "hed.scripts.create_ontology:main"
+
+[tool.versioneer]
+VCS = "git"
+style = "pep440"
+versionfile_source = "hed/_version.py"
+versionfile_build = "hed/_version.py"
+tag_prefix = ""
+parentdir_prefix = "hedtools-"
+
+
+[tool.setuptools.packages.find]
+where = [""]
+include = ["hed*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+hed = ["schema/schema_data/*.xml", "resources/*.png", "validator/data/*"]
+
+[tool.codespell]
+skip = '*.git,*.pdf,*.svg,versioneer.py,venv*,*.tsv,*.yaml,*.yml,*.json,*.rdf,*.jsonld,spec_tests,,*.xml,*.mediawiki,*.omn,*.toml'
+ignore-words-list = 'te,parms,assertIn'
