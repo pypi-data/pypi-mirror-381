@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+bmauth/__init__.py
+bmauth/auth.py
+bmauth/email_providers.py
+bmauth.egg-info/PKG-INFO
+bmauth.egg-info/SOURCES.txt
+bmauth.egg-info/dependency_links.txt
+bmauth.egg-info/requires.txt
+bmauth.egg-info/top_level.txt
+bmauth/templates/login.html
+bmauth/templates/register.html
+bmauth/templates/verify.html

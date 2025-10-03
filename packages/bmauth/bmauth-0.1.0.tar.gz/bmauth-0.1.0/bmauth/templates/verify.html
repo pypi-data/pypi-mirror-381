@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email - BMAuth</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            width: 90%;
+            max-width: 400px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .info {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #555;
+            font-size: 0.9rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-weight: 500;
+        }
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        input#pin {
+            text-align: center;
+            letter-spacing: 8px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin-bottom: 0.5rem;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        button#resendBtn {
+            background: #6c757d;
+        }
+        .message {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            border-radius: 5px;
+            display: none;
+        }
+        .message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .link {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .link a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📧 Verify Email</h1>
+        <p class="info">Check your email for a 6-digit verification PIN</p>
+
+        <form id="verifyForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="pin">Verification PIN</label>
+                <input type="text" id="pin" name="pin" maxlength="6" pattern="[0-9]{6}"
+                       placeholder="000000" required>
+            </div>
+            <button type="submit">Verify Email</button>
+        </form>
+
+        <button id="resendBtn" type="button">Resend PIN</button>
+
+        <div id="message" class="message"></div>
+
+        <div class="link">
+            <a href="/auth/register">Back to Registration</a> |
+            <a href="/auth/login">Login</a>
+        </div>
+    </div>
+
+    <script>
+        // Get email from URL params if available
+        const urlParams = new URLSearchParams(window.location.search);
+        const emailParam = urlParams.get('email');
+        if (emailParam) {
+            document.getElementById('email').value = emailParam;
+        }
+
+        // Handle PIN verification
+        document.getElementById('verifyForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const pin = document.getElementById('pin').value;
+            const messageDiv = document.getElementById('message');
+
+            try {
+                const response = await fetch('/auth/verify-email', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, pin })
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.error || 'Verification failed');
+                }
+
+                messageDiv.style.display = 'block';
+                messageDiv.className = 'message success';
+                messageDiv.textContent = '✅ Email verified successfully! Redirecting to login...';
+
+                setTimeout(() => {
+                    window.location.href = '/auth/login';
+                }, 2000);
+
+            } catch (error) {
+                messageDiv.style.display = 'block';
+                messageDiv.className = 'message error';
+                messageDiv.textContent = `❌ ${error.message}`;
+            }
+        });
+
+        // Handle resend PIN
+        document.getElementById('resendBtn').addEventListener('click', async () => {
+            const email = document.getElementById('email').value;
+            const messageDiv = document.getElementById('message');
+
+            if (!email) {
+                messageDiv.style.display = 'block';
+                messageDiv.className = 'message error';
+                messageDiv.textContent = '❌ Please enter your email first';
+                return;
+            }
+
+            try {
+                const response = await fetch('/auth/resend-pin', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email })
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.error || 'Failed to resend PIN');
+                }
+
+                messageDiv.style.display = 'block';
+                messageDiv.className = 'message success';
+                messageDiv.textContent = '✅ New PIN sent to your email';
+
+            } catch (error) {
+                messageDiv.style.display = 'block';
+                messageDiv.className = 'message error';
+                messageDiv.textContent = `❌ ${error.message}`;
+            }
+        });
+
+        // Auto-focus PIN field if email is pre-filled
+        if (emailParam) {
+            document.getElementById('pin').focus();
+        }
+    </script>
+</body>
+</html>

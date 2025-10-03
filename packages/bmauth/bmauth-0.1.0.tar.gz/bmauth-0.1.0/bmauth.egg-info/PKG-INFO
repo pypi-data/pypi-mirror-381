@@ -1,0 +1,79 @@
+Metadata-Version: 2.4
+Name: bmauth
+Version: 0.1.0
+Summary: Biometric Authentication System for FastAPI applications
+Home-page: https://github.com/samimelhem/bmauth
+Author: Sami Melhem
+Author-email: Sami Melhem <SaMiLMelhem23@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/samimelhem/bmauth
+Project-URL: Documentation, https://github.com/samimelhem/bmauth#readme
+Project-URL: Repository, https://github.com/samimelhem/bmauth
+Project-URL: Bug Tracker, https://github.com/samimelhem/bmauth/issues
+Keywords: authentication,biometric,fastapi,webauthn,fido2,security
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Security
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Framework :: FastAPI
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi>=0.68.0
+Requires-Dist: pydantic>=1.8.0
+Requires-Dist: cryptography>=3.4.0
+Requires-Dist: python-multipart>=0.0.5
+Requires-Dist: httpx>=0.24.0
+Requires-Dist: email-validator>=2.0.0
+Requires-Dist: python-dotenv>=1.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=3.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Requires-Dist: mypy>=0.950; extra == "dev"
+Requires-Dist: twine>=6.0.0; extra == "dev"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# BMAuth
+Biometric Authentication System for FastAPI applications, providing the most secure authentication system to any developer. 
+
+This system leverages WebAuthn/FIDO2 Principles in building lots of secure layers, while being a smooth experience for users.
+
+## Registering
+- User types in email (identifier in the server)
+- User provides biometric (establishes device's private key) and sends public key to the server
+- Server registers user and asks to verify email via Email PIN
+- User enters the PIN and is brought to the application
+    - Email is marked as verified
+
+## Authenticating
+- User provides email (sent to server), server verifies user trying to sign in on the same device, server sends back a random challenge to the user
+- User gives device biometrics to solve the challenge (private key creates a digital signature), sends the response to the server
+- Server verifies the signature with the public key, and brings the user to the application
+
+## Different Device Authentication
+### Adding a new device via Cross-Verification
+- Device B initiates login
+- Verify on Device A
+    - Phone/Tablet: QR Code to verify biometrically will come from Laptop/Computer
+    - Laptop/Computer: Sign into the application, scan the QR Code “Scan this with your new device to approve the sign-in”, then laptop/computer biometric verification
+        - The phone/tablet will say “To sign in, go to yourapp.com/link on your already-registered computer”, and then open up the camera view to scan for the QR Code
+        - Note: Requires developer to input the link to their app when creating their authentication
+- Device B is verified (Creates a private key and sends public key to the server)
+- Device B is now registered
+### Account Recovery
+- Device B would click on “Lost my device” or “Can’t approve?”
+- Server sends an Email PIN to device B
+- Device B is verified (Creates a private key and sends public key to the server)
+- Device B is registered
+- User is prompted to de-authorize the lost Device A for security purposes
