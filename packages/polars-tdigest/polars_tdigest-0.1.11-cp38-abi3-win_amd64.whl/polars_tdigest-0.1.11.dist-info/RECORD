@@ -1,0 +1,7 @@
+polars_tdigest-0.1.11.dist-info/METADATA,sha256=ojO6cBujSBmWM_lDyjh9Gobu0ARydXukajRloxaDRO0,349
+polars_tdigest-0.1.11.dist-info/WHEEL,sha256=7bfl5v0wbVhXZba613g0x-n2obNNfpQuN8I1cQ4oaU8,94
+polars_tdigest-0.1.11.dist-info/licenses/LICENSE,sha256=WiM9_eRYsYc-q57Zu5iN59jbPXodYf0oih-zj2cTxlg,11539
+polars_tdigest/__init__.py,sha256=NBRTskarkJd9wuYenUdnGbrBzFbb155VernldQuQi9o,2049
+polars_tdigest/polars_tdigest.pyd,sha256=Q095XjjWdbDSZod87zfHuTSky7usdoX5xL3jCiwd4B8,13451776
+polars_tdigest/utils.py,sha256=LVspgtk4MZ4a2dbB-oOHygJDHSfAcZqIFpspE8m3W70,2423
+polars_tdigest-0.1.11.dist-info/RECORD,,
