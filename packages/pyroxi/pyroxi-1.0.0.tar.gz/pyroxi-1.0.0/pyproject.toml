@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyroxi"
+version = "1.0.0"
+description = "High-performance Python proxy library with SOCKS5 and HTTP support, featuring multi-proxy load balancing, automatic failover, and binary networking protocols."
+authors = [{name = "bettercallninja"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: Proxy Servers",
+    "Topic :: Software Development :: Testing",
+    "Topic :: System :: Networking",
+    "Framework :: AsyncIO",
+    "Operating System :: OS Independent",
+]
+keywords = [
+    "proxy",
+    "socks5",
+    "http-proxy",
+    "proxy-server",
+    "load-balancing",
+    "failover",
+    "async",
+    "networking",
+    "binary-protocol",
+    "high-performance",
+    "multi-proxy",
+    "proxy-pool",
+]
+dependencies = [
+    # PyRoxi uses pure Python sockets - no external dependencies!
+]
+
+[project.urls]
+Homepage = "https://github.com/bettercallninja/pyroxi"
+Repository = "https://github.com/bettercallninja/pyroxi"
+"Bug Reports" = "https://github.com/bettercallninja/pyroxi/issues"
+"Source" = "https://github.com/bettercallninja/pyroxi"
