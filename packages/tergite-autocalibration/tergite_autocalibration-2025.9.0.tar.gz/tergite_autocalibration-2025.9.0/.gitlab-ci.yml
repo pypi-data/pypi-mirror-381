@@ -1,0 +1,230 @@
+# This code is part of Tergite
+#
+# (C) Copyright Chalmers Next Labs 2024
+# (C) Copyright Michele Faucci Giannelli 2025
+#
+# This code is licensed under the Apache License, Version 2.0. You may
+# obtain a copy of this license in the LICENSE.txt file in the root directory
+# of this source tree or at http://www.apache.org/licenses/LICENSE-2.0.
+#
+# Any modifications or derivative works of this code must retain this
+# copyright notice, and modified files need to carry a notice indicating
+# that they have been altered from the originals.
+
+
+stages:
+  - setup
+  - test_lint_build
+  - application_run
+  - browser_run
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  PYTHON_VERSION: "3.12"
+  REDIS_PORT: 6378
+
+default:
+  tags:
+    - docker
+
+
+setup:
+  stage: setup
+  image: python:${PYTHON_VERSION}
+  script:
+    # Create and activate a virtual environment
+    - python -m venv venv
+    - source venv/bin/activate
+    # Install project dependencies
+    - pip install --upgrade pip
+    - pip install .
+  cache:
+    - key: "default"
+      paths:
+        - .cache/pip
+    - key: "venv-${CI_COMMIT_REF_NAME}"
+      paths:
+        - venv
+
+test_lint_build:
+  stage: test_lint_build
+  image: python:${PYTHON_VERSION}
+  needs:
+    - setup
+  script:
+    # Install dependencies
+    - apt-get update
+    - apt-get install redis ffmpeg libsm6 libxext6 -y
+    # Run Redis server
+    - redis-server --daemonize yes --port "$REDIS_PORT"
+    # Activate the virtual environment
+    - source venv/bin/activate
+    # Install test dependencies
+    - pip install ".[test]"
+    # Run tests
+    - pytest tergite_autocalibration --cov=tergite_autocalibration --cov-report xml --cov-report term-missing --junitxml=report.xml
+    # Install dev dependencies to check for the lint and format
+    - pip install ".[dev]"
+    # Run linter and make it fail under 7.0
+    - pylint tergite_autocalibration --fail-under=7.0
+    # Run formatter
+    - black --check tergite_autocalibration
+    # Install dependencies to build the docs
+    - pip install ".[docs]"
+    # Build the documentation with strict mode to catch warnings and errors
+    - mkdocs build --strict
+  coverage: '/TOTAL.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
+  artifacts:
+    reports:
+      junit: report.xml
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
+  cache:
+    - key: "default"
+      paths:
+        - .cache/pip
+    - key: "venv-${CI_COMMIT_REF_NAME}"
+      paths:
+        - venv
+
+
+application_run:
+  stage: application_run
+  image: python:${PYTHON_VERSION}
+  needs:
+    - test_lint_build
+  script:
+    # Install dependencies
+    - apt-get update
+    - apt-get install redis ffmpeg libsm6 libxext6 -y
+    # Run Redis server
+    - redis-server --daemonize yes --port "$REDIS_PORT"
+    # Activate the virtual environment
+    - source venv/bin/activate
+    # Create empty .env file
+    - touch .env
+    # Load configuration
+    - echo "y" | acli config load -t fc8a
+    # Reset Redis
+    - echo "y" | acli node reset -a
+    # Clear the caches
+    - rm -r venv/lib/python3.12/site-packages/out
+    # Run the calibration chain
+    - |
+      for node in \
+        resonator_spectroscopy \
+        qubit_01_spectroscopy \
+        rabi_oscillations \
+        ramsey_correction \
+        motzoi_parameter \
+        n_rabi_oscillations \
+        resonator_spectroscopy_1 \
+        qubit_12_spectroscopy \
+        rabi_oscillations_12 \
+        ramsey_correction_12 \
+        motzoi_parameter_12 \
+        n_rabi_oscillations_12 \
+        resonator_spectroscopy_2 \
+        ro_frequency_three_state_optimization \
+        ro_amplitude_three_state_optimization
+      do
+        echo "n" | acli start -r "$CI_PROJECT_DIR/tergite_autocalibration/tests/fixtures/data/16-51-33_standard_run_ro_amplitude_three_state_optimization-SUCCESS" -n $node
+      done
+    # Uncomment for debugging:
+    # - ls -lR venv/lib/python3.12/site-packages/out
+    # Verify output
+    - |
+      if ls -lR venv/lib/python3.12/site-packages/out | grep -q "ro_amplitude_three_state_optimization.png"; then
+        echo "Output file $OUTPUT_FILE exists. Application ran successfully."
+      else
+        echo "Error: Output file $OUTPUT_FILE not found."
+        exit 1
+      fi
+    # Reset Redis
+    - echo "y" | acli node reset -a
+    # Clear the caches
+    - rm -r venv/lib/python3.12/site-packages/out
+    # Run the calibration chain
+    - |
+      for node in \
+        resonator_spectroscopy_vs_current \
+        qubit_spectroscopy_vs_current
+      do
+        echo "n" | acli start -r "$CI_PROJECT_DIR/tergite_autocalibration/tests/fixtures/data/01-44-14_simple_coupler_run-SUCCESS" -n $node
+      done
+    # Uncomment for debugging:
+    # - ls -lR venv/lib/python3.12/site-packages/out
+    # Verify output
+    - |
+      if ls -lR venv/lib/python3.12/site-packages/out | grep -q "qubit_spectroscopy_vs_current.png"; then
+        echo "Output file $OUTPUT_FILE exists. Application ran successfully."
+      else
+        echo "Error: Output file $OUTPUT_FILE not found."
+        exit 1
+      fi
+      if ls -lR venv/lib/python3.12/site-packages/out | grep -q "qubit_spectroscopy_vs_current_q14_q15_q15_spectroscopies.png"; then
+        echo "Output file $OUTPUT_FILE exists. Application ran successfully."
+      else
+        echo "Error: Output file $OUTPUT_FILE not found."
+        exit 1
+      fi
+  cache:
+    - key: "default"
+      paths:
+        - .cache/pip
+    - key: "venv-${CI_COMMIT_REF_NAME}"
+      paths:
+        - venv
+
+
+browser_run:
+  stage: browser_run
+  image: python:${PYTHON_VERSION}
+  needs:
+    - application_run
+  script:
+    # Activate the virtual environment
+    - source venv/bin/activate
+    # Copy the .env file
+    - cp .example.env .env
+    # Load configuration
+    - echo "y" | acli config load -t fc8a
+    # Start the data browser
+    - acli browser start
+    # Poll and check whether the data browser is online
+    - |
+      retry_count=0
+      max_retries=5
+      retry_delay=5
+
+      check_data_browser() {
+        curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:8179 | grep -q 200
+      }
+
+      sleep 5
+
+      while [ $retry_count -lt $max_retries ]; do
+        if check_data_browser; then
+          echo "Data browser is running on port 8179"
+          exit 0
+        else
+          echo "Data browser is not running on port 8179"
+          retry_count=$((retry_count + 1))
+          if [ $retry_count -lt $max_retries ]; then
+            sleep $retry_delay
+          fi
+        fi
+      done
+
+      echo "Max retries reached. Exiting."
+      exit 1
+    # Stop the browser again
+    - acli browser stop
+  cache:
+    - key: "default"
+      paths:
+        - .cache/pip
+    - key: "venv-${CI_COMMIT_REF_NAME}"
+      paths:
+        - venv
