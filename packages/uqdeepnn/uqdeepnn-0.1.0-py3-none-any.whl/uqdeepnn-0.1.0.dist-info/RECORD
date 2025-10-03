@@ -1,0 +1,15 @@
+deepuq/__init__.py,sha256=7QgxLYuIC-WvL3iS2J8Ch6ChMv-NCXlWFDV80cGx0Xk,112
+deepuq/_version.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+deepuq/utils.py,sha256=cv3GPdYlsdYuHpQ0WpO1jx9z6pYyxtxmEZ6smmtA-QM,209
+deepuq/methods/__init__.py,sha256=cvYuQ2sCZPvTlrWOC1ylPbfmoXjWXiygcPuZWqtLmIA,396
+deepuq/methods/laplace.py,sha256=fYGs4I9zsWF2A6QnOqSe5tCwfn-VoGAbkHf9CiQ6EHY,8369
+deepuq/methods/mc_dropout.py,sha256=CNz2b7vIWStG9CP3wZkF0_D38kzFR2DgOwtXbDZQudg,1230
+deepuq/methods/mcmc.py,sha256=6DUpMokL1IyeC2C40MGKpgbJEqgEf5356_FOBfN7l10,2160
+deepuq/methods/vi.py,sha256=44NA-_aiuyjHW3aJiV4xWvVSdzgRonSkJqrpHbsY7Yc,3285
+deepuq/models/__init__.py,sha256=e0soBOfB5KMQdR2wsOkvLgkAhKhPHNlmL5uW3jYXQzs,40
+deepuq/models/simple.py,sha256=i0r9Ld6Jm0sq6XiBX-50ObSniM1dxd76fB-NcFc-MrY,507
+uqdeepnn-0.1.0.dist-info/licenses/LICENSE,sha256=trDOKbeB0yctAs8jBglC4r_KtNV9WsfCN_9frSa0XL0,1062
+uqdeepnn-0.1.0.dist-info/METADATA,sha256=ZcpG7x6dSt0Wm__tMmNL05GwRCUxD0X0EqeMhA7DoLw,2893
+uqdeepnn-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+uqdeepnn-0.1.0.dist-info/top_level.txt,sha256=sq6S1f0mgKpLMZJWn13X83pN7VNGza12Hp49syPkM0c,7
+uqdeepnn-0.1.0.dist-info/RECORD,,
