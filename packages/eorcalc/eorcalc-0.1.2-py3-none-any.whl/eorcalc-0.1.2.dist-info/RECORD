@@ -1,0 +1,12 @@
+eorcalc/__init__.py,sha256=JQEGSfuvRhCZ8GIteu3mSwmCS5Dd7ODrvsOvfhM_JEU,48
+eorcalc/iondiff.py,sha256=oSeugcpkWkDGweBGQczwtVVRqaU11N41nW0Vi7Bj8tw,10430
+eorcalc/ioninti.py,sha256=tn6QZfy5m0KAjQABhCrCpjn6_igXZmI7RAEFMMT4pJE,6785
+eorcalc/ioninti_gpu.py,sha256=_Dw5JU1-87GsyNeHMzooXecPWwZnVkz-mElFDNudWvQ,4048
+eorcalc/powerspec.py,sha256=D3FziUs7ZEkdQDYsXq6Xm3jnZELdxxOSa_8_B5njyGA,14150
+eorcalc/reion_field.py,sha256=FNqjkNFZWVNc-LlrQ29viNQYRkTjjaFj-uCfbS4jEt4,4094
+eorcalc/special.py,sha256=TFJ7AxxWvdf35etdjupAOWFJihfzwP-4uJj2rWxanNU,2463
+eorcalc-0.1.2.dist-info/licenses/LICENSE,sha256=8aVK2vAvjO0i_HncQyaRtzP1bh3huXzVf6fUI4dkm-g,1060
+eorcalc-0.1.2.dist-info/METADATA,sha256=8yCzS7IllYMb6m2LHbsS-6CJ_XC9ZeHrW0EkS_ndz5g,12509
+eorcalc-0.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+eorcalc-0.1.2.dist-info/top_level.txt,sha256=9C6pmNcHLbJZyaXogBuByXi9PFQfDinEI9Z6LHLgkF4,8
+eorcalc-0.1.2.dist-info/RECORD,,
