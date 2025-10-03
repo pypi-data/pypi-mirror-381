@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: shipaw
+Version: 0.3.0
+Summary: Shipping client
+Author: pawrequest
+Author-email: pawrequest <shipaw+pawrequest@users.noreply.github.com>
+License-Expression: MIT
+Requires-Dist: pawdantic
+Requires-Dist: combadge[zeep]
+Requires-Dist: thefuzz
+Requires-Dist: loguru
+Requires-Dist: phonenumbers
+Requires-Dist: pydantic-settings
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: pygments>=2.19.2
+Requires-Dist: parcelforce-expresslink
+Requires-Dist: apc-hypaship
+Requires-Dist: pydantic[email]>=2.11.9
+Requires-Dist: pytest>=8.4.2
+Requires-Dist: fastapi[standard]>=0.117.1
+Requires-Dist: pawdf
+Requires-Dist: jinja2>=3.1.6
+Requires-Dist: hatchling>=1.27.0
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: autodoc-pydantic ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+Requires-Dist: myst-parser ; extra == 'dev'
+Requires-Dist: sphinx-readme ; extra == 'dev'
+Requires-Dist: sphinx-rtd-dark-mode ; extra == 'dev'
+Requires-Python: >=3.13
+Provides-Extra: dev
+Description-Content-Type: text/markdown
+
