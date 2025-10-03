@@ -1,0 +1,766 @@
+global:
+  security:
+    # needed to override bitnami image; see also https://gitlab.cta-observatory.org/cta-computing/dpps/aiv/mariadb-chart/-/issues/1
+    allowInsecureImages: true
+
+  registry: harbor.cta-observatory.org/proxy_cache
+
+image:
+  repository_prefix: "harbor.cta-observatory.org/dpps/dpps"
+  pullPolicy: IfNotPresent
+
+dev:
+  # -- run tests in the container
+  run_tests: true
+  # -- sleep after test to allow interactive development
+  sleep: false
+  # -- mount the repo volume to test the code as it is being developed
+  mount_repo: true
+
+  # -- tag of the image used to run helm tests
+  client_image_tag:
+
+  # -- if true, a long-running client container will start *instead* of a test container
+  start_long_running_client: false
+
+  # -- user to run the container as. needs to be the same as local user if writing to repo directory
+  runAsUser: 1000
+  runAsGroup: 1000
+
+  # -- number of parallel test jobs for pytest
+  n_test_jobs: 1
+
+  # -- Pipelines versions used in the tests
+  pipelines:
+    datapipe:
+      version: v0.2.1
+    calibpipe:
+      version: v0.2.0
+
+
+bdms:
+  # -- Whether to deploy BDMS
+  enabled: true
+  configure_test_setup: true
+  safe_to_bootstrap_rucio: true
+
+  cert-generator-grid:
+    enabled: false
+
+  rucio_iam_sync_user:
+    iam_server: http://dpps-iam-login-service:8080
+
+  iam:
+    fullnameOverride: "dpps-iam"
+    enabled: true
+    dev:
+      mount_repo: false
+
+    cert-generator-grid:
+      enabled: false
+
+    iam:
+      fullnameOverride: "dpps-iam"
+      mysql:
+        enabled: false
+
+      mariadb:
+        enabled: false
+
+      database:
+        external:
+          host: dpps-mariadb
+          port: 3306
+          name: indigo-iam
+          username: indigo-iam
+          password: PassW0rd
+          existingSecret: ""
+
+    # Bootstrap users and clients for DPPS testing in BDMS IAM, also used by WMS
+    bootstrap:
+      extraVolumes:
+      - name: dppsuser-certkey
+        secret:
+          defaultMode: 0420
+          secretName: dpps-dppsuser-certkey
+      - name: dppsuser-certkey-600
+        secret:
+          defaultMode: 0600
+          secretName: dpps-dppsuser-certkey
+      - name: dppsuser-certkey-400
+        secret:
+          defaultMode: 0400
+          secretName: dpps-dppsuser-certkey
+
+      - name: dppsuser-unprivileged-certkey
+        secret:
+          defaultMode: 0420
+          secretName: dpps-dppsuser-unprivileged-certkey
+      - name: dppsuser-unprivileged-certkey-600
+        secret:
+          defaultMode: 0600
+          secretName: dpps-dppsuser-unprivileged-certkey
+      - name: dppsuser-unprivileged-certkey-400
+        secret:
+          defaultMode: 0400
+          secretName: dpps-dppsuser-unprivileged-certkey
+      - name: dppsuser-non-dpps-certkey
+        secret:
+          defaultMode: 0420
+          secretName: dpps-dppsuser-non-dpps-certkey
+      - name: dppsuser-non-dpps-certkey-600
+        secret:
+          defaultMode: 0600
+          secretName: dpps-dppsuser-non-dpps-certkey
+      - name: dppsuser-non-dpps-certkey-400
+        secret:
+          defaultMode: 0400
+          secretName: dpps-dppsuser-non-dpps-certkey
+
+      config:
+        issuer: http://wms-dpps-iam-login-service:8080
+        clients:
+        - client_id: dpps-test-client
+          client_secret: secret
+          client_name: WMS Test Client
+          scopes:
+            - scim:write
+            - scim:read
+            - offline_access
+            - openid
+            - profile
+            - iam:admin.write
+            - iam:admin.read
+          grant_types:
+            - authorization_code
+            - password
+            - client_credentials
+            - urn:ietf:params:oauth:grant_type:redelegate
+            - refresh_token
+          # this will be allowed by https://gitlab.cta-observatory.org/cta-computing/dpps/aiv/dpps-iam/-/issues/17
+          # redirect_uris:
+          #   - http://wms-diracx:8000/api/auth/device/complete
+          #   - http://wms-diracx:8000/api/auth/authorize/complete
+
+        users:
+          - username: dpps_user
+            password: dpps-password
+            given_name: DPPS
+            family_name: User
+            role: ROLE_USER
+            groups:
+            - ctao.dpps.test
+            - dpps_group
+            - dpps_genpilot
+            - dirac_admin
+            - dirac_user
+            email: dpps@test.example
+            subject_dn: "DPPS User"
+            cert:
+              kind: env_var_file
+              env_var: X509_USER_CERT
+              default_path: /tmp/usercert.pem
+
+          - username: test_user
+            password: test-password
+            given_name: TestDpps
+            family_name: User
+            role: ROLE_USER
+            groups:
+            - ctao.dpps.test
+            - dpps_group
+            - dirac_user
+            email: dpps@test.example
+            subject_dn: "DPPS User"
+            cert:
+              kind: env_var_file
+              env_var: X509_USER_CERT
+              default_path: /tmp/usercert.pem
+
+          - username: admin-user
+            password: test-password
+            given_name: TestAdmin
+            family_name: User
+            role: ROLE_ADMIN
+            groups:
+            - ctao.dpps.test
+            email: dpps@test.example
+
+        image:
+          repository: harbor.cta-observatory.org/dpps/dpps-iam-client
+          tag:
+          pullPolicy: IfNotPresent
+        env:
+          - name: X509_NON_DPPS_USER_CERT
+            value: /tmp/user-non-dpps-cert.pem
+          - name: X509_UNPRIVILEGED_DPPS_USER_CERT
+            value: /tmp/user-unprivileged-cert.pem
+        tag:
+
+
+wms:
+  global:
+    registry: harbor.cta-observatory.org/proxy_cache
+    dockerRegistry: harbor.cta-observatory.org/proxy_cache
+    # diracx chart
+    images:
+      busybox:
+        repository: harbor.cta-observatory.org/proxy_cache/busybox
+
+  dirac_server:
+    # we ship our own configmap
+    configmap:
+      create: false
+
+  # -- Whether to deploy WMS
+  enabled: true
+
+  # this resets all DBs in the shared service, so it can not be used right now
+  # resetDatabase: []
+
+  iamConfig:
+    issuer: http://dpps-iam-login-service:8080
+
+    clients:
+      - client_id: dpps-test-client
+        client_secret: secret
+        client_name: WMS Test Client
+        scopes:
+          - scim:write
+          - scim:read
+          - offline_access
+          - openid
+          - profile
+          - iam:admin.write
+          - iam:admin.read
+        grant_types:
+          - authorization_code
+          - password
+          - client_credentials
+          - urn:ietf:params:oauth:grant_type:redelegate
+          - refresh_token
+        redirect_uris:
+          - http://dpps-diracx:8000/api/auth/device/complete
+          - http://dpps-diracx:8000/api/auth/authorize/complete
+
+    users:
+      - username: dpps_user
+        password: dpps-password
+        given_name: DPPS
+        family_name: User
+        role: ROLE_USER
+        groups:
+        - ctao.dpps.test
+        - dpps_group
+        - dpps_genpilot
+        - dirac_admin
+        - dirac_user
+        email: dpps@test.example
+        subject_dn: "DPPS User"
+        cert:
+          kind: env_var_file
+          env_var: X509_USER_CERT
+          default_path: /tmp/usercert.pem
+
+      - username: test_user
+        password: test-password
+        given_name: TestDpps
+        family_name: User
+        role: ROLE_USER
+        groups:
+        - ctao.dpps.test
+        - dpps_group
+        - dirac_user
+        email: dpps@test.example
+        subject_dn: "DPPS User"
+        cert:
+          kind: env_var_file
+          env_var: X509_USER_CERT
+          default_path: /tmp/usercert.pem
+
+      - username: admin-user
+        password: test-password
+        given_name: TestAdmin
+        family_name: User
+        role: ROLE_ADMIN
+        groups:
+        - ctao.dpps.test
+        email: dpps@test.example
+
+    groups:
+      dpps_group:
+        user: [dpps_user, test_user]
+      dpps_genpilot:
+        user: [dpps_user]
+      dirac_admin:
+        user: [dpps_user]
+      dirac_user:
+        user: [test_user]
+
+  iam:
+    enabled: false
+    fullnameOverride: "dpps-iam"
+
+    # this sill be simplified after https://gitlab.cta-observatory.org/cta-computing/dpps/aiv/dpps-iam/-/issues/18
+    iam:
+      fullnameOverride: "dpps-iam"
+      global:
+        registry: harbor.cta-observatory.org/proxy_cache
+      waitForLoginService:
+        image:
+          repository: almalinux
+          tag: 9
+          pullPolicy: IfNotPresent
+
+    bootstrap:
+      extraVolumeMounts:
+      - name: dppsuser-certkey-400
+        mountPath: /tmp/userkey.pem
+        subPath: dppsuser.key.pem
+      - name: dppsuser-certkey-600
+        mountPath: /tmp/usercert.pem
+        subPath: dppsuser.pem
+
+      extraVolumes:
+      - name: dppsuser-certkey
+        secret:
+          defaultMode: 0420
+          secretName: dpps-dppsuser-certkey
+      - name: dppsuser-certkey-600
+        secret:
+          defaultMode: 0600
+          secretName: dpps-dppsuser-certkey
+      - name: dppsuser-certkey-400
+        secret:
+          defaultMode: 0400
+          secretName: dpps-dppsuser-certkey
+
+
+
+  iam_external:
+    enabled: true
+    loginServiceURL: http://dpps-iam-login-service:8080
+
+  cert-generator-grid:
+    enabled: false
+
+  cvmfs:
+    enabled: true
+    publish_docker_images:
+      - "harbor.cta-observatory.org/dpps/datapipe:v0.2.1"
+      - "harbor.cta-observatory.org/dpps/calibpipe:v0.2.0"
+
+  # This configuration of interface between WMS and BDMS.
+  # The ConfigMap is created by BDMS chart. The name should match the name of the ConfigMap in BDMS chart given the release name.
+  rucio:
+    enabled: true
+    rucioConfig: "dpps-bdms-rucio-config"
+
+  # use wms mariad-db subchart also as db for iam, avoids multiple mariadb servers
+  # and currently also naming conflicts with two mariadb charts active
+  mariadb:
+    enabled: true
+    image:
+      registry: harbor.cta-observatory.org/proxy_cache
+      repository: bitnamilegacy/mariadb
+    auth:
+      rootPassword: "dirac-db-root"
+    initdbScripts:
+      create-user.sql: |
+        CREATE USER IF NOT EXISTS 'Dirac'@'%' IDENTIFIED BY 'dirac-db';
+        CREATE USER IF NOT EXISTS 'indigo-iam'@'%' IDENTIFIED BY 'PassW0rd';
+        CREATE DATABASE IF NOT EXISTS `indigo-iam`;
+        GRANT ALL PRIVILEGES ON `indigo-iam`.* TO `indigo-iam`@`%`;
+        FLUSH PRIVILEGES;
+
+
+  diracx:
+    enabled: true
+    global:
+      # Override the imagePullPolicy to always so we can using latest image tags
+      # without risking them being outdated.
+      imagePullPolicy: Always
+      # Keep the job log for 1h for investigations
+      batchJobTTL: 3600
+      activeDeadlineSeconds: 900
+      images:
+        tag: "v0.0.1a50"
+        services: ghcr.io/diracgrid/diracx/services
+        client: ghcr.io/diracgrid/diracx/client
+
+    initSql:
+      # Should DiracX include an init container which manages the SQL DB schema?
+      # Since we use the DIRAC DBs, we don't need this
+      enabled: false
+      env: {}
+
+    mysql:
+      enabled: false
+
+    opensearch:
+      enabled: true
+
+
+    minio:
+      environment:
+        MINIO_BROWSER_REDIRECT_URL: http://dpps-minio:32001/
+      rootUser: rootuser
+      rootPassword: rootpass123
+
+    developer:
+      # we are not developing diracx in WMS, but this is needed to run the tests
+      enabled: true
+      localCSPath: /local_cs_store
+      urls:
+        diracx: http://dpps-diracx:8000
+        minio: http://dpps-minio:32000
+        iam: http://dpps-iam:8080
+
+    diracx:
+      hostname: dpps-diracx
+      settings:
+        DIRACX_CONFIG_BACKEND_URL: "git+file:///cs_store/initialRepo"
+        DIRACX_SERVICE_AUTH_TOKEN_ISSUER: "http://dpps-diracx:8000"
+        DIRACX_SERVICE_AUTH_ALLOWED_REDIRECTS: '["http://dpps-diracx:8000/api/docs/oauth2-redirect", "http://dpps-diracx:8000/#authentication-callback"]'
+        DIRACX_SANDBOX_STORE_BUCKET_NAME: sandboxes
+        DIRACX_SANDBOX_STORE_S3_CLIENT_KWARGS: '{"endpoint_url": "http://dpps-minio:9000", "aws_access_key_id": "rootuser", "aws_secret_access_key": "rootpass123"}'
+        DIRACX_SANDBOX_STORE_AUTO_CREATE_BUCKET: "true"
+        DIRACX_SERVICE_AUTH_ACCESS_TOKEN_EXPIRE_MINUTES: "120"
+        DIRACX_SERVICE_AUTH_REFRESH_TOKEN_EXPIRE_MINUTES: "360"
+        DIRACX_SERVICE_AUTH_TOKEN_KEYSTORE: "file:///keystore/jwks.json"
+        DIRACX_LEGACY_EXCHANGE_HASHED_API_KEY: "19628aa0cb14b69f75b2164f7fda40215be289f6e903d1acf77b54caed61a720"
+      sqlDbs:
+        default:
+          rootUser: root
+          rootPassword: dirac-db-root
+          user: Dirac
+          password: dirac-db
+          host: dirac-db:3306
+        dbs:
+          AuthDB:
+           internalName: DiracXAuthDB
+          JobDB:
+          JobLoggingDB:
+          SandboxMetadataDB:
+          TaskQueueDB:
+      osDbs:
+        dbs:
+          JobParametersDB:
+
+      # Increase diracx startup probe while draic server is starting
+      startupProbe:
+        timeoutSeconds: 5
+        periodSeconds: 15
+        failureThreshold: 60 # 15 × 60 = 900s = 15 minutes
+
+    rabbitmq:
+      enabled: true
+      image:
+        registry: harbor.cta-observatory.org/proxy_cache
+        repository: bitnamilegacy/rabbitmq
+      podSecurityContext:
+        enabled: false
+      containerSecurityContext:
+        enabled: false
+      auth:
+        existingPasswordSecret: rabbitmq-secret
+        existingErlangSecret: rabbitmq-secret
+
+
+    dex:
+      enabled: false
+
+    indigoiam:
+      enabled: false
+
+    opentelemetry-collector:
+      enabled: false
+
+    elasticsearch:
+      enabled: false
+
+    jaeger:
+      enabled: false
+
+    grafana:
+      enabled: false
+
+    prometheus:
+      enabled: false
+
+
+
+# dpps-level generator
+cert-generator-grid:
+  enabled: true
+  generatePreHooks: true
+
+  extra_server_names:
+  - iam.test.example
+  - voms.test.example
+  - rucio-storage-1
+  - rucio-storage-2
+  - rucio-storage-3
+  - fts
+  - dirac-server
+
+  # List of users to create certificates for
+  users:
+  - name: DPPS User
+    suffix: ""
+  - name: DPPS User Unprivileged
+    suffix: "-unprivileged"
+  - name: Non-DPPS User
+    suffix: "-non-dpps"
+
+
+# observability
+
+global:
+  image:
+    registry: harbor.cta-observatory.org/proxy_cache
+
+
+grafana:
+  enabled: true
+  image:
+    registry: harbor.cta-observatory.org/proxy_cache
+
+  datasources:
+    datasources.yaml:
+      apiVersion: 1
+      datasources:
+        - name: Prometheus
+          type: prometheus
+          access: proxy
+          url: http://dpps-prometheus-server
+
+        - name: Loki
+          type: loki
+          access: proxy
+          url: http://dpps-loki:3100
+          jsonData:
+            timeout: 60
+            maxLines: 1000
+
+  dashboardProviders:
+    dashboardproviders.yaml:
+      apiVersion: 1
+      providers:
+        - name: 'default'
+          type: file
+          editable: true
+          options:
+            path: /var/lib/grafana/dashboards/default
+
+        - name: 'sidecar'
+          type: file
+          editable: true
+          options:
+            path: /var/lib/grafana/dashboards/sidecar
+
+  dashboards:
+    default:
+      k8-views-global:
+        gnetId: 15757
+        revision: 43
+        datasource: Prometheus
+      k8-views-namespaces:
+        gnetId: 15758
+        revision: 42
+        datasource: Prometheus
+      k8-views-nodes:
+        gnetId: 15759
+        revision: 37
+        datasource: Prometheus
+      k8-views-pods:
+        gnetId: 15760
+        revision: 36
+        datasource: Prometheus
+
+  ingress:
+    enabled: true
+    hosts:
+      - grafana.dpps.local
+
+  testFramework:
+    enabled: false
+
+  # collects configmaps and adds resources to grafana
+  sidecar:
+    image:
+      registry:  harbor.cta-observatory.org/proxy_cache
+
+    dashboards:
+      enabled: true
+      searchNamespace: ALL
+      folder: /var/lib/grafana/dashboards/sidecar
+      folderAnnotation: grafana_folder
+      defaultFolderName: "Sidecar Dashboards"
+      provider:
+        name: 'sidecar'
+
+  persistentVolume:
+    size: 100Mi
+  retention: "1d"
+
+  prometheus-node-exporter:
+    enabled: false
+
+  adminUser: "admin"
+  adminPassword: "admin"
+
+
+prometheus:
+  enabled: true
+  server:
+    image:
+      repository: harbor.cta-observatory.org/proxy_cache/prom/prometheus
+
+  prometheus-pushgateway:
+    enabled: false
+
+  alertmanager:
+    enabled: false
+
+  prometheus-node-exporter:
+    image:
+      registry: harbor.cta-observatory.org/proxy_cache
+      repository: prom/node-exporter
+
+
+loki:
+  enabled: true
+
+  # this is a minimal configuration for loki; the goal of the UC is not to test diverse loki features,
+  # but to make sure that loki can collect meaningful logs from the DPPS components
+
+  # needed to run in rancher
+  # global:
+  #   dnsService: "rke2-coredns-rke2-coredns"
+
+  loki:
+    storage:
+      type: s3
+      bucketNames:
+        chunks: loki-chunks
+        ruler: loki-ruler
+        admin: loki-admin
+      s3:
+        endpoint_url: http://dpps-minio:9000
+        accessKeyId: rootuser
+        secretAccessKey: rootpass123
+        s3ForcePathStyle: true
+        insecure: true
+    commonConfig:
+      replication_factor: 1
+    schemaConfig:
+      configs:
+        - from: "2024-04-01"
+          store: tsdb
+          object_store: s3
+          schema: v13
+          index:
+            prefix: loki_index_
+            period: 24h
+    pattern_ingester:
+        enabled: true
+    limits_config:
+      allow_structured_metadata: true
+      volume_enabled: true
+    ruler:
+      enable_api: true
+
+    auth_enabled: false
+
+  test:
+    enabled: false
+
+  monitoring:
+    selfMonitoring:
+      enabled: false
+      grafanaAgent:
+        installOperator: false
+      lokiCanary:
+        enabled: false
+
+  minio:
+    enabled: false
+
+  memcached:
+    image:
+      repository: harbor.cta-observatory.org/proxy_cache/memcached
+      tag: 1.6.38-alpine3.22
+
+  deploymentMode: SingleBinary
+
+  rollout_operator:
+    enabled: false
+
+  singleBinary:
+    replicas: 1
+
+  # Zero out replica counts of other deployment modes
+  backend:
+    replicas: 0
+  read:
+    replicas: 0
+  write:
+    replicas: 0
+
+  ingester:
+    replicas: 0
+  querier:
+    replicas: 0
+  queryFrontend:
+    replicas: 0
+  queryScheduler:
+    replicas: 0
+  distributor:
+    replicas: 0
+  compactor:
+    replicas: 0
+  indexGateway:
+    replicas: 0
+  bloomCompactor:
+    replicas: 0
+  bloomGateway:
+    replicas: 0
+
+
+fluent-bit:
+  enabled: true
+  image:
+    repository: harbor.cta-observatory.org/proxy_cache/fluent/fluent-bit
+  testFramework:
+    image:
+      repository: harbor.cta-observatory.org/proxy_cache/busybox
+  config:
+    rbac:
+      create: true
+      eventsAccess: true
+
+    inputs: |
+      [INPUT]
+          Name tail
+          Path /var/log/containers/*.log
+          multiline.parser docker, cri
+          Tag kube.*
+          Mem_Buf_Limit 5MB
+          Buffer_Chunk_Size 1
+          Refresh_Interval 1
+          Skip_Long_Lines On
+
+
+    outputs: |
+      [FILTER]
+          Name grep
+          Match *
+
+      [OUTPUT]
+          Name        loki
+          Match       *
+          Host        dpps-loki-gateway
+          port        80
+          tls         off
+          tls.verify  off
