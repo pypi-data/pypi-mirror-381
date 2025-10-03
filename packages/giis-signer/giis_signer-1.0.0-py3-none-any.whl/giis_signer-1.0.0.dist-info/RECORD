@@ -1,0 +1,17 @@
+giis_signer/__init__.py,sha256=zM9cuxkbbWTD9FWiy9gbhYHSdMVb-02Qr2e46japjXk,773
+giis_signer/cli.py,sha256=LKeS9wIJNEpc0i892qRoq8KqdLbRYvwvwki5dwr8od8,5886
+giis_signer/cryptopro_signer.py,sha256=v7vcB5w9eh3t34kmw-4uvjFO8ycBCqQTdjyYHy5w14Q,9863
+giis_signer/diagnostics.py,sha256=CBJVtbtjC0HzRIjkLpdJGDiFUlqg9xpNO2W3JioViIE,16377
+giis_signer/xml_signer.py,sha256=IyAhsZ2XveuIcyCYdQvO7owmdPYPKzgEyOa_-MulpMk,13464
+giis_signer/gui/__init__.py,sha256=m6AKVR-QxX1IXg0ngY7Wr1_NK6SrdtlUD3jPaD_g2Kw,633
+giis_signer/gui/app.py,sha256=e46uZg2y0U7IjrzFFYV_kJHZlHyB4dnS4c--G2ZM8z8,24330
+giis_signer/gui/certificate_dialog.py,sha256=3KQIZYnCr7gOHM86T-q2XItSjOs_iJQFgnUHya6Jx8s,8716
+giis_signer/gui/certificate_manager.py,sha256=n7Ug7_XdLbXsEnWfcAV7MuqFQDQ-Cg6Mkl2fhMQbU2M,9719
+giis_signer/gui/config.py,sha256=FDk-8CTUqofdjry0W1kheWouR32RGOPE4q6rl2XLUaE,5318
+giis_signer/gui/toast.py,sha256=JeXOiRlFIdO8KkoQzSPJ2lG4-eVxMZu_Qr-j8hgrQqs,5955
+giis_signer-1.0.0.dist-info/licenses/LICENSE,sha256=c2ePjxu2yixIBqSMXV9CYz8-NX66YVkjh1DaWZdLHyo,1081
+giis_signer-1.0.0.dist-info/METADATA,sha256=SM4kpVHF4iGjXaRe82QLVMhzR2e8KrwtE02Y9ElDrTM,22580
+giis_signer-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+giis_signer-1.0.0.dist-info/entry_points.txt,sha256=WGe5N9h4O8_PQZQqxXOyZv-20zzXXK3CCdmVUDg706I,96
+giis_signer-1.0.0.dist-info/top_level.txt,sha256=luFk3q0SpsFvO5Lx2au70Do6wBzKTfd2TKPjXybn4nI,12
+giis_signer-1.0.0.dist-info/RECORD,,
