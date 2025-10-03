@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: admize
+Version: 0.0.1
+Summary: Custom Django admin enhancement library
+Home-page: https://github.com/Vlad-tg/admize
+Author: Vladyslav Tyzhbiriak
+Author-email: admize.dev@gmail.com
+Requires-Python: >=3.8
+License-File: LICENSE.txt
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary

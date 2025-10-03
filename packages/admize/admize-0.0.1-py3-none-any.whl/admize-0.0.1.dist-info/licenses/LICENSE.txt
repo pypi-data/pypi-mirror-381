@@ -1,0 +1,8 @@
+All rights reserved.
+
+Copyright (c) 2025 Vladyslav Tyzhbiriak
+
+This project is currently under development and not licensed for public use.
+No part of this code may be copied, modified, distributed, or used in any form
+without explicit permission from the copyright holder.
+
