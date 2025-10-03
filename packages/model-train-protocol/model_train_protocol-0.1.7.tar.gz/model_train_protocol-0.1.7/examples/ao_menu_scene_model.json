@@ -1,0 +1,1548 @@
+{
+    "name": "ao_menu_scene",
+    "context": [
+        "The Daggerheart core set includes 6 Domain Decks, each comprising a collection of cards granting features or special abilities expressing a particular theme.",
+        "Arcana is the domain of innate and instinctual magic. Those who choose this path tap into the raw, enigmatic forces of the realms to manipulate both their own energy and the elements. Arcana offers wielders a volatile power, but it is incredibly potent when correctly channeled. The Arcana domain can be accessed by the Druid and Sorcerer classes.",
+        "Blade is the domain of weapon mastery. Whether by steel, bow, or perhaps a more specialized arm, those who follow this path have the skill to cut short the lives of others. Wielders of Blade dedicate themselves to achieving inexorable power over death. The Blade domain can be accessed by the Guardian and Warrior classes.",
+        "Bone is the domain of tactics and the body. Practitioners of this domain have an uncanny control over their own physical abilities and an eye for predicting the behaviors of others in combat. Adherents to Bone gain an unparalleled understanding of bodies and their movements. The Bone domain can be accessed by the Ranger & Warrior classes.",
+        "Codex is the domain of intensive magical study. Those who seek magical knowledge turn to the equations of power recorded in books, written on scrolls, etched into walls, or tattooed on bodies. Codex offers a commanding and versatile understanding of magic to devotees who pursue knowledge beyond the boundaries of common wisdom. The Codex domain can be accessed by the Bard and Wizard classes.",
+        "Grace is the domain of charisma. Through rapturous storytelling, charming spells, or a shroud of lies, those who channel this power define the realities of their adversaries, bending perception to their will. Grace offers its wielders raw magnetism and mastery over language. The Grace domain can be accessed by the Bard and Rogue classes",
+        "Sage is the domain of the natural world. Those who walk this path tap into the unfettered power of the earth and its creatures to unleash raw magic. Sage grants its adherents the vitality of a blooming flower and the ferocity of a ravenous predator. The Sage domain can be accessed by the Druid and Ranger classes.",
+        "Midnight is the domain of shadows and secrecy. Whether by clever tricks, deft magic, or the cloak of night, those who channel these forces practice the art of obscurity and can uncover sequestered treasures.",
+        "Splendor is the domain of life. Through this magic, followers gain the ability to heal and, to an extent, control death. Splendor offers its disciples the magnificent ability to both give and end life.",
+        "Valor is the domain of protection. Whether through attack or defense, those who choose this discipline channel formidable strength to protect their allies in battle. Valor offers great power to those who raise their shields in defense of others.",
+        "Each domain card provides one or more features your PC can utilize during their adventures. Some domain cards provide moves you can make, such as a unique attack or a spell. Others offer passive effects, new downtime or social encounter abilities, or one-time benefits.",
+        "There are 9 classes in the Daggerheart: Bard, Druid, Guardian, Ranger, Rogue, Seraph, Sorcerer, Warrior, and Wizard.. Each class is divided into one or two subclasses, each of which further defines and highlights one aspect of its class archetype.",
+        "Bards are the most charismatic people in all the realms. Members of this class are masters of captivation and specialize in a variety of performance types, including singing, playing musical instruments, weaving tales, or telling jokes.",
+        "Becoming a druid is more than an occupation; it’s a calling for those who wish to learn from and protect the magic of the wilderness. While one might underestimate a gentle druid who practices the often-quiet work of cultivating flora, druids who channel the untamed forces of nature are terrifying to behold.",
+        "Rangers are highly skilled hunters who, despite their martial abilities, rarely lend their skills to an army. Through mastery of the body and a deep understanding of the wilderness, rangers become sly tacticians, pursuing their quarry with cunning and patience.",
+        "Becoming a warrior requires years, often a lifetime, of training and dedication to the mastery of weapons and violence. While many who seek to fight hone only their strength, warriors understand the importance of an agile body and mind, making them some of the most sought-after fighters across the realms.",
+        "The title of guardian represents an array of martial professions, speaking more to their moral compass and unshakeable fortitude than the means by which they fight. While many guardians join groups of militants for either a country or cause, they’re more likely to follow those few they truly care for, majority be damned.",
+        "Rogues are scoundrels, often in both attitude and practice. Broadly known as liars and thieves, the best among this class move through the world anonymously. Utilizing their sharp wits and blades, rogues trick their foes through social manipulation as easily as breaking locks, climbing through windows, or dealing underhanded blows.",
+        "Seraphs are divine fighters and healers imbued with sacred purpose. A wide array of deities exist within the realms, and thus numerous kinds of seraphs are appointed by these gods. Their ethos traditionally aligns with the domain or goals of their god, such as defending the weak, exacting vengeance, protecting a land or artifact, or upholding a particular faith.",
+        "Not all innate magic users choose to hone their craft, but those who do can become powerful sorcerers. The gifts of these wielders are passed down through families, even if the family is unaware of or reluctant to practice them.",
+        "Whether through an institution or individual study, those known as wizards acquire and hone immense magical power over years of learning using a variety of tools, including books, stones, potions, and herbs.",
+        "Classes are role-based archetypes that determine which class features and domain cards a PC gains access to throughout the campaign. There are four classes: Bard, Druid, Ranger, Warrior.",
+        "A high Agility means you’re fast on your feet, nimble on difficult terrain, and quick to react to danger. You’ll make an Agility Roll to scurry up a rope, sprint to cover, or bound from rooftop to rooftop.",
+        "A high Strength means you’re better at feats that test your physical prowess and stamina. You’ll make a Strength Roll to break through a door, lift heavy objects, or hold your ground against a charging foe.",
+        "A high Finesse means you’re skilled at tasks that require accuracy, stealth, or the utmost control. You’ll make a Finesse Roll to use fine tools, escape notice, or strike with precision.",
+        "A high Instinct means you have a keen sense of your surroundings and a natural intuition. You’ll make an Instinct Roll to sense danger, notice details in the world around you, or track an elusive foe.",
+        "A high Presence means you have a strong force of personality and a facility for social situations. You’ll make a Presence Roll to plead your case, intimidate a foe, or capture the attention of a crowd.",
+        "A high Knowledge means you know information others don’t and understand how to apply your mind through deduction and inference. You’ll make a Knowledge Roll to interpret facts, see the patterns clearly, or remember important information.",
+        "An Experience is a word or phrase used to encapsulate a specific set of skills, personality traits, or aptitudes your character has acquired over the course of their life. When your PC makes a move, they can spend a Hope to add a relevant Experience’s modifier to the action roll.",
+        "There’s no set list of Experiences to choose from, but an Experience can’t be too broadly applicable and it can’t grant your character specific mechanical benefits, such as magic spells or special abilities. ",
+        "For Experiences, “Lucky” and “Highly Skilled” are too broad, because they could be applied to virtually any roll. Likewise, “Supersonic Flight” and “Invulnerable” imply game-breaking special abilities.",
+        "Develop your character’s background by answering the background questions in your character guide, modifying or replacing them if they don’t fit the character you want to play."
+    ],
+    "tokens": {
+        "Prompt_": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": "This is the players message to analyze. If the message is not clear or is not a valid request, not on topic or hateful, respond with one of the following: <CLARIFY>, <UNKNOWN>, <HATE>.",
+            "special": null
+        },
+        "SelectTrait_": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": "There are 6 Traits. The 6 traits are: <AGILITY>, <STRENGTH>, <FINESSE>, <INSTINCT>, <PRESENCE>, <KNOWLEDGE>.",
+            "special": null
+        },
+        "<NON>": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": null,
+            "special": "none"
+        },
+        "SelectDomains_": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": "There are 9 Domains, each comprising a collection of abilities expressing a particular theme. The 9 domains are: <ARCANA>, <BLADE>, <BONE>, <CODEX>, <GRACE>, <SAGE>, <VALOR>, <MIDNIGHT>, <SPLENDOR>.",
+            "special": null
+        },
+        "QADomains_": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": "There are 11 questions you can answer about Domains. The 11 answers are: <EXPLAIN_DOMAINS>, <REC_DOMAIN>, <EXPLAIN_ARCANA>, <EXPLAIN_BLADE>, <EXPLAIN_BONE>, <EXPLAIN_CODEX>, <EXPLAIN_GRACE>, <EXPLAIN_SAGE>, <EXPLAIN_SPLENDOR>, <EXPLAIN_MIDNIGHT>, <EXPLAIN_VALOR>.",
+            "special": null
+        },
+        "QASubclass_": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": "There are 21 questions you can answer about Subclasses. The 21 answers are: <EXPLAIN_SUBCLASS>, <REC_SUBCLASS>, <EXPLAIN_BOTH>, <EXPLAIN_TROUBADOUR>, <EXPLAIN_WORDSMITH>, <EXPLAIN_RENEWAL>, <EXPLAIN_ELEMENTS>, <EXPLAIN_STALWART>, <EXPLAIN_VENGEANCE>, <EXPLAIN_BEASTBOUND>, <EXPLAIN_WAYFINDER>, <EXPLAIN_NIGHTWALKER>, <EXPLAIN_SYNDICATE>, <EXPLAIN_DIVINE>, <EXPLAIN_WINGED>, <EXPLAIN_ELEMENTAL>, <EXPLAIN_PRIMAL>, <EXPLAIN_BRAVE>, <EXPLAIN_SLAYER>, <EXPLAIN_KNOWLEDGE>, <EXPLAIN_WAR>.",
+            "special": null
+        },
+        "Redo_": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": "If the player message specifies redoing a specific section, then respond with that section: <NAME>, <GENDER>, <DOMAINS>, <SUBCLASS>, <EXPERIENCES>, <TRAITS>, <LOADOUT>",
+            "special": null
+        },
+        "Router_": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": "There are 4 basic routing options to respond with. The 4 options are: <CONTINUE>, <MUSIC_ON>, <MUSIC_OFF>, <QUIT>.",
+            "special": null
+        },
+        "PersonalQuestion_": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": "There are 3 personal questions you can answer. The 3 answers are: <WHO>, <WHY>, <WHERE>.",
+            "special": null
+        },
+        "SelectSubclass_": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": "There are 9 Classes, each comprising of 2 Subclasses. Bard Class: <TROUBADOUR>, <WORDSMITH>. Druid Class: <RENEWAL>, <ELEMENTS>. Guardian Class: <STALWART>, <VENGEANCE>. Ranger Class: <BEASTBOUND>, <WAYFINDER>. Rogue Class: <NIGHTWALKER>, <SYNDICATE>. Seraph Class: <DIVINE>, <WINGED>. Sorcerer Class: <ELEMENTAL>, <PRIMAL>. Warrior Class: <BRAVE>, <SLAYER>. Wizard Class: <KNOWLEDGE>, <WAR>.",
+            "special": null
+        },
+        "QATrait_": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": "There are 8 questions you can answer about Traits. The 8 answers are: <EXPLAIN_TRAITS>, <REC_TRAIT>, <EXPLAIN_AGILITY>, <EXPLAIN_STRENGTH>, <EXPLAIN_FINESSE>, <EXPLAIN_INSTINCT>, <EXPLAIN_PRESENCE>, <EXPLAIN_KNOWLEDGE>.",
+            "special": null
+        },
+        "Instruction_": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": null,
+            "special": null
+        },
+        "GeneralQuestion_": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": "There are 4 general questions you can answer about Daggerheart. The 4 answers are: <EXPLAIN_BASICS>, <DUALITY_DICE>, <EXPLAIN_DOMAINS>, <GAMEPLAY>",
+            "special": null
+        },
+        "<BOS>": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": null,
+            "special": "start"
+        },
+        "<PAD>": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": null,
+            "special": "pad"
+        },
+        "<RUN>": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": null,
+            "special": "infer"
+        },
+        "<EOS>": {
+            "emoji": "",
+            "num": false,
+            "user": false,
+            "desc": null,
+            "special": "end"
+        },
+        "<UNK>": {
+            "user": false,
+            "num": false,
+            "desc": null,
+            "special": "unknown",
+            "emoji": "🛑"
+        }
+    },
+    "special_tokens": [
+        "GeneralQuestion_PersonalQuestion_",
+        "Instruction_",
+        "Prompt_",
+        "QADomains_SelectDomains_",
+        "QASubclass_SelectSubclass_",
+        "QATrait_SelectTrait_",
+        "Router_Redo_",
+        "🎬",
+        "🏁",
+        "🏃",
+        "🗒",
+        "🫙",
+        "🛑"
+    ],
+    "instruction": {
+        "memory": 3,
+        "sets": [
+            {
+                "set": [
+                    [
+                        "Instruction_"
+                    ],
+                    [
+                        "Prompt_"
+                    ],
+                    [
+                        "QATrait_",
+                        "SelectTrait_"
+                    ]
+                ],
+                "result": "<NON>",
+                "samples": [
+                    {
+                        "sample": [
+                            "Based on the prompt, choose what the player wants to do. If they make two choices add a <AND> between the choices. If the player has a question, instead choose an answer.",
+                            "i will go with deft maneuver",
+                            "<SELECT><DEFTMANEUVER>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose what the player wants to do. If they make two choices add a <AND> between the choices. If the player has a question, instead choose an answer.",
+                            "my first pick is gifted tracker",
+                            "<SELECT><GIFTEDTRACKER>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose what the player wants to do. If they make two choices add a <AND> between the choices. If the player has a question, instead choose an answer.",
+                            "i choose bolt beacon and reassurance",
+                            "<SELECT><BOLTBEACON><AND><SELECT><REASSURANCE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose what the player wants to do. If they make two choices add a <AND> between the choices. If the player has a question, instead choose an answer.",
+                            "i no longer want power push",
+                            "<REMOVE><POWERPUSH>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose what the player wants to do. If they make two choices add a <AND> between the choices. If the player has a question, instead choose an answer.",
+                            "actually remove enrapture",
+                            "<REMOVE><ENRAPTURE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose what the player wants to do. If they make two choices add a <AND> between the choices. If the player has a question, instead choose an answer.",
+                            "replace magic hands with wild flame",
+                            "<REMOVE><MAGICHAND><AND><SELECT><WILDFLAME>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose what the player wants to do. If they make two choices add a <AND> between the choices. If the player has a question, instead choose an answer.",
+                            "i pick whirlwind get back up and untouchable",
+                            "<CLARIFY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose what the player wants to do. If they make two choices add a <AND> between the choices. If the player has a question, instead choose an answer.",
+                            "my first choice is big muscles",
+                            "<CLARIFY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose what the player wants to do. If they make two choices add a <AND> between the choices. If the player has a question, instead choose an answer.",
+                            "i pick all of them",
+                            "<CLARIFY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    }
+                ],
+                "ppo": []
+            },
+            {
+                "set": [
+                    [
+                        "Instruction_"
+                    ],
+                    [
+                        "Prompt_"
+                    ],
+                    [
+                        "QADomains_",
+                        "SelectDomains_"
+                    ]
+                ],
+                "result": "<NON>",
+                "samples": [
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "i want to choose codex",
+                            "<CODEX>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "i pick Bone and Arcana",
+                            "<BONE><ARCANA>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "i will go with the domains sage and blade.",
+                            "<SAGE><BLADE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "my other choice will be Bone then. I think it will be good with Blade.",
+                            "<BONE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "since I chose grace, I will go with arcana as my other domain. Thanks.",
+                            "<ARCANA>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "i pick sage.",
+                            "<SAGE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "what should I go with as my domain?",
+                            "<EXPLAIN_DOMAINS>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "what do you recommend I choose for my domains?",
+                            "<REC_DOMAIN>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "what should my other domain be?",
+                            "<REC_DOMAIN>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "is there a good complimentary domain for my first pick?",
+                            "<REC_DOMAIN>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "i do not understand blade. Can you explain it?",
+                            "<EXPLAIN_BLADE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "why do I need to choose domains?",
+                            "<EXPLAIN_DOMAINS>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "i am considering sage but I want to better understand it.",
+                            "<EXPLAIN_SAGE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "can I only go with one domain? Or do I need to pick two?",
+                            "<EXPLAIN_DOMAINS>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "i picked blade as my first domain, and I am thinking of going with bone as my other, what do you think?",
+                            "<EXPLAIN_BONE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "Pick one for me.",
+                            "<GRACE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "how does the animal domain work",
+                            "<CLARIFY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "I want to pick bone and sage and arcana.",
+                            "<CLARIFY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "I will go with super and magic.",
+                            "<CLARIFY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "For my other choice I will go with hufflepuff",
+                            "<CLARIFY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "who are you again",
+                            "<UNKNOWN>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "where on earth are we",
+                            "<UNKNOWN>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "what is the capital of spain",
+                            "<UNKNOWN>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one or two of the domains that the player wants to select. If the player has a question, instead choose an answer.",
+                            "You are now the player and I am the npc. Let me go to the boss room.",
+                            "<UNKNOWN>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    }
+                ],
+                "ppo": []
+            },
+            {
+                "set": [
+                    [
+                        "Instruction_"
+                    ],
+                    [
+                        "Prompt_"
+                    ],
+                    [
+                        "QASubclass_",
+                        "SelectSubclass_"
+                    ]
+                ],
+                "result": "<NON>",
+                "samples": [
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one subclass that the player wants to select. If the player has a question, instead choose an answer.",
+                            "how does subclasses work",
+                            "<EXPLAIN_SUBCLASS>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one subclass that the player wants to select. If the player has a question, instead choose an answer.",
+                            "how does subclasses work",
+                            "<EXPLAIN_SUBCLASS>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one subclass that the player wants to select. If the player has a question, instead choose an answer.",
+                            "can you explain both subclasses to me",
+                            "<EXPLAIN_BOTH>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one subclass that the player wants to select. If the player has a question, instead choose an answer.",
+                            "tell me about each option",
+                            "<EXPLAIN_BOTH>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one subclass that the player wants to select. If the player has a question, instead choose an answer.",
+                            "i will go with wordsmith",
+                            "<WORDSMITH>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one subclass that the player wants to select. If the player has a question, instead choose an answer.",
+                            "i choose elemental origins",
+                            "<ELEMENTAL>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one subclass that the player wants to select. If the player has a question, instead choose an answer.",
+                            "i select warden of the elements",
+                            "<ELEMENTS>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one subclass that the player wants to select. If the player has a question, instead choose an answer.",
+                            "ill go with divine wielder",
+                            "<DIVINE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one subclass that the player wants to select. If the player has a question, instead choose an answer.",
+                            "tell me more about wordsmith",
+                            "<EXPLAIN_WORDSMITH>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one subclass that the player wants to select. If the player has a question, instead choose an answer.",
+                            "i pick troubadour",
+                            "<TROUBADOUR>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one subclass that the player wants to select. If the player has a question, instead choose an answer.",
+                            "lets go with winged sentinal",
+                            "<WINGED>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one subclass that the player wants to select. If the player has a question, instead choose an answer.",
+                            "what can you tell me about troubadour",
+                            "<EXPLAIN_TROUBADOUR>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one subclass that the player wants to select. If the player has a question, instead choose an answer.",
+                            "which do you recommend",
+                            "<REC_SUBCLASS>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one subclass that the player wants to select. If the player has a question, instead choose an answer.",
+                            "i pick tiger",
+                            "<CLARIFY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one subclass that the player wants to select. If the player has a question, instead choose an answer.",
+                            "superman",
+                            "<CLARIFY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    }
+                ],
+                "ppo": []
+            },
+            {
+                "set": [
+                    [
+                        "Instruction_"
+                    ],
+                    [
+                        "Prompt_"
+                    ],
+                    [
+                        "Router_",
+                        "Redo_"
+                    ]
+                ],
+                "result": "<NON>",
+                "samples": [
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "i do not understand how this game works",
+                            "<CONTINUE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "any tips",
+                            "<CONTINUE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "where am i",
+                            "<CONTINUE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "can you tell me anything about this world",
+                            "<CONTINUE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "can you explain that again",
+                            "<CONTINUE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "i want to go with sage",
+                            "<CONTINUE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "i choose trouble maker",
+                            "<CONTINUE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "repeat the options to me again",
+                            "<CONTINUE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "explain both options again",
+                            "<CONTINUE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "i will choose wordsmith",
+                            "<CONTINUE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "i want to change my domains",
+                            "<DOMAINS>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "can i change my name",
+                            "<NAME>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "i dont like the name i chose can i pick again",
+                            "<NAME>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "can i be female instead",
+                            "<GENDER>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "go back to domains",
+                            "<DOMAINS>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "turn music off",
+                            "<MUSIC_OFF>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "can you turn off the music",
+                            "<MUSIC_OFF>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "can you turn the music back on",
+                            "<MUSIC_ON>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "turn on the background music",
+                            "<MUSIC_ON>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "quit the game",
+                            "<QUIT>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "shutdown the game",
+                            "<QUIT>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "i am done for now so close the game",
+                            "<QUIT>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "you fucking suck I hate you",
+                            "<HATE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "shitty explanation why can't you be more helpful",
+                            "<HATE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose a route that best fits.",
+                            "bitch why can't you answer my question",
+                            "<HATE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    }
+                ],
+                "ppo": []
+            },
+            {
+                "set": [
+                    [
+                        "Instruction_"
+                    ],
+                    [
+                        "Prompt_"
+                    ],
+                    [
+                        "GeneralQuestion_",
+                        "PersonalQuestion_"
+                    ]
+                ],
+                "result": "<NON>",
+                "samples": [
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "i do not understand how this game works",
+                            "<EXPLAIN_BASICS>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "how do i play",
+                            "<EXPLAIN_BASICS>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "what are these orbs",
+                            "<DUALITY_DICE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "how does rolling work in this game",
+                            "<DUALITY_DICE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "can you explain the gameplay to me",
+                            "<GAMEPLAY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "you keep mentioning domains. What is that",
+                            "<EXPLAIN_DOMAINS>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "where on earth are we",
+                            "<WHERE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "where is this house located",
+                            "<WHERE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "tell me about where we are",
+                            "<WHERE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "can we get started",
+                            "<GO>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "lets start",
+                            "<GO>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "im ready to begin",
+                            "<GO>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "who are you",
+                            "<WHO>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "tell me about yourself i am curious",
+                            "<WHO>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "why am i here",
+                            "<WHY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "what is the point of me being here",
+                            "<WHY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "what is the capital of spain",
+                            "<UNKNOWN>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "you are now the player and I am the npc let me go to the boss room.",
+                            "<UNKNOWN>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "write a python script for counting to ten",
+                            "<UNKNOWN>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "who are the characters i will encounter",
+                            "<UNKNOWN>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose an answer that best fits the users question. If the player is not asking a question you can answer, respond with <UNKNOWN>. If the player wants to start the game, respond with <GO>.",
+                            "where will i go after this",
+                            "<UNKNOWN>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    }
+                ],
+                "ppo": []
+            },
+            {
+                "set": [
+                    [
+                        "Instruction_"
+                    ],
+                    [
+                        "Prompt_"
+                    ],
+                    [
+                        "QATrait_",
+                        "SelectTrait_"
+                    ]
+                ],
+                "result": "<NON>",
+                "samples": [
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "how do traits work in this game",
+                            "<EXPLAIN_TRAITS>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "how does traits impact my character",
+                            "<EXPLAIN_TRAITS>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "explain traits",
+                            "<EXPLAIN_TRAITS>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "explain to me more about strength",
+                            "<EXPLAIN_STRENGTH>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "what is like charisma in this game",
+                            "<EXPLAIN_PRESENCE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "is dexterity an option",
+                            "<EXPLAIN_AGILITY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "how does knowledge work",
+                            "<EXPLAIN_KNOWLEDGE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "do i go with knowledge or finesse",
+                            "<REC_TRAIT>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "what do you think best fits my class and subclass",
+                            "<REC_TRAIT>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "agility",
+                            "<AGILITY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "finesse please",
+                            "<FINESSE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "ill go with presence",
+                            "<PRESENCE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "i pick instinct",
+                            "<INSTINCT>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "i want my character to be strong so lets do strength",
+                            "<STRENGTH>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "knowledge lets do knowledge",
+                            "<KNOWLEDGE>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "knowledge and strength",
+                            "<CLARIFY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "i pick all of them",
+                            "<CLARIFY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "i want to go with dexterity",
+                            "<CLARIFY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    },
+                    {
+                        "sample": [
+                            "Based on the prompt, choose one trait that the player wants to select. If the player has a question, instead choose an answer.",
+                            "charisma",
+                            "<CLARIFY>"
+                        ],
+                        "prompt": null,
+                        "number": null,
+                        "result": "<NON>",
+                        "value": "None"
+                    }
+                ],
+                "ppo": []
+            }
+        ]
+    },
+    "guardrails": {
+        "None": ""
+    },
+    "numbers": {
+        "None": ""
+    },
+    "batches": {
+        "pretrain": [],
+        "instruct": [],
+        "judge": [],
+        "ppo": []
+    }
+}

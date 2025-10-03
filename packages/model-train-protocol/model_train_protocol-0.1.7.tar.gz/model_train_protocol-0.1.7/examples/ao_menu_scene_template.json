@@ -1,0 +1,32 @@
+{
+    "all_combinations": {
+        "model_input": {
+            "<BOS>": "🏁",
+            "0": [
+                "Instruction_: Instruction_\n<string>"
+            ],
+            "1": [
+                "Prompt_: Prompt_\n"
+            ],
+            "2": [
+                "QATrait_SelectTrait_: QATrait_SelectTrait_\n<string>",
+                "QADomains_SelectDomains_: QADomains_SelectDomains_\n<string>",
+                "QASubclass_SelectSubclass_: QASubclass_SelectSubclass_\n<string>",
+                "Router_Redo_: Router_Redo_\n<string>",
+                "GeneralQuestion_PersonalQuestion_: GeneralQuestion_PersonalQuestion_\n<string>"
+            ],
+            "<RUN>": "🏃"
+        },
+        "model_output": {
+            "model_response": "<string>",
+            "model_results": {
+                "<NON>": "🫙"
+            },
+            "<EOS>": "🎬"
+        }
+    },
+    "example_usage": {
+        "simple_instruction_input": "🏁\nInstruction_\n<string>\nPrompt_\n<string>\nQATrait_SelectTrait_\n<string>\n🏃\n<string>\n🫙\n🎬",
+        "valid_output": "<string>\n🫙\n🎬"
+    }
+}
