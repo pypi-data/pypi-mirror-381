@@ -1,0 +1,9 @@
+label_studio_sso/__init__.py,sha256=owig2Fzsk37w2zt-5MWP9Suns_mEhCiGUW9asK_ayn4,307
+label_studio_sso/apps.py,sha256=KOxM0KMHgBIjKct6UwgE0W5rHGiXAA1xHajkJSp8jzM,200
+label_studio_sso/backends.py,sha256=ZRdvH-VmRTYo184bOxF0uiw3LcY1bdnkwvDKn7KVhLE,5933
+label_studio_sso/middleware.py,sha256=zgorZzikKO42uEndd5QbINEk0z4UU-INp87FmWe3y_8,2071
+label_studio_sso-1.0.0.dist-info/LICENSE,sha256=9XXHr5zbq7LDvsiH0-XbRwpcibIGezoML9iUzkVp9z0,1088
+label_studio_sso-1.0.0.dist-info/METADATA,sha256=282X-PRDwSIMX2Cc_KAR3XfccuWO6zAMMIXO4Wj1S3g,11252
+label_studio_sso-1.0.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+label_studio_sso-1.0.0.dist-info/top_level.txt,sha256=nWdKoY0ZeOBbQiPIYwPg0vs3AriUok_4f0lFp8LbTr8,17
+label_studio_sso-1.0.0.dist-info/RECORD,,
