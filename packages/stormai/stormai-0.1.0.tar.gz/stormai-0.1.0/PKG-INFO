@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: stormai
+Version: 0.1.0
+Summary: name_reserve
+Home-page: https://github.com/ImVedantPathak/stormai
+Author: Vedant Pathak
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
