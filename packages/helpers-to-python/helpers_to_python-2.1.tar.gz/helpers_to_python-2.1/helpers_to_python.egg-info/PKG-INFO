@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: helpers-to-python
+Version: 2.1
+Summary: помощники для пайтон
+Home-page: https://github.com/vova1f/helpers-to-python
+Author: vova2f
+Author-email: vovk4756@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: colorama==0.4.6
+Requires-Dist: requests==2.32.5
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+помощники пайтон
