@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: scifter-core
+Version: 0.1.0
+Summary: Core utils for building single cell processing tools
+License: MIT
+Author: Ben Skubi
+Author-email: skubi@ohsu.edu
+Requires-Python: >=3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Dist: polars (==1.33.1)
+Description-Content-Type: text/markdown
+
+Common utils for building single cell processing tools

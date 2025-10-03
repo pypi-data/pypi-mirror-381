@@ -1,0 +1,9 @@
+scifter_core/__init__.py,sha256=d48TPbee7MqTjj_KhfBAfw5Zv6E7-3rnWnx44nUc3c8,44
+scifter_core/barcodes/__init__.py,sha256=h5tnfGlfQY_GHnDgHJUn1aw9BnunZdw6MSO_F3R4IyQ,70
+scifter_core/barcodes/extractors.py,sha256=BB14s3geumJhHI7cfamAFnk7wIQaPpSad42Mb68H0Ds,4770
+scifter_core/general/__init__.py,sha256=uh3gxNRupl9oD_yWDnyn-6ynHY2tzbGpvVtCs_-0VdE,86
+scifter_core/general/object_frame_builder.py,sha256=_8CKqmEwIg3wTGWAhF9DJ15ixkkizzgRqo9N6sh3QP8,4426
+scifter_core/general/polars.py,sha256=Dn4z3OUFm_Ak9JpwlCBderUcHWOScZEIo9EHimIwJmc,432
+scifter_core-0.1.0.dist-info/METADATA,sha256=lR6rcU0C6RSU3Q-gMW4jb3ct4XG__dpI_LDR6MNMeYM,583
+scifter_core-0.1.0.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+scifter_core-0.1.0.dist-info/RECORD,,
