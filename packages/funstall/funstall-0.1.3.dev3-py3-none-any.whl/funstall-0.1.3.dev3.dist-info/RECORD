@@ -1,0 +1,13 @@
+funstall/application_context.py,sha256=Nl_0UK6vv1RJLT5jASXzZTERFR4SGZ34PHlTw9-a-7g,1618
+funstall/cli.py,sha256=n6QFth-EWUb-fwHeiwL3pJBSfEs7GNTnRGVOovkJQwQ,1681
+funstall/config.py,sha256=ISXJe2tLEJprES97uVNk-RLtECcl4VmzubuC9mIDLUQ,1351
+funstall/packages.py,sha256=-mOLcCkaZDtufBIncGgQCsZyNhJiFc8E0_4PCiE552M,2709
+funstall/system_paths.py,sha256=CotavK4hsIDpXXbgWIG9qt6bnJ5mQBa4h1yPw1SHktc,1386
+funstall/installation/installation.py,sha256=oMB0HTX9dVVL5x-9a_b_CgMw3rDKyVYfBUEioy-vnQ4,3977
+funstall/installation/model.py,sha256=6W0GoMBCkou_HErTo5ZpVHC4gUK6TfhnCwsQZx99MTw,186
+funstall/installation/pip.py,sha256=_LPvNQxeeULplEgbyjqY0FfOb4aw9QyM_6bpiBZd_Ss,1645
+funstall-0.1.3.dev3.dist-info/METADATA,sha256=nR8Q26rPv65kQuIevd685bJNkp8V8rhCt2lCJe0T1Zs,3288
+funstall-0.1.3.dev3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+funstall-0.1.3.dev3.dist-info/entry_points.txt,sha256=NAr12tKsDenVsVL-hklup-StlxBcVo3NNjxLAtRYx9M,51
+funstall-0.1.3.dev3.dist-info/licenses/LICENSE,sha256=jVa0BUaKrRH4erV2P5AeJ24I2WRv9chIGxditreJ6e0,34524
+funstall-0.1.3.dev3.dist-info/RECORD,,
