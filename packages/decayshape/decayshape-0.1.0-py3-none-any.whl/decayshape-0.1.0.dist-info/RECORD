@@ -1,0 +1,12 @@
+decayshape/__init__.py,sha256=VxLTImQ8rD8qJbYwB4bSR93fcAPgsVFg28iSl1em2IM,1154
+decayshape/base.py,sha256=BZXY2Qo3kwnT1HaTz3KlapsV7N6FDu0-WdGdfc3l0ao,13074
+decayshape/config.py,sha256=HRc9qrbtyeRqhVxzjd3QQao134p8blso7nh-Okckb-U,1461
+decayshape/kmatrix_advanced.py,sha256=sBUVw00Gn5s817chcNXTAvxjI-Lu492Ul38bnVtkRDA,17640
+decayshape/lineshapes.py,sha256=bNht9Pi5VKFzCEE1wE3ZBkEC87NtBOVcud3ci9OuCNc,5964
+decayshape/particles.py,sha256=HOt29eqe0ztOC1X_JwmUoC6pVPpqArpuxgvvu8aniHg,6514
+decayshape/schema_utils.py,sha256=cFqUaXIhY92vkludvPO_2Rz0z1V1Tx3emF53ii54rwg,5766
+decayshape/utils.py,sha256=sLxIsYXqdyZujTEdxlA_ykxPhTcXGKRWlificL-gLo0,2666
+decayshape-0.1.0.dist-info/METADATA,sha256=ob0knq6Ua_x71RbeIBSq0bUxvAak5zmR47Tk5xMpD8k,8451
+decayshape-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+decayshape-0.1.0.dist-info/licenses/LICENSE,sha256=9k7m3u3d0VegSPYcc0_zen03cv4dQVb92l56lXz55zM,1080
+decayshape-0.1.0.dist-info/RECORD,,
