@@ -1,0 +1,10 @@
+soniox/__init__.py,sha256=OXmKvhyY2kD57GBWjQNgFSaLBxRnmmNFFO4kRlWQ090,632
+soniox/client.py,sha256=JCDWptzAz4lzxFWpSY9-RCsPnAKBN0E8V8bdUgW_bhM,13139
+soniox/exceptions.py,sha256=7oPbuTji69u4mk6ufr0D2giGHyXv2xnQZOgAnaB7BFA,698
+soniox/models.py,sha256=UH8oI1olAobXSbeVSl5an8Nntexi_6A17edWnJ8_XnY,2996
+soniox/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+soniox_sdk-0.0.1.dist-info/licenses/LICENSE.txt,sha256=HD60b612fQKDMHJSoyGRo3jq7UlywrMvlU1joJXroQ0,1054
+soniox_sdk-0.0.1.dist-info/METADATA,sha256=k1Omyep3DkH0WtUyU019-U_M16gxKPGRwK7q9nSMx4A,12816
+soniox_sdk-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+soniox_sdk-0.0.1.dist-info/top_level.txt,sha256=UjfbjeVPEq7R3M9mmHc2l1BHb7WHGrcIo44VK8jlgVI,7
+soniox_sdk-0.0.1.dist-info/RECORD,,
