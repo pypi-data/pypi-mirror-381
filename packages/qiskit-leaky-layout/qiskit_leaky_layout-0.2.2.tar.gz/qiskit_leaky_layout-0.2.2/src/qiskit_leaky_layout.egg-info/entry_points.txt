@@ -1,0 +1,2 @@
+[qiskit.transpiler.layout]
+leaky_layout = qiskit_leaky_layout:LeakyLayoutPlugin
