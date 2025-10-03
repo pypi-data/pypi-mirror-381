@@ -1,0 +1,8 @@
+stashhouse_tftp/__init__.py,sha256=KAiMsc0bCqQg-fcSVBbCQgI29rmBSO_zJC1MFATtnUM,5296
+stashhouse_tftp/file_io.py,sha256=OF5eTYNYx4PE-bAJk-cfNrz5gxel7W2uRx0gK_zg24k,3576
+stashhouse_tftp/protocols.py,sha256=F8wZuWUjlCn_E37fdHze9yUBkXEpB80VIYmGQuOoUV4,4060
+stashhouse_tftp-0.0.2.dist-info/METADATA,sha256=3Mpd856M-tLpdBh27wWO-5oBY_-rBY71oLWirpeiYzo,2252
+stashhouse_tftp-0.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+stashhouse_tftp-0.0.2.dist-info/entry_points.txt,sha256=oKsVcBTnE58AFBk1Asu4-U3CYZz-LSSNYFzY8cCC8Zw,54
+stashhouse_tftp-0.0.2.dist-info/licenses/LICENSE,sha256=Xq0RPxJ5dNBvWyg7y66Z5b4TB54pS7px4yd2fBkmR0I,1068
+stashhouse_tftp-0.0.2.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+[stashhouse.plugin]
+tftp = stashhouse_tftp:TFTPServer
