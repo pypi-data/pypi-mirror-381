@@ -1,0 +1,178 @@
+Metadata-Version: 2.4
+Name: chaeruldesktop
+Version: 0.1.4
+Summary: Code ini di buat untuk meringkas kode tkinter menjadi lebih mudah. support terus ya :)
+Home-page: https://github.com/chaerul24/chaeruldesktop
+Author: Chaerul
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: customtkinter
+Requires-Dist: pillow
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Custom Tkinter UI Components
+
+Repo ini berisi kumpulan komponen UI untuk Python menggunakan `tkinter` dan `customtkinter`.  
+Memudahkan pembuatan aplikasi desktop dengan tampilan modern dan fungsi tambahan seperti input dengan ikon, tombol toggle password, progress bar, dan lainnya.
+
+---
+
+## Instalasi
+
+Pastikan kamu sudah install Python 3.x dan pip.  
+Install dependencies berikut:
+
+```bash
+pip install chaeruldesktop
+```
+Import Library
+## Import
+```bash
+from chaeruldesktop import *
+
+```
+
+# komponen terbaru
+kamu dapat memanggil komponen icons yang telah saya sediakan agar memudahkan anda dapat membuat aplikasi desktop, dengan ini semoga membantu anda, berikut beberapa yang telah saya tambahkan.
+
+untuk menggunakan nya kamu harus memanggil nya seperti berikut:
+```bash
+icons['_name_']
+```
+
+# Icons
+
+- **user**         # **User Icon**: Digunakan untuk menampilkan avatar atau simbol user
+- **lock**         # **Lock Icon**: Digunakan untuk input password atau simbol keamanan
+- **eye**          # **Eye Icon**: Untuk toggle visibility password
+- **search**       # **Search Icon**: Digunakan untuk tombol atau input pencarian
+- **cart**         # **Shopping Cart Icon**: Menunjukkan keranjang belanja
+- **crossed_eye**  # **Crossed Eye Icon**: Untuk sembunyikan password
+- **app**          # **App Icon**: Ikon utama aplikasi
+
+contoh cara pakai icons
+
+- **width**        # Atur lebar gambar
+- **height**       # Atur tinggi gambar
+contoh cara pakai icons
+
+```python
+ImageViewPilLow(parent, icons["user"], width=100, height=100)
+```
+
+namun anda bisa memakai tanpa **width** dan **height** contoh kode.
+
+```python
+ImageViewPilLow(parent, icons["user"])
+```
+
+## Colors
+
+Library menyediakan warna standar untuk UI:
+
+- **primary**   # Biru (default tombol utama)
+- **secondary** # Abu-abu
+- **success**   # Hijau
+- **danger**    # Merah
+- **warning**   # Kuning/oranye
+- **info**      # Biru muda/cyan
+- **light**     # Putih/terang
+- **dark**      # Hitam/gelap
+
+Contoh penggunaan:
+
+```python
+colors['success'] # Hijau
+```
+
+
+## Tombol(Button)
+widget membuat tombol button dan berikut parameter yang bisa anda terapkan.
+### Parameter
+
+- **parent**          # Parent widget tempat tombol diletakkan
+- **text**            # Teks yang tampil pada tombol (default "Click")
+- **backgroundColor** # Warna background tombol (default warna primary dari Colors())
+- **textColor**       # Warna teks tombol (default "white")
+- **radius**          # Radius sudut tombol (default 10)
+- **width**           # Lebar tombol (default 120)
+- **height**          # Tinggi tombol (default 40)
+- **command**         # Fungsi yang dijalankan saat tombol ditekan (default None)
+
+contoh kode sederhana tanpa parameter
+
+### Contoh Pakai
+```python
+buttonView(
+    parent,
+),
+```
+dan berikut kode ynag menggunakan parameter
+### Contoh Pakai
+```python
+buttonView(
+    parent,
+    "Login",
+    radius=10,
+    width=300,
+    backgroundColor=colors['success'],
+    textColor="white"
+),
+```
+
+## appDesktop
+
+Membuat jendela utama aplikasi.
+
+- **title**     # Judul aplikasi
+- **icon**      # Path ikon aplikasi
+- **width**     # Lebar jendela
+- **height**    # Tinggi jendela
+- **body**      # List fungsi builder untuk widget
+- **on_ready**  # Fungsi dijalankan saat GUI siap
+- **align**     # Posisi body (start, center, end, dll.)
+
+### Contoh Pakai
+
+```python
+from chaeruldesktop import *
+
+appDesktop(
+    title="My App", # atur title
+    icon=icons["app"], # atur icon
+    width=400, # atur ukuran lebar 
+    height=300, # atur ukuran tinggi
+    body=[
+        lambda parent: ImageViewPilLow(parent, icons["user"], width=100, height=100),
+    ],
+    align='center' # atur letak widget anda bisa atur "center" atau "center|bottom"
+)
+```
+
+# Daftar Fungsi Library ChaerulDesktop
+
+- **textView**        # Membuat label teks sederhana dengan kustomisasi warna, font, dan ukuran
+- **safe_callback**   # Membungkus callback agar error ditangani dengan print dan popup
+- **Colors**          # Mengembalikan dictionary warna standar untuk UI (primary, secondary, success, dll.)
+- **buttonView**      # Membuat tombol kustom dengan warna, radius, ukuran, dan command
+- **progressView**    # Membuat progress bar dengan mode, orientasi, dan nilai awal
+- **styleInput**      # Mengembalikan dictionary style untuk input field (width, font, border, bg)
+- **load_icon**       # Load ikon dari folder resources dan ubah ke CTkImage
+- **inputView**       # Membuat input field dengan ikon, placeholder, tombol toggle mata, dan style
+- **ImageViewPilLow** # Membuat label dengan gambar PIL yang di-resize sesuai ukuran
+- **appDesktop**      # Membuat jendela utama aplikasi dengan title, icon, ukuran, body, dan alignment
+
+---
+
+Library ini di bangun oleh **Chaerul** mahasiswa politeknik baja tegal.
+
