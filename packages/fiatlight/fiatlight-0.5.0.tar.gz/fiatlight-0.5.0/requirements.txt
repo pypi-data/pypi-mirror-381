@@ -1,0 +1,18 @@
+imgui-bundle
+# opencv-contrib-python
+opencv-python
+numpy
+makefun
+Pillow
+types-Pillow
+brotli
+pydantic
+matplotlib
+scipy
+scikit-learn
+pyglfw
+IPython
+fire
+tabulate
+pandas
+pandas-stubs

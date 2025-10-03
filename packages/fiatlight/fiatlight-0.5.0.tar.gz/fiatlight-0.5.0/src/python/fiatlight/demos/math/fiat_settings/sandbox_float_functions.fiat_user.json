@@ -1,0 +1,64 @@
+{
+    "user_inputs": {
+        "functions_nodes": {
+            "float_source": {
+                "x": {
+                    "name": "x",
+                    "data": {
+                        "type": "Primitive",
+                        "value": 4.201000213623047
+                    }
+                }
+            },
+            "sin": {},
+            "log": {}
+        }
+    },
+    "gui_options": {
+        "float_source": {
+            "inputs": {
+                "x": {
+                    "cb_options": {},
+                    "expanded": true
+                }
+            },
+            "outputs": {
+                "0": {
+                    "cb_options": {},
+                    "expanded": true
+                }
+            },
+            "internal_gui_options": {}
+        },
+        "sin": {
+            "inputs": {
+                "x": {
+                    "cb_options": {},
+                    "expanded": false
+                }
+            },
+            "outputs": {
+                "0": {
+                    "cb_options": {},
+                    "expanded": true
+                }
+            },
+            "internal_gui_options": {}
+        },
+        "log": {
+            "inputs": {
+                "x": {
+                    "cb_options": {},
+                    "expanded": false
+                }
+            },
+            "outputs": {
+                "0": {
+                    "cb_options": {},
+                    "expanded": true
+                }
+            },
+            "internal_gui_options": {}
+        }
+    }
+}

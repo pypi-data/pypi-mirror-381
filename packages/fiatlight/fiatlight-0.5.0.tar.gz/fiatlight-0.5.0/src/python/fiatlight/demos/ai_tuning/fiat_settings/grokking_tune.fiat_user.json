@@ -1,0 +1,94 @@
+{
+    "user_inputs": {
+        "functions_nodes": {
+            "perform_training": {
+                "learn_parameters": {
+                    "name": "learn_parameters",
+                    "data": {
+                        "type": "Pydantic",
+                        "value": {
+                            "NB_EPOCHS": 932,
+                            "LEARNING_RATE": 0.0009299999801442027,
+                            "WEIGHT_DECAY": 0.9589999914169312
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "gui_options": {
+        "perform_training": {
+            "function_node_with_gui": {
+                "_inputs_expanded": {
+                    "inside_node": true,
+                    "focused": true
+                },
+                "_outputs_expanded": {
+                    "inside_node": true,
+                    "focused": true
+                },
+                "_doc_expanded": {
+                    "inside_node": false,
+                    "focused": false
+                },
+                "fiat_tuning_expanded": {
+                    "inside_node": true,
+                    "focused": true
+                },
+                "_internal_state_gui_expanded": {
+                    "inside_node": true,
+                    "focused": true
+                },
+                "_function_node": {
+                    "inputs": {
+                        "learn_parameters": {
+                            "cb_options": {
+                                "NB_EPOCHS": {
+                                    "cb_options": {},
+                                    "expanded": true
+                                },
+                                "LEARNING_RATE": {
+                                    "cb_options": {},
+                                    "expanded": true
+                                },
+                                "WEIGHT_DECAY": {
+                                    "cb_options": {},
+                                    "expanded": true
+                                }
+                            },
+                            "expanded": true
+                        }
+                    },
+                    "outputs": {}
+                },
+                "_backup_expanded_states": {
+                    "inside_node": null,
+                    "focused": null
+                },
+                "_focused_function_visible": true
+            },
+            "function_node": {
+                "inputs": {
+                    "learn_parameters": {
+                        "cb_options": {
+                            "NB_EPOCHS": {
+                                "cb_options": {},
+                                "expanded": true
+                            },
+                            "LEARNING_RATE": {
+                                "cb_options": {},
+                                "expanded": true
+                            },
+                            "WEIGHT_DECAY": {
+                                "cb_options": {},
+                                "expanded": true
+                            }
+                        },
+                        "expanded": true
+                    }
+                },
+                "outputs": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+__pycache__
+/cmake-build*/
+/venv*
+/build*/
+.mypy_cache
+external/
+/.idea/
+TODO.txt
+/dist/
+priv_assets/
+# v3* (virtualenvs)
+/v3*
+.DS_Store
+.ipynb_checkpoints
+/fiatlight.*.json
+.vscode/launch.json
+src/python/fiatlight/fiat_togui/tests/truc.py
+*.webp
+bindings_imgui_bundle
+_drafts/

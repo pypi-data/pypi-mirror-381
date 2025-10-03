@@ -1,0 +1,69 @@
+{
+    "user_inputs": {
+        "functions_nodes": {
+            "make_spirograph_curve": {
+                "radius_fixed_circle": {
+                    "name": "radius_fixed_circle",
+                    "data": {
+                        "type": "Unspecified"
+                    }
+                },
+                "radius_moving_circle": {
+                    "name": "radius_moving_circle",
+                    "data": {
+                        "type": "Unspecified"
+                    }
+                },
+                "pen_offset": {
+                    "name": "pen_offset",
+                    "data": {
+                        "type": "Unspecified"
+                    }
+                },
+                "nb_turns": {
+                    "name": "nb_turns",
+                    "data": {
+                        "type": "Unspecified"
+                    }
+                }
+            }
+        }
+    },
+    "gui_options": {
+        "make_spirograph_curve": {
+            "inputs": {
+                "radius_fixed_circle": {
+                    "cb_options": {},
+                    "expanded": true
+                },
+                "radius_moving_circle": {
+                    "cb_options": {},
+                    "expanded": true
+                },
+                "pen_offset": {
+                    "cb_options": {},
+                    "expanded": true
+                },
+                "nb_turns": {
+                    "cb_options": {},
+                    "expanded": true
+                }
+            },
+            "outputs": {
+                "0": {
+                    "cb_options": {
+                        "_plot_type_str": "line",
+                        "plot_size_em": [
+                            36.11482620239258,
+                            34.58565902709961
+                        ],
+                        "small_array_threshold": 100,
+                        "auto_fit": true
+                    },
+                    "expanded": true
+                }
+            },
+            "internal_gui_options": {}
+        }
+    }
+}
