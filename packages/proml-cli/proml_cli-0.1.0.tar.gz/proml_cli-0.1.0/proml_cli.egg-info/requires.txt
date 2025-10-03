@@ -1,0 +1,8 @@
+ruamel.yaml>=0.18
+PyYAML>=6.0
+
+[dev]
+mkdocs>=1.6
+mkdocs-material>=9.5
+pytest>=8.3
+guidance>=0.1.0
