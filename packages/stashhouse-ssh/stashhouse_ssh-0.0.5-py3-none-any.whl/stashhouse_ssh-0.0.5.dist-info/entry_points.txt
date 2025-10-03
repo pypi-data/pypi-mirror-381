@@ -1,0 +1,2 @@
+[stashhouse.plugin]
+ssh = stashhouse_ssh:SSHServer
