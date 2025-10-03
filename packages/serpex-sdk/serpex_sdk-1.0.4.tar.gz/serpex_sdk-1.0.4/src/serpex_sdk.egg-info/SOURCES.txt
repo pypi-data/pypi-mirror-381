@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/serpex_sdk/__init__.py
+src/serpex_sdk/client.py
+src/serpex_sdk/exceptions.py
+src/serpex_sdk/types.py
+src/serpex_sdk.egg-info/PKG-INFO
+src/serpex_sdk.egg-info/SOURCES.txt
+src/serpex_sdk.egg-info/dependency_links.txt
+src/serpex_sdk.egg-info/requires.txt
+src/serpex_sdk.egg-info/top_level.txt
