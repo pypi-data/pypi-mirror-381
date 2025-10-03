@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: rmonico.setup_helper
+Version: 0.0.1
+Summary: Functions to help on setup.py files
+Home-page: https://codeberg.org/rmonico/setup_helper
+Author: Rafael Monico
+Author-email: rmonico1@gmail.com
+License: GPL3
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: summary

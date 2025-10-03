@@ -1,0 +1,8 @@
+README.md
+setup.py
+rmonico.setup_helper.egg-info/PKG-INFO
+rmonico.setup_helper.egg-info/SOURCES.txt
+rmonico.setup_helper.egg-info/dependency_links.txt
+rmonico.setup_helper.egg-info/not-zip-safe
+rmonico.setup_helper.egg-info/top_level.txt
+setup_helper/__init__.py
