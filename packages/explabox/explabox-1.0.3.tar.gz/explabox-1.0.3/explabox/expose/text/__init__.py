@@ -1,0 +1,69 @@
+# Copyright (c) 2022 Marcel Robeer for National Police Lab AI (NPAI).
+#
+# This program is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General
+# Public License (LGPL) as published by the Free Software Foundation; either version 3 (LGPLv3) of the License, or (at
+# your option) any later version. You may not use this file except in compliance with the license. You may obtain a copy
+# of the license at:
+#
+#     https://www.gnu.org/licenses/lgpl-3.0.en.html
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+# warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more
+# details.
+
+"""Functions/classes for sensitivity testing (fairness and robustness) for text data."""
+
+from text_sensitivity import (
+    OneToManyPerturbation,
+    OneToOnePerturbation,
+    compare_accuracy,
+    compare_precision,
+    compare_recall,
+    perturbation,
+)
+
+from ...ui.notebook import restyle
+from .exposer import (
+    Exposer,
+    LabelMetrics,
+    MeanScore,
+    RandomAscii,
+    RandomCyrillic,
+    RandomDigits,
+    RandomEmojis,
+    RandomLower,
+    RandomPunctuation,
+    RandomSpaces,
+    RandomString,
+    RandomUpper,
+    RandomWhitespace,
+    SuccessTest,
+    compare_metric,
+)
+
+compare_accuracy = restyle(compare_accuracy)
+compare_precision = restyle(compare_precision)
+compare_recall = restyle(compare_recall)
+
+__all__ = [
+    "Exposer",
+    "LabelMetrics",
+    "MeanScore",
+    "OneToManyPerturbation",
+    "OneToOnePerturbation",
+    "RandomAscii",
+    "RandomCyrillic",
+    "RandomDigits",
+    "RandomEmojis",
+    "RandomLower," "RandomPunctuation",
+    "RandomSpaces",
+    "RandomString",
+    "RandomUpper",
+    "RandomWhitespace",
+    "SuccessTest",
+    "compare_accuracy",
+    "compare_metric",
+    "compare_precision",
+    "compare_recall",
+    "perturbation",
+]
