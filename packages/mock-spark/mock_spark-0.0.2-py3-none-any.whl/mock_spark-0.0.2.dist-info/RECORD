@@ -1,0 +1,13 @@
+mock_spark/__init__.py,sha256=WjYs6n9mVUNpkkXlzkHw16KcweLaKc05yvpurHl6hVk,2473
+mock_spark/dataframe.py,sha256=rJ4WnjcJfsZzIS4EjG-L_GwwQl0gvtt_TYNddw-mip4,74564
+mock_spark/errors.py,sha256=0rVvTx2sliKtri6imFZW83s_2yU3zM_Q4sIo6nWlnCc,5819
+mock_spark/functions.py,sha256=h3muBM2nvWKf9nwM3dYYlw9wrd-6iIQ14IUilscky2o,26017
+mock_spark/session.py,sha256=S3OPGAHmCdfW-bOrJ_wCjdLGE9WcEA23pT2SES6Ei5Q,21648
+mock_spark/spark_types.py,sha256=N60rILetHbSw9lFTBTyEKA3MNUIPYRDNKOYyUOtjkqg,11714
+mock_spark/storage.py,sha256=rmVVoPo4SmcOdjfPNSiTOjuXgSZyjfAYaKiYyQDxpgw,19711
+mock_spark/window.py,sha256=dkDBanK6ac14B4Si7DTaXcKGPDhBS2xCJrgVg9UR0kg,4360
+mock_spark-0.0.2.dist-info/LICENSE,sha256=_63bPao8Ksbykjnm5PjIZsE7AjyDWjxmmRzF87qiXbE,1070
+mock_spark-0.0.2.dist-info/METADATA,sha256=J9WAq5mCtDHbKg7io2-6o2O4ZIwynYL6YVUpyse8a6M,10278
+mock_spark-0.0.2.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+mock_spark-0.0.2.dist-info/top_level.txt,sha256=OzzdZQ9QCkP1rPHUZN-xP4FbnWT9bQbYx76VB8Be5PA,11
+mock_spark-0.0.2.dist-info/RECORD,,
