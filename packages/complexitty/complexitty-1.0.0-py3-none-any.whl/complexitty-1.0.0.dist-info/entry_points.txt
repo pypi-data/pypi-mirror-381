@@ -1,0 +1,3 @@
+[console_scripts]
+complexitty = complexitty.__main__:main
+
