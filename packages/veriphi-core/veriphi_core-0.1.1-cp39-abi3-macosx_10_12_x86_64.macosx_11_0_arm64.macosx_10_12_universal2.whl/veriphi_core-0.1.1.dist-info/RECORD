@@ -1,0 +1,8 @@
+veriphi_core-0.1.1.dist-info/METADATA,sha256=58EuY1hNz3Lfe1mW-YTfTj3khhXPVW4nEwQ3XPAiuDM,3613
+veriphi_core-0.1.1.dist-info/WHEEL,sha256=1ozR8lY28vgjYd2VleJ3kCLCR1vsn-AickjiC5trXtk,146
+veriphi_core-0.1.1.dist-info/licenses/LICENSE,sha256=ZEWgf66RM9TBHevzwmdLWKOwwOEZSPKZNKRsimraMAM,35106
+veriphi_core/__init__.py,sha256=a3SRAK2Mr-L8QkAjqLuyD89wTM60Wgmy7s42sPzf2Qw,498
+veriphi_core/interface.py,sha256=AUmXtKkfppMV77dqBXJ7W1wb67pnibA1I-BtR2EqmHk,36225
+veriphi_core/utils.py,sha256=5GAIGlbk8h1dttfBXooHU8_Qc6TUqxxP6x58StWiU6I,6611
+veriphi_core/veriphi_core_py.abi3.so,sha256=vgMtDN7VbBxhlqt6gV70KZR6tBzG1iA1bHzQ2AiggRA,1510064
+veriphi_core-0.1.1.dist-info/RECORD,,
