@@ -1,0 +1,2 @@
+[console_scripts]
+maruadmin-agent = maruadmin_agent.main:main
