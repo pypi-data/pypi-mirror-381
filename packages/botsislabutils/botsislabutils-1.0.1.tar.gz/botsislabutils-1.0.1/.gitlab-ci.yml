@@ -1,0 +1,15 @@
+image: python:latest
+
+run:
+  script:
+    - pip install build twine
+    - python -m build
+    - TWINE_PASSWORD=${CI_JOB_TOKEN} TWINE_USERNAME=gitlab-ci-token python -m twine upload --verbose --repository-url ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi dist/*
+# pip install --upgrade botsisutils --index-url https://read_api:glpat-ksSsfmXfmiM__sgkgJN1@gitlab.com/api/v4/projects/45044299/packages/pypi/simple
+# read_api
+# glpat-ksSsfmXfmiM__sgkgJN1
+
+# Publish to PyPI using API token:
+# PYPI_API_TOKEN=pypi-AgEIcHlwaS5vcmcCJGYxZjcyNmQ2LTA4YTYtNDM1OS1iNmYwLTY5NWNjMDEyZDQ0ZgACKlszLCJjMjU0OWQ4MC0wNDU5LTRlZjctOTkxOS1kNmFhODk3NTk2ZTIiXQAABiAr2cpzEmbk9KMxnDpICwJQW7OIQN44JhnBVwvZDmGebw
+# python -m build
+# TWINE_PASSWORD=${PYPI_API_TOKEN} TWINE_USERNAME=__token__ python -m twine upload --verbose dist/*
