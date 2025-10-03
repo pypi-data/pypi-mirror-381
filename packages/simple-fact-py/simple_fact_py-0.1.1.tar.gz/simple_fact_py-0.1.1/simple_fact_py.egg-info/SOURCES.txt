@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+n_factorial/__init__.py
+n_factorial/factorial.py
+simple_fact_py.egg-info/PKG-INFO
+simple_fact_py.egg-info/SOURCES.txt
+simple_fact_py.egg-info/dependency_links.txt
+simple_fact_py.egg-info/top_level.txt

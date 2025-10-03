@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simple-fact-py"   
+version = "0.1.1"
+authors = [
+  { name="Aruja Tiwary", email="aruja.tiwary@gmail.com" }
+]
+description = "A simple factorial function"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+
