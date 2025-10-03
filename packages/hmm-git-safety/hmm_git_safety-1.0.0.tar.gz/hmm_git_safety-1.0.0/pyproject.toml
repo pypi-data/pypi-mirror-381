@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hmm-git-safety"
+version = "1.0.0"
+description = "A safety wrapper for git push that prevents accidental pushes to origin without branch name"
+readme = "README.md"
+requires-python = ">=3.6"
+authors = [
+    {name = "hmm contributors"}
+]
+keywords = ["git", "safety", "git-push", "git-wrapper", "developer-tools", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+]
+
+[project.urls]
+Homepage = "https://github.com/vishesh9131/hmm"
+Repository = "https://github.com/vishesh9131/hmm"
+
+[project.scripts]
+hmm = "hmm_cli:main"
+
+[tool.setuptools]
+py-modules = ["hmm_cli"]
+

@@ -1,0 +1,177 @@
+# hmm - Git Safety Wrapper
+
+A safety wrapper for git push that prevents accidental pushes to origin without a branch name.
+
+## What does it do?
+
+Have you ever typed `git push origin` and immediately regretted it? hmm adds a safety net by requiring **3 explicit confirmations** before allowing a push to origin without a branch name.
+
+### Before hmm:
+```bash
+$ git push origin
+# Oops... pushed to the wrong branch or with unintended behavior
+```
+
+### After hmm:
+```bash
+$ git push origin
+  DANGER: You are pushing to ORIGIN without a branch!
+Type 'yes' to confirm [1/3]: yes
+  WARNING: This may overwrite or break things on origin!
+Type 'yes' to confirm [2/3]: yes
+  FINAL CHECK: Do you really want to do this?
+Type 'yes' to confirm [3/3]: no
+Push cancelled.
+```
+
+## Installation
+
+### Method 1: NPM/NPX (Recommended for Node.js users)
+
+```bash
+# Install globally
+npm install -g hmm-git-safety
+
+# Or use npx without installing
+npx hmm-git-safety install
+```
+
+### Method 2: Python/Pip (Recommended for Python users)
+
+```bash
+# Install via pip
+pip install hmm-git-safety
+
+# Run the installer
+hmm install
+```
+
+### Method 3: Homebrew (macOS)
+
+```bash
+# Add the tap (when published)
+brew tap yourusername/hmm
+brew install hmm
+
+# Or install directly
+brew install hmm.rb
+```
+
+### Method 4: Direct Shell Script (Universal)
+
+```bash
+# Download and run installer
+curl -fsSL https://raw.githubusercontent.com/yourusername/hmm/main/install.sh | bash
+
+# Or manually
+git clone https://github.com/yourusername/hmm.git
+cd hmm
+chmod +x install.sh
+./install.sh
+```
+
+### Method 5: GUI Installer (All Platforms)
+
+Download and run the GUI installer:
+
+```bash
+# Requires Python 3 with tkinter
+python3 gui_installer.py
+```
+
+The GUI provides a user-friendly interface for:
+- Installing hmm
+- Uninstalling hmm
+- Checking installation status
+- Viewing installation logs
+
+## Usage
+
+Once installed, hmm works automatically. Just use git as normal:
+
+```bash
+# Safe - specifies branch
+git push origin main
+git push origin feature-branch
+
+# Dangerous - will trigger 3 confirmations
+git push origin
+```
+
+### Management Commands
+
+```bash
+# Check installation status
+hmm status
+
+# Uninstall hmm
+hmm uninstall
+
+# Get help
+hmm help
+```
+
+## How it Works
+
+hmm adds a bash/zsh function to your shell configuration file (`.zshrc`, `.bashrc`, or `.profile`) that wraps the `git` command. When you try to run `git push origin` without a branch name, it intercepts the command and asks for confirmation three times before proceeding.
+
+The wrapper is lightweight and doesn't affect any other git commands.
+
+## Supported Platforms
+
+- macOS (zsh, bash)
+- Linux (bash, zsh)
+- Windows (via WSL or Git Bash)
+
+## Uninstallation
+
+```bash
+# Using the command
+hmm uninstall
+
+# Or using the package manager you used to install
+npm uninstall -g hmm-git-safety
+pip uninstall hmm-git-safety
+
+# Or using the uninstall script
+./uninstall.sh
+
+# Or manually remove the "hmm git safety wrapper" block from your shell config
+```
+
+## Configuration Files
+
+hmm automatically detects your shell and modifies the appropriate config file:
+
+- **zsh**: `~/.zshrc`
+- **bash**: `~/.bashrc`
+- **other**: `~/.profile`
+
+## Why "hmm"?
+
+Because when you type `git push origin` without a branch name, your first thought should be "hmm... is this really what I want to do?"
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+MIT License - feel free to use this in your own projects!
+
+## Roadmap
+
+- [ ] Support for more shells (fish, powershell)
+- [ ] Customizable confirmation count
+- [ ] Custom warning messages
+- [ ] Whitelist specific repositories
+- [ ] Integration with git hooks
+
+## Support
+
+If you find this useful, please star the repository and share it with your fellow developers who might benefit from an extra safety net!
+
+## Disclaimer
+
+This tool is provided as-is. While it adds a safety layer, always be careful with your git commands and understand what they do before executing them.
+
