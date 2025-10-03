@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "roigenerator"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.3.3"
+pyranges = "^0.1.4"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.3.0"
+isort = "5.10.1"
+black = "^25.9.0"
+scriv = {extras = ["toml"], version = "^1.7.0"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.scriv]
+format = "md"
+fragment_directory = "changelog.d"
+output_file = "CHANGELOG.md"
+version = "literal: pyproject.toml: project.version"
+categories = ["Added", "Changed", "Deprecated", "Fixed", "Security", "Removed"]
+new_fragment_template = "file: new_fragment.${config:format}.j2"
+start_marker = "scriv-insert-here"
+end_marker = "scriv-end-here"
+md_header_level = 1
+rst_header_chars = "=-"
+skip_fragments = "README.*"
+ghrel_template = "{{body}}"
+
+
+[tool.poetry.scripts]
+roigenerator = "roigenerator.ont_adaptive:main"
