@@ -1,0 +1,13 @@
+colab_mcp/__init__.py,sha256=8DDvq0Peb__lGVcurhl4UvirKbOlgwleoZit4kOpYd4,14
+colab_mcp/cli.py,sha256=Gf55C6y4s_8_YCCTs-zk5nWLV_UhFH3UJk2vogtxEwE,3878
+colab_mcp/main.py,sha256=hnoTqQwxlRcvFVHcuVBcRusCGD8hMYBqTy0cHWB_hGU,2944
+colab_mcp/paths.py,sha256=MkqdCOWCJvJo_52WU0qYAU_NRt-ER92CJsxGemBKuzI,2259
+colab_mcp/readers.py,sha256=J9GtrLxx68lEDbwTR-1IsGuC6hqfxJL52rTxWGLS3d8,2966
+colab_mcp/services.py,sha256=mYRNBkx6FfXrTZX0Na0rOl058Sey3IPT-FQAZFGNey4,6730
+colab_mcp/types.py,sha256=aBKuDPT1y53BG4HXLPfCRx_MAfeXmk7BzZgbp3kvaJ8,818
+colab_mcp-0.1.0.dist-info/licenses/LICENSE,sha256=XhcxH5GJ0h5xScQQ4PyFuwwPvmBPWrQu3W_Qsn-txzU,1080
+colab_mcp-0.1.0.dist-info/METADATA,sha256=hhd95a3CkaFSNGcdJ_8WRkV2axx6ZSkoP-uqYkneb1c,6492
+colab_mcp-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+colab_mcp-0.1.0.dist-info/entry_points.txt,sha256=bt9Y6FteqomwvTbcPt6oBLNy9WSWBscvUjxb0aC5P3k,84
+colab_mcp-0.1.0.dist-info/top_level.txt,sha256=V5-VBee5nTA02EPbvh2FlcwW2CchfpqJd5W8w6FNNWI,10
+colab_mcp-0.1.0.dist-info/RECORD,,

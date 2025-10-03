@@ -1,0 +1,3 @@
+[console_scripts]
+colab-mcp = colab_mcp.main:run
+colab-mcp-cli = colab_mcp.cli:main
