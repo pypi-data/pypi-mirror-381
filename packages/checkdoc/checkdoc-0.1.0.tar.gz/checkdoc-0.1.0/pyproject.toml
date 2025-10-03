@@ -1,0 +1,16 @@
+[project]
+name = "checkdoc"
+version = "0.1.0"
+description = "Scan a word document for phrases."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "python-docx>=1.2.0",
+]
+
+[project.scripts]
+checkdoc = "checkdoc.__init__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
