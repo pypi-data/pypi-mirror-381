@@ -1,0 +1,133 @@
+# ==============================================================================
+#  Rolesnap - Role-Based Configuration (Example Template, schema 0.9.2)
+# ==============================================================================
+# This file defines architectural "roles" for your project. Each role describes
+# its public contracts, internal implementation, and dependencies. The CLI uses
+# this to produce focused JSON snapshots for LLM context.
+# ==============================================================================
+
+settings:
+  # --- Project Paths ---
+  # REQUIRED: Absolute path to your repository root.
+  project_root: "/path/to/your/project"
+  # OPTIONAL: Absolute path to your docs folder (if outside project_root).
+  docs_root: "/path/to/your/docs"
+
+  # --- Global Exclusions (merged with built-in defaults) ---
+  # Add names/globs to always ignore (e.g. caches, media, artifacts).
+  exclude_dirs:
+    - ".git"
+    - ".venv"
+
+  # --- Shared Code ---
+  # Directories included into 'Internal Logic' only when --include-utils is used.
+  utils_dirs:
+    - "shared/utils"
+    - "common/helpers"
+
+# ==============================================================================
+#  Role Definitions
+# ==============================================================================
+roles:
+  # --- Example 1: Foundational DTO role (public data API) ---
+  # This role only exports DTOs. Other roles can import them.
+  dtos:
+    help: "Core, stable Data Transfer Objects used across the application."
+    output_dto:
+      paths:
+        - "shared/dtos/"
+      # This role implicitly exports its DTOs to 'auth_service'.
+      # 'auth_service' will get these DTOs in its 'Imported DTOs' category.
+      exports_dto_to:
+        - "auth_service"
+
+  # --- Example 2: Backend service consuming DTOs ---
+  auth_service:
+    help: "Handles authentication, authorization, and session management."
+
+    # Core architectural contract
+    domain:
+      - "services/auth/domain/models.py"
+    ports:
+      - "services/auth/domain/ports.py"
+
+    # DTOs for this role
+    input_dto:
+      # This role consumes DTOs from an external source (e.g. API gateway).
+      paths:
+        - "services/auth/dto/input/"
+      # It also explicitly imports DTOs from another role.
+      # This is the primary mechanism for fine-grained DTO dependency.
+      import_dto_from:
+        - "reporting_engine" # imports DTOs from reporting_engine
+
+    # Implementation & tasks
+    internal_logic:
+      - "services/auth/adapters/"
+    base_tasks:
+      - "tasks/run_auth_service.py"
+
+    # Documentation
+    docs:
+      - "architecture/auth_service.md"
+
+  # --- Example 3: Data processing role with its own DTOs ---
+  reporting_engine:
+    help: "Generates daily and monthly business reports from raw data."
+    domain: # Renamed from domain_models
+      - "pipelines/reporting/domain/"
+    base_tasks:
+      - "tasks/generate_daily_report.py"
+    docs:
+      - "reports/definitions.md"
+    output_dto:
+      paths:
+        - "pipelines/reporting/dto/"
+
+  # --- Example 4: Full role showcasing *all* available fields of schema 0.9.2 ---
+  full_role_example:
+    help: "Demonstrates every field in the 0.9.2 schema."
+
+    # Core contract
+    domain:
+      - "modules/example/domain/model.py"
+    ports:
+      - "modules/example/ports/IExampleService.py"
+
+    # DTOs (output, input, internal)
+    output_dto:
+      paths:
+        - "modules/example/dto/output/"
+      # DTOs from this role will be automatically included in 'reporting_engine' snapshot.
+      exports_dto_to:
+        - "reporting_engine"
+    input_dto:
+      paths:
+        - "modules/example/dto/input/"
+      # Explicitly pull DTOs from the 'dtos' role.
+      import_dto_from:
+        - "dtos"
+    internal_dto:
+      - "modules/example/dto/internal/"
+
+    # Internal implementation
+    internal_logic:
+      - "modules/example/adapters/"
+      - "modules/example/integration/"
+
+    # Tasks
+    base_tasks:
+      - "tasks/example/run.py"
+    advanced_tasks:
+      - "tasks/example/benchmark.py"
+
+    # Documentation
+    docs:
+      - "docs/example/overview.md"
+      - "docs/example/adr/0001-example-decision.md"
+
+    # Dependencies
+    # Use 'imports' for broad dependencies. This pulls the other role's
+    # domain, ports, output DTOs, and base tasks.
+    imports:
+      - "auth_service"
