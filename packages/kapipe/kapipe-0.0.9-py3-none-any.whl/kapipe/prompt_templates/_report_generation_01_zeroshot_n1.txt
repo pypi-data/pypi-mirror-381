@@ -1,0 +1,28 @@
+### Instruction
+
+Write a comprehensive report of a community, given a list of entities that belong to the community as well as their relationships. The report will be used to inform decision-makers about information associated with the community and their potential impact.
+
+The report should include the following sections:
+- TITLE: community's name that represents its key entities - title should be short but specific. When possible, include representative named entities in the title.
+- SUMMARY: An executive summary of the community's overall structure, how its entities are related to each other, and significant information associated with its entities.
+- DETAILED FINDINGS: A list of exactly 1 key insight about the community. The insight should have a short summary followed by multiple paragraphs of explanatory text. Be comprehensive.
+
+Return output as a well-formed JSON-formatted string with the following format:
+    {{
+        "title": <report_title>,
+        "summary": <executive_summary>,
+        "findings": [
+            {{
+                "summary":<insight_summary>,
+                "explanation": <insight_explanation>
+            }},
+        ]
+    }}
+
+### Real Data
+
+Use the following tables for your answer. Do not make anything up in your answer.
+
+{content_prompt}
+
+Output:
