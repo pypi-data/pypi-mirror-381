@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: flake8_timeout
+Version: 1.0.0
+Summary: flake8 plugin which checks that a timeout is set to all requests and urllib.request.open calls
+Home-page: https://github.com/jkittner/flake8-timeout
+Author: Jonas Kittner
+Author-email: jkittner@users.noreply.github.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: flake8
+Dynamic: license-file
+
+[![ci](https://github.com/jkittner/flake8-timeout/workflows/ci/badge.svg)](https://github.com/jkittner/flake8-timeout/actions?query=workflow%3Aci)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/jkittner/flake8-timeout/master.svg)](https://results.pre-commit.ci/latest/github/jkittner/flake8-timeout/master)
+
+# flake8-timeout
+
+flake8 plugin which checks that a timeout is set in all `requests` and `urllib.request.open` calls.
+
+- For example: `requests.post('https://example.com')` or `urllib.request.open('https://example.com')` will trigger `TIM100`
+- `requests.post('https://example.com', timeout=5)` or `urllib.request.open('https://example.com', timeout=5)` is expected instead
+
+## installation
+
+`pip install flake8-timeout`
+
+## flake8 code
+
+| Code   | Description                      |
+| ------ | -------------------------------- |
+| TIM100 | timeout missing for request call |
+
+## as a pre-commit hook
+
+See [pre-commit](https://pre-commit.com) for instructions
+
+Sample `.pre-commit-config.yaml`:
+
+```yaml
+-   repo: https://github.com/pycqa/flake8
+    rev: 4.0.1
+    hooks:
+    -   id: flake8
+        additional_dependencies: [flake8-timeout==0.3.0]
+```
