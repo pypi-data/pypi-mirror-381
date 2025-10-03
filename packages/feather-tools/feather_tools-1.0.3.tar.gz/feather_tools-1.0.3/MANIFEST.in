@@ -1,0 +1,5 @@
+include src/feather_tools/*.py
+include src/feather_tools/test/*.py
+include src/feather_tools/test/simple_feather.feather
+exclude __pycache__
+exclude src/feather_tools/__pycache__
