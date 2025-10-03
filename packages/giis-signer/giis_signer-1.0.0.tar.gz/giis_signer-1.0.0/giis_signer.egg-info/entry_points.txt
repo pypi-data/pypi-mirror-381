@@ -1,0 +1,3 @@
+[console_scripts]
+giis-signer = giis_signer.cli:main
+giis-signer-gui = giis_signer.gui.app:main

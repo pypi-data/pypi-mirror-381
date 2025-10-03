@@ -1,0 +1,11 @@
+pywin32>=305
+lxml>=4.9.0
+xmlcanon>=1.0.0
+smev-transform>=2.0.0
+customtkinter>=5.2.0
+
+[dev]
+pytest>=7.0.0
+black>=22.0.0
+flake8>=4.0.0
+mypy>=0.950
