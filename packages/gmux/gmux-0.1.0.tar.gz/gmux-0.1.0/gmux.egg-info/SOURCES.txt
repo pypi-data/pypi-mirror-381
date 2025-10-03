@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+gmux/__init__.py
+gmux/__main__.py
+gmux.egg-info/PKG-INFO
+gmux.egg-info/SOURCES.txt
+gmux.egg-info/dependency_links.txt
+gmux.egg-info/entry_points.txt
+gmux.egg-info/top_level.txt
+gmux/bin/gmux
