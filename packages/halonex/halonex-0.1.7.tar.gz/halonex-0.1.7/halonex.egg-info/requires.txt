@@ -1,0 +1,12 @@
+requests>=2.25.0
+urllib3>=1.26.0
+psycopg2-binary>=2.9
+typing-extensions>=4.7
+
+[dev]
+pytest>=6.0
+pytest-cov
+black
+isort
+flake8
+requests-mock
