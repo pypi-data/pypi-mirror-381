@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+florrcalc.egg-info/PKG-INFO
+florrcalc.egg-info/SOURCES.txt
+florrcalc.egg-info/dependency_links.txt
+florrcalc.egg-info/entry_points.txt
+florrcalc.egg-info/top_level.txt
