@@ -1,0 +1,16 @@
+pycommence/__init__.py,sha256=AeBda5gW_FZekgY7jWKKUzR1s547WJQDw4DB1Xg8J0o,316
+pycommence/cursor.py,sha256=t5otxqtgcqJ9a1kyGz8bazmbHHczoCT4Za2B3sXNT8s,10735
+pycommence/exceptions.py,sha256=K1fwrA8kUFqAWaGTjjhTYu4ZK_hnmo98g2k69s-Yoow,1757
+pycommence/filters.py,sha256=6bwk_zI55-oHGaguVuyMYxx_iuMSdU5nMV63PmeRqkc,6610
+pycommence/pycmc_types.py,sha256=a2kJldk1Q6Db8y7wpS74FwCe0qAJ64mE_gs3-e35Jfg,6455
+pycommence/pycommence.py,sha256=q_cVeYCZmfykRYQGVuLbfa6MC28cK4RCTVOVmV-f_r0,8500
+pycommence/resolvers.py,sha256=GRQVYA5IUBeHuVLe4l0SNEOnPw4UmzpJy7UvBJj9tJU,2149
+pycommence/wrapper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pycommence/wrapper/_icommence.py,sha256=nMy0COBBItowKhfDnBlcYHV4XortLQIC33V7410Vc3I,59734
+pycommence/wrapper/cmc_wrapper.py,sha256=hEKw7ZPoraiTxVuAbUK4SBAuAqabzLWtULsGYqdrUIg,6135
+pycommence/wrapper/conversation_wrapper.py,sha256=XQnv8JpnaBYE9Thaxi1__9tzv8Y0TZsO6K_RYgGqO4k,1901
+pycommence/wrapper/cursor_wrapper.py,sha256=5mCPmT5AnR_avq0V0eqWp7Xi3pELVh7SxjR28np1C6s,14124
+pycommence/wrapper/row_wrapper.py,sha256=agcRdScF3ZZ7CMomkgy-OggA6-tJPRtFIVVqA4VUKWE,9734
+pycommence-0.2.2.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+pycommence-0.2.2.dist-info/METADATA,sha256=aBCz6amjKJmh-co5PWK82yqscbRuflVyRdl6hoMzFjI,2852
+pycommence-0.2.2.dist-info/RECORD,,
