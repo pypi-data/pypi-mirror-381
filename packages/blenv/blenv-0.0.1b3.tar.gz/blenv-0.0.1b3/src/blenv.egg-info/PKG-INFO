@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: blenv
+Version: 0.0.1b3
+Summary: A utility for creating and managing Blender development environments
+Author-email: Brad Corlett <medium.tech.dev@gmail.com>
+License-Expression: GPL-2.0-or-later
+Project-URL: Homepage, https://github.com/medium-tech/bl-env
+Project-URL: Documentation, https://github.com/medium-tech/bl-env/blob/main/DOCUMENTATION.md
+Project-URL: Repository, https://github.com/medium-tech/bl-env
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic==2.11.7
+Requires-Dist: pyyaml==6.0.2
+Requires-Dist: python-dotenv==1.1.1
