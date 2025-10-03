@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: heliport
+Version: 0.11.0
+Classifier: Environment :: Console
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+License-File: LICENSE
+Summary: Fast and accurate language identifier
+Author-email: Jaume Zaragoza <jzaragoza@prompsit.com>
+Maintainer-email: Jaume Zaragoza <jzaragoza@prompsit.com>
+Requires-Python: >=3.9
