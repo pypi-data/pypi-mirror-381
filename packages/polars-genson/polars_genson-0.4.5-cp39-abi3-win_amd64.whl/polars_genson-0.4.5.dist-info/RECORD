@@ -1,0 +1,10 @@
+polars_genson-0.4.5.dist-info/METADATA,sha256=NtDr7-3lvLKh8zOp-m-eqlpWDbcxbV3mqPX1d7-ww84,27175
+polars_genson-0.4.5.dist-info/WHEEL,sha256=-M5O7l5EczTA8VFaBQsg2Fpg0dKz0WOuvpt3nEh86bo,94
+polars_genson/__init__.py,sha256=q-_-rBKto1HhhvYOzoe2V6wgNAKy74RiKN9g0uPOYho,34319
+polars_genson/__init__.pyi,sha256=AgVpE_S0oCncEVc10HjWbe6Sy0zIQ5-pQPCu5ipRhvg,910
+polars_genson/_polars_genson.pyd,sha256=k4auRCz7Gg4fYe-LOQLMtB4a2k2RKruW4vugcpUWbdI,23302144
+polars_genson/dtypes.py,sha256=c-_RD4MWNoRnDDKOoPFhdqhyhMuM8VUI-EmFxm6frX8,4396
+polars_genson/polars.pyi,sha256=L14XOiRJFqJlBcoNsyWHxcTJgIyfwGfTZ49WaHjygHM,535
+polars_genson/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+polars_genson/utils.py,sha256=oaS0wA_byragTH0kanE102IT-upx0N1PzEDFTZ9UiUk,4220
+polars_genson-0.4.5.dist-info/RECORD,,
