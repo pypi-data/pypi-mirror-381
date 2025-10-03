@@ -1,0 +1,29 @@
+Metadata-Version: 2.3
+Name: django-base16-admin
+Version: 0.1.0
+Summary: Base16 color themes for Django Admin.
+Keywords: django,base16-themes
+Author: stabldev
+Author-email: stabldev <thestabldev@gmail.com>
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 5.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: django>=5.2.7
+Requires-Python: >=3.13
+Project-URL: bug-tracker, https://github.com/stabldev/django-base16-admin/issues
+Project-URL: documentation, https://github.com/stabldev/django-base16-admin#readme
+Project-URL: homepage, https://github.com/stabldev/django-base16-admin
+Project-URL: repository, https://github.com/stabldev/django-base16-admin
+Description-Content-Type: text/markdown
+
+# django-base16-admin
+
+🎨 Base16 color themes for Django Admin.
