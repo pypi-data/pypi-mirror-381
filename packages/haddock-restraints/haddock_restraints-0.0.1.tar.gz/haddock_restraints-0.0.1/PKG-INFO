@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: haddock-restraints
+Version: 0.0.1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Summary: Python bindings for haddock-restraints
+Author-email: "Rodrigo V. Honorato" <rvhonorato@protonmail.com>
+Maintainer-email: BonvinLab <bonvinlab.support@uu.nl>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Homepage, https://github.com/haddocking/haddock-restraints-py
+Project-URL: Repository, https://github.com/haddocking/haddock-restraints-py
+
+# haddock-restraints-py
+
+This repository contains the bindings of the
+[`haddock-restraints`](https://github.com/haddocking/haddock-restraints) code
+so that it can be used as a python library.
+
+```
+pip install haddock-restraints
+```
+
+```python
+from haddock_restraints import Interactor, Air
+
+# Define binding regions
+binding_region_1 = Interactor(id=1, chain="A", active=[10, 11], passive=[])
+binding_region_2 = Interactor(id=2, chain="B", active=[2, 22], passive=[])
+
+# Define the relation between the regions
+binding_region_1.set_target(2)
+binding_region_2.set_target(1)
+
+# Set passive residues from active residues
+binding_region_1.set_passive_from_active()
+
+# Generate AIR table
+air = Air(interactors=[binding_region_1, binding_region_2])
+tbl = air.gen_tbl()
+
+# Print the restraints
+print(tbl)
+```
+
+🚧 🚧 🚧
+
+

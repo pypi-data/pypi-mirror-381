@@ -1,0 +1,36 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "haddock-restraints"
+version = "0.0.1"
+description = "Python bindings for haddock-restraints"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+  { name = "Rodrigo V. Honorato", email = "rvhonorato@protonmail.com" },
+]
+maintainers = [{ name = "BonvinLab", email = "bonvinlab.support@uu.nl" }]
+classifiers = [
+  "Programming Language :: Rust",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Homepage = "https://github.com/haddocking/haddock-restraints-py"
+Repository = "https://github.com/haddocking/haddock-restraints-py"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+python-source = "python"
+module-name = "haddock_restraints._internal"
+manylinux = "2014"

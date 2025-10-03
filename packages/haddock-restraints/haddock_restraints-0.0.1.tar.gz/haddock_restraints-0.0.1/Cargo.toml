@@ -1,0 +1,17 @@
+[package]
+name = "haddock-restraints-py"
+version = "0.1.0"
+edition = "2021"
+readme = "README.md"
+
+[lib]
+name = "haddock_restraints"
+crate-type = ["cdylib"]
+
+[dependencies]
+haddock-restraints = "0.10"
+pyo3 = { version = "0.26", features = ["extension-module"] }
+pdbtbx = "0.12"
+
+[build-dependencies]
+pyo3-build-config = "0.26"
