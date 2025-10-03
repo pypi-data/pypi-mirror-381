@@ -1,0 +1,84 @@
+Metadata-Version: 2.4
+Name: screenshotbase
+Version: 0.1.1
+Summary: Python client for screenshotbase.com API
+Home-page: https://screenshotbase.com/docs/
+Author: ScreenshotBase
+Author-email: support@screenshotbase.com
+License: MIT
+Project-URL: Documentation, https://screenshotbase.com/docs/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.31.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+### screenshotbase-python
+
+Python client for the `screenshotbase.com` API.
+
+- Website: [`https://screenshotbase.com/`](https://screenshotbase.com/)
+- Docs: [`https://screenshotbase.com/docs/`](https://screenshotbase.com/docs/)
+
+This SDK wraps the public endpoints and supports authentication via `apikey` header (default) or `apikey` query parameter.
+
+### Installation
+
+```bash
+pip install screenshotbase
+```
+
+### Quickstart
+
+```python
+from screenshotbase.client import Client
+import os
+
+client = Client(api_key=os.environ.get("SCREENSHOTBASE_API_KEY"))
+
+# Status
+print(client.status())
+
+# Render screenshot
+print(client.render({
+    "url": "https://example.com",
+    "full_page": True,
+    "viewport": "1366x768",
+    "format": "png",
+}))
+```
+
+### Authentication
+
+Header (default) vs query parameter auth:
+
+```python
+client = Client(api_key="your_api_key")
+client_qs = Client(api_key="your_api_key", auth_in_query=True)
+```
+
+### API
+
+- `status()` → API availability and quota
+- `render(params)` → website screenshot render. Example params: `{ "url": "https://example.com", "viewport": "1366x768", "full_page": True, "format": "png" }`
+
+For full parameters, see docs: [`https://screenshotbase.com/docs/`](https://screenshotbase.com/docs/)
+
+### License
+
+MIT
+
+
