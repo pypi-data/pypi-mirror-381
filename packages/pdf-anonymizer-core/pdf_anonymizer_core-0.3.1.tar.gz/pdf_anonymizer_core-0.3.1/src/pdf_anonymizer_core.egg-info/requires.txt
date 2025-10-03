@@ -1,0 +1,6 @@
+python-dotenv
+pymupdf4llm
+langchain-text-splitters
+google-genai
+ollama
+huggingface-hub
