@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omnigpu"
+version = "0.1.2"
+description = "Placeholder package while OmniGPU is under redevelopment"
+readme = "README.md"
+authors = [
+  { name = "Badel L. Mbanga", email = "badel@eigenbasis.ai" }
+]
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+keywords = ["placeholder", "omnigpu"]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Build Tools"
+]
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://github.com/badelmbanga/omnigpu"
+"Source" = "https://github.com/badelmbanga/omnigpu"
+"Bug Tracker" = "https://github.com/badelmbanga/omnigpu/issues"
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
