@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling>=1.25.0", "uv-dynamic-versioning>=0.11.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "git-worktree-cli"
+dynamic = ["version"]
+description = "A lightweight Python CLI tool to simplify Git worktree management"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "cebidhem"}]
+keywords = ["git", "cli", "developer-tools", "claude"]
+requires-python = ">=3.12"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "typer>=0.9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-mock>=3.0.0",
+    "black>=24.0.0",
+    "pylint>=3.0.0",
+]
+
+[project.scripts]
+wt = "wt.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/cebidhem/git-worktree-cli"
+Repository = "https://github.com/cebidhem/git-worktree-cli"
+Issues = "https://github.com/cebidhem/git-worktree-cli/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["wt"]
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
+[tool.uv-dynamic-versioning]
+enable = true
+vcs = "git"
+style = "pep440"
