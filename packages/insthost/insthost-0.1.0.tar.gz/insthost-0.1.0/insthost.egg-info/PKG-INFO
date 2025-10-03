@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: insthost
+Version: 0.1.0
+Summary: JUCE-based audio host launcher
+Author: sinesurge
+Author-email: sinesurgeproducts@gmail.com
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary

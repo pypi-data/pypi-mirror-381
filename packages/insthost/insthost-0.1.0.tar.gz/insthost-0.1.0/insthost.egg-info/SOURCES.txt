@@ -1,0 +1,7 @@
+setup.py
+insthost.egg-info/PKG-INFO
+insthost.egg-info/SOURCES.txt
+insthost.egg-info/dependency_links.txt
+insthost.egg-info/entry_points.txt
+insthost.egg-info/not-zip-safe
+insthost.egg-info/top_level.txt
