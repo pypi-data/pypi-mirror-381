@@ -1,0 +1,194 @@
+Metadata-Version: 2.4
+Name: xlsx-mcp-server
+Version: 0.1.0
+Summary: A FastMCP server for Excel operations with Openpyxl integration
+Author-email: bona shen <cn.tony@outlook.com>
+License-Expression: MIT
+Keywords: excel,mcp,server
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: OSI Approved :: BSD License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Requires-Dist: fastmcp
+Requires-Dist: openpyxl
+Description-Content-Type: text/markdown
+
+# xlsx MCP Server
+
+一个基于 FastMCP 和 Openpyxl 实现的 Excel MCP 服务器，提供了一系列操作 Excel 文件的工具，可以被 LLM 应用程序调用。
+
+## 功能特性
+
+- 读取 Excel 文件数据
+- 写入数据到 Excel 文件
+- 创建新的 Excel 文件
+- 获取 Excel 文件的元数据
+
+## 安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+
+## 运行服务器
+
+```bash
+python main.py
+```
+
+服务器将通过 stdio 启动，您可以使用 example_client.py 来测试功能。
+
+## 可用工具
+
+### 1. open_workbook
+打开一个已有的 Excel 文件。
+
+**参数**: 
+- `workbook_id`: 工作簿ID
+- `file_path`: Excel 文件路径
+
+**返回**: 
+- 操作结果
+
+### 2. create_workbook
+创建一个新的 Excel 工作簿。
+
+**参数**: 
+- `workbook_id`: 工作簿ID
+- `sheets`: 工作表名称列表（可选）
+
+**返回**: 
+- 操作结果
+
+### 3. list_sheets
+列出工作簿中的所有工作表。
+
+**参数**: 
+- `workbook_id`: 工作簿ID
+
+**返回**: 
+- 工作表名称列表
+
+### 4. read_cell
+读取指定单元格的值。
+
+**参数**: 
+- `workbook_id`: 工作簿ID
+- `sheet_name`: 工作表名称
+- `cell`: 单元格地址（如 "A1"）
+
+**返回**: 
+- 单元格的值
+
+### 5. write_cell
+写入数据到指定单元格。
+
+**参数**: 
+- `workbook_id`: 工作簿ID
+- `sheet_name`: 工作表名称
+- `cell`: 单元格地址
+- `value`: 要写入的值
+
+**返回**: 
+- 操作结果
+
+### 6. read_range
+读取指定范围的单元格数据。
+
+**参数**: 
+- `workbook_id`: 工作簿ID
+- `sheet_name`: 工作表名称
+- `start_cell`: 起始单元格地址
+- `end_cell`: 结束单元格地址（可选）
+
+**返回**: 
+- 范围数据
+
+### 7. write_dataframe
+将数据框写入工作表。
+
+**参数**: 
+- `workbook_id`: 工作簿ID
+- `sheet_name`: 工作表名称
+- `data`: 数据框（字典列表）
+- `start_cell`: 起始单元格地址（默认为 "A1"）
+
+**返回**: 
+- 操作结果
+
+### 8. create_sheet
+创建新的工作表。
+
+**参数**: 
+- `workbook_id`: 工作簿ID
+- `sheet_name`: 工作表名称
+
+**返回**: 
+- 操作结果
+
+### 9. delete_sheet
+删除工作表。
+
+**参数**: 
+- `workbook_id`: 工作簿ID
+- `sheet_name`: 工作表名称
+
+**返回**: 
+- 操作结果
+
+### 10. save_workbook_file
+保存工作簿到文件。
+
+**参数**: 
+- `workbook_id`: 工作簿ID
+- `file_path`: 文件路径
+
+**返回**: 
+- 操作结果
+
+### 11. close_workbook
+关闭工作簿并从缓存中移除。
+
+**参数**: 
+- `workbook_id`: 工作簿ID
+
+**返回**: 
+- 操作结果
+
+### 12. list_workbooks
+列出所有已打开的工作簿。
+
+**参数**: 无
+
+**返回**: 
+- 工作簿ID列表
+
+### 13. get_sheet_info
+获取工作表信息。
+
+**参数**: 
+- `workbook_id`: 工作簿ID
+- `sheet_name`: 工作表名称
+
+**返回**: 
+- 工作表信息
+
+### 14. set_formula
+设置单元格公式。
+
+**参数**: 
+- `workbook_id`: 工作簿ID
+- `sheet_name`: 工作表名称
+- `cell`: 单元格地址
+- `formula`: 公式字符串
+
+**返回**: 
+- 操作结果
+
+## 技术栈
+
+- FastMCP: 用于构建 MCP 服务器
+- Openpyxl: 用于操作 Excel 文件

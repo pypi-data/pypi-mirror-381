@@ -1,0 +1,2 @@
+[console_scripts]
+xlsx-mcp-server = xlsx_mcp_server:main
