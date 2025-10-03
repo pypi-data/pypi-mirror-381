@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "xlsx-mcp-server"
+version = "0.1.1"
+description = "一个基于 FastMCP 和 Openpyxl 实现的 Excel MCP 服务器，提供了一系列操作 Excel 文件的工具，可以被 LLM 应用程序调用。"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp",
+    "openpyxl"
+]
+authors = [
+  {name = "bona shen", email = "cn.tony@outlook.com"}
+]
+maintainers = [
+  {name = "bona shen", email = "cn.tony@outlook.com"}
+]
+license = "MIT AND (Apache-2.0 OR BSD-2-Clause)"
+keywords = ["excel", "mcp", "server"]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "License :: OSI Approved :: MIT License",
+  "License :: OSI Approved :: Apache Software License",
+  "License :: OSI Approved :: BSD License",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+
+
+[project.scripts]
+xlsx-mcp-server = "xlsx_mcp_server:main"
+
+[[tool.uv.index]]
+url = "https://mirrors.aliyun.com/pypi/simple/"
+
+
+[[tool.uv.index]]
+url = "https://pypi2.dev.v.csgjs.com/repository/pypi-public/simple"
+default = true
+trusted-host = "pypi2.dev.v.csgjs.com"
+
+[[tool.uv.index]]
+url = "https://pypi.org/simple"
+
