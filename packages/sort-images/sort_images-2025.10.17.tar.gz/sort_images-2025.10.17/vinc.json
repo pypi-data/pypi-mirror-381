@@ -1,0 +1,17 @@
+{
+	"template": "<YEAR>.<MONTH>.<COUNTER>",
+	"version": "2025.10.17",
+	"YEAR": 2025,
+	"MONTH": 10,
+	"COUNTER": 17,
+	"targets": {
+		"pyproject.toml": {
+			"find": "\"<VERSION>\"\\s*#\\s*version",
+			"replace": "\"<VERSION>\" # version"
+		},
+		"sort_images/version.py": {
+			"find": ".+",
+			"replace": "program_version = \"<VERSION>\""
+		}
+	}
+}
