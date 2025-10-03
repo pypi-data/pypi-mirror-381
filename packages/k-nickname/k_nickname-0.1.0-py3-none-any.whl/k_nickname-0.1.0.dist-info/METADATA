@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: k-nickname
+Version: 0.1.0
+Summary: Generate random nickname for Korean users.
+License: MIT
+Author: kyohoonsim
+Author-email: kyohoonsim@gmail.com
+Requires-Python: >=3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Description-Content-Type: text/markdown
+
+
