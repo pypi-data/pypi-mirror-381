@@ -1,0 +1,9 @@
+django_viewsets-0.3.0.dist-info/licenses/LICENSE,sha256=a4TLj6dSeVt3GUbVFQCfPuDRWdATCh7q5XEJNedL4W0,1511
+viewsets/__init__.py,sha256=Nt4aB85K4GRnMZaot04Mo5JKkCxiY-gSJ21nJ5vCUCI,143
+viewsets/base.py,sha256=dBkm7Fc27ooTOUW89m4kM4KGBXt6d2wEydYUptvwDJw,1113
+viewsets/model.py,sha256=bRO3zB6_Q429sWCzmbNUBcaGlZZRLJ2zOKZ-sse0HO4,4317
+viewsets/patterns.py,sha256=uGkSHot025sos1KZrT6TqndffK8ts4h_tE_MUKGFRRQ,329
+django_viewsets-0.3.0.dist-info/METADATA,sha256=bsINkKKqLUUwZylhLKN0e6JxSY8kLiPFzAnFMASPzdc,6337
+django_viewsets-0.3.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+django_viewsets-0.3.0.dist-info/top_level.txt,sha256=i8HjGL0WfNWkFh5CE7n4lR_WTsKOyP3vz-dfeQnjLXg,9
+django_viewsets-0.3.0.dist-info/RECORD,,
