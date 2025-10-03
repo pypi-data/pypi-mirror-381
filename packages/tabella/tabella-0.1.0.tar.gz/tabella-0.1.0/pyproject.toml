@@ -1,0 +1,91 @@
+[project]
+name = "tabella"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [{ name = "Matthew Burkard", email = "matthew@burkard.cloud" }]
+dependencies = [
+    "case-switcher>=1.3.13",
+    "httpx>=0.28.1",
+    "jinja2>=3.1.6",
+    "lorem-pysum>=1.4.11",
+    "openrpc>=10.5.0",
+    "openrpcclientgenerator>=0.49.0",
+    "pydantic>=2.11.9",
+    "starlette>=0.48.0",
+    "uvicorn>=0.37.0",
+]
+
+[project.scripts]
+tabella = "tabella:main"
+
+[build-system]
+requires = ["uv_build>=0.8.11,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.basedpyright]
+strict = ["**"]
+venvPath = "./"
+venv = ".venv"
+reportAny = "none"
+reportExplicitAny = "none"
+reportImplicitStringConcatenation = "none"
+reportUnannotatedClassAttribute = "none"
+
+[tool.ruff]
+lint.select = [
+  "ARG",
+  "ASYNC",
+  "B",
+  "C4",
+  "D",
+  "E",
+  "EM",
+  "ERA",
+  "F",
+  "FBT",
+  "FA",
+  "FLY",
+  "FIX",
+  "ICN",
+  "INT",
+  "ISC",
+  "N",
+  "PL",
+  "PTH",
+  "PYI",
+  "Q",
+  "RET",
+  "S",
+  "SIM",
+  "T10",
+  "TD",
+  "TRY",
+]
+lint.ignore = [
+  "PLR0913",
+  "D203",
+  "D213",
+  "F841",  # Covered by pyright
+  "B007",  # Covered by pyright
+  "FA102",
+  "FA100",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+  "FBT001",  # Positional boolean arguments
+  "FBT002",  # Positional boolean arguments
+  "S101",
+  "S105",
+  "D",
+]
+
+[dependency-groups]
+dev = [
+    "phonenumbers>=9.0.15",
+    "pydantic-extra-types>=2.10.5",
+    "pydantic[email]>=2.11.9",
+    "websockets>=15.0.1",
+]
