@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: pawlogger
+Version: 0.1.0
+Summary: logging tools
+Author: paw
+Author-email: paw <pawrequest@users.noreply.github.com>
+Requires-Dist: loguru
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# pawlogger
+
+Describe your project here.

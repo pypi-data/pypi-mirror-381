@@ -1,0 +1,17 @@
+pawlogger/__init__.py,sha256=dpfB1qaYEVZW3jaFIVnh_ldrK1We3kqQVs2ZABmjsac,624
+pawlogger/config.py,sha256=EaBjC8sAsrwxp3_ikxSKS97sbW_8j1MGS8T5reOQ_bg,1190
+pawlogger/config_loguru.py,sha256=ttLqYAh-05EAM07yLAbyD89Y972DXj9xM0BzBhXWt84,4309
+pawlogger/consts.py,sha256=XliZecaEsKawxgpR8_lgHoN_uuFSPsHE3f-laxPDi_c,315
+pawlogger/loggingdecorators/__init__.py,sha256=dDGV9HD9diVEo5_pyB75YzCJlNuuoNQg4Sp-9CX-fWA,364
+pawlogger/loggingdecorators/consts_formats.py,sha256=eI2REbedBwZ1cpA6oVXB0VdI4yknv-m0w8qrxoA3Yh8,2356
+pawlogger/loggingdecorators/decorators.py,sha256=RyVM5z1PoD64b7C7TDm0Qn3ZrygJIt9b1dOLtjG8rrg,6661
+pawlogger/loggingdecorators/legacy.py,sha256=SPuE_bPJrzvewqg_XRH11mgPleb2sUglS-AnVk-NdJw,9445
+pawlogger/tests/loggingdecorators/conftest.py,sha256=UUJo9TJch2SPWmKtUJJY0ryldErmBh6_bt0hBlRP1gc,2598
+pawlogger/tests/loggingdecorators/test_on_call.py,sha256=EeXyAIgkqgyTZg7JlgsdmbbfdMgWFLo56VqRyvw37uk,3491
+pawlogger/tests/loggingdecorators/test_on_class.py,sha256=8Jad2LnLfIvVg2bE0Xf40e-zLgdJJEr7akaAITOEZ8A,5849
+pawlogger/tests/loggingdecorators/test_on_init.py,sha256=FR7uAiIEmcMI_woI6zkskiHtKHQQ-BYtJj1BVDZPWQ4,3931
+pawlogger/tests/loggingdecorators/test_on_new.py,sha256=ffDLMoTxjaefaFrYjF_E4dW-NN5owgjj4duqxnQUTgg,2291
+pawlogger/tests/pawlogger/test_l_config.py,sha256=WEsNXfnFfHI8kwgLIpXPMzMWtgwEBOsMlLSJ_LYRr-8,2389
+pawlogger-0.1.0.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+pawlogger-0.1.0.dist-info/METADATA,sha256=Jhgi1vSrhEC68A3AvlW-wumFCvcsnww5OWzld5OOnhA,274
+pawlogger-0.1.0.dist-info/RECORD,,
