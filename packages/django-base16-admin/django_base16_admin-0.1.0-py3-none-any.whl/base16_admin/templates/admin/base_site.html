@@ -1,0 +1,10 @@
+{% extends "admin/base_site.html" %} {% block extrastyle %} {{ block.super }}
+<link
+  rel="stylesheet"
+  href="{% static 'base16_admin/themes/' %}{{ BASE16_THEME }}.css"
+/>
+<link rel="stylesheet" href="{% static 'base16_admin/base.css' %}" />
+<link rel="stylesheet" href="{% static 'base16_admin/dark_mode.css' %}" />
+<link rel="stylesheet" href="{% static 'base16_admin/forms.css' %}" />
+<link rel="stylesheet" href="{% static 'base16_admin/nav_sidebar.css' %}" />
+{% endblock %}
