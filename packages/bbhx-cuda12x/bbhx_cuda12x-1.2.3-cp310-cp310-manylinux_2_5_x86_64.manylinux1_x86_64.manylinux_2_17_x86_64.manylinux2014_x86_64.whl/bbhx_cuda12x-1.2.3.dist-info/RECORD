@@ -1,0 +1,11 @@
+bbhx_cuda12x-1.2.3.dist-info/WHEEL,sha256=mhhAVh5jKKMu9V3T1mioMVGriUj-ZfXyiAnbO1dY-hM,229
+bbhx_cuda12x-1.2.3.dist-info/METADATA,sha256=BIlLiWvYCB4HOK5JiDHasWqVW0VhUVmXf44HJdQu438,12776
+bbhx_cuda12x-1.2.3.dist-info/RECORD,,
+bbhx_cuda12x-1.2.3.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+bbhx_backend_cuda12x/interp.cpython-310-x86_64-linux-gnu.so,sha256=22JjPzhsn5nCkQVMDqD1mZqhHkBoNZh9MHwwecmyIeg,213600
+bbhx_backend_cuda12x/response.cpython-310-x86_64-linux-gnu.so,sha256=wGXIHl-vNdCE8rgshEegcKEtDnoUX5f6s6Ip6osxS14,8803576
+bbhx_backend_cuda12x/phenomhm.cpython-310-x86_64-linux-gnu.so,sha256=poz-bwMRbI6bCJdJ9oCbkFqNN-w8ljayssdJjUotrfE,2826912
+bbhx_backend_cuda12x/likelihood.cpython-310-x86_64-linux-gnu.so,sha256=OfnfrY8NyHBIqeYyIKkx-gfhn3zUyfaL0pu5CMEbOnE,443104
+bbhx_backend_cuda12x/git_version.py,sha256=dxCTpBPYGYE0tkUFTiWV0ItosWMYIyD09U2Kq4Qo-PQ,140
+bbhx_backend_cuda12x/waveformbuild.cpython-310-x86_64-linux-gnu.so,sha256=kujQZe8bv4kOCLVY1MQFkzclIv4DQeNpLb8pvBpymg4,406112
+lib64/python./site-packages/bbhx/response.cpython-310-x86_64-linux-gnu.so,sha256=wGXIHl-vNdCE8rgshEegcKEtDnoUX5f6s6Ip6osxS14,8803576
