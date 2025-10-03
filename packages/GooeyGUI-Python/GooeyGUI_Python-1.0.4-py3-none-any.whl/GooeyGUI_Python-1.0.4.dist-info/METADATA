@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: GooeyGUI-Python
+Version: 1.0.4
+Summary: A Python GUI library ported from C
+Home-page: https://github.com/BinaryInkTN/GooeyGUI-Python.git
+Author: BinaryInk
+Author-email: contact@binaryink.dev
+Project-URL: Bug Tracker, https://github.com/BinaryInkTN/GooeyGUI-Python/issues
+Project-URL: Source Code, https://github.com/BinaryInkTN/GooeyGUI-Python
+Keywords: gui,ui,widgets,graphics
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# GooeyGUI Python
+
+Python bindings for the **Gooey** GUI library.
+
+**GooeyGUI** allows you to create and manage GUI applications in Python using the **Gooey** C library.
+
+## Installation
+
+### Step 1: Install the C library
+
+Follow the instructions in the main **Gooey** C repository to compile the library and generate the shared library (`.so`, `.dll`, or `.dylib`).
+
+### Step 2: Install the Python bindings
+
+1. Clone this repository or download the Python bindings.
+2. Ensure the compiled shared library (`libgooey.so`, `libgooey.dll`, or `libgooey.dylib`) is available in the same directory as the Python bindings.
+
+### Conrtribution
+- to build 
+```bash
+python3 setup.py bdist_wheel
+```
+- to push to pypi
+```bash
+twine upload dist/*
+```
