@@ -1,0 +1,5 @@
+rapidfuzz>3
+nltk
+requests
+docker
+numpy
