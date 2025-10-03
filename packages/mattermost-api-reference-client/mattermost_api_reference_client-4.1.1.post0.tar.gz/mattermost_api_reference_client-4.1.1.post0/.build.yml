@@ -1,0 +1,23 @@
+image: alpine/edge
+packages:
+  - uv
+secrets:
+  - 3ecea679-dec7-4ac0-8821-75d0f4fe0773
+sources:
+  - https://git.sr.ht/~nicoco/mattermost-api-reference-client
+tasks:
+  - build: |
+      cd mattermost-api-reference-client
+      uv build
+  - publish: |
+      cd mattermost-api-reference-client
+      [ "$(git rev-parse master)" = "$(git rev-parse HEAD)" ] || exit 0
+      for TAG in $(git tag --points-at HEAD); do
+        if [[ $TAG == v* ]] ; then
+          VER=$(echo $TAG | cut -c2-)
+          set +x
+          export UV_PUBLISH_TOKEN=$(cat ~/.pypi-token)
+          set -x
+          uv publish
+        fi
+      done
