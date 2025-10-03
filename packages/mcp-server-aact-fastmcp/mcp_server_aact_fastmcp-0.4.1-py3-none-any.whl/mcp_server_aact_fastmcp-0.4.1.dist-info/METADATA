@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: mcp-server-aact-fastmcp
+Version: 0.4.1
+Summary: MCP server for AACT clinical trials database
+Project-URL: Homepage, https://github.com/fastmcp-me/aact_mcp#readme
+Project-URL: Repository, https://github.com/fastmcp-me/aact_mcp.git
+Project-URL: Issues, https://github.com/fastmcp-me/aact_mcp/issues
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: mcp>=1.12.4
+Requires-Dist: psycopg2-binary
+Requires-Dist: python-dotenv
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-asyncio; extra == 'test'
