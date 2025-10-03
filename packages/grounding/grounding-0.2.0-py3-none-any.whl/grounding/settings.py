@@ -1,0 +1,41 @@
+"""Default configuration constants for the Grounding CLI."""
+
+from __future__ import annotations
+
+import os
+
+DEFAULT_SUPABASE_URL = os.environ.get("GROUNDING_SUPABASE_URL")
+DEFAULT_SUPABASE_AUDIENCE = os.environ.get("GROUNDING_SUPABASE_AUDIENCE")
+DEFAULT_SUPABASE_ANON_KEY = os.environ.get("GROUNDING_SUPABASE_ANON_KEY")
+DEFAULT_SUPABASE_CLIENT_ID = os.environ.get("GROUNDING_SUPABASE_CLIENT_ID")
+DEFAULT_SUPABASE_PROVIDER = os.environ.get("GROUNDING_SUPABASE_PROVIDER", "github")
+DEFAULT_OAUTH_SCOPES = os.environ.get(
+    "GROUNDING_OAUTH_SCOPES",
+    "email profile",
+)
+DEFAULT_REDIRECT_HOST = os.environ.get("GROUNDING_REDIRECT_HOST", "127.0.0.1")
+DEFAULT_REDIRECT_PORT = int(os.environ.get("GROUNDING_REDIRECT_PORT", "8743"))
+DEFAULT_API_URL = os.environ.get("GROUNDING_API_URL", "https://api.grounding.dev")
+DEFAULT_MCP_URL = os.environ.get("GROUNDING_MCP_URL", "https://api.grounding.dev/mcp")
+DEFAULT_MCP_HOST = os.environ.get("GROUNDING_MCP_HOST", "0.0.0.0")
+DEFAULT_MCP_PORT = int(os.environ.get("GROUNDING_MCP_PORT", "3333"))
+DEFAULT_MCP_NODE_ENTRY = os.environ.get(
+    "GROUNDING_MCP_ENTRY", "mcp-server/index.js"
+)
+
+
+__all__ = [
+    "DEFAULT_SUPABASE_URL",
+    "DEFAULT_SUPABASE_AUDIENCE",
+    "DEFAULT_SUPABASE_ANON_KEY",
+    "DEFAULT_SUPABASE_CLIENT_ID",
+    "DEFAULT_SUPABASE_PROVIDER",
+    "DEFAULT_OAUTH_SCOPES",
+    "DEFAULT_REDIRECT_HOST",
+    "DEFAULT_REDIRECT_PORT",
+    "DEFAULT_API_URL",
+    "DEFAULT_MCP_URL",
+    "DEFAULT_MCP_HOST",
+    "DEFAULT_MCP_PORT",
+    "DEFAULT_MCP_NODE_ENTRY",
+]
