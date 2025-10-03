@@ -1,0 +1,6 @@
+taskiq_rate_limiter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+taskiq_rate_limiter/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+taskiq_rate_limiter/rate_limit_middleware.py,sha256=gQWAJ3IEPviJ2ANTBSPH-sIdwoOkAirPdjtPGGosLbg,20660
+taskiq_rate_limiter-0.1.0b1.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+taskiq_rate_limiter-0.1.0b1.dist-info/METADATA,sha256=qnAC1_b1ksAUJPlYRa49FNGDb8fSPn9gq_QBdGdeD6s,13383
+taskiq_rate_limiter-0.1.0b1.dist-info/RECORD,,
