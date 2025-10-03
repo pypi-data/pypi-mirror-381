@@ -1,0 +1,3 @@
+[console_scripts]
+pctail = pipecat_tail.cli:main
+pipecat-tail = pipecat_tail.cli:main
