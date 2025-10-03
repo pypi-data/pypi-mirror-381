@@ -1,0 +1,5 @@
+simpleconfigfinder/__init__.py,sha256=3d1804998f546684de0732583dafec803bebb8663a073309311c9584f559bd8d,849
+simpleconfigfinder/configfinder.py,sha256=f54407ed81183dffb8bc5bfb7a5d6798a3e3c806c9a41d4c7e2e2f1bfd30e173,11169
+simpleconfigfinder-0.5.0.dist-info/WHEEL,sha256=ab6157bc637547491fb4567cd7ddf26b04d63382916ca16c29a5c8e94c9c9ef7,79
+simpleconfigfinder-0.5.0.dist-info/METADATA,sha256=5251889ede8a1f2cea9de03bb160a5effd8a682c7a89c94dee2115a28bd42475,2385
+simpleconfigfinder-0.5.0.dist-info/RECORD,,
