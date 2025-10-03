@@ -1,0 +1,9 @@
+django_mqtt_bridge/__init__.py,sha256=ErkLkI2TDBX1OIqi2GGa20CPeu4ZculEi-XffRbLU6M,22
+django_mqtt_bridge/cli.py,sha256=RN5V__ZuWIAn7xduCQEjHw9dlxHZKpwJ6L3KZWXouRw,4418
+django_mqtt_bridge/server.py,sha256=7mIoRDhocuvtUVn9z_R4A1v2_fJB-PJY_bmUKAmrgoI,7742
+django_mqtt_bridge-0.4.5.dist-info/licenses/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+django_mqtt_bridge-0.4.5.dist-info/METADATA,sha256=yx3h0is_F6s2KRzt7uDpKhT-5bb7e_h3qbF1XXlDEMw,5096
+django_mqtt_bridge-0.4.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+django_mqtt_bridge-0.4.5.dist-info/entry_points.txt,sha256=LAt6j6U2is0h3czikRmathV8kf_0FK8XK61ovcLQaQA,67
+django_mqtt_bridge-0.4.5.dist-info/top_level.txt,sha256=5sfb0ZPKzrlRx16IjoeKT96UFwskhFBLnwb9iFs8V2w,19
+django_mqtt_bridge-0.4.5.dist-info/RECORD,,
