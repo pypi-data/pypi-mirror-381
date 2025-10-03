@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prestmit"
+version = "0.1.1"
+authors = [
+  { name="mineogo", email="venkatesh10year@gmail.com" },
+]
+description = "A simple, async-first wrapper for the Prestmit crypto wallet balance API."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "aiohttp>=3.8.0",
+    "requests>=2.20.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/mineogo/wallets-wrappper"
+"Bug Tracker" = "https://github.com/mineogo/wallets-wrapper/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
