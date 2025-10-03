@@ -1,0 +1,7 @@
+include README.md
+include requirements.txt
+include config.example.yaml
+recursive-include pcf_config *.py
+recursive-include tests *.py
+global-exclude *.pyc
+global-exclude __pycache__
