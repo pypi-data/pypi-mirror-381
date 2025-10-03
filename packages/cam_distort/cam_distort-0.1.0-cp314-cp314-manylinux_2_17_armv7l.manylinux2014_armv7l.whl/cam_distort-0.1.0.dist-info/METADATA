@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: cam_distort
+Version: 0.1.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Rust
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Summary: Python extension for camera distortion
+Keywords: camera,distortion,rust,pyo3,numpy
+Author: Tin Lai (@soraxas)
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+For camera distortion
