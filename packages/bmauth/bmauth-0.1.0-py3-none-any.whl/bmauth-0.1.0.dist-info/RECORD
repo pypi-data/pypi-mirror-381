@@ -1,0 +1,11 @@
+bmauth/__init__.py,sha256=mrwdxS5iSUKKdKJ6lDOAU3kWoK7L-78xzzBDCneq7Iw,197
+bmauth/auth.py,sha256=xoQdIqA9VseJp0Z7DX0jLEW2l7Chw0oG_x9fgLU32sc,14294
+bmauth/email_providers.py,sha256=7wtYQmJmNr1is6e-2k-ZOR91_REatn0XrzTiaLKHvo4,1703
+bmauth/templates/login.html,sha256=RJlJZ4b2lqfnQLPXR6K_Ux_I0SJGfMuvlFmUDrkok6Q,7577
+bmauth/templates/register.html,sha256=IX51eVGii2gN2hIX58WKNsp4CWW9jSHwYWwdwKD0bq0,10262
+bmauth/templates/verify.html,sha256=qn2PcH3ziN1gBWsDXp4xBK0zAxbOMmC22AjLq8VL6yA,7262
+bmauth-0.1.0.dist-info/licenses/LICENSE,sha256=OphKV48tcMv6ep-7j-8T6nycykPT0g8ZlMJ9zbGvdPs,1066
+bmauth-0.1.0.dist-info/METADATA,sha256=5ljJ2h2UE8eas_fpMEpuGgKaItZfjaMUdsffYL7PuYE,3931
+bmauth-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+bmauth-0.1.0.dist-info/top_level.txt,sha256=INBe6tA1hf7ZsuBRt2Q5unGHdnYH6bgDPqx_DDpm2_s,7
+bmauth-0.1.0.dist-info/RECORD,,
