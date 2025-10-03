@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: p01.cgi
+Version: 0.6.3
+Summary: Replacement for cgi FieldStorage parser
+Home-page: http://pypi.python.org/pypi/p01.cgi
+Author: Adam Groszer, Roger Ineichen, Projekt01 GmbH
+Author-email: dev@projekt01.ch
+License: ZPL 2.1
+Description: This package provides a replacement for the cgi.FieldStorage parser which
+        prevents to load file upoad data into memory.
+        
+        =======
+        CHANGES
+        =======
+        
+        0.6.3 (2025-09-01)
+        ------------------
+        
+        - fixed parser.py
+        - Added safe_decode() to handle utf-8 with fallback to latin-1 for all text input.
+        - Added fix_quoted_value() to unescape quoted header values and repair broken
+          utf-8 sequences.
+        - Improved parseHeader() to use safe_decode and fix_quoted_value,
+          supports RFC2231/5987 encoded filenames.
+        - Improved query string parsing:
+          * normalize broken CRLF and newline separated parameters
+          * allow ";" as alternative separator
+          * decode all keys and values with safe_decode
+        - Improved parseFormData():
+          * explicit handling of GET, HEAD and POST
+          * detect multipart boundaries from content-type if missing
+          * normalize header keys to lowercase
+        - Fixed parseMultiParts():
+          * restored full behavior (headers, disposition, type, inner boundary, length)
+          * Python 3 uses BytesParser for raw headers
+          * Python 2 forces latin-1 decode to avoid UnicodeEncodeError
+        - MultiPartField:
+          * value returns text only for explicit text/* types, bytes for file uploads
+          * improved readMulti with robust header parsing
+          * skipLines fixed for Python 2 compatibility
+        - General:
+          * consistent handling of latin-1 fallback for all headers
+          * no more UnicodeEncodeError on header parsing
+          * backward compatible with Python 2.7 and Python 3.x
+        
+        - fixed normalizer.py
+        - Extended UNICODE_MAPPING:
+          * German umlauts and sharp s
+          * French accented letters (e, a, c, oe, OE)
+          * Spanish letters (n, N, inverted ? and !)
+          * Italian accented vowels
+          * Scandinavian letters (A ring, O slash, Thorn, Eth)
+          * Central/Eastern European letters (Polish, Czech, Slovak, etc.)
+          * Greek alphabet (upper and lower case)
+        - Mapping is now more complete for western, central and southern
+          European languages.
+        - Fallback ensures safe ASCII-only output for file names and URLs.
+        
+        - Code is now Python 2/3 compatible
+        - Safer encoding handling across all modules
+        - Better user input tolerance for broken clients
+        
+        
+        0.6.2 (2025-08-20)
+        ------------------
+        
+        - improved form field parsing. Prevent including line break between value and boundary
+        
+        
+        0.6.1 (2025-08-14)
+        ------------------
+        
+        - Compatibility with Python3
+        
+        
+        0.6.0 (2025-07-15)
+        ------------------
+        
+        - Compatibility with Python3
+        
+        
+        0.5.1 (2011-10-18)
+        ------------------
+        
+        - implemented temporary file factory arguments called tmpFileFactoryArguments.
+          This allows to use 'w+b' or max_size for SpooledTemporaryFile
+        
+        - updated license info
+        
+        - fix package meta data
+        
+        
+        0.5.0 (2009-05-11)
+        ------------------
+        
+        - initial release
+        
+Keywords: Zope3 z3c p01 form parser cgi field storage FieldStorage
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Zope Public License
+Classifier: Programming Language :: Python
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Framework :: Zope3
+Provides-Extra: test
