@@ -1,0 +1,14 @@
+davidkhala/db.py,sha256=1JabBGRbjGBzIUJI5PqntEwfjIJinFPh2R8U6Bndh4w,2071
+davidkhala/sql.py,sha256=T6zHfQ6REtjFm5CjcBpqSZeGonxB9GnlmzkzRYL3cwI,744
+davidkhala/couchbase/README.md,sha256=o4TMrC9smOOggdyMKpO-v6UCsk8M6Fk661KuwjALrL8,100
+davidkhala/couchbase/__init__.py,sha256=kK3yEn1iwrp25GxnFQ6HuNQXAmCb-23T9eIjYQOHIOU,954
+davidkhala/couchbase/capella/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+davidkhala/couchbase/capella/bucket.py,sha256=Xbo6MIELlGknp6UCz6Y--JYMv_R-E9DfyrAYxgcEWuo,1672
+davidkhala/couchbase/capella/cluster.py,sha256=CpWC7kPWwprpqV0u1rAiW18mJbm5vNMJtRoV_SVcY1g,3752
+davidkhala/couchbase/capella/http.py,sha256=jiJD-R_OUIrquaH2Fiy6W-UvO8OV8hJs33B8OlF7EKQ,652
+davidkhala/couchbase/capella/organization.py,sha256=AfbCUfqev-XA6IhGo14FP6lY21YjzfKchuoEDrTixSk,310
+davidkhala/couchbase/capella/project.py,sha256=MI5cUqkXwfsfu0IYBzGtg7vJX2qlFg76MfOAL7FrkCs,247
+davidkhala/mysql/__init__.py,sha256=pDVkOR-n4ODHKl1Yvg6oPQaGsnyWh9w92aQLqYdgl8g,1532
+davidkhala_databases-0.0.3.dist-info/METADATA,sha256=TW65tYkoOOaU8tOmBdVVCTCicxF4moH5zol37bXe03g,601
+davidkhala_databases-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+davidkhala_databases-0.0.3.dist-info/RECORD,,
