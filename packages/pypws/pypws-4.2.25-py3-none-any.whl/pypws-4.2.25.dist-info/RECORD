@@ -1,0 +1,12 @@
+pypws/__init__.py,sha256=xkyagkMePIXCPNqXg32gUqWXiw1FMl-jfTFyJklYRBM,479
+pypws/calculations.py,sha256=VTlOD5yUW0saVFvwFisgFKeI8XSNhlAdBweARh0tewg,807861
+pypws/constants.py,sha256=yG0a456wyIC2hQupy8PKxCZU2sLUY4LqzVQe5_ox-Yc,10389
+pypws/entities.py,sha256=F3pVfLNxu14Ul8ov1gOxUD9o4ZJcAldGtZiHi2w8bfI,134789
+pypws/entity_schemas.py,sha256=lZ-xf_WVOAqlDKcQtqqa5lb4hpGM_AHprhp1Qz1VI-M,56591
+pypws/enums.py,sha256=9VTTk53AQKalEEi4dvY39IIsvdAGIk5nxN_VK0rbESI,26925
+pypws/materials.py,sha256=K2Q01kaa2sPfHS0arHRoUMa4UL366zOdtYKbRHJXVPw,15013
+pypws/utilities.py,sha256=2oH5FSr__d_B2YyU_NEdMLCznwOrE94mrI6rZHBoeHE,7504
+pypws-4.2.25.dist-info/METADATA,sha256=hVgmcIBb9AGf7JdAD6JvxQpP2Kf1MWWt_T5G_5nHor4,5218
+pypws-4.2.25.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pypws-4.2.25.dist-info/licenses/LICENSE,sha256=Ej9Vr2NlqLVPwdbHA7t7vAhC8NxSD7uwBOQW3Vgk8aU,17462
+pypws-4.2.25.dist-info/RECORD,,
