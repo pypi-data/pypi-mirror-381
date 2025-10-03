@@ -1,0 +1,28 @@
+# Pre-commit hooks for pytest-bashdoctest
+# Setup (one-time): uv tool install pre-commit && pre-commit install
+# Run manually: pre-commit run --all-files
+# CI runs these automatically on all files
+
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.0
+    hooks:
+      # Run ruff linter with auto-fix
+      - id: ruff
+        args: [--fix]
+      # Run ruff formatter
+      - id: ruff-format
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      # Ensure files end with newline
+      - id: end-of-file-fixer
+      # Trim trailing whitespace
+      - id: trailing-whitespace
+      # Check YAML syntax
+      - id: check-yaml
+      # Check TOML syntax
+      - id: check-toml
+      # Detect merge conflicts
+      - id: check-merge-conflict
