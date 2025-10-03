@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: sinehost
+Version: 0.1.0
+Summary: C++-based audio host CLI launcher
+Author: sinesurge
+Author-email: sinesurgeproducts@gmail.com
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary
