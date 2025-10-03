@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: mpfshell2
+Version: 100.9.25
+Summary: A simple shell based file explorer for ESP8266 and WiPy Micropython devices.
+Home-page: https://github.com/hmaerki/mpfshell2
+Download-URL: https://github.com/hmaerki/mpfshell2/archive/v100.9.25.zip
+Author: Stefan Wendler, with extensions by Hans Maerki
+Author-email: sw@kaltpost.de, hans@maerki.com
+Keywords: micropython,shell,file transfer,development
+License-File: LICENSE
+Requires-Dist: wheel>=0.36
+Requires-Dist: pyserial~=3.5
+Requires-Dist: colorama~=0.4
+Requires-Dist: websocket_client~=0.56
+Requires-Dist: pyusb~=1.2.1
+Requires-Dist: dataclasses~=0.8; python_version < "3.7"
+Dynamic: author
+Dynamic: author-email
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
