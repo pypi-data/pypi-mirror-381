@@ -1,0 +1,18 @@
+[project]
+name = "ntmemoryapi"
+version = "1.2.0"
+description = "Simple library for Windows to manipulate process virtual memory with stelthy syscall wraps"
+authors = [
+    {name = "Xenely"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "psutil (>=7.1.0,<8.0.0)"
+]
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = [
+    "poetry-core>=2.0.0,<3.0.0"
+]
