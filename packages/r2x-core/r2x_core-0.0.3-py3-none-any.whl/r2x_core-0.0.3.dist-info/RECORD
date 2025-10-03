@@ -1,0 +1,11 @@
+r2x_core/__init__.py,sha256=farFEzvr8OjEuUD9nzPzGmt7bfmkUTAB7iYC3GANMOY,296
+r2x_core/datafile.py,sha256=KHEGHXDYaR49K52HPFbPbrVczz5VjwHkTGZOOlDZYn0,6657
+r2x_core/file_readers.py,sha256=AkAoLzn93fix-30uwGd4sb_WnqE0H93XqiyN_btn2oI,4521
+r2x_core/file_types.py,sha256=_jmyi6mut3umqtLxDKMgX5L8qzNnki2xDI1M2ov7FnQ,838
+r2x_core/processors.py,sha256=kW3gUqh4blNpPFdq1sJsLBbI3jb4sBLeOEscvON-Z4o,9293
+r2x_core/reader.py,sha256=mJ9FYfcKWIYOor9f02lZUH-Aqhc7OUJ-IQAZO-m17mc,6349
+r2x_core/store.py,sha256=qiIbR1gYfHvC2dFHIs6HQYGHlwfX077tlFmQXZ37KVw,17459
+r2x_core/utils.py,sha256=GGhcmZhx7Q4UwD1k2wK6PU7HMHKLU7NgVxkILqLHJMw,2038
+r2x_core-0.0.3.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+r2x_core-0.0.3.dist-info/METADATA,sha256=VYSrk8zZgk42nDHtUh3gAAaHgunxtHYHu1UIqHeKFyY,2897
+r2x_core-0.0.3.dist-info/RECORD,,
