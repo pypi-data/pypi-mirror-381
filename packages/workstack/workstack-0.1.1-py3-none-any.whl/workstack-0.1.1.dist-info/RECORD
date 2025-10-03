@@ -1,0 +1,12 @@
+workstack/__init__.py,sha256=79lziU8VBlQ9xUF9fTKjFhTnKlGrLlm_A6E3C0YIsLQ,291
+workstack/activation.py,sha256=r4MU4XO71tikluXVe_FjtYvGadGtstzOOs-XTV-8OFk,1338
+workstack/cli.py,sha256=b9FUL57RwQ4EAhNUb9oAjh_-um01wiHLqosNWatkGYA,25465
+workstack/config.py,sha256=cOX8MC6zSFP2z_SH0bF4-iciurL5EZ6UZgcbGmRG_wM,3524
+workstack/core.py,sha256=W3OuyW1UHGBAP3CxJP9HhYEuJkZc-RbMpit883-figU,3581
+workstack/detect.py,sha256=oqUeKg0E0LhucveG2L0SnHVS6r6IdU-RaNEx-3xK7cs,1333
+workstack/git.py,sha256=wiYv4wd5nAcYxOPLvA-3aevLlUWxPO4hCxHR03uzNJQ,3193
+workstack/naming.py,sha256=Zxuhiq4-ebZVWBrhEHkjqUe96Z0Ef8Gj3_gPoUx5CNI,1641
+workstack-0.1.1.dist-info/METADATA,sha256=bFswEdMK39I-A5Zlw2ReL9QtlknlRTUMH4Kfkbsoir0,9135
+workstack-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+workstack-0.1.1.dist-info/entry_points.txt,sha256=nugaIEnHmyRTzUUcIeksR9DV0Wlvac2Wj5srKJAawls,45
+workstack-0.1.1.dist-info/RECORD,,
