@@ -1,0 +1,10 @@
+wt/__init__.py,sha256=3iwj2m7i9Wp9hQ_54uwk1nMIks33Riflrz2r6GiNDw0,307
+wt/__main__.py,sha256=_iF-qDbDRXgLjrVN6CSOnpq9Mazs9qrvFHlowyy6Lfs,120
+wt/cli.py,sha256=4AROorWtEz00ftHEBUywrakYRrmhTYTlgOL1ntr7i_I,4468
+wt/launchers.py,sha256=2_GTgmWVJW5Y3xTiIv_3-5gzDZ9YfpMTPPRKq51hG7k,7444
+wt/worktree.py,sha256=WvXsoHLVcTTCyccHEEUgR-7xVR-xSxtStOBW5oMDQSg,7065
+git_worktree_cli-0.3.0.dist-info/METADATA,sha256=S5cpx53phEN2yC7cQ3v-hjbcF1WDomPRS0Cqyfb6yfk,7343
+git_worktree_cli-0.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+git_worktree_cli-0.3.0.dist-info/entry_points.txt,sha256=xXko64NB79iEssa3CgkfmveSvLkbxSuRhax3WHA1dWw,34
+git_worktree_cli-0.3.0.dist-info/licenses/LICENSE,sha256=FDd05a_vRg02KYWScKuzwu_yTxVbdpm04y9NE4AihuY,1065
+git_worktree_cli-0.3.0.dist-info/RECORD,,
