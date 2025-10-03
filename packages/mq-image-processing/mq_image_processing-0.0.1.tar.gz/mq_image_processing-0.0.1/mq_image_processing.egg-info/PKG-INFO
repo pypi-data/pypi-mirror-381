@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: mq_image_processing
+Version: 0.0.1
+Summary: Processamento de imagens usando combinação e transformação
+Home-page: https://github.com/marianasqueiroz/image-processing-package
+Author: Mariana Simões Queiroz
+Author-email: marsiqueiroz@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scikit-image>=0.16.1
+
+# image_processing
+
+Description,
+The package image_processing is used to:
+    Processing:
+    - Histogram matching
+    - Structural similarity
+    - REsize image
+
+    Utils:
+        - Read image
+        - Save image
+        - Plot image
+        - Plot result
+        - Plot histogram
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+
+```bash
+pip install package_name
+```
+
+## Author
+Mariana Simões Queiroz
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
