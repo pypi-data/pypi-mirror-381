@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv run pytest:*)",
+      "Bash(uv run workstack create:*)",
+      "WebSearch",
+      "WebFetch(domain:click.palletsprojects.com)",
+      "Bash(uv run workstack switch:*)",
+      "Bash(gh completion:*)",
+      "Bash(rustup completions:*)",
+      "Bash(starship completions:*)",
+      "Bash(uv:*)",
+      "Bash(docker completion:*)",
+      "Bash(_WORKSTACK_COMPLETE=bash_source uv run workstack)",
+      "Bash(git rev-parse:*)",
+      "Bash(git checkout:*)",
+      "Bash(git worktree:*)",
+      "Bash(git -C /Users/schrockn/code/workstack branch --show-current)",
+      "Bash(gt:*)",
+      "Read(//Users/schrockn/.workstack/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
