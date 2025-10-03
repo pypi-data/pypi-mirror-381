@@ -1,0 +1,9 @@
+frigg/common_crawl/extractors/audio.py,sha256=4J3oKfgtp3Nq94k7Y6dFjEHxZkWhyhBI-xWMnBfNmTI,549
+frigg/common_crawl/extractors/base.py,sha256=LrlZCM5rcElsarnUM9LvgFP3tIasrPAw2jMa1HtR6lo,3081
+frigg/common_crawl/extractors/image.py,sha256=v--DvIsc43wLS82dAPTDcPmTPbCZBUIDrbLLdnrpGS8,510
+frigg/common_crawl/extractors/text.py,sha256=Ln3VE0ZuTyHqZEVBYJkrVsVims8xs_DplJRFEb-F_54,854
+frigg/common_crawl/extractors/video.py,sha256=9wI0-6MXs2rUVtgFaN7ThR-RYa8wUD5c4eT9qxmL5m8,717
+frigg-0.1.2.dist-info/METADATA,sha256=sTydHYB7sa8WExQJ5uA_5FYunYW8Yrj09f4PgbYFFLI,1014
+frigg-0.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+frigg-0.1.2.dist-info/top_level.txt,sha256=csIfm9R69rq4E2l8oveJcHa-5T17miCOM0ek5GThKGI,6
+frigg-0.1.2.dist-info/RECORD,,
