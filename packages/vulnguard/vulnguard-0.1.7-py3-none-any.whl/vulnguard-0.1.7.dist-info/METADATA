@@ -1,0 +1,59 @@
+Metadata-Version: 2.4
+Name: vulnguard
+Version: 0.1.7
+Summary: AI-powered code security scanner powered by Claude Code SDK
+Author-email: Anshuman Bhartiya <anshuman.bhartiya@gmail.com>
+License: AGPL-3.0
+Project-URL: Homepage, https://github.com/anshumanbh/vulnguard
+Project-URL: Repository, https://github.com/anshumanbh/vulnguard
+Project-URL: Issues, https://github.com/anshumanbh/vulnguard/issues
+Keywords: security,code-analysis,ai,claude,vulnerability-scanner
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: anthropic>=0.69.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: click>=8.0.0
+Requires-Dist: rich>=13.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.23.0; extra == "dev"
+Requires-Dist: black>=24.0.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Provides-Extra: factory
+Requires-Dist: claude-agent-sdk>=0.1.0; extra == "factory"
+
+# VulnGuard
+
+AI-powered code security scanner using Claude AI.
+
+## Installation
+
+```bash
+pip install vulnguard
+```
+
+## Usage
+
+```python
+from vulnguard import SecurityScanner
+
+scanner = SecurityScanner()
+result = await scanner.scan("/path/to/repo")
+
+print(f"Found {len(result.issues)} security issues")
+for issue in result.issues:
+    print(f"- [{issue.severity.value}] {issue.title} in {issue.file_path}")
+```
+
+## License
+
+AGPL-3.0
