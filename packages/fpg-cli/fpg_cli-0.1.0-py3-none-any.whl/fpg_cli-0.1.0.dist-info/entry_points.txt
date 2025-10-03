@@ -1,0 +1,2 @@
+[console_scripts]
+fpg = fpg_cli.main:app
