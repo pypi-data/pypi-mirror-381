@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.eggs/
+dist/
+build/
+.env/
+.venv/
+.envrc
+*.log
+*.sqlite3
+# VSCode
+.vscode/
+# OS
+.DS_Store
+Thumbs.db
+# Test
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+# Jupyter
+.ipynb_checkpoints/
+# Misc
+*.bak
+*.swp
+*.swo
+# Project specific
+zededa_edgeai_login.egg-info/

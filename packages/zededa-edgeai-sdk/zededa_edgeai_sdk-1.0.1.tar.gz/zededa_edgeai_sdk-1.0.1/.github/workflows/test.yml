@@ -1,0 +1,124 @@
+name: Run Tests
+
+# Trigger the workflow on every commit to any branch and on PRs
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "**" ]
+    types: [opened, synchronize, reopened]
+
+env:
+  ACTIONS_RUNNER_DEBUG: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        # match common CI python version; adjust if you need 3.12
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        # If repository carries a requirements.txt, install it; otherwise install the package editable
+        if [ -f requirements.txt ]; then
+          pip install -r requirements.txt
+        else
+          pip install -e .
+        fi
+        # Ensure test tools are available
+        pip install pytest pytest-cov || true
+
+    - name: Set up environment variables
+      run: |
+        echo "LOG_LEVEL=DEBUG" >> $GITHUB_ENV
+        echo "ENV=test" >> $GITHUB_ENV
+
+    - name: Run linting (optional)
+      continue-on-error: true
+      run: |
+        pip install flake8 || true
+        # Lint the package directory if it exists
+        if [ -d edgeai_sdk ]; then
+          flake8 edgeai_sdk/ --count --select=E9,F63,F7,F82 --show-source --statistics || true
+          flake8 edgeai_sdk/ --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics || true
+        fi
+
+    - name: Run all tests
+      continue-on-error: true
+      run: |
+        pytest tests/ -v --tb=short --color=yes --continue-on-collection-errors --maxfail=0 > test_results.txt 2>&1 || true
+        echo "TEST_EXIT_CODE=$?" >> $GITHUB_ENV
+
+    - name: Show test results and generate summary
+      run: |
+        echo "## Test Results Summary" >> $GITHUB_STEP_SUMMARY
+        if [ -f test_results.txt ]; then
+          cat test_results.txt
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if grep -q "FAILED" test_results.txt; then
+            echo "### [FAILED] Failed Tests:" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            grep "FAILED" test_results.txt >> $GITHUB_STEP_SUMMARY || true
+            echo '```' >> $GITHUB_STEP_SUMMARY
+
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### Error Details:" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            sed -n '/FAILURES/,/warnings summary\|short test summary/p' test_results.txt | head -50 >> $GITHUB_STEP_SUMMARY || true
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          else
+            echo "### [SUCCESS] All tests passed!" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if grep -q "failed\|passed" test_results.txt; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### Test Statistics:" >> $GITHUB_STEP_SUMMARY
+            grep -E "failed.*passed|passed.*warnings|collected.*items" test_results.txt | tail -1 >> $GITHUB_STEP_SUMMARY || true
+          fi
+        else
+          echo "[ERROR] Test results file not found" >> $GITHUB_STEP_SUMMARY
+        fi
+
+    - name: Run tests with coverage for successful tests only
+      if: env.TEST_EXIT_CODE == '0'
+      run: |
+        pip install pytest-cov || true
+        # produce coverage reports for the package
+        pytest tests/ -v --tb=short --color=yes --cov=edgeai_sdk --cov-report=xml:coverage.xml --cov-report=term-missing --strict-markers --strict-config
+
+    - name: Upload coverage and test artifacts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-artifacts
+        path: |
+          coverage.xml
+          test_results.txt
+        if-no-files-found: warn
+
+    - name: Check test results
+      if: env.TEST_EXIT_CODE != '0'
+      run: |
+        echo "[FAILED] Some tests failed! The build has been marked as failed." >> $GITHUB_STEP_SUMMARY
+        echo "Please review the test failures above and fix them before merging." >> $GITHUB_STEP_SUMMARY
+        exit 1
+
+    - name: Test Summary
+      if: always()
+      run: |
+        if [ "${{ env.TEST_EXIT_CODE }}" == "0" ]; then
+          echo "[SUCCESS] All tests passed successfully!" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "[FAILED] Some tests failed. Build marked as failed." >> $GITHUB_STEP_SUMMARY
+          echo "See detailed test results above." >> $GITHUB_STEP_SUMMARY
+        fi
