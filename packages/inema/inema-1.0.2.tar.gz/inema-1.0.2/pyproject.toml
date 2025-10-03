@@ -1,0 +1,66 @@
+[build-system]
+requires      = [ "setuptools>=61.0" ]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name    = "inema"
+version = "1.0.2"
+authors = [
+  { name="Georg Sauthoff", email="mail@gms.tf"        },
+  { name='Harald Welte'  , email='hwelte@sysmocom.de' },
+]
+license     = "LGPL-3.0-or-later"
+description = "A Python interface to the Deutsche Post Internetmarke and Warenpost International Online Franking"
+readme      = "README-pypi.rst"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business",
+]
+dependencies = [
+    "requests",
+    # required for SOAP APIs, i.e. inema/inema.py and inema/wpint.py
+    "lxml",
+    "pytz",
+    "zeep >= 0.12.0",
+]
+requires-python = ">=3.8"
+
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    # required for test_schema.py
+    "jsonref",
+    "jsonschema",
+    # required for test_openapi.py
+    "openapi-core",
+    "responses",
+]
+
+
+[project.urls]
+Homepage      = "https://git.sysmocom.de/odoo/python-inema/"
+Documentation = "https://inema.readthedocs.io/"
+Issues        = "https://codeberg.org/gms/python-inema/issues"
+
+
+[project.scripts]
+frank = "inema.frank:main"
+
+
+[tool.setuptools]
+packages = [ "inema", "inema.data" ]
+
+
+[tool.setuptools.package-data]
+"inema.data" = [
+    "*.json"
+    # i.e.:
+    # data/formats.json
+    # data/products.json
+    # future product updates:
+    # data/products-YYYY-MM-DD.json
+]

@@ -1,0 +1,11 @@
+requests
+lxml
+pytz
+zeep>=0.12.0
+
+[dev]
+pytest
+jsonref
+jsonschema
+openapi-core
+responses

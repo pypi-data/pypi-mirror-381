@@ -1,0 +1,50 @@
+Metadata-Version: 2.4
+Name: inema
+Version: 1.0.2
+Summary: A Python interface to the Deutsche Post Internetmarke and Warenpost International Online Franking
+Author-email: Georg Sauthoff <mail@gms.tf>, Harald Welte <hwelte@sysmocom.de>
+License-Expression: LGPL-3.0-or-later
+Project-URL: Homepage, https://git.sysmocom.de/odoo/python-inema/
+Project-URL: Documentation, https://inema.readthedocs.io/
+Project-URL: Issues, https://codeberg.org/gms/python-inema/issues
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Office/Business
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: lxml
+Requires-Dist: pytz
+Requires-Dist: zeep>=0.12.0
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: jsonref; extra == "dev"
+Requires-Dist: jsonschema; extra == "dev"
+Requires-Dist: openapi-core; extra == "dev"
+Requires-Dist: responses; extra == "dev"
+Dynamic: license-file
+
+python-inema is a Python package that implements the "Internetmarke" web API for
+interacing with HTTP endpoints of the German postal company `Deutsche Post`_, in
+order to buy printable letter postage, online.
+
+The Internetmarke web API is offered by `Deutsche Post`_ and allows you to buy online
+franking for national and international postal products like post cards and
+letters of all weight classes and service classes (normal, registered, ...).
+
+Supported APIs:
+
+- Internetmarke REST API (released 2024), cf. ``inema.rest``
+- Internetmarke SOAP API (V3, aka 1C4A Webservice API), end of life end of 2025, cf. ``inema.inema``
+- Product Webservice SOAP API (ProdWS), cf. ``inema.inema.ProductInformation``
+- Warenpost International REST API (released 2020), cf. ``inema.wpint``
+
+.. _Deutsche Post: https://en.wikipedia.org/wiki/Deutsche_Post_(disambiguation)
+
+Continue reading:
+
+- `python-inema git repository <https://gitea.sysmocom.de/odoo/python-inema.git>`_
+- `python-inema Codeberg git mirror <https://codeberg.org/gms/python-inema>`_
+- `python-inema readthedocs documentation <https://inema.readthedocs.io/en/latest/>`_
