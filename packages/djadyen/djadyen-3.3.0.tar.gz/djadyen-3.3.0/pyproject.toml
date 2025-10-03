@@ -1,0 +1,27 @@
+[project]
+name = "djadyen"
+readme = "README.md"
+version = "3.3.0"
+
+[build-system]
+requires = ["setuptools >= 30.3.0"]  # version supporting setup.cfg]
+build-backend = "setuptools.build_meta"
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+    | .+/migrations
+  )/
+)
+'''
+
+[tool.bumpversion]
+current_version = "3.3.0"
+files = [
+    {filename = "setup.cfg"},
+    {filename = "package.json"},
+    {filename = "djadyen/__init__.py"},
+]
