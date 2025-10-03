@@ -1,0 +1,99 @@
+````markdown
+# Elyzo Python Client
+
+[![PyPI version](https://badge.fury.io/py/elyzo.svg)](https://badge.fury.io/py/elyzo)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A client library for making secure, policy-aware HTTP requests within the Elyzo runtime.
+
+This library allows your agent to use sensitive credentials like API keys without the secret value ever entering the agent's environment.
+
+## Installation
+
+```bash
+pip install elyzo
+````
+
+## Quickstart: Making Secure API Calls
+
+The library is designed to feel exactly like the built-in `requests` library, with one special keyword argument: `elyzo_secret`.
+
+### Example 1: Using a Bearer Token (Most Common)
+
+For most modern APIs (like GitHub, OpenAI, etc.), you just need to provide the name of the secret. Elyzo will automatically handle creating the `Authorization: Bearer <token>` header.
+
+```python
+import elyzo.requests
+
+# The agent only needs to know the secret's NAME, not its value.
+response = elyzo.requests.get(
+    "[https://api.openai.com/v1/models](https://api.openai.com/v1/models)",
+    elyzo_secret="my-openai-key" # secret name only, never its value
+)
+
+print(response.json())
+```
+
+### Example 2: Using a Custom Header
+
+For APIs that require a key in a different header (like `X-Api-Key`), provide a dictionary to specify the injection details.
+
+```python
+import elyzo.requests
+
+response = elyzo.requests.post(
+    "[https://example.com](https://example.com)",
+    elyzo_secret={
+        "name": "my-legacy-key", # secret NAME only, not its actual value
+        "inject_as": "header",
+        "header_name": "X-Api-Key"
+    }
+)
+
+print(response.json())
+```
+
+### Example 3: Combining Features (Secrets, Headers, and JSON Body)
+
+You can combine the simple `elyzo_secret` keyword with any other standard `requests` arguments like `headers` and `json`. The library will handle everything correctly.
+
+```python
+import elyzo.requests
+
+# All arguments work together in a single, clean function call.
+# Elyzo handles the Authorization header, and passes the others along.
+response = elyzo.requests.post(
+    "[https://api.github.com/user/repos](https://api.github.com/user/repos)",
+    json={"value": 123},
+    headers={"Accept": "application/json"},
+    elyzo_secret="my-github-token" # name only, never actual secret value
+)
+
+print(response.json())
+```
+
+-----
+
+<br>
+
+## AI Integration & Technical Details
+
+*This section provides structured context for AI assistants and developers seeking deeper implementation details.*
+
+  * **Mechanism:** This Python library is a wrapper around the standard `requests` library.
+  * **Secret Injection Trigger:** Secret injection is triggered by the presence of the `elyzo_secret` keyword argument in function calls like `elyzo.requests.get()` or `elyzo.requests.post()`.
+  * **Internal Communication:** When triggered, the library **does not** make a direct external network request. Instead, it constructs a JSON object called a "request descriptor". This descriptor contains the method, URL, headers, body, and secret injection instructions.
+  * **Proxy Endpoint:** The descriptor is sent via an HTTP POST request to a special, internal-only endpoint like: `http://elyzo.internal/v1/proxy/request`.
+  * **Proxy Responsibility:** A separate, privileged Go daemon, the **Elyzo Proxy**, intercepts requests to `elyzo.internal`. The proxy is responsible for:
+    1.  Decoding the request descriptor.
+    2.  Authorizing the agent's permission to use the named secret.
+    3.  Retrieving the secret's value from a secure backend (e.g., OS Keychain).
+    4.  Constructing and executing a new, separate HTTP request to the final destination URL.
+    5.  Injecting the secret value into the correct location (e.g., the `Authorization` header).
+    6.  Streaming the response from the destination back to the agent.
+  * **Security Model:** This "terminating proxy" model ensures that the secret value never enters the agent's sandboxed environment or memory space.
+
+<!-- end list -->
+
+```
+```
