@@ -1,0 +1,2 @@
+[console_scripts]
+dsutau = diffsinger_utau.voice_bank.cli:main
