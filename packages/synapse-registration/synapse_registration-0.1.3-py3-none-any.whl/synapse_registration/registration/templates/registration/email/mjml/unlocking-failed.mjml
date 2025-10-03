@@ -1,0 +1,78 @@
+{% load mjml %} {% mjml %}
+<mjml>
+  <mj-head>
+    <mj-title>Action Required: Account Locking Failed</mj-title>
+    <mj-font
+      name="Roboto"
+      href="https://googledonts.private.coffee/css?family=Roboto:300,400,500"
+    />
+    <mj-attributes>
+      <mj-all font-family="Roboto, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#f3f4f6">
+    {% if logo %}
+    <mj-section padding="20px 0">
+      <mj-column>
+        <mj-image
+          width="120px"
+          src="{{ logo }}"
+          alt="{{ matrix_domain }} Logo"
+        />
+      </mj-column>
+    </mj-section>
+    {% endif %}
+
+    <mj-section background-color="#ffffff" padding="20px" border-radius="8px">
+      <mj-column>
+        <mj-text
+          font-size="22px"
+          font-weight="500"
+          color="#111827"
+          padding-bottom="20px"
+        >
+          Urgent Action Required: Account Overwritten
+        </mj-text>
+
+        <mj-text font-size="16px" line-height="24px" color="#374151">
+          Hi there,
+        </mj-text>
+
+        <mj-text font-size="16px" line-height="24px" color="#374151">
+          You approved the registration request for
+          <strong>{{ username }}</strong> on the Matrix server at
+          <strong>{{ matrix_domain }}</strong>.
+        </mj-text>
+
+        <mj-text font-size="16px" line-height="24px" color="#ef4444">
+          However, unlocking the account failed. Please check the server logs
+          for more information and unlock the account manually if necessary.
+        </mj-text>
+
+        <mj-text
+          font-size="16px"
+          line-height="24px"
+          color="#374151"
+          padding-top="20px"
+        >
+          Thanks!
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="20px 0">
+      <mj-column>
+        <mj-text
+          font-size="12px"
+          line-height="16px"
+          color="#6b7280"
+          align="center"
+        >
+          This is an automated admin notification. Please do not reply to this
+          email.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
+{% endmjml %}

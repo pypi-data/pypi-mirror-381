@@ -1,0 +1,17 @@
+Hi,
+
+Good news! Your registration request for the Matrix server at {{ matrix_domain }} has been approved.
+
+To complete your registration and activate your account, please visit the following link to set your password:
+
+{{ set_password_url }}
+
+{% if mod_message %}
+Message from moderator: {{ mod_message }}
+{% endif %}
+
+If you have any questions, feel free to reach out to our support team.
+
+Thanks for joining us!
+
+{{ matrix_domain }} Team

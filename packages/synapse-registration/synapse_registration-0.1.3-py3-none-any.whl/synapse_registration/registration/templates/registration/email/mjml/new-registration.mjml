@@ -1,0 +1,119 @@
+{% load mjml %} {% mjml %}
+<mjml>
+  <mj-head>
+    <mj-title>New Registration Request</mj-title>
+    <mj-font
+      name="Roboto"
+      href="https://googledonts.private.coffee/css?family=Roboto:300,400,500"
+    />
+    <mj-attributes>
+      <mj-all font-family="Roboto, Arial, sans-serif" />
+    </mj-attributes>
+    <mj-style>
+      .info-box {
+        background-color: #f3f4f6;
+        border-radius: 6px;
+        padding: 15px;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f3f4f6">
+    {% if logo %}
+    <mj-section padding="20px 0">
+      <mj-column>
+        <mj-image
+          width="120px"
+          src="{{ logo }}"
+          alt="{{ matrix_domain }} Logo"
+        />
+      </mj-column>
+    </mj-section>
+    {% endif %}
+
+    <mj-section background-color="#ffffff" padding="20px" border-radius="8px">
+      <mj-column>
+        <mj-text
+          font-size="22px"
+          font-weight="500"
+          color="#111827"
+          padding-bottom="20px"
+        >
+          New Registration Request
+        </mj-text>
+
+        <mj-text font-size="16px" line-height="24px" color="#374151">
+          Hi there,
+        </mj-text>
+
+        <mj-text font-size="16px" line-height="24px" color="#374151">
+          A new user has requested registration on
+          <strong>{{ matrix_domain }}</strong>.
+        </mj-text>
+
+        <mj-text css-class="info-box" font-size="16px" line-height="24px" color="#374151">
+          <strong>Username:</strong> {{ username }}<br />
+          <strong>Email:</strong> {{ email }}
+        </mj-text>
+
+        <mj-text
+          font-size="16px"
+          line-height="24px"
+          color="#374151"
+          padding-top="20px"
+        >
+          <strong>Supplied reason for registration:</strong>
+        </mj-text>
+
+        <mj-text css-class="info-box" font-size="16px" line-height="24px" color="#374151">
+          {{ registration_reason }}
+        </mj-text>
+
+        <mj-text
+          font-size="16px"
+          line-height="24px"
+          color="#374151"
+          padding-top="20px"
+        >
+          Please review this request at your earliest convenience.
+        </mj-text>
+
+        <mj-button
+          background-color="#3b82f6"
+          color="white"
+          border-radius="6px"
+          font-size="16px"
+          font-weight="500"
+          padding="16px 24px"
+          href="{{ admin_url }}"
+        >
+          Review Registration Request
+        </mj-button>
+
+        <mj-text
+          font-size="16px"
+          line-height="24px"
+          color="#374151"
+          padding-top="20px"
+        >
+          Thanks,<br />
+          {{ matrix_domain }} Admin System
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="20px 0">
+      <mj-column>
+        <mj-text
+          font-size="12px"
+          line-height="16px"
+          color="#6b7280"
+          align="center"
+        >
+          This is an automated admin notification. Please do not reply to this
+          email.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
+{% endmjml %}
