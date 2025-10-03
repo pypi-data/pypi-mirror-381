@@ -1,0 +1,7 @@
+pyproject.toml
+setup.py
+gnosis-py/__init__.py
+gnosis_py.egg-info/PKG-INFO
+gnosis_py.egg-info/SOURCES.txt
+gnosis_py.egg-info/dependency_links.txt
+gnosis_py.egg-info/top_level.txt
