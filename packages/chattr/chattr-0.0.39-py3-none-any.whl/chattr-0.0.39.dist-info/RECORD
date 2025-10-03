@@ -1,0 +1,13 @@
+chattr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chattr/__main__.py,sha256=40LD2Gy8UgZwJ0j9FBC14wjr99p6Dy6xmXbO-fisbWU,471
+chattr/app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chattr/app/builder.py,sha256=QvoOODMCnYi80Ey_yn0diC4EDmo5sOmyc3xRVq3u1Nw,10874
+chattr/app/gui.py,sha256=7HhGDSMLWtXQ_79XspMkZLQeXE3VnmCeilifCWcNd9M,1288
+chattr/app/runner.py,sha256=vBX7WtoXGdYScwBJAZOFglmQ0kUWU9OBlPrJjC3ZKuM,171
+chattr/app/settings.py,sha256=59_sm_KBB8fAYuyJKFYQu6E3WSUljDiwaTW-t3VnLDY,5221
+chattr/app/state.py,sha256=xr7kJpS1sgBsSwuiroVtahxxMkaiKsdagUB4FJWOdEc,136
+chattr/app/utils.py,sha256=r378Sv5jgpMcN1uhfdDnLFTp7uIPfKhRQJNbFe3Xd6w,1963
+chattr-0.0.39.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+chattr-0.0.39.dist-info/entry_points.txt,sha256=TNY_oGUD14Ef3C4KY1FI5sRJ3dEfOGKp0s2Jsmd_D84,49
+chattr-0.0.39.dist-info/METADATA,sha256=g5_DAIp9QVP-CazvghTN91Nxn-fZR2YVtNuXCYSjrI8,3826
+chattr-0.0.39.dist-info/RECORD,,
