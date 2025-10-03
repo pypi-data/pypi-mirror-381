@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: geoapi-pandas
+Version: 0.0.5
+Summary: A small geoapi package
+Author-email: tda <the.data.analytic@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# 🛰️ GEOAPI
+
+**ValidadorFantasma** es una librería en Python que combina la potencia de **pandas** con funciones de **geolocalización y referenciación geográfica**, facilitando el análisis, validación y enriquecimiento de datos espaciales.
+
+Ideal para proyectos de ciencia de datos, ETL y validación de información basada en **coordenadas, direcciones o ubicaciones**.
+
+---
+
+## ✨ Características
+
+- 📍 Integración nativa con **pandas** (`DataFrame`).
+- 🌐 Validación y normalización de **coordenadas (latitud/longitud)**.
+- 🗺️ Enriquecimiento de datos con información geográfica (país, región, distrito, etc.).
+- ⚡ Procesamiento rápido y vectorizado usando la infraestructura de pandas.
+- 🔎 Funciones de referencia cruzada contra fuentes públicas (CSV/GeoJSON).
+
+---
+
+## 🚀 Instalación
+
+```bash
+pip install geoapi
