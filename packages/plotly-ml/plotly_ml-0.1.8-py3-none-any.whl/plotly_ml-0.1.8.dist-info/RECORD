@@ -1,0 +1,8 @@
+src/regression.py,sha256=y7t4oDnQXuWwvqrPiDo2wEXmA-PR3GjFp5oq2SAxao0,9758
+src/univariant.py,sha256=MUWDeYTnWW1CrTiTAJMSAksMLzzLzeIttHhU7gD5yyw,4981
+src/utils/colors.py,sha256=7SYh9lCAcfSJ-Lheovv-0jfBeZ0tSxJO47WCfXaAizQ,2436
+src/utils/metrics.py,sha256=Vnot4w-DqUn4ggl3JG-3EbI4rdr7VZ_yAdd29AIcsrY,2369
+plotly_ml-0.1.8.dist-info/METADATA,sha256=8N5gIj2OGrIs8GkWmD7CRbPxF18pzEMg6QRQ5Mx7_kg,1292
+plotly_ml-0.1.8.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+plotly_ml-0.1.8.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+plotly_ml-0.1.8.dist-info/RECORD,,
