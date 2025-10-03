@@ -1,0 +1,11 @@
+KnotLinkClient_Py/OpenSocketQuerier.py,sha256=uacgGjkZNHDHiPoDtc0ARg0FTwV6ji81tBX7iTBt33Q,3703
+KnotLinkClient_Py/OpenSocketResponser.py,sha256=xmdnmbeLQIKFiqD4hkxMw5QG7Jvq1MLAlZi2IydRXlw,3675
+KnotLinkClient_Py/SignalSender.py,sha256=qRINYSaiEnWQMPyzGDN5dE6qXax7fBC4mwfBwCfzYlE,1852
+KnotLinkClient_Py/SignalSubscriber.py,sha256=qYcr-aeIthBNk7cvo7jdbMTh5P7tyEO9rGhAj9Fn4U8,2674
+KnotLinkClient_Py/__init__.py,sha256=JYOC7Smw795Fbrm5vDD8e2Yiyv_O8TApPoIdXLPzn8Y,890
+KnotLinkClient_Py/kludf.py,sha256=GFLZYCG9TrGnOnGjup7VgAs6uC2tDNzKTyT16Rcs6Vg,2161
+KnotLinkClient_Py/tcpclient.py,sha256=4YdqG9vRPHZvw_BH6Bzqa0k_9Y2gpIUexpKbLC31VLk,3678
+knotlinkclient_py-1.0.4.dist-info/METADATA,sha256=WYNezAcFkU6FNParYC0w9A2OBGDgVVGnlgtadj2XY_g,4719
+knotlinkclient_py-1.0.4.dist-info/WHEEL,sha256=iAkIy5fosb7FzIOwONchHf19Qu7_1wCWyFNR5gu9nU0,91
+knotlinkclient_py-1.0.4.dist-info/top_level.txt,sha256=gehzbr9BgDJfrXLRPYyCqG40X9drk59j8lFTOIn5riE,18
+knotlinkclient_py-1.0.4.dist-info/RECORD,,
