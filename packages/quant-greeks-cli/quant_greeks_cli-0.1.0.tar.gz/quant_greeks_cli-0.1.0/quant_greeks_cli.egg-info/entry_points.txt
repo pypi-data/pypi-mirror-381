@@ -1,0 +1,2 @@
+[console_scripts]
+quant-greeks-cli = quant_greeks_cli.cli:main
