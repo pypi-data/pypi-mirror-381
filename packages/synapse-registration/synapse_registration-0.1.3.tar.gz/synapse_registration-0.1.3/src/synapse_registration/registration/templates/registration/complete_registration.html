@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}
+    Complete Registration
+{% endblock title %}
+{% block content %}
+    <div class="columns is-centered">
+        <div class="column is-8-tablet is-6-desktop">
+            <div class="box p-5">
+                <h1 class="title is-3 has-text-centered mb-5">Complete Your Registration</h1>
+                <div class="progress-container mb-5">
+                    <div class="progress-step completed">1</div>
+                    <div class="progress-step completed">2</div>
+                    <div class="progress-step active">3</div>
+                    <div class="progress-step">4</div>
+                    <div class="progress-step">5</div>
+                </div>
+                <p class="mb-4">You're almost there! Please tell us a bit about why you'd like to join our Matrix server.</p>
+                <form method="post" class="mb-4">
+                    {% csrf_token %}
+                    <div class="field mt-4">
+                        <label class="label">Why would you like to join?</label>
+                        <div class="control">{{ form.registration_reason }}</div>
+                        <p class="help">
+                            Please provide a detailed reason (minimum 30 characters). This helps our admins process your request.
+                        </p>
+                        {% if form.registration_reason.errors %}
+                            <p class="help is-danger">
+                                <span class="icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </span>
+                                {{ form.registration_reason.errors.0 }}
+                            </p>
+                        {% endif %}
+                    </div>
+                    <div class="notification is-light is-warning mt-4">
+                        <p class="is-size-7">
+                            <span class="icon">
+                                <i class="fas fa-info-circle"></i>
+                            </span>
+                            Your registration will require admin approval. If approved, you'll receive an email with instructions to set your password.
+                        </p>
+                    </div>
+                    {% if legal_links %}
+                        <div class="notification is-light is-info mt-4">
+                            <p class="is-size-7">
+                                By completing registration, you agree to:
+                                <ul class="mt-2">
+                                    {% for link in legal_links %}
+                                        <li>
+                                            <a href="{{ link.url }}" target="_blank">{{ link.title }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </p>
+                        </div>
+                    {% endif %}
+                    <div class="field mt-5">
+                        <div class="control">
+                            <button type="submit" class="button is-link is-fullwidth">
+                                <span>Submit Registration</span>
+                                <span class="icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
