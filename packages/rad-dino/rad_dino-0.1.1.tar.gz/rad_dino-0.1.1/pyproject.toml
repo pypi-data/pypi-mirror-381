@@ -1,0 +1,34 @@
+[project]
+name = "rad-dino"
+version = "0.1.1"
+description = "Vision encoder for chest X-rays."
+readme = "README.md"
+authors = [
+    { name = "Microsoft Health Futures", email = "innereyedev@microsoft.com" },
+]
+requires-python = ">=3.10"
+dependencies = [
+    "einops",
+    "jaxtyping",
+    "pillow",
+    "requests",
+    "safetensors",
+    "transformers[torch]",
+    "typer",
+]
+
+[project.urls]
+Homepage = "https://huggingface.co/microsoft/rad-dino"
+Source = "https://huggingface.co/microsoft/rad-dino"
+"Issue tracker" = "https://huggingface.co/microsoft/rad-dino/discussions/new"
+Documentation = "https://huggingface.co/microsoft/rad-dino/blob/main/README.md"
+
+[build-system]
+requires = ["uv_build"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel",
+    "ipywidgets",
+]
