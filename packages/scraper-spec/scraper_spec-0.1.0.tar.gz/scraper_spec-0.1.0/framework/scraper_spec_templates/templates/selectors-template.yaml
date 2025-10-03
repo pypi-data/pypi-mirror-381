@@ -1,0 +1,14 @@
+site_config:
+  base_url: "<define target site here>"
+  selectors:
+    search_input: ""
+    search_button: ""
+    results_container: ""
+    result_items: ""
+    pagination: ""
+  filters:
+    exclude_patterns: []
+    include_patterns: []
+  params:
+    delay_ms: 1000
+    max_retries: 3
