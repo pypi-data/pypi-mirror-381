@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: agentic-commerce-protocol
+Version: 0.2.0
+Summary: Type definitions for the Agentic Commerce Protocol specification
+Author: Svix
+License: MIT
+Project-URL: Homepage, https://github.com/svix/agentic-commerce-protocol
+Project-URL: Documentation, https://developers.openai.com/commerce/guides/get-started
+Project-URL: Repository, https://github.com/svix/agentic-commerce-protocol
+Keywords: agentic-commerce,protocol,types,openai,stripe
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic>=2.11
+
+# Agentic Commerce Protocol - Python
+
+Type definitions for the [Agentic Commerce Protocol](https://developers.openai.com/commerce/guides/get-started) specification.
+
+This is an unofficial package maintained by [Svix](https://www.svix.com). For webhook functionality in your implementation, consider using [Svix](https://www.svix.com).
+
+## Installation
+
+```bash
+pip install agentic-commerce-protocol
+```
+
+## Usage
+
+```python
+from agentic_commerce_protocol import CheckoutSession, Order
+
+# Use the types in your implementation
+```
+
+## License
+
+MIT
+
