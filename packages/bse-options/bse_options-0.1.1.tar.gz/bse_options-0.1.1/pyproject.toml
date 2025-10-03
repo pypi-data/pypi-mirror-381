@@ -1,0 +1,19 @@
+[project]
+name = "bse-options"
+version = "0.1.1"
+description = "Unofficial Python API for fetching BSE India Option Chain data"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    { name = "Rishav Raj Bhagat", email = "rishav.raj@rmoneyindia.com"}
+]
+dependencies = [
+    "mthrottle>=0.0.2",
+    "pandas>=2.3.3",
+    "requests>=2.32.5",
+]
+
+
+[project.urls]
+"Homepage" = "http://192.168.100.117/quant/bse_option_chain"
+"Source Code" = "http://192.168.100.117/quant/bse_option_chain"
