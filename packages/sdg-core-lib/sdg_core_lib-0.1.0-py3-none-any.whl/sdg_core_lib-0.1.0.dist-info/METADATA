@@ -1,0 +1,9 @@
+Metadata-Version: 2.3
+Name: sdg-core-lib
+Version: 0.1.0
+Summary: Add your description here
+Author: emiliocimino
+Author-email: emiliocimino <emilio.cimino@outlook.it>
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
