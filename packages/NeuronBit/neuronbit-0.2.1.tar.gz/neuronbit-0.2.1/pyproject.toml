@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0", "numpy"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "NeuronBit"
+version = "0.2.1"
+description = "NeuronBit: A lightweight neural utilities toolkit"
+authors = [
+    { name="jedizacho11", email="you@example.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+keywords = ["neural-networks", "AI", "machine-learning", "deep-learning"]
+
+[project.urls]
+Homepage = "https://github.com/jedizacho11/NeuronBit"
+Repository = "https://github.com/jedizacho11/NeuronBit"
+Issues = "https://github.com/jedizacho11/NeuronBit/issues"
