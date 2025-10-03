@@ -1,0 +1,14 @@
+pygrestqlambda/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygrestqlambda/controller.py,sha256=pyOplu9mVb_JVvE7Y_eGc_2opK_QSiQQSrxPxsip4q8,2379
+pygrestqlambda/aws/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygrestqlambda/aws/lambda_function/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygrestqlambda/aws/lambda_function/json_transform.py,sha256=yAPwbTgCA3ANUm0-OCN0Itkuend046FDRPDR8VPyRAc,763
+pygrestqlambda/aws/lambda_function/rest_api_gateway_proxy_integration/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygrestqlambda/aws/lambda_function/rest_api_gateway_proxy_integration/request.py,sha256=XqkXCKu02WEK7mFht7wQ3LnadOniHiOHzzdklhbZSzo,2570
+pygrestqlambda/aws/lambda_function/rest_api_gateway_proxy_integration/response.py,sha256=ArA9YRfxHDgcPxClNMCEPYygQ-g81mW505Ad_EQxd8w,2442
+pygrestqlambda/db/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygrestqlambda/db/record.py,sha256=6HwvVIB8iJxxcoLeFgk51Gik_w7--w5fQzLN0ntB8iw,1527
+pygrestqlambda-0.0.9.dist-info/METADATA,sha256=yvZ3CYvsHMsDQjy4m4pEwPUugb-8r6ISq3hQ-Y2B3WA,3835
+pygrestqlambda-0.0.9.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pygrestqlambda-0.0.9.dist-info/licenses/LICENSE,sha256=8QeS1c5uv4AYoEG3M80OSCBuC_Pk-6vjU1VBUnlX2m0,1071
+pygrestqlambda-0.0.9.dist-info/RECORD,,
