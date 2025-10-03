@@ -1,0 +1,3 @@
+[console_scripts]
+agents-md-generator = github_research_mcp.agents_md:run_mcp
+github-research-mcp = github_research_mcp.main:run_mcp
