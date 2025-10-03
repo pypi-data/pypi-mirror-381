@@ -1,0 +1,2 @@
+[console_scripts]
+insthost = insthost.__main__:main
