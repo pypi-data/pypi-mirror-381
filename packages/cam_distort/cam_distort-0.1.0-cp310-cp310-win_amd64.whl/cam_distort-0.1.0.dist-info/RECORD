@@ -1,0 +1,6 @@
+cam_distort-0.1.0.dist-info/METADATA,sha256=AbmBcegjygVTlaAfiq2YjkLSE24cpU6o3Okp9Q9gSWc,510
+cam_distort-0.1.0.dist-info/WHEEL,sha256=Iz7QqxpWQRXToFIDkGspPPKDuV_klwuhW8ziiU5jhR8,96
+cam_distort-0.1.0.dist-info/licenses/LICENSE,sha256=9tglJoVdJAfid3CNdecBkw4O75ZvhmM127YjE59R47E,1077
+cam_distort/__init__.py,sha256=wSOsJdVuXEyQWi8NPjAbl-iTuiHvlm8dslP_lXagShA,127
+cam_distort/cam_distort.cp310-win_amd64.pyd,sha256=8zFkWNOtYP1VWFgctwy9ukTqUNDSlqFC7RX1aAI-3a8,457216
+cam_distort-0.1.0.dist-info/RECORD,,
