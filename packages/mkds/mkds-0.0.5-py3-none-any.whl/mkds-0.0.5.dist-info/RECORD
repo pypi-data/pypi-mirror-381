@@ -1,0 +1,9 @@
+mkds/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mkds/kcl.py,sha256=CReyL6XW9NAQMS5skN1At3KZ6cHlt11hO5v0DLXvSwE,17184
+mkds/nkm.py,sha256=GxG-QuzyN9b--xpP6r-jjNkOS7k7wdheJSPH5fTBsIE,40890
+mkds/types.py,sha256=X9KTYmUNH2PHfWZF7mbWfELU7ydBEEtIV0PhjzMMkpA,373
+mkds/utils.py,sha256=3lX88XMnBWja3VDZ22rXeBkYE4-lzftTgmlamEKZ0dA,2496
+mkds-0.0.5.dist-info/METADATA,sha256=AS6deZZVFYLQVHZoga5cJk-haTDtbCmKnH8pU7LREgo,460
+mkds-0.0.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mkds-0.0.5.dist-info/licenses/LICENSE.txt,sha256=UijN0eEPJRz7ThZE80HojCBBKeiixkVzwlbUSMtlBK0,9135
+mkds-0.0.5.dist-info/RECORD,,
