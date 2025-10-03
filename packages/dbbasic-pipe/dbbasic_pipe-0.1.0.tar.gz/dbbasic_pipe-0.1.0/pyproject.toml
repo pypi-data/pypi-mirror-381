@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dbbasic-pipe"
+version = "0.1.0"
+description = "SQL-style query optimization for Unix pipes with bidirectional flow control"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Dan Quellhorst", email = "dan@quellhorst.com"}
+]
+keywords = ["pipe", "unix", "pipeline", "backpressure", "streaming", "sql", "query"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Shells",
+    "Topic :: Utilities",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/askrobots/dbbasic-pipe"
+Repository = "https://github.com/askrobots/dbbasic-pipe"
+Issues = "https://github.com/askrobots/dbbasic-pipe/issues"
+
+[project.scripts]
+dbbasic-pipe = "dbbasic_pipe.cli:main"
+pipe-coordinator = "dbbasic_pipe.coordinator:main"
+pcat = "dbbasic_pipe.pcat:main"
+pfilter = "dbbasic_pipe.pfilter:main"
+plimit = "dbbasic_pipe.plimit:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dbbasic_pipe*"]
+
+[tool.setuptools.package-data]
+dbbasic_pipe = ["py.typed"]
