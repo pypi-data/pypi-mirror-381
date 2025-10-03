@@ -1,0 +1,11 @@
+nifty_anilist/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nifty_anilist/anilist_schema.graphql,sha256=TDso05NsRwJZr8yoLo-PunOEwe2z5BXC5xFM7XaQlv0,149527
+nifty_anilist/auth.py,sha256=8PZApLBPy1mOBipMmiYRpG4V3R1c9kqGOxJ9DSBt8r4,4031
+nifty_anilist/logging.py,sha256=AMoJjvkk02PV8qH4gYPSwTUAcaY5fDXLsrlYDgcvwvI,368
+nifty_anilist/request.py,sha256=C3PJxTgbRhmqinjR5tF-kDD2Y4tRcD2ptr1QqMzu5Pc,1540
+nifty_anilist/settings.py,sha256=eATZXD0Geur_K-lISfc2t8mWUbmDCebwGPUZo2LepZ8,1442
+nifty_anilist-0.1.0.dist-info/licenses/LICENSE,sha256=N5eytKODPTB9cWGe-QZbrKIC0O964R0hi5jJsmiAtZM,1094
+nifty_anilist-0.1.0.dist-info/METADATA,sha256=PadHx8qWimGB4aK8o7GxTxS5u2zaH_3wVS0EYe58VR0,696
+nifty_anilist-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+nifty_anilist-0.1.0.dist-info/top_level.txt,sha256=7u7zHpHt4KMZeI-uI6drx0CJ5D64OcN-gYM5qqbR3DI,14
+nifty_anilist-0.1.0.dist-info/RECORD,,
