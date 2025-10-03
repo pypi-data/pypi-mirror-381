@@ -1,0 +1,12 @@
+ci/transparency/ptag/types/__init__.py,sha256=rzniL240tEw6uLlfvFD4MeRe3ZTgpjD91XA5gTD-I7c,374
+ci/transparency/ptag/types/_meta.py,sha256=W5Pmbxb5EtFvOyC1PdcpxwoVu8riyTRcfkXFI7RWRVw,239
+ci/transparency/ptag/types/ptag.py,sha256=Vn8cn9QSBLFNlD3QWApaFXwvxIQimTgVLysd6-G7azQ,3948
+ci/transparency/ptag/types/ptag_series.py,sha256=4YCPCOKJ6J-yuxwcO-x7JH3j0V73OmDrR6vKkI-dYVI,2923
+civic_transparency_ptag_types-0.2.5.data/data/share/civic-transparency-ptag-spec/CITATION.cff,sha256=h_wHSqegjMNpeR2Km7rRL1NksX0kdA9NI3eHuy_SnQo,404
+civic_transparency_ptag_types-0.2.5.data/data/share/civic-transparency-ptag-spec/LICENSE,sha256=k5rPGIMKa2A4ucUornVXNNnn4ODYJzw44y1lSSgNMmE,1083
+civic_transparency_ptag_types-0.2.5.data/data/share/civic-transparency-ptag-spec/README.md,sha256=qSsmI0X1LAZX1-3PZGHrWOyJCS9uT2r1wr6JPlEpWLs,6095
+civic_transparency_ptag_types-0.2.5.dist-info/licenses/LICENSE,sha256=k5rPGIMKa2A4ucUornVXNNnn4ODYJzw44y1lSSgNMmE,1083
+civic_transparency_ptag_types-0.2.5.dist-info/METADATA,sha256=usgowYnprBOrZvnga7w6Im6MgjMvqydKA6gROt1ddNE,8719
+civic_transparency_ptag_types-0.2.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+civic_transparency_ptag_types-0.2.5.dist-info/top_level.txt,sha256=4Yz6-7DIt5CedRfM7s3dxN7HstNIP9KBMBXro1MaVu0,3
+civic_transparency_ptag_types-0.2.5.dist-info/RECORD,,
