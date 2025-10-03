@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: habitat-sim-uv-wheels-experimental
+Version: 0.2.2
+Summary: Experimental UV/pip-compatible wheel for habitat-sim (WSL2/Linux) - For TBP Monty
+Home-page: https://github.com/killerapp/habitat-sim
+Author: killerapp (UV/WSL2 build) - Original: FAIR A-STAR
+License: MIT
+Project-URL: Original Repository, https://github.com/facebookresearch/habitat-sim
+Project-URL: TBP Monty, https://github.com/thousandbrainsproject/tbp.monty
+Requires-Python: >=3.7
+Requires-Dist: attrs>=19.1.0
+Requires-Dist: gitpython
+Requires-Dist: imageio
+Requires-Dist: imageio-ffmpeg
+Requires-Dist: matplotlib
+Requires-Dist: numba
+Requires-Dist: numpy
+Requires-Dist: numpy-quaternion
+Requires-Dist: pillow
+Requires-Dist: scipy>=1.3.0
+Requires-Dist: tqdm
+
+Unofficial experimental wheel build of habitat-sim for UV/pip workflows. Built with WSL2/D3D12 support. See https://github.com/killerapp/habitat-sim for build details.
