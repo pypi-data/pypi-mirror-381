@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: aiotools
+Version: 2.0.0a4
+Summary: Idiomatic asyncio utilities
+Author-email: Joongi Kim <me@daybreaker.info>
+License-Expression: MIT
+Project-URL: Documentation, https://aiotools.readthedocs.io
+Project-URL: Tracker, https://github.com/achimnol/aiotools/issues
+Project-URL: Source, https://github.com/achimnol/aiotools
+Project-URL: Code Coverage, https://codecov.io/github/achimnol/aiotools
+Keywords: asyncio
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Framework :: AsyncIO
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
