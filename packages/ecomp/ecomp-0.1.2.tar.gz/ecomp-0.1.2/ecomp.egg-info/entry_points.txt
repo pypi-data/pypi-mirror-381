@@ -1,0 +1,2 @@
+[console_scripts]
+ecomp = ecomp.cli:main

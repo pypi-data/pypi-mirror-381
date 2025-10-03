@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecomp"
+dynamic = ["version"]
+description = "Lossless evolutionary-aware multiple sequence alignment compressor"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "Jacob L Steenwyk"}]
+dependencies = [
+    "biopython>=1.83",
+    "numpy>=1.24",
+    "bitarray>=2.8",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Documentation" = "https://example.com/docs"
+"Repository" = "https://example.com/repo"
+
+[project.scripts]
+ecomp = "ecomp.cli:main"
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+select = ["E", "F", "I", "UP", "B", "NP", "DTZ"]
+ignore = ["E203", "E501"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.setuptools.dynamic]
+version = {attr = "ecomp._version.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ecomp*"]
+
+[tool.coverage.run]
+branch = true
+source = ["ecomp"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "pytest-benchmark>=4.0",
+    "hypothesis>=6.100",
+    "black",
+    "ruff",
+    "isort",
+    "mypy",
+    "pre-commit",
+]
