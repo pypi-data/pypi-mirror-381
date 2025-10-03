@@ -1,0 +1,57 @@
+Source: igwn-lldd-common
+Section: python
+Priority: optional
+Maintainer: Rhys Poulton <rhys.poulton@ligo.org>
+Standards-Version: 4.1.1
+X-Python3-Version: >=3.6
+Homepage: https://git.ligo.org/computing/lowlatency/igwn-lldd-common
+Build-Depends:
+ debhelper (>= 10),
+ dh-python,
+ help2man,
+ python3-all,
+ python3-setuptools,
+ python3-pytest,
+ python3-configargparse,
+ python3-confluent-kafka,
+ python3-gpstime,
+ python3-watchdog,
+ python3-kafka,
+
+# -- python3-igwn-lldd-common -------------------------------------------------
+
+Package: python3-igwn-lldd-common
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ python3-configargparse,
+ python3-confluent-kafka,
+ python3-gpstime,
+ python3-watchdog,
+Description: International Gravitational Wave Network (IGWN) low latency data distribution
+ The IGWN - Low Latency Data Distribution (lldd) is software to distribute low
+ latency data used by the International Gravitational-Wave Observatory Network
+ (IGWN). This software currently utilizes the Apache Kafka event streaming
+ platform to distribute the low latency data by connecting to Kafka Broker(s)
+ to produce or consume Kafka messages containing the data.
+ .
+ This package provides the Python 3 library
+
+# -- igwn-lldd-common ---------------------------------------------------------
+
+Package: igwn-lldd-common
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ python3-igwn-lldd-common (= ${binary:Version}),
+ python3-pkg-resources,
+Description: International Gravitational Wave Network (IGWN) low latency data distribution
+ The IGWN - Low Latency Data Distribution (lldd) is software to distribute low
+ latency data used by the International Gravitational-Wave Observatory Network
+ (IGWN). This software currently utilizes the Apache Kafka event streaming
+ platform to distribute the low latency data by connecting to Kafka Broker(s)
+ to produce or consume Kafka messages containing the data.
+ .
+ This package provides the command-line interface `frame2kafka' and `kafka2frame'.

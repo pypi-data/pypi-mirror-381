@@ -1,0 +1,14 @@
+confluent-kafka
+configargparse
+gpstime
+watchdog
+
+[apache-kafka]
+kafka-python
+
+[test]
+kafka-python
+pytest>=3.9.1
+pytest-cov>=2.4.0
+pytest-console-scripts
+pytest-rerunfailures

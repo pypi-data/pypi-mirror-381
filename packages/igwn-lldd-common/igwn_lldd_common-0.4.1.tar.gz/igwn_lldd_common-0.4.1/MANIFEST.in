@@ -1,0 +1,5 @@
+include LICENSE README.md
+include python-igwn-lldd-common.spec
+recursive-include igwn_lldd_common/tests/data *gwf
+recursive-include igwn_lldd_common/tests *
+recursive-include debian *

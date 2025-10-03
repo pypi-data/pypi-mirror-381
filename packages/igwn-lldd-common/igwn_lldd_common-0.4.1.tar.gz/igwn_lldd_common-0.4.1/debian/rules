@@ -1,0 +1,33 @@
+#!/usr/bin/make -f
+
+export PYBUILD_TEST_PYTEST := 1
+export PYBUILD_AFTER_INSTALL := \
+	if [ ! -f {destdir}/usr/share/man/man1/frame2kafka.1 ]; then \
+	echo "Automatically generating man pages with help2man" && \
+	mkdir -p {destdir}/usr/share/man/man1 && \
+	echo "    frame2kafka..." && \
+	env PYTHONPATH={destdir}{install_dir} help2man \
+		--source $(DEB_SOURCE) \
+		--version-string $(DEB_VERSION_UPSTREAM) \
+		--no-info \
+		--no-discard-stderr \
+		--name "Frame Kafka producer" \
+		--output {destdir}/usr/share/man/man1/frame2kafka.1 \
+		{destdir}/usr/bin/frame2kafka; \
+	fi; \
+	if [ ! -f {destdir}/usr/share/man/man1/kafka2frame.1 ]; then \
+	echo "Automatically generating man pages with help2man" && \
+	mkdir -p {destdir}/usr/share/man/man1 && \
+	echo "    kafka2frame..." && \
+	env PYTHONPATH={destdir}{install_dir} help2man \
+		--source $(DEB_SOURCE) \
+		--version-string $(DEB_VERSION_UPSTREAM) \
+		--no-info \
+		--no-discard-stderr \
+		--name "Frame Kafka consumer" \
+		--output {destdir}/usr/share/man/man1/kafka2frame.1 \
+		{destdir}/usr/bin/kafka2frame; \
+	fi;
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild

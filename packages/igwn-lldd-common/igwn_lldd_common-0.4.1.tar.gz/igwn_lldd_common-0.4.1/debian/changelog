@@ -1,0 +1,17 @@
+igwn-lldd-common (0.4.1-1) unstable; urgency=low
+
+  * Release of version 0.4.1
+
+ -- Patrick Godwin <patrick.godwin@ligo.org>  Thu, 02 Oct 2025 11:59:35 -0700
+
+igwn-lldd-common (0.4.0-1) unstable; urgency=low
+
+  * Release of version 0.4.0
+
+ -- Rhys Poulton <rhys.poulton@ligo.org>  Sun, 17 Mar 2024 10:00:00 +0100
+
+igwn-lldd-common (0.3.0-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Rhys Poulton <rhys.poulton@ligo.org>  Mon, 04 Mar 2024 10:00:00 +0100

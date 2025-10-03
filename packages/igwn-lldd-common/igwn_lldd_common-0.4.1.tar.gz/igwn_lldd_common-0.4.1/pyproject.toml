@@ -1,0 +1,32 @@
+# -- build
+
+[build-system]
+requires = [
+    "setuptools >=38.2.5",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+# -- coverage
+
+[tool.coverage.paths]
+source = [
+    "igwn_lldd_common/",
+    "/usr/lib/python*/*-packages/igwn_lldd_common/",
+    "/usr/local/lib/python*/*-packages/igwn_lldd_common/",
+]
+
+[tool.coverage.run]
+source = ["igwn_lldd_common"]
+omit = ["igwn_lldd_common/tests/*"]
+concurrency = ["multiprocessing"]
+parallel = true
+sigterm = true
+
+# -- pytest
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "DEBUG"
+log_format = "[%(asctime)-15s] | %(name)s | %(levelname)+8s | %(message)s"
+log_date_format = "%Y-%m-%d %H:%M:%S.%f"
