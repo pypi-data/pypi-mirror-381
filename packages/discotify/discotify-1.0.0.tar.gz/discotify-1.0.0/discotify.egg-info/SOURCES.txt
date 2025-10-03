@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+discotify/__init__.py
+discotify/discotify.py
+discotify/main.py
+discotify.egg-info/PKG-INFO
+discotify.egg-info/SOURCES.txt
+discotify.egg-info/dependency_links.txt
+discotify.egg-info/entry_points.txt
+discotify.egg-info/requires.txt
+discotify.egg-info/top_level.txt
+tests/__init__.py
+tests/test_discotify.py
+tests/test_main.py
