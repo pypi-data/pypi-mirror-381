@@ -1,0 +1,8 @@
+{
+  "baseline_file": "<path>",
+  "current_file": "<path>",
+  "mismatches": [
+    { "field": "title", "expected": "X", "actual": "Y" },
+    { "field": "count", "expected": 20, "actual": 15 }
+  ]
+}

@@ -1,0 +1,20 @@
+# Scraper Spec Framework Configuration
+
+# Critical path phases (in order)
+# These represent the abstract workflow stages that every scraper must implement
+critical_path:
+  phases:
+    - Acquire      # Connect to data source (web page, API, feed, file)
+    - Identify     # Locate target elements or endpoints
+    - Collect      # Gather the raw data
+    - Extract      # Transform raw data into structured output
+
+# Override example (uncomment to customize):
+# critical_path:
+#   phases:
+#     - Connect
+#     - Discover
+#     - Retrieve
+#     - Transform
+#     - Validate
+

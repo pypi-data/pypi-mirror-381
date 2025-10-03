@@ -1,0 +1,13 @@
+{
+  "timestamp": "<iso8601>",
+  "site": "<site>",
+  "query": "<query>",
+  "steps": [
+    { "stage": "navigation", "status": "ok", "elapsed_ms": 0 },
+    { "stage": "search", "status": "ok", "elapsed_ms": 0 },
+    { "stage": "results", "status": "ok", "elapsed_ms": 0 },
+    { "stage": "extraction", "status": "ok", "elapsed_ms": 0 }
+  ],
+  "results": [],
+  "errors": []
+}
