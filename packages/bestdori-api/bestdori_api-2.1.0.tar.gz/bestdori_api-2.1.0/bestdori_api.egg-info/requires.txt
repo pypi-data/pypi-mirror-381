@@ -1,0 +1,9 @@
+typing_extensions>=4.5.0
+multidict>=5.2.0
+yarl>=1.6.3
+
+[aiohttp]
+aiohttp>=3.8.1
+
+[httpx]
+httpx>=0.22.0
