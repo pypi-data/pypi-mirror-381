@@ -1,0 +1,7 @@
+peakrdl-cli
+peakrdl-html~=2.10
+peakrdl-ipxact~=3.4
+peakrdl-regblock~=1.0
+peakrdl-systemrdl~=1.0
+peakrdl-uvm~=2.3
+peakrdl-cheader~=1.0
