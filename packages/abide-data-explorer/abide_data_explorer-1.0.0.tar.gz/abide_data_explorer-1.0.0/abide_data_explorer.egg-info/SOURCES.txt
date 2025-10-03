@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+abide_data_explorer/__init__.py
+abide_data_explorer/app.py
+abide_data_explorer/cli.py
+abide_data_explorer.egg-info/PKG-INFO
+abide_data_explorer.egg-info/SOURCES.txt
+abide_data_explorer.egg-info/dependency_links.txt
+abide_data_explorer.egg-info/entry_points.txt
+abide_data_explorer.egg-info/requires.txt
+abide_data_explorer.egg-info/top_level.txt
+abide_data_explorer/data/sample_data.csv

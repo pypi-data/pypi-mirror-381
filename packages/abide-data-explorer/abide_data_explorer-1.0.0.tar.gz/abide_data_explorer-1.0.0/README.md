@@ -1,0 +1,153 @@
+# ABIDE Data Explorer
+
+A comprehensive Streamlit application for exploring and analyzing ABIDE II (Autism Brain Imaging Data Exchange) Composite Phenotypic data.
+
+## Features
+
+- **📋 Data Overview**: View dataset statistics, missing values analysis, and basic information
+- **🔧 Data Processing**: Sort, filter, group, slice data, and convert data types
+- **📊 Visualization**: Create various plots including histograms, scatter plots, bar charts, box plots, and correlation heatmaps
+- **💾 File Operations**: Export data in multiple formats (CSV, JSON, Excel, Pickle) and perform file operations
+- **🖥️ User-Friendly Interface**: Intuitive Streamlit web interface with organized tabs
+
+## Installation
+
+### From PyPI (when published)
+
+```bash
+pip install abide-data-explorer
+```
+
+### From Source
+
+1. Clone or download the repository
+2. Navigate to the project directory
+3. Install the package:
+
+```bash
+pip install -e .
+```
+
+## Usage
+
+After installation, you can run the application from anywhere using:
+
+```bash
+abide-data-explorer
+```
+
+This will start the Streamlit server and open the application in your default web browser.
+
+### Using with Your Own Data
+
+1. Launch the application
+2. In the sidebar, select "Upload your own CSV"
+3. Upload your CSV file
+4. Explore your data using the various tabs and features
+
+### Using with Sample Data
+
+The package includes sample ABIDE II data for demonstration purposes. Select "Use sample data" in the sidebar to get started immediately.
+
+## Requirements
+
+- Python 3.7 or higher
+- Streamlit 1.28.0 or higher
+- Pandas 1.3.0 or higher
+- NumPy 1.21.0 or higher
+- Plotly 5.0.0 or higher
+- Matplotlib 3.5.0 or higher
+- OpenPyXL 3.0.0 or higher (for Excel export)
+
+## Data Format
+
+The application works with CSV files. For ABIDE II data, ensure your CSV contains standard phenotypic columns such as:
+
+- `Combined_ID`: Subject identifier
+- `Target`: Classification target (0/1 for control/ASD)
+- `AGE_AT_SCAN`: Age at scan time
+- `FIQ`, `VIQ`, `PIQ`: IQ measures
+- Other phenotypic measures
+
+## Features Overview
+
+### Data Overview Tab
+- Dataset preview with configurable number of rows
+- Basic statistics (rows, columns, memory usage)
+- Comprehensive summary statistics
+- Missing values analysis
+
+### Data Processing Tab
+- **Data Type Conversion**: Convert columns between int, float, and string types
+- **Sorting**: Sort data by any column in ascending or descending order
+- **Grouping**: Group data and apply aggregation functions (mean, sum, count, std)
+- **Filtering**: Filter data based on column values
+- **Slicing**: Extract specific row ranges from the dataset
+
+### Visualization Tab
+- **Histogram**: Distribution plots for numerical columns
+- **Scatter Plot**: Relationship between two numerical variables with optional color coding
+- **Bar Chart**: Categorical data visualization with automatic limiting for large categories
+- **Box Plot**: Distribution analysis with optional grouping
+- **Correlation Heatmap**: Correlation analysis for all numerical columns
+
+### File Operations Tab
+- **Export Data**: Save processed data in various formats (CSV, JSON, Excel, Pickle)
+- **File Operations**: Write binary files, append to text files, create XML output
+
+## Development
+
+### Project Structure
+
+```
+abide-data-explorer/
+├── abide_data_explorer/
+│   ├── __init__.py
+│   ├── app.py           # Main Streamlit application
+│   ├── cli.py           # Command-line interface
+│   └── data/
+│       └── sample_data.csv
+├── setup.py
+├── requirements.txt
+├── README.md
+└── MANIFEST.in
+```
+
+### Building the Package
+
+To build the package for distribution:
+
+```bash
+python setup.py sdist bdist_wheel
+```
+
+### Installing in Development Mode
+
+For development, install the package in editable mode:
+
+```bash
+pip install -e .
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Support
+
+For issues, questions, or contributions, please visit the project repository or contact the development team.
+
+## Acknowledgments
+
+- ABIDE (Autism Brain Imaging Data Exchange) for providing the dataset structure
+- Streamlit team for the excellent web app framework
+- Plotly for interactive visualizations
+- Pandas and NumPy teams for data manipulation tools
