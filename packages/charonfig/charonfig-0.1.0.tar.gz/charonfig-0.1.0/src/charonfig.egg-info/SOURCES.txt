@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+src/__init__.py
+src/cli.py
+src/charonfig.egg-info/PKG-INFO
+src/charonfig.egg-info/SOURCES.txt
+src/charonfig.egg-info/dependency_links.txt
+src/charonfig.egg-info/entry_points.txt
+src/charonfig.egg-info/requires.txt
+src/charonfig.egg-info/top_level.txt
