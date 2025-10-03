@@ -1,0 +1,41 @@
+# Read the Docs configuration file for QuScope v0.1.0
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
+
+version: 2
+
+# Build documentation in the docs/ directory with Sphinx
+sphinx:
+  configuration: docs/conf.py
+  fail_on_warning: false
+
+# Optionally build your docs in additional formats such as PDF and ePub
+formats:
+  - pdf
+  - epub
+
+# Build settings
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.11"
+  jobs:
+    pre_create_environment:
+      # Install system dependencies if needed
+      - echo "Setting up QuScope documentation build environment"
+    
+    post_checkout:
+      # Commands run after git checkout
+      - git submodule update --init --recursive
+    
+    pre_build:
+      # Commands run before building docs
+      - echo "Building QuScope v0.1.0 documentation"
+
+# Set the Python environment
+python:
+  install:
+    - method: pip
+      path: .
+      extra_requirements:
+        - docs
+    - requirements: docs/requirements.txt
