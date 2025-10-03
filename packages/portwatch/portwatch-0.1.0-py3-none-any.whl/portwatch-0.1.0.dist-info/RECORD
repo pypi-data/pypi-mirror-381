@@ -1,0 +1,11 @@
+portwatch/__init__.py,sha256=U91LEPuY_l-yauECgmdNjRVm6Piv5bT2zWNOS1xNfcY,313
+portwatch/cli.py,sha256=Cc8FtMPjhcW2PSEESmHYxf0zMdbvB_omnylzmr0O37Y,22312
+portwatch/notifyer.py,sha256=GzoupVv7mC0WR9C3HBXu8o4adjdOxJdoQCC7wn91JKM,21717
+portwatch/portconfig_screen.py,sha256=yTCYM3XkgovpjIZ7-QrheszPcIZvS2TpvXOaHMh-DVQ,5305
+portwatch/scaner.py,sha256=Pr9omR2mK6phX_Ram9YkhIdmZr40368Sxb0tt7BzkwM,56043
+portwatch/utils.py,sha256=Ukg6UU3YHL9ApZpyr-QrbcOIgiqZ9OTQG5cYJkN9_hU,24385
+portwatch-0.1.0.dist-info/METADATA,sha256=Lkt0ItE1rRN8PivTcaqhR_RAKWAMxxDb8AiJ4qz1X4U,6500
+portwatch-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+portwatch-0.1.0.dist-info/entry_points.txt,sha256=VUuKWISGP0r2HPBN-SfOcs_wpjjQzlPOYmAxoxBXGgM,49
+portwatch-0.1.0.dist-info/top_level.txt,sha256=yYVauG8vbbB1zt6QcPum5fMpqstZUiJPP8DdLLTsk4I,10
+portwatch-0.1.0.dist-info/RECORD,,
