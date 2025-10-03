@@ -1,0 +1,27 @@
+[build-system]
+requires = ["uv_build>=0.8.22,<0.9.0"]
+build-backend = "uv_build"
+
+[project]
+name = "pawdf"
+version = "0.1.0"
+description = "pdf tools"
+authors = [
+    { name = "PawRequest", email = "pawdf+pawrequest@users.noreply.github.com" }
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+dependencies = [
+    'pypdf',
+]
+[project.optional-dependencies]
+cmenu = ["context-menu"]
+
+
+[project.scripts]
+add-menu = "pdf_tools.array_pdf.array_cm:add_menu"
+remove-menu = "pdf_tools.array_pdf.array_cm:remove_menu"
+print-array = "pdf_tools.array_pdf:main"
+
+[tool.ruff]
+line-length = 120
