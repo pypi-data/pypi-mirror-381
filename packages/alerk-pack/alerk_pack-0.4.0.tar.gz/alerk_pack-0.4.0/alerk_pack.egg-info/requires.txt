@@ -1,0 +1,4 @@
+ksupk
+cryptography
+pydantic
+requests
