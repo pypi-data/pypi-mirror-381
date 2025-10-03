@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+MinPackage/__init__.py
+MinPackage/add.py
+MinPackage.egg-info/PKG-INFO
+MinPackage.egg-info/SOURCES.txt
+MinPackage.egg-info/dependency_links.txt
+MinPackage.egg-info/top_level.txt

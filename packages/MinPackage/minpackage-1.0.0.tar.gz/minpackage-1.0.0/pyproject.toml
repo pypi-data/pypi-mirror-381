@@ -1,0 +1,16 @@
+[project]
+name = "MinPackage"
+version = "1.0.0"
+description = "A simple package to add two numbers By ABU T..."
+readme = "README.md"
+authors = [
+  { name="ABU Taher", email="tahersumonabu@gmail.com" }
+]
+license = { text = "MIT" }
+dependencies = []
+requires-python = ">=3.7"
+
+[project.urls]
+# "Homepage" = "https://github.com/rupomsoft/addtwo"
+
+# API Token : pypi-AgEIcHlwaS5vcmcCJDBkMTQ4ODk5LTAxN2EtNDgwOC1iNTA3LTMxOWM3MDllZDgyNQACKlszLCI5NjQwYjFlOS1jNGY5LTRlYTgtOWI4ZC0yNmE1ODYyYTE1NjgiXQAABiCuJcvlwptSkv1YbezeQvpRZtjZFz2h7_JzlIF1b9s2GQ
