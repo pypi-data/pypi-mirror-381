@@ -1,0 +1,3 @@
+[console_scripts]
+acli=tergite_acl.tools.cli:cli
+
