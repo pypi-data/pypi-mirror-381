@@ -1,0 +1,17 @@
+LOGGING:
+  LEVEL: "INFO"  # Options: "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"
+
+# Configuration file for applydir, defining validation and application settings.
+validation:
+  non_ascii:
+    default: warning
+    rules:
+      - path:
+        action: error
+      - extensions: [".py", ".js"]
+        action: error
+      - extensions: [".md", ".markdown"]
+        action: ignore
+      - extensions: [".json", ".yaml"]
+        action: warning
+  allow_file_deletion: true
