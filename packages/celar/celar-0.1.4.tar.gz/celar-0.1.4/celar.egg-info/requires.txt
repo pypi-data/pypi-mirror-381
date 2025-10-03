@@ -1,0 +1,6 @@
+requests
+questionary
+textual
+textual-image
+textual-fspicker
+Pillow
