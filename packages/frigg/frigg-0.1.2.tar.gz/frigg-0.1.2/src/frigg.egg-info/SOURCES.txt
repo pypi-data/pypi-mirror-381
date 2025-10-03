@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/frigg.egg-info/PKG-INFO
+src/frigg.egg-info/SOURCES.txt
+src/frigg.egg-info/dependency_links.txt
+src/frigg.egg-info/requires.txt
+src/frigg.egg-info/top_level.txt
+src/frigg/common_crawl/extractors/audio.py
+src/frigg/common_crawl/extractors/base.py
+src/frigg/common_crawl/extractors/image.py
+src/frigg/common_crawl/extractors/text.py
+src/frigg/common_crawl/extractors/video.py
