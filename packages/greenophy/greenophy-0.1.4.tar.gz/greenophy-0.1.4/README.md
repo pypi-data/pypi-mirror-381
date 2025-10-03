@@ -1,0 +1,39 @@
+# Greenophy
+
+Python helper for calling the hosted Greenophy ESG substantiveness API.
+
+## Installation
+
+```bash
+pip install .
+```
+
+## Usage
+
+```python
+from greenophy import SubstantivenessClient
+
+# Uses the default hosted base URL. Add an API key if your partner token requires it.
+client = SubstantivenessClient(api_key="your-shared-token")
+
+results = client.classify_esg_text("We transitioned 70% of our fleet to EVs in 2023.\nWe value teamwork.")
+for item in results:
+    print(item.index, item.label_name, item.sentence)
+```
+
+Use `client.close()` when you are done (or create it with a context manager).
+
+### Generic classification
+
+Need a neutral rubric instead of the ESG-focused labels? Call `classify_generic_text("...")`, which targets `/api/generic_classification`.
+
+### Environment-variable configuration
+
+You can also set connection details once for the whole environment. Override the hosted endpoint only if you are targeting a private deployment.
+
+```bash
+export GREENOPHY_API_KEY="your-shared-token"
+# export GREENOPHY_API_BASE_URL="https://your-private-service"  # optional
+```
+
+Then simply instantiate `SubstantivenessClient()` without arguments.
