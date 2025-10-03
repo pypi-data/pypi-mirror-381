@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: sinesurge-vst
+Version: 0.2
+Summary: Python bindings for c++ VST Instrument Host
+Author: sinesurge
+Dynamic: author
+Dynamic: summary

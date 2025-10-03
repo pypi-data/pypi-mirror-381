@@ -1,0 +1,7 @@
+setup.py
+/Volumes/KUSHS DRIVE/SinesurgeHost/Source/PluginHost.cpp
+sinesurge_vst.egg-info/PKG-INFO
+sinesurge_vst.egg-info/SOURCES.txt
+sinesurge_vst.egg-info/dependency_links.txt
+sinesurge_vst.egg-info/not-zip-safe
+sinesurge_vst.egg-info/top_level.txt
