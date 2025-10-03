@@ -1,0 +1,13 @@
+[project]
+name = "fpg-cli"
+version = "0.2.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.32.5",
+    "typer>=0.19.2",
+]
+
+[project.scripts]
+fpg = "fpg_cli.main:app"
