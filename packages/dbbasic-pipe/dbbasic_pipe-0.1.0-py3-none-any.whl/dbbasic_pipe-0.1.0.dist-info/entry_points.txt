@@ -1,0 +1,6 @@
+[console_scripts]
+dbbasic-pipe = dbbasic_pipe.cli:main
+pcat = dbbasic_pipe.pcat:main
+pfilter = dbbasic_pipe.pfilter:main
+pipe-coordinator = dbbasic_pipe.coordinator:main
+plimit = dbbasic_pipe.plimit:main
