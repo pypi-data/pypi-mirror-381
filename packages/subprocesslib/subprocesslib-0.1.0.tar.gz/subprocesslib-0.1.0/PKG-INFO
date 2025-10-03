@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: subprocesslib
+Version: 0.1.0
+Summary: Object-oriented subprocess
+Author: Antoine Cezar
+Author-email: Antoine Cezar <antoine@cezar.fr>
+License-Expression: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.12
+Project-URL: Changelog, https://gitlab.com/chwitlabs/subprocesslib/-/blob/main/CHANGELOG.md
+Project-URL: Documentation, https://gitlab.com/chwitlabs/subprocesslib
+Project-URL: Homepage, https://gitlab.com/chwitlabs/subprocesslib
+Project-URL: Issues, https://gitlab.com/chwitlabs/subprocesslib/-/issues
+Project-URL: Repository, https://gitlab.com/chwitlabs/subprocesslib
+Description-Content-Type: text/markdown
+
+# Subprocesslib
+
+`subprocesslib` is a Python library that aims to be like `pathlib` but for the `subprocess` module.
+
+## Usage
+
+Here's a simple example of how to use SubprocessLib:
+
+```python
+from subprocesslib import Command
+
+command = Command('tail', '-n', 5, '/var/log/syslog')
+print(command)  # Command('tail', '-n', '5', '/var/log/syslog')
+print(isinstance(command, tuple))  # True
+print(str(command))  # "tail -n 5 /var/log/syslog" (using `shlex.join`)
+
+# sync methods
+command.spawn()  # same as `subprocess.Popen(...)`
+command.run()  # same as `subprocess.run(...)`
+command.output()  # same as `subprocess.check_output(...)`
+
+# async methods
+await command.spawn_async()  # Same as `asyncio.create_subprocess_exec(...)`
+```
+
+# Todo
+
+- [ ] `await command.run_async()`
+- [ ] `await command.output_async()`
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
