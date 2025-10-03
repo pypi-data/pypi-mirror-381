@@ -1,0 +1,17 @@
+checklist/__init__.py,sha256=s7D75RGd06Vn1eYlrsdNT4HQFMhtc7RcCjhRvVM_vDM,110
+checklist/macros.py,sha256=I_mqoqk0jNnNeiC5TG80ogqD9co6_u3vijmGZDADEhk,16345
+checklist/plugin.wk,sha256=iYs2_VXKG6D9WYcI150LL5o_aubs-KBaJ9k3bEYyfyg,1467
+checklist/htdocs/checklist.css,sha256=QUEIKuhmVQJMeDfByWBZHuq2I5DQ2Qyd7ZfAiOxw4tw,2573
+checklist/htdocs/checklist.png,sha256=F-0kEi8muZ5P-ooamsv8ABV4VT2JKptKkL11jQ-rKDw,1369
+checklist/htdocs/extra.js,sha256=lI2hnVVMFJtwtV0qi4rsrbOUbf6yddrpiXzkcxg0htg,1337
+checklist/htdocs/menu.css,sha256=mq8cwzWM2wGQHr0jR6GSTo6jdzqbRHm71UQdl85-kaQ,158
+checklist/htdocs/menu.js,sha256=sylwIKhS98D3j5qcd5e5XkPCNSdB-zgRtP16TxZu1fY,930
+checklist/htdocs/save.js,sha256=dAQXdynhKS_kFPpojcYkxw_UN9KVr1cYDArPIOe54YI,2482
+checklist/upgrades/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+checklist/upgrades/db2.py,sha256=Lb9duHnkkCxJcYh4huldy65cShGVEjjEEO5c0Caq814,81
+TracChecklist-0.3.0.dist-info/LICENSE,sha256=WP_GRcnVnj0f1ro6V5Bm54MK3Indtv3kcOzf5PM5iIY,1070
+TracChecklist-0.3.0.dist-info/METADATA,sha256=gLmZ7M_aotJSx8DbBsNGjRXe76lRo9Bs6aYmVFEpVsk,3376
+TracChecklist-0.3.0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+TracChecklist-0.3.0.dist-info/entry_points.txt,sha256=lYW8T2YI_D9dSnF8fJvZjy1NxXwysr5-_IKNA8AU5hA,87
+TracChecklist-0.3.0.dist-info/top_level.txt,sha256=ttL_jG5IT4NsolPsOuNvVx_4MGgAgMvsOYZZUOpko0g,10
+TracChecklist-0.3.0.dist-info/RECORD,,
