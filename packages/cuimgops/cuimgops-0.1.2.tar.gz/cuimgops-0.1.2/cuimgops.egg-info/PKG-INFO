@@ -1,0 +1,99 @@
+Metadata-Version: 2.4
+Name: cuimgops
+Version: 0.1.2
+Summary: CUDA accelerated image processing operations with Python bindings.
+Home-page: https://github.com/mightycandle
+Author: Sashank Nimmagadda
+Keywords: cuda image-processing gpu numpy python c++
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: C
+Classifier: Programming Language :: C++
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Provides-Extra: dev
+Requires-Dist: matplotlib; extra == "dev"
+Requires-Dist: pillow; extra == "dev"
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# cuimgops
+
+CUDA-accelerated image augmentation operations for Python.
+
+## Features
+
+- Horizontal flip
+- Vertical flip
+- Gaussian noise
+- Edge detection
+- Blur (smoothing)
+- Sharpening
+
+## Installation
+
+```bash
+pip install cuimgops
+```
+
+## Requirements
+
+- CUDA-capable GPU
+- CUDA Toolkit
+- Python >= 3.8
+- numpy
+- pillow
+
+## Usage
+
+```python
+from cuimgops import (
+    get_horizontal_flip,
+    get_vertical_flip,
+    get_gaussian_noise,
+    get_edge_detection,
+    get_blur,
+    get_sharpening
+)
+from PIL import Image
+
+img = Image.open("image.jpg")
+
+flipped = get_horizontal_flip(img)
+noisy = get_gaussian_noise(img, mean=0.0, stddev=15.0)
+edges = get_edge_detection(img)
+blurred = get_blur(img)
+sharpened = get_sharpening(img)
+```
+
+## Author
+
+sashank nimmagadda
+
+## License
+
+MIT
