@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: df2tables
+Version: 0.1.5
+Project-URL: Homepage, https://github.com/ts-kontakt/df2tables
+Project-URL: Issues, https://github.com/ts-kontakt/df2tables/issues
+License-File: LICENCE.txt
+Provides-Extra: license
+Requires-Dist: mit; extra == 'license'
+Provides-Extra: pandas
+Requires-Dist: pandas; extra == 'pandas'
+Provides-Extra: polars
+Requires-Dist: polars; extra == 'polars'
