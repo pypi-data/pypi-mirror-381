@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+pipOddEven/__init__.py
+pipOddEven/main.py
+pipOddEven.egg-info/PKG-INFO
+pipOddEven.egg-info/SOURCES.txt
+pipOddEven.egg-info/dependency_links.txt
+pipOddEven.egg-info/top_level.txt
