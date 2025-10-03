@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: wayflowcore
+Version: 0.0.0.post9999
+Summary: Reserved package.
+Project-URL: Homepage, https://pypi.org/project/wayflowcore/
+Project-URL: Repository, https://github.com/placeholder/wayflowcore
+Project-URL: Issues, https://github.com/placeholder/wayflowcore/issues
+Author: Oracle
+License: wayflowcore — Dual License Notice
+        
+        This project is dual-licensed. You may use this work under the terms of either:
+        
+        1) Apache License, Version 2.0 (Apache-2.0)
+           See the included file: LICENSE-APACHE
+           https://www.apache.org/licenses/LICENSE-2.0
+        
+        2) Universal Permissive License, Version 1.0 (UPL-1.0)
+           See the included file: LICENSE-UPL
+           https://opensource.org/license/upl-1-0/
+        
+        SPDX-License-Identifier: Apache-2.0 OR UPL-1.0
+License-File: LICENSE
+License-File: LICENSE-APACHE
+License-File: LICENSE-UPL
+Keywords: placeholder,reserved,wayflowcore
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: OSI Approved :: Universal Permissive License (UPL)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# wayflowcore
+
+Reserved package.

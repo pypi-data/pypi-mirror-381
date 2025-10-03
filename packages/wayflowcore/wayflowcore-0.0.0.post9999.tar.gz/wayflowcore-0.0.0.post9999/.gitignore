@@ -1,0 +1,82 @@
+*pyc
+*~
+
+results/
+
+build/
+*.egg-info/
+
+conf/*.csh
+
+spark/logs/
+spark/work/
+spark/conf/spark-env.sh
+spark/pids
+
+# OSX
+.DS_Store
+
+# UI logs
+ui/static/logs/*.log
+ui/static/logs/saved/feature_selection/*.log
+ui/static/logs/saved/hyperparameters/*.log
+ui/static/logs/saved/model_selection/*.log
+ui/static/logs/*.json
+ui/static/logs/yaml/*.yaml
+
+# AutoMS results
+results/model_selection/
+results/tune/
+# MS
+package/automl/data/model_selection/classification/accuracy/oaa/*.log
+
+# scripts
+scripts/oaa/mmdir_load/*.log
+
+# MLX
+scripts/mlx/logs/
+scripts/mlx/figures/
+mlx_package/mlx/javascript/node_modules/
+mlx_package/mlx/javascript/package-lock.json
+scripts/mlx/notebooks/.ipynb_checkpoints/
+
+# -- BETA related
+scripts/mlx/DLlist
+scripts/mlx/NDlist
+scripts/mlx/*_beta
+scripts/mlx/test
+scripts/mlx/test_label
+scripts/mlx/test_set
+scripts/mlx/train
+scripts/mlx/train_label
+scripts/mlx/train_set
+
+corpus/
+=======
+
+mlx_package/build/
+mlx_package/dist/
+scripts/mlx/launch/reports/
+scripts/mlx/launch/logs/
+scripts/mlx/launch/figures/
+tests/mlx/regression/regressoin_output/
+
+logs/
+
+mlx_package/config.json
+mlx_package/config.yml
+
+dataset/
+dataset/!dataset.py
+
+*.tgz
+*.tar.gz
+sqlite-autoconf-3260000
+xz-5.2.4
+libffi-3.2.1
+usr/
+Python-*
+py_*
+.ipynb_checkpoints/
+.vscode/
+Untitled*
