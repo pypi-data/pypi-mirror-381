@@ -1,0 +1,2 @@
+[console_scripts]
+grounding = grounding.cli:app
