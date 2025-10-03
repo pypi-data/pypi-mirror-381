@@ -1,0 +1,2 @@
+[console_scripts]
+checkdoc = checkdoc.__init__:main
