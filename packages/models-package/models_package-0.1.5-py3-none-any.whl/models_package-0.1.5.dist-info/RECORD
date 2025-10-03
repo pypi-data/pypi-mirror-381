@@ -1,0 +1,10 @@
+models_package/models/__init__.py,sha256=eC-43NnZlRq27voVkHQrkM5VX1P6_HzmGNHEqxHnxcI,384
+models_package/models/abstract_model.py,sha256=7s_NTQ-terrUDkGi4dmibC1YcJ0QrawxmcS0sKgfSmk,5168
+models_package/models/river_segmentation_model.py,sha256=eQUbMRNlqgpkGzwEH2MUZ--HPw12ufkyVtiZ2XkWhLk,10817
+models_package/models/water_segmentation_model.py,sha256=llOGswAtiGs9go8owYpkdswpuukI9pTvssnaiGD5ALg,42510
+models_package/schemas/__init__.py,sha256=pFqBzzlqO5o-McoQZhoKDwxcFJA80xZgKVEZbYjavO4,122
+models_package/schemas/models.py,sha256=UaC64inSqLJbORzoe6esWZwRF6GAX8BU0ibe0APd-CE,362
+models_package-0.1.5.dist-info/METADATA,sha256=2m0mUOo5EhYZ8gDqV4Ay7UM1CFYnOg-WgQhkviUmTD8,4830
+models_package-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+models_package-0.1.5.dist-info/licenses/LICENSE,sha256=NcwlxSeO1IfioZu1duCJDQlw9QCKJ5R_8LRrsCanaIo,1062
+models_package-0.1.5.dist-info/RECORD,,
