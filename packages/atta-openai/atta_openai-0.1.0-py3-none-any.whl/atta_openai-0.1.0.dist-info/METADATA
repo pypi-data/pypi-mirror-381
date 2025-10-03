@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: atta-openai
+Version: 0.1.0
+Summary: OpenAI integration for Atta
+Author: Florian Peschke
+Requires-Dist: atta>=0.3.0
+Requires-Dist: openai>=1.108.1
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
