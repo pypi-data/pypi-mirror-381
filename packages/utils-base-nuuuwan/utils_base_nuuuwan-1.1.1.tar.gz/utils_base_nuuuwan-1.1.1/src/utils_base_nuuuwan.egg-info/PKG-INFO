@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: utils_base-nuuuwan
+Version: 1.1.1
+Summary: Utilities that extend Standard Python.
+Home-page: https://github.com/nuuuwan/utils_base
+Author: Nuwan I. Senaratna
+Author-email: nuuuwan@gmail.com
+Project-URL: Bug Tracker, https://github.com/nuuuwan/utils_base/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: camelot-py
+Requires-Dist: opencv-python
+Requires-Dist: PyPDF2
+Requires-Dist: Pillow
+Requires-Dist: geopy
+Requires-Dist: python-docx
+Requires-Dist: pymupdf
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
