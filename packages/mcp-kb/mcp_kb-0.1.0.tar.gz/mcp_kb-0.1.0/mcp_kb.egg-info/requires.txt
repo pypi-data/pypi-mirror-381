@@ -1,0 +1,7 @@
+chromadb>=1.1.0
+httpx>=0.28.1
+mcp[cli]>=1.15.0
+
+[vector]
+tiktoken>=0.11.0
+langchain-text-splitters>=0.3.11
