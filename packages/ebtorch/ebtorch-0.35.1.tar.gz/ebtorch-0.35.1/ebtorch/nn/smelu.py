@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# ──────────────────────────────────────────────────────────────────────────────
+#
+#  Copyright (c) 2020-2025 Emanuele Ballarin <emanuele@ballarin.cc>
+#  Released under the terms of the MIT License
+#  (see: https://url.ballarin.cc/mitlicense)
+#
+# ──────────────────────────────────────────────────────────────────────────────
+#
+# SPDX-License-Identifier: MIT
+#
+# ──────────────────────────────────────────────────────────────────────────────
+# ~~ Imports ~~ ────────────────────────────────────────────────────────────────
+from torch import nn
+from torch import Tensor
+
+from .functional import smelu as fsmelu
+
+
+# ~~ Exports ~~ ────────────────────────────────────────────────────────────────
+__all__: list[str] = ["SmeLU"]
+
+
+class SmeLU(nn.Module):
+    """
+    Applies the SmeLU function element-wise,
+    defined after [Shamir & Ling, 2022]
+    """
+
+    def __init__(self, beta: float = 2.0) -> None:
+        super().__init__()
+        self._beta: float = beta
+
+    def forward(self, x_input: Tensor) -> Tensor:
+        return fsmelu(x_input, beta=self._beta)
