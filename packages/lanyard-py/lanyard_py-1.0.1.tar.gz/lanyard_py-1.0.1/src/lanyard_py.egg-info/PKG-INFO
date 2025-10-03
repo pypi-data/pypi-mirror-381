@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: lanyard-py
+Version: 1.0.1
+Summary: lanyard-py is a modern and fully asynchronous wrapper for Lanyard API written in Python 3.12+.
+Author-email: "Nikita (nerma-now)" <n.ermak2021@yandex.by>
+Maintainer-email: "Nikita (nerma-now)" <n.ermak2021@yandex.by>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/nerma-now/lanyard.py
+Project-URL: Documentation, https://nerma-now.github.io/lanyard.py/
+Keywords: api,lanyard,wrapper,asyncio
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: pydantic>=2.11.9
+Provides-Extra: dev
+Requires-Dist: black>=25.9.0; extra == "dev"
+Requires-Dist: mypy>=1.18.2; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=8.2.3; extra == "docs"
+Provides-Extra: test
+Requires-Dist: pytest>=8.4.2; extra == "test"
+Requires-Dist: pytest-asyncio>=1.2.0; extra == "test"
+Dynamic: license-file
+
+# lanyard.py
+
+<p align="center">
+    <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/lanyard-py?style=flat-square">
+    <img alt="GitHub License" src="https://img.shields.io/github/license/nerma-now/lanyard.py?style=flat-square">
+    <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/nerma-now/lanyard.py?style=flat-square">
+    <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/nerma-now/lanyard.py?style=flat-square">
+</p>
+
+lanyard.py is a modern and fully asynchronous wrapper for Lanyard API written in Python 3.12+.
+
+***Documentation***:
+
+— 🇺🇸 [English](https://nerma-now.github.io/lanyard.py/)
+
+### Thanks
+— [lanyard](https://github.com/Phineas/lanyard)
+
