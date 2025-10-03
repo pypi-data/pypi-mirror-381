@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/ca_certificates/__init__.py
+src/gnosis_py.egg-info/PKG-INFO
+src/gnosis_py.egg-info/SOURCES.txt
+src/gnosis_py.egg-info/dependency_links.txt
+src/gnosis_py.egg-info/top_level.txt
