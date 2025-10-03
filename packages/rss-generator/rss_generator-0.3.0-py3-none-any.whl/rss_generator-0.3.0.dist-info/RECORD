@@ -1,0 +1,14 @@
+rss_generator/__init__.py,sha256=qh8zvG9CdUZVjNUZs1sUnt2l5mj0Jukh4e3ERi7HGKM,101
+rss_generator/__main__.py,sha256=IvEdhPjxwxgnjkfsEUMo-2Kq1Wt3ybBBFtecveWAth0,123
+rss_generator/cli.py,sha256=04b1AcXlrebo2El6tJyAb7USTD-_i-0_dq4ZXhLKf2k,12221
+rss_generator/common.py,sha256=zTlFyMeZYyRjMdy7OK1RbmNKiZBFkh-d7vVWYrrkrMA,8428
+rss_generator/feed.xsl,sha256=4si4ObGKjf3V3cpj7wvnU9uojSHmyhHoTizE0FFNncM,5539
+rss_generator/parsers.py,sha256=TI4y6byXnCQRZueWQK7njzQvw6UTs1OhY2ldGQb4MuI,14970
+rss_generator/sites.py,sha256=wtZbwS2kILskIZbuhJVmebLpbTdRHe3ROrSX-3dbeos,1257
+rss_generator/standalone/__init__.py,sha256=SCkxbarsKJOq7obfBjsrM_5_zHgfbigBHWEvYEuU7is,51
+rss_generator/standalone/diariodominho.py,sha256=CZ897OqyqPYx9N_Aolphq-zO-whdPZFbrHjZdnytgSs,8338
+rss_generator/standalone/immich_blog.py,sha256=VJRUjj2MkB2JhkKt_g9qWT6sPcxCDsE6-sSB9cedOiY,7782
+rss_generator-0.3.0.dist-info/METADATA,sha256=kTiTDfV-n5oH0JWdqCufzfCddoyXqMPzufRv6vyB5s8,4384
+rss_generator-0.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+rss_generator-0.3.0.dist-info/entry_points.txt,sha256=jEkZ_hgL63puJVq8wkQN6gH3eZLInYyNRAxhgnxqW_g,57
+rss_generator-0.3.0.dist-info/RECORD,,
