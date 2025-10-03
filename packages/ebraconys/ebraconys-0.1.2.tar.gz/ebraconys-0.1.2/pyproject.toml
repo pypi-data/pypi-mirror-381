@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ebraconys"
+version = "0.1.2"
+description = "Utility functions for common Python tasks by Ebraconys Labs"
+readme = "README.md"
+authors = [
+    {name = "Ebraconys Team", email = "ebraconys@gmail.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+keywords = ["utilities", "helpers", "ebraconys-labs"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/ebraconys-labs/ebraconys"
+"Bug Reports" = "https://github.com/ebraconys-labs/ebraconys/issues"
+"Source Code" = "https://github.com/ebraconys-labs/ebraconys"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
