@@ -1,0 +1,16 @@
+demodapk/__init__.py,sha256=4aZRCtrjjX66U2gmSM7tvQ_7HiiYt2yjDbbXWynA6cI,54
+demodapk/__main__.py,sha256=UxLn5d8ShpQWKVoGbwiKopRwAMSCNIY1P5-k5wNF410,100
+demodapk/baseconf.py,sha256=YE4G4W8baU7Z7BpE7__yl4ca1CQy9xpUmABdH9acAZs,5433
+demodapk/cli.py,sha256=kg2yocO7--nu-SpfWDukvePtUWUkMFESDXu3DyGbtOI,2456
+demodapk/mark.py,sha256=OV3z5IzyEJRMjaPGxiCLlftal9b8Dvk_oeYfe_PRT2g,7249
+demodapk/mods.py,sha256=yrxYzMexSPvgBVl9rsHZTlRTtLlCQiqLd67hNf6q_BA,12756
+demodapk/patch.py,sha256=8Yo8M_5ZmZ9oubbjSmac1vGW6Bbpk04PIUPNSTh4_ac,16027
+demodapk/schema.json,sha256=t5loYY1FUWQtpeZT9BATb65zxSJYCyvNua1vLtGsHNI,16250
+demodapk/schema.py,sha256=N04CdmZ_i2G6KqcKYhufJaqLiH1uOqh4vN72-PpNqhc,2879
+demodapk/tool.py,sha256=2VhQRainwROEnMk2db9zVh3bnrpEwt-_uGEAVVwykNM,5207
+demodapk/utils.py,sha256=50tJc7DFYlRlACqtvyW__vLcdpRsODyP-cOj4N2PcXA,5574
+demodapk-1.1.14.dist-info/entry_points.txt,sha256=IHzVPJewX9Bw7__ANLyBoZikNRYGCcMAhXuWkNtQ_ic,46
+demodapk-1.1.14.dist-info/licenses/LICENSE.txt,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+demodapk-1.1.14.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+demodapk-1.1.14.dist-info/METADATA,sha256=fQVzPxK7M3dziLR49h0f029NaJ15cA3zUtuYYfbIqqA,3494
+demodapk-1.1.14.dist-info/RECORD,,
