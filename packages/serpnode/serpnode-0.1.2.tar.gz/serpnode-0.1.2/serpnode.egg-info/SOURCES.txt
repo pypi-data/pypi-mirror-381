@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+serpnode/__init__.py
+serpnode/client.py
+serpnode.egg-info/PKG-INFO
+serpnode.egg-info/SOURCES.txt
+serpnode.egg-info/dependency_links.txt
+serpnode.egg-info/requires.txt
+serpnode.egg-info/top_level.txt
