@@ -1,0 +1,13 @@
+ci/transparency/ptag/spec/__init__.py,sha256=eALT06GVsi_cqQwarqMw56qyORr7lFL-uErX9GPi5xE,137
+ci/transparency/ptag/spec/__pycache__/__init__.cpython-312.pyc,sha256=GVw3gtMQ9d6R4mAQSyp_m9rGviJ2jLHuIFPwc5V4UsA,373
+ci/transparency/ptag/spec/schemas/ptag.schema.json,sha256=ybRSc78U6GEyqrQ9WVtqtyLxf9sQ06WbrIoPRNzF3ww,6166
+ci/transparency/ptag/spec/schemas/ptag_api.openapi.yaml,sha256=S1oCv74Uh8lP6Y0jxk7lKC0ArIZA4GmxLPRILGuPbIo,8118
+ci/transparency/ptag/spec/schemas/ptag_series.schema.json,sha256=yZDeyIfMrniYqxUuEiCn-WypR6pPkepOwHzaB3Y1Qlk,7466
+civic_transparency_ptag_spec-0.2.5.data/data/share/civic-transparency-ptag-spec/CITATION.cff,sha256=d6woVoPCCJfy1wOSk6cGNsCs0DNFZzphdJcicUWQCZ0,437
+civic_transparency_ptag_spec-0.2.5.data/data/share/civic-transparency-ptag-spec/LICENSE,sha256=k5rPGIMKa2A4ucUornVXNNnn4ODYJzw44y1lSSgNMmE,1083
+civic_transparency_ptag_spec-0.2.5.data/data/share/civic-transparency-ptag-spec/README.md,sha256=CuM2a6wfLL-igBDXuQH1aXltufBfmrxJqTNzzOfH948,2963
+civic_transparency_ptag_spec-0.2.5.dist-info/licenses/LICENSE,sha256=k5rPGIMKa2A4ucUornVXNNnn4ODYJzw44y1lSSgNMmE,1083
+civic_transparency_ptag_spec-0.2.5.dist-info/METADATA,sha256=7LqomskiDDaJGf8Elz9YPhQVm2FDlrGmyIKefYJEAN8,5333
+civic_transparency_ptag_spec-0.2.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+civic_transparency_ptag_spec-0.2.5.dist-info/top_level.txt,sha256=4Yz6-7DIt5CedRfM7s3dxN7HstNIP9KBMBXro1MaVu0,3
+civic_transparency_ptag_spec-0.2.5.dist-info/RECORD,,
