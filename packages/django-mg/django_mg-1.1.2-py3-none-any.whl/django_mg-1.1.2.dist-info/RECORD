@@ -1,0 +1,12 @@
+django_mg/__init__.py,sha256=65aILLhipnaqOCq5WsK7EiT1-r-h6C-LGpz1pl5vQpM,437
+django_mg/__main__.py,sha256=LLqedzcUjSBguIjLKfXlOPG5jPKeFRz56wJaoPAfYI0,170
+django_mg/gui.py,sha256=hu0iLSvyN7LjMQhP3PLHijXCniyHAwOycc3llQ2hnEA,7483
+django_mg/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_mg/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_mg/management/commands/generate_model.py,sha256=MC1cyWYHBZN-qnZ_fUnZPhWeZARy6nXhi0twBzDq2MI,26205
+django_mg-1.1.2.dist-info/licenses/LICENSE.txt,sha256=Pw8UiyCTfhSqLWZ9wpuWti0tXFJLCwNDSbO2FzCm4Pk,1171
+django_mg-1.1.2.dist-info/METADATA,sha256=mvgeiSHC0xtZIudh9OiJZhA7uKM79zaOgvVXkylFKRE,18009
+django_mg-1.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+django_mg-1.1.2.dist-info/entry_points.txt,sha256=zawVjQWL2b8S7gX3iZG2wHJDb7DLscaKY-cqqB2i_6Y,94
+django_mg-1.1.2.dist-info/top_level.txt,sha256=SNia5IcuUsHsjPsZLfOFL_DDXknORFeQLobqCMVBPxY,10
+django_mg-1.1.2.dist-info/RECORD,,
