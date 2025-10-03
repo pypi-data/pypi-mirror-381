@@ -1,0 +1,8 @@
+langchain_deepseek-1.0.0a1.dist-info/METADATA,sha256=Dn39j-oEkcAqJGSQRDlO4BeOrTuRXBPMw-sB5wYuxXA,1095
+langchain_deepseek-1.0.0a1.dist-info/WHEEL,sha256=9P2ygRxDrTJz3gsagc0Z96ukrxjr-LFBGOgv3AuKlCA,90
+langchain_deepseek-1.0.0a1.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+langchain_deepseek-1.0.0a1.dist-info/licenses/LICENSE,sha256=2btS8uNUDWD_UNjw9ba6ZJt_00aUjEw9CGyK-xIHY8c,1072
+langchain_deepseek/__init__.py,sha256=IDzsv1zGJLcz5yeaTbtJjRmEPKrv76fSfhgZwY4Lsm4,382
+langchain_deepseek/chat_models.py,sha256=bLSvxTdXgsa1V7cSeigQQaz3BQlDh5jKkpm2vfhGclY,15291
+langchain_deepseek/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langchain_deepseek-1.0.0a1.dist-info/RECORD,,
