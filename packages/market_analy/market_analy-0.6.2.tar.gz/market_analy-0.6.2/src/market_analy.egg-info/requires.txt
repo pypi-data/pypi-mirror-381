@@ -1,0 +1,15 @@
+bqplot
+exchange-calendars
+Jinja2
+market-prices
+matplotlib
+numpy
+pandas
+traitlets
+tzdata
+ipyvuetify
+ipywidgets
+
+[jupyter]
+jupyter
+jupyterlab>=3.0
