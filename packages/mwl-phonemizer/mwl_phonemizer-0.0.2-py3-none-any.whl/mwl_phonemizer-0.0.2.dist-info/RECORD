@@ -1,0 +1,16 @@
+mwl_phonemizer/__init__.py,sha256=2cYPBEPlq3yXeVTPZsiWakKFfevK5pDniyxeIYH0kjs,4124
+mwl_phonemizer/base.py,sha256=4OWq3QsLa7n-FI8KkhwREtBP7-oPX3mcDygDuVlFqnM,4195
+mwl_phonemizer/central.json,sha256=E2_oT-s2dZo1Ev4RznsMByUqqQARRYhj44VCrWuoJjo,4299
+mwl_phonemizer/crf_mwl.py,sha256=8NENtZijfL1bivVcKa9rzGUeCn-1TJFFW1t8jWglEG4,13880
+mwl_phonemizer/epitran_mwl.py,sha256=jckpuA0h18T-08GolAMxtFzmyNnWIVG89-WxKdQ_kjs,25171
+mwl_phonemizer/espeak_mwl.py,sha256=llcdIqqpCjWOdSfWBuvLZUXoMKIRmCBRD5vcWT_ykZo,28331
+mwl_phonemizer/g2p.json,sha256=-gw1mv7QZ24xIZUQUTK6WSol9h7kGsd9LZ8UCBkX3KY,2191
+mwl_phonemizer/ngram_mwl.py,sha256=Ay8WD-29Ir0qh47McsVbp8_Po1xZtIoVXf_QWTV8UT0,19323
+mwl_phonemizer/orthography_hand_rules.py,sha256=0Z5PjQ-P85enOURz4K3mjFepv-tttzVJDUOycKvmJA8,35897
+mwl_phonemizer/raiano.json,sha256=wCb4OMsScKdItyncdG2wX97l3uCdIp3BxLGdTYf8Vuk,41
+mwl_phonemizer/sendinese.json,sha256=4nBNCghVKdw58ieQkt0ZzicE7F2_3XJHu0BrGpMGmkE,276
+mwl_phonemizer/version.py,sha256=3VJl8LuI8h2YTagVzxHd3WIW9PdukTkYDZ4kERzgG34,237
+mwl_phonemizer-0.0.2.dist-info/METADATA,sha256=GaG31HkYimh9ipzhEobapm7Cppat8GbcgOrtpGEAuHk,169
+mwl_phonemizer-0.0.2.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+mwl_phonemizer-0.0.2.dist-info/top_level.txt,sha256=9zp42ICgJO8UjlwffHqe2MNM-yv6xnB9Jc0OF1qChRE,15
+mwl_phonemizer-0.0.2.dist-info/RECORD,,
