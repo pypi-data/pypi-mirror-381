@@ -1,0 +1,2 @@
+[console_scripts]
+yaml-lex = yaml_lex:cli
