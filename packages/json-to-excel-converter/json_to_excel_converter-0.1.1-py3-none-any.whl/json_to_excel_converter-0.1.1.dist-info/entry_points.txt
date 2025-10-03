@@ -1,0 +1,2 @@
+[console_scripts]
+json-to-excel-converter = json_to_excel_converter:main
