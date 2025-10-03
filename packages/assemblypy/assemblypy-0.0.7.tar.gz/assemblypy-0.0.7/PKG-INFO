@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: assemblypy
+Version: 0.0.7
+Summary: Program Assembly in Python
+Author: Tamim Almutairi (tiktok:8ov.l)
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+License-File: license
+Dynamic: author
+Dynamic: classifier
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
