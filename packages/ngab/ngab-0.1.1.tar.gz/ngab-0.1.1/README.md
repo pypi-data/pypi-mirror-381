@@ -1,0 +1,148 @@
+### ngab — Noisy Graph Alignment Benchmark
+
+NGAB is a lightweight Python library for benchmarking graph neural networks (GNNs) on noisy graph alignment and matching tasks, and for pretraining GNNs with alignment-oriented objectives.
+
+It provides:
+- A lightweight dataset format (safetensors) for graph pairs, and utilities to download prepared datasets from the Hugging Face Hub.
+- Utilities to create your own graph-alignment datasets from existing datasets.
+- A consistent `torch`-based training loop and metrics for graph alignment (loss, LAP accuracy, top-k accuracy), enabling fast benchmarking of new architectures and pretraining GNNs for high-quality positional encodings.
+- A suite of GNN backbones (GCN, GAT, GATv2, GatedGCN, GIN, TAGCN, SGC, GraphGPS, PNA, PAN).
+
+
+This repository accompanies the paper `Graph Alignment for Benchmarking Graph Neural Networks and Learning Positional Encodings`. The GitHub repository is available at [Graph-Alignment-Benchmark](https://github.com/adrien-lagesse/graph-alignment-benchmark), where you can see how we used `ngab` to run the experiments. It includes helper scripts to generate datasets and Hydra-parameterized experiments for full reproducibility and automation.
+
+### Install
+
+Requirements: Python 3.12+, PyTorch 2.8+, and PyTorch Geometric 2.6+
+
+You can install the package with your preferred tool.
+
+```bash
+pip install ngab
+uv add ngab
+```
+
+This project uses additional PyG wheel links (see `pyproject.toml`) and depends on `torch-scatter`, `torch-sparse`, `torch-cluster`, and `torch-spline-conv`. Ensure that your PyTorch and CUDA versions are compatible with your environment.
+
+
+### Datasets
+
+Prepared datasets are hosted on the Hugging Face Hub under `alagesse/graph-alignment-benchmark-data`.
+
+- Hugging Face dataset page: `https://huggingface.co/datasets/alagesse/graph-alignment-benchmark-data`
+
+You can programmatically download a dataset by name using the package API:
+
+```python
+from ngab import download_dataset
+
+dataset_dir = download_dataset("zinc")  # returns a local path string
+print(dataset_dir)
+```
+
+This fetches the required `*.safetensors` files for both the training and validation splits into a local directory (by default `graph-alignment-benchmark-data/zinc`). If the files already exist locally and are complete, no download occurs.
+
+
+#### Generate your own datasets with `ngab.random`
+
+Use `ngab.random` to synthesize graph pairs for alignment tasks, or build new datasets from existing graphs.
+
+Available helpers:
+- `erdos_renyi(nb_graphs, order, p, directed=False, self_loops=False)`
+- `bernoulli_corruption(graphs, noise, directed=False, self_loops=False, type="add"|"add_remove")`
+- `uniform_sub_sampling(graph, n, num_nodes)`
+- `bfs_sub_sampling(graph, n, num_nodes, p=1.0)`
+
+Example: build equal-size graph pairs suitable for alignment training:
+
+```python
+import torch
+import ngab
+from ngab.random import erdos_renyi, bernoulli_corruption
+
+# 1) Generate base graphs (Erdős–Rényi)
+base_graphs = erdos_renyi(nb_graphs=10_000, order=64, p=0.08, directed=False, self_loops=False)
+
+# 2) Corrupt them (add/remove edges) to form paired graphs
+corrupted_graphs = bernoulli_corruption(base_graphs, noise=0.10, directed=False, self_loops=False, type="add_remove")
+
+# Now (base_graphs[i], corrupted_graphs[i]) form an aligned pair with the same number of nodes.
+# You can serialize pairs into `safetensors` using your own pipeline to match the `GADataset` file layout.
+```
+
+Example: derive many small graphs from a large graph:
+
+```python
+from ngab.random import uniform_sub_sampling, bfs_sub_sampling
+
+# Given a PyG Data object `big_graph`, create a batch of small induced subgraphs
+uniform_batch = uniform_sub_sampling(big_graph, n=512, num_nodes=64)
+bfs_batch = bfs_sub_sampling(big_graph, n=512, num_nodes=64, p=0.5)
+```
+
+### Benchmarking and Metrics
+
+During training, NGAB logs to Weights & Biases:
+- **loss**: alignment cross-entropy over the diagonal after masked softmax.
+- **LAP**: assignment accuracy from the Hungarian algorithm on softmax-normalized similarities.
+- **top_k**: mean recall at k for node assignments (top_1, top_3, top_5).
+
+#### Quick training with `TrainConfig`
+
+Use the built-in training loop to quickly benchmark or pretrain a custom model on any downloaded dataset.
+
+```python
+import pathlib
+import torch
+import ngab
+from ngab import TrainConfig, train_loop
+
+# 1) Download dataset locally (from Hugging Face)
+dataset_dir = ngab.download_dataset("zinc")
+
+# 2) Define your model (any class from ngab.models or your own torch.nn.Module)
+model = ngab.models.GCN(in_features=1, features=128, out_features=64, layers=4)
+
+# 3) Build the training configuration
+config = TrainConfig()
+config.model = model
+config.dataset = pathlib.Path(dataset_dir)
+config.experiment = "graph-alignment-benchmark-zinc"
+config.run_name = "gcn-zinc"
+config.epochs = 50
+config.batch_size = 128
+config.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+config.log_frequency = 5
+config.profile = False
+config.optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
+config.scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(config.optimizer, T_max=config.epochs)
+config.grad_clip = 1.0
+
+# 4) Train
+train_loop(config)
+```
+### Available Models
+
+Models are implemented with PyTorch Geometric and share a simple constructor interface; typical arguments include `in_features`, `features`, `out_features`, and `layers`. Available classes are exposed under `ngab.models`:
+
+- `GCN`, `GAT`, `GATv2`, `GatedGCN`, `GIN`, `TAGCN`, `SGC`, `GraphGPS`, `PNA`, `PAN`
+
+Example:
+
+```python
+import ngab
+model = ngab.models.GCN(in_features=1, features=128, out_features=64, layers=4)
+```
+
+
+### Links
+
+- GitHub repository: `https://github.com/adrien-lagesse/graph-alignment-benchmark`
+- Hugging Face dataset: `https://huggingface.co/datasets/alagesse/graph-alignment-benchmark-data`
+
+
+### License
+
+MIT License — see `LICENSE`.
+
+

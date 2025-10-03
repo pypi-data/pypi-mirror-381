@@ -1,0 +1,74 @@
+[project]
+name = "ngab"
+version = "0.1.1"
+description = "Noisy Graph Alignment Benchmark (NGAB) - a library for benchmarking GNNs on graph alignment tasks and generating positional encodings."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Adrien Lagesse", email = "contact@adrien-lagesse.io" }
+]
+requires-python = ">=3.12"
+
+dependencies = [
+    "huggingface-hub>=0.35.3",
+    "jaxtyping>=0.3",
+    "numpy>=2.3",
+    "safetensors>=0.6",
+    "scipy>=1.16",
+    "torch>=2.8",
+    "torch-geometric>=2.6",
+    "torch-scatter",
+    "torch-sparse",
+    "torch-cluster",
+    "torch-spline-conv",
+    "wandb>=0.21",
+    "rdkit>=2025.3",
+]
+
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+
+keywords = [
+    "Graphs",
+    "Graph Neural Networks",
+    "GNN",
+    "Combinatorial Optimization",
+    "Benchmark",
+    "Pytorch",
+    "Torch-Geometric",
+    "Graph Alignment",
+    "Positional Encodings",
+    "Pre-training",
+]
+
+[project.urls]
+Homepage = "https://github.com/adrien-lagesse/graph-alignment-benchmark"
+Repository = "https://github.com/adrien-lagesse/graph-alignment-benchmark"
+Issues = "https://github.com/adrien-lagesse/graph-alignment-benchmark/issues"
+Documentation = "https://github.com/adrien-lagesse/graph-alignment-benchmark#readme"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ngab"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/ngab",
+    "README.md",
+    "LICENSE",
+]
+
+[tool.uv]
+find-links = [
+    "https://data.pyg.org/whl/torch-2.8.0+cu129.html",
+]
