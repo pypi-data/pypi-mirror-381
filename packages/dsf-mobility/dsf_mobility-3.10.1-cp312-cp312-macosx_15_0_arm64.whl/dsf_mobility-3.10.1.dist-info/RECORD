@@ -1,0 +1,11 @@
+dsf.pyi,sha256=grBrmtTtXmnIHexVbcG7_EZIxSt85oeLYZ8dy2tmegI,34311
+dsf.so,sha256=zhrKIw5pE0Sfazi4-t5C95-Qxmq8Hmzybk9LKheqLa4,1424624
+dsf_mobility-3.10.1.dist-info/RECORD,,
+dsf_mobility-3.10.1.dist-info/WHEEL,sha256=aJP9VHfFEgbnUsD-lsidbChggV8qvE5_IQddd2pzloY,136
+dsf_mobility-3.10.1.dist-info/top_level.txt,sha256=hrm-wnKtms7vAmVuHX6jIj3C6G5p3uKCiXZH4HwJ4LA,4
+dsf_mobility-3.10.1.dist-info/METADATA,sha256=ZFyZ8ma3iHBazn1o2y4yQypdwTgFiRogj2PoiLtkzC8,6631
+dsf_mobility-3.10.1.dist-info/licenses/LICENSE,sha256=nlArp1_Q_TDOpUl7Q4pLwS8H8CvJMqemBB_WoYuPRqA,20848
+dsf_mobility.dylibs/libfmt.11.2.0.dylib,sha256=BUM5m4DS3JUjvYkdWEiGjbPqFWYzQ5S88bsP552tG6M,171152
+dsf_mobility.dylibs/libspdlog.1.15.3.dylib,sha256=Jkk8W7IhJRBlGc4ie6q--KsGzl1-wBGyVaZmz6vIzvM,451824
+dsf_mobility.dylibs/libtbb.12.16.dylib,sha256=Y7qfw4LJYxAldxR1d9_PXLE3rCDxHEIowKZIdJ81yV4,339056
+dsf_mobility.dylibs/libsimdjson.26.0.0.dylib,sha256=KCxfRWTgAiVHzaTAjScid3urXNQFVKkj5b0Erd1lKfM,112992
