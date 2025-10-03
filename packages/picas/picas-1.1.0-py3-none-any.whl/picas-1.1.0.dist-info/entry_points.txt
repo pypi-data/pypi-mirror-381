@@ -1,0 +1,3 @@
+[console_scripts]
+picas-cli=picas.apps.picas_cli:main
+
