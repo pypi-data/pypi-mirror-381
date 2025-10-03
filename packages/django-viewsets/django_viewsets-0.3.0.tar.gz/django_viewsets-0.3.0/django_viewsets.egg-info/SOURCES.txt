@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+django_viewsets.egg-info/PKG-INFO
+django_viewsets.egg-info/SOURCES.txt
+django_viewsets.egg-info/dependency_links.txt
+django_viewsets.egg-info/requires.txt
+django_viewsets.egg-info/top_level.txt
+viewsets/__init__.py
+viewsets/base.py
+viewsets/model.py
+viewsets/patterns.py
