@@ -1,0 +1,42 @@
+Metadata-Version: 2.4
+Name: fabricconnector
+Version: 0.0.1
+Summary: Python connector library for Microsoft Fabric notebooks (placeholder release)
+Home-page: https://www.powerbiconnector.nl
+Author: Davista
+Author-email: support@powerbiconnector.nl
+License: Proprietary
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Topic :: Office/Business :: Financial :: Accounting
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
+
+# FabricConnector
+
+This is a placeholder release to claim the package name on PyPI.
+
+The full production release is coming soon with:
+- Connect to Exact Online, Twinfield and AFAS accounting systems
+- Stream large datasets with automatic pagination
+- Automatic Lakehouse merge operations
+- Incremental refresh support
+
+For more information, visit: https://www.powerbiconnector.nl
+
+## License
+
+Proprietary - Requires paid subscription
