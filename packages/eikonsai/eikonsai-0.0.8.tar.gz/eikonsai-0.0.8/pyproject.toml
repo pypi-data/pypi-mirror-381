@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "eikonsai"
+version = "0.0.8"
+authors = [
+    {name="Tariro Mashongamhende", email="sluggailtd@gmail.com"},
+]
+description = "A simple python SDK to connect with the Eikon geospatial platform."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent"
+]
+dependencies=[
+    "numpy == 2.0.2",
+    "pandas == 2.2.3",
+    "requests == 2.32.3",
+    "pillow == 10.4.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/Kennedy821/eikon"
+Issues = "https://github.com/Kennedy821/eikon"
