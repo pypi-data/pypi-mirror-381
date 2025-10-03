@@ -1,0 +1,64 @@
+<odoo>
+    <data noupdate="1">
+        <record id="regional_community_andalucia" model="regional.community.deduction">
+            <field name="code">01</field>
+            <field name="name">ANDALUCÍA</field>
+        </record>
+        <record id="regional_community_aragon" model="regional.community.deduction">
+            <field name="code">02</field>
+            <field name="name">ARAGÓN</field>
+        </record>
+        <record id="regional_community_asturias" model="regional.community.deduction">
+            <field name="code">03</field>
+            <field name="name">PRINCIPADO DE ASTURIAS</field>
+        </record>
+        <record id="regional_community_baleares" model="regional.community.deduction">
+            <field name="code">04</field>
+            <field name="name">ILLES BALEARS</field>
+        </record>
+        <record id="regional_community_canarias" model="regional.community.deduction">
+            <field name="code">05</field>
+            <field name="name">CANARIAS</field>
+        </record>
+        <record id="regional_community_cantabria" model="regional.community.deduction">
+            <field name="code">06</field>
+            <field name="name">CANTABRIA</field>
+        </record>
+        <record id="regional_community_clm" model="regional.community.deduction">
+            <field name="code">07</field>
+            <field name="name">CASTILLA-LA MANCHA</field>
+        </record>
+        <record id="regional_community_cyl" model="regional.community.deduction">
+            <field name="code">08</field>
+            <field name="name">CASTILLA Y LEÓN</field>
+        </record>
+        <record id="regional_community_catalunya" model="regional.community.deduction">
+            <field name="code">09</field>
+            <field name="name">CATALUÑA</field>
+        </record>
+        <record id="regional_community_extremadura" model="regional.community.deduction">
+            <field name="code">10</field>
+            <field name="name">EXTREMADURA</field>
+        </record>
+        <record id="regional_community_galicia" model="regional.community.deduction">
+            <field name="code">11</field>
+            <field name="name">GALICIA</field>
+        </record>
+        <record id="regional_community_madrid" model="regional.community.deduction">
+            <field name="code">12</field>
+            <field name="name">MADRID</field>
+        </record>
+        <record id="regional_community_murcia" model="regional.community.deduction">
+            <field name="code">13</field>
+            <field name="name">REGIÓN DE MURCIA</field>
+        </record>
+        <record id="regional_community_larioja" model="regional.community.deduction">
+            <field name="code">16</field>
+            <field name="name">LA RIOJA</field>
+        </record>
+        <record id="regional_community_valencia" model="regional.community.deduction">
+            <field name="code">17</field>
+            <field name="name">COMUNIDAD VALENCIANA</field>
+        </record>
+    </data>
+</odoo>

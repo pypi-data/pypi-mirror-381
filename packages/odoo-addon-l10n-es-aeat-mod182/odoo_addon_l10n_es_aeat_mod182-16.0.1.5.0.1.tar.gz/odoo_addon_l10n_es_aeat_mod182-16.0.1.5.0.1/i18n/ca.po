@@ -1,0 +1,2291 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_es_aeat_mod182
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-04 13:43+0000\n"
+"PO-Revision-Date: 2024-10-04 13:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__deduction_percentage
+msgid ""
+"\n"
+"            % DE DEDUCCIÓN\n"
+"\n"
+"            Cuando se haya hecho constar en el campo\n"
+"            \"NATURALEZA DEL DECLARANTE\" (posición 160) del\n"
+"            tipo de registro 1, el dígito numérico indicativo de la\n"
+"            naturaleza del declarante 1, 2 o 4, se hará constar el\n"
+"            porcentaje de deducción aplicable a los donativos\n"
+"            efectuados. En particular, si se hubiera consignado un 1 en\n"
+"            dicho campo, el porcentaje que deberá declararse en\n"
+"            relación con los contribuyentes del Impuesto sobre la Renta\n"
+"            de las Personas Físicas será el que corresponda a la parte\n"
+"            de la base de deducción que exceda de 150 euros. Si la\n"
+"            base de la deducción no excede de esta cantidad, el\n"
+"            porcentaje que deberá declararse en relación con estos\n"
+"            contribuyentes será el establecido en el artículo 19 de la\n"
+"            Ley 49/2002. De la misma forma se consignará en el caso\n"
+"            de que se haya hecho constar en el campo “NATURALEZA\n"
+"            DEL DECLARANTE” (posición 160) del tipo de registro 1 el\n"
+"            dígito 4, y en el campo “CLAVE” (posición 78) del tipo de\n"
+"            registro 2 la letra G.\n"
+"\n"
+"            Para el resto de claves (dígito 3 en la posición 160\n"
+"            “NATURALEZA DEL DECLARANTE” del tipo de registro 1)\n"
+"            se rellenará a blancos.\n"
+"\n"
+"            Este campo se subdivide en otros dos:\n"
+"\n"
+"            79-81 ENTERO Numérico Parte entera:\n"
+"                  Se consignará la parte entera el\n"
+"                  porcentaje (si no tiene, consignar CEROS).\n"
+"\n"
+"            82-83 DECIMAL Numérico Parte decimal:\n"
+"                  Se consignará la parte decimal del\n"
+"                  porcentaje (si no tiene, consignar CEROS).\n"
+"        "
+msgstr ""
+"\n"
+"            % DE DEDUCCIÓ\n"
+"\n"
+"            Quan s'hagi fet constar al camp\n"
+"            \"NATURALESA DEL DECLARANT\" (posició 160) del\n"
+"            tipus de registre 1, el dígit numèric indicatiu de la\n"
+"            naturalesa del declarant 1, 2 o 4, es farà constar el\n"
+"            percentatge de deducció aplicable als donatius\n"
+"            efectuats. En particular, si s'hagués consignat un 1 en\n"
+"            aquest camp, el percentatge que haurà de declarar-se en\n"
+"            relació amb els contribuents de l'Impost sobre la Renda\n"
+"            de les Persones Físiques serà el que correspongui a la part\n"
+"            de la base de deducció que excedeixi de 150 euros. Si la\n"
+"            base de la deducció no excedeix aquesta quantitat, el\n"
+"            percentatge que haurà de declarar-se en relació amb aquests\n"
+"            contribuents serà l'establert a l'article 19 de la\n"
+"            Llei 49/2002. De la mateixa manera es consignarà en el cas\n"
+"            que s'hagi fet constar al camp \"NATURALESA\n"
+"            DEL DECLARANT\" (posició 160) del tipus de registre 1 el\n"
+"            dígit 4, i al camp \"CLAU\" (posició 78) del tipus de\n"
+"            registre 2 la lletra G.\n"
+"\n"
+"            Per a la resta de claus (dígit 3 en la posició 160\n"
+"            \"NATURALESA DEL DECLARANT\" del tipus de registre 1)\n"
+"            es deixarà en blanc.\n"
+"\n"
+"            Aquest camp es subdivideix en altres dos:\n"
+"\n"
+"            79-81 ENTER Numèric Part sencera:\n"
+"                  Es consignarà la part sencera del\n"
+"                  percentatge (si no en té, consignar ZEROS).\n"
+"\n"
+"            82-83 DECIMAL Numèric Part decimal:\n"
+"                  Es consignarà la part decimal del\n"
+"                  percentatge (si no en té, consignar ZEROS).\n"
+"        "
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__regional_deduction_percentage
+msgid ""
+"\n"
+"            % DE DEDUCCIÓN COM. AUTÓNOMA\n"
+"\n"
+"            Cuando el campo anterior \"Deducción Com. Autónoma\"\n"
+"            tenga contenido, se consignará el porcentaje de deducción\n"
+"            en la cuota íntegra del I.R.P.F. aprobado por la Comunidad\n"
+"            Autónoma que corresponda.\n"
+"\n"
+"            Este campo se subdivide en otros dos:\n"
+"\n"
+"            100-102 ENTERO Numérico Parte entera:\n"
+"                    Se consignara la parte entera del\n"
+"                    porcentage (si no tiene, consignar CEROS).\n"
+"\n"
+"            103-104 DECIMAL Numérico Parte decimal:\n"
+"                    Se consignara la parte decimal del\n"
+"                    porcentage (si no tiene, consignar CEROS).\n"
+"        "
+msgstr ""
+"\n"
+"            % DE DEDUCCIÓ COM. AUTÒNOMA\n"
+"\n"
+"            Quan el camp anterior \"Deducció Com. Autònoma\"\n"
+"            tingui contingut, es consignarà el percentatge de deducció\n"
+"            en la quota íntegra de l'I.R.P.F. aprovat per la Comunitat\n"
+"            Autònoma que correspongui.\n"
+"\n"
+"            Aquest camp es subdivideix en altres dos:\n"
+"\n"
+"            100-102 ENTER Numèric Part sencera:\n"
+"                    Es consignarà la part sencera del\n"
+"                    percentatge (si no en té, consignar ZEROS).\n"
+"\n"
+"            103-104 DECIMAL Numèric Part decimal:\n"
+"                    Es consignarà la part decimal del\n"
+"                    percentatge (si no en té, consignar ZEROS).\n"
+"        "
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__protected_patrimony_holder_name
+msgid ""
+"\n"
+"            APELLIDOS Y NOMBRE DEL TITULAR DEL PATRIMONIO PROTEGIDO\n"
+"\n"
+"            Cuando el declarante tenga la condición de administrador,\n"
+"            se consignará en este campo el primer apellido, un\n"
+"            espacio, el segundo apellido, un espacio y el nombre\n"
+"            completo del titular del patrimonio protegido.\n"
+"        "
+msgstr ""
+"\n"
+"            COGNOMS I NOM DEL TITULAR DEL PATRIMONI PROTEGIT\n"
+"\n"
+"            Quan el declarant tingui la condició d'administrador,\n"
+"            es consignarà en aquest camp el primer cognom, un\n"
+"            espai, el segon cognom, un espai i el nom\n"
+"            complet del titular del patrimoni protegit.\n"
+"        "
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__operation_key
+msgid ""
+"\n"
+"            CLAVE\n"
+"\n"
+"            Las entidades acogidas al régimen de deducciones\n"
+"            recogidas en el Título III de la Ley 49/2002, de 23 de\n"
+"            diciembre lo consignarán según el siguiente detalle:\n"
+"\n"
+"            A. Donativos no incluidos en las actividades o programas\n"
+"            prioritarios de mecenazgo establecidos por la Ley de\n"
+"            Presupuestos Generales del Estado.\n"
+"\n"
+"            B. Donativos incluidos en las actividades o programas\n"
+"            prioritarios de mecenazgo establecidos por la Ley de\n"
+"            Presupuestos Generales del Estado.\n"
+"\n"
+"            Tratándose de aportaciones o disposiciones relativas a\n"
+"            patrimonios protegidos, deberá consignarse alguna de las\n"
+"            siguientes claves:\n"
+"\n"
+"            C. Aportación al patrimonio de discapacitados.\n"
+"\n"
+"            D. Disposición del patrimonio de discapacitados.\n"
+"\n"
+"            E. Gasto de dinero y consumo de bienes fungibles\n"
+"            aportados al patrimonio protegido en el año natural al que\n"
+"            se refiere la declaración informativa o en los cuatro\n"
+"            anteriores para atender las necesidades vitales del\n"
+"            beneficiario y que no deban considerarse como\n"
+"            disposición de bienes o derechos a efectos de lo\n"
+"            dispuesto en el artículo 54.5 de la Ley 35/2006, de 28 de\n"
+"            noviembre, del Impuesto sobre la Renta de las Personas\n"
+"            Físicas.\n"
+"\n"
+"            Los Partidos Políticos, Federaciones, Coaliciones o\n"
+"            Agrupaciones de Electores consignarán las siguientes\n"
+"            claves:\n"
+"\n"
+"            F: cuotas de afiliación y aportaciones previstas en el\n"
+"            artículo 2.Dos.a) de la Ley Orgánica 8/2007, de 4 de julio,\n"
+"            sobre financiación de los partidos políticos.\n"
+"\n"
+"            G: resto de donaciones y aportaciones percibidas.\n"
+"        "
+msgstr ""
+"\n"
+"            CLAU\n"
+"\n"
+"            Les entitats acollides al règim de deduccions\n"
+"            recollides al Títol III de la Llei 49/2002, de 23 de\n"
+"            desembre ho consignaran segons el següent detall:\n"
+"\n"
+"            A. Donatius no inclosos en les activitats o programes\n"
+"            prioritaris de mecenatge establerts per la Llei de\n"
+"            Pressupostos Generals de l'Estat.\n"
+"\n"
+"            B. Donatius inclosos en les activitats o programes\n"
+"            prioritaris de mecenatge establerts per la Llei de\n"
+"            Pressupostos Generals de l'Estat.\n"
+"\n"
+"            En el cas d'aportacions o disposicions relatives a\n"
+"            patrimonis protegits, s'haurà de consignar alguna de les\n"
+"            següents claus:\n"
+"\n"
+"            C. Aportació al patrimoni de discapacitats.\n"
+"\n"
+"            D. Disposició del patrimoni de discapacitats.\n"
+"\n"
+"            E. Despesa de diners i consum de béns fungibles\n"
+"            aportats al patrimoni protegit en l'any natural al qual\n"
+"            fa referència la declaració informativa o en els quatre\n"
+"            anteriors per atendre les necessitats vitals del\n"
+"            beneficiari i que no s'han de considerar com\n"
+"            disposició de béns o drets a efectes del que\n"
+"            disposa l'article 54.5 de la Llei 35/2006, de 28 de\n"
+"            novembre, de l'Impost sobre la Renda de les Persones\n"
+"            Físiques.\n"
+"\n"
+"            Els Partits Polítics, Federacions, Coalicions o\n"
+"            Agrupacions d'Electors consignaran les següents\n"
+"            claus:\n"
+"\n"
+"            F: quotes d'afiliació i aportacions previstes a l'\n"
+"            article 2.Dos.a) de la Llei Orgànica 8/2007, de 4 de juliol,\n"
+"            sobre finançament dels partits polítics.\n"
+"\n"
+"            G: resta de donacions i aportacions percebudes.\n"
+"        "
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__regional_community_deduction_id
+msgid ""
+"\n"
+"            DEDUCCIÓN COM. AUTÓNOMA\n"
+"\n"
+"            Cuando se haya hecho constar en el campo\n"
+"            \"NATURALEZA DEL DECLARANTE\" (posición 160) del\n"
+"            tipo de registro 1, el dato numérico indicativo de la\n"
+"            naturaleza del declarante 1 ó 2, en el caso de que el\n"
+"            donativo pueda dar derecho a la aplicación en el Impuesto\n"
+"            sobre la Renta de las Personas Físicas de alguna de las\n"
+"            deducciones aprobadas por las Comunidades Autónomas,\n"
+"            indique la clave de la Comunidad Autónoma que\n"
+"            corresponda, conforme a la siguiente relación:\n"
+"\n"
+"            ANDALUCÍA......................... 01\n"
+"            ARAGÓN ........................... 02\n"
+"            PRINCIPADO DE ASTURIAS ........... 03\n"
+"            ILLES BALEARS .................... 04\n"
+"            CANARIAS.......................... 05\n"
+"            CANTABRIA......................... 06\n"
+"            CASTILLA-LA MANCHA ............... 07\n"
+"            CASTILLA Y LEÓN .................. 08\n"
+"            CATALUÑA ......................... 09\n"
+"            EXTREMADURA....................... 10\n"
+"            GALICIA .......................... 11\n"
+"            MADRID ........................... 12\n"
+"            REGIÓN DE MURCIA ................. 13\n"
+"            LA RIOJA ......................... 16\n"
+"            COMUNIDAD VALENCIANA ............. 17\n"
+"        "
+msgstr ""
+"\n"
+"            DEDUCCIÓ COM. AUTÒNOMA\n"
+"\n"
+"            Quan s'hagi fet constar en el camp\n"
+"            \"NATURALESA DEL DECLARANT\" (posició 160) del\n"
+"            tipus de registre 1, la dada numèrica indicativa de la\n"
+"            naturalesa del declarant 1 o 2, en el cas que el\n"
+"            donatiu pugui donar dret a l'aplicació en l'Impost\n"
+"            sobre la Renda de les Persones Físiques d'alguna de les\n"
+"            deduccions aprovades per les Comunitats Autònomes,\n"
+"            indiqui la clau de la Comunitat Autònoma que\n"
+"            correspongui, conforme a la següent relació:\n"
+"\n"
+"            ANDALUSIA......................... 01\n"
+"            ARAGÓ............................. 02\n"
+"            PRINCIPAT D'ASTÚRIES ............. 03\n"
+"            ILLES BALEARS .................... 04\n"
+"            CANÀRIES.......................... 05\n"
+"            CANTÀBRIA......................... 06\n"
+"            CASTELLA I LA MANXA .............. 07\n"
+"            CASTELLA I LLEÓ .................. 08\n"
+"            CATALUNYA ........................ 09\n"
+"            EXTREMADURA....................... 10\n"
+"            GALÍCIA .......................... 11\n"
+"            MADRID ........................... 12\n"
+"            REGIÓ DE MÚRCIA .................. 13\n"
+"            LA RIOJA ......................... 16\n"
+"            COMUNITAT VALENCIANA ............. 17\n"
+"        "
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__donation_or_contribution_in_kind
+msgid ""
+"\n"
+"            DONATIVO, APORTACIÓN O DISPOSICIÓN EN ESPECIE\n"
+"\n"
+"            En el caso de que el donativo, aportación o disposición\n"
+"            haya sido en especie, se consignará una \"X\". En cualquier\n"
+"            otro caso este campo se rellenará a blancos.\n"
+"        "
+msgstr ""
+"\n"
+"            DONATIU, APORTACIÓ O DISPOSICIÓ EN ESPÈCIE\n"
+"\n"
+"            En cas que el donatiu, aportació o disposició\n"
+"            hagi estat en espècie, s'hi consignarà una \"X\". En qualsevol\n"
+"            altre cas aquest camp es deixarà en blanc.\n"
+"        "
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__year_of_revoked_donation
+msgid ""
+"\n"
+"            EJERCICIO EN QUE SE EFECTUÓ LA DONACIÓN REVOCADA\n"
+"\n"
+"            Para las claves A o B cuando se haya rellenado con X el\n"
+"            campo \"Revocación\", se hará constar el ejercicio en el que\n"
+"            se efectuó la donación revocada. En caso contrario, este\n"
+"            campo se consignará a ceros.\n"
+"        "
+msgstr ""
+"\n"
+"            EXERCICI EN QUÈ ES VA EFECTUAR LA DONACIÓ REVOCADA\n"
+"\n"
+"            Per a les claus A o B, quan s'hagi omplert amb una X el\n"
+"            camp \"Revocació\", s'hi farà constar l'exercici en què\n"
+"            es va efectuar la donació revocada. En cas contrari, aquest\n"
+"            camp es consignarà amb zeros.\n"
+"        "
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__item_identification
+msgid ""
+"\n"
+"            IDENTIFICACIÓN DEL BIEN\n"
+"\n"
+"            Cuando el campo anterior \"TIPO DE BIEN\" tenga contenido\n"
+"            se hará constar la identificación del bien cuya aportación o\n"
+"            disposición se declara: NRC en caso de inmuebles e ISIN\n"
+"            en caso de valores mobiliarios. Tratándose de otros bienes\n"
+"            se rellenará a blancos.\n"
+"        "
+msgstr ""
+"\n"
+"            IDENTIFICACIÓ DEL BÉ\n"
+"\n"
+"            Quan el camp anterior \"TIPUS DE BÉ\" tingui contingut,\n"
+"            s'hi farà constar la identificació del bé la qual\n"
+"            aportació o disposició es declara: NRC en cas d'immobles\n"
+"            i ISIN en cas de valors mobiliaris. Tractant-se d'altres\n"
+"            béns, es omplirà amb blancs.\n"
+"        "
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__donation_amount
+msgid ""
+"\n"
+"            IMPORTE O VALORACIÓN DEL DONATIVO, APORTACIÓN O DISPOSICIÓN\n"
+"\n"
+"            Campo numérico de 13 posiciones.\n"
+"            Se consignará sin signo y sin coma decimal, el importe\n"
+"            anual del donativo, aportación o disposición, en el caso de\n"
+"            que éste haya sido dinerario, correspondiente a un mismo\n"
+"            porcentaje de deducción.\n"
+"\n"
+"            En los donativos, aportaciones o disposiciones en especie,\n"
+"            se hará constar la valoración de lo donado, aportado o\n"
+"            dispuesto, determinado de acuerdo con las reglas del\n"
+"            artículo 18 de la Ley 49/2002.\n"
+"\n"
+"            En caso de que se haya marcado la CLAVE E en la\n"
+"            posición 78, deberá consignarse el importe del dinero\n"
+"            gastado o el valor de los bienes fungibles consumidos.\n"
+"\n"
+"            Cuando un mismo donante haya satisfecho donativos a los\n"
+"            que se apliquen distintos porcentajes de deducción,\n"
+"            consigne registros de declarados independientes.\n"
+"\n"
+"            Este campo se subdivide en dos:\n"
+"\n"
+"            84-94 ENTERO Numérico:\n"
+"                  Parte entera del importe del donativo, aportación o\n"
+"                  disposición, si no tiene contenido se consignará a ceros.\n"
+"\n"
+"            95-96 DECIMAL Numérico\n"
+"                  Parte decimal del importe del donativo, aportación o\n"
+"                  disposición, si no tiene contenido se consignará a ceros.\n"
+"        "
+msgstr ""
+"\n"
+"            IMPORT O VALORACIÓ DEL DONATIU, APORTACIÓ O DISPOSICIÓ\n"
+"\n"
+"            Camp numèric de 13 posicions.\n"
+"            S'hi consignarà sense signe i sense coma decimal, l'import\n"
+"            anual del donatiu, aportació o disposició, en el cas que\n"
+"            aquest hagi estat dinerari, corresponent a un mateix\n"
+"            percentatge de deducció.\n"
+"\n"
+"            En els donatius, aportacions o disposicions en espècie,\n"
+"            s'hi farà constar la valoració del donat, aportat o\n"
+"            disposat, determinat d'acord amb les normes de l'\n"
+"            article 18 de la Llei 49/2002.\n"
+"\n"
+"            En cas que s'hagi marcat la CLAU E en la\n"
+"            posició 78, s'haurà de consignar l'import dels diners\n"
+"            gastats o el valor dels béns fungibles consumits.\n"
+"\n"
+"            Quan un mateix donant hagi satisfet donatius als\n"
+"            quals s'apliquin diferents percentatges de deducció,\n"
+"            consigne registres declarats independents.\n"
+"\n"
+"            Aquest camp es subdivideix en dos:\n"
+"\n"
+"            84-94 ENTER NUMÈRIC:\n"
+"                  Part entera de l'import del donatiu, aportació o\n"
+"                  disposició, si no té contingut es consignarà a zeros.\n"
+"\n"
+"            95-96 DECIMAL NUMÈRIC\n"
+"                  Part decimal de l'import del donatiu, aportació o\n"
+"                  disposició, si no té contingut es consignarà a zeros.\n"
+"        "
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__protected_patrimony_holder_nif
+msgid ""
+"\n"
+"            N.I.F. DEL TITULAR DEL PATRIMONIO PROTEGIDO\n"
+"\n"
+"            Cuando el declarante tenga la condición de administrador,\n"
+"            se consignará en este campo el N.I.F. del titular del\n"
+"            patrimonio protegido.\n"
+"        "
+msgstr ""
+"\n"
+"            N.I.F. DEL TITULAR DEL PATRIMONI PROTEGIT\n"
+"\n"
+"            Quan el declarant tingui la condició d'administrador,\n"
+"            s'hi consignarà en aquest camp el N.I.F. del titular del\n"
+"            patrimoni protegit.\n"
+"        "
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__declared_nature
+msgid ""
+"\n"
+"            NATURALEZA DEL DECLARADO\n"
+"\n"
+"            Para las claves A o B se hará constar la naturaleza del\n"
+"            declarado de acuerdo con las siguientes claves:\n"
+"            ----------------------\n"
+"            'Clave', 'Descripción'\n"
+"            ----------------------\n"
+"            'F', 'Persona física'\n"
+"            'J', 'Persona jurídica'\n"
+"            'E', 'Entidad en régimen de atribución de rentas'\n"
+"\n"
+"            Para el resto de claves se rellenará a blancos.\n"
+"        "
+msgstr ""
+"\n"
+"            NATURALESA DEL DECLARAT\n"
+"\n"
+"            Per a les claus A o B s'hi farà constar la natura del\n"
+"            declarat d'acord amb les següents claus:\n"
+"            ----------------------\n"
+"            'Clau', 'Descripció'\n"
+"            ----------------------\n"
+"            'F', 'Persona física'\n"
+"            'J', 'Persona jurídica'\n"
+"            'E', 'Entitat en règim d'atribució de rendes'\n"
+"\n"
+"            Per la resta de claus s'emplenarà amb blancs.\n"
+"        "
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__declarant_nature
+msgid ""
+"\n"
+"            NATURALEZA DEL DECLARANTE\n"
+"            1: Entidad beneficiaria de los incentivos regulados en el\n"
+"            Título III de la Ley 49/2002, de 23 de diciembre, de\n"
+"            régimen fiscal de las entidades sin fines lucrativos y de\n"
+"            los incentivos fiscales al mecenazgo.\n"
+"            2: Fundación legalmente reconocida que rinde cuentas al\n"
+"            órgano del protectorado correspondiente o asociación\n"
+"            declarada de utilidad pública a que se refieren el\n"
+"            artículo 68.3.b) de la Ley del Impuesto sobre la Renta\n"
+"            de las Personas Físicas.\n"
+"            3: Titular o administrador de un patrimonio protegido\n"
+"            regulado en la Ley 41/2003, de 18 de noviembre, de\n"
+"            protección patrimonial de las personas con\n"
+"            discapacidad y de modificación del Código Civil, de la\n"
+"            Ley de Enjuiciamiento Civil y de la Normativa Tributaria\n"
+"            con esta finalidad.\n"
+"            4: Partidos Políticos, Federaciones, Coaliciones o\n"
+"            Agrupaciones de Electores en los términos previstos en\n"
+"            la Ley Orgánica 8/2007, de 4 de julio, de financiación de\n"
+"            partidos políticos.\n"
+"        "
+msgstr ""
+"\n"
+"            NATURALESA DEL DECLARANT\n"
+"            1: Entitat beneficiària dels incentius regulats en el\n"
+"            Títol III de la Llei 49/2002, de 23 de desembre, del\n"
+"            règim fiscal de les entitats sense ànim de lucre i dels\n"
+"            incentius fiscals al mecenatge.\n"
+"            2: Fundació legalment reconeguda que rindeix comptes al\n"
+"            òrgan del protector corresponent o associació\n"
+"            declarada d'utilitat pública a què es refereix el\n"
+"            article 68.3.b) de la Llei de l'Impost sobre la Renda\n"
+"            de les Persones Físiques.\n"
+"            3: Titular o administrador d'un patrimoni protegit\n"
+"            regulat en la Llei 41/2003, de 18 de novembre, de\n"
+"            protecció patrimonial de les persones amb\n"
+"            discapacitat i de modificació del Codi Civil, de la\n"
+"            Llei d'Enjudiciament Civil i de la Normativa Tributària\n"
+"            amb aquesta finalitat.\n"
+"            4: Partits Polítics, Federacions, Coalicions o\n"
+"            Agrupacions d'Electors en els termes previstos en\n"
+"            la Llei Orgànica 8/2007, de 4 de juliol, de finançament\n"
+"            de partits polítics.\n"
+"        "
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__donation_recurrence
+msgid ""
+"\n"
+"            RECURRENCIA DONATIVOS\n"
+"\n"
+"            Deberá cumplimentarse cuando se haya hecho constar en\n"
+"            el campo «NATURALEZA DEL DECLARANTE» (posición\n"
+"            160) del tipo de registro 1, el dígito numérico indicativo de\n"
+"            la naturaleza del declarante 1 y en el campo «CLAVE»\n"
+"            (posición 78) del tipo de registro 2 la letra A o B. Asimismo,\n"
+"            deberá cumplimentarse este campo cuando se haya\n"
+"            hecho constar en el campo «NATURALEZA DEL\n"
+"            DECLARANTE» (posición 160) del tipo de registro 1, el\n"
+"            dígito numérico indicativo de la naturaleza del declarante 4\n"
+"            y en el campo «CLAVE» (posición 78) del tipo de registro\n"
+"            2 la letra G.\n"
+"\n"
+"            En dichos supuestos, se cumplimentará este campo según\n"
+"            el siguiente detalle:\n"
+"\n"
+"            1: Si en los dos períodos impositivos inmediatos\n"
+"            anteriores se hubieran realizado por el declarado,\n"
+"            donativos, donaciones o aportaciones con derecho a\n"
+"            deducción en favor de dicha entidad por importe igual o\n"
+"            superior, en cada uno de ellos, al del ejercicio anterior.\n"
+"\n"
+"            2: Si en los dos períodos impositivos inmediatos\n"
+"            anteriores no se hubieran realizado por el declarado,\n"
+"            donativos, donaciones o aportaciones con derecho a\n"
+"            deducción en favor de dicha entidad por importe igual o\n"
+"            superior, en cada uno de ellos, al del ejercicio anterior.\n"
+"        "
+msgstr ""
+"\n"
+"            RECURRENCIA DONATIUS\n"
+"\n"
+"            S'ha de complir quan s'hagi fet constar en\n"
+"            el camp «NATURALESA DEL DECLARANT» (posició\n"
+"            160) del tipus de registre 1, el dígit numèric indicatiu de\n"
+"            la natura del declarant 1 i en el camp «CLAU»\n"
+"            (posició 78) del tipus de registre 2 la lletra A o B. Així mateix,\n"
+"            s'ha de complir aquest camp quan s'hagi\n"
+"            fet constar en el camp «NATURALESA DEL\n"
+"            DECLARANT» (posició 160) del tipus de registre 1, el\n"
+"            dígit numèric indicatiu de la natura del declarant 4\n"
+"            i en el camp «CLAU» (posició 78) del tipus de registre\n"
+"            2 la lletra G.\n"
+"\n"
+"            En aquests supòsits, s'emplenarà aquest camp segons\n"
+"            el següent detall:\n"
+"\n"
+"            1: Si en els dos períodes impositius immediats\n"
+"            anteriors s'haguessin realitzat pel declarat,\n"
+"            donatius, donacions o aportacions amb dret a\n"
+"            deducció a favor d'aquesta entitat per import igual o\n"
+"            superior, en cadascun d'ells, al de l'exercici anterior.\n"
+"\n"
+"            2: Si en els dos períodes impositius immediats\n"
+"            anteriors no s'haguessin realitzat pel declarat,\n"
+"            donatius, donacions o aportacions amb dret a\n"
+"            deducció a favor d'aquesta entitat per import igual o\n"
+"            superior, en cadascun d'ells, al de l'exercici anterior.\n"
+"        "
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__revocation
+msgid ""
+"\n"
+"            REVOCACIÓN\n"
+"\n"
+"            Para las claves A o B cuando la entidad declarante goce\n"
+"            del régimen de incentivos fiscales al mecenazgo previsto\n"
+"            en el Título III de la Ley 49/2002 y se hubiera producido\n"
+"            durante el ejercicio, en los términos del art. 17 de dicha\n"
+"            Ley, la revocación de una donación con derecho a\n"
+"            deducción recibida en ejercicios anteriores, deberá\n"
+"            rellenarse este campo con una X, además del resto de\n"
+"            datos de la donación revocada.\n"
+"\n"
+"            Para el resto de claves se rellenará a blancos.\n"
+"        "
+msgstr ""
+"\n"
+"            REVOCACIÓ\n"
+"\n"
+"            Per a les claus A o B quan l'entitat declarant gaudeixi\n"
+"            del règim d'incentius fiscals al mecenatge previst\n"
+"            en el Títol III de la Llei 49/2002 i s'hagués produït\n"
+"            durant l'exercici, en els termes de l'art. 17 de dicha\n"
+"            Llei, la revocació d'una donació amb dret a\n"
+"            deducció rebuda en exercicis anteriors, s'haurà\n"
+"            d'emplenar aquest camp amb una X, a més de la resta de\n"
+"            dades de la donació revocada.\n"
+"\n"
+"            Per la resta de claus s'emplenarà amb blancs.\n"
+"        "
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__kind_of_good
+msgid ""
+"\n"
+"            TIPO DE BIEN\n"
+"\n"
+"            Para las claves C o D, en caso de que se haya marcado la\n"
+"            casilla \"donativo, aportación o disposición en especie\", se\n"
+"            hará constar el tipo de bien cuya aportación o disposición\n"
+"            se declara, de acuerdo con las siguientes claves:\n"
+"\n"
+"            ----------------------\n"
+"            'Clave', 'Descripción'\n"
+"            ----------------------\n"
+"            'I', 'Inmueble'\n"
+"            'V', 'Valores mobiliarios'\n"
+"            'O', 'Otros'\n"
+"\n"
+"           En caso contrario se rellenará a blancos.\n"
+"        "
+msgstr ""
+"\n"
+"            TIPUS DE BÉ\n"
+"\n"
+"            Per a les claus C o D, en cas que s'hagi marcat la\n"
+"            casella \"donatiu, aportació o disposició en espècie\", s\n"
+"            'hi farà constar el tipus de bé la qual aportació o disposició\n"
+"            es declara, d'acord amb les següents claus:\n"
+"\n"
+"            ----------------------\n"
+"            'Clau', 'Descripció'\n"
+"            ----------------------\n"
+"            'I', 'Immoble'\n"
+"            'V', 'Valors mobiliaris'\n"
+"            'O', 'Altres'\n"
+"\n"
+"           En cas contrari s'emplenarà amb blancs.\n"
+"        "
+
+#. module: l10n_es_aeat_mod182
+#: model:mail.template,body_html:l10n_es_aeat_mod182.email_template_182
+msgid ""
+"\n"
+"<p>Estimado/a <t t-out=\"object.partner_id.name\" />\n"
+"</p>\n"
+"<p>Le comunicamos que a efectos de comprobación del modelo 182:</p>\n"
+"<p>Nuestros datos en dicha declaración son:</p>\n"
+"<p>\n"
+"  <strong>Nombre:</strong> <t t-out=\"object.report_id.company_id.name\"/><br/>\n"
+"  <strong>NIF:</strong> <t t-out=\"object.report_id.company_id.vat or ''\"/><br/>\n"
+"  <strong>Provincia:</strong> <t t-out=\"object.report_id.company_id.state_id.name or ''\"/><br/>\n"
+"</p>\n"
+"<p>Los datos que vamos a declarar en relación a las operaciones habidas con su empresa son:</p>\n"
+"<p>\n"
+"  <strong>Nombre:</strong> <t t-out=\"object.partner_id.name\"/><br/>\n"
+"  <strong>NIF:</strong> <t t-out=\"object.partner_vat\"/><br/>\n"
+"  <strong>Código de país:</strong> <t t-out=\"object.partner_country_code\"/><br/>\n"
+"  <strong>Código de provincia:</strong> <t t-out=\"object.partner_state_code\"/><br/>\n"
+"</p>\n"
+"<p>\n"
+"  <strong>Tipo de operación:</strong> <t t-out=\"object.operation_key\"/>\n"
+"</p>\n"
+"\n"
+"  <t t-if=\"object.amount\">\n"
+"  <p>\n"
+"  <strong>Importe de las operaciones:</strong> <t t-out=\"object.amount\"/><br/>\n"
+"  </p>\n"
+"  </t>\n"
+"  <p>En el documento adjunto se incluyen las facturas en base a las cuales se obtienen los importes anteriores.</p>\n"
+"  <p>Si los datos son correctos puede indicar su conformidad en el siguiente botón:</p>\n"
+"  <br><br>\n"
+"  <center>\n"
+"      <a style=\"background-color: #1abc9c; padding: 20px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\"\n"
+"              class=\"o_default_snippet_text\"\n"
+"              t-att-href=\"object.get_confirm_url()\">\n"
+"          Aceptar datos del 182\n"
+"      </a>\n"
+"  </center>\n"
+"  <br><br>\n"
+"  <p>Si los importes no son correctos, puede pulsar en este botón para que nos pongamos en contacto posteriormente, o responder a este correo indicando el problema:</p>\n"
+"  <br><br>\n"
+"  <center>\n"
+"      <a style=\"background-color: #d55937; padding: 20px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;\"\n"
+"              class=\"o_default_snippet_text\"\n"
+"              t-att-href=\"object.get_reject_url()\">\n"
+"          Rechazar datos del 182\n"
+"      </a>\n"
+"  </center>\n"
+"  <br><br>\n"
+"  <p>Para cualquier otra pregunta, no dude en contactar con nosotros respondiendo a este correo.</p>\n"
+"<p style=\"color:#888888\">\n"
+"    <t t-if=\"user and user.signature\">\n"
+"    <t t-out=\"user.signature\"/>\n"
+"    </t>\n"
+"</p>\n"
+"\n"
+"        "
+msgstr ""
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/mod182_partner.py:0
+#, python-format
+msgid ""
+"'% DE DEDUCCIÓN COM. AUTÓNOMA' is required because 'DEDUCCIÓN COM. AUTÓNOMA'"
+" is set as %s."
+msgstr ""
+"'% DE DEDUCCIÓ COM. AUTÒNOMA' és obligatori perquè 'DEDUCCIÓ COM. AUTÒNOMA' "
+"està configurat com %s."
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/mod182_partner.py:0
+#, python-format
+msgid ""
+"'DEDUCCIÓN COM. AUTÓNOMA' is required because 'NATURALEZA DEL DECLARANTE' is"
+" set as %s."
+msgstr ""
+"'DEDUCCIÓ COM. AUTÒNOMA' és obligatori perquè 'NATURALESA DEL DECLARANT' "
+"està configurat com %s."
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/mod182_partner.py:0
+#, python-format
+msgid ""
+"'EJERCICIO EN QUE SE EFECTUÓ LA DONACIÓN REVOCADA' is required because "
+"'CLAVE' is set as %s and 'REVOCACIÓN' is set as %s."
+msgstr ""
+"'EXERCICI EN QUÈ ES VA EFECTUAR LA DONACIÓ REVOCADA' és obligatori perquè "
+"'CLAU' està configurat com %s i 'REVOCACIÓ' està configurat com %s."
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/mod182_partner.py:0
+#, python-format
+msgid ""
+"'IDENTIFICACIÓN DEL BIEN' is required because 'TIPO DE BIEN' is set as '%s'."
+msgstr ""
+"'IDENTIFICACIÓ DEL BÉ' és obligatori perquè 'TIPUS DE BÉ' està configurat "
+"com '%s'."
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/mod182_partner.py:0
+#, python-format
+msgid "'NATURALEZA DEL DECLARADO' is required because 'CLAVE' is set as %s."
+msgstr ""
+"'NATURALESA DEL DECLARAT' és obligatori perquè 'CLAU' està configurat com "
+"%s."
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/mod182_partner.py:0
+#: code:addons/l10n_es_aeat_mod182/models/mod182_partner.py:0
+#, python-format
+msgid ""
+"'RECURRENCIA DONATIVOS' is required because 'NATURALEZA DEL DECLARANTE' is "
+"set as %s and 'CLAVE' is set as %s."
+msgstr ""
+"'RECURRENCIA DONATIUS' és obligatori perquè 'NATURALESA DEL DECLARANT' està "
+"configurat com %s i 'CLAU' està configurat com %s."
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/mod182.py:0
+#, python-format
+msgid "- %(name)s %(id)s"
+msgstr ""
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.actions.report,name:l10n_es_aeat_mod182.182_partner
+msgid "182 Partner Detail"
+msgstr "Detall del Soci 182"
+
+#. module: l10n_es_aeat_mod182
+#: model:mail.template,report_name:l10n_es_aeat_mod182.email_template_182
+msgid "182_details"
+msgstr "detalls_182"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__donation_recurrence__1
+msgid ""
+"1: Si en los dos períodos impositivos inmediatos anteriores se hubieran "
+"realizado por el declarado, donativos donaciones o aportaciones (...)"
+msgstr ""
+"Si en els dos períodes impositius immediats anteriors s'haguessin realitzat "
+"(...)"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__donation_recurrence__2
+msgid ""
+"2: Si en los dos períodos impositivos inmediatos anteriores no se hubieran "
+"realizado por el declarado, donativos donaciones o aportaciones (...)"
+msgstr ""
+"Si en els dos períodes impositius immediats anteriors no s'haguessin "
+"realitzat (...)"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.report_182_partner_document
+msgid "<strong>Amount:</strong>"
+msgstr "<strong>Quantitat:</strong>"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_form
+msgid ""
+"<strong>Color codes: </strong> <span class=\"text-info\">Normal "
+"invoices</span> - Refund invoices"
+msgstr ""
+"<strong>Codis de color: </strong> <span class=\"text-info\">Factures "
+"normals</span> - Factures de reembossament"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_form
+msgid ""
+"<strong>Color codes: </strong> <span class=\"text-info\">Refund "
+"invoices</span> - Normal invoices"
+msgstr ""
+"<strong>Codis de color: </strong> <span class=\"text-info\">Factures de "
+"reembossament</span> - Factures normals"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.report_182_partner_document
+msgid "<strong>Operation Key:</strong>"
+msgstr "<strong>Clau d'operació:</strong>"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__operation_key__a
+msgid ""
+"A. Donativos no incluidos en las actividades o programas prioritarios de "
+"mecenazgo (...)"
+msgstr ""
+"A. Donacions no incloses en les activitats o programes prioritaris de "
+"mecenatge (...)"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.actions.act_window,name:l10n_es_aeat_mod182.action_aeat_mod182_import_lines
+#: model:ir.model,name:l10n_es_aeat_mod182.model_l10n_es_aeat_mod182_import_lines
+#: model:ir.ui.menu,name:l10n_es_aeat_mod182.menu_aeat_mod182_import_lines
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_tree
+msgid "AEAT 182 Import Lines"
+msgstr "Importació de línies AEAT 182"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.actions.act_window,name:l10n_es_aeat_mod182.action_aeat_mod182_import_wizard
+#: model:ir.model,name:l10n_es_aeat_mod182.model_l10n_es_aeat_mod182_import_wizard
+#: model:ir.ui.menu,name:l10n_es_aeat_mod182.menu_aeat_mod182_import_wizard
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_wizard_form
+msgid "AEAT 182 Import Wizard"
+msgstr "Assistent d'importació AEAT 182"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model,name:l10n_es_aeat_mod182.model_l10n_es_aeat_mod182_report
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__report_id
+msgid "AEAT 182 Report"
+msgstr "Informe AEAT 182"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.ui.menu,name:l10n_es_aeat_mod182.menu_aeat_mod182_report
+msgid "AEAT 182 model"
+msgstr "Model 182"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.actions.act_window,name:l10n_es_aeat_mod182.action_l10n_es_aeat_mod182_report
+msgid "AEAT Model 182"
+msgstr "Model AEAT 182"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.actions.act_window,name:l10n_es_aeat_mod182.action_aeat_regional_community_deduction
+#: model:ir.ui.menu,name:l10n_es_aeat_mod182.menu_aeat_regional_community_deduction
+msgid "AEAT Regional Community Deduction"
+msgstr "Deducció de la Comunitat Autònoma AEAT"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__access_warning
+msgid "Access warning"
+msgstr "Advertència d'accés"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__move_id
+msgid "Account entry"
+msgstr "Entrada comptable"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__message_needaction
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__message_needaction
+msgid "Action Needed"
+msgstr "Acció necessària"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__activity_ids
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__activity_ids
+msgid "Activities"
+msgstr "Activitats"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__activity_exception_decoration
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoració d'excepció d'activitat"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__activity_state
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__activity_state
+msgid "Activity State"
+msgstr "Estat de l'activitat"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__activity_type_icon
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ícon de tipus d'activitat"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__allow_posting
+msgid "Allow Posting"
+msgstr "Permetre la publicació"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_move_record__amount
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.report_182_partner_document
+msgid "Amount"
+msgstr "Quantitat"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__message_attachment_count
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__message_attachment_count
+msgid "Attachment Count"
+msgstr "Compte d'adjunts"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__operation_key__b
+msgid ""
+"B. Donativos incluidos en las actividades o programas prioritarios de "
+"mecenazgo (...)"
+msgstr ""
+"B. Donacions incloses en les activitats o programes prioritaris de mecenatge"
+" (...)"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__partner_bank_id
+msgid "Bank account"
+msgstr "Compte bancari"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.actions.act_window,help:l10n_es_aeat_mod182.action_l10n_es_aeat_mod182_report
+msgid ""
+"Basado en la Orden EHA/3012/2008, de 20 de Octubre, por el que se aprueban\n"
+"                los diseños físicos y lógicos del 182."
+msgstr ""
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__operation_key__c
+msgid "C. Aportación al patrimonio de discapacitados."
+msgstr "C. Aportació al patrimoni de discapacitats."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__calculation_date
+msgid "Calculation Date"
+msgstr "Data de càlcul"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_report_form
+msgid "Calculation parameters"
+msgstr "Paràmetres de càlcul"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_wizard_form
+msgid "Cancel"
+msgstr "Cancel·lar"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__cash_record_ids
+msgid "Cash payments"
+msgstr "Pagaments en efectiu"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__check_ok
+msgid "Checked if this record is OK"
+msgstr "Comprovada si aquest registre és correcte"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.actions.act_window,help:l10n_es_aeat_mod182.action_l10n_es_aeat_mod182_report
+msgid "Click to create a AEAT Model 182 Reports."
+msgstr "Feu clic per crear un informe del Model AEAT 182."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_regional_community_deduction__code
+msgid "Code"
+msgstr "Codi"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__community_vat
+msgid "Community VAT number"
+msgstr "Número d'IVA comunitari"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__company_vat
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_tree
+msgid "Company VAT"
+msgstr "IVA de l'empresa"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__partner_bank_id
+msgid "Company bank account used for the presentation"
+msgstr "Compte bancari de l'empresa utilitzat per a la presentació"
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/mod182_partner.py:0
+#, python-format
+msgid "Compose Email"
+msgstr "Redactar correu electrònic"
+
+#. module: l10n_es_aeat_mod182
+#: model:mail.template,subject:l10n_es_aeat_mod182.email_template_182
+msgid ""
+"Comprobación datos de modelo 182 año {{object.report_id.year}} de "
+"{{user.company_id.name}}"
+msgstr ""
+"Comprovació de dades del model 182 any {{object.report_id.year}} de "
+"{{user.company_id.name}}"
+
+#. module: l10n_es_aeat_mod182
+#: model:mail.template,name:l10n_es_aeat_mod182.email_template_182
+msgid "Comprobación datos modelo 182"
+msgstr "Comprovació de dades del model 182"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_tree
+msgid "Confirm as valid"
+msgstr "Confirmar com a vàlid"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__state__confirmed
+msgid "Confirmed"
+msgstr "Confirmat"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model,name:l10n_es_aeat_mod182.model_res_partner
+msgid "Contact"
+msgstr "Contacte"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__contact_email
+msgid "Contact Email"
+msgstr "Correu electrònic de contacte"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__counterpart_account_id
+msgid "Counterpart account"
+msgstr "Compte contrapartida"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__partner_country_code
+msgid "Country Code"
+msgstr "Codi del país"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__create_uid
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_wizard__create_uid
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_move_record__create_uid
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__create_uid
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__create_uid
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_regional_community_deduction__create_uid
+msgid "Created by"
+msgstr "Creat per"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__create_date
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_wizard__create_date
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_move_record__create_date
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__create_date
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__create_date
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_regional_community_deduction__create_date
+msgid "Created on"
+msgstr "Creat el"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__access_url
+msgid "Customer Portal URL"
+msgstr "URL del portal del client"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__partner_state_code
+msgid "CÓDIGO PROVINCIA"
+msgstr "CÒDIG PROVINCIA"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__operation_key__d
+msgid "D. Disposición del patrimonio de discapacitados."
+msgstr "D. Disposició del patrimoni de discapacitats."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_move_record__date
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.report_182_partner_document
+msgid "Date"
+msgstr "Data"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__declarant_nature
+msgid "Declarant Nature"
+msgstr "Natura del declarant"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__declared_nature
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__declared_nature
+msgid "Declared Nature"
+msgstr "Natura declarada"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_regional_community_deduction__deduction
+msgid "Deduction"
+msgstr "Deducció"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__deduction_percentage
+msgid "Deduction Percentage"
+msgstr "Percentatge de deducció"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__deduction_percentage
+msgid "Deduction Percentage (%)"
+msgstr "Percentatge de deducció (%)"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_form
+msgid "Details"
+msgstr "Detalls"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__display_name
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_wizard__display_name
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_move_record__display_name
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__display_name
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__display_name
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_regional_community_deduction__display_name
+msgid "Display Name"
+msgstr "Nom a mostrar"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__donation_amount
+msgid "Donation Amount"
+msgstr "Quantitat de donació"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__donation_amount
+msgid "Donation Amount (€)"
+msgstr "Quantitat de donació (€)"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__donation_recurrence
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__donation_recurrence
+msgid "Donation Recurrence"
+msgstr "Recurrència de la donació"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__donation_or_contribution_in_kind
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__donation_or_contribution_in_kind
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_tree
+msgid "Donation or Contribution in Kind"
+msgstr "Donació o contribució en espècie"
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/wizard/mod182_import_wizard.py:0
+#, python-format
+msgid "Duplicated line in VAT '%s'!"
+msgstr "Línia duplicada en l'IVA '%s'!"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__operation_key__e
+msgid ""
+"E. Gasto de dinero y consumo de bienes fungibles aportados al patrimonio "
+"protegido (...)"
+msgstr ""
+"E. Despesa de diners i consum de béns fungibles aportats al patrimoni "
+"protegits (...)"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__declared_nature__e
+msgid "E: Entidad en régimen de atribución de rentas"
+msgstr "E: Entitat en règim d'atribució de rendes"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__declared_nature__
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__donation_or_contribution_in_kind__
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__donation_recurrence__
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__kind_of_good__
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__revocation__
+msgid "Empty"
+msgstr "Buit"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__date_end
+msgid "Ending date"
+msgstr "Data de finalització"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_report__declarant_nature__1
+msgid ""
+"Entidad beneficiaria de los incentivos regulados en el Título III de la Ley "
+"49/2002"
+msgstr ""
+"Entitat beneficiària dels incentius regulats en el Títol III de la Llei "
+"49/2002"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__error_count
+msgid "Error Count"
+msgstr "Compte d'errors"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__error_text
+msgid "Error Text"
+msgstr "Text d'error"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__state__exception
+msgid "Exception"
+msgstr "Excepció"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__export_config_id
+msgid "Export config"
+msgstr "Configuració d'exportació"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__operation_key__f
+msgid "F. Cuotas de afiliación y aportaciones (...)"
+msgstr "F. Quotes d'afiliació i aportacions (...)"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__declared_nature__f
+msgid "F: Persona física"
+msgstr ""
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_wizard__file
+msgid "File"
+msgstr "Fitxer"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_wizard__file_name
+msgid "File Name"
+msgstr "Nom del fitxer"
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/wizard/mod182_import_wizard.py:0
+#, python-format
+msgid "First line is not type '1'!"
+msgstr "La primera línia no és de tipus '1'!"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__message_follower_ids
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__message_follower_ids
+msgid "Followers"
+msgstr "Seguidors"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__message_partner_ids
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidors (Socis)"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__activity_type_icon
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icona de Font Awesome, p.ex. fa-tasks"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_account_bank_statement_line__not_in_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_account_move__not_in_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_account_payment__not_in_mod182
+msgid "Force not included in 182 report"
+msgstr "Forçar no inclòs en el informe 182"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__contact_name
+msgid "Full Name"
+msgstr "Nom complet"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_report__declarant_nature__2
+msgid "Fundación legalmente reconocida"
+msgstr "Fundació legalment reconeguda"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__operation_key__g
+msgid "G. Resto de donaciones y aportaciones percibidas."
+msgstr "G. Resta de donacions i aportacions rebudes."
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_report_form
+msgid "General"
+msgstr ""
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__general_percentage
+msgid "General Percentage (%)"
+msgstr "Percentatge general (%)"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_search
+msgid "Group By"
+msgstr "Agrupar per"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.partner_record_search_view
+msgid "Group by..."
+msgstr "Agrupar per..."
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.communication_failed
+msgid "Ha habido un error registrando la comunicación."
+msgstr "Hi ha hagut un error registrant la comunicació."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__has_message
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__has_message
+msgid "Has Message"
+msgstr "Té missatge"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__kind_of_good__i
+msgid "I: Inmueble"
+msgstr "I: Immoble"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__id
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_wizard__id
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_move_record__id
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__id
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__id
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_regional_community_deduction__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__activity_exception_icon
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__activity_exception_icon
+msgid "Icon"
+msgstr "Icona"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__activity_exception_icon
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icona per indicar una activitat d'excepció."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__message_needaction
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si està marcat, els nous missatges requereixen la seva atenció."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__message_has_error
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__message_has_sms_error
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__message_has_error
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si està marcat, alguns missatges tenen un error de lliurament."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_account_bank_statement_line__not_in_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_account_move__not_in_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_account_payment__not_in_mod182
+msgid ""
+"If you mark this field, this invoice will not be included in any AEAT 182 "
+"model report."
+msgstr ""
+"Si marca aquest camp, aquesta factura no s'inclourà en cap informe del model"
+" AEAT 182."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_res_partner__not_in_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_res_users__not_in_mod182
+msgid ""
+"If you mark this field, this partner will not be included in any AEAT 182 "
+"model report, independently from the total amount of its operations."
+msgstr ""
+"Si marca aquest camp, aquest soci no s'inclourà en cap informe del model "
+"AEAT 182, independentment de l'import total de les seves operacions."
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_wizard_form
+msgid "Import"
+msgstr "Importar"
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/wizard/mod182_import_wizard.py:0
+#, python-format
+msgid "Import model should be 182!"
+msgstr "El model d'importació ha de ser 182!"
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/wizard/mod182_import_wizard.py:0
+#, python-format
+msgid "Import year should be 2022 or 2023!"
+msgstr "L'any d'importació ha de ser 2022 o 2023!"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.partner_record_search_view
+msgid "Invalid records"
+msgstr "Registres no vàlids"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.report_182_partner_document
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_move_record__move_id
+msgid "Invoice / Journal entry"
+msgstr "Factura / Asentament del diari"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.report_182_partner_document
+msgid "Invoices"
+msgstr "Factures"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__message_is_follower
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__message_is_follower
+msgid "Is Follower"
+msgstr "És seguidor"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__item_identification
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__item_identification
+msgid "Item Identification"
+msgstr "Identificació de l'element"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__declared_nature__j
+msgid "J: Persona jurídica"
+msgstr ""
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__journal_id
+msgid "Journal"
+msgstr "Diari"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model,name:l10n_es_aeat_mod182.model_account_move
+msgid "Journal Entry"
+msgstr "Assentament comptable"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__journal_id
+msgid "Journal in which post the move."
+msgstr "Diari en què s'inscriu el moviment."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__kind_of_good
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__kind_of_good
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_tree
+msgid "Kind of Good"
+msgstr "Tipus de bé"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__representative_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__representative_vat
+msgid "L.R. VAT number"
+msgstr "Número d'IVA L.R."
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.communication_success
+msgid "La comunicación se ha registrado correctamente."
+msgstr "La comunicació s'ha registrat correctament."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines____last_update
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_wizard____last_update
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_move_record____last_update
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record____last_update
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report____last_update
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_regional_community_deduction____last_update
+msgid "Last Modified on"
+msgstr "Última modificació el"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__write_uid
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_wizard__write_uid
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_move_record__write_uid
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__write_uid
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__write_uid
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_regional_community_deduction__write_uid
+msgid "Last Updated by"
+msgstr "Última actualització per"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__write_date
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_wizard__write_date
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_move_record__write_date
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__write_date
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__write_date
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_regional_community_deduction__write_date
+msgid "Last Updated on"
+msgstr "Última actualització el"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__representative_vat
+msgid "Legal Representative VAT number."
+msgstr "Número d'IVA del representant legal."
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/wizard/mod182_import_wizard.py:0
+#, python-format
+msgid "Lines not found in the file!"
+msgstr "No s'han trobat línies al fitxer!"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__message_main_attachment_id
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjunt principal"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__message_has_error
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de lliurament del missatge"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__message_ids
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__message_ids
+msgid "Messages"
+msgstr "Missatges"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__model
+msgid "Model"
+msgstr ""
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__number
+msgid "Model number"
+msgstr "Número de model"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.communication_failed
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.communication_success
+msgid "Modelo 182"
+msgstr "Model 182"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model,name:l10n_es_aeat_mod182.model_l10n_es_aeat_mod182_move_record
+msgid "Move Record"
+msgstr "Registre de moviment"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_form
+msgid "Move record"
+msgstr "Registre de moviment"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__move_record_ids
+msgid "Move records"
+msgstr "Registres de moviment"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__contact_name
+msgid "Must have name and surname."
+msgstr "Ha de tenir nom i cognom."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__my_activity_date_deadline
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Termini de la meva activitat"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__partner_vat
+msgid "N.I.F. DEL DECLARADO"
+msgstr "N.I.F. DEL DECLARAT"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__representative_vat
+msgid "N.I.F. DEL DECLARANTE"
+msgstr "N.I.F. DEL DECLARANT"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__name
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_regional_community_deduction__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__activity_calendar_event_id
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Proper esdeveniment del calendari d'activitats"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__activity_date_deadline
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Proper termini d'activitat"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__activity_summary
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__activity_summary
+msgid "Next Activity Summary"
+msgstr "Proper resum d'activitat"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__activity_type_id
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__activity_type_id
+msgid "Next Activity Type"
+msgstr "Tipus d'activitat següent"
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/mod182.py:0
+#, python-format
+msgid "No Tax Mapping was found"
+msgstr "No s'ha trobat mapeig fiscal"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_res_partner__not_in_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_res_users__not_in_mod182
+msgid "Not included in 182 report"
+msgstr "No inclòs en el informe 182"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__message_needaction_counter
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'accions"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__message_has_error_counter
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'errors"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__message_needaction_counter
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Nombre de missatges que requereixen acció"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__message_has_error_counter
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de missatges amb error de lliurament"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__kind_of_good__o
+msgid "O: Otros"
+msgstr "O: Altres"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__operation_key
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__operation_key
+msgid "Operation Key"
+msgstr "Clau d'operació"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.partner_record_search_view
+msgid "Operation key"
+msgstr "Clau d'operació"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__amount
+msgid "Operations amount"
+msgstr "Import d'operacions"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__origin_year
+msgid "Origin Year"
+msgstr "Any d'origen"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__origin_year
+msgid "Origin cash operation year"
+msgstr "Any d'operació de caixa d'origen"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__over_3_years_value
+msgid "Over 3 Years Percentage (%)"
+msgstr "Percentatge superior al 3 anys (%)"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_report__declarant_nature__4
+msgid ""
+"Partidos Políticos, Federaciones, Coaliciones o Agrupaciones de Electores"
+msgstr "Partits polítics, federacions, coalicions o agrupacions d'electors"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__partner_id
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__partner_id
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.partner_record_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_search
+msgid "Partner"
+msgstr "Soci"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model,name:l10n_es_aeat_mod182.model_l10n_es_aeat_mod182_partner_record
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.partner_record_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_form
+msgid "Partner Record"
+msgstr "Registre de soci"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__partner_record_ids
+msgid "Partner Records"
+msgstr "Registres de soci"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__partner_state_code
+msgid "Partner State Code"
+msgstr "Codi d'estat del soci"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__partner_vat
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_search
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_tree
+msgid "Partner VAT"
+msgstr "IVA del soci"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_form
+msgid "Partner info"
+msgstr "Informació del soci"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_move_record__partner_record_id
+msgid "Partner record"
+msgstr "Registre de soci"
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/mod182.py:0
+#, python-format
+msgid "Partner record errors:\n"
+msgstr "Errors del registre de soci:\n"
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/mod182.py:0
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_report_form
+#, python-format
+msgid "Partner records"
+msgstr "Registres de soci"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__total_partner_records
+msgid "Partners records"
+msgstr "Registres de socis"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__state__pending
+msgid "Pending"
+msgstr "Pendent"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.partner_record_search_view
+msgid "Pending records"
+msgstr "Registres pendents"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__period_type
+msgid "Period Type"
+msgstr "Tipus de període"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_report_form
+msgid "Persones Físiques (IRPF)"
+msgstr ""
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_report_form
+msgid "Persones Jurídiques (IS)"
+msgstr ""
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__contact_phone
+msgid "Phone"
+msgstr "Telèfon"
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/mod182.py:0
+#, python-format
+msgid ""
+"Please review partner records, some of them are in red color:\n"
+"\n"
+msgstr ""
+"Si us plau, revisa els registres de soci, alguns d'ells estan en color vermell:\n"
+"\n"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__access_url
+msgid "Portal Access URL"
+msgstr "URL d'accés al portal"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__previous_number
+msgid "Previous declaration number"
+msgstr "Número de declaració anterior"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_tree
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__protected_patrimony_holder_nif
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__protected_patrimony_holder_nif
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_tree
+msgid "Protected Patrimony Holder NIF"
+msgstr "NIF del titular de patrimoni protegit"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__protected_patrimony_holder_name
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__protected_patrimony_holder_name
+msgid "Protected Patrimony Holder Name"
+msgstr "Nom del titular de patrimoni protegit"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_form
+msgid "Recompute"
+msgstr "Recomptar"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.partner_record_search_view
+msgid "Record"
+msgstr "Registre"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__check_ok
+msgid "Record is OK"
+msgstr "El registre és correcte"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_report_form
+msgid "Records"
+msgstr "Registres"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.partner_record_search_view
+msgid "Records in exception"
+msgstr "Registres en excepció"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_search
+msgid "Recurrence"
+msgstr ""
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model,name:l10n_es_aeat_mod182.model_regional_community_deduction
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__regional_community_deduction_id
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__regional_community_deduction_id
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_regional_community_deduction_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_regional_community_deduction_tree
+msgid "Regional Community Deduction"
+msgstr ""
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__regional_deduction_percentage
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__regional_deduction_percentage
+msgid "Regional Deduction Percentage"
+msgstr "Percentatge de deducció autonòmica"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__name
+msgid "Report identifier"
+msgstr "Identificador del informe"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__representative_vat
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_tree
+msgid "Representative VAT"
+msgstr ""
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__activity_user_id
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__activity_user_id
+msgid "Responsible User"
+msgstr "Usuari responsable"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__rest_3_years_old_value
+msgid "Rest 3 Years Old Percentage (%)"
+msgstr ""
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__rest_percentage_value
+msgid "Rest Percentage (%)"
+msgstr ""
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__revocation
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__revocation
+msgid "Revocation"
+msgstr "Revocació"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.communication_failed
+msgid ""
+"Revíselo y vuelva a intentarlo, o pongase en contacto por correo con "
+"nosotros."
+msgstr ""
+"Reviseu-ho i torneu-ho a provar, o poseu-vos en contacte per correu amb "
+"nosaltres."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__message_has_sms_error
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de lliurament d'SMS"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__user_id
+msgid "Salesperson"
+msgstr "Venedor"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__access_token
+msgid "Security Token"
+msgstr "Token de seguretat"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_form
+msgid "Send"
+msgstr "Enviar"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_tree
+msgid "Send email"
+msgstr "Enviar correu electrònic"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_report_form
+msgid "Send emails"
+msgstr "Enviar correus electrònics"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__state__sent
+msgid "Sent"
+msgstr "Enviat"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_form
+msgid "Set to Pending"
+msgstr "Establir com a pendent"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_tree
+msgid "Set to invalid"
+msgstr "Establir com a invàlid"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__date_start
+msgid "Starting date"
+msgstr "Data d'inici"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__state
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__state
+msgid "State"
+msgstr "Estat"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__partner_state_code
+msgid "State Code"
+msgstr "Codi d'estat"
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/mod182_partner.py:0
+#, python-format
+msgid "State code can only contain digits"
+msgstr "El codi d'estat només pot contenir dígits"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__statement_type
+msgid "Statement Type"
+msgstr "Tipus de declaració"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__activity_state
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estat basat en les activitats\n"
+"Caducat: La data de venciment ja ha passat\n"
+"Avui: La data de l'activitat és avui\n"
+"Planificat: Activitats futures."
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_report_form
+msgid "Summary"
+msgstr "Resum"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__support_type
+msgid "Support Type"
+msgstr "Tipus de suport"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__tax_agency_ids
+msgid "Tax Agency"
+msgstr "Agència Tributària"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.report_182_partner_document
+msgid "Tax ID"
+msgstr "NIF"
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/regional_community_deduction.py:0
+#, python-format
+msgid "The code must be exactly 2 digits."
+msgstr "El codi ha de tenir exactament 2 dígits."
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/regional_community_deduction.py:0
+#, python-format
+msgid "The deduction must be a positive percentage between 0 and 100."
+msgstr "La deducció ha de ser un percentatge positiu entre 0 i 100."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__general_percentage
+msgid "The general percentage for corporate taxpayers."
+msgstr "El percentatge general per a contribuents corporatius."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__under_limit_percentage
+msgid "The limit under € for individual taxpayers."
+msgstr "El límit inferior en € per a contribuents individuals."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__rest_percentage_value
+msgid "The remaining percentage for individual taxpayers."
+msgstr "El percentatge restant per a contribuents individuals."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__over_3_years_value
+msgid "The value for corporate taxpayers with more than 3 years of antiquity."
+msgstr "El valor per a contribuents corporatius amb més de 3 anys d'antiguitat."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__under_limit_value
+msgid "The value for individual taxpayers under limit."
+msgstr "El valor per a contribuents individuals per sota del límit."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__rest_3_years_old_value
+msgid "The value for individual taxpayers with 3 years of antiquity."
+msgstr "El valor per a contribuents individuals amb 3 anys d'antiguitat."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__counterpart_account_id
+msgid ""
+"This account will be the counterpart for all the journal items that are "
+"regularized when posting the report."
+msgstr ""
+" Aquest compte serà el contrapunt de tots els elements del diari que es "
+"regularitzaran quan s'enviï el informe."
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_report_form
+msgid ""
+"This will delete all records, and remove possible answers\n"
+"                    from partners. Are you sure you want to continue?"
+msgstr ""
+"Això esborrará tots els registres i eliminarà les possibles respostes\n"
+"                    dels socis. Esteu segurs que voleu continuar?"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_report_form
+msgid ""
+"This will enqueue all the pending confirmation emails for this report for "
+"sending to the invoicing contact. Are you sure you want to continue?"
+msgstr ""
+"Això posarà en cua tots els correus electrònics de confirmació pendents "
+"d'aquest Informe per ser enviats al contacte de facturació. Estàs segur que "
+"vols continuar?"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_report__declarant_nature__3
+msgid ""
+"Titular o administrador de un patrimonio protegido regulado en la Ley "
+"41/2003"
+msgstr ""
+"Titular o administrador d'un patrimoni protegit regulat en la Llei 41/2003"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__total_amount
+msgid "Total Amount"
+msgstr "Quantitat"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__type
+msgid "Type"
+msgstr "Tipus"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__activity_exception_decoration
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipus de l'activitat d'excepció registrada."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__under_limit_percentage
+msgid "Under Limit (€)"
+msgstr "Sota límit (€)"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__under_limit_value
+msgid "Under Limit Percentage (%)"
+msgstr "Percentatge sota límit (%)"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__kind_of_good__v
+msgid "V: Valores mobiliarios"
+msgstr "V: Valors mobiliaris"
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/mod182_partner.py:0
+#, python-format
+msgid "VAT must be defined for Spanish Contacts"
+msgstr "L'IVA ha de ser definida per als Contactes espanyols"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__partner_vat
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__company_vat
+msgid "VAT number"
+msgstr "Número d'IVA"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__community_vat
+msgid ""
+"VAT number for professionals established in other state member without "
+"national VAT"
+msgstr ""
+"Número d'IVA per a professionals establerts en un altre estat membre sense "
+"IVA nacional"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__website_message_ids
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__website_message_ids
+msgid "Website Messages"
+msgstr "Missatges del lloc web"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__website_message_ids
+#: model:ir.model.fields,help:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicació del lloc web"
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/mod182_partner.py:0
+#, python-format
+msgid "Without country code"
+msgstr "Sense codi de país"
+
+#. module: l10n_es_aeat_mod182
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod182/models/mod182_partner.py:0
+#, python-format
+msgid "Without state code"
+msgstr "Sense codi d'estat"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__donation_or_contribution_in_kind__x
+msgid "X: Donativo, aportación o disposición ha sido en especie"
+msgstr "X: Donatiu, aportació o disposició ha estat en espècie"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields.selection,name:l10n_es_aeat_mod182.selection__l10n_es_aeat_mod182_partner_record__revocation__x
+msgid "X: Persona física"
+msgstr ""
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.communication_success
+msgid "Ya puede cerrar esta página si así lo desea."
+msgstr "Ja pot tancar aquesta pàgina si així ho desitja."
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__year
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_report__year
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_search
+msgid "Year"
+msgstr "Any"
+
+#. module: l10n_es_aeat_mod182
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_import_lines__year_of_revoked_donation
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod182.field_l10n_es_aeat_mod182_partner_record__year_of_revoked_donation
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_form
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_aeat_mod182_import_lines_tree
+msgid "Year of Revoked Donation"
+msgstr "Any de donació revocada"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_form
+msgid "e.g. 0.00"
+msgstr "p. ex. 0,00"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_form
+msgid "e.g. 00000000A"
+msgstr "p. ex. 00000000A"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_form
+msgid "e.g. CATALUÑA"
+msgstr "p. ex. CATALUNYA"
+
+#. module: l10n_es_aeat_mod182
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod182.view_l10n_es_aeat_mod182_partner_record_form
+msgid "e.g. NRC or ISIN identification"
+msgstr "p. ex. identificació NRC o ISIN"
