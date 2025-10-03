@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sort-images"
+version = "2025.10.18" # version
+authors = [
+    { name = "Guenthner", email = "guenthner.jonathan@gmail.com" },
+]
+description = "A cli tool to sort images into folders by date"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = ["pillow"]
+keywords = ["Files", "Images", "Exif", "Sorting", "Automation"]
+
+[project.scripts]
+sort-images = "sort_images:command_entry_point"
