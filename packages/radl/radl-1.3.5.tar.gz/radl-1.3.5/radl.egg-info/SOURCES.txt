@@ -1,0 +1,17 @@
+INSTALL
+LICENSE
+MANIFEST.in
+NOTICE
+README
+changelog
+setup.py
+radl/__init__.py
+radl/parsetab.py
+radl/radl.py
+radl/radl_json.py
+radl/radl_parse.py
+radl.egg-info/PKG-INFO
+radl.egg-info/SOURCES.txt
+radl.egg-info/dependency_links.txt
+radl.egg-info/requires.txt
+radl.egg-info/top_level.txt
