@@ -1,0 +1,5 @@
+setup.py
+xxgrant007.egg-info/PKG-INFO
+xxgrant007.egg-info/SOURCES.txt
+xxgrant007.egg-info/dependency_links.txt
+xxgrant007.egg-info/top_level.txt
