@@ -1,0 +1,10 @@
+pyyaml
+HMpTy
+fundamentals
+docopt
+astrocalc
+multiprocess
+unicodecsv
+pandas
+pymysql
+scipy
