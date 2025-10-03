@@ -1,0 +1,10 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/regression.py,sha256=y7t4oDnQXuWwvqrPiDo2wEXmA-PR3GjFp5oq2SAxao0,9758
+src/univariant.py,sha256=MUWDeYTnWW1CrTiTAJMSAksMLzzLzeIttHhU7gD5yyw,4981
+src/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/utils/colors.py,sha256=7SYh9lCAcfSJ-Lheovv-0jfBeZ0tSxJO47WCfXaAizQ,2436
+src/utils/metrics.py,sha256=Vnot4w-DqUn4ggl3JG-3EbI4rdr7VZ_yAdd29AIcsrY,2369
+plotly_ml-0.1.9.dist-info/METADATA,sha256=aOWHIfhB8dMy2BqHp3Jg2S1PtSEr7hNBbzTZOiMaX2U,1292
+plotly_ml-0.1.9.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+plotly_ml-0.1.9.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+plotly_ml-0.1.9.dist-info/RECORD,,
