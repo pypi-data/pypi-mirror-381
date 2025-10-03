@@ -1,0 +1,2 @@
+[console_scripts]
+dockreg = dockreg.cli.dockreg:main
