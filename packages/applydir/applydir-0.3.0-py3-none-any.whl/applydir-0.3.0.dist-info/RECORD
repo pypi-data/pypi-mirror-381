@@ -1,0 +1,14 @@
+applydir-0.3.0.dist-info/METADATA,sha256=Xmlw42pVQZon71W_o_leOc7TgJtLBDpHxfudizhGrMs,12428
+applydir-0.3.0.dist-info/WHEEL,sha256=9P2ygRxDrTJz3gsagc0Z96ukrxjr-LFBGOgv3AuKlCA,90
+applydir-0.3.0.dist-info/entry_points.txt,sha256=dMSPijN_8eRD6N08MAcXyKsDuRsTuXRVvV_JjMrm0uw,64
+applydir-0.3.0.dist-info/licenses/LICENSE,sha256=56_JyLNNkj8AUAA4qlFLZO6HDzRXfoPxC_fv2fLbLvs,1070
+applydir/__init__.py,sha256=-Uqn6k0taY7mKHYVLldEQC2E-gRdTmUhPmh4N4xlxoo,811
+applydir/applydir_applicator.py,sha256=pAPIXme8mptBDuZxA_gys7E-I8JXe5WF2q8qBiPaEEY,10838
+applydir/applydir_changes.py,sha256=AToIeivmBm63FIDniNv6wnwcZHFgvt5LfmKXtzsLCyE,5567
+applydir/applydir_distance.py,sha256=JwUKt0MadCFqkq6teyj88vbsyyYrzCAIWidrgaKYbeA,1809
+applydir/applydir_error.py,sha256=J2AcJocG1rfchNUUdQ92rKD1JaRzSm-onrtWYDuPXUo,3395
+applydir/applydir_file_change.py,sha256=LQlYk559SMYg71su4dv5QufowowoaoAis0DH-1tTjNE,8633
+applydir/applydir_matcher.py,sha256=DuMogwtNKrfO749YWdIUiqH4qjrjnrF14TeddQAW1Gg,11937
+applydir/config.yaml,sha256=V4VmM0wys5iRuv-gOwmMCgpHPHmb6nlWrMRje3I4Z58,471
+applydir/main.py,sha256=ofjS3Dp5-e2EF57M_obywokNLYKqp45xJZWu94Dl1Bs,3253
+applydir-0.3.0.dist-info/RECORD,,
