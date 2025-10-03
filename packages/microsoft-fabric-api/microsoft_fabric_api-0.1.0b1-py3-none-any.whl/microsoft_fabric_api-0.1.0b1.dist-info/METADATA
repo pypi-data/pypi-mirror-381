@@ -1,0 +1,80 @@
+Metadata-Version: 2.4
+Name: microsoft-fabric-api
+Version: 0.1.0b1
+Summary: Microsoft Fabric API Python SDK
+Author: Microsoft Corporation
+Project-URL: Homepage, https://learn.microsoft.com/en-us/rest/api/fabric
+Keywords: fabric,fabric sdk,microsoft,azure
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: assets/LICENSE.txt
+Requires-Dist: isodate<1.0.0,>=0.6.1
+Requires-Dist: azure-core<2.0.0,>=1.24.0
+Dynamic: license-file
+
+# Guide to Using the Python SDK for Microsoft Fabric REST API
+
+## Description
+
+The Microsoft Fabric API provides developers with programmatic access to manage and interact with Microsoft Fabric resources. It enables developers to automate a wide array of tasks, including data integration, data warehousing, big data analytics, deployment process automation, Fabric items provisioning, and more.
+
+This document provides an overview of the API endpoints, authentication methods, and usage examples for the Python SDK for Fabric REST API. The Python SDK is a client library that simplifies communication with the Microsoft Fabric API service and handles serialization and error handling for you.
+
+## Installation via pip
+
+To install the client library via pip:
+
+```bash
+pip install microsoft-fabric-api
+```
+
+## Getting Started
+
+### 1. Register your application  
+
+[Register your application to use Microsoft Fabric API](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app).
+   
+### 2. Authenticate for the Microsoft Fabric service
+The Microsoft Fabric Python Client Library supports the use of TokenCredential classes in the [azure-identity](https://pypi.org/project/azure-identity/) library.
+
+You can read more about available Credential classes at [Azure Identity client library for Python](https://learn.microsoft.com/en-us/python/api/overview/azure/identity-readme?view=azure-python#key-concepts).
+
+The recommended library for authenticating against Microsoft Identity (Azure AD) is [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-python).
+
+For an example of how to acquire a Microsoft Entra token for Microsoft Fabric Service, see [Microsoft Fabric API - get token](https://learn.microsoft.com/en-us/rest/api/fabric/articles/get-started/fabric-api-quickstart#get-token).
+   
+### 3. Create a Microsoft Fabric client object with an authentication provider
+An instance of the `FabricClient` class handles building requests, sending them to the Microsoft Fabric API, and processing the responses. To create a new instance of this class, you need to provide a instance of `TokenCredential` or the string representation of its underlying Microsoft Entra access token.
+   
+### 4. Make requests to Microsoft Fabric
+Once you have completed authentication and have a `FabricClient`, you can begin to make calls to the service.
+
+   For example, to get a list of workspaces:
+
+   ```python
+   from azure.identity import DefaultAzureCredential
+   from microsoft_fabric_api import FabricClient
+   
+   # Create credential and client
+   credential = DefaultAzureCredential()
+   fabric_client = FabricClient(credential)
+   
+   # Get the list of workspaces using the client
+   workspaces = fabric_client.core.workspaces.list_workspaces()
+   print(f"Number of workspaces: {len(workspaces)}")
+   for workspace in workspaces:
+       print(f"Workspace: {workspace.display_name}, Capacity ID: {workspace.capacity_id}")
+   ```
+
+### Documentation and resources
+
+- [Microsoft Fabric API documentation](https://learn.microsoft.com/en-us/rest/api/fabric)
