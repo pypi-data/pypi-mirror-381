@@ -1,0 +1,8 @@
+license
+pyproject.toml
+assemblypy/__init__.py
+assemblypy/ssembly.py
+assemblypy.egg-info/PKG-INFO
+assemblypy.egg-info/SOURCES.txt
+assemblypy.egg-info/dependency_links.txt
+assemblypy.egg-info/top_level.txt
