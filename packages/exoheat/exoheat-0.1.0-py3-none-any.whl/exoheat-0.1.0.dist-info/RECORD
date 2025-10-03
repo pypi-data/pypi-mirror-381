@@ -1,0 +1,24 @@
+exoheat/Flask4LaTex.py,sha256=OU1seQFA1SZTTjVpVpFCxj7tSQCU-kbQtQsfH9GnDqY,43837
+exoheat/LocalisationData.py,sha256=KtEkK-gAWzGQXHZRloyRRiPEu0YTTGdJxcJ4CsWcjxI,6214
+exoheat/Matherials.py,sha256=0cfA28bq1sNAG4L94tregO7NKWJA7PQgtLmRYUJ9m6w,12579
+exoheat/Walls.py,sha256=qeMtDTe3_i0fHrjQnLNMe-_mQCXRhHeuOdJeDFmiNhE,72567
+exoheat/__init__.py,sha256=bB9Xvd4q-S-Mt7Ngt3qLGBj2Wn3el4i_23caZydLlQQ,5903
+exoheat-0.1.0.dist-info/licenses/license ru.txt,sha256=JGnRXNgp_1QNx8N7oA_v5TEYf4Qx0SsV3es4QUoxt-E,68710
+exoheat-0.1.0.dist-info/licenses/license.txt,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+exoheat-examples/3D_House_Plot.py,sha256=eVbqusjd2GR3aYbKd8K6H3R-pQx6Gn0UaTghPb3SgiI,15244
+exoheat-examples/Home_class.py,sha256=n5tv-PyRsyiz4da7NsE-_SQSuc52jjxC2pbJWfGFuvo,12472
+exoheat-examples/Home_example.py,sha256=AiQ6xaVrP573KnUZqgSlKgkA1TA1Pbxhw6Unn_4F98s,13689
+exoheat-examples/LocalisationData.py,sha256=55YHkKdQZaOp-Kr4HeTtmgLlhwB18vryI0Z-ZsXepI0,3387
+exoheat-examples/Matherials.py,sha256=tbro62qRW_UFLSymWXA4JGzwaEONtMrIw9DjWw1-bts,12581
+exoheat-examples/go_report_exmpl.py,sha256=pJKCFOvBBph2cTFdNUuGNXYh9N-64wA9BnR7lmBDxOk,744
+exoheat-examples/Пример1 Теплоперадачи расчет потерь.py,sha256=UdcG_gZv5wZD34JDu9ZtNB0NL-RBraf7D80_sEn9oP8,3318
+exoheat-examples/Пример2 Инфильтрации расчет потерь.py,sha256=52S_nucuVgTvMXgQ3bsy_57S4DOWRNpLLS2zYBkzLZ4,4077
+exoheat-examples/Пример3 Все потери.py,sha256=G8AeDlYRktMEfGQA5e7ALdHSQUZgTd2psHnRf35ihes,6350
+exoheat-examples/Пример41 Домик tuple.py,sha256=SZwYwA1RNjOOStYofJiTODypehUk2_4nDfcEeIHl-EY,5118
+exoheat-examples/Пример42 Домик tpl class.py,sha256=F3WYd5zXT9kLSDNEPP8RCRu1eKswFP_kBjFVk_FR0ns,7014
+exoheat-examples/Пример43 Домик tpl class pandas.py,sha256=iT6kVSj07Clrb05AWWH_mSM_eBffL4edI0Bl2QOqDKU,6970
+exoheat-examples/Пример43 Домик tpl pandas.py,sha256=PUQZ8qxmpTTzwtC8Qct_EEMV44Qz-ievhTwgZPaJgdA,8425
+exoheat-0.1.0.dist-info/METADATA,sha256=vHl9gJ_NGhaqh0S8oXRS5yKFtOVQjWZM78ZtUZ4oMmw,954
+exoheat-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+exoheat-0.1.0.dist-info/top_level.txt,sha256=uD8zlZWjkMGrbzAtPqwtZm5alzb2w63aVPLzv4WuHv0,25
+exoheat-0.1.0.dist-info/RECORD,,
