@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    @author: 2024 Adrià González <adria.gonzalez@qubiq.es>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="view_aeat_mod182_import_lines_tree" model="ir.ui.view">
+        <field name="name">l10n.es.aeat.mod182.import.lines.tree</field>
+        <field name="model">l10n.es.aeat.mod182.import.lines</field>
+        <field name="arch" type="xml">
+            <tree string="AEAT 182 Import Lines" editable="bottom">
+                <field name="type" />
+                <field name="model" />
+                <field name="year" />
+                <field name="partner_vat" string="Partner VAT" />
+                <field name="company_vat" string="Company VAT" />
+                <field name="representative_vat" string="Representative VAT" optional="hide" />
+                <field name="name" />
+                <field name="partner_state_code" />
+                <field name="operation_key" />
+                <field name="deduction_percentage" />
+                <field name="donation_amount" />
+                <field name="donation_or_contribution_in_kind"
+                    string="Donation or Contribution in Kind" optional="hide" />
+                <field name="regional_community_deduction_id" optional="hide" />
+                <field name="regional_deduction_percentage" optional="hide" />
+                <field name="declared_nature" />
+                <field name="revocation" optional="hide" />
+                <field name="year_of_revoked_donation" string="Year of Revoked Donation"
+                    optional="hide" />
+                <field name="kind_of_good" string="Kind of Good" optional="hide" />
+                <field name="item_identification" optional="hide" />
+                <field name="donation_recurrence" />
+                <field name="protected_patrimony_holder_nif" string="Protected Patrimony Holder NIF"
+                    optional="hide" />
+                <field name="protected_patrimony_holder_name" optional="hide" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_aeat_mod182_import_lines_form" model="ir.ui.view">
+        <field name="name">l10n.es.aeat.mod182.import.lines.form</field>
+        <field name="model">l10n.es.aeat.mod182.import.lines</field>
+        <field name="arch" type="xml">
+            <form string="AEAT 182 Import Lines">
+                <sheet>
+                    <group>
+                        <field name="type" />
+                        <field name="model" />
+                        <field name="year" />
+                        <field name="partner_vat" string="Partner VAT" />
+                        <field name="company_vat" string="Company VAT" />
+                        <field name="representative_vat" string="Representative VAT" />
+                        <field name="name" />
+                        <field name="partner_state_code" />
+                        <field name="operation_key" />
+                        <field name="deduction_percentage" />
+                        <field name="donation_amount" />
+                        <field name="donation_or_contribution_in_kind"
+                            string="Donation or Contribution in Kind" />
+                        <field name="regional_community_deduction_id" />
+                        <field name="regional_deduction_percentage" />
+                        <field name="declared_nature" />
+                        <field name="revocation" />
+                        <field name="year_of_revoked_donation" string="Year of Revoked Donation" />
+                        <field name="kind_of_good" string="Kind of Good" />
+                        <field name="item_identification" />
+                        <field name="donation_recurrence" />
+                        <field name="protected_patrimony_holder_nif"
+                            string="Protected Patrimony Holder NIF" />
+                        <field name="protected_patrimony_holder_name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_aeat_mod182_import_lines_search" model="ir.ui.view">
+        <field name="name">l10n.es.aeat.mod182.import.lines.search</field>
+        <field name="model">l10n.es.aeat.mod182.import.lines</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="year" />
+                <field name="partner_vat" string="Partner VAT" />
+                <field name="name" />
+                <field name="deduction_percentage" />
+                <field name="donation_amount" />
+                <field name="donation_recurrence" />
+                <group expand="1" string="Group By">
+                    <filter string="Year" name="group_by_year" context="{'group_by':'year'}" />
+                    <filter string="Partner" name="group_by_partner"
+                        context="{'group_by':'partner_vat'}" />
+                    <filter string="Recurrence" name="group_by_recurrence"
+                        context="{'group_by':'donation_recurrence'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_aeat_mod182_import_lines" model="ir.actions.act_window">
+        <field name="name">AEAT 182 Import Lines</field>
+        <field name="res_model">l10n.es.aeat.mod182.import.lines</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_aeat_mod182_import_lines"
+        name="AEAT 182 Import Lines"
+        parent="l10n_es_aeat.menu_l10n_es_aeat_config"
+        action="action_aeat_mod182_import_lines"
+    />
+</odoo>

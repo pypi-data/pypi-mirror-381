@@ -1,0 +1,7 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_l10n_es_aeat_mod182_manager","l10n_es_aeat_mod182 manager","model_l10n_es_aeat_mod182_report","l10n_es_aeat.group_account_aeat",1,1,1,1
+"access_l10n_es_aeat_mod182_partner_manager","l10n_es_aeat_mod182_partner manager","model_l10n_es_aeat_mod182_partner_record","l10n_es_aeat.group_account_aeat",1,1,1,1
+"access_l10n_es_aeat_mod182_move_manager","l10n_es_aeat_mod182_move manager","model_l10n_es_aeat_mod182_move_record","l10n_es_aeat.group_account_aeat",1,1,1,1
+"access_l10n_es_aeat_mod182_import_wizard_manager","l10n_es_aeat_mod182_import_wizard manager","model_l10n_es_aeat_mod182_import_wizard","l10n_es_aeat.group_account_aeat",1,1,1,1
+"access_l10n_es_aeat_mod182_import_lines_manager","l10n_es_aeat_mod182_import_lines manager","model_l10n_es_aeat_mod182_import_lines","l10n_es_aeat.group_account_aeat",1,1,1,1
+"access_regional_community_deduction_manager","regional_community_deduction manager","model_regional_community_deduction","l10n_es_aeat.group_account_aeat",1,1,1,1

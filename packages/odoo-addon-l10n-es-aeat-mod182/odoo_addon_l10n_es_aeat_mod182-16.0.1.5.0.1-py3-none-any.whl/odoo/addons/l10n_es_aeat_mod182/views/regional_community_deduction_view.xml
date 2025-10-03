@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    @author: 2024 Adrià González <adria.gonzalez@qubiq.es>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="view_regional_community_deduction_tree" model="ir.ui.view">
+        <field name="name">regional.community.deduction.tree</field>
+        <field name="model">regional.community.deduction</field>
+        <field name="arch" type="xml">
+            <tree string="Regional Community Deduction" editable="bottom">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="deduction"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_regional_community_deduction_form" model="ir.ui.view">
+        <field name="name">regional.community.deduction.form</field>
+        <field name="model">regional.community.deduction</field>
+        <field name="arch" type="xml">
+            <form string="Regional Community Deduction">
+                <sheet>
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                        <field name="deduction"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_aeat_regional_community_deduction" model="ir.actions.act_window" >
+        <field name="name">AEAT Regional Community Deduction</field>
+        <field name="res_model">regional.community.deduction</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_aeat_regional_community_deduction"
+        name="AEAT Regional Community Deduction"
+        parent="l10n_es_aeat.menu_l10n_es_aeat_config"
+        action="action_aeat_regional_community_deduction"
+    />
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @author: 2024 Adrià González <adria.gonzalez@qubiq.es>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="action_aeat_mod182_import_wizard" model="ir.actions.act_window">
+        <field name="name">AEAT 182 Import Wizard</field>
+        <field name="res_model">l10n.es.aeat.mod182.import.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_aeat_mod182_import_wizard"
+        name="AEAT 182 Import Wizard"
+        parent="l10n_es_aeat.menu_l10n_es_aeat_config"
+        action="action_aeat_mod182_import_wizard"
+    />
+</odoo>

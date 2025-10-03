@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @author: 2024 Adrià González <adria.gonzalez@qubiq.es>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="view_aeat_mod182_import_wizard_form" model="ir.ui.view">
+        <field name="name">l10n.es.aeat.mod182.import.wizard.form</field>
+        <field name="model">l10n.es.aeat.mod182.import.wizard</field>
+        <field name="arch" type="xml">
+            <form string="AEAT 182 Import Wizard">
+                <group>
+                    <field name="file" filename="file_name"/>
+                    <field name="file_name" invisible="1"/>
+                </group>
+                <footer>
+                    <button name="action_import_txt" type="object" string="Import" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
