@@ -1,0 +1,2 @@
+[console_scripts]
+cargoshipper-mcp = cargoshipper_mcp.server:main
