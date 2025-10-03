@@ -1,0 +1,123 @@
+Metadata-Version: 2.4
+Name: langgraph-a2a-client
+Version: 0.1.4
+Summary: A2A Protocol Client Tool for LangGraph
+Project-URL: Repository, https://github.com/5enxia/langgraph-a2a-client
+Author-email: 5enxia <5enxia@users.noreply.github.com>
+License: MIT License
+        
+        Copyright (c) 2025 5enxia
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: a2a-sdk>=0.1.0
+Requires-Dist: httpx>=0.27.0
+Requires-Dist: langchain-core>=0.2.0
+Provides-Extra: examples
+Requires-Dist: langchain-openai>=0.3.34; extra == 'examples'
+Requires-Dist: langchain>=0.3.27; extra == 'examples'
+Requires-Dist: langgraph>=0.6.8; extra == 'examples'
+Description-Content-Type: text/markdown
+
+# LangGraph A2A Client
+
+A2A (Agent-to-Agent) Protocol Client Tool for LangGraph.
+
+## Overview
+
+This library provides functionality to discover and communicate with A2A-compliant agents in LangGraph applications.
+
+## Key Features
+
+- Agent discovery through agent cards from multiple URLs
+- Message sending to specific A2A agents
+- LangChain tool integration for easy use in LangGraph workflows
+
+## Installation
+
+```bash
+pip install langgraph-a2a-client
+```
+
+Or with uv:
+
+```bash
+uv add langgraph-a2a-client
+```
+
+## Usage
+
+```python
+from langgraph_a2a_client import A2AClientToolProvider
+
+# Initialize the A2A client
+a2a_client = A2AClientToolProvider(
+    known_agent_urls=["https://example.com/agent"],
+    timeout=300,
+    webhook_url="https://your-webhook.com/notify",
+    webhook_token="your-webhook-token"
+)
+
+# Get the tools for use in LangGraph
+tools = a2a_client.tools
+
+# Use in your LangGraph application
+# ...
+```
+
+## API
+
+### A2AClientToolProvider
+
+Main class that provides A2A client functionality.
+
+#### Parameters
+
+- `known_agent_urls` (list[str] | None): List of A2A agent URLs to discover initially
+- `timeout` (int): Timeout for HTTP operations in seconds (default: 300)
+- `webhook_url` (str | None): Optional webhook URL for push notifications
+- `webhook_token` (str | None): Optional authentication token for webhook notifications
+
+#### Tools
+
+The provider exposes three tools:
+
+1. **a2a_discover_agent**: Discover an A2A agent and return its agent card
+2. **a2a_list_discovered_agents**: List all discovered A2A agents and their capabilities
+3. **a2a_send_message**: Send a message to a specific A2A agent
+
+## Examples
+
+### Basic Usage
+
+```sh
+uv run examples/basic_usage.py
+```
+
+### Supervisor Agent Example
+
+```sh
+export OPENAI_API_KEY="your-openai-api"
+uv run --extra examples examples/supervisor_agent.py
+```
+
+## License
+
+MIT
