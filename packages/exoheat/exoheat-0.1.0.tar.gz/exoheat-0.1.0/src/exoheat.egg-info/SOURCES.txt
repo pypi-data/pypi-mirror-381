@@ -1,0 +1,27 @@
+README.txt
+license ru.txt
+license.txt
+pyproject.toml
+src/exoheat/Flask4LaTex.py
+src/exoheat/LocalisationData.py
+src/exoheat/Matherials.py
+src/exoheat/Walls.py
+src/exoheat/__init__.py
+src/exoheat-examples/3D_House_Plot.py
+src/exoheat-examples/Home_class.py
+src/exoheat-examples/Home_example.py
+src/exoheat-examples/LocalisationData.py
+src/exoheat-examples/Matherials.py
+src/exoheat-examples/go_report_exmpl.py
+src/exoheat-examples/Пример1 Теплоперадачи расчет потерь.py
+src/exoheat-examples/Пример2 Инфильтрации расчет потерь.py
+src/exoheat-examples/Пример3 Все потери.py
+src/exoheat-examples/Пример41 Домик tuple.py
+src/exoheat-examples/Пример42 Домик tpl class.py
+src/exoheat-examples/Пример43 Домик tpl class pandas.py
+src/exoheat-examples/Пример43 Домик tpl pandas.py
+src/exoheat.egg-info/PKG-INFO
+src/exoheat.egg-info/SOURCES.txt
+src/exoheat.egg-info/dependency_links.txt
+src/exoheat.egg-info/requires.txt
+src/exoheat.egg-info/top_level.txt
