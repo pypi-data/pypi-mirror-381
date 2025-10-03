@@ -1,0 +1,6 @@
+exchange_calendars
+numpy
+pandas
+tzdata
+valimp
+yahooquery
