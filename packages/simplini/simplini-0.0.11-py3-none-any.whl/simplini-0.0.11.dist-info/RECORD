@@ -1,0 +1,10 @@
+simplini/__init__.py,sha256=41eoLOklrZTxE33enJSX9Q1bgN5TZztVG5ZPaa7g6n8,1093
+simplini/_version.py,sha256=OaIl7v-6zEWEY90Jlh6yoBjO3zWX1oX7RsvqrK3o1TU,23
+simplini/core.py,sha256=ON0higFtnavTkNmjguHYhHwBHQYvJG7TnjgcMwxXxKY,2344
+simplini/parser.py,sha256=Ad_3_DQyf7GMFlLhy5gQN66ZqBAbjgDGcw1PG6Wkaww,19638
+simplini/renderer.py,sha256=V6vwd_jRi_x_Mhg9dzPIthJrIRgjRzYmc4K2G4nvtWU,5146
+simplini-0.0.11.dist-info/licenses/LICENSE,sha256=hMIqrlRpa9gquZetc6_CZWEA38Im4Qpajy4bKXfue-U,1072
+simplini-0.0.11.dist-info/METADATA,sha256=kwmQbSJ5DB5BuWhm3UB1RtwOuffbEnwEn0JdxabnIFk,3492
+simplini-0.0.11.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+simplini-0.0.11.dist-info/top_level.txt,sha256=il2IG3QVBT0vWwEwUK-ow3JMxR37QgncJkeicgZPwzQ,9
+simplini-0.0.11.dist-info/RECORD,,
