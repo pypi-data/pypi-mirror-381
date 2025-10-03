@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: clearner
+Version: 1.0.0
+Summary: Learner is a software platform for building production-ready machine learning models without writing any codes.
+Home-page: https://prizmi.ai/learner/home
+Author: Prizmi LLC
+Author-email: contact@prizmi.ai
+License: Other
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12,<3.13
+License-File: LICENSE
+
+UNKNOWN
+
