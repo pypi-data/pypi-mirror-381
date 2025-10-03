@@ -1,0 +1,16 @@
+nimbus_inference/__init__.py,sha256=CkfzLLXRff9gEpkvbrIVTAu5xpHgxHSLfkgpWvkFuC4,82
+nimbus_inference/cell_analyzer.py,sha256=ZJ09eXcNh7X9CWblSxX-8xRrRGp1ZesFsdxe0ry0RPc,12947
+nimbus_inference/example_dataset.py,sha256=2npsaZWTRa4cMfo9V5a-fJXAy3a6y72M0N1ej_fhRQs,11645
+nimbus_inference/nimbus.py,sha256=MSqj8qAIq0XoaN4Jz64S2kGDfOYhMJJ4V4jsGyAnbow,16400
+nimbus_inference/trainer.py,sha256=cHs51Sf5JO8KG5LNRi2zQOeK3c9Rz3sTQqcwOa9GtXM,14114
+nimbus_inference/unet.py,sha256=7bbO_TRS2bHK2gubm_lMb2i9Zj4yruzgAF_WC8DCSrY,11194
+nimbus_inference/utils.py,sha256=p0dWAcYuE4Vl6IVg5-0acG_JM-6qV38VWHkpD-YeD98,30937
+nimbus_inference/viewer_widget.py,sha256=NOP9IEOq8ov8-b3HoDaIhk-dn5_4k1LPAlY3MLwp7QE,19952
+nimbus_inference/assets/test_checkpoint,sha256=QUBp1HC8TozW_-9Nybwo4QVuNxJ2Lbm1Di6nxAzb70w,1284
+nimbus_inference/assets/.cache/huggingface/.gitignore,sha256=aEiIwOuxfzdCmLZe4oB1JsBmCUxwG8x-u-HBCV9JT8E,1
+nimbus_inference/assets/.cache/huggingface/download/V1.pt.lock,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nimbus_inference/assets/.cache/huggingface/download/V1.pt.metadata,sha256=79Rdn3Z7GWusxbE4ujfYCsR5cfWF8HPaLKTr4qSdEFI,124
+nimbus_inference-0.0.4.dist-info/METADATA,sha256=HP3h8LCykj2j8dUKl4e9nuq7r_D8vouAG4qcLPC9wmc,8888
+nimbus_inference-0.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+nimbus_inference-0.0.4.dist-info/licenses/LICENSE,sha256=gKjlOaN4Jf_s_vOpY0tF2PYadqscrGBouOcJ61OuaVs,1074
+nimbus_inference-0.0.4.dist-info/RECORD,,
