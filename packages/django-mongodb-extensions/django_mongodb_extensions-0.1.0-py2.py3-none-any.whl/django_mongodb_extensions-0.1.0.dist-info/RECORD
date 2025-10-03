@@ -1,0 +1,8 @@
+django_mongodb_extensions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_mongodb_extensions/debug_toolbar/panels/mql/__init__.py,sha256=eLAfHWmCxdHeYSjkY3ymslOscmh6-5rH_S6Y8h3bFDk,102
+django_mongodb_extensions/debug_toolbar/panels/mql/panel.py,sha256=KNHn-fCFATLw8zu6h1PWopcWJx0ggItUD2KD28ZFM3I,1802
+django_mongodb_extensions/debug_toolbar/panels/mql/tracking.py,sha256=tDmDTc60EzXu74Y0kBQNT4N8vz4XF_eROUs_Jqn7tiI,1434
+django_mongodb_extensions/templates/debug_toolbar/panels/mql.html,sha256=2OAqwH_qp2CtF0EgkXeiSgrjMfa1GHUjte7nF4j_qDY,4112
+django_mongodb_extensions-0.1.0.dist-info/METADATA,sha256=_tRA8JNC80pLqTsQeEzImUaCHnb0f6qlnU4IopeTzdY,69
+django_mongodb_extensions-0.1.0.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+django_mongodb_extensions-0.1.0.dist-info/RECORD,,
