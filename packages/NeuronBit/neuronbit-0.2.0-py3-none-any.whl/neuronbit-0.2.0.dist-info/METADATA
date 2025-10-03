@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: NeuronBit
+Version: 0.2.0
+Summary: NeuronBit: A lightweight neural utilities toolkit
+Home-page: https://github.com/jedizacho11/NeuronBit
+Author: jedizacho11
+Author-email: jedizacho11 <you@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/jedizacho11/NeuronBit
+Project-URL: Repository, https://github.com/jedizacho11/NeuronBit
+Project-URL: Issues, https://github.com/jedizacho11/NeuronBit/issues
+Keywords: neural-networks,AI,machine-learning,deep-learning
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# NeuronBit 🧠⚡
+
+NeuronBit is a lightweight Python toolkit for neural networks.
+
+## Installation
+```bash
+pip install NeuronBit
