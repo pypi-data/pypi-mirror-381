@@ -1,0 +1,2 @@
+[console_scripts]
+snakebar = snakebar:main

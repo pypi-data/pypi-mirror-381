@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+snakebar.py
+snakebar.egg-info/PKG-INFO
+snakebar.egg-info/SOURCES.txt
+snakebar.egg-info/dependency_links.txt
+snakebar.egg-info/entry_points.txt
+snakebar.egg-info/top_level.txt
