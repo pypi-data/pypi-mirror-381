@@ -1,0 +1,371 @@
+{% load i18n %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'netbox_maintenance_device/css/maintenance.css' %}">
+
+<div class="card">
+    <h5 class="card-header">
+        <i class="mdi mdi-calendar-clock text-primary"></i> {% trans "Maintenance" %}
+        {% if overdue_count > 0 %}
+            <span class="badge badge-danger ml-2">{{ overdue_count }}</span>
+        {% endif %}
+    </h5>
+    <div class="card-body">
+        {% if maintenance_plans %}
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>{% trans "Active Plans" %}</h6>
+                    <ul class="list-unstyled mb-0">
+                        {% for plan in maintenance_plans %}
+                            {% if plan.is_active %}
+                                <li class="mb-1">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <a href="{{ plan.get_absolute_url }}" class="text-decoration-none">
+                                                {{ plan.name }}
+                                            </a>
+                                            {% if plan.is_overdue %}
+                                                <span class="badge badge-danger badge-sm ml-1">{% trans "Overdue" %}</span>
+                                            {% elif plan.days_until_due and plan.days_until_due <= 7 %}
+                                                <span class="badge badge-warning badge-sm ml-1">{% trans "Due Soon" %}</span>
+                                            {% endif %}
+                                        </div>
+                                        <div class="btn-group btn-group-sm" role="group">
+                                            <button type="button" class="btn btn-outline-primary btn-sm schedule-btn" 
+                                                    data-plan-id="{{ plan.pk }}" 
+                                                    data-plan-name="{{ plan.name }}"
+                                                    title="{% trans 'Schedule Maintenance' %}">
+                                                <i class="mdi mdi-calendar-plus"></i>
+                                            </button>
+                                            {% if plan.pending_execution %}
+                                                <button type="button" class="btn btn-outline-success btn-sm complete-btn" 
+                                                        data-execution-id="{{ plan.pending_execution.pk }}" 
+                                                        data-plan-name="{{ plan.name }}"
+                                                        title="{% trans 'Complete Scheduled Maintenance' %}">
+                                                    <i class="mdi mdi-check-circle"></i>
+                                                </button>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h6>{% trans "Recent Activity" %}</h6>
+                    {% if recent_executions %}
+                        <ul class="list-unstyled mb-0">
+                            {% for execution in recent_executions|slice:":3" %}
+                                <li class="mb-1">
+                                    <small class="text-muted">{{ execution.scheduled_date|date:"d/m" }}</small>
+                                    <a href="{{ execution.get_absolute_url }}" class="text-decoration-none ml-2">
+                                        {{ execution.maintenance_plan.name }}
+                                    </a>
+                                    <span class="badge badge-sm ml-1 {% if execution.status == 'completed' %}badge-success{% elif execution.status == 'in_progress' %}badge-warning{% else %}badge-info{% endif %}">
+                                        {{ execution.get_status_display }}
+                                    </span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="text-muted small mb-0">{% trans "No executions yet" %}</p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="mt-3 text-center">
+                <a href="{% url 'plugins:netbox_maintenance_device:device_maintenance_tab' pk=object.pk %}" class="btn btn-sm btn-outline-primary">
+                    <i class="mdi mdi-calendar-clock"></i> {% trans "View All Maintenance" %}
+                </a>
+            </div>
+        {% else %}
+            <div class="text-center">
+                <p class="text-muted mb-2">{% trans "No maintenance plans configured" %}</p>
+                {% if perms.netbox_maintenance_device.add_maintenanceplan %}
+                    <a href="{% url 'plugins:netbox_maintenance_device:maintenanceplan_add' %}?device={{ object.pk }}" class="btn btn-sm btn-primary">
+                        <i class="mdi mdi-plus-thick"></i> {% trans "Add Plan" %}
+                    </a>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Schedule Maintenance Modal -->
+<div class="modal fade" id="scheduleMaintenanceModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{% trans "Schedule Maintenance" %}</h5>
+            </div>
+            <div class="modal-body">
+                <form id="scheduleMaintenanceForm">
+                    {% csrf_token %}
+                    <input type="hidden" id="schedulePlanId" name="plan_id">
+                    <div class="form-group">
+                        <label for="scheduledDate">{% trans "Scheduled Date" %}</label>
+                        <input type="date" class="form-control" id="scheduledDate" name="scheduled_date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="scheduleTechnician">{% trans "Technician" %}</label>
+                        <input type="text" class="form-control" id="scheduleTechnician" name="technician" 
+                               value="{% if user.is_authenticated %}{{ user.get_full_name|default:user.username }}{% endif %}">
+                    </div>
+                    <div class="form-group">
+                        <label for="scheduleNotes">{% trans "Notes" %}</label>
+                        <textarea class="form-control" id="scheduleNotes" name="notes" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{% trans "Cancel" %}</button>
+                <button type="button" class="btn btn-primary" id="confirmSchedule">
+                    <i class="mdi mdi-calendar-plus"></i> {% trans "Schedule Maintenance" %}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Complete Maintenance Modal -->
+<div class="modal fade" id="completeMaintenanceModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{% trans "Complete Maintenance" %}</h5>
+            </div>
+            <div class="modal-body">
+                <form id="completeMaintenanceForm">
+                    {% csrf_token %}
+                    <input type="hidden" id="completeExecutionId" name="execution_id">
+                    <div class="form-group">
+                        <label for="completeTechnician">{% trans "Technician" %}</label>
+                        <input type="text" class="form-control" id="completeTechnician" name="technician" 
+                               value="{% if user.is_authenticated %}{{ user.get_full_name|default:user.username }}{% endif %}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="completeNotes">{% trans "Notes" %}</label>
+                        <textarea class="form-control" id="completeNotes" name="notes" rows="3" placeholder="{% trans 'Maintenance completed successfully' %}"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{% trans "Cancel" %}</button>
+                <button type="button" class="btn btn-success" id="confirmComplete">
+                    <i class="mdi mdi-check-circle"></i> {% trans "Complete Maintenance" %}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get CSRF token from cookies
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    
+    const csrftoken = getCookie('csrftoken');
+    
+    // Modal helper functions
+    function showModal(modalId) {
+        const modalEl = document.getElementById(modalId);
+        if (!modalEl) return;
+        
+        // Try Bootstrap 5 first
+        if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+            const modal = new bootstrap.Modal(modalEl);
+            modal.show();
+        }
+        // Then Bootstrap 4
+        else if (typeof $ !== 'undefined' && $.fn.modal) {
+            $(modalEl).modal('show');
+        }
+        // Fallback to manual display
+        else {
+            modalEl.style.display = 'block';
+            modalEl.classList.add('show');
+            document.body.classList.add('modal-open');
+            
+            const backdrop = document.createElement('div');
+            backdrop.className = 'modal-backdrop fade show';
+            backdrop.id = modalId + '-backdrop';
+            document.body.appendChild(backdrop);
+        }
+    }
+    
+    function hideModal(modalId) {
+        const modalEl = document.getElementById(modalId);
+        if (!modalEl) return;
+        
+        // Try Bootstrap 5 first
+        if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+            const modal = bootstrap.Modal.getInstance(modalEl);
+            if (modal) modal.hide();
+        }
+        // Then Bootstrap 4
+        else if (typeof $ !== 'undefined' && $.fn.modal) {
+            $(modalEl).modal('hide');
+        }
+        // Fallback to manual hide
+        else {
+            modalEl.style.display = 'none';
+            modalEl.classList.remove('show');
+            document.body.classList.remove('modal-open');
+            
+            const backdrop = document.getElementById(modalId + '-backdrop');
+            if (backdrop) backdrop.remove();
+        }
+    }
+    
+    // Handle schedule maintenance button
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.schedule-btn')) {
+            e.preventDefault();
+            const btn = e.target.closest('.schedule-btn');
+            const planId = btn.dataset.planId;
+            const planName = btn.dataset.planName;
+            
+            document.getElementById('schedulePlanId').value = planId;
+            document.querySelector('#scheduleMaintenanceModal .modal-title').textContent = '{% trans "Schedule Maintenance" %}: ' + planName;
+            
+            // Set default date to tomorrow
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            document.getElementById('scheduledDate').value = tomorrow.toISOString().split('T')[0];
+            
+            showModal('scheduleMaintenanceModal');
+        }
+    });
+    
+    // Handle complete maintenance button
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.complete-btn')) {
+            e.preventDefault();
+            const btn = e.target.closest('.complete-btn');
+            const executionId = btn.dataset.executionId;
+            const planName = btn.dataset.planName;
+            
+            document.getElementById('completeExecutionId').value = executionId;
+            document.querySelector('#completeMaintenanceModal .modal-title').textContent = '{% trans "Complete Maintenance" %}: ' + planName;
+            
+            showModal('completeMaintenanceModal');
+        }
+    });
+    
+    // Handle modal close buttons
+    document.addEventListener('click', function(e) {
+        if (e.target.matches('[data-dismiss="modal"]') || e.target.closest('[data-dismiss="modal"]')) {
+            const modal = e.target.closest('.modal');
+            if (modal) {
+                hideModal(modal.id);
+            }
+        }
+    });
+    
+    // Handle schedule form submission
+    const confirmScheduleBtn = document.getElementById('confirmSchedule');
+    if (confirmScheduleBtn) {
+        confirmScheduleBtn.addEventListener('click', function() {
+            this.disabled = true;
+            this.innerHTML = '<i class="mdi mdi-loading mdi-spin"></i> {% trans "Scheduling..." %}';
+            
+            const form = document.getElementById('scheduleMaintenanceForm');
+            const formData = new FormData(form);
+            
+            fetch('{% url "plugins:netbox_maintenance_device:schedule_maintenance" %}', {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrftoken
+                },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    hideModal('scheduleMaintenanceModal');
+                    location.reload();
+                } else {
+                    alert('{% trans "Error scheduling maintenance" %}: ' + data.error);
+                    this.disabled = false;
+                    this.innerHTML = '<i class="mdi mdi-calendar-plus"></i> {% trans "Schedule Maintenance" %}';
+                }
+            })
+            .catch(error => {
+                alert('{% trans "Error scheduling maintenance. Please try again." %}');
+                this.disabled = false;
+                this.innerHTML = '<i class="mdi mdi-calendar-plus"></i> {% trans "Schedule Maintenance" %}';
+            });
+        });
+    }
+    
+    // Handle complete form submission
+    const confirmCompleteBtn = document.getElementById('confirmComplete');
+    if (confirmCompleteBtn) {
+        confirmCompleteBtn.addEventListener('click', function() {
+            this.disabled = true;
+            this.innerHTML = '<i class="mdi mdi-loading mdi-spin"></i> {% trans "Completing..." %}';
+            
+            const form = document.getElementById('completeMaintenanceForm');
+            const formData = new FormData(form);
+            
+            fetch('{% url "plugins:netbox_maintenance_device:quick_complete" %}', {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrftoken
+                },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    hideModal('completeMaintenanceModal');
+                    location.reload();
+                } else {
+                    alert('{% trans "Error completing maintenance" %}: ' + data.error);
+                    this.disabled = false;
+                    this.innerHTML = '<i class="mdi mdi-check-circle"></i> {% trans "Complete Maintenance" %}';
+                }
+            })
+            .catch(error => {
+                alert('{% trans "Error completing maintenance. Please try again." %}');
+                this.disabled = false;
+                this.innerHTML = '<i class="mdi mdi-check-circle"></i> {% trans "Complete Maintenance" %}';
+            });
+        });
+    }
+    
+    // Reset forms when modals are hidden
+    const scheduleModal = document.getElementById('scheduleMaintenanceModal');
+    if (scheduleModal) {
+        scheduleModal.addEventListener('hidden.bs.modal', function() {
+            document.getElementById('scheduleMaintenanceForm').reset();
+            const btn = document.getElementById('confirmSchedule');
+            btn.disabled = false;
+            btn.innerHTML = '<i class="mdi mdi-calendar-plus"></i> {% trans "Schedule Maintenance" %}';
+        });
+    }
+    
+    const completeModal = document.getElementById('completeMaintenanceModal');
+    if (completeModal) {
+        completeModal.addEventListener('hidden.bs.modal', function() {
+            document.getElementById('completeMaintenanceForm').reset();
+            const btn = document.getElementById('confirmComplete');
+            btn.disabled = false;
+            btn.innerHTML = '<i class="mdi mdi-check-circle"></i> {% trans "Complete Maintenance" %}';
+        });
+    }
+});
+</script>
