@@ -1,0 +1,10 @@
+sv2svg/__init__.py,sha256=kfVPmwIdafxRIyzR4Hy_zqSCeU9QRpXtCWmD8qL9_mo,156
+sv2svg/_version.py,sha256=2oVGHl_4oC5-CorjiyQuPRViZiNckFg-qYTqNnQsPWE,706
+sv2svg/cli.py,sha256=lc8Zq8xf6-0Z-g8R3L-HQGe-LwZcggJCI2gqjp_f1HE,4188
+sv2svg/core.py,sha256=V6WrgbkZwjhXPBg4UkCWVHgE_dPIk_KCxSSTEbiByBg,48047
+sv2svg/layout.py,sha256=ugMPX8rS_uS8QahZsJY3MGSIj3eWmjNsQJX9f9JD3HA,23766
+sv2svg-0.11.1.dist-info/METADATA,sha256=0U7BTGUda_kBDuSkfbhRkk1JcQt91oHy3MrbzO1gF74,7851
+sv2svg-0.11.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sv2svg-0.11.1.dist-info/entry_points.txt,sha256=1YYDzLr_caC8gpTTuWA_msci_riHchxq4lQ-5XZFB7U,43
+sv2svg-0.11.1.dist-info/licenses/LICENSE,sha256=Jw4XRHTp08wQAQoz_Tg5Ips5-gJ0ixu-LOlN38xuUd8,1061
+sv2svg-0.11.1.dist-info/RECORD,,
