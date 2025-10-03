@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: yagoutpay-sdk
+Version: 0.1.0
+Summary: YagoutPay Python SDK for secure payments
+Home-page: https://github.com/liladet/yagoutpay-sdk
+Author: Lidiya Alemayehu
+Author-email: lilaalex94@gmail.com
+Keywords: payments sdk yagoutpay encryption aes
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Office/Business :: Financial
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.28.0
+Requires-Dist: cryptography>=41.0.0
+Requires-Dist: pycryptodome>=3.18.0
+Requires-Dist: qrcode[pil]>=7.4.2
+Requires-Dist: Pillow>=10.0.0
+Provides-Extra: test
+Requires-Dist: pytest>=7.0; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: requests-mock>=1.10.0; extra == "test"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# YagoutPay Python SDK
+
+A secure, easy-to-use Python library for integrating YagoutPay payment methods: static/dynamic links, hosted checkout, and direct API calls. Handles AES encryption, API requests, and validation out-of-the-box.
+
+## Features
+
+- Static QR payment links with auto-QR generation.
+- Dynamic links with expiry checks.
+- Hosted form redirects (HTML output).
+- Direct wallet/card payments.
+- Test/prod environment switching.
+- Built for Python 3.8+.
+
+## Installation
+
+```bash
+git clone <your-repo>  # Or download
+cd yagoutpay-sdk
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\Activate.ps1
+pip install -e .
+```
