@@ -1,0 +1,16 @@
+agnets/__init__.py,sha256=PpPnSGRAwQlND2WEDGmLKXL2GkQRVVnVz_F65jNzabs,58
+agnets/agent.py,sha256=R-jF4YoazJsyBbut2G9J8sTAcFfMeXuZa1uIpW-9OjQ,7624
+agnets/agentv2.py,sha256=Sm54HUFO7GR9uec11Wvm9O0NuZbKjnFDjoE2Ec6pT3Y,5085
+agnets/config.py,sha256=xZ67nTA-w2pSJfeVbXVL1D3t0wRtvhlmlMOzEy2o56w,243
+agnets/fleet.py,sha256=vj6ZusNsPNsDOoDd09v7ckdIp9okvKBkHfa5_dQq8cA,3022
+agnets/utils.py,sha256=jhebClShusCbyRrYdU_CEmbaXiarNi7RGzW7qO509Zw,846
+agnets/backends/litellm.py,sha256=EKzSqRxeT0sjsJwKV1xaAPCOKvWTYo-8V8TReBQFl0c,5005
+agnets/backends/ollama.py,sha256=f7DlarjFEjg5mEwlV2DN2duRyZHPg3JAnAPBx0srWmo,3482
+agnets/backends/openai.py,sha256=X1pLLpOypVwuYDqDYwtqtkPn6EUP5zEkQJeyxz7v9hI,3853
+agnets/types/backend.py,sha256=RKTv2JQxvC5eu8_tlnr9QYVUSsVd5m103BplouSBngk,485
+agnets/types/literals.py,sha256=J0efzviFbf7kLHXTksL1jwiArX-5JWCbjZSikqjXBps,1485
+agnets/types/message.py,sha256=3M5xbrn9IEZMIrUtMt-z2SiwDTHGvAVckNa2xc3rS18,780
+agnets-0.4.0.dist-info/METADATA,sha256=KFD22i1Sr6eqTamWlVViRnAWU_By_110jjhwpJUGSVs,11105
+agnets-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+agnets-0.4.0.dist-info/licenses/LICENSE.md,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+agnets-0.4.0.dist-info/RECORD,,
