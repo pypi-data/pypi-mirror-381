@@ -1,0 +1,15 @@
+{
+  "name": "grounding-mcp-server",
+  "version": "0.2.0",
+  "description": "Grounding MCP server bundled with the Python CLI",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.1",
+    "@supabase/supabase-js": "^2.57.4",
+    "dotenv": "^17.2.2",
+    "zod": "^3.25.76"
+  }
+}

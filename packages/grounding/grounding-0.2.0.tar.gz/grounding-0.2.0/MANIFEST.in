@@ -1,0 +1,2 @@
+recursive-include grounding/server/node *
+include grounding/.env
