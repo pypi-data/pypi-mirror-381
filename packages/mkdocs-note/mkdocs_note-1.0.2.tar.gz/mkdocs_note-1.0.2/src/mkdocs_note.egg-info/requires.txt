@@ -1,0 +1,9 @@
+mkdocs>=1.6.1
+colorlog>=6.9.0
+
+[dev]
+pytest
+pytest-cov
+
+[test]
+pytest-cov
