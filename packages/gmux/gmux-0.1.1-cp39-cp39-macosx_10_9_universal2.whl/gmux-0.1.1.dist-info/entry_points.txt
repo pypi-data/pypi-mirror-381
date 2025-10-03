@@ -1,0 +1,2 @@
+[console_scripts]
+gmux = gmux.__main__:main
