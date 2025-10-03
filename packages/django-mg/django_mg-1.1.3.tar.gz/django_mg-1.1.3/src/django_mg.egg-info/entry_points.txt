@@ -1,0 +1,3 @@
+[console_scripts]
+django-mg-gui = django_mg.gui:main
+generate-model = django_mg.__main__:main
