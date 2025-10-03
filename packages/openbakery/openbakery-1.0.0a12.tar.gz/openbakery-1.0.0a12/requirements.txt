@@ -1,0 +1,26 @@
+axisregistry==0.4.16
+beautifulsoup4==4.14.2
+beziers==0.6.0
+cmarkgfm==2024.11.20
+collidoscope==0.6.5
+defcon==0.12.2
+dehinter==4.0.0
+fontTools[ufo,lxml,unicode]==4.60.1
+font-v==2.1.0
+freetype-py==2.3.0  # pinned for now. See: https://github.com/googlefonts/fontbakery/issues/4143
+gflanguages==0.7.7
+glyphsets==0.6.6
+munkres==1.1.4
+opentype-sanitizer==9.2.0
+opentypespec==1.9.2
+packaging==25.0
+pip-api==0.0.34
+protobuf==3.20.3
+PyYAML==6.0.3
+requests==2.32.5
+rich==14.1.0
+stringbrewer==0.0.1
+toml==0.10.2
+ufolint==1.2.0
+vharfbuzz==0.3.1
+ufo2ft==3.6.3
