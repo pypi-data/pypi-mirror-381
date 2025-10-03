@@ -1,0 +1,53 @@
+#--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+#SOME DESCRIPTIVE TITLE.
+#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2025-09-12 08:39+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.volto.contactsblock\n"
+
+#: ../profiles/default/controlpanel.xml
+msgid "Contacts Block settings"
+msgstr ""
+
+#: ../configure.zcml:28
+msgid "Installs the collective.volto.contactsblock add-on."
+msgstr ""
+
+#: ../configure.zcml:37
+msgid "Uninstalls the collective.volto.contactsblock add-on."
+msgstr ""
+
+#: ../configure.zcml:28
+msgid "collective.volto.contactsblock"
+msgstr ""
+
+#: ../configure.zcml:37
+msgid "collective.volto.contactsblock (uninstall)"
+msgstr ""
+
+#. Default: "Contacts Block Settings"
+#: ../browser/controlpanel.py:10
+msgid "contacts_block_settings_label"
+msgstr ""
+
+#. Default: "Manage contacts blocks."
+#: ../browser/controlpanel.py:11
+msgid "contacts_blocks_settings_description"
+msgstr ""
+
+#. Default: "Contacts configuration"
+#: ../interfaces.py:17
+msgid "contacts_configuration_label"
+msgstr ""

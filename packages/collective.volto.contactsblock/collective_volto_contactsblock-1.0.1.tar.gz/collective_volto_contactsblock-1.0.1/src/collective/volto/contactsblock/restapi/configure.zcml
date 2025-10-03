@@ -1,0 +1,24 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:cache="http://namespaces.zope.org/cache"
+    xmlns:zcml="http://namespaces.zope.org/zcml">
+
+  <include package="plone.restapi"  />
+
+  <plone:service
+    method="GET"
+    name="@contacts-block"
+    for="*"
+    factory=".get.ContactsBlockGet"
+    permission="zope2.View"
+    />
+
+  <cache:ruleset ruleset="plone.content.dynamic" for=".get.ContactsBlockGet" />
+
+  <adapter
+        factory=".controlpanel.ContactsBlockControlpanel"
+        provides="collective.volto.contactsblock.interfaces.IContactsBlock"
+        name="contacts-block-settings" />
+
+</configure>
