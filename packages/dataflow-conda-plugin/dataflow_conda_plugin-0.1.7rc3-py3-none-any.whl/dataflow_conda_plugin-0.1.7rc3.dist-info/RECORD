@@ -1,0 +1,8 @@
+plugin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plugin/plugin.py,sha256=ehGg1wEvqiEZFXwhvp8Jc4p5e0senirTd-aUNg74T5I,6352
+plugin/scripts/install_dataflow_deps.sh,sha256=oeCw1kD-okNZyjD5fJ2pOJV6a0SphVMYTxbk2zHx2as,1331
+dataflow_conda_plugin-0.1.7rc3.dist-info/METADATA,sha256=I6nQLgw6Be2aTeexSlrY-tbhjsC-jp4VtttEquSvUOc,68
+dataflow_conda_plugin-0.1.7rc3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+dataflow_conda_plugin-0.1.7rc3.dist-info/entry_points.txt,sha256=Vk2GKuQjr-5WV4NDKyPsnF37p3LUoAgPYOSMHxnpac8,46
+dataflow_conda_plugin-0.1.7rc3.dist-info/top_level.txt,sha256=Io_dflkI6h0vZSGOzZxx4e76CDTSANVfu4v4tVY6zsA,7
+dataflow_conda_plugin-0.1.7rc3.dist-info/RECORD,,
