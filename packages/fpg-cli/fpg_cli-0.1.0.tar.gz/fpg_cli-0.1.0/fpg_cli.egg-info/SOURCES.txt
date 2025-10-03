@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+fpg_cli/__init__.py
+fpg_cli/main.py
+fpg_cli.egg-info/PKG-INFO
+fpg_cli.egg-info/SOURCES.txt
+fpg_cli.egg-info/dependency_links.txt
+fpg_cli.egg-info/entry_points.txt
+fpg_cli.egg-info/requires.txt
+fpg_cli.egg-info/top_level.txt
