@@ -1,0 +1,5 @@
+[console_scripts]
+add-menu = pdf_tools.array_pdf.array_cm:add_menu
+print-array = pdf_tools.array_pdf:main
+remove-menu = pdf_tools.array_pdf.array_cm:remove_menu
+
