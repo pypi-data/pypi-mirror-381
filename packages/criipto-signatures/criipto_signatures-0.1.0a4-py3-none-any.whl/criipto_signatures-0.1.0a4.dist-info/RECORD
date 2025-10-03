@@ -1,0 +1,13 @@
+criipto_signatures/__init__.py,sha256=wTkOy788ijt1nwq8Rc9Ubp6dMx85A7QAlDDUSQ0meYk,205
+criipto_signatures/models.py,sha256=K8u_Ke_BU0hwZS48Rg_uGZeEQhbBxs9sMMY0_NXxVdA,48334
+criipto_signatures/operations.py,sha256=u9aBJvsf_zwshqYw7mcnXIohw60i8de9zLf6N409a34,105862
+criipto_signatures/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+criipto_signatures/sample-form.pdf,sha256=SkdyJkKYAOifwWy_bVJJ3PzxtE5dURah0SpO_e5S3To,556045
+criipto_signatures/sample.pdf,sha256=8iPf-X1OhGRYneuCQZqGHfV3ZgzNfvnUgO-TSJjQZ3c,2830
+criipto_signatures/sdk.py,sha256=0dfH_-O1niA4oaOB9WBizAFfz5qcN7d1KHXCfBMqEcU,1680
+criipto_signatures/test_models.py,sha256=jaACtSW5UbS7KtQ2FkVWcr8H4qqkoTAEpHnFjlZs6tE,502
+criipto_signatures/test_sdk.py,sha256=xMeY6SbnwsZ9U_Qqp69iqldduEj6EVgXR96X7_wlv-I,5175
+criipto_signatures/utils.py,sha256=CYQ6xOAIptdD0Qh5X8-Pdq7PvDLITeq97XgBpxbWIi8,475
+criipto_signatures-0.1.0a4.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+criipto_signatures-0.1.0a4.dist-info/METADATA,sha256=LXQSco64JE7UTJUTiQkFgcJAOZWabDZOdDeErOsuBL0,2990
+criipto_signatures-0.1.0a4.dist-info/RECORD,,
