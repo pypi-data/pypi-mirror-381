@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pmatlib"
+version = "0.1.0"
+authors = [
+  { name="Rabah Mokhtari", email="rabah.mokhtari@univ-msila.dz" }
+]
+description = "A lightweight library for Progressive Moving Average Transform (PMAT) on signals."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.7"
+dependencies = ["numpy"]
+
+keywords = ["pmat", "signal-processing", "moving-average", "time-series", "feature-extraction", "cnn", "ecg", "fault-diagnosis", "peak-detection"]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/mokhtarirabah/pmatlib"
