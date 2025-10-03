@@ -1,0 +1,33 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      dev:
+        patterns:
+        - "flask"
+        - "furo"
+        - "pyright"
+        - "pytest-cov"
+        - "pytest-image-diff"
+        - "pytest"
+        - "PyYAML"
+        - "reportlab"
+        - "sphinx_design"
+        - "svglib"
+        - "sybil"
+      style:
+        patterns:
+        - "black"
+        - "isort"
+        - "pre-commit"
+  - package-ecosystem: "npm"
+    directory: "/docs/try"
+    schedule:
+      interval: "weekly"
+    groups:
+      dev:
+        patterns:
+        - "*"
