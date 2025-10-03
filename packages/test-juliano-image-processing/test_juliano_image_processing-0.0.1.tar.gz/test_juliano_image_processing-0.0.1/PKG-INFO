@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: test_juliano_image_processing
+Version: 0.0.1
+Summary: Pacote de processamento de imagens
+Home-page: https://github.com/julianoxt/image-processing-package
+Author: Antonio Juliano
+Author-email: julianoxt@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scikit-image
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# package_name
+
+Description. 
+The package package_name is used to:
+	Processing:
+		- Histrogram matching
+		-
+	Utils
+		-
+		-
+
+O pacote foi criado por Karina na plataforma DIO, dispobinilizado em:[TIEMI](https://github.com/tiemi/image-processing-package) estou replicando a informação para entender da melhor forma a utilização dos processos
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install image_processing
+
+```bash
+pip install image_processing2
+```
+
+## Usage
+
+```python
+from image_processing2.processing import combination, transformation
+from image_processing2.utils import io, plot
+
+file1_name.my_function()
+```
+
+## Author
+antonio.juliano
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
