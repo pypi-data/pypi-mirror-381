@@ -1,0 +1,9 @@
+setup.py
+essential/__init__.py
+essential/__main__.py
+sinehost.egg-info/PKG-INFO
+sinehost.egg-info/SOURCES.txt
+sinehost.egg-info/dependency_links.txt
+sinehost.egg-info/entry_points.txt
+sinehost.egg-info/not-zip-safe
+sinehost.egg-info/top_level.txt
