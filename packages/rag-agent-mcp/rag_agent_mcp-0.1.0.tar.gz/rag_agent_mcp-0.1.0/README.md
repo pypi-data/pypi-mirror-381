@@ -1,0 +1,291 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/shemhamforash23-lightrag-mcp-badge.png)](https://mseep.ai/app/shemhamforash23-lightrag-mcp)
+
+# RAG Agent
+
+RAG Agent is a CLI-enabled MCP server for integrating LightRAG Dataset functionality with AI tools. Provides a unified interface for managing datasets, querying data, and accessing knowledge graphs through the MCP protocol. Can be run directly via `uvx rag-agent`.
+
+## Description
+
+RAG Agent is a specialized bridge between LightRAG's Dataset API and MCP-compatible clients. It enables dataset-isolated RAG operations, allowing you to create, manage, and query multiple independent datasets with their own knowledge graphs and document collections.
+
+### Key Features
+
+- **Dataset Management**: Create, update, delete, and list datasets with full configuration control
+- **Dataset Queries**: Execute queries on single or multiple datasets with cross-dataset reranking
+- **Document Management**: Upload, list, and delete documents within specific datasets
+- **Knowledge Graph Access**: Retrieve graph data and labels for dataset-specific knowledge graphs
+- **Dataset Isolation**: Each dataset maintains its own PostgreSQL schema for complete data separation
+
+## Installation
+
+### Quick Start with uvx (Recommended)
+
+```bash
+# Run directly without installation
+uvx rag-agent --host localhost --port 9621
+```
+
+### Development Installation
+
+```bash
+# Create a virtual environment
+uv venv --python 3.11
+
+# Install the package in development mode
+uv pip install -e .
+```
+
+## Requirements
+
+- Python 3.11+
+- Running LightRAG API server
+
+## Usage
+
+**Important**: RAG Agent should be run as an MCP server through an MCP client configuration file (mcp-config.json), or directly via `uvx rag-agent`.
+
+### Command Line Options
+
+The following arguments are available when configuring the server in mcp-config.json:
+
+- `--host`: LightRAG API host (default: localhost)
+- `--port`: LightRAG API port (default: 9621)
+- `--api-key`: LightRAG API key (optional)
+
+### Integration with LightRAG API
+
+The MCP server requires a running LightRAG API server. Start it as follows:
+
+```bash
+# Create virtual environment
+uv venv --python 3.11
+
+# Install dependencies
+uv pip install -r LightRAG/lightrag/api/requirements.txt
+
+# Start LightRAG API
+uv run LightRAG/lightrag/api/lightrag_server.py --host localhost --port 9621 --working-dir ./rag_storage --input-dir ./input --llm-binding openai --embedding-binding openai --log-level DEBUG
+```
+
+### Setting up as MCP server
+
+To set up RAG Agent as an MCP server, add the following configuration to your MCP client configuration file (e.g., `mcp-config.json`):
+
+#### Using uvx (Recommended):
+
+```json
+{
+  "mcpServers": {
+    "rag-agent": {
+      "command": "uvx",
+      "args": [
+        "rag-agent",
+        "--host",
+        "localhost",
+        "--port",
+        "9621",
+        "--api-key",
+        "your_api_key"
+      ]
+    }
+  }
+}
+```
+
+#### Development
+
+```json
+{
+  "mcpServers": {
+    "rag-agent": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/path/to/rag-agent",
+        "run",
+        "src/rag_agent/main.py",
+        "--host",
+        "localhost",
+        "--port",
+        "9621",
+        "--api-key",
+        "your_api_key"
+      ]
+    }
+  }
+}
+```
+
+Replace `/path/to/rag-agent` with the actual path to your rag-agent directory.
+
+## Container Image (LightRAG API + RAG Agent)
+
+Build a single image that starts LightRAG API and RAG Agent together.
+
+### Build
+
+Option A — clone LightRAG during build:
+
+```bash
+docker build \
+  --build-arg LIGHTRAG_REPO_URL="<git url to LightRAG repo>" \
+  --build-arg LIGHTRAG_REF=main \
+  -t rag-agent:local .
+```
+
+Option B — mount LightRAG at runtime: build without args, and mount the repo to `/opt/LightRAG` when running.
+
+### Run (local test)
+
+```bash
+docker run --rm -it \
+  -e LLM_BINDING=openai \
+  -e EMBEDDING_BINDING=openai \
+  -e OPENAI_API_KEY=sk-... \
+  -p 9621:9621 \
+  -v "$(pwd)/data:/data" \
+  rag-agent:local bash
+```
+
+Inside the container the entrypoint starts LightRAG API (0.0.0.0:9621) and then execs RAG Agent when invoked with `mcp` (see below for MCP client integration). Logs are written to stderr to avoid interfering with MCP stdio.
+
+### Use with MCP client (docker-run)
+
+Most MCP clients spawn servers via stdio. Configure your MCP client to run this container with `-i` (interactive, no TTY) so stdio is attached to the MCP server process:
+
+```json
+{
+  "mcpServers": {
+    "rag-agent": {
+      "command": "docker",
+      "args": [
+        "run", "--rm", "-i",
+        "-e", "LLM_BINDING=openai",
+        "-e", "EMBEDDING_BINDING=openai",
+        "-e", "OPENAI_API_KEY=sk-...",
+        "-e", "MCP_API_KEY=", // optional, only if LightRAG API requires it
+        "-v", "/absolute/path/to/data:/data",
+        "rag-agent:local",
+        "mcp"
+      ],
+      "alwaysAllow": [
+        "create_dataset", "get_dataset", "list_datasets", "update_dataset", "delete_dataset",
+        "get_dataset_statistics", "query_dataset", "query_multiple_datasets",
+        "upload_document_to_dataset", "get_dataset_documents", "delete_dataset_document",
+        "scan_dataset_documents", "get_dataset_graph", "get_dataset_graph_labels"
+      ]
+    }
+  }
+}
+```
+
+Notes:
+- The container runs LightRAG API inside and binds it to `localhost:9621` for the MCP server; you do not need to expose it unless you want external access.
+- If your LightRAG build needs different bindings, set `LLM_BINDING`, `EMBEDDING_BINDING` and their provider keys (e.g., `OPENAI_API_KEY`).
+- To customize LightRAG paths, use `LIGHTRAG_WORKDIR`, `LIGHTRAG_INPUTDIR`, and `LIGHTRAG_EXTRA_ARGS`.
+
+## Available MCP Tools
+
+### Dataset Management
+- `create_dataset`: Create a new dataset with full configuration (name, description, RAG type, storage type, etc.)
+- `get_dataset`: Get detailed information about a specific dataset by ID
+- `list_datasets`: List all datasets with pagination and filtering by status/visibility
+- `update_dataset`: Update dataset configuration and metadata
+- `delete_dataset`: Delete a dataset and all its associated data
+- `get_dataset_statistics`: Get comprehensive statistics for a dataset (document count, graph metrics, etc.)
+
+### Dataset Queries
+- `query_dataset`: Execute a query on a specific dataset with full RAG capabilities
+  - Supports multiple search modes (global, hybrid, local, mix, naive)
+  - Configurable token limits and response types
+  - High-level and low-level keyword prioritization
+- `query_multiple_datasets`: Execute cross-dataset queries with automatic result merging
+  - Query multiple datasets simultaneously
+  - Optional cross-dataset reranking
+  - Per-dataset document filtering
+
+### Dataset Document Management
+- `upload_document_to_dataset`: Upload a document file to a specific dataset
+- `get_dataset_documents`: List documents in a dataset with pagination and status filtering
+- `delete_dataset_document`: Delete a specific document from a dataset
+- `scan_dataset_documents`: Scan dataset's input directory for new documents
+
+### Dataset Knowledge Graph
+- `get_dataset_graph`: Retrieve knowledge graph data for a dataset
+  - Optional node label filtering
+  - Configurable depth and node limits
+- `get_dataset_graph_labels`: Get all graph labels (node and relationship types) for a dataset
+
+## Usage Examples
+
+### Creating and Querying a Dataset
+
+```python
+# Create a new dataset
+create_dataset(
+    name="research_papers",
+    description="Academic research papers collection",
+    rag_type="rag",
+    visibility="private"
+)
+
+# Upload documents to the dataset
+upload_document_to_dataset(
+    dataset_id="<dataset-uuid>",
+    file_path="/path/to/paper.pdf"
+)
+
+# Query the dataset
+query_dataset(
+    dataset_id="<dataset-uuid>",
+    query_text="What are the main findings?",
+    mode="mix",
+    top_k=10
+)
+```
+
+### Cross-Dataset Query
+
+```python
+# Query multiple datasets simultaneously
+query_multiple_datasets(
+    dataset_ids=["<dataset-1-uuid>", "<dataset-2-uuid>"],
+    query_text="Compare approaches to machine learning",
+    enable_rerank=True,
+    top_k=5
+)
+```
+
+### Managing Dataset Knowledge Graph
+
+```python
+# Get graph labels
+get_dataset_graph_labels(dataset_id="<dataset-uuid>")
+
+# Retrieve graph data
+get_dataset_graph(
+    dataset_id="<dataset-uuid>",
+    node_label="CONCEPT",
+    max_depth=3,
+    max_nodes=100
+)
+```
+
+## Development
+
+### Installing development dependencies
+
+```bash
+uv pip install -e ".[dev]"
+```
+
+### Running linters
+
+```bash
+ruff check src/
+mypy src/
+```
+
+## License
+
+MIT
