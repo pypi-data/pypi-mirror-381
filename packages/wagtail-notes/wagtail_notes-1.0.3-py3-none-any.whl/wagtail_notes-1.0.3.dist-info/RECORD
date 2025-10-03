@@ -1,0 +1,11 @@
+wagtail_notes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wagtail_notes/wagtail_hooks.py,sha256=Ll6XjBxqA5-mzgFW8H6YKkvm3r0Bz0Z69MjQfVY03C8,3726
+wagtail_notes/locale/fr/LC_MESSAGES/django.mo,sha256=7dfVdOnk2wQNL16WjDSr-iSzc4ogsBhc1xecxbj7HPQ,474
+wagtail_notes/locale/fr/LC_MESSAGES/django.po,sha256=0rDbGRc3Rplsj5wiFYOF7bOUWZM84HGBZLkqmVQTokg,775
+wagtail_notes/static/js/note.js,sha256=sj0U8weghS2cF2zsg5wmEUJFvrAnQCZSLxgdc3JFRYE,12458
+wagtail_notes/templates/wagtailadmin/widgets/draftail_rich_text_area.html,sha256=ym2sC_T2GP7ehHIi-CnmrG5roQW-VcDOoGF0DhR2zNg,436
+wagtail_notes-1.0.3.dist-info/licenses/LICENSE,sha256=LvzvM5TnINE6UrT-Sh_WpeQtdijCKP2pLd_hI9KsemQ,1503
+wagtail_notes-1.0.3.dist-info/METADATA,sha256=16XELRcR_U36hTg6y0e2FQv1EeQ26IL8jBB_zxGnQWE,3683
+wagtail_notes-1.0.3.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+wagtail_notes-1.0.3.dist-info/top_level.txt,sha256=wpCmlJ7rPF0dad8Ab6red2UCjnxANr5vptOshQPXkFY,14
+wagtail_notes-1.0.3.dist-info/RECORD,,
