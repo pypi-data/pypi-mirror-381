@@ -1,0 +1,7 @@
+dagster-dg-core==1.11.13
+
+[test]
+pytest
+buildkite-test-collector
+flaky
+psutil
