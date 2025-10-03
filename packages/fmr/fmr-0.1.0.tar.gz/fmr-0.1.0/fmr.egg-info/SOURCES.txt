@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+fmr/__init__.py
+fmr/cli.py
+fmr.egg-info/PKG-INFO
+fmr.egg-info/SOURCES.txt
+fmr.egg-info/dependency_links.txt
+fmr.egg-info/entry_points.txt
+fmr.egg-info/top_level.txt
