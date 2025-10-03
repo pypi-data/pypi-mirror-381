@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/datachoices/__init__.py
+src/datachoices/choices.py
+src/datachoices/fields.py
+src/django_datachoices.egg-info/PKG-INFO
+src/django_datachoices.egg-info/SOURCES.txt
+src/django_datachoices.egg-info/dependency_links.txt
+src/django_datachoices.egg-info/top_level.txt
