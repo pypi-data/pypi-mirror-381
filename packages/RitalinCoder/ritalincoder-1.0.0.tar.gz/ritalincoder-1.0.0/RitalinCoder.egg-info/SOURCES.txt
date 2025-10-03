@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+RitalinCoder.egg-info/PKG-INFO
+RitalinCoder.egg-info/SOURCES.txt
+RitalinCoder.egg-info/dependency_links.txt
+RitalinCoder.egg-info/entry_points.txt
+RitalinCoder.egg-info/requires.txt
+RitalinCoder.egg-info/top_level.txt
+RitalinCoder/src/RitalinCoder/__init__.py
+RitalinCoder/src/RitalinCoder/main.py
