@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: opensimula
+Version: 0.5.2
+Summary: Component-based time simulation environment in Python
+Author-email: "Juan F. Coronel" <jfc@us.es>
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: dash>=3.2.0
+Requires-Dist: dash-ag-grid>=32.3.2
+Requires-Dist: dash-bootstrap-components>=2.0.4
+Requires-Dist: nbformat>=5.10.4
+Requires-Dist: numpy>=2.3.3
+Requires-Dist: openpyxl>=3.1.5
+Requires-Dist: pandas>=2.3.2
+Requires-Dist: plotly>=6.3.0
+Requires-Dist: psychrolib>=2.5.0
+Requires-Dist: scipy>=1.16.2
+Requires-Dist: shapely>=2.1.1
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: triangle>=20250106
+Requires-Dist: vedo>=2025.5.4
+Dynamic: license-file
+
+![Logo](https://jfcoronel.github.io/OpenSimula/img/logo_opensimula.png)
+Component-based time simulation environment in Python
+
+[Documentation page](https://jfcoronel.github.io/OpenSimula/)
+
+## Main Developers
+
+* [Juan F. Coronel](http://jfc.us.es), Universidad de Sevilla
+
+## Package dependencies
+- numpy
+- pandas
+- scipy
+- shapely
+- psychrolib
+- plotly
+- dash
+- dash_bootstrap_components
+- dash_ag_grid
+- pyvista
+- trame
+- trame-vtk
+- trame-vuetify
+- ipywidgets
+
