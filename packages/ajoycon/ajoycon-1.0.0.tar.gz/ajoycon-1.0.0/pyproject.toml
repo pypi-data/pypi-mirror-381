@@ -1,0 +1,26 @@
+[project]
+name = "ajoycon"
+version = "1.0.0"
+description = "Modern async Python driver for Nintendo Switch Joy-Con"
+readme = "README.md"
+requires-python = ">=3.13"
+license = {text = "MIT"}
+authors = [
+    {name = "Technoculture Research"},
+]
+keywords = ["joycon", "nintendo", "switch", "controller"]
+dependencies = [
+    "hidapi>=0.14.0",
+    "pyglm>=2.7.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Technoculture/ajoycon"
+Repository = "https://github.com/Technoculture/ajoycon"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ajoycon"]

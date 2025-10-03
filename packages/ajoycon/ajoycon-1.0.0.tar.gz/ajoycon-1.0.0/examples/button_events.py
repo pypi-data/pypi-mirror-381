@@ -1,0 +1,36 @@
+"""Button event tracking example."""
+
+import asyncio
+
+from ajoycon import ButtonEventJoyCon, find_first_right_joycon
+
+
+async def main() -> None:
+    """Track button press/release events."""
+    device = find_first_right_joycon()
+    if not device:
+        print("No right JoyCon found!")
+        return
+
+    print("Connecting to JoyCon...")
+    print("Press buttons to see events. Press HOME to exit.\n")
+
+    joycon = ButtonEventJoyCon(device.vendor_id, device.product_id, device.serial)
+    await joycon.connect()
+
+    try:
+        # Method 1: Async iterator
+        async for event in joycon.event_stream():
+            action = "pressed" if event.pressed else "released"
+            print(f"{event.button.value.upper():12s} {action}")
+
+            # Exit on HOME button press
+            if event.button.value == "home" and event.pressed:
+                break
+
+    finally:
+        await joycon.disconnect()
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
