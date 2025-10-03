@@ -1,0 +1,16 @@
+[project]
+name = "yolkbot"
+version = "0.0.1"
+authors = [
+  { name="1ust", email="hi@villainsrule.xyz" },
+]
+description = "this is being saved, in case i decide to port yolkbot to python later."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/yolkorg/yolkbot"

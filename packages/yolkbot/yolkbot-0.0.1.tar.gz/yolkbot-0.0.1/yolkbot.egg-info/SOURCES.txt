@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+yolkbot.egg-info/PKG-INFO
+yolkbot.egg-info/SOURCES.txt
+yolkbot.egg-info/dependency_links.txt
+yolkbot.egg-info/top_level.txt
