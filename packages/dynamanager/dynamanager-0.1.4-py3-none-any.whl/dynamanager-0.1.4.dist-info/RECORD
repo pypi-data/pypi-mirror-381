@@ -1,0 +1,9 @@
+dynamanager/__init__.py,sha256=HpcDSr8Ttnn4MXal-v21hAnY5jDbjEa93Ki0oq2xnwg,335
+dynamanager/exceptions.py,sha256=QNp0pZzaxvaH_5bReS0o4RNUa-pl2GqFfev99IAehf4,892
+dynamanager/manager.py,sha256=hN2H2P1H0e-bVz5FBUM1Y1vUfP7HQ3-xk57WoMQU5Q0,21916
+dynamanager/utils.py,sha256=uzS8J9uNUQNlIQ-KNB3fjjUdqZw8Lspk6e70PgmQbcI,1222
+dynamanager-0.1.4.dist-info/METADATA,sha256=p8NKYy8-NzaHtrLhnWIFY7f0agiHNhaBPw_55XjT8ec,10294
+dynamanager-0.1.4.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+dynamanager-0.1.4.dist-info/licenses/AUTHORS.md,sha256=fLjc3gSvSRcwaMbUiOQ1ZURvzRLpETYFZnUOOjgkcWk,150
+dynamanager-0.1.4.dist-info/licenses/LICENCE,sha256=CeoTRiJIuHg2Y-MAooFDcaR2OEBgcTEHor7wGD6-kGw,1091
+dynamanager-0.1.4.dist-info/RECORD,,
