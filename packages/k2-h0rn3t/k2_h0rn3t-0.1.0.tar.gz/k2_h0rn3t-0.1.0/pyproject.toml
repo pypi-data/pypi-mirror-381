@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "k2-h0rn3t"
+version = "0.1.0"
+description = "k2 — a small threaded path scanner (h0rn3t)"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["requests", "colorama"]
+
+[tool.setuptools]
+license-files = ["LICENSE.txt"]

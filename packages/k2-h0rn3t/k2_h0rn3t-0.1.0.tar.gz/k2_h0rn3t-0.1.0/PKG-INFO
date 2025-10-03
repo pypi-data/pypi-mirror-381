@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: k2-h0rn3t
+Version: 0.1.0
+Summary: k2 — a small threaded path scanner (h0rn3t)
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+Requires-Dist: colorama
+Dynamic: license-file
+
+# k2
+
+Simple threaded path scanner. Usage:
+
+```py
+from k2 import h0rn3t
+
+sites_file = "v.txt"
+paths = ["robots.txt", "login.php", "admin/"]
+check_texts = ["admin", "login", "sql error"]
+threads = 5
+output_file = "results.txt"
+
+scanner = h0rn3t(sites_file, paths, check_texts, threads, output_file)
+scanner.run()
