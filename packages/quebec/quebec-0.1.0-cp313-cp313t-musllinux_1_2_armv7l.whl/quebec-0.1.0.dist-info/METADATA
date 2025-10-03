@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: quebec
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: pytest<5.0.0 ; extra == 'test'
+Requires-Dist: pytest-cov[all] ; extra == 'test'
+Provides-Extra: test
+License-File: LICENSE
+Home-Page: https://github.com/ratazzi/quebec
+Requires-Python: >=3.9
