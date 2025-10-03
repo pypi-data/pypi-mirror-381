@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: rosia
+Version: 0.0.1
+Summary: ROSIA
+Author-Email: depetrol <depetrol@outlook.com>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Project-URL: Homepage, https://github.com/depetrol/rosia
+Project-URL: Issues, https://github.com/depetrol/rosia/issues
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# ROSIA
+
+```bash
+python setup.py build_ext --inplace
+pip install -e .
+```
