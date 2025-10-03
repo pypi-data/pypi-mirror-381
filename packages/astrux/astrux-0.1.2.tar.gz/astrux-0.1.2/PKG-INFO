@@ -1,0 +1,233 @@
+Metadata-Version: 2.4
+Name: astrux
+Version: 0.1.2
+Summary: Astrux Python SDK
+Project-URL: Homepage, https://astrux.io
+Project-URL: Documentation, https://astrux.io/docs
+Author-email: Thomas Bodénan <thomas.bodenan@gmail.com>
+License: MIT
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: httpx>=0.27.0
+Description-Content-Type: text/markdown
+
+# Astrux Python SDK
+
+[![PyPI version](https://img.shields.io/pypi/v/astrux.svg)](https://pypi.org/project/astrux/)
+[![Python versions](https://img.shields.io/pypi/pyversions/astrux.svg)](https://pypi.org/project/astrux/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+The official Python SDK for interacting with the Astrux API. Make machine learning predictions in just a few lines of code.
+
+## Installation
+
+```bash
+pip install astrux
+```
+
+## Quick Start
+
+```python
+from astrux import Astrux
+
+# Initialize the client
+client = Astrux(api_key="sk_your_api_key")
+
+# Make a prediction
+result = client.models.predict(
+    model="my-model",
+    input={"feature1": 10, "feature2": 20}
+)
+
+print(result["score"])  # Prediction score
+```
+
+## Configuration
+
+### API Key
+
+You can provide your API key in two ways:
+
+**1. As a parameter (recommended):**
+```python
+client = Astrux(api_key="sk_your_api_key")
+```
+
+**2. Via environment variable:**
+```bash
+export ASTRUX_API_KEY=sk_your_api_key
+```
+```python
+client = Astrux()  # Automatically loads from ASTRUX_API_KEY
+```
+
+### Custom Timeout
+
+The default timeout is 30 seconds. You can customize it:
+
+```python
+client = Astrux(api_key="sk_your_api_key", timeout=60.0)
+```
+
+## Usage
+
+### Simple Prediction
+
+```python
+from astrux import Astrux
+
+client = Astrux(api_key="sk_your_api_key")
+
+# Regression
+result = client.models.predict(
+    model="house-prices",
+    input={
+        "sqft": 120,
+        "bedrooms": 3,
+        "city": "Paris"
+    }
+)
+print(f"Estimated price: {result['score']}")
+```
+
+### Prediction with Specific Version
+
+```python
+# Use a specific model version
+result = client.models.predict(
+    model="sentiment-analysis",
+    input={"text": "This product is excellent!"},
+    version=2
+)
+```
+
+### Classification
+
+For classification tasks, the response includes the predicted class and probabilities:
+
+```python
+result = client.models.predict(
+    model="image-classification",
+    input={"image_url": "https://example.com/image.jpg"}
+)
+
+print(f"Class: {result['class_']}")  # Predicted class
+print(f"Probabilities: {result['proba']}")  # List of probabilities
+```
+
+### Model Metadata
+
+The response may include metadata about the model used:
+
+```python
+result = client.models.predict(
+    model="my-model",
+    input={"feature": 42}
+)
+
+print(f"Model ID: {result.get('model_id')}")
+print(f"Model name: {result.get('model_name')}")
+print(f"Version: {result.get('version')}")
+print(f"Task type: {result.get('task_type')}")
+```
+
+## Error Handling
+
+The SDK provides specific exceptions for different error types:
+
+```python
+from astrux import Astrux
+from astrux._errors import (
+    AuthenticationError,
+    NotFoundError,
+    ValidationError,
+    RateLimitError,
+    ServerError,
+    AstruxError
+)
+
+client = Astrux(api_key="sk_your_api_key")
+
+try:
+    result = client.models.predict(
+        model="my-model",
+        input={"feature": "value"}
+    )
+except AuthenticationError as e:
+    print(f"Authentication error: {e}")
+except NotFoundError as e:
+    print(f"Model not found: {e}")
+except ValidationError as e:
+    print(f"Invalid data: {e}")
+    print(f"Details: {e.payload}")
+except RateLimitError as e:
+    print(f"Rate limit exceeded: {e}")
+except ServerError as e:
+    print(f"Server error: {e}")
+except AstruxError as e:
+    print(f"Astrux error: {e}")
+    print(f"Status code: {e.status}")
+```
+
+## Closing the Client
+
+To release resources, close the client after use:
+
+```python
+client = Astrux(api_key="sk_your_api_key")
+
+try:
+    result = client.models.predict(model="my-model", input={"x": 1})
+    print(result)
+finally:
+    client.close()
+```
+
+## Response Structure
+
+### Regression
+```python
+{
+    "score": 42.5,
+    "model_id": "abc123",
+    "model_name": "my-model",
+    "version": 1,
+    "task_type": "regression"
+}
+```
+
+### Classification
+```python
+{
+    "score": 0.95,
+    "class_": "positive",  # Note: remapped from "class"
+    "proba": [0.05, 0.95],
+    "model_id": "def456",
+    "model_name": "sentiment",
+    "version": 2,
+    "task_type": "classification"
+}
+```
+
+## Requirements
+
+- Python >= 3.8
+- httpx >= 0.27.0
+
+## Links
+
+- **Homepage**: [https://astrux.io](https://astrux.io)
+- **Documentation**: [https://astrux.io/docs](https://astrux.io/docs)
+- **PyPI**: [https://pypi.org/project/astrux/](https://pypi.org/project/astrux/)
+
+## License
+
+MIT - see [LICENSE](LICENSE) file for details.
+
+## Author
+
+Thomas Bodénan - [thomas.bodenan@gmail.com](mailto:thomas.bodenan@gmail.com)
+
+## Support
+
+For questions or issues, consult the [official documentation](https://astrux.io/docs) or contact Astrux support.
