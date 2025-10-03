@@ -1,0 +1,8 @@
+[stashhouse.plugins.cli.parse]
+tftp = stashhouse_tftp:parse_arguments
+
+[stashhouse.plugins.cli.register]
+tftp = stashhouse_tftp:register_arguments
+
+[stashhouse.plugins.server]
+tftp = stashhouse_tftp.server:TFTPServer
