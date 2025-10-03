@@ -1,0 +1,20 @@
+# IDE files
+.vscode/
+
+# Virtual environment
+.env/
+env/
+.venv/
+venv/
+
+# Python cache files
+__pycache__/
+.pytest_cache/
+*.py[cod]
+
+# Compiled shared objects
+*.so
+
+# Rust/Cargo files
+target/
+Cargo.lock
