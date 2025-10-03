@@ -1,0 +1,16 @@
+pgpack/__init__.py,sha256=g8BDh-U2J7uYBjPGyNig86rpbRTUuSWFB-9kcY9WkAM,684
+pgpack/reader.py,sha256=E8Zi-4rJICjScLs5lPOoCEl7U1TRvXMJZKyl1R2GSnk,5372
+pgpack/writer.py,sha256=aVaTA7mcCY7pSuv43YmQr6oLt4ZIIkYdA0k7BC-16IM,6488
+pgpack/common/__init__.py,sha256=K_x7KoYUJxjw__N5UK2jiXObSUMok6q7qEFTF9B2S-Q,627
+pgpack/common/cast_dataframes.py,sha256=0uid-BwA45OQCrlBJs7wECD5ONZrYYlStrGAFuXqajA,992
+pgpack/common/detector.py,sha256=KQpwBD75D9qMX4OCTA6fTd-xUnaJu1zWkcYY8qOSTjQ,1606
+pgpack/common/errors.py,sha256=cVQIgO53JQcYpe5mYpeI5oApH_yHeXPix8H4AHvNVT4,292
+pgpack/common/header.py,sha256=Ueacf4UCePjGxGXDBeABdr4YXPre0h-nTZkocX0tKC8,26
+pgpack/common/metadata.py,sha256=iVPyuU5a8qd3MPEiOJSD0m6DY_CUpnaUpSVaxx6kFyU,1377
+pgpack/common/param.py,sha256=HcGHOEyeAMjUcpRJ389nuQVvXROrLzuj0oC5DPAvqv0,151
+pgpack-0.3.0.0.dist-info/licenses/CHANGELOG.md,sha256=TCuE4pE5y4dZ3KA1DhCnRPGNK4rIYaAFQkk9wTdof7s,2141
+pgpack-0.3.0.0.dist-info/licenses/README.md,sha256=JiSq81tEm3C7Uk_7GjXMksWPw4IQ-_cxxrHB8JIUyl8,3905
+pgpack-0.3.0.0.dist-info/METADATA,sha256=bngMwkw9F7788-tHArJ-21vAAkluglOiUVLdM4ar9d4,4566
+pgpack-0.3.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pgpack-0.3.0.0.dist-info/top_level.txt,sha256=JgcmcnI0jrKZzSHXHdiD14QWrPQYVUqqjRuVLmgOoQ8,7
+pgpack-0.3.0.0.dist-info/RECORD,,
