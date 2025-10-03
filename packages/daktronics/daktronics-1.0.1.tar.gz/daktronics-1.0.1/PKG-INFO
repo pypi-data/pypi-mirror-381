@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: daktronics
+Version: 1.0.1
+Summary: A Python library for reading data from Daktronics consoles.
+Author-email: plun1331 <plun1331@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/plun1331/Daktronics/
+Project-URL: Repository, https://github.com/plun1331/Daktronics/
+Project-URL: Bug Tracker, https://github.com/plun1331/Daktronics/issues
+Project-URL: Changelog, https://github.com/plun1331/Daktronics/tree/main/CHANGELOG.md
+Keywords: console,daktronics,scoreboard,serial
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: pyserial~=3.5
+
+# Daktronics
+
+A Python library for reading data from Daktronics consoles.
+
+## Installation
+
+You can install the library using pip:
+
+```bash
+pip install daktronics
+```
+
+## Usage
+
+Connect to the RTD port of your Daktronics Omnisport 2000 console.
+
+```python
+from daktronics.console import Omnisport2000
+from daktronics.processors import WaterPoloProcessor
+
+console = Omnisport2000("COM5")  # Replace "COM5" with your port
+
+console.connect()
+processor = WaterPoloProcessor()
+console.read(processor)
+```
+
+## Supported Consoles
+
+| Console        | Sports     | Notes |
+|----------------|------------|-------|
+| Omnisport 2000 | Water Polo |       |
