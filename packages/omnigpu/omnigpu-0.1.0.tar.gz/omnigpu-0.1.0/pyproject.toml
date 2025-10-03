@@ -1,0 +1,87 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omnigpu"
+version = "0.1.0"
+description = "Run PyTorch CUDA code on any GPU, including Apple Silicon." 
+readme = "README.md"
+authors = [
+  { name = "Badel L. Mbanga", email = "badel@klogw.ai" }
+]
+license = {text = "MIT"}
+requires-python = ">=3.8"
+keywords = ["gpu", "pytorch", "cuda", "mps", "apple", "metal", "translation"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = [
+  "torch>=1.12.0",
+  "numpy>=1.21.0",
+  "typing-extensions>=4.0.0",
+  "matplotlib>=3.5.0",
+  "pandas>=1.3.0",
+  "graphviz>=0.20",
+  "click>=8.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "pytest-cov>=4.0",
+  "pytest-xdist>=3.0",
+  "black>=22.0",
+  "isort>=5.0",
+  "flake8>=5.0",
+  "mypy>=1.0",
+  "build>=0.10",
+  "twine>=4.0",
+  "nbformat>=5.10",
+  "nbconvert>=7.0",
+  "nbclient>=0.8"
+]
+
+docs = [
+  "sphinx>=5.0",
+  "sphinx-rtd-theme>=1.0",
+  "sphinx-autodoc-typehints>=1.0",
+  "nbsphinx>=0.9",
+  "matplotlib>=3.5"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/badelmbanga/omnigpu"
+"Documentation" = "https://badelmbanga.github.io/omnigpu/"
+"Source" = "https://github.com/badelmbanga/omnigpu"
+"Bug Tracker" = "https://github.com/badelmbanga/omnigpu/issues"
+
+[project.scripts]
+ogpu = "omnigpu.cli.commands:cli_main"
+ugpu = "omnigpu.cli.commands:cli_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+omnigpu = ["py.typed"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.black]
+line-length = 100
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"

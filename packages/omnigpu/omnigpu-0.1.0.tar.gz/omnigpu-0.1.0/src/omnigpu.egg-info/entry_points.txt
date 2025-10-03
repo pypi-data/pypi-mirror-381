@@ -1,0 +1,3 @@
+[console_scripts]
+ogpu = omnigpu.cli.commands:cli_main
+ugpu = omnigpu.cli.commands:cli_main
