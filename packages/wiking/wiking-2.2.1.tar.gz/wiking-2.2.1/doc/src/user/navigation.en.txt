@@ -1,0 +1,183 @@
+# -*- coding: utf-8; mode: structured-text -*-
+
+= Navigation =
+
+This chapter contains general information about the application window layout,
+navigation between its various parts and advice for using the user interface
+efficiently.  It is important mainly for the users of assistive technologies
+because it clarifies the meaning and relation of different page parts and
+navigation between them.
+
+Table of Contents: @TOC@
+
+== Basic layout ==
+
+The application window consists of the main content, which is unique for every
+page/screen of the website/application and surrounding parts which typically
+repeat unchanged on all pages or screens.
+
+The main content is always marked by the first level heading.  Thus screen
+reader users can always get back to the beginning of the main content using the
+shortcut for this heading.  There is no other first level heading on the page.
+
+The cursor is always moved to the beginning of the main content after the page
+is loaded.  So this is the starting point of navigation.  The user will get to
+the main content of the current page by moving the cursor forward or to the
+controls such as [#sec-menu menus] or [#sec-top-bar top bar] by moving backward.
+
+Apart from using headings to distinguish different parts of the page, some areas
+are also marked by so called /ARIA landmarks/, so modern assistive technologies
+will also allow navigation by these landmarks more comfortably.
+
+
+== Top bar == sec-top-bar
+
+The top bar is the narrow stripe by the top edge of the page.  The bar contains
+the website title on its left side and some important control elements on its
+right side.     
+
+The available controls on the right side may depend on the currently logged in
+user and his/her privileges or on some other state of the application.
+However, normally it contains:
+
+* [#sec-login-control] if the current site allows logging in,
+* [#sec-language-selection] if the page is available in multiple languages.
+
+Screen reader users may get to the top bar most easily by jumping to the very
+top of the screen and then navigating by the TAB key through its items.  Because
+all control elements in the top bar are represented by buttons (which usually
+have a dropdown menu) it is also possible to use screen reader button navigation
+shortcut (typically „b”).
+
+There is also a keyboard shortcut to get to the first top bar control (usually
+the login control) from anywhere on the page.  The shortcut is /Ctrl-Shift-arrow
+up/, but it doesn't seem to work on all systems because of conflicts with other
+browser/screen reader shortcuts.  It was, however, verified to work well with
+Firefox/Orca and Safari/Voice Over.  If it works in your case, it may be a
+faster alternative for top bar access.
+
+The following sections describe different controls of the top bar.
+
+
+=== Login control === sec-login-control
+
+If the site permits users logging in, the top bar will include the login
+control.  The control is visually indicated by an icon of a human head.
+
+If the user is currently logged in, the user's login name is displayed right
+from the icon.  If not logged in, there is a button labeled “Log in”.
+
+In both cases there is a dropdown menu control indicated by an icon of a small
+triangular arrow pointing down.  Screen readers will announce the drop down menu
+control as “User actions” when logged in or „Login and registration” in the
+other case not.  Pushing the button will open the drop down menu.  If the user
+is logged in, the menu contains items for updating user's profile, changing the
+password and logging out.  If not logged in, there are items to log in with an
+existing account, register a new user to create a new account and to renew a
+forgotten password.
+
+The “Log in” button may be hidden on smaller displays to save space in which
+case the same action can be invoked from the dropdown menu.  The same applies
+for the login name displayed at the control – if it is hidden, it can be found
+after opening the dropdown.
+
+
+=== Language selection === sec-language-selection
+
+If there are multiple language variants of the current page, the top bar will
+also include a language selection control at its right edge.  It allows
+switching between different language versions of the current page.  The control
+is again created as a button with a drop down menu.  The current language is
+indicated as the label of the button and activation of the button will open a
+drop down menu with all available language variants where each item switches to
+given language.
+
+When visiting a multilingual page for the first time, the language is selected
+automatically according to user's browser settings.  When the language is
+switched, however, the preferred language is remembered by the browser (in so called
+cookies).
+
+
+== Main menu == sec-menu
+
+Hierarchical menus are used as the primary means of navigation within a web site
+or application.  The items at the top level of the hierarchy are presented as a
+set of horizontal tabs.  Each tab may have a subordinate hierarchy of items,
+which is presented as a dropdown menu.  Tabs which have a submenu can be
+recognized by an icon of a small triangular arrow pointing down.  When such tab
+is pushed, the submenu opens.
+
+The submenu of the currently active tab is displayed on the left side of the
+page, so it can be seen and accessed directly, without going through the
+dropdown.  This is, however not possible on small screens where there is not
+enough space on the left side.  Thus portable devices will not display the
+submenu this way and will display it as dropdown even for the current tab of the
+main menu.
+
+The keyboard shortcut Ctrl-Shift-m will move the cursor to the menu, starting at
+the item corresponding to the currently displayed page.  Alternatively the menu
+can be located by jumping to the top of the page and tabbing through the top bar
+down to the menu.  From there on, menus can be efficiently navigated using just
+arrow keys.
+
+The tabs of the top level menu can be navigated using left and right arrows.  If
+the item has a submenu, the submenu can be entered by arrow down and further
+navigated up and down.  If the submenu contains items of lower hierarchy levels,
+these subordinate levels can be arranged into a foldable tree.  A foldable item
+can be unfolded by arrow right or folded by arrow left.  Enter invokes the
+current menu item.
+
+Complete overview of menu keyboard shortcuts:
+
+  * *arrow down* - Move to the next visible item.
+  * *arrow up* - Move to the previous visible item.
+  * *arrow right* - If there is a folded submenu, unfold it.  If already
+    unfolded, jump to its first item.
+  * *arrow left* - If there is an unfolded submenu, fold it (hide).  If already
+    folded, jump to the parent item in the hierarchy.
+ 
+  * *Shift + arrow down* - Move to the next item of the same level
+    (don't dive to submenus even if unfolded).
+  * *Shift + arrow up* - Move to the previous item of the same level
+    (don't dive to submenus even if unfolded).
+  * *Enter* - Invoke the current item.
+  * *Escape* - Jump out of the menu to the main content of the page.
+
+/Note for VoiceOver users:/ These shortcuts work correctly in VoiceOver only
+when the quick navigation mode is off.  Quick navigation can be switched on and
+of by pressing left and right arrow keys at the same time.
+
+/Note for JAWS users:/ Before pressing Ctrl-Shift-m it is necessary to press the
+so called Pass Key Through shortcut - JAWS key + 3 (JAWS key is usually Insert
+or CapsLock).
+
+If your system supports ARIA accessibility standards, it will automatically
+announce the position in the hierarchy and the available keyboard commands.  If
+you are using older technologies, folding/unfolding menus may not work
+correctly.  In this case it is possible to navigate the menus using the TAB key.
+If you need to get into folded areas, you may use the button labeled
+“Fold/unfold complete menu hierarchy” to make all items accessible by tabbing.
+Navigation is then less convenient, but at least possible.  You will find this
+button as the last element in tabbing order at the very end of the menu.
+
+
+== Panels ==
+
+Some sites may contain several complementary “windows” with additional
+information permanently displayed at every page in a form of so called panels.
+Panels are normally displayed on the right side of the window next to the main
+content on desktop computers (with larger displays) or at the bottom of every
+page below the main content on mobile devices with smaller screens.
+
+In any case the panels follow after the main content in the order of page
+navigation for screen reader users.  Each panel is marked by a heading of level
+three.  Thus jumping to the end of the screen and navigating backwards by third
+level headings is an easy way to get directly to panels.
+
+Panels are also marked by /ARIA landmarks/ as so called „complementary content”.
+These landmarks can also be used for efficient navigation with some screen
+readers.
+
+
+# TODO: Maximized mode
+

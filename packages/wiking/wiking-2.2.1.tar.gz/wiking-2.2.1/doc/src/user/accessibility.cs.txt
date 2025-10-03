@@ -1,0 +1,19 @@
+# -*- coding: utf-8; mode: structured-text -*-
+
+= Prohlášení o zpřístupnění =
+
+Tento systém byl vyvinut tak, aby umožňil rovnocenný přístup všem uživatelům,
+včetně lidí s postižením či specifickými potřebami.  Velký důraz byl kladen na
+neutralitu k použitému software, hardware a uživatelským nastavením.  Výsledek
+by tedy měl být dobře použitelný se všemi běžnými typy zařízení, velikostí
+obrazovky, operačních systémů, prohlížečů, preferovaných velikostí písma,
+zpřístupňujících technologií atd.
+
+Byly zohledněny formální standardy pro zpřístupnění, jako např.
+>>[http://www.w3.org/TR/WCAG20/ Web Content Accessibility Guidelines 2.0]<< nebo
+[https://www.section508.gov Sekce 508], stejně jako praktická zkušenost
+koncového uživatele.  Zpřístupnění a použitelnost byly testovány s různými
+kombinacemi zpřístupňujících technologií, zejména odečítačů obrazovky.
+
+Informace o navigačních možnostech, včetně popisu vlastností podporujících
+zpřístupnění, naleznete v kapitole [navigation Navigace] uživatelské příručky.

@@ -1,0 +1,171 @@
+# -*- coding: utf-8; mode: structured-text -*-
+
+= Správa stránek =
+
+Přehled:
+
+  * Vlastní text stránek je zadáván ve formátu „strukturovaný text LCG“, který
+    je popsán v [/_doc/lcg/structured-text příručce formátování].
+
+  * Obrázky, externí dokumenty, zvukové nahrávky, videa a další součásti obsahu
+    jsou potom spravovány prostřednictvím tzv. [#attachments příloh].
+
+  * [modules Rozšiřující moduly] mohou být použity pro zobrazení dodatečného
+    „inteligentního“ obsahu uvnitř stránek.
+
+  * Stránky mohou být uspořádány do hierarchie, která je potom automaticky
+    respektována navigačními nabídkami.
+
+  * Každá stránka může existovat v několika jazykových verzích.  
+
+
+Obsah: @TOC@
+
+
+== Správa hlavní nabídky ==
+
+Hlavní nabídka je vytvářena systémem automaticky na základě hierarchie a pořadí
+stránek.  V sekci [navigation Navigace] se dozvíte více o navigačních
+možnostech z pohledu návštěvníka stránek.
+
+Zařazení stránky do hlavní nabídky je řízeno hodnotami některých políček v
+„Globálních vlastnostech“ stránky (vlastnosti platné pro všechny jazykové verze
+stránky).  Globální vlastnosti můžete měnit pomocí tlačítka „Vlastnosti“ v
+nabídce akcí stránky.
+
+Kolonka /Nadřízená položka/ určuje umístění v hierarchii.  Pokud kolonku
+vyplníte, znamená to, že aktuální stránka bude v hierarchii umístěna jako
+podpoložka stránky, kterou zvolíte.  Pokud ponecháte prázdné, aktuální stránka
+bude na nejvyšší úrovni hierarchie.
+
+Kolonka /Pořadí v menu/ určuje pořadí stránek na stejné úrovni hierarchie.
+
+Stránky budou seřazeny tak, že stánky s nižším číslem budou v menu na
+přednějších pozicích.  Pokud číslo ponecháte při vytváření stránky prázdné,
+bude automaticky doplněno takové číslo, které stránku zařadí na konec v dané
+úrovni hierarchie (určené políčkem „Nadřízená položka“).
+
+Pokud zaškrtnete políčko /Skrytá/, nebude stránka v hlavním menu přítomna
+vůbec.  Taková stránka stále může být zobrazena, pokud uživatel přímo zadá její
+adresu (viz [#uris]), nebo pokud na ni vytvoříte odkaz z jiné stránky (což je
+doporučováno).  Skrytí se tedy týká výhradně zařazení stránky do menu, nikoliv
+zabezpečení nebo možnosti zobrazení stránky jako takové.
+
+
+== Vnější adresy stránek (URI) == uris
+
+Vnější adresa každé stránky (URI) je jednoznačně určena jejím
+/identifikátorem/.  Např. položka s identifikátorem „=mojestranka=“ bude
+mít internetovou adresu „\http://www.jmenoserveru.cz/mojestranka“.
+
+Identifikátor musíte zvolit při zakládání každé nové stránky.  Není možné jej
+později měnit, protože by tím byly narušeny všechny stávající vnější odkazy na
+tuto stránku, včetně odkazů v internetových vyhledávačích.  Proto, prosím,
+volbu identifikátoru dobře zvažte.  Také berte v potaz fakt, že stejný
+identifikátor je platný pro všechny jazykové verze stránky.  Vhodná praxe
+například je volit všechny identifikátory v angličtině (alespoň pro vícejazyčné
+stránky, které mají anglickou verzi).
+
+Adresy záměrně nerespektují hierarchii stránek -- stránka „=podstranka=“, která
+je podřízenou stránkou stránky „=stranka=“ bude adresu
+„\http://www.jmenoserveru.cz/podstranka“, nikoliv
+„\http://www.jmenoserveru.cz/stranka/podstranka“.  Díky tomu je možné snadno
+měnit hierarchické uspořádání stránek bez narušení platnosti externích odkazů.
+
+
+== Stav stránky ==
+
+Stav stránky, zobrazený v náhledu stránky ve správcovském rozhraní, může
+nabývat jedné ze tří hodnot:
+
+   * /Nezveřejněno/ ... Stránka není v aktuálním jazyce zveřejněna.
+     Návštěvníkům je zcela nepřístupná.
+
+   * /Změněno/ ... Stránka je v aktuálním jazyce zveřejněna, ale její obsah byl
+     od posledního zveřejnění změněn, takže návštěvníkům je zobrazován
+     předchozí obsah.
+
+   * /OK/ ... Stránka zveřejněna a její obsah je aktuální.
+
+
+== Zveřejnění/zneveřejnění stránky  ==
+
+Dostupnost každé stránky lze určit zveřejněním či zneveřejněním pomocí
+odpovídajících tlačítek v nabídce akcí stránky.  Neveřejná položka sice
+existuje v databázi a lze s ní tedy pracovat a spravovat její obsah, ale
+vnějším uživatelům není dostupná.  Neveřejné stránky jsou dostupné pouze v
+rámci Správcovského rozhraní.
+
+Zveřejnění lze ovládat nezávisle pro každou jazykovou verzi.  Změny se vždy
+vztahují pouze k aktuální jazykové verzi stránky -- pro změnu zveřejnění v
+jiném jazyce je tedy nutno nejprve jazyk přepnout.  Díky tomu lze dosáhnout
+toho, že v různých jazykových verzích webu je dostupná jiná množina stránek.
+
+
+== Řízení přístupu (privátní stránky) ==
+
+Privátní (soukromé) stránky jsou dostupné pouze přihlášeným uživatelům (pouze
+registrovaný uživatel povolený správcem se může přihlasít).  Privátní stránky
+se mohou vyskytovat také v menu, takže se všichni uživatelé dozví o jejich
+existenci, ale pouze přihlášení užiatelé budou schopni zobrazit jejich obsah.
+Aby byla privátní stránka dostupná, musí být zveřejněna (tyto dvě vlastnosti se
+neovlivňují).
+
+
+== Přílohy == attachments
+
+Přílohy jsou externí soubory připojené ke stránce.  Takto je možné připojit
+obrázky, dokumenty, zvukové nahrávky nebo videa.
+
+Správa příloh je dostupná přes položku „Přílohy“ v menu akcí na konci stránky.
+Toto menu je zobrazeno pouze pokud je uživatel přihlášen a má dostatečná práva
+pro správu obsahu dané stránky.  Zde můžete přidávat nové přílohy a měnit
+vlastnosti stávajících příloh.
+
+U každé přílohy kromě vlastního souboru určujete také název a popis.  Obě
+položky jsou nepovinné.  Pokud nevyplníte nic, je příloha identifikována pouze
+názvem souboru.  Pokud vyplníte název, bude tento název použit při zobrazení
+přílohy namísto názvu souboru.  Popis (pokud jej vyplníte) bude zobrazen v
+tooltipu odkazu, nebo jako doplňující text v seznamu příloh.  V případě obrázků
+je název a popis zobrazen jako ALT/LONGDESC atribut obrázku.
+
+Přílohy mohou být v rámci obsahu stránky využity dvěma způsoby: @TOC@
+
+=== Automatický seznam příloh ===
+
+Pokud ve vlastnostech přílohy ponecháte políčko /„V seznamu“/ zaškrtnuté, bude
+příloha automaticky zobrazena v seznamu na konci stránky.  Pokud zadáte název,
+bude v seznamu použit namísto jména souboru.  Pokud zadáte popis, bude v
+seznamu také zobrazen.
+
+Vemte prosím na vědomí, že název a popis jsou jazykově závislé texty, takže
+pokud je zadáte, budou použity jen pro aktuální jazyk.  Pokud chcete zadat tyto
+hodnoty i pro jinou jazykovou verzi stránky, přepněte nejprve jazyk a zadejte
+údaje znovu.
+
+Vlastní soubor přílohy je však společný pro všechny jazykové verze stránky,
+takže pokud nahrajete jiný soubor, změníte jej pro všechny jazyky.
+
+
+=== Explicitní odkazy ===
+
+Na libovolnou přílohu se také můžete přímo odkazovat v rámci textu stránky tím,
+že název souboru uzavřete do hranatých závorek.  Obrázky budou vloženy přímo do
+stránky a pro ostatní typy příloh bude vytvořen odkaz na příslušný soubor.
+Např. odkaz na PDF dokument po kliknutí uživatelem zobrazí přímo tento
+dokument, odkaz na MP3 nahrávku spustí její přehrávání apod. (vše v závislosti
+na nastavení uživatelova prohlížeče).
+
+/Příklad:/
+
+Pokud vytvoříte přílohu nahráním souboru „image.jpg“, můžete tento obrázek
+vložit do stránky pomocí následujícího zápisu:
+
+-----
+[image.jpg]
+-----
+
+Odkazy na přílohy jsou zpracovávány jako jakékoliv jiné odkazy v rámci
+strukturovaného textu LCG, takže můžete také libovolně předefinovat název
+odkazu nebo zvolit zarovnání obrázku.  Kompletní informace naleznete v
+[/_doc/lcg/structured-text příručce formátování].

@@ -1,0 +1,9 @@
+*.pyc
+*.pyo
+*~
+#*#
+/TAGS
+/resources/translations/*.po
+/wiking/resources/
+/wiking/translations/
+/dist/

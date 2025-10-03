@@ -1,0 +1,129 @@
+# -*- coding: utf-8; mode: structured-text  -*-
+
+= User Interface Design Guidelines =
+
+This document tries to cover user interface design concepts which are mostly
+useful generally, but we would like to encourage their usage in Wiking
+applications and show how Wiking supports them.
+
+@TOC@
+
+== Availability of User Interface Actions ==
+
+User interface actions may be available/unavailable due to many reasons.  For
+the purpose of UI design we distinguish two primary situations:
+
+  * Action is unavailable for the current user due to access rights.
+  * Action is unavailable due to some other condition.
+
+The first situation should lead to the action control being completely removed
+from the application.  Thus user's only see actions, which are allowed for
+their role and are not disturbed by action controls which will never be
+available.
+
+The second case should be handled by leaving the action control on its place in
+the disabled state.  Thus the user can find the control, but sees that it is
+not usable in the current context.  For example after ordering the item in an
+on-line store which doesn't allow multiple ordering of one item, the order
+button should become disabled.  Removing the control may lead to user's
+confusion, since he might believe, that he is only not able to find the control
+and try to look for it all around the application.  Leaving the controls on
+their place avoids this confusion.  The reason of the unavailability is often
+obvious.  For example publishing is only available for unpublished articles and
+it is not necessary to explain it.  Sometimes (as in the online store example
+above) the reason is not so obvious, so it is a good idea to add an explanation
+to the user interface somewhere near the disabled control.
+
+Wiking supports both situations.  Actions defined through `wiking.Action'
+specifications may use the 'enabled' argument to determine the availability
+dynamically.  Action controls rendered through `PytisModule.\_action_menu()'
+method automatically omit actions with insufficient access rights.  Action
+controls rendered within the application using custom content/widgets should
+implement the same behavior to preserve the consistency of the user interface.
+
+
+== Response After User Actions ==
+
+Most user actions within a web application require some form of feedback,
+indicating that the record was deleted, registration was confirmed, item was
+added to the shopping cart and so on.
+
+Very typical mistake still common in many web applications is showing the
+feedback on a separate page.  For example an error page is displayed as a
+response to form submission with invalid data.  The page usually contains the
+description of the error and the `Back' button, which leads the user back to
+the form.  The problem is, that after the user gets back to the form, he might
+not remember the details described on the error page.  When the submission is
+successful, again, a separate page informing the user about the success is
+displayed.  The user ends up on a page which has no other purpose than giving
+him the feedback.  This practice harms user's orientation and smoothness of his
+user experience.  
+
+It is much more practical to always display something useful, what the user
+most likely wants to do next.  The submitted form may be redisplayed after
+validation errors showing the description of errors right within the form,
+shopping cart contents may be displayed after adding an item, list of the
+remaining records may be displayed after record deletion.  The user feedback
+may be displayed as a part of the response page, but not as its only contents.
+
+Wiking supports displaying feedback messages through the method
+`WikingRequest.message()'.  Three kinds of messages can be displayed --
+informational, error and warning.  The messages are displayed at the top of the
+main page contents and visually emphasized.  This way their display is
+consistent throughout the application and the user is able to locate and
+identify them easily.
+
+Handler methods performing user actions will typically validate the input,
+perform a database operation, provide feedback using `req.message()' depending
+on the result of the database operation and display the resulting page.
+
+For example after record update, `PytisModule.action_update()' normally
+redirects to action `view' of the edited record showing the feedback message
+"The record was successfully updated".  After record deletion,
+`PytisModule.action_delete()' normally redirects to action `list' to display
+the remaining records showing the feedback message "The record was successfully
+deleted".
+
+All built in action methods respect this principle.  The methods
+`PytisModule.\_redirect_after_insert()',
+`PytisModule.\_redirect_after_update()' and
+`PytisModule.\_redirect_after_delete()' may override the default behavior for
+the respective PytisModule subclass.
+
+It is recommended to use HTTP redirection to display the resulting page in a
+separate request according to the Post/Redirect/Get paradigm (see
+http://en.wikipedia.org/wiki/Post/Redirect/Get).  The `Redirect' exception is
+used for HTTP redirection in Wiking.
+
+Example of redirection to the `view' action of the operated record:
+
+-----
+   raise wiking.Redirect(self._current_record_uri(req, record))
+-----
+
+Example of redirection to the `list' action:
+
+-----
+   raise wiking.Redirect(self._current_base_uri(req, record))
+-----
+
+A big help for this to work as expected is the Wiking's ability to
+automatically pass the messages written using `req.message()' to the redirected
+request, so that they will appear in the resulting page.
+
+So a typical action performing a database operation and displaying a result may
+look like:
+
+-----
+def action_subscribe(self, req, record):
+    try:
+        # Perform the database operation.
+	self._subscribe(req, record)
+    except pytis.data.DBException, e:
+        # Display database error message.
+        req.message(self._error_message(*self._analyze_exception(e)), type=req.ERROR)
+    else:
+        # Display success message.
+        req.message(_("You have been subscribed to receive all further notifications."))
+    raise wiking.Redirect(self._current_record_uri(req, record))
+-----
