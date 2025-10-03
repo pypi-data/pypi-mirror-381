@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=77.0.0", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "valimp"
+description = "Validate and parse function inputs"
+authors = [
+  {email = "marcusaread.prog@proton.me"},
+  {name = "Marcus Read"},
+]
+readme = "README.md"
+license = "MIT"
+keywords = [
+    "validation",
+    "parsing",
+    "validate",
+    "parse",
+    "coerce",
+    "input",
+    "function"
+]
+requires-python = ">=3.9, <4"
+
+classifiers = [
+	"Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+	"Natural Language :: English",
+    "Operating System :: OS Independent",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3 :: Only",
+	"Programming Language :: Python :: 3.9",
+	"Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+	"Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+
+dynamic = ["version"]
+
+[dependency-groups]
+test = [
+    "pytest",
+]
+ 
+dev = [
+    {include-group = "test"},
+    "mypy",
+    "pre-commit",
+    # "ruff",  # use local standalone install or ruff extension for editor.
+]
+
+[project.urls]
+homepage = "https://github.com/maread99/valimp"
+documentation = "https://github.com/maread99/valimp"
+"Issue Tracker" = "https://github.com/maread99/valimp/issues"
+"Source Code" = "https://github.com/maread99/valimp"
+
+[tool.setuptools_scm]
+write_to = "src/valimp/_version.py"
+
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+explicit = true
