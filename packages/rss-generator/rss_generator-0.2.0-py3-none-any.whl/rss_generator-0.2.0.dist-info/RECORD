@@ -1,0 +1,11 @@
+rss_generator/__init__.py,sha256=qh8zvG9CdUZVjNUZs1sUnt2l5mj0Jukh4e3ERi7HGKM,101
+rss_generator/__main__.py,sha256=IvEdhPjxwxgnjkfsEUMo-2Kq1Wt3ybBBFtecveWAth0,123
+rss_generator/cli.py,sha256=MavTlmGcdwSlqUCQ0QkEQQxyxUDR0f__ck-u9T-pkNM,12014
+rss_generator/common.py,sha256=Km85zLwaHMfIuZoAX4r8gkIUy72mhMOgUta6mW0zHbQ,8386
+rss_generator/feed.xsl,sha256=4si4ObGKjf3V3cpj7wvnU9uojSHmyhHoTizE0FFNncM,5539
+rss_generator/parsers.py,sha256=P8QIwX_GJpVpN8UQ1S9UntG_BKZGF9dsyNj8bZ40zOw,14489
+rss_generator/sites.py,sha256=xA32344Sik43CRI1MrgPClxz8lcwOKfkOBSLaZr1wHQ,1286
+rss_generator-0.2.0.dist-info/METADATA,sha256=m-bl4QXz99YRU-RyXVWxUvrI6ZmE4OvgobZrEzm3jPI,4012
+rss_generator-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+rss_generator-0.2.0.dist-info/entry_points.txt,sha256=jEkZ_hgL63puJVq8wkQN6gH3eZLInYyNRAxhgnxqW_g,57
+rss_generator-0.2.0.dist-info/RECORD,,
