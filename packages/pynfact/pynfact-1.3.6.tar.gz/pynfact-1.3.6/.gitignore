@@ -1,0 +1,16 @@
+*~
+_build
+build
+dist
+.DS_Store
+*egg-info
+*.err
+.hg
+.hgignore
+.netrwhist
+*.nosync
+*.pyc
+Session.vim
+.*.sw?
+_tmp_
+*.un~
