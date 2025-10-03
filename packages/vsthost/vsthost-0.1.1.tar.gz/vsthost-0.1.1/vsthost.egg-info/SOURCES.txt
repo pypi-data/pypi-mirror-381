@@ -1,0 +1,10 @@
+setup.py
+Source/PluginHost.cpp
+essential/__init__.py
+essential/__main__.py
+vsthost.egg-info/PKG-INFO
+vsthost.egg-info/SOURCES.txt
+vsthost.egg-info/dependency_links.txt
+vsthost.egg-info/entry_points.txt
+vsthost.egg-info/not-zip-safe
+vsthost.egg-info/top_level.txt
