@@ -1,0 +1,2 @@
+[console_scripts]
+lymphoseq = lymphoseq.cli.main:app
