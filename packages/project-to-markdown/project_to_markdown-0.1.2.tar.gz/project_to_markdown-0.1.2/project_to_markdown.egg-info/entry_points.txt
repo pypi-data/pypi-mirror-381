@@ -1,0 +1,2 @@
+[console_scripts]
+project-to-markdown = project_to_markdown.main:main
