@@ -1,0 +1,7 @@
+numpy
+scipy
+joblib
+matplotlib
+scikit-learn
+graphviz
+pyrqa
