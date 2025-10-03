@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/jask/__init__.py
+src/jask.egg-info/PKG-INFO
+src/jask.egg-info/SOURCES.txt
+src/jask.egg-info/dependency_links.txt
+src/jask.egg-info/top_level.txt
