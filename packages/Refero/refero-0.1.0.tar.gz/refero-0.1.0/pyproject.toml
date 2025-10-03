@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68,<75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Refero"
+version = "0.1.0"
+description = "A TUI/CLI reference manager based on Zotero, built with pyzotero and featuring an fzf-based selector."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Shibing Chu", email = "chu.shibing@gmail.com" }]
+dependencies = [
+  "typer>=0.9",
+  "PyYAML>=6.0",
+  "rich>=13.0.0",
+  "pyzotero>=1.5",
+  # Ensure SOCKS proxy support if environment proxies are set
+  "socksio>=1.0.0",
+  "requests>=2.31.0",
+  "feedparser>=6.0.0",
+  # Optional: enable markdown note editing (--note-editor markdown)
+  "markdown>=3.5",
+  "markdownify>=0.11",
+  # Optional: fast diff style using C++-backed Diff Match Patch
+  "fast-diff-match-patch>=2.0.0",
+]
+
+[project.scripts]
+ref = "ref.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/chu-/Refero/"
+Repository = "https://github.com/chu-/Refero/"
+
+[tool.setuptools]
+# Avoid emitting License-File metadata until PyPI/TestPyPI fully support it
+license-files = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ref*"]
+namespaces = false

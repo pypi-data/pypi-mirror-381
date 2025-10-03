@@ -1,0 +1,446 @@
+<div align="center">
+
+<h1>Refero</h1>
+
+<img src="https://github.com/chu-/Refero/blob/main/assets/logo.png" width="160" alt="Refero logo">
+
+A smarter, lighter scholarly workflow for Zotero — right from your terminal.
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat)](LICENSE)
+[![macOS Supported](https://img.shields.io/badge/macOS-supported?logo=apple&logoColor=white)](https://www.apple.com/macos)
+[![Linux Supported](https://img.shields.io/badge/Linux-supported?logo=linux&logoColor=white)](https://kernel.org/)
+[![Windows Supported](https://img.shields.io/badge/Windows-supported?logo=windows&logoColor=white)](https://www.microsoft.com/windows)
+[![Zotero required >=7](https://img.shields.io/badge/Zotero%20required->=%207-blue)](https://github.com/zotero/zotero)
+[![fzf required >=0.55](https://img.shields.io/badge/fzf%20required->=%200.55-blue)](https://github.com/junegunn/fzf)
+[![pyzotero required >=1.5](https://img.shields.io/badge/pyzotero%20required->=%201.5-blue)](https://github.com/urschrei/pyzotero)
+
+[Getting Started](#getting-started) •
+[Features](#features) •
+[Usage](#usage) •
+[Picker Styles](#picker-styles) •
+[Keybindings](#keybindings) •
+[Contributing](#contributing) •
+[License](#license)
+
+</div>
+
+### Overview
+
+- TUI/CLI client of [Zotero](https://www.zotero.org/).
+- Collecting, organizing, annotating, citing, and sharing research for local (desktop) and web Zotero via `pyzotero` + `fzf` picker.
+- Modes:
+  - `local`: A faster, lag-free viewer/exporter, switch to Web Mode automatically when creating, editing, or deleting items.
+  - `web`: Full features(view/create/edit/delete/export). No installation of Zotero client needed.
+- Scope: browse/view/export/edit plus add-by-identifier (DOI/arXiv).
+
+### System Support
+
+- `MacOS` – Supported
+- `Linux` – Supported
+- `Windows` – Supported
+
+### Features
+
+- **Interactive fuzzy picker (fzf)**: fast search with presets (`compact`, `aligned`, `colored`, `preview`, `title-preview`), configurable preview window, and rich keybindings.
+- **Local + Web backends**: browse offline via Zotero Local API(pyzotero); switch to Zotero Web API for full create/edit/delete.
+- **Search & filters**: query by title/author/year/tags/collections; supports grouping by collection path.
+- **Smart open**: open best attachment (PDF → HTML → URL/DOI), or a specific type; open directly in Zotero.
+- **Export**: generate bibliographies (e.g., BibTeX), including to files named by citekey.
+- **Add by identifier**: create items from DOI/arXiv; apply tags and collections; dry‑run to preview Zotero JSON.
+- **Edit metadata (web)**: update fields and content fields (Note, Abstract, Extra); Markdown note editor supported.
+- **Label editor**: manage Tags and Collections together or individually; interactive picker-based flows.
+- **Attachment management**: attach/remove PDFs; bulk remove all PDF attachments from an item.
+- **Safe deletes**: move to Trash with confirmation; optional no‑prompt and permanent variants.
+- **Configurable**: tune `fzf` header/match formats, preview pane, and extra flags to fit your workflow.
+
+---
+
+## Getting Started
+
+### Prerequisite
+
+```bash
+## MacOS
+brew install fzf # version >=0.55
+## Linux
+sudo apt install fzf         # Debian/Ubuntu
+sudo dnf install fzf         # Fedora
+sudo pacman -S fzf           # Arch
+
+sudo apt install xclip         # Debian/Ubuntu
+sudo dnf install xclip         # Fedora
+sudo pacman -S xclip           # Arch
+```
+
+### Install
+Method 1:
+
+```bash
+pip install refero
+```
+
+
+Method 2 (direct from Git):
+
+```bash
+pip install git+git://github.com/chu-/Refero.git@main
+```
+
+Method 3 (editable):
+
+```bash
+git clone https://github.com/chu-/Refero
+cd ./ref
+pip install -e .
+```
+
+### Configure
+
+Create `~/.config/ref/config.yaml`:
+
+```yaml
+fzf-binary: fzf
+fzf-extra-flags: ["--ansi", "--multi", "-i", "--delimiter= :: "]
+fzf-extra-bindings: [
+  "ctrl-s:jump",
+  "ctrl-r:execute(open zotero://select/library/items/{5})",
+  "ctrl-o:execute(ref open {5})",
+  "ctrl-e:execute(ref edit {5})",
+  "ctrl-t:execute(ref label {+5} --pick)",
+  "ctrl-l:execute(ref relate {5} --pick)",
+  #"ctrl-t:execute(ref tag {+5} --pick)",
+  #"ctrl-t:execute(ref collection {+5})",
+  "ctrl-k:execute(ref note {5})",
+  #"ctrl-k:execute(ref abstract {5})",
+  #"ctrl-k:execute(ref extra {5})",
+  "ctrl-a:execute(ref export {5} --format bibtex --out {6}.bib)",
+  "ctrl-d:execute(ref delete {+5})+abort",
+  # "ctrl-d:execute(ref delete -y {+5})",   # skip confirmation
+  # macOS defaults to pbcopy; Linux uses xclip -selection clipboard automatically
+  "alt-y:execute-silent(echo -n {5} | pbcopy)+abort"
+]
+fzf-header-format: "{doc[title]:<70.70} :: {doc[author]} :: «{doc[year]}» :: :{doc[tags]} :: {doc[key]} :: {doc[citekey]}"
+match-format: "{doc[title]} :: {doc[author]} :: {doc[year]} :: :{doc[tags]}"
+# Default note editor mode: text | markdown
+note_editor: markdown
+# Diff display style for concurrent edits: table | inline | pairwise
+diff_style: inline
+zotero:
+  mode: local            # local | web
+  local_api: http://localhost:23119/api  # Zotero desktop local API
+  endpoint: null         # optional override; if set, takes precedence over local_api
+  library_id: 0          # required when mode: web (your numeric Zotero user id)
+  library_type: user
+  api_key: null          # required when mode: web (Zotero Web API key)
+  storage_dir: ~/Zotero/storage  # local Zotero storage path for attachments
+```
+
+> **Linux:** `ref` detects Linux at runtime and swaps the default picker bindings to
+> use `xdg-open` for Zotero links and `xclip -selection clipboard` for clipboard
+> actions. Install `xclip` first (for example, `sudo apt install xclip`) to enable
+> the `alt-y` clipboard binding.
+>
+> **Windows:** bindings fall back to PowerShell (`Start-Process`) for opening
+> Zotero links and the built-in `clip` utility for clipboard actions.
+
+---
+
+## Usage
+
+Basic help:
+
+```bash
+ref -h
+ref --help
+ref list -h
+ref pick -h
+ref view -h
+ref export -h
+ref label -h
+ref tag -h
+ref collection -h
+ref coll -h
+ref set -h
+ref add -h
+ref delete -h
+```
+
+Quick search (default subcommand is `list`, `-q` implied with positional args):
+
+```bash
+ref "graph neural"
+ref smith
+ref keyword1 keyword2 keyword3
+ref keyword --author chu
+ref --year 2025 keyword1 keyword2
+```
+
+Filters and collections:
+
+```bash
+ref -q graph --limit 10
+ref --tag nlp
+ref --author chu
+ref -c ABCD1234
+ref -c "Reading List"
+ref --title transformer
+ref --year 2021 --title "transformer"
+```
+
+Picker (interactive with `fzf`; default subcommand is `-q` for `ref pick`):
+
+```bash
+ref pick "graph neural" --limit 10
+ref pick --tag nlp
+ref pick -c "NLP"
+ref pick --author smith --year 2021
+```
+
+Open best attachment / specific types:
+
+```bash
+ref open <KEY>           # best: PDF -> HTML -> URL/DOI
+ref open --pdf <KEY>
+ref open --html <KEY>
+ref open --url <KEY>
+```
+
+View metadata:
+
+```bash
+ref view <KEY>
+ref preview <KEY>
+```
+
+Export:
+
+```bash
+ref export <KEY>... --format bibtex
+ref export <KEY>... --format bibtex --out out.bib
+```
+
+Add by identifier (web mode only):
+
+```bash
+# requires zotero.api_key and zotero.library_id
+ref add --doi xx.xxxx/xx -c "Reading List,AI"    # collections by name or key
+ref add --arxiv xx.xxxx/xx --tag "ml,arxiv"
+ref add --doi xx.xxxx/xx --dry-run               # show Zotero JSON only
+```
+
+Edit metadata (web mode only):
+
+```bash
+# requires zotero.api_key and zotero.library_id
+ref edit <KEY>
+```
+
+Label editor (tags and collections):
+
+```bash
+# Editor mode: opens a temp file to edit collections and tags
+ref label <KEY>
+
+# Interactive mode: pick tags, then collections via fzf
+# Use Tab to selected/unselected labels, Type+Enter to add new tags, then Enter/Esc to confirm/cancel selection"),
+
+ref label <KEY> --pick
+ref label <KEY> --pick -l 100
+```
+
+Edit tags only:
+
+```bash
+ref tag <KEY>
+ref tag <KEY> --pick
+ref tag <KEY> --pick -l 100
+```
+
+Edit collections only:
+
+```bash
+ref collection <KEY>
+ref coll <KEY> --pick
+ref coll <KEY> --pick -l 100
+```
+
+Set metadata (web mode only):
+
+```bash
+# requires zotero.api_key and zotero.library_id
+# add tags
+ref set <KEY> -g ml -g reading
+ref set <KEY> --tag "ml,reading,arxiv"
+
+# add to collections (by key or name; partial names supported)
+ref set <KEY> -c ABCD1234 -c "Reading List"
+ref set <KEY> --collection "AI,Reading List"
+
+# attach a local PDF as a linked-file attachment
+ref set <KEY> --pdf ~/Downloads/paper.pdf
+
+# remove from collections / remove tags
+ref set <KEY> --collection-rm "Reading List" --tag-rm ml
+
+# remove all PDF attachments
+ref set <KEY> --pdf-rm
+
+# combine
+ref set <KEY> -g nlp -c "Reading List" --pdf ./paper.pdf
+```
+
+Delete (web mode only):
+
+```bash
+ref delete <KEY>...           # confirm once, moves to Trash
+ref delete -y <KEY>...        # no prompt
+ref delete --permanent <KEY>  # moves to Trash; empty Trash to purge
+```
+
+Content Fields Editing:
+
+```bash
+Edit text-based fields on an item:
+
+ref note <KEY>       # Edit or create a child Note
+# use Markdown editor mode for notes (requires deps: markdown, markdownify)
+ref note <KEY> --note-editor markdown
+# or set config: note_editor: markdown|text, and markdown is default
+ref abstract <KEY>   # Edit the abstractNote field
+ref extra <KEY>      # Edit the Extra field
+
+```
+
+### Editing concurrency
+- `ref edit/extra/abstract/note <KEY>`
+- When editing, if changed remotely after you opened the editor, ref detects it and shows a three‑way diff of base → remote → yours.
+- **Actions**:
+  - **[y]ours**: overwrite the remote note with your edited text.
+  - **[r]emote**: reload the latest remote content into the editor and let you re‑edit.
+  - **[m]erge**: merge the remote note with your edited text, only in `ref edit <KEY>`
+  - **[a]bort**: cancel without saving.
+- The diff display is controlled by `diff_style` in `config.yaml` (`table` | `inline` | `pairwise`).
+- Note editor mode is controlled by `note_editor` in `config.yaml` (default `markdown`) or `--note-editor` per‑command.
+
+### Diff style for concurrent edits
+
+When editing text fields and a newer remote version exists, ref shows a diff before you choose an action. Control the display via `diff_style` in `config.yaml`:
+
+- table: concise summary showing values for base, yours, remote
+- inline: single-line bracketed inline diff like `[base → remote → yours]`
+- pairwise: compact inline diff using the C++ Diff Match Patch engine via `fast-diff-match-patch`. Deletions are shown in red; remote insertions(base→remote) in blue; local insertions(base→yours) in green. 
+
+Example:
+
+```yaml
+diff_style: inline   # table | inline | pairwise
+```
+
+More examples
+
+```bash
+# list (explicit)
+ref list -q "graph neural"
+ref list --tag nlp
+ref list -d 7b00316
+ref list --doi 7b00316
+ref list --author smith
+ref list -c ABCD1234
+ref list -c "Reading List"
+ref list --title transformer
+ref list --year 2021
+ref list -a smith -y 2021
+ref list --author smith --year 2021
+ref list --title transformer --tag nlp
+ref list --author "smith" --title "transformer"
+ref list --year 2021 --title "transformer"
+
+# group by collection path
+ref list --group-by-collection                 # groups items under "Parent -> Child"
+
+# pick (explicit)
+ref pick -q graph
+ref pick -d 7b00316
+ref pick --doi 7b00316
+ref pick -a smith
+ref pick --title transformer
+```
+
+## Picker Styles
+
+You can quickly change how items are rendered in the picker using the `fzf-style` preset. Supported values: `compact`, `aligned`, `colored`, `preview`, `title-preview`.
+
+Minimal example:
+
+```yaml
+fzf-style: aligned  # compact | aligned | colored | preview | title-preview
+```
+
+Preset details:
+
+- aligned: padded columns for title/author/year
+- compact: shorter columns (good for narrow terminals)
+- colored: ANSI-colored title/author/year (requires `--ansi`), set color_scheme in config:calm|bright|minimal|contrast
+- preview: adds a right-side preview pane with colored JSON using `jq` if available
+- title-preview: colored title line + compact metadata preview
+
+Preview preset sets (simplified):
+
+```yaml
+fzf-extra-flags:
+  - --ansi
+  - --delimiter
+  - " :: "
+  - --preview
+  - "sh -c 'if command -v jq >/dev/null 2>&1; then ref view \"$1\" | jq -C .; else ref view \"$1\" | cat; fi' sh {5}"
+  - --preview-window
+  - right,60,border
+```
+
+You can override the preview window regardless of preset:
+
+```yaml
+fzf-preview-window: up,60,border
+# or:
+fzf-preview-window: up,1,wrap
+fzf-preview-window: down,1,wrap
+```
+
+---
+
+## Keybindings
+
+Press Ctrl-h in any picker to show a dynamic help overlay derived from your `fzf-extra-bindings` in `config.yaml`. If no bindings are configured, a concise default help is shown.
+
+In the `pick` view:
+
+- ctrl-n/p: navigate items
+- Tab: toggle select/unselect (multi-select)
+- ctrl-r: open in Zotero (`zotero://select/library/items/{key}`)
+- ctrl-s: jump to target item
+- ctrl-o: open best attachment (such as `ref open {key}`)
+- ctrl-e: edit metadata (web mode; such as `ref edit {key}`)
+- ctrl-t: edit Label, Tags or Collections (such as `ref label {key} --pick`)
+- ctrl-l: relate items (such as `ref relate {key} --pick`)
+- ctrl-k: edit Content Fields: Note, Extra or Abstract with default Markdown editor
+- ctrl-a: export to BibTeX as `{citekey}.bib`
+- ctrl-d: delete selected items (`ref delete {+5}`; add `-y` to skip confirmation)
+- alt-y: copy field of item (clipboard command defaults to `pbcopy` on macOS, `xclip -selection clipboard` on Linux, or `clip` on Windows). Use {1},{2},{3}... to select different field item.
+
+---
+
+## Notes
+
+- With `zotero.mode: local`, `ref` uses `zotero.local_api` (default `http://localhost:23119/api`).
+- For the Zotero Web API, set `zotero.mode: web` and provide `zotero.api_key` and `zotero.library_id`. Optionally set `zotero.endpoint`.
+- `fzf` matches displayed fields; include fields in `fzf-header-format` to broaden matching.
+
+---
+
+## Contributing
+
+Issues and PRs are welcome. 
+
+## License
+
+This project is licensed under the terms of the [MIT License](LICENSE).
