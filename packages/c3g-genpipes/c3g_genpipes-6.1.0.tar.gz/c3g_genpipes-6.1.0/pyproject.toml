@@ -1,0 +1,53 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+dynamic = []
+name = "c3g-genpipes"
+maintainers = [
+    { name = "Mareike Janiak", email = "mareike.janiak@computationalgenomics.ca" },
+    { name = "Paul Stretenowich", email = "paul.stretenowich@mcgill.ca" },
+    { name = "Pierre-Olivier Quirion", email = "po.quirion@mcgill.ca" },
+    { name = "Edouard Henrion", email = "edouard.henrion@computationalgenomics.ca" },
+]
+description = "Several bioinformatics pipelines developed at McGill University Genome Centre"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "packaging>=20.9",
+    "shtab>=1.7.1",
+    "questionary>=2.1.0",
+    "jinja2>=3.1.0",
+]
+version = "6.1.0"
+
+[[project.authors]]
+name = "Canadian Center for Computational Genomics"
+email = "pipelines@computationalgenomics.ca"
+
+[project.scripts]
+genpipes = "genpipes.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/c3g/GenPipes"
+Issues = "https://github.com/c3g/GenPipes/issues"
+Documentation = "https://genpipes.readthedocs.io"
+
+[tool.pdm]
+allow-direct-references = true
+
+[tool.pdm.version]
+source = "file"
+path = "genpipes/__version__.py"
