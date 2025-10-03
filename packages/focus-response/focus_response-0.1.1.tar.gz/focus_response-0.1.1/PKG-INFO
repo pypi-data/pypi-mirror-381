@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: focus_response
+Version: 0.1.1
+Summary: This library provides functionality to measure focus levels in images
+Author-email: Hrishikesh Kanade <kanade.hrishikesh1994@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/rishik18/focus_response
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.19.3
+Requires-Dist: opencv-python>=4.5.0
+Requires-Dist: matplotlib>=3.3.0
+Requires-Dist: scipy>=1.5.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: black>=22.0; extra == "dev"
+Requires-Dist: flake8>=4.0; extra == "dev"
+Requires-Dist: mypy>=0.950; extra == "dev"
+
+# focus_response
+
+A Python library for focus_response.
+
+## Installation
+
+```bash
+pip install focus_response
+```
+
+## Usage
+
+```python
+import focus_response
+
+# Your code here
+```
+
+## Development
+
+```bash
+# Install in development mode
+pip install -e ".[dev]"
+
+# Run tests
+pytest
+
+# Format code
+black .
+
+# Lint
+flake8
+```
+
+## License
+
+MIT License - see LICENSE file for details.
