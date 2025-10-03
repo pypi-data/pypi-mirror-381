@@ -1,0 +1,45 @@
+[project]
+name = "nextepoch"
+description = "NextEpoch Python SDK"
+readme = "README.md"
+requires-python = ">=3.11"
+dynamic = ["version"]
+license = { text = "Proprietary" }
+authors = [{ name = "NextEpoch", email = "support@nextepoch.ai" }]
+dependencies = [
+  "aiohttp>=3.9",
+  "pydantic>=2.7",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pytest-asyncio>=0.23",
+  "ruff>=0.5.0",
+  "black>=24.3.0",
+  "nox>=2024.4.0",
+  "setuptools-scm[toml]>=8",
+]
+
+[build-system]
+requires = ["hatchling>=1.25", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nextepoch"]
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "node-and-date"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.uv]
+python-preference = "managed"
+
+[dependency-groups]
+dev = ["nextepoch[dev]"]

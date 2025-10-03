@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: nextepoch
+Version: 0.1.2
+Summary: NextEpoch Python SDK
+Author-email: NextEpoch <support@nextepoch.ai>
+License: Proprietary
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: aiohttp>=3.9
+Requires-Dist: pydantic>=2.7
+Provides-Extra: dev
+Requires-Dist: black>=24.3.0; extra == 'dev'
+Requires-Dist: nox>=2024.4.0; extra == 'dev'
+Requires-Dist: pytest-asyncio>=0.23; extra == 'dev'
+Requires-Dist: pytest>=8.0; extra == 'dev'
+Requires-Dist: ruff>=0.5.0; extra == 'dev'
+Requires-Dist: setuptools-scm[toml]>=8; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# nextepoch-sdk
+libraries to use the nextepoch api's
