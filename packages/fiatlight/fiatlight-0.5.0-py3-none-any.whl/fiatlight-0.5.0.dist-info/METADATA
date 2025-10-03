@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: fiatlight
+Version: 0.5.0
+Summary: fiatlight: shine light inside your algorithm pipelines
+Project-URL: homepage, https://pthom.github.io/fiatlight/
+Project-URL: repository, https://github.com/pthom/fiatlight/
+Project-URL: documentation, https://pthom.github.io/fiatlight/
+Author-email: Pascal Thomet <pthomet@gmail.com>
+License-File: LICENSE
+Keywords: python
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Requires-Dist: imgui-bundle>=1.92.4
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: pandas
+Requires-Dist: pillow
+Requires-Dist: pydantic
+Requires-Dist: tabulate
+Requires-Dist: types-pillow
+Description-Content-Type: text/markdown
+
+Fiatlight: Brighten the Journey from Idea to Creation
+==================================================
+
+_Expressive Code, Instant Applications_
+
+Fiatlight bridges the gap between code and UI, allowing you to turn ideas into fully functional applications in minutes. It automates UI generation for functions and structured data, making prototyping and fine-tuning faster and easier.
+Automatically generate interactive UIs for structured data and functions.
+
+
+> *For more info, [see documentation](https://pthom.github.io/fiatlight_doc)*

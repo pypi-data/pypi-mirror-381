@@ -1,0 +1,41 @@
+{
+    "user_inputs": {
+        "functions_nodes": {
+            "random_binomial": {
+                "n": {
+                    "name": "n",
+                    "data": {
+                        "type": "Unspecified"
+                    }
+                },
+                "p": {
+                    "name": "p",
+                    "data": {
+                        "type": "Unspecified"
+                    }
+                }
+            }
+        }
+    },
+    "gui_options": {
+        "random_binomial": {
+            "inputs": {
+                "n": {
+                    "cb_options": {},
+                    "expanded": true
+                },
+                "p": {
+                    "cb_options": {},
+                    "expanded": true
+                }
+            },
+            "outputs": {
+                "0": {
+                    "cb_options": {},
+                    "expanded": true
+                }
+            },
+            "internal_gui_options": {}
+        }
+    }
+}

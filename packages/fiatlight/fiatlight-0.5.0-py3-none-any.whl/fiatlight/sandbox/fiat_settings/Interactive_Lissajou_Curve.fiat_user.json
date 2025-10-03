@@ -1,0 +1,129 @@
+{
+    "user_inputs": {
+        "functions_nodes": {
+            "lissajous_curve": {
+                "freq1": {
+                    "name": "freq1",
+                    "data": {
+                        "type": "Primitive",
+                        "value": 5.251999855041504
+                    }
+                },
+                "freq2": {
+                    "name": "freq2",
+                    "data": {
+                        "type": "Primitive",
+                        "value": 3.5799999237060547
+                    }
+                },
+                "delta": {
+                    "name": "delta",
+                    "data": {
+                        "type": "Primitive",
+                        "value": 1.0299999713897705
+                    }
+                },
+                "nb_periods": {
+                    "name": "nb_periods",
+                    "data": {
+                        "type": "Primitive",
+                        "value": 3.25600004196167
+                    }
+                }
+            }
+        }
+    },
+    "gui_options": {
+        "lissajous_curve": {
+            "function_node_with_gui": {
+                "_inputs_expanded": {
+                    "inside_node": true,
+                    "focused": true
+                },
+                "_outputs_expanded": {
+                    "inside_node": true,
+                    "focused": true
+                },
+                "_doc_expanded": {
+                    "inside_node": false,
+                    "focused": true
+                },
+                "fiat_tuning_expanded": {
+                    "inside_node": true,
+                    "focused": true
+                },
+                "_internal_state_gui_expanded": {
+                    "inside_node": true,
+                    "focused": true
+                },
+                "_function_node": {
+                    "inputs": {
+                        "freq1": {
+                            "cb_options": {},
+                            "expanded": true
+                        },
+                        "freq2": {
+                            "cb_options": {},
+                            "expanded": true
+                        },
+                        "delta": {
+                            "cb_options": {},
+                            "expanded": true
+                        },
+                        "nb_periods": {
+                            "cb_options": {},
+                            "expanded": true
+                        }
+                    },
+                    "outputs": {
+                        "0": {
+                            "cb_options": {
+                                "figure_size": {
+                                    "x": 500.0,
+                                    "y": 500.0
+                                }
+                            },
+                            "expanded": true
+                        }
+                    }
+                },
+                "_backup_expanded_states": {
+                    "inside_node": null,
+                    "focused": null
+                },
+                "_focused_function_visible": true
+            },
+            "function_node": {
+                "inputs": {
+                    "freq1": {
+                        "cb_options": {},
+                        "expanded": true
+                    },
+                    "freq2": {
+                        "cb_options": {},
+                        "expanded": true
+                    },
+                    "delta": {
+                        "cb_options": {},
+                        "expanded": true
+                    },
+                    "nb_periods": {
+                        "cb_options": {},
+                        "expanded": true
+                    }
+                },
+                "outputs": {
+                    "0": {
+                        "cb_options": {
+                            "figure_size": {
+                                "x": 500.0,
+                                "y": 500.0
+                            }
+                        },
+                        "expanded": true
+                    }
+                }
+            }
+        }
+    }
+}

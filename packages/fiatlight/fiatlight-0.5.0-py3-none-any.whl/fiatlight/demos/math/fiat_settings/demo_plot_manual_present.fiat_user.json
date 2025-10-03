@@ -1,0 +1,67 @@
+{
+    "user_inputs": {
+        "functions_nodes": {
+            "make_range": {
+                "start": {
+                    "name": "start",
+                    "data": {
+                        "type": "Unspecified"
+                    }
+                },
+                "stop": {
+                    "name": "stop",
+                    "data": {
+                        "type": "Unspecified"
+                    }
+                },
+                "step": {
+                    "name": "step",
+                    "data": {
+                        "type": "Unspecified"
+                    }
+                }
+            },
+            "make_sin": {}
+        }
+    },
+    "gui_options": {
+        "make_range": {
+            "inputs": {
+                "start": {
+                    "cb_options": {},
+                    "expanded": true
+                },
+                "stop": {
+                    "cb_options": {},
+                    "expanded": true
+                },
+                "step": {
+                    "cb_options": {},
+                    "expanded": true
+                }
+            },
+            "outputs": {
+                "0": {
+                    "cb_options": {},
+                    "expanded": true
+                }
+            },
+            "internal_gui_options": {}
+        },
+        "make_sin": {
+            "inputs": {
+                "x": {
+                    "cb_options": {},
+                    "expanded": false
+                }
+            },
+            "outputs": {
+                "0": {
+                    "cb_options": {},
+                    "expanded": true
+                }
+            },
+            "internal_gui_options": {}
+        }
+    }
+}
