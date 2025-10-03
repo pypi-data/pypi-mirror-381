@@ -1,0 +1,7 @@
+ALMA:
+  aliases: ["alma"]
+  description: ALMA Configuration 1
+  documentation: https://www.eso.org/public/teles-instr/alma/
+  arrays:
+    alma:
+      key: alma/cycle-1
