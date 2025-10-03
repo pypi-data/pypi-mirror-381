@@ -1,0 +1,14 @@
+ollama_downloader/__init__.py,sha256=yRpfHzSe9ZrjhtzCMVa-oW6s8yprvN6-I7xx8q9cSpE,631
+ollama_downloader/cli.py,sha256=jLEJudTB-6yDWiWv0tYvFhZzn9D4uoJW--2_1DQy2K4,20096
+ollama_downloader/common.py,sha256=n14D0jlD8n7q01u1WIQnKxC72DHfKfo4sSGyVB8jX7s,9172
+ollama_downloader/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ollama_downloader/data/data_models.py,sha256=uvYhbOq4onMoYJj0XvAwLz6sixIJIEdIj6DEbG8mBok,7921
+ollama_downloader/downloader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ollama_downloader/downloader/hf_model_downloader.py,sha256=_9-PNaVTQ9APCkV6IjAt9wE6qGOkNoTStJ-KneNtdx4,8849
+ollama_downloader/downloader/model_downloader.py,sha256=SpnRx5w4Qma8Dn2kpjQ3FeTDGb7vL_7YlhOmXEY8Rcs,18339
+ollama_downloader/downloader/ollama_model_downloader.py,sha256=lXL2ohaq8zGPMlU9xQcTZGiQ2zZtdpM72QEDP863nE8,8179
+ollama_downloader-0.1.1.post1.dist-info/METADATA,sha256=w41Nh00ypszeL5j8mBO5z_5Kr2TJsRi8WOK9cmvg1GU,30012
+ollama_downloader-0.1.1.post1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ollama_downloader-0.1.1.post1.dist-info/entry_points.txt,sha256=6ZSYvQIOIdpoY-EqvGFB_twh2ULp1tge1zBGvLGnbqg,97
+ollama_downloader-0.1.1.post1.dist-info/licenses/LICENSE,sha256=NU6jxFhYz06AYrZr1CIlgYAPlmFrvmwQg1AJtsH2r7Q,1094
+ollama_downloader-0.1.1.post1.dist-info/RECORD,,
