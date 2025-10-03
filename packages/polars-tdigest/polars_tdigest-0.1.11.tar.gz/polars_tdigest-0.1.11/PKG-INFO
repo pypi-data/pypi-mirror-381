@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: polars-tdigest
+Version: 0.1.11
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE
+Author-email: Thomas Lutterbeck <thomas.lutterbeck@appian.com>
+Requires-Python: >=3.8
