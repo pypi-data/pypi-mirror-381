@@ -1,0 +1,8 @@
+rignore-0.7.0.dist-info/METADATA,sha256=-E30ZbHNM8iPTJiOpzBtJHOsXX6ZuyUqdYvlbBrDiEw,3859
+rignore-0.7.0.dist-info/WHEEL,sha256=M5kBzvuFNPDWCGf02zGw7iFlgju0J4_oRkJ_T2ja4mA,90
+rignore-0.7.0.dist-info/licenses/LICENSE,sha256=xCOXkDUUFLJ_nyfCrIWRA-_SQKEeAcFMo0SRH1A6EWE,1093
+rignore/__init__.py,sha256=w1wxNNym5aUET3jqoi3Wf_qpMXvrKA6-yO4ApthRWXg,111
+rignore/__init__.pyi,sha256=JAzZtA7BOYkTqEpbEpO5lIW32srcBWANhcObtdlL44E,1807
+rignore/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rignore/rignore.cp39-win32.pyd,sha256=gLo38YW8vCKW-gtfVLfl5VE2UyH6di3-ZGk9s4_71s4,1377280
+rignore-0.7.0.dist-info/RECORD,,
