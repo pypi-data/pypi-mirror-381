@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: bcml-ai
+Version: 0.0.1
+Summary: Example package: install as 'bcml-ai', import as 'bcml'.
+Project-URL: Homepage, https://example.com
+Author-email: Your Name <you@example.com>
+License: GNU Affero General Public License v3.0 (AGPL-3.0-only)
+        SPDX-License-Identifier: AGPL-3.0-only
+        
+        The full license text should be placed here. If this placeholder was generated,
+        fetch the canonical text from https://www.gnu.org/licenses/agpl.txt and replace
+        this file's contents.
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# bcml-ai
+Example package published as "bcml-ai" on PyPI, importable as `bcml`.
