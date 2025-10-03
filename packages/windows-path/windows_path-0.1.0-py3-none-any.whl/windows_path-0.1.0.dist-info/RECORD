@@ -1,0 +1,10 @@
+windows_path/__init__.py,sha256=VEIqJUVrcfzLdzgXXww4-3l0rYke3lBkldiAJLba8ZM,517
+windows_path/__main__.py,sha256=O5519C7GOv6vPAnlJoYJ9Z5tbHbozjXtY_uAvjrwFeI,200
+windows_path/cli.py,sha256=Yf3aqU9-rlskeQQWTiwY5qeq85ImD5KTKrXwZ1wYREU,4823
+windows_path/path_manager.py,sha256=GjpLltVMXwejMnUDAXLxaYtCs-3eifYxa4tKPgCk7Nk,21415
+windows_path-0.1.0.dist-info/LICENSE,sha256=7rW82puBByAZzbUScBqKsLc69hP5j2dljQGIdm0-4hc,1102
+windows_path-0.1.0.dist-info/METADATA,sha256=ysHIEtt7JhMrg9yiqQj0ecQrWoxY7mZEyYJNUdfnqXA,4382
+windows_path-0.1.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+windows_path-0.1.0.dist-info/entry_points.txt,sha256=sXfV9bhvPSE2ubMlNWjn4rt-YZuroKz_dQfVSpHvKtE,92
+windows_path-0.1.0.dist-info/top_level.txt,sha256=i6pE9GHN6SkVmXdikAJNBJp_ypwUM3Bz-gP7pOGvd64,13
+windows_path-0.1.0.dist-info/RECORD,,

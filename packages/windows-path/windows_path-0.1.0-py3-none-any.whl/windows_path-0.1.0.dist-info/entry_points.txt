@@ -1,0 +1,3 @@
+[console_scripts]
+windows-path = windows_path.cli:main
+windows_path = windows_path.cli:main
