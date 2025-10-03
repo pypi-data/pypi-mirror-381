@@ -1,0 +1,13 @@
+iagitbetter/__init__.py,sha256=TPNJjVU2_ifCatT7LFnYnFulAFE-pJ-bYcrOdw1XSi4,376
+iagitbetter/__main__.py,sha256=MydPVUQpAwHYt7dDKDITUx8oqbHCQIIgz8Zke3WGLMo,16125
+iagitbetter/iagitbetter.py,sha256=Qe8rIGsmtgY6VUrpd4qxC0ZqDEgFRHHgcXbHrNeJEGU,68392
+iagitbetter-1.0.6.dist-info/licenses/LICENSE,sha256=aFLFZg6LEJFpTlNQ8su3__jw4GfV-xWBmC1cePkKZVw,35802
+tests/__init__.py,sha256=jvySqqcudWmYQ_8Iv1JSTgAvE6LjnR1IzKbvIAtygAA,564
+tests/constants.py,sha256=2pANDL-QJ_xURKA7tmWgzhtr6C_NxwWq1tV549szy7k,7744
+tests/test_iagitbetter.py,sha256=I8aKTNuTf2Vot4R4KaQFfj6p07ICqsLR1-voNxljKlI,12686
+tests/test_utils.py,sha256=wH3sytnuWMKO5Nv9E8PY9Ps7f4rNzySisYlgLBX7W7M,9326
+iagitbetter-1.0.6.dist-info/METADATA,sha256=FgIAhBrpn9gHeXJMDmFw9b7i2tl83m7UJGxrgFv1T5A,57076
+iagitbetter-1.0.6.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+iagitbetter-1.0.6.dist-info/entry_points.txt,sha256=-vtoZ7fV_NHYFRxbNtLBZnHeBCFKg0IbtW9mzJAQ6s8,49
+iagitbetter-1.0.6.dist-info/top_level.txt,sha256=P2NPZzdDyvKlPvN19nJUlvdlwiN3gI-SsvxY3tKAoZI,18
+iagitbetter-1.0.6.dist-info/RECORD,,
