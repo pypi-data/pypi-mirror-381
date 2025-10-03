@@ -1,0 +1,33 @@
+[build-system]
+requires = ["maturin>=1.9,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "slumber-python"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = [
+    # Pull everything in from Cargo.toml
+    "version",
+    "summary",
+    "description",
+    "description_content_type",
+    "home_page",
+    "author",
+    "author_email",
+    "license",
+    "project_url",
+]
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+manifest-path = "crates/python/Cargo.toml"
+
+[tool.uv]
+package = false
+python-preference = "only-system"
