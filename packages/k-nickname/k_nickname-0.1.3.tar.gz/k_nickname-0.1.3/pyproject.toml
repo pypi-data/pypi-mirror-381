@@ -1,0 +1,18 @@
+[project]
+name = "k-nickname"
+version = "0.1.3"
+description = "Generate random nickname for Korean users."
+authors = [
+    {name = "kyohoonsim",email = "kyohoonsim@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "emoji (>=2.15.0,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
