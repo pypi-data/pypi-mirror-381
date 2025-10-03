@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neospeech-io"
+version = "1.0.0"
+description = "Official Python SDK for the NeoSpeech Text-to-Speech API"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "NeoSpeech", email = "support@neospeech.io"}
+]
+keywords = ["neospeech", "text-to-speech", "tts", "speech-synthesis", "voice", "audio", "ai", "sdk"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+dependencies = [
+    "requests>=2.25.0",
+]
+
+[project.urls]
+Homepage = "https://docs.neospeech.io"
+Documentation = "https://docs.neospeech.io"
+Repository = "https://github.com/neospeech/neospeech-python"
+"Bug Reports" = "https://github.com/neospeech/neospeech-python/issues"
+
+[tool.setuptools.packages.find]
+include = ["neospeech*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+line_length = 88

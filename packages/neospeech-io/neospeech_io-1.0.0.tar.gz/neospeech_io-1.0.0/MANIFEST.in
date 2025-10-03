@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+include neospeech/py.typed
+recursive-include neospeech *.py *.pyi
