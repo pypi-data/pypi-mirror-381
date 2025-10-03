@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: k-nickname
+Version: 0.1.2
+Summary: Generate random nickname for Korean users.
+License: MIT
+Author: kyohoonsim
+Author-email: kyohoonsim@gmail.com
+Requires-Python: >=3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Description-Content-Type: text/markdown
+
+# k-nickname
+
+A simple Python package to generate fun Korean-style nicknames like:
+
+- 빠른여우42
+- 심쿵고래7
+- 멋진호랑이88
+
+## Installation
+
+```bash
+pip install k-nickname
+```
+
+## Usage
+
+```python
+from k_nickname import generate_nickname
+
+print(generate_nickname())
+# 예: '심쿵고래7'
+```
+
+```python
+from k_nickname import generate_nickname
+
+for _ in range(5):
+    print(generate_nickname())
+```
+
+출력 예:
+
+```txt
+빠른여우42
+심쿵고래7
+고독한펭귄55
+귀여운사자8
+행복한토끼91
+```
+
