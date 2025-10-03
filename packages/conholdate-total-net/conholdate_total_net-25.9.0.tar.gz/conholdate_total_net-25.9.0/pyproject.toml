@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conholdate-total-net"
+version = "25.9.0"
+description = "Conholdate.Total for Python via .NET metapackage that enables you to install all available GroupDocs for Python via .NET products."
+readme = "README.md"
+requires-python = ">=3.9, <3.12"
+license = {text = "Other/Proprietary License"}
+
+authors = [
+    {name = "Conholdate", email = "support@conholdate.com"}
+]
+
+keywords = [
+    "Conholdate.Total for Python via .NET",
+    "Conholdate for Python via .NET",
+    "metapackage",
+    "document conversion",
+    "document viewing",
+    "document comparison",
+    "watermarking",
+    "metadata",
+    "document merger",
+    "document assembly",
+    "redaction",
+    "digital signature"
+]
+
+dependencies = [
+    "aspose-total-net==25.9.0",
+    "groupdocs-total-net==25.9.0"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "License :: Other/Proprietary License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS"
+]
+
+[project.urls]
+homepage = "https://products.conholdate.com/"
+documentation = "https://docs.conholdate.com/"
+demo = "https://products.conholdate.app"
+blog = "https://blog.conholdate.com"
+support = "https://forum.conholdate.com"
+tempraryLicense = "https://purchase.conholdate.com/temporary-license/"
