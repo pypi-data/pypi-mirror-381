@@ -1,0 +1,2 @@
+[console_scripts]
+httpbenchw_test = httpbenchw.main:main
