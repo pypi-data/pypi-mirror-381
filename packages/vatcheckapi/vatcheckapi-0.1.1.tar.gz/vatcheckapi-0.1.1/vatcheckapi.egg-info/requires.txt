@@ -1,0 +1,4 @@
+requests>=2.28
+
+[:python_version < "3.11"]
+typing-extensions>=4.5

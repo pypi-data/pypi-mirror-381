@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+vatcheckapi/__init__.py
+vatcheckapi/client.py
+vatcheckapi.egg-info/PKG-INFO
+vatcheckapi.egg-info/SOURCES.txt
+vatcheckapi.egg-info/dependency_links.txt
+vatcheckapi.egg-info/requires.txt
+vatcheckapi.egg-info/top_level.txt
