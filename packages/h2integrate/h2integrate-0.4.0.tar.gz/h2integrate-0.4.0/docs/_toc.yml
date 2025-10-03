@@ -1,0 +1,69 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Getting Started
+  chapters:
+    - file: getting_started/install
+    - file: getting_started/expected_user_knowledge
+    - file: getting_started/environment_variables
+
+- caption: User Guide
+  chapters:
+  - file: user_guide/how_to_set_up_an_analysis
+  - file: user_guide/connecting_technologies
+  - file: user_guide/design_optimization_in_h2i
+  - file: user_guide/postprocessing_results
+  - file: user_guide/how_to_interface_with_user_defined_model
+  - file: user_guide/specifying_finance_parameters
+    sections:
+    - file: user_guide/cost_years
+    - file: finance_models/finance_index
+      sections:
+      - file: finance_models/ProFastComp
+
+- caption: Technology Models
+  chapters:
+  - file: technology_models/technology_overview
+  - file: technology_models/feedstocks
+  - file: technology_models/run_of_river
+  - file: technology_models/direct_ocean_capture
+  - file: technology_models/natural_gas
+  - file: technology_models/wombat_electrolyzer_om
+  - file: technology_models/pvwattsv8_solar_pv.md
+  - file: technology_models/atb_costs_pv.md
+  - file: technology_models/co2.md
+  - file: technology_models/simple_generic_storage.md
+
+- caption: Resource Models
+  chapters:
+  - file: resource/resource_index
+    sections:
+      - file: resource/wind_index
+      - file: resource/wind_toolkit_v2_api
+
+- caption: Examples
+  chapters:
+  - file: examples/01-green-hydrogen
+
+- caption: Developer Guide
+  chapters:
+  - file: CONTRIBUTING
+  - file: developer_guide/coding_guidelines
+  - file: developer_guide/why_make_h2integrate
+  - file: developer_guide/adding_a_new_technology
+  - file: developer_guide/features_not_currently_implemented
+  - file: developer_guide/class_structure
+  - file: developer_guide/describing_whats_in_classes
+
+- caption: Miscellaneous Resources
+  chapters:
+    - file: misc_resources/FAQ
+    - file: misc_resources/glossary
+
+- caption: API Reference
+  maxdepth: 3
+  chapters:
+  - file: api
