@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: nifty_anilist
+Version: 0.1.0
+Summary: Utilities for the Anilist GraphQL API.
+Author-email: Alexey Polishchuk <alexpolishchukmail@gmail.com>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: asyncio>=4.0.0
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: gql[all]>=4.0.0
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: pydantic>=2.11.9
+Requires-Dist: pydantic-settings>=2.11.0
+Requires-Dist: pyjwt>=2.10.1
+Requires-Dist: python-dotenv>=1.1.1
+Requires-Dist: selenium>=4.35.0
+Requires-Dist: structlog>=25.4.0
+Requires-Dist: webdriver-manager>=4.0.2
+Dynamic: license-file
+
+# nifty-anilist
+ 

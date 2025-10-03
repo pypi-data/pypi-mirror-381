@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+nifty_anilist/__init__.py
+nifty_anilist/anilist_schema.graphql
+nifty_anilist/auth.py
+nifty_anilist/logging.py
+nifty_anilist/request.py
+nifty_anilist/settings.py
+nifty_anilist.egg-info/PKG-INFO
+nifty_anilist.egg-info/SOURCES.txt
+nifty_anilist.egg-info/dependency_links.txt
+nifty_anilist.egg-info/requires.txt
+nifty_anilist.egg-info/top_level.txt
