@@ -1,0 +1,13 @@
+neospeech/__init__.py,sha256=iN1nbrVIniFR_drvOXA3wkMT7bqos-27aQLhgoNDJ5k,130
+neospeech/audio.py,sha256=4--I68ZUpQXPjpD59hEVZUGm_HX7Db5GM7_5XflfHzc,2411
+neospeech/balance.py,sha256=_TsGI10S9cKJHPPrirWsUJH0nJ10jNOSrS2FJpSB3bs,245
+neospeech/client.py,sha256=wBQuAqtHn3HpmbIcN39GC33lno86LCfRZrtTqbapN04,3237
+neospeech/errors.py,sha256=YxMUi4G-YefDkyKUv5bPN3ypUM1paZHXRC7etiujrkA,775
+neospeech/models.py,sha256=pXIEa1WQr8mthvNDDgCRCWwKYx7x3CHm__pSm_NHyE8,249
+neospeech/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+neospeech/voices.py,sha256=Hngvj7rFsE8lhDoOVuxTSPlBt1OshQGIfE8rvHEFQHU,792
+neospeech_io-1.0.0.dist-info/licenses/LICENSE,sha256=RbLEIYG4PWzpkZtZSUbvht7ERH03e1yoeYTpEOEp5YY,1066
+neospeech_io-1.0.0.dist-info/METADATA,sha256=6wRnHk8Rz_eRSJw60L_u-o9TjMg4-1PBbKIOWfTvE8k,9408
+neospeech_io-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+neospeech_io-1.0.0.dist-info/top_level.txt,sha256=z_9kdWPDUWXDVo0MZ6MnlfSGn3wvuvOGIJ6wgRsK0Hw,10
+neospeech_io-1.0.0.dist-info/RECORD,,
