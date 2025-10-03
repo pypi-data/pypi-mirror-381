@@ -1,0 +1,2 @@
+1.0.0 - First upload prod
+1.1.0 - Added SIEM events en common events for endpoint, server en other.
