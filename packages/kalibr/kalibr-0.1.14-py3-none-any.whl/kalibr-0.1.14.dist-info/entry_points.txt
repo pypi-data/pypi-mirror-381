@@ -1,0 +1,2 @@
+[console_scripts]
+kalibr-demo = __main__:main
