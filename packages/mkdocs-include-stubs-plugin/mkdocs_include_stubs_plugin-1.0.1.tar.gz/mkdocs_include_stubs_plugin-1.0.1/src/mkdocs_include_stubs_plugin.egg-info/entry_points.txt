@@ -1,0 +1,5 @@
+[console_scripts]
+mkdocs = include_stubs.cli:main
+
+[mkdocs.plugins]
+include-stubs = include_stubs.plugin:IncludeStubsPlugin
