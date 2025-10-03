@@ -1,0 +1,9 @@
+pdf_to_md_llm/__init__.py,sha256=SXf0JeMplB3yUIrYTNnhzPp4guFwgDHOnuzbU8ii_c4,557
+pdf_to_md_llm/__main__.py,sha256=rdJ1GwHFm3NUquJ9i-Gvy1VMdMn4kCw-_txNklNgBII,120
+pdf_to_md_llm/cli.py,sha256=RdoQ1nJYMgmKAoJu8CKMBioh2ZjSLqwsqoDg-o49b0I,2273
+pdf_to_md_llm/converter.py,sha256=gMc-RPZ5q46XQlQHCwEhLZiPRAv-MxNKv2csl9G7yEg,7775
+pdf_to_md_llm-0.2.0.dist-info/METADATA,sha256=Ah-oAUli6-i_nk2I_PdTjJRd_L0ZSjSBVRoN_L4hwmA,8787
+pdf_to_md_llm-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pdf_to_md_llm-0.2.0.dist-info/entry_points.txt,sha256=sBA1vbC3yfRSX8etwMyZqgOeK9e1GHN5tHGBU4d73x0,56
+pdf_to_md_llm-0.2.0.dist-info/licenses/LICENSE,sha256=1VxQyQGBljyhh0ZOXUq8u3nAWzRpsfNMil-QkLoWlXA,1083
+pdf_to_md_llm-0.2.0.dist-info/RECORD,,
