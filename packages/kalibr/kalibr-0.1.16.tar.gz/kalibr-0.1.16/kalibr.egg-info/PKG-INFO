@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: kalibr
+Version: 0.1.16
+Summary: Kalibr SDK Demo
+Author: Devon Kelley
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: pydantic
