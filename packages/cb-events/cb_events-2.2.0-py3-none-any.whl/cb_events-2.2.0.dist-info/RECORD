@@ -1,0 +1,12 @@
+cb_events/__init__.py,sha256=zLBn94jRH3PEIg61NK8CLsr1h3fD9kvR_m3dMQKcaz4,699
+cb_events/client.py,sha256=yyG0tECdSvTupnIulxZoOEn9Mh6zYIb719E7k5fG_Lo,12852
+cb_events/config.py,sha256=H8NpWXYl-NVi2xlhyG9NY3p1CQXNVAJ-0dM9zgKt2vM,2059
+cb_events/constants.py,sha256=FV_8oHSWhft1RKro9ye-857M8rS-E2NVgQ8iUDfZjmk,887
+cb_events/exceptions.py,sha256=NHV7kxBmaSoZjIrslcRPMLUxpTD2kRcmPiq4OTYYemI,1574
+cb_events/models.py,sha256=vk9iP42yy3DUodfYx56a-ems_16mnVgTy7DPqhFxIC4,6350
+cb_events/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cb_events/router.py,sha256=InuNXydrM9DntpPsql0tiPStZHNr8bkhyWzOZXNXUrw,2423
+cb_events-2.2.0.dist-info/METADATA,sha256=S_OX480VTDkR_deTcyJjFw0hbPx81RWkLZtnmSIr42k,4446
+cb_events-2.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+cb_events-2.2.0.dist-info/licenses/LICENSE,sha256=oCC7xUBmb36Woy-nj_vOVb577x66JNVd_JCDd4YsQ7w,1060
+cb_events-2.2.0.dist-info/RECORD,,
