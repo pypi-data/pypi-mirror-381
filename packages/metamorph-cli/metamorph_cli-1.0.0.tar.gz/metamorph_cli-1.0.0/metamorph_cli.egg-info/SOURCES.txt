@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+metamorph.py
+pyproject.toml
+requirements.txt
+setup.py
+metamorph_cli.egg-info/PKG-INFO
+metamorph_cli.egg-info/SOURCES.txt
+metamorph_cli.egg-info/dependency_links.txt
+metamorph_cli.egg-info/entry_points.txt
+metamorph_cli.egg-info/requires.txt
+metamorph_cli.egg-info/top_level.txt
