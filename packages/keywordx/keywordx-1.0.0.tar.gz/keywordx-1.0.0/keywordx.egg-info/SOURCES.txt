@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+keywordx.egg-info/PKG-INFO
+keywordx.egg-info/SOURCES.txt
+keywordx.egg-info/dependency_links.txt
+keywordx.egg-info/requires.txt
+keywordx.egg-info/top_level.txt
+tests/test_extractor.py
