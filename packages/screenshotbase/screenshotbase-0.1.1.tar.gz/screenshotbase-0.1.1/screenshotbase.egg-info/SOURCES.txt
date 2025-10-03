@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+screenshotbase/__init__.py
+screenshotbase/client.py
+screenshotbase.egg-info/PKG-INFO
+screenshotbase.egg-info/SOURCES.txt
+screenshotbase.egg-info/dependency_links.txt
+screenshotbase.egg-info/requires.txt
+screenshotbase.egg-info/top_level.txt
