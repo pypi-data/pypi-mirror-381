@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+src/index_parser/__init__.py
+src/index_parser/__main__.py
+src/index_parser/app.py
+src/index_parser/cli.py
+src/index_parser/data.py
+src/index_parser.egg-info/PKG-INFO
+src/index_parser.egg-info/SOURCES.txt
+src/index_parser.egg-info/dependency_links.txt
+src/index_parser.egg-info/requires.txt
+src/index_parser.egg-info/top_level.txt
+src/index_parser/static/index.html
