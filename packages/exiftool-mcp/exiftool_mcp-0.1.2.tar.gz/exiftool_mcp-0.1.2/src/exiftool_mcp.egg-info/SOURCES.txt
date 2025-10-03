@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/exiftool_mcp/__init__.py
+src/exiftool_mcp/server.py
+src/exiftool_mcp.egg-info/PKG-INFO
+src/exiftool_mcp.egg-info/SOURCES.txt
+src/exiftool_mcp.egg-info/dependency_links.txt
+src/exiftool_mcp.egg-info/entry_points.txt
+src/exiftool_mcp.egg-info/requires.txt
+src/exiftool_mcp.egg-info/top_level.txt
