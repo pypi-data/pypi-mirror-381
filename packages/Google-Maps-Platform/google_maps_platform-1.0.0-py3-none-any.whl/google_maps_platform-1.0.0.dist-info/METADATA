@@ -1,0 +1,572 @@
+Metadata-Version: 2.4
+Name: Google-Maps-Platform
+Version: 1.0.0
+Summary: Unofficial Python library for Google Maps Platform APIs including Places API
+Author-email: Chandan Gowda <chandangowdatk23@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/Chandangowdatk/Google-Maps-Platform
+Project-URL: Repository, https://github.com/Chandangowdatk/Google-Maps-Platform
+Project-URL: Documentation, https://github.com/Chandangowdatk/Google-Maps-Platform#readme
+Project-URL: Bug Tracker, https://github.com/Chandangowdatk/Google-Maps-Platform/issues
+Keywords: google maps platform,google places api,places,maps,client library,field masks,location search
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Scientific/Engineering :: GIS
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.31.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=6.0.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.2.0; extra == "docs"
+Dynamic: license-file
+
+# Google Maps Platform - Places API Client
+
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PyPI version](https://badge.fury.io/py/Google-Maps-Platform.svg)](https://badge.fury.io/py/Google-Maps-Platform)
+
+An **unofficial** Python client library for Google Maps Platform APIs, starting with comprehensive Google Places API (New) support, field mask management, and developer-friendly features.
+
+## 🌟 What is Google Places?
+
+Google Places API is a powerful web service that provides detailed information about millions of places around the world. It's part of Google's Maps Platform and offers:
+
+- **Place Discovery**: Find places using text queries or location-based searches
+- **Detailed Information**: Access comprehensive data including ratings, reviews, photos, contact details, and business hours
+- **Real-time Data**: Get current information about place status, opening hours, and availability
+- **Rich Content**: Access user reviews, photos, editorial summaries, and business information
+- **Global Coverage**: Search places worldwide with localized results
+
+The API is widely used in:
+- **Travel Applications**: Hotel booking, restaurant discovery, attraction guides
+- **Mapping Services**: Location-based features and place markers
+- **Local Business Directories**: Business listings and contact information
+- **Mobile Apps**: Location-aware applications and navigation
+- **E-commerce**: Store locators and local business integration
+
+## 📚 About This Unofficial Client Library
+
+This library provides **independent modular components** for Google Places API (New) with enhanced functionality and developer-friendly features:
+
+### 🚀 Independent Modules
+- **`TextSearch`** - Search places using natural language queries
+- **`NearbySearch`** - Find places within a specific radius of a location
+- **`PlaceDetails`** - Get comprehensive information about specific places
+
+### 🎯 Advanced Field Mask Management
+- **100+ Available Fields** - Complete coverage of Google Places API fields
+- **14 Organized Categories** - Logical grouping of fields by functionality
+- **Predefined Masks** - Optimized field sets for restaurants, hotels, attractions
+- **Custom Field Building** - Create targeted field masks for specific use cases
+- **Field Discovery** - Search and explore available fields with descriptions
+- **Performance Optimization** - Minimize API costs with targeted field selection
+
+### 🛠️ Advanced Features
+- **Field Mask Management** - 100+ fields organized into 14 categories
+- **Parameter Builders** - Easy construction of complex API parameters
+- **Utility Functions** - Data formatting and filtering helpers
+- **Type Hints** - Full type annotation support
+- **Error Handling** - Robust error handling and validation
+
+### 🛠️ Developer-Friendly Features
+- **Type Hints** - Full type annotation support for better IDE experience
+- **Error Handling** - Robust error handling and validation
+ and testing
+- **Utility Functions** - Helper functions for data formatting and filtering
+- **Parameter Builders** - Easy construction of complex API parameters
+- **Comprehensive Documentation** - Detailed docstrings and examples
+
+## 🚀 Environment Setup
+
+### Prerequisites
+- Python 3.8 or higher
+- Google Places API key (with Places API (New) enabled)
+
+### Installation
+
+#### Option 1: Install from PyPI (Recommended)
+```bash
+pip install Google-Maps-Platform
+```
+
+#### Option 2: Install from Source
+```bash
+git clone https://github.com/chandangowda/Google-Maps-Platform.git
+cd Google-Maps-Platform
+pip install -e .
+```
+
+#### Option 3: Development Installation
+```bash
+git clone https://github.com/chandangowda/Google-Maps-Platform.git
+cd Google-Maps-Platform
+pip install -e ".[dev]"
+```
+
+### Library Setup
+
+#### 1. Get Google Places API Key
+
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. Create a new project or select an existing one
+3. Enable the **Places API (New)** for your project
+4. Create credentials (API Key)
+5. Restrict your API key for security (recommended)
+
+#### 2. Set Up Your API Key
+
+**Option A: Environment Variable (Recommended)**
+```bash
+export GOOGLE_PLACES_API_KEY="your_api_key_here"
+```
+
+**Option B: Direct in Code**
+```python
+from places import GooglePlacesAPI
+
+api = GooglePlacesAPI("your_api_key_here")
+```
+
+**Option C: Configuration File**
+```python
+# config.py
+GOOGLE_PLACES_API_KEY = "your_api_key_here"
+```
+
+#### 3. Verify Installation
+
+```python
+from places import GooglePlacesAPI
+
+# Test your setup
+api = GooglePlacesAPI("your_api_key_here")
+result = api.text_search("restaurants in San Francisco")
+print("✅ Setup successful!" if result else "❌ Setup failed")
+```
+
+## 📖 Usage Instructions
+
+### Basic Usage
+
+#### 1. Set API Key Once (Global Configuration)
+```python
+from places import set_api_key, TextSearch, NearbySearch, PlaceDetails
+
+# Set API key once globally
+set_api_key("your_api_key_here")
+
+# Now use all modules without passing API key
+text_search = TextSearch()      # No API key needed!
+nearby_search = NearbySearch()  # No API key needed!
+place_details = PlaceDetails()  # No API key needed!
+```
+
+#### 2. Text Search
+```python
+from places import set_api_key, TextSearch
+
+# Set API key once
+set_api_key("your_api_key_here")
+
+# Use module without API key
+text_search = TextSearch()
+
+# Search for restaurants
+results = text_search.search(
+    text_query="Italian restaurants in San Francisco",
+    page_size=10,
+    min_rating=4.0
+)
+
+if results:
+    for place in results['places']:
+        name = place['displayName']['text']
+        rating = place.get('rating', 'N/A')
+        print(f"{name} - Rating: {rating}")
+```
+
+#### 3. Nearby Search
+```python
+from places import set_api_key, NearbySearch
+
+# Set API key once
+set_api_key("your_api_key_here")
+
+# Use module without API key
+nearby_search = NearbySearch()
+
+# Search near specific coordinates
+location = {"latitude": 37.7749, "longitude": -122.4194}
+results = nearby_search.search(
+    location=location,
+    included_types=["restaurant"],
+    radius=1000,  # 1km radius
+    max_result_count=10
+)
+```
+
+#### 4. Place Details
+```python
+from places import set_api_key, PlaceDetails
+
+# Set API key once
+set_api_key("your_api_key_here")
+
+# Use module without API key
+place_details = PlaceDetails()
+
+# Get detailed information about a place
+place_id = "ChIJk35bizx-j4AREil6UPp7Jn4"  # Golden Gate Bridge
+details = place_details.get_details(place_id)
+
+if details:
+    print(f"Name: {details['displayName']['text']}")
+    print(f"Address: {details['formattedAddress']}")
+    print(f"Rating: {details.get('rating', 'N/A')}")
+    print(f"Phone: {details.get('internationalPhoneNumber', 'N/A')}")
+    print(f"Website: {details.get('websiteUri', 'N/A')}")
+```
+
+### Environment Variable Usage
+
+#### 1. Load API Key from Environment
+```python
+from places import load_from_environment, TextSearch, NearbySearch, PlaceDetails
+
+# Load API key from environment variable
+load_from_environment("GOOGLE_PLACES_API_KEY")
+
+# Use modules without API key
+text_search = TextSearch()
+nearby_search = NearbySearch()
+place_details = PlaceDetails()
+```
+
+#### 2. Set Environment Variable
+```bash
+# Set environment variable
+export GOOGLE_PLACES_API_KEY="your_api_key_here"
+
+# Or in Python
+import os
+os.environ["GOOGLE_PLACES_API_KEY"] = "your_api_key_here"
+```
+
+### Advanced Usage
+
+#### 1. Field Mask Management
+```python
+from places import FieldMaskHelper
+
+field_helper = FieldMaskHelper()
+
+# Get available field categories
+field_helper.print_field_categories()
+
+# Use predefined field masks
+restaurant_mask = field_helper.get_restaurant_field_mask()
+hotel_mask = field_helper.get_hotel_field_mask()
+attraction_mask = field_helper.get_attraction_field_mask()
+
+# Build custom field mask
+custom_mask = field_helper.build_field_mask(
+    categories=["Basic Information", "Contact Information", "Ratings & Reviews"]
+)
+
+# Search with custom field mask
+from places import TextSearch
+text_search = TextSearch("your_api_key")
+results = text_search.search(
+    text_query="coffee shops",
+    field_mask=custom_mask
+)
+```
+
+#### 2. Parameter Builders
+```python
+from places import LocationBuilder, TextSearchBuilder
+
+location_builder = LocationBuilder("your_api_key")
+text_builder = TextSearchBuilder(location_builder)
+
+# Build search parameters with location bias
+params = text_builder.build_params(
+    text_query="museums",
+    location_bias_place="San Francisco",
+    location_bias_radius=5000,
+    min_rating=4.0,
+    page_size=10
+)
+
+results = api.text_search(**params)
+```
+
+#### 3. Utility Functions
+```python
+from places import GooglePlacesAPI, filter_places_by_rating, sort_places_by_rating
+
+api = GooglePlacesAPI("your_api_key")
+
+# Search for places
+results = api.text_search(
+    text_query="restaurants in San Francisco",
+    field_mask=api.get_restaurant_field_mask(),
+    page_size=20
+)
+
+if results:
+    places = results['places']
+    
+    # Filter by rating
+    high_rated = filter_places_by_rating(places, min_rating=4.0)
+    
+    # Sort by rating
+    sorted_places = sort_places_by_rating(high_rated)
+    
+    # Display results
+    for place in sorted_places[:10]:
+        name = place['displayName']['text']
+        rating = place.get('rating', 'N/A')
+        print(f"{name} - ⭐ {rating}")
+```
+
+## 💡 Code Examples and Use Cases
+
+### Use Case 1: Restaurant Discovery App
+```python
+from places import GooglePlacesAPI, filter_places_by_rating, sort_places_by_rating
+
+api = GooglePlacesAPI("your_api_key")
+
+def find_best_restaurants(city, cuisine_type, budget_level="moderate"):
+    """Find top-rated restaurants in a city"""
+    
+    # Search for restaurants
+    results = api.text_search(
+        text_query=f"{cuisine_type} restaurants in {city}",
+        included_type="restaurant",
+        field_mask=api.get_restaurant_field_mask(),
+        page_size=20
+    )
+    
+    if not results:
+        return []
+    
+    # Filter and sort by rating
+    restaurants = results['places']
+    high_rated = filter_places_by_rating(restaurants, min_rating=4.0)
+    sorted_restaurants = sort_places_by_rating(high_rated)
+    
+    return sorted_restaurants[:10]
+
+# Usage
+best_italian = find_best_restaurants("San Francisco", "Italian")
+for restaurant in best_italian:
+    name = restaurant['displayName']['text']
+    rating = restaurant.get('rating', 'N/A')
+    price = restaurant.get('priceLevel', 'N/A')
+    print(f"{name} - ⭐ {rating} - {price}")
+```
+
+### Use Case 2: Business Directory
+```python
+from places import GooglePlacesAPI
+
+def create_business_directory(category, location, radius_km=5):
+    """Create a business directory for a specific category"""
+    
+    api = GooglePlacesAPI("your_api_key")
+    
+    # Search for businesses
+    results = api.text_search(
+        text_query=f"{category} in {location}",
+        field_mask=api.get_contact_field_mask(),
+        page_size=20
+    )
+    
+    if not results:
+        return []
+    
+    businesses = []
+    for place in results['places']:
+        business = {
+            'name': place['displayName']['text'],
+            'address': place.get('formattedAddress', 'N/A'),
+            'phone': place.get('internationalPhoneNumber', 'N/A'),
+            'website': place.get('websiteUri', 'N/A'),
+            'rating': place.get('rating', 'N/A'),
+            'types': place.get('types', [])
+        }
+        businesses.append(business)
+    
+    return businesses
+
+# Usage
+restaurants = create_business_directory("restaurants", "Downtown San Francisco", 2)
+for restaurant in restaurants:
+    print(f"🍽️ {restaurant['name']}")
+    print(f"   📍 {restaurant['address']}")
+    print(f"   📞 {restaurant['phone']}")
+    print(f"   🌐 {restaurant['website']}")
+    print()
+```
+
+### Use Case 3: Place Search and Filtering
+```python
+from places import GooglePlacesAPI, filter_places_by_rating, sort_places_by_rating
+
+def search_and_filter_places(city, place_type, min_rating=4.0):
+    """Search and filter places by type and rating"""
+    
+    api = GooglePlacesAPI("your_api_key")
+    
+    # Search for places
+    results = api.text_search(
+        text_query=f"{place_type} in {city}",
+        field_mask=api.get_basic_field_mask(),
+        page_size=20
+    )
+    
+    if not results:
+        return []
+    
+    places = results['places']
+    
+    # Filter by rating
+    high_rated = filter_places_by_rating(places, min_rating=min_rating)
+    
+    # Sort by rating
+    sorted_places = sort_places_by_rating(high_rated)
+    
+    return sorted_places
+
+# Usage
+restaurants = search_and_filter_places("San Francisco", "restaurants", 4.0)
+for restaurant in restaurants[:5]:
+    name = restaurant['displayName']['text']
+    rating = restaurant.get('rating', 'N/A')
+    print(f"🍽️ {name} - ⭐ {rating}")
+```
+
+
+## 📊 Field Mask Categories
+
+The library provides 14 organized field mask categories:
+
+| Category | Description | Use Case |
+|----------|-------------|----------|
+| **Basic Information** | Essential place data | Quick place identification |
+| **Contact Information** | Phone, website, directions | Contact and navigation |
+| **Ratings & Reviews** | User feedback and ratings | Quality assessment |
+| **Pricing Information** | Cost and price levels | Budget planning |
+| **Operating Hours** | Business hours and availability | Timing and scheduling |
+| **Visual Content** | Photos and icons | Visual representation |
+| **Address Details** | Detailed address components | Precise location data |
+| **Business Information** | Status and characteristics | Business operations |
+| **Dining & Food Services** | Restaurant-specific features | Food service planning |
+| **Amenities & Features** | Place amenities | Feature comparison |
+| **Payment & Services** | Payment methods | Service planning |
+| **Electric Vehicle Support** | EV charging options | EV trip planning |
+| **Location Context** | Neighborhood information | Area understanding |
+| **System Fields** | Pagination and metadata | API management |
+
+## 🔧 Configuration Options
+
+### Environment Variables
+```bash
+export GOOGLE_PLACES_API_KEY="your_api_key"
+export GOOGLE_PLACES_DEFAULT_LANGUAGE="en"
+export GOOGLE_PLACES_DEFAULT_REGION="US"
+```
+
+### API Configuration
+```python
+from places import GooglePlacesAPI
+
+api = GooglePlacesAPI(
+    api_key="your_api_key",
+    default_language="en",
+    default_region="US"
+)
+```
+
+## 🚨 Error Handling
+
+The library provides comprehensive error handling:
+
+```python
+from places import GooglePlacesAPI
+
+api = GooglePlacesAPI("your_api_key")
+
+try:
+    result = api.text_search("restaurants")
+    if result is None:
+        print("Search failed - check your API key and query")
+    else:
+        print(f"Found {len(result['places'])} places")
+except Exception as e:
+    print(f"Error: {e}")
+```
+
+## 📈 Performance Tips
+
+1. **Use appropriate field masks** - Only request fields you need
+2. **Implement caching** - Cache results to reduce API calls
+3. **Batch requests** - Process multiple places efficiently
+4. **Use location bias** - Improve relevance for local searches
+5. **Set reasonable limits** - Use appropriate page sizes and result counts
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Google Places API team for the excellent API
+- Python community for the amazing ecosystem
+- Contributors and users for feedback and suggestions
+
+## 📞 Support
+
+- **Documentation**: [Read the Docs](https://google-places.readthedocs.io/)
+- **Issues**: [GitHub Issues](https://github.com/chandangowda/google-places/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/chandangowda/google-places/discussions)
+- **Email**: chandangowdatk23@gmail.com
+
+## 🔗 Links
+
+- **PyPI Package**: [google-places](https://pypi.org/project/google-places/)
+- **GitHub Repository**: [chandangowda/google-places](https://github.com/chandangowda/google-places)
+- **Google Places API**: [Official Documentation](https://developers.google.com/maps/documentation/places/web-service)
+
+---
+
+**Made with ❤️ by [Chandan Gowda](https://github.com/chandangowda)**
