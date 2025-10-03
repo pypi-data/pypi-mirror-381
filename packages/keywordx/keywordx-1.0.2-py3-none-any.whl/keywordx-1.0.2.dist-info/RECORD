@@ -1,0 +1,14 @@
+keywordx/__init__.py,sha256=6nTD9byevkapXGAsU89YeRZq9uIphVKuUXuNJ_SrJz0,72
+keywordx/chunker.py,sha256=I2HVTvxzVXttTw3UPhLAdyKjbv8_00eRzt3mdDFb6pU,340
+keywordx/embeddings.py,sha256=BX_sP9XrESrXCV9a_6EA4ibUZwL1RQq4KRwakVFSFSc,229
+keywordx/extractor.py,sha256=-aiEK8YXNIPOhFg8jMhkLJ8hPmZMDoFTaXiGRH90Jc0,2244
+keywordx/idf.py,sha256=tRmKpoGwfMoWpe2IZOAJmmmEHUlI5GTADxIkG2wOm60,190
+keywordx/matcher.py,sha256=Q5zlLqSo0cZrHsCoJeunNO5dSBgKnOkcGoigmqmwtTk,687
+keywordx/ner.py,sha256=QyvEHVLXSi64xT6xrgScWnG60klUsqZ_VGoYWZ2xVyE,646
+keywordx/pipeline.py,sha256=TajvNv55DfXD7-isYyFmqYRrMZKM5ZtsfipS3IHFrw4,141
+keywordx/utils.py,sha256=-oAYDytqC7OECGAYsS5oFt_wka4kTRA_AKc3S0fzjRs,101
+keywordx-1.0.2.dist-info/licenses/LICENSE.txt,sha256=i1S4oijdHIAyuFnFIfHw98HJgey4mcSKIfpAHvA2vqw,1068
+keywordx-1.0.2.dist-info/METADATA,sha256=ya9Dw-_zNBxXW3764royWn3UCLUF9WPWA0zmKNJ2xO0,4010
+keywordx-1.0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+keywordx-1.0.2.dist-info/top_level.txt,sha256=YOUb1H4IhKZR1DtnO1UUgr7qk8pJ6yLGfaRiz-V0LnI,9
+keywordx-1.0.2.dist-info/RECORD,,
