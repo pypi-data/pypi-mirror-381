@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/phpipam_mcp_server/__init__.py
+src/phpipam_mcp_server/server.py
+src/phpipam_mcp_server.egg-info/PKG-INFO
+src/phpipam_mcp_server.egg-info/SOURCES.txt
+src/phpipam_mcp_server.egg-info/dependency_links.txt
+src/phpipam_mcp_server.egg-info/entry_points.txt
+src/phpipam_mcp_server.egg-info/requires.txt
+src/phpipam_mcp_server.egg-info/top_level.txt

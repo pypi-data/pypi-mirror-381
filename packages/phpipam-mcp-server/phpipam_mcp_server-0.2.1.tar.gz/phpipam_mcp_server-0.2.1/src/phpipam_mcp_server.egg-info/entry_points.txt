@@ -1,0 +1,2 @@
+[console_scripts]
+phpipam-mcp-server = phpipam_mcp_server:main
