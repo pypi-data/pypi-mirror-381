@@ -1,0 +1,12 @@
+License
+README.md
+pyproject.toml
+setup.py
+SPEK.egg-info/PKG-INFO
+SPEK.egg-info/SOURCES.txt
+SPEK.egg-info/dependency_links.txt
+SPEK.egg-info/requires.txt
+SPEK.egg-info/top_level.txt
+idr/__init__.py
+idr/__main__.py
+idr/enhancer.py
