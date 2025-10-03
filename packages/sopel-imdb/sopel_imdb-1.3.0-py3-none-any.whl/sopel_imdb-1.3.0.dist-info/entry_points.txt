@@ -1,0 +1,2 @@
+[sopel.plugins]
+imdb = sopel_imdb.imdb
