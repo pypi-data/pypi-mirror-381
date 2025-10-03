@@ -1,0 +1,2 @@
+[qiskit.transpiler.init]
+leaky_init = qiskit_leaky_init:LeakyInitPlugin
