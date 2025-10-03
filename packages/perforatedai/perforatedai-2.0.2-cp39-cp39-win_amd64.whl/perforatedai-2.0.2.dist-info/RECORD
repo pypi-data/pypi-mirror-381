@@ -1,0 +1,10 @@
+perforatedai/__init__.cp39-win_amd64.pyd,sha256=ve-gaAC47nAFN6BOKk6upJXI19f-XRxBfnKtdZZGe2U,18944
+perforatedai/globals_perforatedai.cp39-win_amd64.pyd,sha256=x0sxWeEyJ3ynpnhv6p6nYj_jN0_8dE82NEFdBvnfcs0,316416
+perforatedai/library_classes.cp39-win_amd64.pyd,sha256=pOwqr9C9ldVUYJ-0xcaGoJ3lKbTHaNxUBO0xOIIUWC8,121856
+perforatedai/modules_perforatedai.cp39-win_amd64.pyd,sha256=h-5OYqtf7e_tTsiIaS85o4HEorx8v0ID8TuRdcP61UQ,318976
+perforatedai/tracker_perforatedai.cp39-win_amd64.pyd,sha256=zc2MJXw6lCi7es3wxGOLTh7xiGp4OTjWnVmyFxrL1-o,603136
+perforatedai/utils_perforatedai.cp39-win_amd64.pyd,sha256=cQPWLtVmcNj8fh3AicyLYiAYNhTca66UlYpLzsO_tk4,259072
+perforatedai-2.0.2.dist-info/METADATA,sha256=aY4BLaEySnxIwf2mmznqR_769W5yUP9Q9nQL2HpZcTI,431
+perforatedai-2.0.2.dist-info/WHEEL,sha256=yA7mxgqX2UV73NtJdMh2AAmdb628loM81912H3s5r00,100
+perforatedai-2.0.2.dist-info/top_level.txt,sha256=aN-RVGd9_0L1QRPEzUSfJ-EKxXmsNTx-bmWXqby6zro,13
+perforatedai-2.0.2.dist-info/RECORD,,
