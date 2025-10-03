@@ -1,0 +1,339 @@
+Metadata-Version: 2.4
+Name: pytest-bashdoctest
+Version: 2025.10.3
+Summary: A pytest plugin for testing bash command examples in markdown documentation
+Project-URL: Homepage, https://github.com/dnouri/pytest-bashdoctest
+Project-URL: Documentation, https://github.com/dnouri/pytest-bashdoctest#readme
+Project-URL: Repository, https://github.com/dnouri/pytest-bashdoctest
+Project-URL: Issues, https://github.com/dnouri/pytest-bashdoctest/issues
+Author-email: Daniel Nouri <daniel.nouri@gmail.com>
+License: MIT
+License-File: LICENSE
+Keywords: bash,documentation,markdown,plugin,pytest,testing
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3.12
+Requires-Dist: pytest>=7.0.0
+Provides-Extra: dev
+Requires-Dist: pre-commit>=4.0.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Requires-Dist: ruff>=0.1.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# pytest-bashdoctest
+
+[![PyPI version](https://img.shields.io/pypi/v/pytest-bashdoctest.svg)](https://pypi.org/project/pytest-bashdoctest/)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/dnouri/pytest-bashdoctest/test.yml?branch=master)](https://github.com/dnouri/pytest-bashdoctest/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A pytest plugin for testing bash command examples in markdown documentation.
+
+## Why pytest-bashdoctest?
+
+API documentation gets outdated fast. Manually testing curl examples is tedious. This plugin automatically tests bash code blocks in your markdown files against actual API responses, keeping docs and code in sync.
+
+## Installation
+
+```bash
+pip install pytest-bashdoctest
+```
+
+Or with uv:
+
+```bash
+uv add pytest-bashdoctest
+```
+
+## Quick Start
+
+### 1. Write testable examples
+
+In your `API.md`:
+
+````markdown
+## User API
+
+```bash
+$ curl -s "https://api.github.com/users/dnouri"
+{
+  "login": "dnouri",
+  ...
+  "name": "Daniel Nouri",
+  ...
+  "bio": "Machine Learning and Programming",
+  ...
+}
+```
+````
+
+The `...` pattern matches any content, perfect for skipping dynamic or irrelevant fields.
+
+### 2. Run tests
+
+```bash
+pytest --bashdoctest API.md -v
+```
+
+Your documentation is now executable and verified.
+
+**Note:** The `--bashdoctest` flag is required to enable bash doctest collection. This prevents conflicts with other pytest plugins that also process markdown files (like pytest-markdown-docs).
+
+## ELLIPSIS Patterns
+
+### Line-Level: Skip Blocks
+
+Use standalone `...` to skip entire sections:
+
+````markdown
+```bash
+$ curl -s "https://api.github.com/users/dnouri"
+{
+  "login": "dnouri",
+  ...
+  "type": "User",
+  ...
+  "bio": "Machine Learning and Programming",
+  ...
+}
+```
+````
+
+Show the fields that matter, skip the rest.
+
+### String-Level: Partial Matching
+
+Use `...` inside strings for dynamic values:
+
+````markdown
+```bash
+$ curl -s "https://api.github.com/users/dnouri"
+{
+  "login": "dnouri",
+  ...
+  "avatar_url": "https://avatars.githubusercontent.com/u/...?v=4",
+  ...
+  "created_at": "2009-...-...T...Z",
+  ...
+}
+```
+````
+
+Useful for URLs, UUIDs, timestamps, and other values that change but follow a pattern.
+
+### Collection-Level: Objects and Arrays
+
+Use `{...}` and `[...]` to match entire structures:
+
+````markdown
+```bash
+$ curl -s "https://api.github.com/repos/dnouri/nolearn"
+{
+  ...
+  "name": "nolearn",
+  ...
+  "owner": {...},
+  ...
+  "license": {...},
+  ...
+}
+```
+````
+
+Focus on the structure you care about without showing every detail.
+
+### Combining Patterns
+
+Mix all three for flexible matching:
+
+````markdown
+```bash
+$ curl -s "https://api.github.com/users/dnouri"
+{
+  "login": "dnouri",
+  ...
+  "avatar_url": "https://avatars.githubusercontent.com/...",
+  ...
+  "bio": "Machine Learning and Programming",
+  ...
+  "public_repos": ...,
+  ...
+}
+```
+````
+
+## Configuration
+
+### Specifying Files to Test
+
+**Explicit paths:**
+```bash
+pytest --bashdoctest README.md -v
+pytest --bashdoctest docs/api.md -v
+```
+
+**Via configuration** in `pyproject.toml`:
+```toml
+[tool.pytest.ini_options]
+testpaths = ["tests", "README.md", "docs"]
+```
+
+Then `pytest --bashdoctest` will test both your test suite and documentation.
+
+### Environment Variables
+
+**The Problem:** Your bash examples often need API keys, custom URLs, or other configuration. Hard-coding these in documentation is insecure and inflexible.
+
+**The Solution:** The `bashdoctest_env` fixture. This session-scoped fixture provides environment variables to all bash examples in your markdown files.
+
+**When you DON'T need it:** If your bash examples only use public APIs without authentication (like the GitHub examples in this README), you don't need to define this fixture. The plugin provides a default empty fixture.
+
+**When you DO need it:** If your examples need API keys, custom URLs, or other config, create `conftest.py`:
+
+```python
+import os
+import pytest
+
+@pytest.fixture(scope="session")
+def bashdoctest_env():
+    """Environment variables for bash documentation examples."""
+    api_key = os.getenv("API_KEY")
+    if not api_key:
+        pytest.skip("API_KEY not set - skipping bash doctest examples")
+
+    return {
+        "API_KEY": api_key,
+        "API_URL": os.getenv("API_URL", "https://api.example.com"),
+    }
+```
+
+Use in your markdown files:
+
+````markdown
+```
+$ curl -s "$API_URL/users" -H "Authorization: Bearer $API_KEY"
+{
+  "users": [...]
+}
+```
+````
+
+The environment variables from your `bashdoctest_env` fixture are merged with `os.environ` when executing commands, so `$API_KEY` and `$API_URL` will be available to all bash examples.
+
+## How It Works
+
+1. Plugin activates when you pass `--bashdoctest` flag
+2. Collects markdown files you specify (explicit paths or via `testpaths`)
+3. Parser extracts bash code blocks (only files with actual bash examples)
+4. Each bash block becomes a test item
+5. Commands execute with your `bashdoctest_env` variables merged into environment
+6. Output matches against expected using ELLIPSIS rules
+
+**Architecture:**
+```
+src/pytest_bashdoctest/
+   parser.py      # Extract bash blocks
+   matcher.py     # ELLIPSIS matching
+   executor.py    # Run commands
+   formatter.py   # Format failures
+   plugin.py      # Pytest hooks
+```
+
+Core modules are pure Python (no pytest dependency) for portability.
+
+## Testing the Plugin
+
+```bash
+# Run unit tests
+pytest tests/ -v
+
+# Test with coverage
+pytest tests/ --cov=pytest_bashdoctest --cov-report=term-missing
+
+# Test this README (dogfooding!)
+pytest --bashdoctest README.md -v
+```
+
+## Limitations
+
+- Commands timeout after 30 seconds (configurable in `executor.py`)
+- Interactive commands will hang
+- Uses `shell=True` (commands come from your trusted markdown files)
+- Output buffering may differ for very large responses
+
+## Development
+
+### Setup
+
+```bash
+git clone https://github.com/dnouri/pytest-bashdoctest.git
+cd pytest-bashdoctest
+
+# Install dependencies
+uv sync --dev
+
+# Install pre-commit tool globally (recommended, one-time setup)
+uv tool install pre-commit
+
+# Install git hooks (runs automatically on every commit)
+pre-commit install
+```
+
+### Running Tests
+
+```bash
+# Run unit tests
+uv run pytest tests/ -v
+
+# Test README examples
+uv run pytest --bashdoctest README.md -v
+
+# Run with coverage
+uv run pytest tests/ --cov=pytest_bashdoctest --cov-report=term-missing
+```
+
+### Code Quality
+
+Pre-commit hooks automatically run on every commit to ensure code quality. To run manually:
+
+```bash
+# Run all pre-commit hooks (after uv tool install pre-commit)
+pre-commit run --all-files
+
+# Or using project dependencies
+uv run pre-commit run --all-files
+
+# Run specific checks
+uv run ruff check .              # Linting
+uv run ruff format .             # Auto-format code
+uv run ruff check --fix .        # Auto-fix linting issues
+```
+
+To skip pre-commit hooks (not recommended):
+
+```bash
+git commit --no-verify -m "message"
+```
+
+## Releasing
+
+Update `version` in `pyproject.toml`, then:
+
+```bash
+git tag v2025.10.4 && git push --tags
+```
+
+Publishes to PyPI automatically via GitHub Actions.
+
+## License
+
+MIT License - see [LICENSE](LICENSE) file for details.

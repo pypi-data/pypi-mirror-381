@@ -1,0 +1,2 @@
+[pytest11]
+bashdoctest = pytest_bashdoctest.plugin

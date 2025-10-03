@@ -1,0 +1,11 @@
+pytest_bashdoctest/__init__.py,sha256=JYMVL9fRpCN8iHX7apXGLiUzxf7m_5mlfdm_OWfjQgo,1085
+pytest_bashdoctest/executor.py,sha256=yp5wjWTIMNWOoqyNtbOkExnsES-gfWZTRxlOmeoartM,1576
+pytest_bashdoctest/formatter.py,sha256=UblKPlWlIBaH3DrVJPX6VDdkm-37ryUyp2dj5o3zWlw,1960
+pytest_bashdoctest/matcher.py,sha256=GxNe8zunKQXmEx6pdlK-KWNcCIwUxz83U5uGs87uKgc,7539
+pytest_bashdoctest/parser.py,sha256=XVlNs6_zEmqmK5-HTAcUydxjlQlI7O9tr7_IICueMHc,4675
+pytest_bashdoctest/plugin.py,sha256=vBQvchyxZz8jkCUG9YssMTQ35fwfoJMeCnwm5_TLvHs,6253
+pytest_bashdoctest-2025.10.3.dist-info/METADATA,sha256=lBrnr3KSpH9ruKPi3SBKijIMQt9XiuPr0lpVh3iCqBg,8648
+pytest_bashdoctest-2025.10.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pytest_bashdoctest-2025.10.3.dist-info/entry_points.txt,sha256=PQEb0ic_Rwutt_2W3Il31j0lYad869eXiBgSeuiJlkE,51
+pytest_bashdoctest-2025.10.3.dist-info/licenses/LICENSE,sha256=5CSpUVMyoaoUSRFeS_RRBliKvhTAUx12JivTOfNHZXQ,1073
+pytest_bashdoctest-2025.10.3.dist-info/RECORD,,
