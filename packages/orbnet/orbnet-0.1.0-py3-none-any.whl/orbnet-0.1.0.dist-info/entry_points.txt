@@ -1,0 +1,3 @@
+[console_scripts]
+orbnet-mcp = orbnet.mcp_server:main
+
