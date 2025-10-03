@@ -1,0 +1,190 @@
+Metadata-Version: 2.4
+Name: santok
+Version: 1.0.6
+Summary: Advanced multi-format tokenization system with numerology, hashing, compression, and embeddings
+Home-page: https://github.com/chavalasantosh/santok
+Download-URL: https://github.com/chavalasantosh/santok/archive/v1.0.0.tar.gz
+Author: Santosh chavala
+Author-email: Santosh chavala <chavalasantosh@hotmail.com>
+Maintainer-email: Santosh chavala <chavalasantosh@hotmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/chavalasantosh/santok
+Project-URL: Documentation, https://github.com/chavalasantosh/santok/tree/main/docs
+Project-URL: Repository, https://github.com/chavalasantosh/santok.git
+Project-URL: Bug Tracker, https://github.com/chavalasantosh/santok/issues
+Project-URL: Changelog, https://github.com/chavalasantosh/santok/blob/main/CHANGELOG.md
+Keywords: tokenization,nlp,text-processing,numerology,hashing,compression,embeddings,ai,machine-learning
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: black>=21.0; extra == "dev"
+Requires-Dist: flake8>=3.8; extra == "dev"
+Dynamic: author
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+
+# SanTOK - Advanced Multi-Format Tokenization System
+
+[![PyPI version](https://badge.fury.io/py/santok.svg)](https://badge.fury.io/py/santok)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+**SanTOK** (Sanitized Tokenization) is an advanced multi-format tokenization system that provides 9 different tokenization methods with integrated numerology, hashing, compression, and embedding capabilities.
+
+## 🚀 Features
+
+### Core Tokenization Methods
+- **Space Tokenization**: Splits text on whitespace
+- **Word Tokenization**: Extracts words using regex patterns
+- **Character Tokenization**: Character-by-character analysis
+- **Grammar Tokenization**: Separates words, numbers, and punctuation
+- **Subword Tokenization**: Fixed-length chunking
+- **Byte Tokenization**: ASCII value representation
+- **BPE Tokenization**: Byte Pair Encoding
+- **Syllable Tokenization**: Vowel-based splitting
+- **Frequency Tokenization**: Word frequency analysis
+
+### Advanced Features
+- **Numerology Integration**: 9-centric digital root calculations
+- **Hash-Driven Embeddings**: Stable across vocabularies
+- **Lossless Reconstruction**: Perfect text reconstruction
+- **Multi-Format Output**: JSON, CSV, TXT, XML, Excel, Parquet, Avro
+- **High Performance**: Concurrent and async processing
+
+## 📦 Installation
+
+```bash
+pip install santok
+```
+
+## 🎯 Quick Start
+
+```python
+import santok
+
+# Basic usage
+text = "Hello world!"
+result = santok.all_tokenizations(text)
+
+# Access different tokenization methods
+space_tokens = result['space']
+char_tokens = result['char']
+word_tokens = result['word']
+
+print(f"Space tokens: {space_tokens}")
+print(f"Character tokens: {char_tokens}")
+print(f"Word tokens: {word_tokens}")
+
+# Numerology calculation
+numerology = santok.numerology_sum(text)
+print(f"Numerology sum: {numerology}")
+```
+
+## 📊 Output Format
+
+Each tokenization method returns a list of dictionaries:
+
+```python
+[
+    {'text': 'Hello', 'frontend': 1},
+    {'text': 'world!', 'frontend': 2}
+]
+```
+
+Where:
+- `text`: The actual token
+- `frontend`: Numerological frontend digit (1-9)
+
+## 🔄 Lossless Reconstruction System
+
+### Lossless Reconstruction Methods (3/9 methods)
+- ✅ **SPACE**: Preserves all whitespace and punctuation perfectly
+- ✅ **CHAR**: Character-by-character perfect preservation
+- ✅ **BPE**: Advanced subword with full structure preservation
+
+### Analytical Methods (6/9 methods - Transform text for analysis)
+- 🔄 **WORD**: Extracts words for linguistic analysis (removes punctuation by design)
+- 🔄 **GRAMMAR**: Parses grammatical elements (removes spacing by design)
+- 🔄 **SUBWORD**: Fixed-length chunking for subword modeling (transforms by design)
+- 🔄 **BYTE**: ASCII representation for byte-level analysis (different format by design)
+- 🔄 **SYLLABLE**: Syllable extraction for phonetic analysis (removes spacing by design)
+- 🔄 **FREQUENCY**: Adds frequency metadata for statistical analysis (enhances by design)
+
+## 🛠️ Advanced Usage
+
+### CLI Usage
+```bash
+santok
+```
+
+### Programmatic Usage
+```python
+import santok
+
+# Get all tokenizations
+result = santok.all_tokenizations("Your text here")
+
+# Calculate numerology
+numerology = santok.numerology_sum("Your text here")
+
+# Run main function
+santok.main()
+```
+
+## 📈 Performance
+
+- **Concurrent Processing**: Multi-threaded tokenization
+- **Async Support**: Asynchronous processing for large texts
+- **Memory Efficient**: Stream processing for large datasets
+- **High Speed**: Optimized algorithms for maximum performance
+
+## 🔧 Requirements
+
+- Python 3.8+
+- No external dependencies (pure Python)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**Santosh chavala**
+- Email: chavalasantosh@hotmail.com
+- GitHub: [@chavalasantosh](https://github.com/chavalasantosh)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📝 Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a list of changes and version history.
+
+## 🔗 Links
+
+- [PyPI Package](https://pypi.org/project/santok/)
+- [GitHub Repository](https://github.com/chavalasantosh/santok)
+- [Documentation](https://github.com/chavalasantosh/santok/tree/main/docs)
+- [Issue Tracker](https://github.com/chavalasantosh/santok/issues)
+
+---
+
+**SanTOK** - Advanced Multi-Format Tokenization System by Santosh chavala
