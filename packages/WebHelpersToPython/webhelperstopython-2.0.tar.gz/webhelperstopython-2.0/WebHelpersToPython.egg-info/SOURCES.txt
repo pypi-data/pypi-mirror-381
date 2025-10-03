@@ -1,0 +1,13 @@
+LICENCE
+README.md
+setup.py
+WebHelpersToPython.egg-info/PKG-INFO
+WebHelpersToPython.egg-info/SOURCES.txt
+WebHelpersToPython.egg-info/dependency_links.txt
+WebHelpersToPython.egg-info/requires.txt
+WebHelpersToPython.egg-info/top_level.txt
+mypackage/__init__.py
+mypackage/packets/__init__.py
+mypackage/packets/connect.py
+mypackage/packets/print.py
+mypackage/packets/webattack.py
