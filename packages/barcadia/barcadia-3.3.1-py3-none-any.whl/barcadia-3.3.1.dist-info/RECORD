@@ -1,0 +1,14 @@
+barcadia/__init__.py,sha256=W6cf914iWxH7CAGaypuXd45dUm3lCU9S8RrHFqsU3bQ,786
+barcadia/cli.py,sha256=BKH-scXndTDv0o7OVKkiznQwm4mVNPTSbATl5EP97zo,1863
+barcadia/config_utils.py,sha256=S-4NpjlX3AzobABCCmralwSiTSQUecjqZSbr2Dswsmo,8292
+barcadia/filter_utils.py,sha256=Yrf62nM3s03UeDmYbLiEalt3ORrfyM4rh88wVUDN3-M,6596
+barcadia/generate_barcodes.py,sha256=MRrcCH9uMA0cra-Ur82Zhmv_h0dUjdgPxBHVa955b1A,31147
+barcadia/validate_barcodes.py,sha256=E8XF4siTgKd8XUicJ_owSVZtpZZmOlGPDUz_LomXww8,19144
+barcadia/tools/generate_random_sequences.py,sha256=e71ZkURA2P9u1Y13OjRj2hyGaJhnaPsmPa9jjpw-4Tw,3529
+barcadia/tools/memory_benchmark.py,sha256=4OthwtS0A0iyC2GEpVEeVeYno2Xx_MWPWPoPqykoKx8,4528
+barcadia-3.3.1.dist-info/licenses/LICENSE,sha256=nNChwEt8KgkqiCgNEzhIizDyZYImrfMAqNnuXukmt-Y,11344
+barcadia-3.3.1.dist-info/METADATA,sha256=OlCQs-eFXRXDPggUAexQMPL7TqTYlG2h5tyPCWgLyRw,26740
+barcadia-3.3.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+barcadia-3.3.1.dist-info/entry_points.txt,sha256=JEHBM8E3wpBYhYiwjfSglzhKZApiR52xO57Fy9RhQqI,47
+barcadia-3.3.1.dist-info/top_level.txt,sha256=3-Qgyc37l1w4uXq69KskFG9AU6b1jxda5HrgWZp6FCA,9
+barcadia-3.3.1.dist-info/RECORD,,
