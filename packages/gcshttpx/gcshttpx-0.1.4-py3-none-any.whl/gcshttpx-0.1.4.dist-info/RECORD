@@ -1,0 +1,8 @@
+gcshttpx/__init__.py,sha256=wY37ZsCEr9ieF20n3nT0eKejVf4svvqz5ZuZNvDOwnE,404
+gcshttpx/auth.py,sha256=QPqzu_CNMM5Zw_5nhpqi5RoZMMR7IOkbSRY6JgYBxnQ,19638
+gcshttpx/py.typed,sha256=daEdpEyAJIa8b2VkCqSKcw8PaExcB6Qro80XNes_sHA,2
+gcshttpx/storage.py,sha256=rdNvZn74ZXxc5lgSZ8Dw2JAjfqY-TOwAfmW3loQMmM8,31894
+gcshttpx-0.1.4.dist-info/METADATA,sha256=T-xYazDCnsGrvo6BfNhXhvHNPSRznAmWUypjfHdXnN0,10440
+gcshttpx-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gcshttpx-0.1.4.dist-info/licenses/LICENSE,sha256=Py8q1H8LI_0WZfmHM96xroa7lLizVaOngyC6SEGVh5I,1068
+gcshttpx-0.1.4.dist-info/RECORD,,
