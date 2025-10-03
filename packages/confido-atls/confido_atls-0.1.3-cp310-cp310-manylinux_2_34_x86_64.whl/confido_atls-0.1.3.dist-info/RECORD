@@ -1,0 +1,6 @@
+confido.libs/libtss2-mu-b02129b0.so.0,sha256=omgADDiKpT-97uRon0t4S2b8DV0HY67Z6iazBiMXIZQ,331872
+confido/__init__.py,sha256=rQsUBcASADAOZreG5hlNThwjtRVOORCo2LAJxPbI-6Q,111
+confido/confido.cpython-310-x86_64-linux-gnu.so,sha256=Du4WEwtJv1m0TyLHH0QltSdtvgIiD14QeN_B7LgC7Us,14114984
+confido_atls-0.1.3.dist-info/METADATA,sha256=ub9EZDIXDXl9w3DiBK-sQRSBva50vAotSChSGCG3x4c,82
+confido_atls-0.1.3.dist-info/WHEEL,sha256=ifK5_qm2XXnTn9fhGz-v60FiGCmfZU8U6YDjY1MH1sw,108
+confido_atls-0.1.3.dist-info/RECORD,,
