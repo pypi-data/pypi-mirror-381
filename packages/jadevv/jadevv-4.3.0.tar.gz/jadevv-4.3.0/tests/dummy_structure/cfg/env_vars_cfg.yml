@@ -1,0 +1,21 @@
+# parameters related to parallel run
+mpi_tasks: 0
+openmp_threads: 0
+# paths to the code executables
+executables:
+  mcnp: dummy
+  openmc: dummy
+  serpent: dummy
+  d1s: dummy
+# run mode is either "local" to run locally or "job" to submit to a cluster
+run_mode: local
+# You can either modify the files or provide your own
+# path can be expressed as relative to cfg/exec_config or absolute
+code_job_template:
+  mcnp: mcnp_template.sh
+  openmc: openmc_template.sh
+  serpent: serpent_template.sh
+  d1s: d1s_template.sh
+scheduler_command: null
+# Optional prefix to be added before the executable command
+exe_prefix: srun  # e.g. 'srun' or 'aprun' or 'ibrun' or 'mpirun' depending on the system
