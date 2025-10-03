@@ -1,0 +1,16 @@
+base16_admin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+base16_admin/apps.py,sha256=us9npq9q9AJSowpEIkGIdh2z2LLItNTHS0cBMsj-jBQ,165
+base16_admin/context_processors.py,sha256=wgqB6K7-ARysX3mWCFfDgc1poEuejTlgo4FkusZE3BI,200
+base16_admin/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+base16_admin/static/admin/css/base.css,sha256=rxDLKIM-8tdOXg9BxJSCxIVEAMTSWKkJARjpa8xINPQ,21272
+base16_admin/static/admin/css/dark_mode.css,sha256=RWu_G-nwgmY8ZuRUxDhb5CQpaTI6Ve0WsmOuR8tSbeY,54
+base16_admin/static/admin/css/forms.css,sha256=b0bX2VBG551_r6bVzcAVqDVvs6W7MdU-s3XdXEF0uns,8466
+base16_admin/static/admin/css/nav_sidebar.css,sha256=7zEowbL-r6j5ZLNF7N_H0UTdOOKz28kpoUCLSbVDyAM,2706
+base16_admin/static/admin/themes/circus.css,sha256=nG4fbvmtmC9jHp1L4urb1nwtUErcXILmHcsFuOFr-gY,346
+base16_admin/static/admin/themes/cupcake.css,sha256=7BOjU1nbZuPx-kvVMc0RtIEWzRdMs4XkM6ovx8ONwlc,346
+base16_admin/static/admin/themes/tokyo-city-dark.css,sha256=XYyCL2tybHUA9bMcavyLOrl98gjNU-PxnqiLZ7XGgdU,346
+base16_admin/static/admin/themes/tokyo-city-light.css,sha256=wgKMgdBKhe_XEX2-pKMo9KZIO0kx6njP9d3IEyswcDo,346
+base16_admin/templates/admin/base_site.html,sha256=qjzZRSHlMC9mXD4GUxpUiti7NOmJ95W6-kzwW4OSN88,181
+django_base16_admin-0.1.4.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+django_base16_admin-0.1.4.dist-info/METADATA,sha256=UHL82UXV64bky6PS_Mj2EsEDzn4PgugFwE3wiy8PB10,3300
+django_base16_admin-0.1.4.dist-info/RECORD,,
