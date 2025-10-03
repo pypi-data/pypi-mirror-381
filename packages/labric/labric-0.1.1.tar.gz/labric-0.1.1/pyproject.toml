@@ -1,0 +1,19 @@
+[project]
+name = "labric"
+version = "0.1.1"
+description = "Labric's official Python library"
+readme = "README.md"
+authors = [
+    { name = "Connor", email = "connor@labric.co" },
+    { name = "Caitlin", email = "caitlin@labric.co" }
+]
+requires-python = ">=3.8"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Labric-Platforms/labric-python"
+Repository = "https://github.com/Labric-Platforms/labric-python"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
