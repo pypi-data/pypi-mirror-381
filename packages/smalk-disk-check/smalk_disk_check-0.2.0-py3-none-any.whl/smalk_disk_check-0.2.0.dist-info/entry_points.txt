@@ -1,0 +1,2 @@
+[console_scripts]
+smalk_disk_check = smalk_disk_check.main:main
