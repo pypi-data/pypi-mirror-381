@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: peti007link
+Version: 0.1
+Summary: geoestadistica
+Home-page: https://github.com/fededimant/test_libreria
+Author: fede
+Author-email: fededimant@hotmail.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: summary

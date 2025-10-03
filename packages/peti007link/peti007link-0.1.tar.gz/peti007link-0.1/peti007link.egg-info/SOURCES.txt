@@ -1,0 +1,5 @@
+setup.py
+peti007link.egg-info/PKG-INFO
+peti007link.egg-info/SOURCES.txt
+peti007link.egg-info/dependency_links.txt
+peti007link.egg-info/top_level.txt
