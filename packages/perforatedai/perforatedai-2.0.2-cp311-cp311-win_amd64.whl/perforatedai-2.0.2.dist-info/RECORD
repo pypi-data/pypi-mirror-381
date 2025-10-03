@@ -1,0 +1,10 @@
+perforatedai/__init__.cp311-win_amd64.pyd,sha256=f9fg3dl1ARfBXHIA-EXSdHNvyy2gj_HybCggJsCN8G0,16384
+perforatedai/globals_perforatedai.cp311-win_amd64.pyd,sha256=gCJg_MiMuNGYk5wlwfTKNT8dqDHc9z_TlXlkVpfbyKw,309248
+perforatedai/library_classes.cp311-win_amd64.pyd,sha256=lQzbJ5yhtxMHjzKpDWT-TYXut5HMRsvfOgOrIYyVduQ,103424
+perforatedai/modules_perforatedai.cp311-win_amd64.pyd,sha256=yhHdc13BfWhSDd6ITXsHLZMES0Ap7V5tfNFvwCb8JVk,305664
+perforatedai/tracker_perforatedai.cp311-win_amd64.pyd,sha256=F9L0r5vrss9Gm8OShEvi4vVH7xtAURRh5JUCeQXOaxw,575488
+perforatedai/utils_perforatedai.cp311-win_amd64.pyd,sha256=_tdNCYH41YbymvFH9qmQlh13gCRUOQ76jT6rkewomU4,236544
+perforatedai-2.0.2.dist-info/METADATA,sha256=Bfbcblke4Ibg8-gagdoR2MPtwnOHI19JuZV-L97xZzk,381
+perforatedai-2.0.2.dist-info/WHEEL,sha256=y4n9_669c4ZQLyT56MHjc_JUbnwtaZfMVMycweN557o,102
+perforatedai-2.0.2.dist-info/top_level.txt,sha256=aN-RVGd9_0L1QRPEzUSfJ-EKxXmsNTx-bmWXqby6zro,13
+perforatedai-2.0.2.dist-info/RECORD,,
