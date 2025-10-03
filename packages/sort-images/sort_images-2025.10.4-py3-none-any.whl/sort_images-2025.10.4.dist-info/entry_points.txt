@@ -1,0 +1,2 @@
+[console_scripts]
+pycopy = sort_images:command_entry_point
