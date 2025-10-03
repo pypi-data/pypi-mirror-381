@@ -1,0 +1,8 @@
+[console_scripts]
+convert_tracking = amherst.cli:convert_tracking_link
+email-file = amherst.cli:send_invoice_email_cli
+invoice-number = amherst.cli:next_invoice_cli
+payment-status = amherst.cli:payment_status_cli
+print-file = amherst.cli:file_printer_cli
+shipper = amherst.cli:shipper_cli
+
