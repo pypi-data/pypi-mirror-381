@@ -1,0 +1,3 @@
+graft calcyoulater2/static
+graft calcyoulater/template
+global-exclude *.pyc
