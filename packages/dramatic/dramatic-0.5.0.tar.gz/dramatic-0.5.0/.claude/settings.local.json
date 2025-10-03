@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__codex__codex",
+      "Bash(gh issue:*)",
+      "Read(//home/trey/repos/collabs/pyrepl-hacks/**)",
+      "Bash(hatch run test:*)",
+      "Bash(just test:*)",
+      "Bash(hatch run:*)",
+      "Bash(hatch:*)",
+      "WebSearch",
+      "Bash(just test-all-parallel:*)",
+      "Bash(just test-cov:*)",
+      "Bash(just test-all:*)",
+      "Bash(just fmt:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(just build)",
+      "Bash(python -m pip:*)",
+      "Bash(HATCH_METADATA_CLASSIFIERS_NO_VERIFY=1 hatch build)",
+      "WebFetch(domain:pypi.org)",
+      "Bash(unzip:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
