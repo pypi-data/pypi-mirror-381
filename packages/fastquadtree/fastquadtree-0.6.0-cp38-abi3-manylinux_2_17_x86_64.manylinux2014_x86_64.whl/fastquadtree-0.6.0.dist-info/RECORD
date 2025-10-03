@@ -1,0 +1,10 @@
+fastquadtree-0.6.0.dist-info/METADATA,sha256=r9-c9qlKGr7H3fqR8nAzjiXXYXUY6S3u0bZ3nv9Q23w,10474
+fastquadtree-0.6.0.dist-info/WHEEL,sha256=n8LxsmR4326Kdlq4ra_Fckb1m2ZyGTPpCnJgwthysrE,127
+fastquadtree-0.6.0.dist-info/licenses/LICENSE,sha256=pRuvcuqIMtEUBMgvP1Bc4fOHydzeuA61c6DQoQ1pb1w,1071
+fastquadtree/__init__.py,sha256=1hCXNpz85X_UC4JqKj4AseFe0HNMM6yFWH3r8rNgX9U,12054
+fastquadtree/__init__.pyi,sha256=NkLrhMy9HkcqdeEfmK6D9c01w-chiNope7DA4PyTeNQ,1992
+fastquadtree/_bimap.py,sha256=pWY4O4BmOa78r4MnBMfpb-hYZ222U8mEMy4pnosgXLQ,3290
+fastquadtree/_item.py,sha256=9Tk4wUZLFsjIhWALJ9xGW4bknvU_xfy2Na3ixWxh_xI,509
+fastquadtree/_native.abi3.so,sha256=1qckpFeUh8o1GeqVS7deD3HtQm8yiIJlr0nfdk2LWEM,469264
+fastquadtree/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastquadtree-0.6.0.dist-info/RECORD,,
