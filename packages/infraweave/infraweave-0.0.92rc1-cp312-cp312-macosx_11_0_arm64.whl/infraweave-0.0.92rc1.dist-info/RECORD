@@ -1,0 +1,5 @@
+infraweave-0.0.92rc1.dist-info/RECORD,,
+infraweave-0.0.92rc1.dist-info/WHEEL,sha256=QX_Py2QFShKazngU2Xf5q0TjY4uj0j1n9M6Cu24esxk,132
+infraweave-0.0.92rc1.dist-info/METADATA,sha256=E3er5hsoGMv97inByyQs6d9p_2NiATDbQWy8VGdKoMQ,761
+infraweave/__init__.py,sha256=B5G_Rd5K79M5-tOsU_4v0CvUvR087Gdao5ttufgeY1U,123
+infraweave/infraweave.cpython-312-darwin.so,sha256=J9nciukzJxV17x4FUXSeFXHD5_kqct9rWpO3tm1-5ME,20269456
