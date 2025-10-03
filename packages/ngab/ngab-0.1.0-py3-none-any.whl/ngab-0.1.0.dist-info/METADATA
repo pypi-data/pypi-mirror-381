@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: ngab
+Version: 0.1.0
+Summary: Noisy Graph Alignment Benchmark (NGAB) - a library for benchmarking GNNs on graph alignment tasks and generating positional encodings.
+Project-URL: Homepage, https://github.com/adrien-lagesse/graph-alignment-benchmark
+Project-URL: Repository, https://github.com/adrien-lagesse/graph-alignment-benchmark
+Project-URL: Issues, https://github.com/adrien-lagesse/graph-alignment-benchmark/issues
+Project-URL: Documentation, https://github.com/adrien-lagesse/graph-alignment-benchmark#readme
+Author-email: Adrien Lagesse <contact@adrien-lagesse.io>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: Benchmark,Combinatorial Optimization,GNN,Graph Alignment,Graph Neural Networks,Graphs,Positional Encodings,Pre-training,Pytorch,Torch-Geometric
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.12
+Requires-Dist: huggingface-hub>=0.35.3
+Requires-Dist: jaxtyping>=0.3
+Requires-Dist: numpy>=2.3
+Requires-Dist: rdkit>=2025.3
+Requires-Dist: safetensors>=0.6
+Requires-Dist: scipy>=1.16
+Requires-Dist: torch-cluster
+Requires-Dist: torch-geometric>=2.6
+Requires-Dist: torch-scatter
+Requires-Dist: torch-sparse
+Requires-Dist: torch-spline-conv
+Requires-Dist: torch>=2.8
+Requires-Dist: wandb>=0.21
