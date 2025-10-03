@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: bcml-ai
+Version: 0.0.2
+Summary: The BCML Python library.
+Project-URL: Homepage, https://example.com
+Author-email: Darin Tanner <bcml@example.com>
+License: GNU Affero General Public License v3.0 (AGPL-3.0-only)
+        SPDX-License-Identifier: AGPL-3.0-only
+        
+        The full license text should be placed here. If this placeholder was generated,
+        fetch the canonical text from https://www.gnu.org/licenses/agpl.txt and replace
+        this file's contents.
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+<p>
+  <img src="/repo/bcml.webp" alt="BCML logo" width="300">
+</p>
+
+[![PyPI](https://img.shields.io/pypi/v/bcml-ai?logo=pypi&style=for-the-badge&color=#fff)](https://pypi.org/project/bcml-ai/)
+[![Python 3](https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white&style=for-the-badge)](https://www.python.org/)
+<!-- [![Discord](https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/YOUR_INVITE_CODE) -->
+
+
+**BCML's** official Python library for loading BCML AI models.
+
+## Install
+```
+pip install bcml-ai
+```
+
+## Usage
+```python
+import bcml
+
+print(bcml.hello("world")) # just a test
+```
+
+More coming soon.
