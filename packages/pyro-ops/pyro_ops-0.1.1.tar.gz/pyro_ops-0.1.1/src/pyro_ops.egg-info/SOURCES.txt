@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/pyro_ops/__init__.py
+src/pyro_ops/analysis_core.py
+src/pyro_ops/data_interface.py
+src/pyro_ops/data_persistence.py
+src/pyro_ops/ground_integration.py
+src/pyro_ops/operations_control.py
+src/pyro_ops.egg-info/PKG-INFO
+src/pyro_ops.egg-info/SOURCES.txt
+src/pyro_ops.egg-info/dependency_links.txt
+src/pyro_ops.egg-info/requires.txt
+src/pyro_ops.egg-info/top_level.txt
+tests/test_basic.py
+tests/test_examples.py
+tests/test_optional_adapters.py

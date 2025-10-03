@@ -1,0 +1,106 @@
+Metadata-Version: 2.4
+Name: pyro-ops
+Version: 0.1.1
+Summary: Pyro-Ops: Ground-segment operations toolkit for SmallSat telemetry, FDIR, and automation
+Author-email: Yadidya Medepalli <yadikrish@gmail.com>
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/YadidyaM/pyro-ops
+Project-URL: Repository, https://github.com/YadidyaM/pyro-ops
+Project-URL: Issues, https://github.com/YadidyaM/pyro-ops/issues
+Keywords: satellite,cubesat,telemetry,CCSDS,FDIR,ground-segment,SatNOGS,XTCE,HDF5
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.24
+Requires-Dist: pandas>=2.0
+Requires-Dist: scipy>=1.10
+Requires-Dist: h5py>=3.8
+Requires-Dist: requests>=2.31
+Requires-Dist: ccsdspy>=1.4
+Provides-Extra: xtce
+Requires-Dist: lxml>=4.9; extra == "xtce"
+Requires-Dist: xsdata>=24.3; extra == "xtce"
+Provides-Extra: orbits
+Requires-Dist: skyfield>=1.46; extra == "orbits"
+Requires-Dist: poliastro>=0.17; extra == "orbits"
+Provides-Extra: ml
+Requires-Dist: scikit-learn>=1.3; extra == "ml"
+Provides-Extra: ml-stream
+Requires-Dist: river>=0.21; extra == "ml-stream"
+Provides-Extra: ml-pyod
+Requires-Dist: pyod>=2.0; extra == "ml-pyod"
+Provides-Extra: space
+Requires-Dist: astropy>=6.0; extra == "space"
+Requires-Dist: sgp4>=2.23; extra == "space"
+Requires-Dist: spiceypy>=6.0.0; extra == "space"
+Provides-Extra: pus
+Requires-Dist: spacepackets>=0.31.0; extra == "pus"
+Provides-Extra: docs
+Requires-Dist: sphinx>=7.3; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints>=1.25; extra == "docs"
+Requires-Dist: furo>=2024.8.6; extra == "docs"
+Provides-Extra: dev
+Requires-Dist: ruff>=0.5; extra == "dev"
+Requires-Dist: mypy>=1.10; extra == "dev"
+Requires-Dist: pytest>=7.4; extra == "dev"
+Requires-Dist: pytest-cov>=4.1; extra == "dev"
+Dynamic: license-file
+
+# Pyro-Ops
+
+Ground-segment operations toolkit for SmallSat missions: CCSDS telemetry ingestion, standardized HDF5 persistence with mission metadata, basic FDIR analytics, a safe-by-design command DSL validated against mission definitions, and ground network integration hooks.
+
+## Install
+
+```bash
+pip install pyro-ops
+```
+
+Optional extras:
+
+- Orbits: `pip install pyro-ops[orbits]`
+- XTCE: `pip install pyro-ops[xtce]`
+- ML (batch): `pip install pyro-ops[ml]`
+- ML (streaming): `pip install pyro-ops[ml_stream]`
+- Space (astropy/sgp4/spiceypy): `pip install pyro-ops[space]`
+- PUS tools: `pip install pyro-ops[pus]`
+- Docs: `pip install pyro-ops[docs]`
+
+## Quickstart
+
+```python
+from pyro_ops.analysis_core import rolling_zscore
+from pyro_ops.data_persistence import HDF5Store
+
+import pandas as pd
+
+series = pd.Series([1, 1, 1, 10, 1, 1])
+z = rolling_zscore(series, window=3)
+
+store = HDF5Store("telemetry.h5")
+store.write_table("/payload/temp", pd.DataFrame({"t": [1,2,3], "temp": [20.1, 20.5, 21.0]}), metadata={"unit": "C"})
+```
+
+## Architecture
+
+- Data Interface: CCSDS packet decode wrappers
+- Data Persistence: HDF5 + MetaSat JSON-LD metadata
+- Analysis Core: FDIR utilities and ML hooks
+- Operations Control: DSL + XTCE/eICD ingestion stubs
+- Ground Integration: SatNOGS API and orbit propagation helpers
+
+## License
+
+Apache-2.0
