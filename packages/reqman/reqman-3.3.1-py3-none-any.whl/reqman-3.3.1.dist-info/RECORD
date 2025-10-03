@@ -1,0 +1,13 @@
+reqman/__init__.py,sha256=J3VSL0Vhku698AhJ4O6bg-jmZiIdEP7b4GNKJHEFOL8,69443
+reqman/__main__.py,sha256=aqL2tfqycX8aY04QEA9339MrbD5KuZ8UmbYhhI14ric,786
+reqman/com.py,sha256=iNlSdHkurHnrUa0ZWAPxLXzMEw5XgmLcO3K6rGCS3-I,6046
+reqman/com_httpx.py,sha256=sa_xwrRiZpSq5wQhRV1sl1XcihAzSs101wk-2umTTzM,5290
+reqman/common.py,sha256=LPukOUGs2qCEvNb33YFow50dCVnUOxxOvF042Il0Hlg,1163
+reqman/env.py,sha256=oq5eanYvBumTGy_8QMxdNWwBI1QeXKSJ2LACFu8zbnI,18205
+reqman/testing.py,sha256=6TzTA4rfIMY4mvWDnAmoKs-zYz_A-9STqq39av1I9tI,7065
+reqman/xlib.py,sha256=7mzonbYZrmOYyWgsyfGpD1Fi28o-_4tfZKte8RtXXmk,2038
+reqman-3.3.1.dist-info/licenses/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+reqman-3.3.1.dist-info/METADATA,sha256=uJuojetl57lAji8AQD6bweWUYlztBaYF_7PfMVlN6Yw,94
+reqman-3.3.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+reqman-3.3.1.dist-info/top_level.txt,sha256=8gPuSrgKPrX7k71MT-R-C9bDw3R9344kUXRVsc5ufbc,7
+reqman-3.3.1.dist-info/RECORD,,
