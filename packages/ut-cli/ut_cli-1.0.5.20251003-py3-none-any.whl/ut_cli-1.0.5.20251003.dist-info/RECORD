@@ -1,0 +1,11 @@
+ut_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ut_cli/__version__.py,sha256=4xaJVOD0aHxuDgASRT5sCN0jbv4SG0xZPASIbDo8KVs,838
+ut_cli/aoeq.py,sha256=Lk0dnnpZK9HJYGwoME7hlFhyk7pshf9UDDKUPFd14Ck,485
+ut_cli/doeq.py,sha256=8uEGNbdeu-ZSTBoM9ODO2m4U1FzpmdfDMfxFb06J62o,2264
+ut_cli/kwargs.py,sha256=zN3YQqfVx7R43OMPAPvtuew6s6wAaZ3dfgWznTpGzE4,1314
+ut_cli/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ut_cli-1.0.5.20251003.dist-info/licenses/LICENSE.txt,sha256=BiT3QGI_2iRbdvgS3HDig57lnXJVk60Pj4xM9eeCczI,814
+ut_cli-1.0.5.20251003.dist-info/METADATA,sha256=gac-7FXLL2Q9bcX5ny6gDd8Gc-SI0bIsdDmrn4x9vKI,39389
+ut_cli-1.0.5.20251003.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+ut_cli-1.0.5.20251003.dist-info/top_level.txt,sha256=EodzDJ39xjaFb5l-MyCEWTGavDS8ccJDoqGscPTJjR0,7
+ut_cli-1.0.5.20251003.dist-info/RECORD,,
