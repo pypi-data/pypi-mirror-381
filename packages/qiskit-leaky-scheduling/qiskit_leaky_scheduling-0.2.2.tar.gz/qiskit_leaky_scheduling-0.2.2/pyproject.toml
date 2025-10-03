@@ -1,0 +1,33 @@
+[project]
+name = "qiskit-leaky-scheduling"
+version = "0.2.2"
+description = "A transpilation plugin for Qiskit with a modified scheduling stage that encodes (classical) information modifying the angles of RZGates without leading to changes in the computation results"
+authors = [
+    {name = "Iyán Méndez Veiga", email = "me@iyanmv.com"},
+]
+dependencies = [
+    "qiskit>=1.0,<2.3",
+    "qiskit-ibm-runtime>=0.25.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+qiskit_leaky_scheduling = ["*.png"]
+
+[project.entry-points."qiskit.transpiler.scheduling"]
+leaky_rotations = "qiskit_leaky_scheduling:LeakySchedulingPlugin"
+
+[project.urls]
+homepage = "https://github.com/iyanmv/qiskit-leaky-scheduling"
+source = "https://github.com/iyanmv/qiskit-leaky-scheduling"
+issues = "https://github.com/iyanmv/qiskit-leaky-scheduling/issues"
+"arXiv Paper" = "https://arxiv.org/abs/2510.02251"
