@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=59.6,<70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "windows_path"
+version = "0.1.0"
+description = "Manage the Windows user PATH environment variable from Python or the command line."
+readme = "README.md"
+requires-python = ">=3.6"
+authors = [{ name = "azwri", email = "azwri@example.com" }]
+keywords = ["windows", "path", "environment", "cli"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Environment :: Console",
+    "Operating System :: Microsoft :: Windows",
+    "Topic :: System :: Systems Administration",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/azwri/windows_path"
+Repository = "https://github.com/azwri/windows_path"
+Issues = "https://github.com/azwri/windows_path/issues"
+
+[project.scripts]
+"windows_path" = "windows_path.cli:main"
+"windows-path" = "windows_path.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["windows_path*"]

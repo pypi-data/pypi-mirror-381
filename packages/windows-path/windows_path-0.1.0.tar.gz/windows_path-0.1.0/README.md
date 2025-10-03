@@ -1,0 +1,105 @@
+# windows_path
+
+![Twitter Follow](https://img.shields.io/twitter/follow/Al_Azwari?label=Follow&style=social)
+[![Downloads](https://pepy.tech/badge/windows-path)](https://pepy.tech/project/windows-path) 
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/windows-path?style=plastic) 
+[![PyPI version](https://badge.fury.io/py/windows-path.svg)](https://badge.fury.io/py/windows-path)
+
+Manage the Windows user `PATH` environment variable from Python or the command line.
+
+## Features
+
+- List, search, add, remove, and reorder entries in the user PATH
+- Clean out invalid or duplicate entries safely
+- Backup and restore PATH values to JSON files
+- Export PATH contents to plain text, CSV, or Markdown
+- Library API and ready-to-use CLI (`windows_path`) with detailed logging
+
+> **Note**
+> This utility targets Windows (`sys.platform == "win32"`). The commands exit early on other platforms.
+
+## Installation
+
+Install from PyPI:
+
+```powershell
+pip install windows_path
+```
+
+Or with uv:
+
+```powershell
+uv add windows_path
+```
+
+To build and install from this repository:
+
+```powershell
+pip install --upgrade build
+python -m build
+pip install dist\windows_path-*.whl
+```
+
+Need a deep-dive? See [`docs/windows-path-guide.md`](docs/windows-path-guide.md) for the full walkthrough including automation tips and legacy command references.
+
+> Prefer the old `windows-path` command? We publish both entry points—`windows_path` is the official name, with `windows-path` kept as an alias for compatibility.
+
+## Command Line Usage
+
+All CLI features are exposed through the `windows_path` command (or by running `python -m windows_path`). The legacy `windows-path` alias remains available.
+
+```powershell
+windows_path list
+windows_path add "C:\Tools"
+windows_path add --position start "C:\CustomBin"
+windows_path remove "C:\OldTools"
+windows_path clean --force
+windows_path deduplicate
+windows_path search python
+windows_path backup
+windows_path restore path_backup_20250103.json
+windows_path export csv > paths.csv
+```
+
+Use `windows_path --help` for the full command reference (or `windows-path --help` if you prefer the alias).
+
+### Exit Codes
+
+| Code | Meaning                     |
+|------|-----------------------------|
+| 0    | Success                     |
+| 1    | General error               |
+| 2    | Permission denied           |
+| 3    | Concurrent update conflict  |
+| 4    | Validation error            |
+
+## Python API
+
+```python
+from windows_path import PathManager
+
+manager = PathManager(verbose=True)
+manager.list_paths()
+manager.add_path(r"C:\\Tools")
+manager.deduplicate_paths()
+manager.backup_path()
+```
+
+All operations raise `windows_path.PathManagerError` (with an `exit_code` attribute) on failure. Path updates detect concurrent modifications and retry automatically.
+
+## Development
+
+- Python 3.6+
+- Windows (required for registry access)
+
+Useful commands:
+
+```powershell
+# Install in editable mode
+pip install -e .
+
+# Run a smoke check on syntax
+python -m compileall windows_path
+```
+
+Feel free to open issues or pull requests to report bugs or suggest enhancements.

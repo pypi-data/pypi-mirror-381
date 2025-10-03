@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+windows_path/__init__.py
+windows_path/__main__.py
+windows_path/cli.py
+windows_path/path_manager.py
+windows_path.egg-info/PKG-INFO
+windows_path.egg-info/SOURCES.txt
+windows_path.egg-info/dependency_links.txt
+windows_path.egg-info/entry_points.txt
+windows_path.egg-info/top_level.txt
