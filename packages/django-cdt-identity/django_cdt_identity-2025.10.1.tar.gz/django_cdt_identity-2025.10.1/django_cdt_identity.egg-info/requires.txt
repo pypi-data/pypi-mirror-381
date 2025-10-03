@@ -1,0 +1,17 @@
+Authlib>=1.6.5
+Django>=5.2.7
+requests>=2.32.5
+
+[dev]
+black
+djlint
+flake8
+pre-commit
+setuptools_scm>=8
+
+[test]
+coverage
+pytest
+pytest-django
+pytest-mock
+pytest-socket
