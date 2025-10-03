@@ -1,0 +1,15 @@
+eggp/_binding.cpython-313-darwin.so,sha256=bz5C_Q6FP7J9Ni6OJQnSrWYIwG5NqKizQXlSJAhWtKg,53837792
+eggp/__init__.py,sha256=oT2UDNvmTyGuYCicxGOLMN0xBGHtswvjSBLUJsKSspM,19408
+eggp/_binding.pyi,sha256=o9AWFwWMn4eDNPZBFjhgbadEDGf0VL6Vy0BVK9wDg88,523
+eggp/binding.i,sha256=mTZ1BloTY-Fzh6dfVitd4Q33Mx2sUe6wcbuosqqiWsc,2038
+eggp/_binding.py,sha256=3ZDlFag7Fye9PovFMlA6OnL6rtReDGtmLadmfAhFzpk,777
+eggp/typing.py,sha256=gCsImIpIWLaly6OqgYniN29RGw7QuFoN8HffvKlLC7s,578
+eggp/binding.py,sha256=ZzguFturwt-LqXjfSNbtEH2HFF5S_V_a8xcmFQnFG4E,2687
+eggp/__main__.py,sha256=Ck-g4CSydjw6-DOwQ5ycqkHPPdsGNUzyuOFW2JbZiuc,151
+eggp/.dylibs/libnlopt.1.0.0.dylib,sha256=eBL8PlEnZqZ3qC3ZVqlbmzyepGBW-WXtMIkzik4C9-w,447840
+eggp-1.0.8.dist-info/RECORD,,
+eggp-1.0.8.dist-info/WHEEL,sha256=ZQJAUvKl3_G657Vy_VrVH7Krx2Keg1PVu64bdERsotU,136
+eggp-1.0.8.dist-info/entry_points.txt,sha256=WvDdZ_ITvao2BbjLbodb56y-G-p5EeXuY-d9WJkbHaM,44
+eggp-1.0.8.dist-info/top_level.txt,sha256=ni2wwwqjzu9vrkcv_2bL7weKjjq7CTORz0wp5cao8d8,5
+eggp-1.0.8.dist-info/METADATA,sha256=9xHWlbxVz9cqZbKylhSsjY1ud6VglbHCxp1-gyjcZgQ,53403
+eggp-1.0.8.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
