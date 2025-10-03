@@ -1,0 +1,14 @@
+{% include 'django/forms/widgets/hidden.html' %}
+{% if widget.options_json %}
+    <script>
+        window.draftail.initEditor(
+            '#{{ widget.attrs.id|escapejs }}',
+            {
+                ...{{ widget.options_json|safe }},
+                plugins: typeof NOTE_PLUGIN === "undefined" ? [] : [
+                    NOTE_PLUGIN,
+                ]
+            },
+            document.currentScript)
+    </script>
+{% endif %}
