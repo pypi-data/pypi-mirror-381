@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+sopel_imdb/__init__.py
+sopel_imdb/imdb.py
+sopel_imdb.egg-info/PKG-INFO
+sopel_imdb.egg-info/SOURCES.txt
+sopel_imdb.egg-info/dependency_links.txt
+sopel_imdb.egg-info/entry_points.txt
+sopel_imdb.egg-info/requires.txt
+sopel_imdb.egg-info/top_level.txt
