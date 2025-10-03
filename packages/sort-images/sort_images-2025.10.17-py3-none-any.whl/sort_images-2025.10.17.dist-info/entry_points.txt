@@ -1,0 +1,2 @@
+[console_scripts]
+sort-images = sort_images:command_entry_point
