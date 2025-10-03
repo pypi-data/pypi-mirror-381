@@ -1,0 +1,11 @@
+topsisx/__init__.py,sha256=R2-Mh1O8LkuzK9yNRCPhFHOkq2VntqOztiTV7Ezaorg,71
+topsisx/__main__.py,sha256=ctoLQSS3ZKAJFDMW4PvlufJ9gD5Ul82S9-huA_ZCDro,63
+topsisx/cli.py,sha256=EIyL6u9eU6cZ1X-nUqx91OlCXBFTTNkovT-q_T3gpcE,1136
+topsisx/core.py,sha256=dgH_hD7Bpi1-anoPkxWGNnrNJlpq80aJJvYWPhD1mHU,2006
+topsisx/py.typed,sha256=LgjR9gAK71QXl9AIwFrDb02-v7NsusVhV4jm_MWzAKc,6
+topsisx_arpit_102203499-0.1.0.dist-info/METADATA,sha256=5kleuSf8IryKZw9-2UNJdFdzzPZ5axiH_JufQmLeSso,1920
+topsisx_arpit_102203499-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+topsisx_arpit_102203499-0.1.0.dist-info/entry_points.txt,sha256=EX0YPEmoHhCxOB9i283tGZTnDeahapP2-5lkTe6WEiQ,45
+topsisx_arpit_102203499-0.1.0.dist-info/licenses/LICENSE,sha256=RpQ41YegYd61gOD3T87_8VWL-7AGyHl7EBfDpm_NRpQ,1088
+topsisx_arpit_102203499-0.1.0.dist-info/licenses/LICENSE.txt,sha256=RpQ41YegYd61gOD3T87_8VWL-7AGyHl7EBfDpm_NRpQ,1088
+topsisx_arpit_102203499-0.1.0.dist-info/RECORD,,
