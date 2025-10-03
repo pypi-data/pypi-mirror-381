@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/ebraconys/__init__.py
+src/ebraconys/math_utils.py
+src/ebraconys/string_utils.py
+src/ebraconys.egg-info/PKG-INFO
+src/ebraconys.egg-info/SOURCES.txt
+src/ebraconys.egg-info/dependency_links.txt
+src/ebraconys.egg-info/top_level.txt
