@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=77.0.1", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maniq"
+version = "3.2.0"
+description = "Manim Quality Stress Testing Tool"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [
+    {name = "MarkHoo", email = "markhoo@foxmail.com"}
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+keywords = ["manim", "rendering", "stress-test", "performance", "quality"]
+dependencies = [
+    "psutil>=7.0.0",
+]
+requires-python = ">=3.10"
+
+[project.urls]
+Homepage = "https://github.com/MarkHoo/maniq"
+Repository = "https://github.com/MarkHoo/maniq"
+Issues = "https://github.com/MarkHoo/maniq/issues"
+
+[project.scripts]
+maniq = "maniq.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["maniq*"]
+exclude = ["tests*", "test*"]
+
+[tool.setuptools.package-data]
+maniq = ["py.typed"]
