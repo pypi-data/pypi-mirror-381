@@ -1,0 +1,89 @@
+Metadata-Version: 2.4
+Name: renzmc
+Version: 0.0.2
+Summary: Bahasa pemrograman berbasis Bahasa Indonesia yang powerful dan modern
+Home-page: https://github.com/RenzMc/RenzmcLang
+Author: RenzMc
+Author-email: renzaja11@gmail.com
+Project-URL: Bug Tracker, https://github.com/RenzMc/RenzmcLang/issues
+Project-URL: Documentation, https://github.com/RenzMc/RenzmcLang/tree/main/docs
+Project-URL: Source Code, https://github.com/RenzMc/RenzmcLang
+Project-URL: Examples, https://github.com/RenzMc/RenzmcLang/tree/main/examples
+Keywords: indonesian,bahasa-indonesia,programming-language,interpreter,education,coding,pemrograman,python,compiler,modern-language
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Interpreters
+Classifier: Natural Language :: Indonesian
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp>=3.8.1
+Requires-Dist: requests>=2.27.1
+Requires-Dist: cryptography>=36.0.0
+Requires-Dist: python-dateutil>=2.8.2
+Requires-Dist: pytz>=2021.3
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: ujson>=5.1.0
+Requires-Dist: regex>=2022.1.18
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.18.0; extra == "dev"
+Requires-Dist: black>=22.1.0; extra == "dev"
+Requires-Dist: isort>=5.10.1; extra == "dev"
+Requires-Dist: mypy>=0.931; extra == "dev"
+Requires-Dist: flake8>=4.0.1; extra == "dev"
+Requires-Dist: pylint; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=4.0.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.0.0; extra == "docs"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: platform
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+RenzMcLang adalah bahasa pemrograman modern berbasis Bahasa Indonesia.
+Dirancang untuk memudahkan pembelajaran pemrograman bagi penutur Bahasa Indonesia,
+RenzMcLang menggabungkan fitur-fitur modern dengan sintaks yang intuitif.
+
+Fitur Utama:
+- Sintaks Bahasa Indonesia yang mudah dipahami
+- Dukungan OOP lengkap (class, inheritance)
+- Lambda, comprehension, ternary operator
+- Async/await untuk pemrograman asynchronous
+- Error handling dengan try/catch/finally
+- Type hints optional
+
+Integrasi Python:
+- Akses library dan builtins Python
+- Interoperabilitas penuh dengan ekosistem Python
+
+Built-in Functions:
+- Manipulasi string, math & statistics, file, JSON, HTTP, system, database, dll
+
+Instalasi:
+pip install renzmc
+
+Quick Start:
+# hello.rmc
+tampilkan "Hello, World!"
+tampilkan "Selamat datang di RenzMcLang!"
+Jalankan: rmc hello.rmc
+
+Dokumentasi: https://github.com/RenzMc/RenzmcLang
+License: MIT License
