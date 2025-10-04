@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+gh_release_install/__init__.py
+gh_release_install/checksum.py
+gh_release_install/cli.py
+gh_release_install/main.py
+gh_release_install/unpack.py
+gh_release_install.egg-info/PKG-INFO
+gh_release_install.egg-info/SOURCES.txt
+gh_release_install.egg-info/dependency_links.txt
+gh_release_install.egg-info/entry_points.txt
+gh_release_install.egg-info/requires.txt
+gh_release_install.egg-info/top_level.txt

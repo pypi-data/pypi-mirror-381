@@ -1,0 +1,58 @@
+[project]
+name = "gh_release_install"
+version = "0.12.0"
+description = "CLI helper to install Github releases on your system."
+readme = "README.md"
+authors = [{ name = "Joola", email = "jooola@users.noreply.github.com" }]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: System :: Installation/Setup",
+  "Topic :: System :: Software Distribution",
+]
+
+requires-python = ">=3.10"
+dependencies = [
+  "requests>=2.32.3,<2.33",
+]
+
+[project.optional-dependencies]
+dev = [
+  "black>=25.9,<25.10",
+  "isort>=6.1,<6.2",
+  "mypy>=1.0.0,<2.0",
+  "pylint>=3.0.0,<4.0",
+  "pytest>=8.0.0,<9.0",
+  "pytest-cov>=7,<7.1",
+  "pytest-xdist>=3.0.0,<4.0",
+  "requests-mock>=1.9.3,<2.0",
+  "types-requests>=2.31.0,<3.0",
+]
+
+[project.scripts]
+gh-release-install = "gh_release_install.cli:run"
+
+[tool.setuptools]
+packages = ["gh_release_install"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.pylint.messages_control]
+disable = [
+  "missing-module-docstring",
+  "missing-function-docstring",
+  "missing-class-docstring",
+]
+
+[tool.isort]
+profile = "black"
+combine_as_imports = true
+add_imports = ["from __future__ import annotations"]
