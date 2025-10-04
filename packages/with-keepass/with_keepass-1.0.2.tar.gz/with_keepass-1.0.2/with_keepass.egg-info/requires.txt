@@ -1,0 +1,9 @@
+pykeepass
+
+[dev]
+build
+flake8
+radon
+bandit
+coverage
+twine
