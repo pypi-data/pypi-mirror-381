@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: nodenormalizer-mcp
+Version: 0.1.1
+Summary: MCP server for Node Normalization Service - normalize and conflate biological entity identifiers
+Project-URL: Homepage, https://github.com/cbizon/RoboMCP
+Project-URL: Repository, https://github.com/cbizon/RoboMCP
+Project-URL: Issues, https://github.com/cbizon/RoboMCP/issues
+Author: Chris Bizon
+License: MIT
+Keywords: bioinformatics,biomedical,mcp,normalization,translator
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.10
+Requires-Dist: fastmcp>=0.1.0
+Requires-Dist: httpx>=0.24.0
+Description-Content-Type: text/markdown
+
+# Node Normalizer MCP
+
+MCP server for the Node Normalization Service - normalize and conflate biological entity identifiers.
+
+## Documentation
+
+For full documentation, installation instructions, and usage examples, see the main [RoboMCP repository](https://github.com/cbizon/RoboMCP).
+
+## Quick Start
+
+```bash
+# Run with uvx (no installation needed)
+uvx nodenormalizer-mcp
+```
+
+## Tools
+
+- `get_normalized_nodes` - Normalize biological entity CURIEs and find equivalent identifiers
+
+## License
+
+MIT License - see the [main repository](https://github.com/cbizon/RoboMCP) for details.
