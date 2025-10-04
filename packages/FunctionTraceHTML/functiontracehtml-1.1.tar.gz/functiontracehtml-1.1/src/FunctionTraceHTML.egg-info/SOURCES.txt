@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/FunctionTraceHTML/FunctionTrace.py
+src/FunctionTraceHTML/__init__.py
+src/FunctionTraceHTML.egg-info/PKG-INFO
+src/FunctionTraceHTML.egg-info/SOURCES.txt
+src/FunctionTraceHTML.egg-info/dependency_links.txt
+src/FunctionTraceHTML.egg-info/top_level.txt
