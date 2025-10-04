@@ -1,0 +1,2 @@
+[console_scripts]
+arknet = arknet.__main__:main
