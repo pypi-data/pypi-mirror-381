@@ -1,0 +1,2 @@
+[netapult.device]
+generic = netapult.client:Client

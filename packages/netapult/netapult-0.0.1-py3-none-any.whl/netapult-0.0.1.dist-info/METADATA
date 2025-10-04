@@ -1,0 +1,72 @@
+Metadata-Version: 2.4
+Name: netapult
+Version: 0.0.1
+Summary: Framework for terminal-based device management
+Project-URL: Homepage, https://github.com/Jayson-Fong/netapult
+Project-URL: Issues, https://github.com/Jayson-Fong/netapult/issues
+Author-email: Jayson Fong <jayson.fong@gatech.edu>
+License: MIT
+License-File: LICENSE
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: System :: Networking
+Classifier: Typing :: Typed
+Requires-Python: >=3.11
+Provides-Extra: ssh
+Requires-Dist: netapult-ssh==0.0.1; extra == 'ssh'
+Description-Content-Type: text/markdown
+
+<!--suppress HtmlDeprecatedAttribute-->
+<div align="center">
+   <h1>🏹 Netapult</h1>
+</div>
+
+<hr />
+
+<div align="center">
+
+[💼 Purpose](#purpose) | [🏁 Usage](#usage)
+
+</div>
+
+<hr />
+
+# Purpose
+
+Netapult is a framework for querying and managing terminal-based devices, designed for developers requiring maximum 
+control over workflows without abstracting away fine-grained control. Netapult enables the execution of commands against 
+these terminal-based devices and the collection of resulting data.
+
+### Use Cases
+
+<details style="border: 1px solid; border-radius: 8px; padding: 8px; margin-top: 4px;">
+<summary>🤖 Network Automation and Orchestration</summary>
+
+Automate repetitive tasks such as configuration management, asset inventorying, and compliance checking.
+
+</details>
+
+<details style="border: 1px solid; border-radius: 8px; padding: 8px; margin-top: 4px;">
+<summary>🛡️ Device Auditing and Hardening</summary>
+
+Acquire device information at scale to enable environment-aware risk management.
+
+</details>
+
+<details style="border: 1px solid; border-radius: 8px; padding: 8px; margin-top: 4px;">
+<summary>📚 Training</summary>
+
+Rapidly configure a lab environment for trainees or validate their configuration.
+
+</details>
+
+# Usage
+
+The framework does **not** ship with a protocol or device-specific implementations in an effort to provide a 
+maintainable, plugin-like structure such that framework's package does not require updating to alter a protocol or 
+device implementation.
