@@ -1,0 +1,77 @@
+[project]
+name = "mongofy"
+version = "0.1.0a2"
+description = "MongoDB ODM. ALPHA VERSION - DO NOT USE"
+readme = "README.md"
+authors = [
+    { name = "Adrian Makridenko", email = "adrianmakridenko@duck.com" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "msgspec>=0.19.0",
+    "pymongo>=4.15.2",
+]
+
+[dependency-groups]
+dev = [
+    "icecream>=2.1.8",
+    "mkdocs>=1.6.1",
+    "mkdocstrings>=0.30.1",
+    "mkdocstrings-python>=1.18.2",
+    "mypy>=1.18.2",
+    "pytest>=8.4.2",
+    "pytest-asyncio>=1.2.0",
+    "ruff>=0.13.3",
+]
+
+[project.urls]
+Repository = "https://github.com/lyaguxafrog/mongofy"
+
+[tool.ruff]
+target-version = "py39"
+line-length = 80
+exclude = ["*__init__.py", "tests/", "*exceptions/"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.ruff.lint]
+extend-select = ["UP", "D"]
+ignore = ["UP009", "D100"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.isort]
+known-first-party = ["mongofy"]
+lines-after-imports = 2
+lines-between-types = 1
+combine-as-imports = true
+force-wrap-aliases = true
+
+[tool.mypy]
+python_version = "3.9"
+
+files = ["mongofy", "tests"]
+
+strict = true
+
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+
+warn_unused_ignores = true
+warn_return_any = true
+warn_redundant_casts = true
+warn_unreachable = true
+warn_no_return = true
+strict_equality = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+check_untyped_defs = true

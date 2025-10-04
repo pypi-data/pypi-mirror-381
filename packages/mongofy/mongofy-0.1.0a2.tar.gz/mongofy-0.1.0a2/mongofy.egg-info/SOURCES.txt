@@ -1,0 +1,17 @@
+LICENSE.md
+README.md
+pyproject.toml
+mongofy/__init__.py
+mongofy/py.typed
+mongofy.egg-info/PKG-INFO
+mongofy.egg-info/SOURCES.txt
+mongofy.egg-info/dependency_links.txt
+mongofy.egg-info/requires.txt
+mongofy.egg-info/top_level.txt
+mongofy/exceptions/__init__.py
+mongofy/exceptions/instance.py
+mongofy/instances/__init__.py
+mongofy/instances/base.py
+mongofy/instances/sync_instance.py
+mongofy/odm/__init__.py
+mongofy/odm/document.py
