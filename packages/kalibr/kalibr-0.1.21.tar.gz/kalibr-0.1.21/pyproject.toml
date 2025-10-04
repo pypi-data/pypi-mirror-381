@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kalibr"
+version = "0.1.21"
+description = "Kalibr Demo SDK"
+authors = [
+    { name = "Devon Kelley" }
+]
+requires-python = ">=3.8"
+
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "typer"
+]
+
+[project.scripts]
+kalibr = "kalibr.__main__:main"
