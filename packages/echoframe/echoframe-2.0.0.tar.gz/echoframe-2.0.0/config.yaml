@@ -1,0 +1,82 @@
+# EchoFrame 机器人配置
+
+# ==================== 通信配置 ====================
+# 支持两种模式，二选一启用
+
+adapters:
+  # 模式 1：反向 WebSocket（EchoFrame 作为服务端，等待 OneBot 实现连接）
+  # 适用于：go-cqhttp, NapCat 等
+  aiocqhttp:
+    enabled: true                 # 禁用（使用正向时）
+    host: "0.0.0.0"
+    port: 6789
+    access_token: "rgf200606"
+    
+    # OneBot 实现配置：true  false
+    # Type: ReverseWebSocket
+    # UniversalPath: ws://127.0.0.1:8080/ws/
+  
+  # 模式 2：正向 WebSocket 客户端（EchoFrame 主动连接到 OneBot 实现）
+  # 适用于：Lagrange ForwardWebSocket
+  websocket_client:
+    enabled: false                  # 启用正向连接
+    url: "ws://127.0.0.1:8082"    # OneBot 实现的 WebSocket 地址
+    access_token: "rgf200606"      # 访问令牌
+    reconnect_interval: 3          # 重连间隔（秒）
+    
+    # Lagrange 配置：
+    # Type: ForwardWebSocket
+    # Port: 8082
+    # AccessToken: rgf200606
+
+# 插件配置
+plugins:
+  # 插件目录
+  plugin_dirs:
+    - "plugins"
+  
+  # 启用的插件（留空则加载所有插件）
+  # 支持新格式（文件夹名）和旧格式（文件名）
+  enabled_plugins: []
+  
+  # 禁用的插件
+  # 示例：
+  # - echo        # 禁用旧格式的 echo.py
+  # - echo_new    # 禁用新格式的 echo_new/
+  disabled_plugins: []
+  
+  # 推荐使用新格式插件（文件夹式）
+  # 新格式插件示例：
+  # - echo_new/    # 包含 main.py, metadata.yaml, README.md
+  # - ping_new/
+  # - help_new/
+  
+  # 旧格式插件仍然兼容（单文件）
+  # - echo.py
+  # - ping.py
+
+# 机器人配置
+bot:
+  # 命令前缀
+  command_prefix: "/"
+  
+  # 超级用户 QQ 号列表
+  superusers:
+    - 2634959785
+  
+  # 昵称（用于 @ 触发）
+  nicknames:
+    - "小助手"
+    - "bot"
+
+# 心跳配置
+heartbeat:
+  enable: false  # 是否启用心跳（go-cqhttp 会自己发送心跳）
+  interval: 15000  # 心跳间隔（毫秒）
+
+# 日志配置
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR（生产环境使用 INFO，调试使用 DEBUG）
+  format: "<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level: <8}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan> - <level>{message}</level>"
+  file: "logs/bot.log"  # 日志文件路径，留空则不保存到文件
+

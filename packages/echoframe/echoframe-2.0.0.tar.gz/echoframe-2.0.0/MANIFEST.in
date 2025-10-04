@@ -1,0 +1,22 @@
+# 包含额外文件到发布包中
+
+include README.md
+include LICENSE
+include requirements.txt
+include pyproject.toml
+include config.yaml
+
+# 包含所有 Python 源码
+recursive-include core *.py
+recursive-include adapters *.py
+recursive-include echoframe *.py
+
+# 包含文档
+recursive-include docs *.md
+
+# 排除不需要的文件
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude *.pyc
+global-exclude .DS_Store
+

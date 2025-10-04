@@ -1,0 +1,2 @@
+[console_scripts]
+echoframe = echoframe.cli:main

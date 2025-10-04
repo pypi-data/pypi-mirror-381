@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "echoframe"
+version = "2.0.0"
+description = "一个完整的 OneBot-11 协议插件化机器人框架 - EchoFrame"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "EchoFrame Team"}
+]
+keywords = ["onebot", "qq", "bot", "framework", "plugin", "echoframe"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Communications :: Chat",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+dependencies = [
+    "aiohttp>=3.8.0",
+    "websockets>=11.0",
+    "pyyaml>=6.0",
+    "pydantic>=2.0.0",
+    "loguru>=0.7.0",
+]
+
+[project.optional-dependencies]
+scheduler = ["apscheduler>=3.10.0"]
+database = ["sqlalchemy>=2.0.0", "aiosqlite>=0.19.0"]
+all = ["apscheduler>=3.10.0", "sqlalchemy>=2.0.0", "aiosqlite>=0.19.0"]
+dev = ["pytest>=7.0.0", "pytest-asyncio>=0.21.0", "black>=23.0.0", "mypy>=1.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/your-repo/echoframe"
+Documentation = "https://github.com/your-repo/echoframe/blob/main/README.md"
+Repository = "https://github.com/your-repo/echoframe"
+Issues = "https://github.com/your-repo/echoframe/issues"
+
+[project.scripts]
+echoframe = "echoframe.cli:main"
+
+[tool.setuptools]
+packages = ["echoframe"]
+
+[tool.setuptools.package-data]
+echoframe = ["*.yaml", "*.yml"]
+
