@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: shawon_mt5_automation
+Version: 0.1.1
+Summary: A Flask webhook server to automate MetaTrader 5 trading based on TradingView signals with configurable settings and API key authentication.
+Home-page: https://github.com/yourusername/mt5-webhook-trader
+Author: Mahmudul Haque Shawon
+Author-email: haquemahmudul600@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: Flask>=2.0.0
+Requires-Dist: MetaTrader5>=5.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# MT5 Webhook Trader
+
+A Python Flask application designed to automate MetaTrader 5 (MT5) trading based on incoming webhook signals, typically from platforms like TradingView. This package allows users to configure their MT5 account details, trade parameters (lot size, optional Stop Loss/Take Profit in USD), and secure the webhook endpoints with an API key.
+
+## Features
+
+-   **Configurable MT5 Details**: Easily set your MT5 account, password, server, and trading symbol.
+-   **Flexible Trade Parameters**: Define lot size, and optional Stop Loss (SL) and Take Profit (TP) values in USD. If SL/TP values are 0 or not provided, they won't be set on the trade.
+-   **API Key Authentication**: Secure your webhook endpoints with an API key (`X-API-Key` header) to prevent unauthorized access.
+-   **Signal Gap Control**: Prevent over-trading by setting a minimum time gap between consecutive BUY or SELL signals.
+-   **Automatic Position Management**: Closes all existing positions for the specified symbol before placing a new trade signal.
+-   **Status Endpoints**: Check current open positions or manually close all positions via dedicated API endpoints.
+-   **Persistent Signal Times**: Stores the last signal time to disk to maintain state across restarts.
+
+## Installation
+
+```bash
+pip install shawon_mt5_automation
