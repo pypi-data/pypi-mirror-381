@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+src/ofrak_capstone/__init__.py
+src/ofrak_capstone/components.py
+src/ofrak_capstone/disassembler_service_capstone.py
+src/ofrak_capstone.egg-info/PKG-INFO
+src/ofrak_capstone.egg-info/SOURCES.txt
+src/ofrak_capstone.egg-info/dependency_links.txt
+src/ofrak_capstone.egg-info/entry_points.txt
+src/ofrak_capstone.egg-info/requires.txt
+src/ofrak_capstone.egg-info/top_level.txt
+tests/test_ofrak_capstone.py
