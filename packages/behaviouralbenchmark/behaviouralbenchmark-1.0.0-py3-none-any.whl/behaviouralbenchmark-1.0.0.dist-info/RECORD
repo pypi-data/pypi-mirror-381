@@ -1,0 +1,13 @@
+behavioural_benchmark/__init__.py,sha256=Rt32CPb0bKZUv7XpL9AstgzfMf4RB9EWudAe-m6_Alc,34
+behavioural_benchmark/indicators.py,sha256=DxgJgjWO2EVekDiHZ7THUGESOpFemqgWiAPt7XdkUb8,5168
+behavioural_benchmark/mean_indicators.py,sha256=4Lph_Rj0XTO4Q9eeob8hm26dzMHj3179VYYmJorwKbM,959
+behavioural_benchmark/network_indicators.py,sha256=1Lh2EYfs9GW8pdL2s5NdXTrmsR4wDlXZ5zBHmSYnwf0,2379
+behavioural_benchmark/regression_indicators.py,sha256=DM_rrAj3DZy8QLOTxelOPrMrVz6VkoLi2EKrhDQ6AcQ,2172
+behavioural_benchmark/stn.py,sha256=0zv08QOU1SLuOoBK-STNpAsmK-GCSL3yeQ5ysxE-AN4,11220
+behavioural_benchmark/tst/test.py,sha256=Gku7r8e5grCFzWgHXmC_XhKB5uw6hfx2UaCMX3z8spU,2797
+behavioural_benchmark/tutorials/comparison_guide_utils.py,sha256=EMDn4_jFW-v4k1wocZk8acm-TMD5Vssq1Qk71ITXO5w,5789
+behaviouralbenchmark-1.0.0.dist-info/licenses/LICENSE,sha256=kFmWguP3qeeOQg9sBcjk3fVmCKGKFpQt0peUE-XBWMI,35147
+behaviouralbenchmark-1.0.0.dist-info/METADATA,sha256=_0dpNCt6AYtemLhdZHCSUtj5IJIg-PqLrOWP1rV9xSQ,47895
+behaviouralbenchmark-1.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+behaviouralbenchmark-1.0.0.dist-info/top_level.txt,sha256=w6SFMbeCCc84xM8P_WLFI50LZTvs0THTdc4mTV0Fzm8,22
+behaviouralbenchmark-1.0.0.dist-info/RECORD,,
