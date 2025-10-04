@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/fbx_tool/__init__.py
+src/fbx_tool/cli.py
+src/fbx_tool.egg-info/PKG-INFO
+src/fbx_tool.egg-info/SOURCES.txt
+src/fbx_tool.egg-info/dependency_links.txt
+src/fbx_tool.egg-info/entry_points.txt
+src/fbx_tool.egg-info/requires.txt
+src/fbx_tool.egg-info/top_level.txt

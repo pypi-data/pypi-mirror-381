@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: fbx-tool
+Version: 0.1.0
+Summary: Filter FBX meshes by name patterns and export sampled point clouds (PCD).
+Author-email: Felipe Cadar <cadar@dcc.ufmg.br>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fbxloader>=0.0.2
+Requires-Dist: open3d>=0.19.0
+Requires-Dist: rerun-sdk>=0.25.1
+Provides-Extra: dev
+Requires-Dist: ipdb>=0.13.13; extra == "dev"
+Dynamic: license-file
+
+# fbx-tool
+
+Filter FBX meshes by name patterns and export sampled point clouds (PCD) using Open3D.
+
+## Features
+- Include / exclude substring filters (case-insensitive)
+- Sample mesh surfaces to generate point clouds
+- Optional export of excluded mesh points
+- Path segment frequency analysis of model names
+- JSON summary output and dry-run mode
+- Rerun viewer streaming of sampled points
+
+## Installation
+From source:
+```bash
+pip install .
+```
+Or (editable dev install):
+```bash
+pip install -e .[dev]
+```
+
+## CLI Usage
+```bash
+fbx-pcd --help
+```
+Example:
+```bash
+fbx-pcd model.fbx -i ESTRUTURAS -i CIVIL -o estruturas.pcd --viewer
+```
+List names and segment counts:
+```bash
+fbx-pcd model.fbx --list-names --count-path-segments
+```
+JSON output:
+```bash
+fbx-pcd model.fbx --list-names --count-path-segments --json > names.json
+```
+
+## Programmatic Use
+```python
+from fbx_tool import cli
+cli(["model.fbx", "-i", "CIVIL"])  # returns exit code
+```
+
+## License
+MIT

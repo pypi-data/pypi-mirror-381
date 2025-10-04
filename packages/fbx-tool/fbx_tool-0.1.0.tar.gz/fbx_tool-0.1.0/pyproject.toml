@@ -1,0 +1,36 @@
+[project]
+name = "fbx-tool"
+version = "0.1.0"
+description = "Filter FBX meshes by name patterns and export sampled point clouds (PCD)."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Felipe Cadar", email = "cadar@dcc.ufmg.br"}
+]
+requires-python = ">=3.12"
+dependencies = [
+        "fbxloader>=0.0.2",
+        "open3d>=0.19.0",
+        "rerun-sdk>=0.25.1",
+        # ipdb kept as optional dev dependency; moved to optional-dependencies
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Intended Audience :: Developers",
+]
+
+[project.optional-dependencies]
+dev = ["ipdb>=0.13.13"]
+
+[project.scripts]
+fbx-pcd = "fbx_tool.cli:cli"
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

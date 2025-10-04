@@ -1,0 +1,2 @@
+[console_scripts]
+fbx-pcd = fbx_tool.cli:cli
