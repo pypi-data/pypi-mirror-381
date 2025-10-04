@@ -1,0 +1,12 @@
+projorg/__init__.py,sha256=d02rPgE5OT-jheM_5at-aLeXZnhcR7F3W2Kz3pX_fb8,178
+projorg/config.py,sha256=4a9x7ADUh3vtNakxWEGpokOqNatJiqKp4EYQNJGyXic,2125
+projorg/experiment_logger.py,sha256=BNakwGLRZ3YMMixzaxgnlVEvqFp0hZ19WoXua41u2dY,7608
+projorg/hyperparam_utils.py,sha256=XA3C8HLB0lWLE5WyZHoaQhBUQNgsCHjboLa1gM8GQHo,1312
+projorg/project_path.py,sha256=cWODLYA2DQjGe7zAW3Il4UGscYbaG_05-0gjDRR2Pgk,4163
+projorg/setup_experiment.py,sha256=Rh4B2X6b0YCYt1sKgVVWqEut0UhPUM_9yUseMDYf8bM,1598
+projorg/upload_to_cloud.py,sha256=T2ccmZLiCU7OgnktNQgCp6o0TaqAX4twA0j9wJQRT1w,1512
+projorg-1.1.dist-info/licenses/LICENSE,sha256=yPEVz2bb9UOy4FKMF6j-4ibd0FdtO0Mp6KgswFD2_zI,1070
+projorg-1.1.dist-info/METADATA,sha256=EExHNKh-sgfhUR8fyO-AEh-71QC4HjxhIAse2zoNbYg,3160
+projorg-1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+projorg-1.1.dist-info/top_level.txt,sha256=gjL3-2Y8bhNKJrKdin5m_2P56j75sW3g3OC6jOWnZRk,8
+projorg-1.1.dist-info/RECORD,,
