@@ -1,0 +1,13 @@
+name: woom
+
+channels:
+  - conda-forge
+
+dependencies:
+  - colorlog
+  - configobj
+  - jinja2
+  - pandas
+  - platformdirs
+  - psutil
+  - tabulate
