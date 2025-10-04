@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/yourbubble/__init__.py
+src/yourbubble/messagerie.py
+src/yourbubble/protocol.py
+src/yourbubble.egg-info/PKG-INFO
+src/yourbubble.egg-info/SOURCES.txt
+src/yourbubble.egg-info/dependency_links.txt
+src/yourbubble.egg-info/entry_points.txt
+src/yourbubble.egg-info/top_level.txt
