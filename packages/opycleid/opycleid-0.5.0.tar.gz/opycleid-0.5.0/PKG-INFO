@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: opycleid
+Version: 0.5.0
+Summary: Transformational music analysis in Python
+Home-page: https://github.com/AlexPof/opycleid.git
+Author: Alexandre Popoff
+Author-email: al.popoff@free.fr
+License: BSD-3
+License-File: LICENSE
+Requires-Dist: numpy>=1.8.2
+Requires-Dist: networkx>=3.3
