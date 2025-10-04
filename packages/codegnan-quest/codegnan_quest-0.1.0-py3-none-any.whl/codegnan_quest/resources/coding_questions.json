@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "function_name": "is_palindrome",
+        "question": "Write a function `is_palindrome(s)` that returns True if string s is a palindrome, else False.",
+        "test_cases": [
+            {"input": "racecar", "output": true},
+            {"input": "hello", "output": false}
+        ]
+    },
+    {
+        "id": 2,
+        "function_name": "sum_evens",
+        "question": "Write a function `sum_evens(n)` that returns the sum of all even numbers from 1 to n.",
+        "test_cases": [
+            {"input": 6, "output": 12},
+            {"input": 3, "output": 2}
+        ]
+    }
+]
