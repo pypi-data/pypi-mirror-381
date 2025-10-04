@@ -1,0 +1,129 @@
+[project]
+name = "github_research_mcp"
+version = "0.2.0"
+description = "Github Research MCP project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp>=3.12.15",
+    "click>=8.3.0",
+    "diskcache>=5.6.3",
+    "elasticsearch>=9.1.1",
+    "fastmcp>=2.3.5",
+    "githubkit>=0.13.2",
+    "gitpython>=3.1.45",
+    "google-genai>=1.37.0",
+    "makefun>=1.16.0",
+    "mcp>=1.9.0",
+    "openai>=1.106.1",
+    "pydantic>=2.11.7",
+    "rpygrep>=0.2.0",
+]
+
+[project.scripts]
+github-research-mcp = "github_research_mcp.main:run_mcp"
+agents-md-generator = "github_research_mcp.agents_md:run_mcp"
+code-search = "github_research_mcp.code_search:run_mcp"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+env_files = [".test.env"]
+addopts = ["--inline-snapshot=disable","-vv","-s"]
+markers = [
+    "skip_on_ci: Skip running the test when running on CI",
+]
+
+[dependency-groups]
+dev = [
+  "pytest",
+  "pytest-mock",
+  "pytest-asyncio",
+  "ruff",
+  "basedpyright>=1.31.6",
+    "pytest-dotenv>=0.5.2",
+    "inline-snapshot>=0.28.0",
+    "dirty-equals>=0.9.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.2,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+target-version = "py312"
+lint.fixable = ["ALL"]
+lint.ignore = [
+    "COM812",
+    "PLR0913", # Too many arguments, MCP Servers have a lot of arguments, OKAY?!
+]
+lint.extend-select = [
+    "A",
+    "ARG",
+    "B",
+    "C4",
+    "COM",
+    "DTZ",
+    "E",
+    "EM",
+    "F",
+    "FURB",
+    "I",
+    "LOG",
+    "N",
+    "PERF",
+    "PIE",
+    "PLR",
+    "PLW",
+    "PT",
+    "PTH",
+    "Q",
+    "RET",
+    "RSE",
+    "RUF",
+    "S",
+    "SIM",
+    "TC",
+    "TID",
+    "TRY",
+    "UP",
+    "W",
+]
+
+line-length = 140
+extend-exclude=["**/clients/graphql/**"]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"**/tests/*.py" = [
+    "S101", # Ignore asserts
+    "DTZ005", # Ignore datetime.UTC
+    "PLR2004", # Ignore magic values
+    "E501", # Ignore line length
+    
+]
+"**/references/*" = ["ALL"]
+"template/*" = ["ALL"]
+"**/vendored/**" = ["ALL"]
+
+[tool.pyright]
+pythonVersion = "3.12"
+extraPaths = ["src/"]
+typeCheckingMode = "recommended"
+include = ["src/"]
+exclude = [
+    "**/archive/**",
+    "**/node_modules/**",
+    "**/__pycache__/**",
+    "**/.venv/**",
+    ".venv",
+    "**/.pytest_cache/**",
+    "**/.ruff_cache/**",
+    "**/vendored/**",
+    "**/uv/python/**",
+    "**/clients/graphql/**",
+]
+reportMissingTypeStubs = false
+reportExplicitAny = false
+
+executionEnvironments = [
+    { root = "src", reportPrivateUsage = false},
+]
