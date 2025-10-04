@@ -1,0 +1,11 @@
+streamlit<2.0.0,>=1.12.0
+pydantic<3.0.0,>=2.0.0
+polars<2.0.0,>=1.0.0
+requests<3.0.0,>=2.25.0
+snowflake-connector-python<4.0.0,>=3.0.0
+databricks-sql-connector[pyarrow]<5.0.0,>=4.0.5
+databricks-sdk<0.57.0,>=0.56.0
+pyathena[arrow]<4.0.0,>=3.0.0
+boto3<2.0.0,>=1.20.0
+ts-sdk-connectors-python<3.0.0,>=2.0.0
+pyjwt<3.0.0,>=2.8.0
