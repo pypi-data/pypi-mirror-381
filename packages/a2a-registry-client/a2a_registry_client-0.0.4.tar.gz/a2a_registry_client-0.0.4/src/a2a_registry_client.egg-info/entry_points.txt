@@ -1,0 +1,2 @@
+[console_scripts]
+a2a-registry-client = a2a_registry.mcp_server:main
