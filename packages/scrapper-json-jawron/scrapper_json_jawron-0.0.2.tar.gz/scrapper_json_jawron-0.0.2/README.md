@@ -1,0 +1,1 @@
+A simple scrapper with support for JSON structure
