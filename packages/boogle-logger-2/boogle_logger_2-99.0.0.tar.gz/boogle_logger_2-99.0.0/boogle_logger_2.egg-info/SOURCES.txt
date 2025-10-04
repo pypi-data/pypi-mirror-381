@@ -1,0 +1,6 @@
+README.md
+setup.py
+boogle_logger_2.egg-info/PKG-INFO
+boogle_logger_2.egg-info/SOURCES.txt
+boogle_logger_2.egg-info/dependency_links.txt
+boogle_logger_2.egg-info/top_level.txt
