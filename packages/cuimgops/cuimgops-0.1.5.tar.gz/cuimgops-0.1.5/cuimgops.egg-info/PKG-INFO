@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: cuimgops
+Version: 0.1.5
+Summary: CUDA-accelerated image augmentation operations for Python.
+Home-page: https://github.com/mightycandle/
+Author: Sashank Nimmagadda
+Author-email: sashank.n.1711@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: C++
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Multimedia :: Graphics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# cuimgops
+
+CUDA-accelerated image augmentation operations for Python.
+
+## Features
+- **Augmentation**
+  - Horizontal Flip
+  - Vertical Flip
+
+- **Convolution**
+  - Gaussian Noise
+  - Edge Detection
+  - Blur (Smoothing)
+  - Sharpening
+  
+- **In Development**
+    - Multiple images - Batched convolution on streams
+
+## Installation
+
+### Prerequisites
+- CUDA Capable GPU
+- NVIDIA drivers matching your CUDA version  
+- [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads)  (nvcc) installed and added to PATH  
+- Python 3.8+ & pip
+
+### Install from PyPI
+```bash
+pip install cuimgops
+```
+## Usage
+
+```python
+from cuimgops import *
+from PIL import Image
+
+img = Image.open("image.jpg")
+
+flipped = get_horizontal_flip(img)
+noisy = get_gaussian_noise(img, mean=0.0, stddev=15.0)
+edges = get_edge_detection(img)
+blurred = get_blur(img)
+sharpened = get_sharpening(img)
+```
