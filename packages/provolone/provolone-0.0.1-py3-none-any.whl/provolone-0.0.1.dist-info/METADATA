@@ -1,0 +1,242 @@
+Metadata-Version: 2.4
+Name: provolone
+Version: 0.0.1
+Summary: Package to create and track provenance metadata for datasets
+Author: Daniel Greenwald
+License: MIT
+Project-URL: Homepage, https://github.com/dgreenwald/provolone
+Project-URL: Repository, https://github.com/dgreenwald/provolone
+Project-URL: Issues, https://github.com/dgreenwald/provolone/issues
+Keywords: data,economics,datasets,pandas,snapshots
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=2.1
+Requires-Dist: pyarrow>=17
+Requires-Dist: pydantic>=2.8
+Requires-Dist: pydantic-settings>=2.3
+Requires-Dist: python-dateutil>=2.9
+Requires-Dist: typer>=0.9.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.2; extra == "dev"
+Requires-Dist: ruff>=0.6; extra == "dev"
+Requires-Dist: black>=24.8; extra == "dev"
+Requires-Dist: mypy>=1.11; extra == "dev"
+Dynamic: license-file
+
+# provolone
+
+A Python library to create and maintain provenance-related metadata while processing raw files into analysis datasets. 
+
+This package provides a complete pipeline for provenance-related metadata. It allows you to create initial metadata for existing files, or add it to files as you download them. Once created, the provenance metadata will be propagated through to the final analysis dataset. The package provides the ability to freeze "snapshots" of data that cannot be overwritten, allowing easy preservation. Last, the package automatically tracks the steps that were taken in the processing of the raw files and stores them as additional metadata, allowing you to see and execute the steps taken to create a given final dataset from raw files, even if the code used to create the final dataset has since changed.
+
+## Installation
+
+Install the package from source:
+
+```bash
+git clone https://github.com/dgreenwald/provolone.git
+cd provolone
+pip install -e ".[dev]"
+```
+
+## Quick Start
+
+### Loading Datasets
+
+Load a dataset using the main API:
+
+```python
+import provolone
+
+# Load a dataset
+df = provolone.load("example")
+
+# Load with metadata
+df, metadata = provolone.load_with_metadata("example")
+
+# List available datasets
+datasets = provolone.list_datasets()
+print(datasets)  # ['example']
+```
+
+### Using Snapshots
+
+Snapshots allow you to freeze datasets at specific points in time:
+
+```python
+# Create a snapshot
+provolone.freeze("example", snapshot="2024-01-15")
+
+# Load from a snapshot
+df = provolone.load("example", snapshot="2024-01-15")
+```
+
+### Command Line Interface
+
+provolone provides a CLI for common operations:
+
+```bash
+# Build a dataset and display info
+provolone build example
+
+# Build with parameters
+provolone build example --params vintage=2024
+
+# Build and display the first 10 rows
+provolone build example --head 10
+
+# Create a snapshot (freeze dataset at a point in time)
+provolone freeze example --label 2024-01-15
+
+# Create a snapshot with parameters
+provolone freeze example --label prod-2024 --params vintage=2024
+
+# Force overwrite an existing snapshot
+provolone freeze example --label 2024-01-15 --force
+
+# List available snapshots for a dataset
+provolone list example
+
+# List snapshots from a custom directory
+provolone list example --snapshot-dir /custom/path
+
+# Display metadata information for a cached dataset
+provolone info example
+
+# Display metadata for a specific snapshot
+provolone info example --snapshot 2024-01-15
+
+# Display metadata from a custom directory
+provolone info example --snapshot-dir /custom/path
+
+# Tag a file with metadata (creates sidecar .meta.json file)
+provolone tag data.csv --raw_file_url "https://example.com/data.csv"
+
+# Tag with source and notes
+provolone tag data.csv \
+  --raw_file_source "Bureau of Labor Statistics" \
+  --raw_file_notes "Downloaded on 2024-12-27"
+
+# Download a file from URL and automatically tag it
+provolone download https://example.com/data.csv
+
+# Download to a specific destination
+provolone download https://example.com/data.csv --destination /path/to/file.csv
+
+# Download with metadata
+provolone download https://example.com/data.csv \
+  --source "Bureau of Labor Statistics" \
+  --notes "Production data 2024"
+```
+
+## Configuration
+
+provolone uses environment variables for configuration:
+
+```bash
+export PROVOLONE_DATA_ROOT="~/data"              # Where raw data files are stored
+export PROVOLONE_CACHE_DIR="~/.cache/provolone"    # Cache directory
+export PROVOLONE_SNAPSHOTS_DIR="~/.local/share/provolone/snapshots"  # Snapshots directory
+export PROVOLONE_IO_FORMAT="parquet"             # File format: "parquet" or "feather"  
+export PROVOLONE_IO_COMPRESSION="zstd"           # Compression: "zstd", "lz4", or None
+```
+
+You can also create a `.env` file in your project directory.
+
+## Creating Custom Datasets
+
+To create a new dataset, inherit from `BaseDataset`:
+
+```python
+from provolone.datasets.base import BaseDataset
+from provolone.datasets import register
+import pandas as pd
+
+@register("my_dataset")
+class MyDataset(BaseDataset):
+    name = "my_dataset"
+    frequency = "m"  # monthly
+    
+    def fetch(self):
+        """Download or locate raw data files."""
+        # Return path to raw data or None if data is in-memory
+        pass
+    
+    def parse(self, raw) -> pd.DataFrame:
+        """Convert raw data to DataFrame."""
+        # Parse raw data into pandas DataFrame
+        pass
+    
+    def transform(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Apply dataset-specific transformations."""
+        # Optional: apply custom transformations
+        return df
+```
+
+Register your dataset in `pyproject.toml`:
+
+```toml
+[project.entry-points."provolone.datasets"]
+my_dataset = "my_package.my_dataset.loader"
+```
+
+## Architecture
+
+### Package Structure
+- **Source Layout**: Uses `src/provolone/` layout with installable package
+- **Tests**: Located in `tests/` with pytest framework
+- **Configuration**: Managed via `src/provolone/config.py` with Pydantic settings
+- **CLI**: Available via `src/provolone/cli.py` using Typer
+- **Datasets**: Plugin-based system in `src/provolone/datasets/`
+- **Caching**: Data caching and snapshots via `src/provolone/cache.py` and `src/provolone/snapshots.py`
+
+### Key Features
+
+1. **Intelligent Caching**: Datasets are automatically cached to avoid recomputation
+2. **Snapshot System**: Create immutable dataset versions with metadata
+3. **Plugin Architecture**: Easy to add new datasets via entry points
+4. **Format Support**: Supports Parquet and Feather with compression
+5. **Metadata Tracking**: Comprehensive metadata for data lineage and verification
+6. **CLI Interface**: Command-line tools for data operations
+
+### Data Processing Pipeline
+
+1. **Fetch**: Get raw data (files, APIs, etc.)
+2. **Parse**: Convert to pandas DataFrame  
+3. **Transform**: Apply dataset-specific processing
+4. **Standardize**: Normalize columns, handle indexes
+5. **Cache**: Store processed data for reuse
+
+## Development
+
+### Running Tests
+
+```bash
+pytest
+```
+
+### Code Quality
+
+```bash
+# Format code
+black src/ tests/
+
+# Lint code  
+ruff check src/ tests/
+
+# Type checking
+mypy src/
+```
+
+## License
+
+MIT License
