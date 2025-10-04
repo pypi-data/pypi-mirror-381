@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: errorx
+Version: 0.2.0
+Summary: Advanced Python Error Explainer and Fix Suggestion Module for developers
+Author-email: Himanshu <himanshu9384r@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/himanshu9384R/errorx
+Project-URL: Source, https://github.com/himanshu9384R/errorx
+Project-URL: Documentation, https://github.com/himanshu9384R/errorx#readme
+Project-URL: Contact, https://t.me/Kakkarotofficial
+Keywords: python,error,debug,fix,advanced,premium,high-level,traceback
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Debuggers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# ErrorX
+
+**ErrorX** is a premium Python module that provides advanced error explanations with fixes.  
+It helps coders understand why errors occur and how to solve them effectively.
+
+## Features
+- Explains Python errors in plain English
+- Suggests fixes and examples
+- Advanced traceback analysis
+- Premium, high-level, professional package
+
+## Installation
+```bash
+pip install errorx

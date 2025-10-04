@@ -1,0 +1,14 @@
+errors/__init__.py,sha256=VA_BbX6QnwlZ50DrvM-w2xmUdV_-lpGDUNAFpr2qLac,247
+errors/attribute_error.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+errors/index_error.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+errors/key_error.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+errors/module_not_found_error.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+errors/name_error.py,sha256=X9SorGCEys2riKPzwIXoBJk2SPLb0P5LKifAdTs1hVQ,593
+errors/type_error.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+errors/value_error.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+errors/zero_division_error.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+errorx-0.2.0.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+errorx-0.2.0.dist-info/METADATA,sha256=kZH1Sfoy6idN5n9On6I9AV6lUDj0kYX1UWt8cEI_TKg,1384
+errorx-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+errorx-0.2.0.dist-info/top_level.txt,sha256=-faFb0nzS6Z57ipYdQq5ZNGvg1JQqD5XUIharWfpR7g,7
+errorx-0.2.0.dist-info/RECORD,,
