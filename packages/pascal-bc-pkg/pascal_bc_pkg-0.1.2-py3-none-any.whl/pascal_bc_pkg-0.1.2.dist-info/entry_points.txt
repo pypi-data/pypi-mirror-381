@@ -1,0 +1,2 @@
+[console_scripts]
+greet = pascal_bc_pkg.greet:main
