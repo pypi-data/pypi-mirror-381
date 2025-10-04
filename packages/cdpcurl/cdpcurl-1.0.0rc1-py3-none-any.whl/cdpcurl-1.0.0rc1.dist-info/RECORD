@@ -1,0 +1,12 @@
+cdpcurl/__init__.py,sha256=nTq0OSx_D9r01RbtneBnu9JJC7U3UwBNYwXnOunguhY,601
+cdpcurl/__main__.py,sha256=hMetFqbxFSaTfef0PgRCqXecT-_7HqvwU5wtuE8Vwik,816
+cdpcurl/_version.py,sha256=3g30mol68GNxEVPhmNAR6647MApWZhmGmc6dYTcFXKQ,654
+cdpcurl/cdpconfig.py,sha256=cSDYMcbTIAqNCgHDiyl_og2PIPcsDF4d_kgTXZc-dhQ,2064
+cdpcurl/cdpcurl.py,sha256=EUkTr6pI_91ZPCR0oyVSDDgm3B0a884gBTuKX2rNke8,7090
+cdpcurl/cdpv1sign.py,sha256=3BqztEYI03SD-pncMkVTmpQ9KO_QexvQ8A6aVmQYCxc,5869
+cdpcurl-1.0.0rc1.dist-info/METADATA,sha256=rRiRwU06HhACj-ARNMtGovR4I1ghIbYsH_h-4bmOzRk,16478
+cdpcurl-1.0.0rc1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+cdpcurl-1.0.0rc1.dist-info/entry_points.txt,sha256=tZhOuzd9RNNVgluLe66aAaPJdjLNlwLyiQlI3NMYobA,82
+cdpcurl-1.0.0rc1.dist-info/licenses/LICENSE,sha256=psuoW8kuDP96RQsdhzwOqi6fyWv0ct8CR6Jr7He_P_k,10173
+cdpcurl-1.0.0rc1.dist-info/licenses/NOTICE.txt,sha256=drnPopboBG1-NjX9VU8JZJD5IfmV_AcqaKLOQsHuzn0,1930
+cdpcurl-1.0.0rc1.dist-info/RECORD,,
