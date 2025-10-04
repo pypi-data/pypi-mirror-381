@@ -1,0 +1,2 @@
+[console_scripts]
+jupyter-acp = jupyter_acp.server:server
