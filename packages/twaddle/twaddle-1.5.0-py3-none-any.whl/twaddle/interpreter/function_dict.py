@@ -1,0 +1,33 @@
+from .function_definitions import (
+    abbreviate,
+    case,
+    copy,
+    first,
+    hide,
+    last,
+    match,
+    rand,
+    repeat,
+    reverse,
+    save,
+    separator,
+    sync,
+)
+
+function_definitions = {
+    "abbr": abbreviate,
+    "abbreviate": abbreviate,
+    "case": case,
+    "copy": copy,
+    "first": first,
+    "hide": hide,
+    "last": last,
+    "match": match,
+    "rand": rand,
+    "rep": repeat,
+    "reverse": reverse,
+    "save": save,
+    "sep": separator,
+    "x": sync,
+    "sync": sync,
+}
