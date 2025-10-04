@@ -1,0 +1,9 @@
+click
+cryptography
+requests
+
+[test]
+parameterized
+pytest
+pytest-cov
+lorem-text

@@ -1,0 +1,6 @@
+__title__ = 'crunch-encrypt'
+__description__ = 'crunch-encrypt - Encryption module for the CrunchDAO Platform'
+__version__ = '0.1.0'
+__author__ = 'Enzo CACERES'
+__author_email__ = 'enzo.caceres@crunchdao.com'
+__url__ = 'https://github.com/crunchdao/crunch-encrypt'
