@@ -1,0 +1,6 @@
+automesh-0.3.4.dist-info/METADATA,sha256=VtN0pLHWycjSR6BmXpTdeITvWZnzK_ENgUK34ot1sJI,1032
+automesh-0.3.4.dist-info/WHEEL,sha256=Iz7QqxpWQRXToFIDkGspPPKDuV_klwuhW8ziiU5jhR8,96
+automesh-0.3.4.dist-info/licenses/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+automesh/__init__.py,sha256=Ty-XFcl_XFufFgDBZ-CN4QGTpZ2MXMw5NhTJ70bXWIg,115
+automesh/automesh.cp310-win_amd64.pyd,sha256=PFji2aCne1WHJHI90SKeAgwjT3xuL-GFcSHHmoiITyw,27321856
+automesh-0.3.4.dist-info/RECORD,,
