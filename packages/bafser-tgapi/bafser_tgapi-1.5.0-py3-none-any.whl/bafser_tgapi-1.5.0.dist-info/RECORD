@@ -1,0 +1,15 @@
+bafser_tgapi/__init__.py,sha256=UR438DuvIKd4MgbSDhHmNF-iZjR6MRdRMc0iLSCUgmY,411
+bafser_tgapi/bot.py,sha256=a0GrKuo0eXTx871C_dLv3a2U84rIAYEyXvyFuNYYBDI,14366
+bafser_tgapi/bot_with_db.py,sha256=A3iIh28chfGuU6zckF35PP7CM__Uqs2Zu_7owWiURSI,1478
+bafser_tgapi/helpers.py,sha256=m9xNOST1TXaqWPWY_aMejJsGjeRxASdfpJHEMhHeqd8,2504
+bafser_tgapi/methods.py,sha256=KdNNPLz8c8KyYkpS2_z4Jf-hj7GE5YRD4PKDgEWPMr0,11743
+bafser_tgapi/types.py,sha256=XNaMyPF2inhvIKLXMMFbDdVs_NJJmQ2ChljUwLJMAKo,12308
+bafser_tgapi/utils.py,sha256=HcRCb1-fE8xcSMtcdmMBgfaA0RQ9F5KMnmZWr92VJiw,7570
+bafser_tgapi/db/msg.py,sha256=kZQK_duXv6gl-kdljx8wsxg75FSvjjPlTtwJOd5JsF4,1819
+bafser_tgapi/db/user.py,sha256=3CvRBnqhNfIWWtvmFxXKRx4NX3dSY-IyFiIf1o-LXL0,3164
+bafser_tgapi/tools/stickers.html,sha256=7BAW96yx5psCcOFiDqIoR4uZUH7ze9s77Zse8NIJ3rA,6144
+bafser_tgapi/tools/stickers.py,sha256=STKeU6t_0RMsq8W9bnRNDOfsWthLrY6h04pVWd8bDLE,816
+bafser_tgapi-1.5.0.dist-info/METADATA,sha256=U5qG_O-M5sJ8Tvytjn6_6K9MrYG3pvvDoKFjMyBYR18,2086
+bafser_tgapi-1.5.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+bafser_tgapi-1.5.0.dist-info/licenses/LICENSE,sha256=KnwobioUD95na9chjt9X3VNZRoNm373L-htaEgrQkCc,1064
+bafser_tgapi-1.5.0.dist-info/RECORD,,
