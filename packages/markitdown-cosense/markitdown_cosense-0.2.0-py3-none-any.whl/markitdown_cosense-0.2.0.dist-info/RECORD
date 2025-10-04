@@ -1,0 +1,10 @@
+markitdown_cosense/__init__.py,sha256=LWDaI1JBuy8Be6T_D_3lS0NIL0bBVBY7dJIfrk7TVfI,282
+markitdown_cosense/_plugin.py,sha256=Hx1jPZ6wUycvf5xhr_d64kvxeuL7Xkvfu_HjK85eoSQ,2348
+markitdown_cosense/parser.py,sha256=_LOP0ejm3xjlbnohWblwilV-Zqlk91cG3pNwWcdK72o,11228
+markitdown_cosense/renderer.py,sha256=07Jlq9dlS9Mw80YZI_7YjUGT7cXk20QvPxR74-zO1tc,7359
+markitdown_cosense-0.2.0.dist-info/licenses/LICENSE,sha256=D63V7wYVic1bwmq79kCxL9okn7HdlaoJ0too_vJ8LL0,1063
+markitdown_cosense-0.2.0.dist-info/METADATA,sha256=Yh_PwzUgwr1oX0oNMOHcoFaBRT4XR-zgkCD0L7OvbIg,2249
+markitdown_cosense-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+markitdown_cosense-0.2.0.dist-info/entry_points.txt,sha256=BkLrFPlYeHeXuykl3pclx4xywFwCgUK-nCSu8VF121I,60
+markitdown_cosense-0.2.0.dist-info/top_level.txt,sha256=rs3Ha_XfbY6RemjYc4Dq_93pbLFgk8wJ7Z-YH-7r-FY,19
+markitdown_cosense-0.2.0.dist-info/RECORD,,
