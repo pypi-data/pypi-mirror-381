@@ -1,0 +1,4 @@
+[console_scripts]
+alumnium=alumnium.cli:main
+alumnium-server=alumnium.server.main:main
+
