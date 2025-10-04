@@ -1,0 +1,232 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/cloud/aiplatform/v1beta1/prediction_service.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import httpbody_pb2 as google_dot_api_dot_httpbody__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from .....google.cloud.aiplatform.v1beta1 import content_pb2 as google_dot_cloud_dot_aiplatform_dot_v1beta1_dot_content__pb2
+from .....google.cloud.aiplatform.v1beta1 import explanation_pb2 as google_dot_cloud_dot_aiplatform_dot_v1beta1_dot_explanation__pb2
+from .....google.cloud.aiplatform.v1beta1 import tool_pb2 as google_dot_cloud_dot_aiplatform_dot_v1beta1_dot_tool__pb2
+from .....google.cloud.aiplatform.v1beta1 import types_pb2 as google_dot_cloud_dot_aiplatform_dot_v1beta1_dot_types__pb2
+from google.protobuf import struct_pb2 as google_dot_protobuf_dot_struct__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n8google/cloud/aiplatform/v1beta1/prediction_service.proto\x12\x1fgoogle.cloud.aiplatform.v1beta1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/httpbody.proto\x1a\x19google/api/resource.proto\x1a-google/cloud/aiplatform/v1beta1/content.proto\x1a1google/cloud/aiplatform/v1beta1/explanation.proto\x1a*google/cloud/aiplatform/v1beta1/tool.proto\x1a+google/cloud/aiplatform/v1beta1/types.proto\x1a\x1cgoogle/protobuf/struct.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\xaa\x01\n\x0ePredictRequest\x12<\n\x08endpoint\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint\x12.\n\tinstances\x18\x02 \x03(\x0b2\x16.google.protobuf.ValueB\x03\xe0A\x02\x12*\n\nparameters\x18\x03 \x01(\x0b2\x16.google.protobuf.Value"\x80\x02\n\x0fPredictResponse\x12+\n\x0bpredictions\x18\x01 \x03(\x0b2\x16.google.protobuf.Value\x12\x19\n\x11deployed_model_id\x18\x02 \x01(\t\x126\n\x05model\x18\x03 \x01(\tB\'\xe0A\x03\xfaA!\n\x1faiplatform.googleapis.com/Model\x12\x1d\n\x10model_version_id\x18\x05 \x01(\tB\x03\xe0A\x03\x12\x1f\n\x12model_display_name\x18\x04 \x01(\tB\x03\xe0A\x03\x12-\n\x08metadata\x18\x06 \x01(\x0b2\x16.google.protobuf.ValueB\x03\xe0A\x03"z\n\x11RawPredictRequest\x12<\n\x08endpoint\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint\x12\'\n\thttp_body\x18\x02 \x01(\x0b2\x14.google.api.HttpBody"\x80\x01\n\x17StreamRawPredictRequest\x12<\n\x08endpoint\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint\x12\'\n\thttp_body\x18\x02 \x01(\x0b2\x14.google.api.HttpBody"\xca\x01\n\x14DirectPredictRequest\x12<\n\x08endpoint\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint\x127\n\x06inputs\x18\x02 \x03(\x0b2\'.google.cloud.aiplatform.v1beta1.Tensor\x12;\n\nparameters\x18\x03 \x01(\x0b2\'.google.cloud.aiplatform.v1beta1.Tensor"\x8e\x01\n\x15DirectPredictResponse\x128\n\x07outputs\x18\x01 \x03(\x0b2\'.google.cloud.aiplatform.v1beta1.Tensor\x12;\n\nparameters\x18\x02 \x01(\x0b2\'.google.cloud.aiplatform.v1beta1.Tensor"{\n\x17DirectRawPredictRequest\x12<\n\x08endpoint\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint\x12\x13\n\x0bmethod_name\x18\x02 \x01(\t\x12\r\n\x05input\x18\x03 \x01(\x0c"*\n\x18DirectRawPredictResponse\x12\x0e\n\x06output\x18\x01 \x01(\x0c"\xda\x01\n\x1aStreamDirectPredictRequest\x12<\n\x08endpoint\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint\x12<\n\x06inputs\x18\x02 \x03(\x0b2\'.google.cloud.aiplatform.v1beta1.TensorB\x03\xe0A\x01\x12@\n\nparameters\x18\x03 \x01(\x0b2\'.google.cloud.aiplatform.v1beta1.TensorB\x03\xe0A\x01"\x94\x01\n\x1bStreamDirectPredictResponse\x128\n\x07outputs\x18\x01 \x03(\x0b2\'.google.cloud.aiplatform.v1beta1.Tensor\x12;\n\nparameters\x18\x02 \x01(\x0b2\'.google.cloud.aiplatform.v1beta1.Tensor"\x8b\x01\n\x1dStreamDirectRawPredictRequest\x12<\n\x08endpoint\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint\x12\x18\n\x0bmethod_name\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x12\n\x05input\x18\x03 \x01(\x0cB\x03\xe0A\x01"0\n\x1eStreamDirectRawPredictResponse\x12\x0e\n\x06output\x18\x01 \x01(\x0c"\xcd\x01\n\x17StreamingPredictRequest\x12<\n\x08endpoint\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint\x127\n\x06inputs\x18\x02 \x03(\x0b2\'.google.cloud.aiplatform.v1beta1.Tensor\x12;\n\nparameters\x18\x03 \x01(\x0b2\'.google.cloud.aiplatform.v1beta1.Tensor"\x91\x01\n\x18StreamingPredictResponse\x128\n\x07outputs\x18\x01 \x03(\x0b2\'.google.cloud.aiplatform.v1beta1.Tensor\x12;\n\nparameters\x18\x02 \x01(\x0b2\'.google.cloud.aiplatform.v1beta1.Tensor"~\n\x1aStreamingRawPredictRequest\x12<\n\x08endpoint\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint\x12\x13\n\x0bmethod_name\x18\x02 \x01(\t\x12\r\n\x05input\x18\x03 \x01(\x0c"-\n\x1bStreamingRawPredictResponse\x12\x0e\n\x06output\x18\x01 \x01(\x0c"\xb3\x04\n\x0eExplainRequest\x12<\n\x08endpoint\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint\x12.\n\tinstances\x18\x02 \x03(\x0b2\x16.google.protobuf.ValueB\x03\xe0A\x02\x12*\n\nparameters\x18\x04 \x01(\x0b2\x16.google.protobuf.Value\x12[\n\x19explanation_spec_override\x18\x05 \x01(\x0b28.google.cloud.aiplatform.v1beta1.ExplanationSpecOverride\x12\x89\x01\n$concurrent_explanation_spec_override\x18\x06 \x03(\x0b2V.google.cloud.aiplatform.v1beta1.ExplainRequest.ConcurrentExplanationSpecOverrideEntryB\x03\xe0A\x01\x12\x19\n\x11deployed_model_id\x18\x03 \x01(\t\x1a\x82\x01\n&ConcurrentExplanationSpecOverrideEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12G\n\x05value\x18\x02 \x01(\x0b28.google.cloud.aiplatform.v1beta1.ExplanationSpecOverride:\x028\x01"\xf1\x03\n\x0fExplainResponse\x12B\n\x0cexplanations\x18\x01 \x03(\x0b2,.google.cloud.aiplatform.v1beta1.Explanation\x12m\n\x17concurrent_explanations\x18\x04 \x03(\x0b2L.google.cloud.aiplatform.v1beta1.ExplainResponse.ConcurrentExplanationsEntry\x12\x19\n\x11deployed_model_id\x18\x02 \x01(\t\x12+\n\x0bpredictions\x18\x03 \x03(\x0b2\x16.google.protobuf.Value\x1a[\n\x15ConcurrentExplanation\x12B\n\x0cexplanations\x18\x01 \x03(\x0b2,.google.cloud.aiplatform.v1beta1.Explanation\x1a\x85\x01\n\x1bConcurrentExplanationsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12U\n\x05value\x18\x02 \x01(\x0b2F.google.cloud.aiplatform.v1beta1.ExplainResponse.ConcurrentExplanation:\x028\x01"\xe7\x03\n\x12CountTokensRequest\x12<\n\x08endpoint\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint\x12\x12\n\x05model\x18\x03 \x01(\tB\x03\xe0A\x01\x12.\n\tinstances\x18\x02 \x03(\x0b2\x16.google.protobuf.ValueB\x03\xe0A\x01\x12?\n\x08contents\x18\x04 \x03(\x0b2(.google.cloud.aiplatform.v1beta1.ContentB\x03\xe0A\x01\x12N\n\x12system_instruction\x18\x05 \x01(\x0b2(.google.cloud.aiplatform.v1beta1.ContentB\x03\xe0A\x01H\x00\x88\x01\x01\x129\n\x05tools\x18\x06 \x03(\x0b2%.google.cloud.aiplatform.v1beta1.ToolB\x03\xe0A\x01\x12V\n\x11generation_config\x18\x07 \x01(\x0b21.google.cloud.aiplatform.v1beta1.GenerationConfigB\x03\xe0A\x01H\x01\x88\x01\x01B\x15\n\x13_system_instructionB\x14\n\x12_generation_config"\xa7\x01\n\x13CountTokensResponse\x12\x14\n\x0ctotal_tokens\x18\x01 \x01(\x05\x12!\n\x19total_billable_characters\x18\x02 \x01(\x05\x12W\n\x15prompt_tokens_details\x18\x03 \x03(\x0b23.google.cloud.aiplatform.v1beta1.ModalityTokenCountB\x03\xe0A\x03"\x9d\x06\n\x16GenerateContentRequest\x12\x12\n\x05model\x18\x05 \x01(\tB\x03\xe0A\x02\x12?\n\x08contents\x18\x02 \x03(\x0b2(.google.cloud.aiplatform.v1beta1.ContentB\x03\xe0A\x02\x12N\n\x12system_instruction\x18\x08 \x01(\x0b2(.google.cloud.aiplatform.v1beta1.ContentB\x03\xe0A\x01H\x00\x88\x01\x01\x12G\n\x0ecached_content\x18\t \x01(\tB/\xe0A\x01\xfaA)\n\'aiplatform.googleapis.com/CachedContent\x129\n\x05tools\x18\x06 \x03(\x0b2%.google.cloud.aiplatform.v1beta1.ToolB\x03\xe0A\x01\x12E\n\x0btool_config\x18\x07 \x01(\x0b2+.google.cloud.aiplatform.v1beta1.ToolConfigB\x03\xe0A\x01\x12X\n\x06labels\x18\n \x03(\x0b2C.google.cloud.aiplatform.v1beta1.GenerateContentRequest.LabelsEntryB\x03\xe0A\x01\x12L\n\x0fsafety_settings\x18\x03 \x03(\x0b2..google.cloud.aiplatform.v1beta1.SafetySettingB\x03\xe0A\x01\x12R\n\x12model_armor_config\x18\x0b \x01(\x0b21.google.cloud.aiplatform.v1beta1.ModelArmorConfigB\x03\xe0A\x01\x12Q\n\x11generation_config\x18\x04 \x01(\x0b21.google.cloud.aiplatform.v1beta1.GenerationConfigB\x03\xe0A\x01\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01B\x15\n\x13_system_instruction"\xc8\t\n\x17GenerateContentResponse\x12C\n\ncandidates\x18\x02 \x03(\x0b2*.google.cloud.aiplatform.v1beta1.CandidateB\x03\xe0A\x03\x12\x1a\n\rmodel_version\x18\x0b \x01(\tB\x03\xe0A\x03\x124\n\x0bcreate_time\x18\x0c \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12\x18\n\x0bresponse_id\x18\r \x01(\tB\x03\xe0A\x03\x12e\n\x0fprompt_feedback\x18\x03 \x01(\x0b2G.google.cloud.aiplatform.v1beta1.GenerateContentResponse.PromptFeedbackB\x03\xe0A\x03\x12^\n\x0eusage_metadata\x18\x04 \x01(\x0b2F.google.cloud.aiplatform.v1beta1.GenerateContentResponse.UsageMetadata\x1a\xf1\x02\n\x0ePromptFeedback\x12p\n\x0cblock_reason\x18\x01 \x01(\x0e2U.google.cloud.aiplatform.v1beta1.GenerateContentResponse.PromptFeedback.BlockedReasonB\x03\xe0A\x03\x12J\n\x0esafety_ratings\x18\x02 \x03(\x0b2-.google.cloud.aiplatform.v1beta1.SafetyRatingB\x03\xe0A\x03\x12!\n\x14block_reason_message\x18\x03 \x01(\tB\x03\xe0A\x03"~\n\rBlockedReason\x12\x1e\n\x1aBLOCKED_REASON_UNSPECIFIED\x10\x00\x12\n\n\x06SAFETY\x10\x01\x12\t\n\x05OTHER\x10\x02\x12\r\n\tBLOCKLIST\x10\x03\x12\x16\n\x12PROHIBITED_CONTENT\x10\x04\x12\x0f\n\x0bMODEL_ARMOR\x10\x05\x1a\xc0\x03\n\rUsageMetadata\x12\x1a\n\x12prompt_token_count\x18\x01 \x01(\x05\x12\x1e\n\x16candidates_token_count\x18\x02 \x01(\x05\x12!\n\x14thoughts_token_count\x18\x0e \x01(\x05B\x03\xe0A\x03\x12\x19\n\x11total_token_count\x18\x03 \x01(\x05\x12\'\n\x1acached_content_token_count\x18\x05 \x01(\x05B\x03\xe0A\x03\x12W\n\x15prompt_tokens_details\x18\t \x03(\x0b23.google.cloud.aiplatform.v1beta1.ModalityTokenCountB\x03\xe0A\x03\x12V\n\x14cache_tokens_details\x18\n \x03(\x0b23.google.cloud.aiplatform.v1beta1.ModalityTokenCountB\x03\xe0A\x03\x12[\n\x19candidates_tokens_details\x18\x0b \x03(\x0b23.google.cloud.aiplatform.v1beta1.ModalityTokenCountB\x03\xe0A\x03"\x84\x01\n\x16ChatCompletionsRequest\x12<\n\x08endpoint\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint\x12,\n\thttp_body\x18\x02 \x01(\x0b2\x14.google.api.HttpBodyB\x03\xe0A\x01"\x83\x01\n\x1aPredictLongRunningResponse\x12Y\n\x17generate_video_response\x18\x01 \x01(\x0b26.google.cloud.aiplatform.v1beta1.GenerateVideoResponseH\x00B\n\n\x08response"\x1c\n\x1aPredictLongRunningMetadata"\x9a\x01\n\x15GenerateVideoResponse\x12\x19\n\x11generated_samples\x18\x01 \x03(\t\x12%\n\x18rai_media_filtered_count\x18\x02 \x01(\x05H\x00\x88\x01\x01\x12"\n\x1arai_media_filtered_reasons\x18\x03 \x03(\tB\x1b\n\x19_rai_media_filtered_count2\xc1 \n\x11PredictionService\x12\xa8\x02\n\x07Predict\x12/.google.cloud.aiplatform.v1beta1.PredictRequest\x1a0.google.cloud.aiplatform.v1beta1.PredictResponse"\xb9\x01\xdaA\x1dendpoint,instances,parameters\x82\xd3\xe4\x93\x02\x92\x01">/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}:predict:\x01*ZM"H/v1beta1/{endpoint=projects/*/locations/*/publishers/*/models/*}:predict:\x01*\x12\x8d\x02\n\nRawPredict\x122.google.cloud.aiplatform.v1beta1.RawPredictRequest\x1a\x14.google.api.HttpBody"\xb4\x01\xdaA\x12endpoint,http_body\x82\xd3\xe4\x93\x02\x98\x01"A/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}:rawPredict:\x01*ZP"K/v1beta1/{endpoint=projects/*/locations/*/publishers/*/models/*}:rawPredict:\x01*\x12\xa7\x02\n\x10StreamRawPredict\x128.google.cloud.aiplatform.v1beta1.StreamRawPredictRequest\x1a\x14.google.api.HttpBody"\xc0\x01\xdaA\x12endpoint,http_body\x82\xd3\xe4\x93\x02\xa4\x01"G/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}:streamRawPredict:\x01*ZV"Q/v1beta1/{endpoint=projects/*/locations/*/publishers/*/models/*}:streamRawPredict:\x01*0\x01\x12\xcf\x01\n\rDirectPredict\x125.google.cloud.aiplatform.v1beta1.DirectPredictRequest\x1a6.google.cloud.aiplatform.v1beta1.DirectPredictResponse"O\x82\xd3\xe4\x93\x02I"D/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}:directPredict:\x01*\x12\xdb\x01\n\x10DirectRawPredict\x128.google.cloud.aiplatform.v1beta1.DirectRawPredictRequest\x1a9.google.cloud.aiplatform.v1beta1.DirectRawPredictResponse"R\x82\xd3\xe4\x93\x02L"G/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}:directRawPredict:\x01*\x12\x96\x01\n\x13StreamDirectPredict\x12;.google.cloud.aiplatform.v1beta1.StreamDirectPredictRequest\x1a<.google.cloud.aiplatform.v1beta1.StreamDirectPredictResponse"\x00(\x010\x01\x12\x9f\x01\n\x16StreamDirectRawPredict\x12>.google.cloud.aiplatform.v1beta1.StreamDirectRawPredictRequest\x1a?.google.cloud.aiplatform.v1beta1.StreamDirectRawPredictResponse"\x00(\x010\x01\x12\x8d\x01\n\x10StreamingPredict\x128.google.cloud.aiplatform.v1beta1.StreamingPredictRequest\x1a9.google.cloud.aiplatform.v1beta1.StreamingPredictResponse"\x00(\x010\x01\x12\xc9\x02\n\x16ServerStreamingPredict\x128.google.cloud.aiplatform.v1beta1.StreamingPredictRequest\x1a9.google.cloud.aiplatform.v1beta1.StreamingPredictResponse"\xb7\x01\x82\xd3\xe4\x93\x02\xb0\x01"M/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}:serverStreamingPredict:\x01*Z\\"W/v1beta1/{endpoint=projects/*/locations/*/publishers/*/models/*}:serverStreamingPredict:\x01*0\x01\x12\x96\x01\n\x13StreamingRawPredict\x12;.google.cloud.aiplatform.v1beta1.StreamingRawPredictRequest\x1a<.google.cloud.aiplatform.v1beta1.StreamingRawPredictResponse"\x00(\x010\x01\x12\xe9\x01\n\x07Explain\x12/.google.cloud.aiplatform.v1beta1.ExplainRequest\x1a0.google.cloud.aiplatform.v1beta1.ExplainResponse"{\xdaA/endpoint,instances,parameters,deployed_model_id\x82\xd3\xe4\x93\x02C">/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}:explain:\x01*\x12\x9f\x03\n\x0bCountTokens\x123.google.cloud.aiplatform.v1beta1.CountTokensRequest\x1a4.google.cloud.aiplatform.v1beta1.CountTokensResponse"\xa4\x02\xdaA\x12endpoint,instances\x82\xd3\xe4\x93\x02\x88\x02"B/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}:countTokens:\x01*ZQ"L/v1beta1/{endpoint=projects/*/locations/*/publishers/*/models/*}:countTokens:\x01*Z0"+/v1beta1/{endpoint=endpoints/*}:countTokens:\x01*Z:"5/v1beta1/{endpoint=publishers/*/models/*}:countTokens:\x01*\x12\xab\x03\n\x0fGenerateContent\x127.google.cloud.aiplatform.v1beta1.GenerateContentRequest\x1a8.google.cloud.aiplatform.v1beta1.GenerateContentResponse"\xa4\x02\xdaA\x0emodel,contents\x82\xd3\xe4\x93\x02\x8c\x02"C/v1beta1/{model=projects/*/locations/*/endpoints/*}:generateContent:\x01*ZR"M/v1beta1/{model=projects/*/locations/*/publishers/*/models/*}:generateContent:\x01*Z1",/v1beta1/{model=endpoints/*}:generateContent:\x01*Z;"6/v1beta1/{model=publishers/*/models/*}:generateContent:\x01*\x12\xcb\x03\n\x15StreamGenerateContent\x127.google.cloud.aiplatform.v1beta1.GenerateContentRequest\x1a8.google.cloud.aiplatform.v1beta1.GenerateContentResponse"\xbc\x02\xdaA\x0emodel,contents\x82\xd3\xe4\x93\x02\xa4\x02"I/v1beta1/{model=projects/*/locations/*/endpoints/*}:streamGenerateContent:\x01*ZX"S/v1beta1/{model=projects/*/locations/*/publishers/*/models/*}:streamGenerateContent:\x01*Z7"2/v1beta1/{model=endpoints/*}:streamGenerateContent:\x01*ZA"</v1beta1/{model=publishers/*/models/*}:streamGenerateContent:\x01*0\x01\x12\xd3\x01\n\x0fChatCompletions\x127.google.cloud.aiplatform.v1beta1.ChatCompletionsRequest\x1a\x14.google.api.HttpBody"o\xdaA\x12endpoint,http_body\x82\xd3\xe4\x93\x02T"G/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}/chat/completions:\thttp_body0\x01\x1a\x86\x01\xcaA\x19aiplatform.googleapis.com\xd2Aghttps://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/cloud-platform.read-onlyB\xed\x01\n#com.google.cloud.aiplatform.v1beta1B\x16PredictionServiceProtoP\x01ZCcloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb;aiplatformpb\xaa\x02\x1fGoogle.Cloud.AIPlatform.V1Beta1\xca\x02\x1fGoogle\\Cloud\\AIPlatform\\V1beta1\xea\x02"Google::Cloud::AIPlatform::V1beta1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.aiplatform.v1beta1.prediction_service_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n#com.google.cloud.aiplatform.v1beta1B\x16PredictionServiceProtoP\x01ZCcloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb;aiplatformpb\xaa\x02\x1fGoogle.Cloud.AIPlatform.V1Beta1\xca\x02\x1fGoogle\\Cloud\\AIPlatform\\V1beta1\xea\x02"Google::Cloud::AIPlatform::V1beta1'
+    _globals['_PREDICTREQUEST'].fields_by_name['endpoint']._loaded_options = None
+    _globals['_PREDICTREQUEST'].fields_by_name['endpoint']._serialized_options = b'\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint'
+    _globals['_PREDICTREQUEST'].fields_by_name['instances']._loaded_options = None
+    _globals['_PREDICTREQUEST'].fields_by_name['instances']._serialized_options = b'\xe0A\x02'
+    _globals['_PREDICTRESPONSE'].fields_by_name['model']._loaded_options = None
+    _globals['_PREDICTRESPONSE'].fields_by_name['model']._serialized_options = b'\xe0A\x03\xfaA!\n\x1faiplatform.googleapis.com/Model'
+    _globals['_PREDICTRESPONSE'].fields_by_name['model_version_id']._loaded_options = None
+    _globals['_PREDICTRESPONSE'].fields_by_name['model_version_id']._serialized_options = b'\xe0A\x03'
+    _globals['_PREDICTRESPONSE'].fields_by_name['model_display_name']._loaded_options = None
+    _globals['_PREDICTRESPONSE'].fields_by_name['model_display_name']._serialized_options = b'\xe0A\x03'
+    _globals['_PREDICTRESPONSE'].fields_by_name['metadata']._loaded_options = None
+    _globals['_PREDICTRESPONSE'].fields_by_name['metadata']._serialized_options = b'\xe0A\x03'
+    _globals['_RAWPREDICTREQUEST'].fields_by_name['endpoint']._loaded_options = None
+    _globals['_RAWPREDICTREQUEST'].fields_by_name['endpoint']._serialized_options = b'\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint'
+    _globals['_STREAMRAWPREDICTREQUEST'].fields_by_name['endpoint']._loaded_options = None
+    _globals['_STREAMRAWPREDICTREQUEST'].fields_by_name['endpoint']._serialized_options = b'\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint'
+    _globals['_DIRECTPREDICTREQUEST'].fields_by_name['endpoint']._loaded_options = None
+    _globals['_DIRECTPREDICTREQUEST'].fields_by_name['endpoint']._serialized_options = b'\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint'
+    _globals['_DIRECTRAWPREDICTREQUEST'].fields_by_name['endpoint']._loaded_options = None
+    _globals['_DIRECTRAWPREDICTREQUEST'].fields_by_name['endpoint']._serialized_options = b'\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint'
+    _globals['_STREAMDIRECTPREDICTREQUEST'].fields_by_name['endpoint']._loaded_options = None
+    _globals['_STREAMDIRECTPREDICTREQUEST'].fields_by_name['endpoint']._serialized_options = b'\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint'
+    _globals['_STREAMDIRECTPREDICTREQUEST'].fields_by_name['inputs']._loaded_options = None
+    _globals['_STREAMDIRECTPREDICTREQUEST'].fields_by_name['inputs']._serialized_options = b'\xe0A\x01'
+    _globals['_STREAMDIRECTPREDICTREQUEST'].fields_by_name['parameters']._loaded_options = None
+    _globals['_STREAMDIRECTPREDICTREQUEST'].fields_by_name['parameters']._serialized_options = b'\xe0A\x01'
+    _globals['_STREAMDIRECTRAWPREDICTREQUEST'].fields_by_name['endpoint']._loaded_options = None
+    _globals['_STREAMDIRECTRAWPREDICTREQUEST'].fields_by_name['endpoint']._serialized_options = b'\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint'
+    _globals['_STREAMDIRECTRAWPREDICTREQUEST'].fields_by_name['method_name']._loaded_options = None
+    _globals['_STREAMDIRECTRAWPREDICTREQUEST'].fields_by_name['method_name']._serialized_options = b'\xe0A\x01'
+    _globals['_STREAMDIRECTRAWPREDICTREQUEST'].fields_by_name['input']._loaded_options = None
+    _globals['_STREAMDIRECTRAWPREDICTREQUEST'].fields_by_name['input']._serialized_options = b'\xe0A\x01'
+    _globals['_STREAMINGPREDICTREQUEST'].fields_by_name['endpoint']._loaded_options = None
+    _globals['_STREAMINGPREDICTREQUEST'].fields_by_name['endpoint']._serialized_options = b'\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint'
+    _globals['_STREAMINGRAWPREDICTREQUEST'].fields_by_name['endpoint']._loaded_options = None
+    _globals['_STREAMINGRAWPREDICTREQUEST'].fields_by_name['endpoint']._serialized_options = b'\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint'
+    _globals['_EXPLAINREQUEST_CONCURRENTEXPLANATIONSPECOVERRIDEENTRY']._loaded_options = None
+    _globals['_EXPLAINREQUEST_CONCURRENTEXPLANATIONSPECOVERRIDEENTRY']._serialized_options = b'8\x01'
+    _globals['_EXPLAINREQUEST'].fields_by_name['endpoint']._loaded_options = None
+    _globals['_EXPLAINREQUEST'].fields_by_name['endpoint']._serialized_options = b'\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint'
+    _globals['_EXPLAINREQUEST'].fields_by_name['instances']._loaded_options = None
+    _globals['_EXPLAINREQUEST'].fields_by_name['instances']._serialized_options = b'\xe0A\x02'
+    _globals['_EXPLAINREQUEST'].fields_by_name['concurrent_explanation_spec_override']._loaded_options = None
+    _globals['_EXPLAINREQUEST'].fields_by_name['concurrent_explanation_spec_override']._serialized_options = b'\xe0A\x01'
+    _globals['_EXPLAINRESPONSE_CONCURRENTEXPLANATIONSENTRY']._loaded_options = None
+    _globals['_EXPLAINRESPONSE_CONCURRENTEXPLANATIONSENTRY']._serialized_options = b'8\x01'
+    _globals['_COUNTTOKENSREQUEST'].fields_by_name['endpoint']._loaded_options = None
+    _globals['_COUNTTOKENSREQUEST'].fields_by_name['endpoint']._serialized_options = b'\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint'
+    _globals['_COUNTTOKENSREQUEST'].fields_by_name['model']._loaded_options = None
+    _globals['_COUNTTOKENSREQUEST'].fields_by_name['model']._serialized_options = b'\xe0A\x01'
+    _globals['_COUNTTOKENSREQUEST'].fields_by_name['instances']._loaded_options = None
+    _globals['_COUNTTOKENSREQUEST'].fields_by_name['instances']._serialized_options = b'\xe0A\x01'
+    _globals['_COUNTTOKENSREQUEST'].fields_by_name['contents']._loaded_options = None
+    _globals['_COUNTTOKENSREQUEST'].fields_by_name['contents']._serialized_options = b'\xe0A\x01'
+    _globals['_COUNTTOKENSREQUEST'].fields_by_name['system_instruction']._loaded_options = None
+    _globals['_COUNTTOKENSREQUEST'].fields_by_name['system_instruction']._serialized_options = b'\xe0A\x01'
+    _globals['_COUNTTOKENSREQUEST'].fields_by_name['tools']._loaded_options = None
+    _globals['_COUNTTOKENSREQUEST'].fields_by_name['tools']._serialized_options = b'\xe0A\x01'
+    _globals['_COUNTTOKENSREQUEST'].fields_by_name['generation_config']._loaded_options = None
+    _globals['_COUNTTOKENSREQUEST'].fields_by_name['generation_config']._serialized_options = b'\xe0A\x01'
+    _globals['_COUNTTOKENSRESPONSE'].fields_by_name['prompt_tokens_details']._loaded_options = None
+    _globals['_COUNTTOKENSRESPONSE'].fields_by_name['prompt_tokens_details']._serialized_options = b'\xe0A\x03'
+    _globals['_GENERATECONTENTREQUEST_LABELSENTRY']._loaded_options = None
+    _globals['_GENERATECONTENTREQUEST_LABELSENTRY']._serialized_options = b'8\x01'
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['model']._loaded_options = None
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['model']._serialized_options = b'\xe0A\x02'
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['contents']._loaded_options = None
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['contents']._serialized_options = b'\xe0A\x02'
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['system_instruction']._loaded_options = None
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['system_instruction']._serialized_options = b'\xe0A\x01'
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['cached_content']._loaded_options = None
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['cached_content']._serialized_options = b"\xe0A\x01\xfaA)\n'aiplatform.googleapis.com/CachedContent"
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['tools']._loaded_options = None
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['tools']._serialized_options = b'\xe0A\x01'
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['tool_config']._loaded_options = None
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['tool_config']._serialized_options = b'\xe0A\x01'
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['labels']._loaded_options = None
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['labels']._serialized_options = b'\xe0A\x01'
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['safety_settings']._loaded_options = None
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['safety_settings']._serialized_options = b'\xe0A\x01'
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['model_armor_config']._loaded_options = None
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['model_armor_config']._serialized_options = b'\xe0A\x01'
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['generation_config']._loaded_options = None
+    _globals['_GENERATECONTENTREQUEST'].fields_by_name['generation_config']._serialized_options = b'\xe0A\x01'
+    _globals['_GENERATECONTENTRESPONSE_PROMPTFEEDBACK'].fields_by_name['block_reason']._loaded_options = None
+    _globals['_GENERATECONTENTRESPONSE_PROMPTFEEDBACK'].fields_by_name['block_reason']._serialized_options = b'\xe0A\x03'
+    _globals['_GENERATECONTENTRESPONSE_PROMPTFEEDBACK'].fields_by_name['safety_ratings']._loaded_options = None
+    _globals['_GENERATECONTENTRESPONSE_PROMPTFEEDBACK'].fields_by_name['safety_ratings']._serialized_options = b'\xe0A\x03'
+    _globals['_GENERATECONTENTRESPONSE_PROMPTFEEDBACK'].fields_by_name['block_reason_message']._loaded_options = None
+    _globals['_GENERATECONTENTRESPONSE_PROMPTFEEDBACK'].fields_by_name['block_reason_message']._serialized_options = b'\xe0A\x03'
+    _globals['_GENERATECONTENTRESPONSE_USAGEMETADATA'].fields_by_name['thoughts_token_count']._loaded_options = None
+    _globals['_GENERATECONTENTRESPONSE_USAGEMETADATA'].fields_by_name['thoughts_token_count']._serialized_options = b'\xe0A\x03'
+    _globals['_GENERATECONTENTRESPONSE_USAGEMETADATA'].fields_by_name['cached_content_token_count']._loaded_options = None
+    _globals['_GENERATECONTENTRESPONSE_USAGEMETADATA'].fields_by_name['cached_content_token_count']._serialized_options = b'\xe0A\x03'
+    _globals['_GENERATECONTENTRESPONSE_USAGEMETADATA'].fields_by_name['prompt_tokens_details']._loaded_options = None
+    _globals['_GENERATECONTENTRESPONSE_USAGEMETADATA'].fields_by_name['prompt_tokens_details']._serialized_options = b'\xe0A\x03'
+    _globals['_GENERATECONTENTRESPONSE_USAGEMETADATA'].fields_by_name['cache_tokens_details']._loaded_options = None
+    _globals['_GENERATECONTENTRESPONSE_USAGEMETADATA'].fields_by_name['cache_tokens_details']._serialized_options = b'\xe0A\x03'
+    _globals['_GENERATECONTENTRESPONSE_USAGEMETADATA'].fields_by_name['candidates_tokens_details']._loaded_options = None
+    _globals['_GENERATECONTENTRESPONSE_USAGEMETADATA'].fields_by_name['candidates_tokens_details']._serialized_options = b'\xe0A\x03'
+    _globals['_GENERATECONTENTRESPONSE'].fields_by_name['candidates']._loaded_options = None
+    _globals['_GENERATECONTENTRESPONSE'].fields_by_name['candidates']._serialized_options = b'\xe0A\x03'
+    _globals['_GENERATECONTENTRESPONSE'].fields_by_name['model_version']._loaded_options = None
+    _globals['_GENERATECONTENTRESPONSE'].fields_by_name['model_version']._serialized_options = b'\xe0A\x03'
+    _globals['_GENERATECONTENTRESPONSE'].fields_by_name['create_time']._loaded_options = None
+    _globals['_GENERATECONTENTRESPONSE'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_GENERATECONTENTRESPONSE'].fields_by_name['response_id']._loaded_options = None
+    _globals['_GENERATECONTENTRESPONSE'].fields_by_name['response_id']._serialized_options = b'\xe0A\x03'
+    _globals['_GENERATECONTENTRESPONSE'].fields_by_name['prompt_feedback']._loaded_options = None
+    _globals['_GENERATECONTENTRESPONSE'].fields_by_name['prompt_feedback']._serialized_options = b'\xe0A\x03'
+    _globals['_CHATCOMPLETIONSREQUEST'].fields_by_name['endpoint']._loaded_options = None
+    _globals['_CHATCOMPLETIONSREQUEST'].fields_by_name['endpoint']._serialized_options = b'\xe0A\x02\xfaA$\n"aiplatform.googleapis.com/Endpoint'
+    _globals['_CHATCOMPLETIONSREQUEST'].fields_by_name['http_body']._loaded_options = None
+    _globals['_CHATCOMPLETIONSREQUEST'].fields_by_name['http_body']._serialized_options = b'\xe0A\x01'
+    _globals['_PREDICTIONSERVICE']._loaded_options = None
+    _globals['_PREDICTIONSERVICE']._serialized_options = b'\xcaA\x19aiplatform.googleapis.com\xd2Aghttps://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/cloud-platform.read-only'
+    _globals['_PREDICTIONSERVICE'].methods_by_name['Predict']._loaded_options = None
+    _globals['_PREDICTIONSERVICE'].methods_by_name['Predict']._serialized_options = b'\xdaA\x1dendpoint,instances,parameters\x82\xd3\xe4\x93\x02\x92\x01">/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}:predict:\x01*ZM"H/v1beta1/{endpoint=projects/*/locations/*/publishers/*/models/*}:predict:\x01*'
+    _globals['_PREDICTIONSERVICE'].methods_by_name['RawPredict']._loaded_options = None
+    _globals['_PREDICTIONSERVICE'].methods_by_name['RawPredict']._serialized_options = b'\xdaA\x12endpoint,http_body\x82\xd3\xe4\x93\x02\x98\x01"A/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}:rawPredict:\x01*ZP"K/v1beta1/{endpoint=projects/*/locations/*/publishers/*/models/*}:rawPredict:\x01*'
+    _globals['_PREDICTIONSERVICE'].methods_by_name['StreamRawPredict']._loaded_options = None
+    _globals['_PREDICTIONSERVICE'].methods_by_name['StreamRawPredict']._serialized_options = b'\xdaA\x12endpoint,http_body\x82\xd3\xe4\x93\x02\xa4\x01"G/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}:streamRawPredict:\x01*ZV"Q/v1beta1/{endpoint=projects/*/locations/*/publishers/*/models/*}:streamRawPredict:\x01*'
+    _globals['_PREDICTIONSERVICE'].methods_by_name['DirectPredict']._loaded_options = None
+    _globals['_PREDICTIONSERVICE'].methods_by_name['DirectPredict']._serialized_options = b'\x82\xd3\xe4\x93\x02I"D/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}:directPredict:\x01*'
+    _globals['_PREDICTIONSERVICE'].methods_by_name['DirectRawPredict']._loaded_options = None
+    _globals['_PREDICTIONSERVICE'].methods_by_name['DirectRawPredict']._serialized_options = b'\x82\xd3\xe4\x93\x02L"G/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}:directRawPredict:\x01*'
+    _globals['_PREDICTIONSERVICE'].methods_by_name['ServerStreamingPredict']._loaded_options = None
+    _globals['_PREDICTIONSERVICE'].methods_by_name['ServerStreamingPredict']._serialized_options = b'\x82\xd3\xe4\x93\x02\xb0\x01"M/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}:serverStreamingPredict:\x01*Z\\"W/v1beta1/{endpoint=projects/*/locations/*/publishers/*/models/*}:serverStreamingPredict:\x01*'
+    _globals['_PREDICTIONSERVICE'].methods_by_name['Explain']._loaded_options = None
+    _globals['_PREDICTIONSERVICE'].methods_by_name['Explain']._serialized_options = b'\xdaA/endpoint,instances,parameters,deployed_model_id\x82\xd3\xe4\x93\x02C">/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}:explain:\x01*'
+    _globals['_PREDICTIONSERVICE'].methods_by_name['CountTokens']._loaded_options = None
+    _globals['_PREDICTIONSERVICE'].methods_by_name['CountTokens']._serialized_options = b'\xdaA\x12endpoint,instances\x82\xd3\xe4\x93\x02\x88\x02"B/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}:countTokens:\x01*ZQ"L/v1beta1/{endpoint=projects/*/locations/*/publishers/*/models/*}:countTokens:\x01*Z0"+/v1beta1/{endpoint=endpoints/*}:countTokens:\x01*Z:"5/v1beta1/{endpoint=publishers/*/models/*}:countTokens:\x01*'
+    _globals['_PREDICTIONSERVICE'].methods_by_name['GenerateContent']._loaded_options = None
+    _globals['_PREDICTIONSERVICE'].methods_by_name['GenerateContent']._serialized_options = b'\xdaA\x0emodel,contents\x82\xd3\xe4\x93\x02\x8c\x02"C/v1beta1/{model=projects/*/locations/*/endpoints/*}:generateContent:\x01*ZR"M/v1beta1/{model=projects/*/locations/*/publishers/*/models/*}:generateContent:\x01*Z1",/v1beta1/{model=endpoints/*}:generateContent:\x01*Z;"6/v1beta1/{model=publishers/*/models/*}:generateContent:\x01*'
+    _globals['_PREDICTIONSERVICE'].methods_by_name['StreamGenerateContent']._loaded_options = None
+    _globals['_PREDICTIONSERVICE'].methods_by_name['StreamGenerateContent']._serialized_options = b'\xdaA\x0emodel,contents\x82\xd3\xe4\x93\x02\xa4\x02"I/v1beta1/{model=projects/*/locations/*/endpoints/*}:streamGenerateContent:\x01*ZX"S/v1beta1/{model=projects/*/locations/*/publishers/*/models/*}:streamGenerateContent:\x01*Z7"2/v1beta1/{model=endpoints/*}:streamGenerateContent:\x01*ZA"</v1beta1/{model=publishers/*/models/*}:streamGenerateContent:\x01*'
+    _globals['_PREDICTIONSERVICE'].methods_by_name['ChatCompletions']._loaded_options = None
+    _globals['_PREDICTIONSERVICE'].methods_by_name['ChatCompletions']._serialized_options = b'\xdaA\x12endpoint,http_body\x82\xd3\xe4\x93\x02T"G/v1beta1/{endpoint=projects/*/locations/*/endpoints/*}/chat/completions:\thttp_body'
+    _globals['_PREDICTREQUEST']._serialized_start = 486
+    _globals['_PREDICTREQUEST']._serialized_end = 656
+    _globals['_PREDICTRESPONSE']._serialized_start = 659
+    _globals['_PREDICTRESPONSE']._serialized_end = 915
+    _globals['_RAWPREDICTREQUEST']._serialized_start = 917
+    _globals['_RAWPREDICTREQUEST']._serialized_end = 1039
+    _globals['_STREAMRAWPREDICTREQUEST']._serialized_start = 1042
+    _globals['_STREAMRAWPREDICTREQUEST']._serialized_end = 1170
+    _globals['_DIRECTPREDICTREQUEST']._serialized_start = 1173
+    _globals['_DIRECTPREDICTREQUEST']._serialized_end = 1375
+    _globals['_DIRECTPREDICTRESPONSE']._serialized_start = 1378
+    _globals['_DIRECTPREDICTRESPONSE']._serialized_end = 1520
+    _globals['_DIRECTRAWPREDICTREQUEST']._serialized_start = 1522
+    _globals['_DIRECTRAWPREDICTREQUEST']._serialized_end = 1645
+    _globals['_DIRECTRAWPREDICTRESPONSE']._serialized_start = 1647
+    _globals['_DIRECTRAWPREDICTRESPONSE']._serialized_end = 1689
+    _globals['_STREAMDIRECTPREDICTREQUEST']._serialized_start = 1692
+    _globals['_STREAMDIRECTPREDICTREQUEST']._serialized_end = 1910
+    _globals['_STREAMDIRECTPREDICTRESPONSE']._serialized_start = 1913
+    _globals['_STREAMDIRECTPREDICTRESPONSE']._serialized_end = 2061
+    _globals['_STREAMDIRECTRAWPREDICTREQUEST']._serialized_start = 2064
+    _globals['_STREAMDIRECTRAWPREDICTREQUEST']._serialized_end = 2203
+    _globals['_STREAMDIRECTRAWPREDICTRESPONSE']._serialized_start = 2205
+    _globals['_STREAMDIRECTRAWPREDICTRESPONSE']._serialized_end = 2253
+    _globals['_STREAMINGPREDICTREQUEST']._serialized_start = 2256
+    _globals['_STREAMINGPREDICTREQUEST']._serialized_end = 2461
+    _globals['_STREAMINGPREDICTRESPONSE']._serialized_start = 2464
+    _globals['_STREAMINGPREDICTRESPONSE']._serialized_end = 2609
+    _globals['_STREAMINGRAWPREDICTREQUEST']._serialized_start = 2611
+    _globals['_STREAMINGRAWPREDICTREQUEST']._serialized_end = 2737
+    _globals['_STREAMINGRAWPREDICTRESPONSE']._serialized_start = 2739
+    _globals['_STREAMINGRAWPREDICTRESPONSE']._serialized_end = 2784
+    _globals['_EXPLAINREQUEST']._serialized_start = 2787
+    _globals['_EXPLAINREQUEST']._serialized_end = 3350
+    _globals['_EXPLAINREQUEST_CONCURRENTEXPLANATIONSPECOVERRIDEENTRY']._serialized_start = 3220
+    _globals['_EXPLAINREQUEST_CONCURRENTEXPLANATIONSPECOVERRIDEENTRY']._serialized_end = 3350
+    _globals['_EXPLAINRESPONSE']._serialized_start = 3353
+    _globals['_EXPLAINRESPONSE']._serialized_end = 3850
+    _globals['_EXPLAINRESPONSE_CONCURRENTEXPLANATION']._serialized_start = 3623
+    _globals['_EXPLAINRESPONSE_CONCURRENTEXPLANATION']._serialized_end = 3714
+    _globals['_EXPLAINRESPONSE_CONCURRENTEXPLANATIONSENTRY']._serialized_start = 3717
+    _globals['_EXPLAINRESPONSE_CONCURRENTEXPLANATIONSENTRY']._serialized_end = 3850
+    _globals['_COUNTTOKENSREQUEST']._serialized_start = 3853
+    _globals['_COUNTTOKENSREQUEST']._serialized_end = 4340
+    _globals['_COUNTTOKENSRESPONSE']._serialized_start = 4343
+    _globals['_COUNTTOKENSRESPONSE']._serialized_end = 4510
+    _globals['_GENERATECONTENTREQUEST']._serialized_start = 4513
+    _globals['_GENERATECONTENTREQUEST']._serialized_end = 5310
+    _globals['_GENERATECONTENTREQUEST_LABELSENTRY']._serialized_start = 5242
+    _globals['_GENERATECONTENTREQUEST_LABELSENTRY']._serialized_end = 5287
+    _globals['_GENERATECONTENTRESPONSE']._serialized_start = 5313
+    _globals['_GENERATECONTENTRESPONSE']._serialized_end = 6537
+    _globals['_GENERATECONTENTRESPONSE_PROMPTFEEDBACK']._serialized_start = 5717
+    _globals['_GENERATECONTENTRESPONSE_PROMPTFEEDBACK']._serialized_end = 6086
+    _globals['_GENERATECONTENTRESPONSE_PROMPTFEEDBACK_BLOCKEDREASON']._serialized_start = 5960
+    _globals['_GENERATECONTENTRESPONSE_PROMPTFEEDBACK_BLOCKEDREASON']._serialized_end = 6086
+    _globals['_GENERATECONTENTRESPONSE_USAGEMETADATA']._serialized_start = 6089
+    _globals['_GENERATECONTENTRESPONSE_USAGEMETADATA']._serialized_end = 6537
+    _globals['_CHATCOMPLETIONSREQUEST']._serialized_start = 6540
+    _globals['_CHATCOMPLETIONSREQUEST']._serialized_end = 6672
+    _globals['_PREDICTLONGRUNNINGRESPONSE']._serialized_start = 6675
+    _globals['_PREDICTLONGRUNNINGRESPONSE']._serialized_end = 6806
+    _globals['_PREDICTLONGRUNNINGMETADATA']._serialized_start = 6808
+    _globals['_PREDICTLONGRUNNINGMETADATA']._serialized_end = 6836
+    _globals['_GENERATEVIDEORESPONSE']._serialized_start = 6839
+    _globals['_GENERATEVIDEORESPONSE']._serialized_end = 6993
+    _globals['_PREDICTIONSERVICE']._serialized_start = 6996
+    _globals['_PREDICTIONSERVICE']._serialized_end = 11157

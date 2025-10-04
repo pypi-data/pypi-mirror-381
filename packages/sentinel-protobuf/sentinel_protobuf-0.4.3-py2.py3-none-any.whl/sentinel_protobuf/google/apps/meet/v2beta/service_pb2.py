@@ -1,0 +1,192 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/apps/meet/v2beta/service.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from .....google.apps.meet.v2beta import resource_pb2 as google_dot_apps_dot_meet_dot_v2beta_dot_resource__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%google/apps/meet/v2beta/service.proto\x12\x17google.apps.meet.v2beta\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a&google/apps/meet/v2beta/resource.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto"C\n\x12CreateSpaceRequest\x12-\n\x05space\x18\x01 \x01(\x0b2\x1e.google.apps.meet.v2beta.Space"B\n\x0fGetSpaceRequest\x12/\n\x04name\x18\x01 \x01(\tB!\xe0A\x02\xfaA\x1b\n\x19meet.googleapis.com/Space"~\n\x12UpdateSpaceRequest\x122\n\x05space\x18\x01 \x01(\x0b2\x1e.google.apps.meet.v2beta.SpaceB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x01"e\n\x1eConnectActiveConferenceRequest\x12/\n\x04name\x18\x01 \x01(\tB!\xe0A\x02\xfaA\x1b\n\x19meet.googleapis.com/Space\x12\x12\n\x05offer\x18\x02 \x01(\tB\x03\xe0A\x02"C\n\x1fConnectActiveConferenceResponse\x12\x0e\n\x06answer\x18\x01 \x01(\t\x12\x10\n\x08trace_id\x18\x02 \x01(\t"M\n\x1aEndActiveConferenceRequest\x12/\n\x04name\x18\x01 \x01(\tB!\xe0A\x02\xfaA\x1b\n\x19meet.googleapis.com/Space"\x7f\n\x13CreateMemberRequest\x122\n\x06parent\x18\x01 \x01(\tB"\xe0A\x02\xfaA\x1c\x12\x1ameet.googleapis.com/Member\x124\n\x06member\x18\x02 \x01(\x0b2\x1f.google.apps.meet.v2beta.MemberB\x03\xe0A\x02"D\n\x10GetMemberRequest\x120\n\x04name\x18\x01 \x01(\tB"\xe0A\x02\xfaA\x1c\n\x1ameet.googleapis.com/Member"y\n\x12ListMembersRequest\x122\n\x06parent\x18\x01 \x01(\tB"\xe0A\x02\xfaA\x1c\x12\x1ameet.googleapis.com/Member\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01"`\n\x13ListMembersResponse\x120\n\x07members\x18\x01 \x03(\x0b2\x1f.google.apps.meet.v2beta.Member\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"G\n\x13DeleteMemberRequest\x120\n\x04name\x18\x01 \x01(\tB"\xe0A\x02\xfaA\x1c\n\x1ameet.googleapis.com/Member"X\n\x1aGetConferenceRecordRequest\x12:\n\x04name\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\n$meet.googleapis.com/ConferenceRecord"d\n\x1cListConferenceRecordsRequest\x12\x16\n\tpage_size\x18\x01 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06filter\x18\x03 \x01(\tB\x03\xe0A\x01"\x7f\n\x1dListConferenceRecordsResponse\x12E\n\x12conference_records\x18\x01 \x03(\x0b2).google.apps.meet.v2beta.ConferenceRecord\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"N\n\x15GetParticipantRequest\x125\n\x04name\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fmeet.googleapis.com/Participant"\x8e\x01\n\x17ListParticipantsRequest\x127\n\x06parent\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\x12\x1fmeet.googleapis.com/Participant\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01"\x83\x01\n\x18ListParticipantsResponse\x12:\n\x0cparticipants\x18\x01 \x03(\x0b2$.google.apps.meet.v2beta.Participant\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x12\n\ntotal_size\x18\x03 \x01(\x05"\\\n\x1cGetParticipantSessionRequest\x12<\n\x04name\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\n&meet.googleapis.com/ParticipantSession"\xa6\x01\n\x1eListParticipantSessionsRequest\x12>\n\x06parent\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\x12&meet.googleapis.com/ParticipantSession\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01"\x85\x01\n\x1fListParticipantSessionsResponse\x12I\n\x14participant_sessions\x18\x01 \x03(\x0b2+.google.apps.meet.v2beta.ParticipantSession\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"J\n\x13GetRecordingRequest\x123\n\x04name\x18\x01 \x01(\tB%\xe0A\x02\xfaA\x1f\n\x1dmeet.googleapis.com/Recording"u\n\x15ListRecordingsRequest\x125\n\x06parent\x18\x01 \x01(\tB%\xe0A\x02\xfaA\x1f\x12\x1dmeet.googleapis.com/Recording\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"i\n\x16ListRecordingsResponse\x126\n\nrecordings\x18\x01 \x03(\x0b2".google.apps.meet.v2beta.Recording\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"L\n\x14GetTranscriptRequest\x124\n\x04name\x18\x01 \x01(\tB&\xe0A\x02\xfaA \n\x1emeet.googleapis.com/Transcript"w\n\x16ListTranscriptsRequest\x126\n\x06parent\x18\x01 \x01(\tB&\xe0A\x02\xfaA \x12\x1emeet.googleapis.com/Transcript\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"l\n\x17ListTranscriptsResponse\x128\n\x0btranscripts\x18\x01 \x03(\x0b2#.google.apps.meet.v2beta.Transcript\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"V\n\x19GetTranscriptEntryRequest\x129\n\x04name\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\n#meet.googleapis.com/TranscriptEntry"\x82\x01\n\x1cListTranscriptEntriesRequest\x12;\n\x06parent\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\x12#meet.googleapis.com/TranscriptEntry\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"~\n\x1dListTranscriptEntriesResponse\x12D\n\x12transcript_entries\x18\x01 \x03(\x0b2(.google.apps.meet.v2beta.TranscriptEntry\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t2\x95\x0e\n\rSpacesService\x12\x81\x01\n\x0bCreateSpace\x12+.google.apps.meet.v2beta.CreateSpaceRequest\x1a\x1e.google.apps.meet.v2beta.Space"%\xdaA\x05space\x82\xd3\xe4\x93\x02\x17"\x0e/v2beta/spaces:\x05space\x12|\n\x08GetSpace\x12(.google.apps.meet.v2beta.GetSpaceRequest\x1a\x1e.google.apps.meet.v2beta.Space"&\xdaA\x04name\x82\xd3\xe4\x93\x02\x19\x12\x17/v2beta/{name=spaces/*}\x12\x9c\x01\n\x0bUpdateSpace\x12+.google.apps.meet.v2beta.UpdateSpaceRequest\x1a\x1e.google.apps.meet.v2beta.Space"@\xdaA\x11space,update_mask\x82\xd3\xe4\x93\x02&2\x1d/v2beta/{space.name=spaces/*}:\x05space\x12\xcf\x01\n\x17ConnectActiveConference\x127.google.apps.meet.v2beta.ConnectActiveConferenceRequest\x1a8.google.apps.meet.v2beta.ConnectActiveConferenceResponse"A\xdaA\x04name\x82\xd3\xe4\x93\x024"//v2beta/{name=spaces/*}:connectActiveConference:\x01*\x12\xa1\x01\n\x13EndActiveConference\x123.google.apps.meet.v2beta.EndActiveConferenceRequest\x1a\x16.google.protobuf.Empty"=\xdaA\x04name\x82\xd3\xe4\x93\x020"+/v2beta/{name=spaces/*}:endActiveConference:\x01*\x12\xa0\x01\n\x0cCreateMember\x12,.google.apps.meet.v2beta.CreateMemberRequest\x1a\x1f.google.apps.meet.v2beta.Member"A\xdaA\rparent,member\x82\xd3\xe4\x93\x02+"!/v2beta/{parent=spaces/*}/members:\x06member\x12\x89\x01\n\tGetMember\x12).google.apps.meet.v2beta.GetMemberRequest\x1a\x1f.google.apps.meet.v2beta.Member"0\xdaA\x04name\x82\xd3\xe4\x93\x02#\x12!/v2beta/{name=spaces/*/members/*}\x12\x9c\x01\n\x0bListMembers\x12+.google.apps.meet.v2beta.ListMembersRequest\x1a,.google.apps.meet.v2beta.ListMembersResponse"2\xdaA\x06parent\x82\xd3\xe4\x93\x02#\x12!/v2beta/{parent=spaces/*}/members\x12\x86\x01\n\x0cDeleteMember\x12,.google.apps.meet.v2beta.DeleteMemberRequest\x1a\x16.google.protobuf.Empty"0\xdaA\x04name\x82\xd3\xe4\x93\x02#*!/v2beta/{name=spaces/*/members/*}\x1a\x95\x03\xcaA\x13meet.googleapis.com\xd2A\xfb\x02https://www.googleapis.com/auth/meetings.conference.media.audio.readonly,https://www.googleapis.com/auth/meetings.conference.media.readonly,https://www.googleapis.com/auth/meetings.conference.media.video.readonly,https://www.googleapis.com/auth/meetings.space.created,https://www.googleapis.com/auth/meetings.space.readonly,https://www.googleapis.com/auth/meetings.space.settings2\xf3\x12\n\x18ConferenceRecordsService\x12\xa8\x01\n\x13GetConferenceRecord\x123.google.apps.meet.v2beta.GetConferenceRecordRequest\x1a).google.apps.meet.v2beta.ConferenceRecord"1\xdaA\x04name\x82\xd3\xe4\x93\x02$\x12"/v2beta/{name=conferenceRecords/*}\x12\xa9\x01\n\x15ListConferenceRecords\x125.google.apps.meet.v2beta.ListConferenceRecordsRequest\x1a6.google.apps.meet.v2beta.ListConferenceRecordsResponse"!\x82\xd3\xe4\x93\x02\x1b\x12\x19/v2beta/conferenceRecords\x12\xa8\x01\n\x0eGetParticipant\x12..google.apps.meet.v2beta.GetParticipantRequest\x1a$.google.apps.meet.v2beta.Participant"@\xdaA\x04name\x82\xd3\xe4\x93\x023\x121/v2beta/{name=conferenceRecords/*/participants/*}\x12\xbb\x01\n\x10ListParticipants\x120.google.apps.meet.v2beta.ListParticipantsRequest\x1a1.google.apps.meet.v2beta.ListParticipantsResponse"B\xdaA\x06parent\x82\xd3\xe4\x93\x023\x121/v2beta/{parent=conferenceRecords/*}/participants\x12\xd3\x01\n\x15GetParticipantSession\x125.google.apps.meet.v2beta.GetParticipantSessionRequest\x1a+.google.apps.meet.v2beta.ParticipantSession"V\xdaA\x04name\x82\xd3\xe4\x93\x02I\x12G/v2beta/{name=conferenceRecords/*/participants/*/participantSessions/*}\x12\xe6\x01\n\x17ListParticipantSessions\x127.google.apps.meet.v2beta.ListParticipantSessionsRequest\x1a8.google.apps.meet.v2beta.ListParticipantSessionsResponse"X\xdaA\x06parent\x82\xd3\xe4\x93\x02I\x12G/v2beta/{parent=conferenceRecords/*/participants/*}/participantSessions\x12\xa0\x01\n\x0cGetRecording\x12,.google.apps.meet.v2beta.GetRecordingRequest\x1a".google.apps.meet.v2beta.Recording">\xdaA\x04name\x82\xd3\xe4\x93\x021\x12//v2beta/{name=conferenceRecords/*/recordings/*}\x12\xb3\x01\n\x0eListRecordings\x12..google.apps.meet.v2beta.ListRecordingsRequest\x1a/.google.apps.meet.v2beta.ListRecordingsResponse"@\xdaA\x06parent\x82\xd3\xe4\x93\x021\x12//v2beta/{parent=conferenceRecords/*}/recordings\x12\xa4\x01\n\rGetTranscript\x12-.google.apps.meet.v2beta.GetTranscriptRequest\x1a#.google.apps.meet.v2beta.Transcript"?\xdaA\x04name\x82\xd3\xe4\x93\x022\x120/v2beta/{name=conferenceRecords/*/transcripts/*}\x12\xb7\x01\n\x0fListTranscripts\x12/.google.apps.meet.v2beta.ListTranscriptsRequest\x1a0.google.apps.meet.v2beta.ListTranscriptsResponse"A\xdaA\x06parent\x82\xd3\xe4\x93\x022\x120/v2beta/{parent=conferenceRecords/*}/transcripts\x12\xbd\x01\n\x12GetTranscriptEntry\x122.google.apps.meet.v2beta.GetTranscriptEntryRequest\x1a(.google.apps.meet.v2beta.TranscriptEntry"I\xdaA\x04name\x82\xd3\xe4\x93\x02<\x12:/v2beta/{name=conferenceRecords/*/transcripts/*/entries/*}\x12\xd3\x01\n\x15ListTranscriptEntries\x125.google.apps.meet.v2beta.ListTranscriptEntriesRequest\x1a6.google.apps.meet.v2beta.ListTranscriptEntriesResponse"K\xdaA\x06parent\x82\xd3\xe4\x93\x02<\x12:/v2beta/{parent=conferenceRecords/*/transcripts/*}/entries\x1a\x87\x01\xcaA\x13meet.googleapis.com\xd2Anhttps://www.googleapis.com/auth/meetings.space.created,https://www.googleapis.com/auth/meetings.space.readonlyB\xb5\x01\n\x1bcom.google.apps.meet.v2betaB\x0cServiceProtoP\x01Z5cloud.google.com/go/apps/meet/apiv2beta/meetpb;meetpb\xaa\x02\x17Google.Apps.Meet.V2Beta\xca\x02\x17Google\\Apps\\Meet\\V2beta\xea\x02\x1aGoogle::Apps::Meet::V2betab\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.apps.meet.v2beta.service_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x1bcom.google.apps.meet.v2betaB\x0cServiceProtoP\x01Z5cloud.google.com/go/apps/meet/apiv2beta/meetpb;meetpb\xaa\x02\x17Google.Apps.Meet.V2Beta\xca\x02\x17Google\\Apps\\Meet\\V2beta\xea\x02\x1aGoogle::Apps::Meet::V2beta'
+    _globals['_GETSPACEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETSPACEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA\x1b\n\x19meet.googleapis.com/Space'
+    _globals['_UPDATESPACEREQUEST'].fields_by_name['space']._loaded_options = None
+    _globals['_UPDATESPACEREQUEST'].fields_by_name['space']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATESPACEREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATESPACEREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x01'
+    _globals['_CONNECTACTIVECONFERENCEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_CONNECTACTIVECONFERENCEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA\x1b\n\x19meet.googleapis.com/Space'
+    _globals['_CONNECTACTIVECONFERENCEREQUEST'].fields_by_name['offer']._loaded_options = None
+    _globals['_CONNECTACTIVECONFERENCEREQUEST'].fields_by_name['offer']._serialized_options = b'\xe0A\x02'
+    _globals['_ENDACTIVECONFERENCEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_ENDACTIVECONFERENCEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA\x1b\n\x19meet.googleapis.com/Space'
+    _globals['_CREATEMEMBERREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEMEMBERREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA\x1c\x12\x1ameet.googleapis.com/Member'
+    _globals['_CREATEMEMBERREQUEST'].fields_by_name['member']._loaded_options = None
+    _globals['_CREATEMEMBERREQUEST'].fields_by_name['member']._serialized_options = b'\xe0A\x02'
+    _globals['_GETMEMBERREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETMEMBERREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA\x1c\n\x1ameet.googleapis.com/Member'
+    _globals['_LISTMEMBERSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTMEMBERSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA\x1c\x12\x1ameet.googleapis.com/Member'
+    _globals['_LISTMEMBERSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTMEMBERSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTMEMBERSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTMEMBERSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETEMEMBERREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEMEMBERREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA\x1c\n\x1ameet.googleapis.com/Member'
+    _globals['_GETCONFERENCERECORDREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETCONFERENCERECORDREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA&\n$meet.googleapis.com/ConferenceRecord'
+    _globals['_LISTCONFERENCERECORDSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTCONFERENCERECORDSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTCONFERENCERECORDSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTCONFERENCERECORDSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTCONFERENCERECORDSREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTCONFERENCERECORDSREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_GETPARTICIPANTREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETPARTICIPANTREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fmeet.googleapis.com/Participant'
+    _globals['_LISTPARTICIPANTSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTPARTICIPANTSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA!\x12\x1fmeet.googleapis.com/Participant'
+    _globals['_LISTPARTICIPANTSREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTPARTICIPANTSREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_GETPARTICIPANTSESSIONREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETPARTICIPANTSESSIONREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA(\n&meet.googleapis.com/ParticipantSession'
+    _globals['_LISTPARTICIPANTSESSIONSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTPARTICIPANTSESSIONSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA(\x12&meet.googleapis.com/ParticipantSession'
+    _globals['_LISTPARTICIPANTSESSIONSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTPARTICIPANTSESSIONSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTPARTICIPANTSESSIONSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTPARTICIPANTSESSIONSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTPARTICIPANTSESSIONSREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTPARTICIPANTSESSIONSREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_GETRECORDINGREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETRECORDINGREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA\x1f\n\x1dmeet.googleapis.com/Recording'
+    _globals['_LISTRECORDINGSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTRECORDINGSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA\x1f\x12\x1dmeet.googleapis.com/Recording'
+    _globals['_GETTRANSCRIPTREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETTRANSCRIPTREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA \n\x1emeet.googleapis.com/Transcript'
+    _globals['_LISTTRANSCRIPTSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTTRANSCRIPTSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA \x12\x1emeet.googleapis.com/Transcript'
+    _globals['_GETTRANSCRIPTENTRYREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETTRANSCRIPTENTRYREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA%\n#meet.googleapis.com/TranscriptEntry'
+    _globals['_LISTTRANSCRIPTENTRIESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTTRANSCRIPTENTRIESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA%\x12#meet.googleapis.com/TranscriptEntry'
+    _globals['_SPACESSERVICE']._loaded_options = None
+    _globals['_SPACESSERVICE']._serialized_options = b'\xcaA\x13meet.googleapis.com\xd2A\xfb\x02https://www.googleapis.com/auth/meetings.conference.media.audio.readonly,https://www.googleapis.com/auth/meetings.conference.media.readonly,https://www.googleapis.com/auth/meetings.conference.media.video.readonly,https://www.googleapis.com/auth/meetings.space.created,https://www.googleapis.com/auth/meetings.space.readonly,https://www.googleapis.com/auth/meetings.space.settings'
+    _globals['_SPACESSERVICE'].methods_by_name['CreateSpace']._loaded_options = None
+    _globals['_SPACESSERVICE'].methods_by_name['CreateSpace']._serialized_options = b'\xdaA\x05space\x82\xd3\xe4\x93\x02\x17"\x0e/v2beta/spaces:\x05space'
+    _globals['_SPACESSERVICE'].methods_by_name['GetSpace']._loaded_options = None
+    _globals['_SPACESSERVICE'].methods_by_name['GetSpace']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02\x19\x12\x17/v2beta/{name=spaces/*}'
+    _globals['_SPACESSERVICE'].methods_by_name['UpdateSpace']._loaded_options = None
+    _globals['_SPACESSERVICE'].methods_by_name['UpdateSpace']._serialized_options = b'\xdaA\x11space,update_mask\x82\xd3\xe4\x93\x02&2\x1d/v2beta/{space.name=spaces/*}:\x05space'
+    _globals['_SPACESSERVICE'].methods_by_name['ConnectActiveConference']._loaded_options = None
+    _globals['_SPACESSERVICE'].methods_by_name['ConnectActiveConference']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x024"//v2beta/{name=spaces/*}:connectActiveConference:\x01*'
+    _globals['_SPACESSERVICE'].methods_by_name['EndActiveConference']._loaded_options = None
+    _globals['_SPACESSERVICE'].methods_by_name['EndActiveConference']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x020"+/v2beta/{name=spaces/*}:endActiveConference:\x01*'
+    _globals['_SPACESSERVICE'].methods_by_name['CreateMember']._loaded_options = None
+    _globals['_SPACESSERVICE'].methods_by_name['CreateMember']._serialized_options = b'\xdaA\rparent,member\x82\xd3\xe4\x93\x02+"!/v2beta/{parent=spaces/*}/members:\x06member'
+    _globals['_SPACESSERVICE'].methods_by_name['GetMember']._loaded_options = None
+    _globals['_SPACESSERVICE'].methods_by_name['GetMember']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02#\x12!/v2beta/{name=spaces/*/members/*}'
+    _globals['_SPACESSERVICE'].methods_by_name['ListMembers']._loaded_options = None
+    _globals['_SPACESSERVICE'].methods_by_name['ListMembers']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02#\x12!/v2beta/{parent=spaces/*}/members'
+    _globals['_SPACESSERVICE'].methods_by_name['DeleteMember']._loaded_options = None
+    _globals['_SPACESSERVICE'].methods_by_name['DeleteMember']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02#*!/v2beta/{name=spaces/*/members/*}'
+    _globals['_CONFERENCERECORDSSERVICE']._loaded_options = None
+    _globals['_CONFERENCERECORDSSERVICE']._serialized_options = b'\xcaA\x13meet.googleapis.com\xd2Anhttps://www.googleapis.com/auth/meetings.space.created,https://www.googleapis.com/auth/meetings.space.readonly'
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['GetConferenceRecord']._loaded_options = None
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['GetConferenceRecord']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02$\x12"/v2beta/{name=conferenceRecords/*}'
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['ListConferenceRecords']._loaded_options = None
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['ListConferenceRecords']._serialized_options = b'\x82\xd3\xe4\x93\x02\x1b\x12\x19/v2beta/conferenceRecords'
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['GetParticipant']._loaded_options = None
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['GetParticipant']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x023\x121/v2beta/{name=conferenceRecords/*/participants/*}'
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['ListParticipants']._loaded_options = None
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['ListParticipants']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x023\x121/v2beta/{parent=conferenceRecords/*}/participants'
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['GetParticipantSession']._loaded_options = None
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['GetParticipantSession']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02I\x12G/v2beta/{name=conferenceRecords/*/participants/*/participantSessions/*}'
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['ListParticipantSessions']._loaded_options = None
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['ListParticipantSessions']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02I\x12G/v2beta/{parent=conferenceRecords/*/participants/*}/participantSessions'
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['GetRecording']._loaded_options = None
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['GetRecording']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x021\x12//v2beta/{name=conferenceRecords/*/recordings/*}'
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['ListRecordings']._loaded_options = None
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['ListRecordings']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x021\x12//v2beta/{parent=conferenceRecords/*}/recordings'
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['GetTranscript']._loaded_options = None
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['GetTranscript']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x022\x120/v2beta/{name=conferenceRecords/*/transcripts/*}'
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['ListTranscripts']._loaded_options = None
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['ListTranscripts']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x022\x120/v2beta/{parent=conferenceRecords/*}/transcripts'
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['GetTranscriptEntry']._loaded_options = None
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['GetTranscriptEntry']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02<\x12:/v2beta/{name=conferenceRecords/*/transcripts/*/entries/*}'
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['ListTranscriptEntries']._loaded_options = None
+    _globals['_CONFERENCERECORDSSERVICE'].methods_by_name['ListTranscriptEntries']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02<\x12:/v2beta/{parent=conferenceRecords/*/transcripts/*}/entries'
+    _globals['_CREATESPACEREQUEST']._serialized_start = 284
+    _globals['_CREATESPACEREQUEST']._serialized_end = 351
+    _globals['_GETSPACEREQUEST']._serialized_start = 353
+    _globals['_GETSPACEREQUEST']._serialized_end = 419
+    _globals['_UPDATESPACEREQUEST']._serialized_start = 421
+    _globals['_UPDATESPACEREQUEST']._serialized_end = 547
+    _globals['_CONNECTACTIVECONFERENCEREQUEST']._serialized_start = 549
+    _globals['_CONNECTACTIVECONFERENCEREQUEST']._serialized_end = 650
+    _globals['_CONNECTACTIVECONFERENCERESPONSE']._serialized_start = 652
+    _globals['_CONNECTACTIVECONFERENCERESPONSE']._serialized_end = 719
+    _globals['_ENDACTIVECONFERENCEREQUEST']._serialized_start = 721
+    _globals['_ENDACTIVECONFERENCEREQUEST']._serialized_end = 798
+    _globals['_CREATEMEMBERREQUEST']._serialized_start = 800
+    _globals['_CREATEMEMBERREQUEST']._serialized_end = 927
+    _globals['_GETMEMBERREQUEST']._serialized_start = 929
+    _globals['_GETMEMBERREQUEST']._serialized_end = 997
+    _globals['_LISTMEMBERSREQUEST']._serialized_start = 999
+    _globals['_LISTMEMBERSREQUEST']._serialized_end = 1120
+    _globals['_LISTMEMBERSRESPONSE']._serialized_start = 1122
+    _globals['_LISTMEMBERSRESPONSE']._serialized_end = 1218
+    _globals['_DELETEMEMBERREQUEST']._serialized_start = 1220
+    _globals['_DELETEMEMBERREQUEST']._serialized_end = 1291
+    _globals['_GETCONFERENCERECORDREQUEST']._serialized_start = 1293
+    _globals['_GETCONFERENCERECORDREQUEST']._serialized_end = 1381
+    _globals['_LISTCONFERENCERECORDSREQUEST']._serialized_start = 1383
+    _globals['_LISTCONFERENCERECORDSREQUEST']._serialized_end = 1483
+    _globals['_LISTCONFERENCERECORDSRESPONSE']._serialized_start = 1485
+    _globals['_LISTCONFERENCERECORDSRESPONSE']._serialized_end = 1612
+    _globals['_GETPARTICIPANTREQUEST']._serialized_start = 1614
+    _globals['_GETPARTICIPANTREQUEST']._serialized_end = 1692
+    _globals['_LISTPARTICIPANTSREQUEST']._serialized_start = 1695
+    _globals['_LISTPARTICIPANTSREQUEST']._serialized_end = 1837
+    _globals['_LISTPARTICIPANTSRESPONSE']._serialized_start = 1840
+    _globals['_LISTPARTICIPANTSRESPONSE']._serialized_end = 1971
+    _globals['_GETPARTICIPANTSESSIONREQUEST']._serialized_start = 1973
+    _globals['_GETPARTICIPANTSESSIONREQUEST']._serialized_end = 2065
+    _globals['_LISTPARTICIPANTSESSIONSREQUEST']._serialized_start = 2068
+    _globals['_LISTPARTICIPANTSESSIONSREQUEST']._serialized_end = 2234
+    _globals['_LISTPARTICIPANTSESSIONSRESPONSE']._serialized_start = 2237
+    _globals['_LISTPARTICIPANTSESSIONSRESPONSE']._serialized_end = 2370
+    _globals['_GETRECORDINGREQUEST']._serialized_start = 2372
+    _globals['_GETRECORDINGREQUEST']._serialized_end = 2446
+    _globals['_LISTRECORDINGSREQUEST']._serialized_start = 2448
+    _globals['_LISTRECORDINGSREQUEST']._serialized_end = 2565
+    _globals['_LISTRECORDINGSRESPONSE']._serialized_start = 2567
+    _globals['_LISTRECORDINGSRESPONSE']._serialized_end = 2672
+    _globals['_GETTRANSCRIPTREQUEST']._serialized_start = 2674
+    _globals['_GETTRANSCRIPTREQUEST']._serialized_end = 2750
+    _globals['_LISTTRANSCRIPTSREQUEST']._serialized_start = 2752
+    _globals['_LISTTRANSCRIPTSREQUEST']._serialized_end = 2871
+    _globals['_LISTTRANSCRIPTSRESPONSE']._serialized_start = 2873
+    _globals['_LISTTRANSCRIPTSRESPONSE']._serialized_end = 2981
+    _globals['_GETTRANSCRIPTENTRYREQUEST']._serialized_start = 2983
+    _globals['_GETTRANSCRIPTENTRYREQUEST']._serialized_end = 3069
+    _globals['_LISTTRANSCRIPTENTRIESREQUEST']._serialized_start = 3072
+    _globals['_LISTTRANSCRIPTENTRIESREQUEST']._serialized_end = 3202
+    _globals['_LISTTRANSCRIPTENTRIESRESPONSE']._serialized_start = 3204
+    _globals['_LISTTRANSCRIPTENTRIESRESPONSE']._serialized_end = 3330
+    _globals['_SPACESSERVICE']._serialized_start = 3333
+    _globals['_SPACESSERVICE']._serialized_end = 5146
+    _globals['_CONFERENCERECORDSSERVICE']._serialized_start = 5149
+    _globals['_CONFERENCERECORDSSERVICE']._serialized_end = 7568

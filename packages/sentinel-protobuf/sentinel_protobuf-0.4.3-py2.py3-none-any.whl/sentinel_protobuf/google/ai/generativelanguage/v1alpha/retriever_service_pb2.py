@@ -1,0 +1,204 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/ai/generativelanguage/v1alpha/retriever_service.proto')
+_sym_db = _symbol_database.Default()
+from .....google.ai.generativelanguage.v1alpha import retriever_pb2 as google_dot_ai_dot_generativelanguage_dot_v1alpha_dot_retriever__pb2
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n<google/ai/generativelanguage/v1alpha/retriever_service.proto\x12$google.ai.generativelanguage.v1alpha\x1a4google/ai/generativelanguage/v1alpha/retriever.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto"X\n\x13CreateCorpusRequest\x12A\n\x06corpus\x18\x01 \x01(\x0b2,.google.ai.generativelanguage.v1alpha.CorpusB\x03\xe0A\x02"R\n\x10GetCorpusRequest\x12>\n\x04name\x18\x01 \x01(\tB0\xe0A\x02\xfaA*\n(generativelanguage.googleapis.com/Corpus"\x8e\x01\n\x13UpdateCorpusRequest\x12A\n\x06corpus\x18\x01 \x01(\x0b2,.google.ai.generativelanguage.v1alpha.CorpusB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02"i\n\x13DeleteCorpusRequest\x12>\n\x04name\x18\x01 \x01(\tB0\xe0A\x02\xfaA*\n(generativelanguage.googleapis.com/Corpus\x12\x12\n\x05force\x18\x02 \x01(\x08B\x03\xe0A\x01"E\n\x12ListCorporaRequest\x12\x16\n\tpage_size\x18\x01 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x02 \x01(\tB\x03\xe0A\x01"m\n\x13ListCorporaResponse\x12=\n\x07corpora\x18\x01 \x03(\x0b2,.google.ai.generativelanguage.v1alpha.Corpus\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\xd9\x01\n\x12QueryCorpusRequest\x12>\n\x04name\x18\x01 \x01(\tB0\xe0A\x02\xfaA*\n(generativelanguage.googleapis.com/Corpus\x12\x12\n\x05query\x18\x02 \x01(\tB\x03\xe0A\x02\x12S\n\x10metadata_filters\x18\x03 \x03(\x0b24.google.ai.generativelanguage.v1alpha.MetadataFilterB\x03\xe0A\x01\x12\x1a\n\rresults_count\x18\x04 \x01(\x05B\x03\xe0A\x01"c\n\x13QueryCorpusResponse\x12L\n\x0frelevant_chunks\x18\x01 \x03(\x0b23.google.ai.generativelanguage.v1alpha.RelevantChunk"j\n\rRelevantChunk\x12\x1d\n\x15chunk_relevance_score\x18\x01 \x01(\x02\x12:\n\x05chunk\x18\x02 \x01(\x0b2+.google.ai.generativelanguage.v1alpha.Chunk"\xa2\x01\n\x15CreateDocumentRequest\x12B\n\x06parent\x18\x01 \x01(\tB2\xe0A\x02\xfaA,\x12*generativelanguage.googleapis.com/Document\x12E\n\x08document\x18\x02 \x01(\x0b2..google.ai.generativelanguage.v1alpha.DocumentB\x03\xe0A\x02"V\n\x12GetDocumentRequest\x12@\n\x04name\x18\x01 \x01(\tB2\xe0A\x02\xfaA,\n*generativelanguage.googleapis.com/Document"\x94\x01\n\x15UpdateDocumentRequest\x12E\n\x08document\x18\x01 \x01(\x0b2..google.ai.generativelanguage.v1alpha.DocumentB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02"m\n\x15DeleteDocumentRequest\x12@\n\x04name\x18\x01 \x01(\tB2\xe0A\x02\xfaA,\n*generativelanguage.googleapis.com/Document\x12\x12\n\x05force\x18\x02 \x01(\x08B\x03\xe0A\x01"\x8b\x01\n\x14ListDocumentsRequest\x12B\n\x06parent\x18\x01 \x01(\tB2\xe0A\x02\xfaA,\x12*generativelanguage.googleapis.com/Document\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01"s\n\x15ListDocumentsResponse\x12A\n\tdocuments\x18\x01 \x03(\x0b2..google.ai.generativelanguage.v1alpha.Document\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\xdd\x01\n\x14QueryDocumentRequest\x12@\n\x04name\x18\x01 \x01(\tB2\xe0A\x02\xfaA,\n*generativelanguage.googleapis.com/Document\x12\x12\n\x05query\x18\x02 \x01(\tB\x03\xe0A\x02\x12\x1a\n\rresults_count\x18\x03 \x01(\x05B\x03\xe0A\x01\x12S\n\x10metadata_filters\x18\x04 \x03(\x0b24.google.ai.generativelanguage.v1alpha.MetadataFilterB\x03\xe0A\x01"e\n\x15QueryDocumentResponse\x12L\n\x0frelevant_chunks\x18\x01 \x03(\x0b23.google.ai.generativelanguage.v1alpha.RelevantChunk"\x96\x01\n\x12CreateChunkRequest\x12?\n\x06parent\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\x12\'generativelanguage.googleapis.com/Chunk\x12?\n\x05chunk\x18\x02 \x01(\x0b2+.google.ai.generativelanguage.v1alpha.ChunkB\x03\xe0A\x02"\xac\x01\n\x18BatchCreateChunksRequest\x12?\n\x06parent\x18\x01 \x01(\tB/\xe0A\x01\xfaA)\x12\'generativelanguage.googleapis.com/Chunk\x12O\n\x08requests\x18\x02 \x03(\x0b28.google.ai.generativelanguage.v1alpha.CreateChunkRequestB\x03\xe0A\x02"X\n\x19BatchCreateChunksResponse\x12;\n\x06chunks\x18\x01 \x03(\x0b2+.google.ai.generativelanguage.v1alpha.Chunk"P\n\x0fGetChunkRequest\x12=\n\x04name\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\n\'generativelanguage.googleapis.com/Chunk"\x8b\x01\n\x12UpdateChunkRequest\x12?\n\x05chunk\x18\x01 \x01(\x0b2+.google.ai.generativelanguage.v1alpha.ChunkB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02"\xac\x01\n\x18BatchUpdateChunksRequest\x12?\n\x06parent\x18\x01 \x01(\tB/\xe0A\x01\xfaA)\x12\'generativelanguage.googleapis.com/Chunk\x12O\n\x08requests\x18\x02 \x03(\x0b28.google.ai.generativelanguage.v1alpha.UpdateChunkRequestB\x03\xe0A\x02"X\n\x19BatchUpdateChunksResponse\x12;\n\x06chunks\x18\x01 \x03(\x0b2+.google.ai.generativelanguage.v1alpha.Chunk"S\n\x12DeleteChunkRequest\x12=\n\x04name\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\n\'generativelanguage.googleapis.com/Chunk"\xac\x01\n\x18BatchDeleteChunksRequest\x12?\n\x06parent\x18\x01 \x01(\tB/\xe0A\x01\xfaA)\x12\'generativelanguage.googleapis.com/Chunk\x12O\n\x08requests\x18\x02 \x03(\x0b28.google.ai.generativelanguage.v1alpha.DeleteChunkRequestB\x03\xe0A\x02"\x85\x01\n\x11ListChunksRequest\x12?\n\x06parent\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\x12\'generativelanguage.googleapis.com/Chunk\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01"j\n\x12ListChunksResponse\x12;\n\x06chunks\x18\x01 \x03(\x0b2+.google.ai.generativelanguage.v1alpha.Chunk\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t2\xac\x1d\n\x10RetrieverService\x12\xa2\x01\n\x0cCreateCorpus\x129.google.ai.generativelanguage.v1alpha.CreateCorpusRequest\x1a,.google.ai.generativelanguage.v1alpha.Corpus")\xdaA\x06corpus\x82\xd3\xe4\x93\x02\x1a"\x10/v1alpha/corpora:\x06corpus\x12\x9b\x01\n\tGetCorpus\x126.google.ai.generativelanguage.v1alpha.GetCorpusRequest\x1a,.google.ai.generativelanguage.v1alpha.Corpus"(\xdaA\x04name\x82\xd3\xe4\x93\x02\x1b\x12\x19/v1alpha/{name=corpora/*}\x12\xbe\x01\n\x0cUpdateCorpus\x129.google.ai.generativelanguage.v1alpha.UpdateCorpusRequest\x1a,.google.ai.generativelanguage.v1alpha.Corpus"E\xdaA\x12corpus,update_mask\x82\xd3\xe4\x93\x02*2 /v1alpha/{corpus.name=corpora/*}:\x06corpus\x12\x8b\x01\n\x0cDeleteCorpus\x129.google.ai.generativelanguage.v1alpha.DeleteCorpusRequest\x1a\x16.google.protobuf.Empty"(\xdaA\x04name\x82\xd3\xe4\x93\x02\x1b*\x19/v1alpha/{name=corpora/*}\x12\x9c\x01\n\x0bListCorpora\x128.google.ai.generativelanguage.v1alpha.ListCorporaRequest\x1a9.google.ai.generativelanguage.v1alpha.ListCorporaResponse"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v1alpha/corpora\x12\xae\x01\n\x0bQueryCorpus\x128.google.ai.generativelanguage.v1alpha.QueryCorpusRequest\x1a9.google.ai.generativelanguage.v1alpha.QueryCorpusResponse"*\x82\xd3\xe4\x93\x02$"\x1f/v1alpha/{name=corpora/*}:query:\x01*\x12\xc8\x01\n\x0eCreateDocument\x12;.google.ai.generativelanguage.v1alpha.CreateDocumentRequest\x1a..google.ai.generativelanguage.v1alpha.Document"I\xdaA\x0fparent,document\x82\xd3\xe4\x93\x021"%/v1alpha/{parent=corpora/*}/documents:\x08document\x12\xad\x01\n\x0bGetDocument\x128.google.ai.generativelanguage.v1alpha.GetDocumentRequest\x1a..google.ai.generativelanguage.v1alpha.Document"4\xdaA\x04name\x82\xd3\xe4\x93\x02\'\x12%/v1alpha/{name=corpora/*/documents/*}\x12\xd6\x01\n\x0eUpdateDocument\x12;.google.ai.generativelanguage.v1alpha.UpdateDocumentRequest\x1a..google.ai.generativelanguage.v1alpha.Document"W\xdaA\x14document,update_mask\x82\xd3\xe4\x93\x02:2./v1alpha/{document.name=corpora/*/documents/*}:\x08document\x12\x9b\x01\n\x0eDeleteDocument\x12;.google.ai.generativelanguage.v1alpha.DeleteDocumentRequest\x1a\x16.google.protobuf.Empty"4\xdaA\x04name\x82\xd3\xe4\x93\x02\'*%/v1alpha/{name=corpora/*/documents/*}\x12\xc0\x01\n\rListDocuments\x12:.google.ai.generativelanguage.v1alpha.ListDocumentsRequest\x1a;.google.ai.generativelanguage.v1alpha.ListDocumentsResponse"6\xdaA\x06parent\x82\xd3\xe4\x93\x02\'\x12%/v1alpha/{parent=corpora/*}/documents\x12\xc0\x01\n\rQueryDocument\x12:.google.ai.generativelanguage.v1alpha.QueryDocumentRequest\x1a;.google.ai.generativelanguage.v1alpha.QueryDocumentResponse"6\x82\xd3\xe4\x93\x020"+/v1alpha/{name=corpora/*/documents/*}:query:\x01*\x12\xc2\x01\n\x0bCreateChunk\x128.google.ai.generativelanguage.v1alpha.CreateChunkRequest\x1a+.google.ai.generativelanguage.v1alpha.Chunk"L\xdaA\x0cparent,chunk\x82\xd3\xe4\x93\x027"./v1alpha/{parent=corpora/*/documents/*}/chunks:\x05chunk\x12\xdb\x01\n\x11BatchCreateChunks\x12>.google.ai.generativelanguage.v1alpha.BatchCreateChunksRequest\x1a?.google.ai.generativelanguage.v1alpha.BatchCreateChunksResponse"E\x82\xd3\xe4\x93\x02?":/v1alpha/{parent=corpora/*/documents/*}/chunks:batchCreate:\x01*\x12\xad\x01\n\x08GetChunk\x125.google.ai.generativelanguage.v1alpha.GetChunkRequest\x1a+.google.ai.generativelanguage.v1alpha.Chunk"=\xdaA\x04name\x82\xd3\xe4\x93\x020\x12./v1alpha/{name=corpora/*/documents/*/chunks/*}\x12\xcd\x01\n\x0bUpdateChunk\x128.google.ai.generativelanguage.v1alpha.UpdateChunkRequest\x1a+.google.ai.generativelanguage.v1alpha.Chunk"W\xdaA\x11chunk,update_mask\x82\xd3\xe4\x93\x02=24/v1alpha/{chunk.name=corpora/*/documents/*/chunks/*}:\x05chunk\x12\xdb\x01\n\x11BatchUpdateChunks\x12>.google.ai.generativelanguage.v1alpha.BatchUpdateChunksRequest\x1a?.google.ai.generativelanguage.v1alpha.BatchUpdateChunksResponse"E\x82\xd3\xe4\x93\x02?":/v1alpha/{parent=corpora/*/documents/*}/chunks:batchUpdate:\x01*\x12\x9e\x01\n\x0bDeleteChunk\x128.google.ai.generativelanguage.v1alpha.DeleteChunkRequest\x1a\x16.google.protobuf.Empty"=\xdaA\x04name\x82\xd3\xe4\x93\x020*./v1alpha/{name=corpora/*/documents/*/chunks/*}\x12\xb2\x01\n\x11BatchDeleteChunks\x12>.google.ai.generativelanguage.v1alpha.BatchDeleteChunksRequest\x1a\x16.google.protobuf.Empty"E\x82\xd3\xe4\x93\x02?":/v1alpha/{parent=corpora/*/documents/*}/chunks:batchDelete:\x01*\x12\xc0\x01\n\nListChunks\x127.google.ai.generativelanguage.v1alpha.ListChunksRequest\x1a8.google.ai.generativelanguage.v1alpha.ListChunksResponse"?\xdaA\x06parent\x82\xd3\xe4\x93\x020\x12./v1alpha/{parent=corpora/*/documents/*}/chunks\x1a$\xcaA!generativelanguage.googleapis.comB\xa3\x01\n(com.google.ai.generativelanguage.v1alphaB\x15RetrieverServiceProtoP\x01Z^cloud.google.com/go/ai/generativelanguage/apiv1alpha/generativelanguagepb;generativelanguagepbb\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.ai.generativelanguage.v1alpha.retriever_service_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n(com.google.ai.generativelanguage.v1alphaB\x15RetrieverServiceProtoP\x01Z^cloud.google.com/go/ai/generativelanguage/apiv1alpha/generativelanguagepb;generativelanguagepb'
+    _globals['_CREATECORPUSREQUEST'].fields_by_name['corpus']._loaded_options = None
+    _globals['_CREATECORPUSREQUEST'].fields_by_name['corpus']._serialized_options = b'\xe0A\x02'
+    _globals['_GETCORPUSREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETCORPUSREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA*\n(generativelanguage.googleapis.com/Corpus'
+    _globals['_UPDATECORPUSREQUEST'].fields_by_name['corpus']._loaded_options = None
+    _globals['_UPDATECORPUSREQUEST'].fields_by_name['corpus']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATECORPUSREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATECORPUSREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETECORPUSREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETECORPUSREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA*\n(generativelanguage.googleapis.com/Corpus'
+    _globals['_DELETECORPUSREQUEST'].fields_by_name['force']._loaded_options = None
+    _globals['_DELETECORPUSREQUEST'].fields_by_name['force']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTCORPORAREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTCORPORAREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTCORPORAREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTCORPORAREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_QUERYCORPUSREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_QUERYCORPUSREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA*\n(generativelanguage.googleapis.com/Corpus'
+    _globals['_QUERYCORPUSREQUEST'].fields_by_name['query']._loaded_options = None
+    _globals['_QUERYCORPUSREQUEST'].fields_by_name['query']._serialized_options = b'\xe0A\x02'
+    _globals['_QUERYCORPUSREQUEST'].fields_by_name['metadata_filters']._loaded_options = None
+    _globals['_QUERYCORPUSREQUEST'].fields_by_name['metadata_filters']._serialized_options = b'\xe0A\x01'
+    _globals['_QUERYCORPUSREQUEST'].fields_by_name['results_count']._loaded_options = None
+    _globals['_QUERYCORPUSREQUEST'].fields_by_name['results_count']._serialized_options = b'\xe0A\x01'
+    _globals['_CREATEDOCUMENTREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEDOCUMENTREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA,\x12*generativelanguage.googleapis.com/Document'
+    _globals['_CREATEDOCUMENTREQUEST'].fields_by_name['document']._loaded_options = None
+    _globals['_CREATEDOCUMENTREQUEST'].fields_by_name['document']._serialized_options = b'\xe0A\x02'
+    _globals['_GETDOCUMENTREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETDOCUMENTREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA,\n*generativelanguage.googleapis.com/Document'
+    _globals['_UPDATEDOCUMENTREQUEST'].fields_by_name['document']._loaded_options = None
+    _globals['_UPDATEDOCUMENTREQUEST'].fields_by_name['document']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEDOCUMENTREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATEDOCUMENTREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETEDOCUMENTREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEDOCUMENTREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA,\n*generativelanguage.googleapis.com/Document'
+    _globals['_DELETEDOCUMENTREQUEST'].fields_by_name['force']._loaded_options = None
+    _globals['_DELETEDOCUMENTREQUEST'].fields_by_name['force']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTDOCUMENTSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTDOCUMENTSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA,\x12*generativelanguage.googleapis.com/Document'
+    _globals['_LISTDOCUMENTSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTDOCUMENTSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTDOCUMENTSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTDOCUMENTSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_QUERYDOCUMENTREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_QUERYDOCUMENTREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA,\n*generativelanguage.googleapis.com/Document'
+    _globals['_QUERYDOCUMENTREQUEST'].fields_by_name['query']._loaded_options = None
+    _globals['_QUERYDOCUMENTREQUEST'].fields_by_name['query']._serialized_options = b'\xe0A\x02'
+    _globals['_QUERYDOCUMENTREQUEST'].fields_by_name['results_count']._loaded_options = None
+    _globals['_QUERYDOCUMENTREQUEST'].fields_by_name['results_count']._serialized_options = b'\xe0A\x01'
+    _globals['_QUERYDOCUMENTREQUEST'].fields_by_name['metadata_filters']._loaded_options = None
+    _globals['_QUERYDOCUMENTREQUEST'].fields_by_name['metadata_filters']._serialized_options = b'\xe0A\x01'
+    _globals['_CREATECHUNKREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATECHUNKREQUEST'].fields_by_name['parent']._serialized_options = b"\xe0A\x02\xfaA)\x12'generativelanguage.googleapis.com/Chunk"
+    _globals['_CREATECHUNKREQUEST'].fields_by_name['chunk']._loaded_options = None
+    _globals['_CREATECHUNKREQUEST'].fields_by_name['chunk']._serialized_options = b'\xe0A\x02'
+    _globals['_BATCHCREATECHUNKSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_BATCHCREATECHUNKSREQUEST'].fields_by_name['parent']._serialized_options = b"\xe0A\x01\xfaA)\x12'generativelanguage.googleapis.com/Chunk"
+    _globals['_BATCHCREATECHUNKSREQUEST'].fields_by_name['requests']._loaded_options = None
+    _globals['_BATCHCREATECHUNKSREQUEST'].fields_by_name['requests']._serialized_options = b'\xe0A\x02'
+    _globals['_GETCHUNKREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETCHUNKREQUEST'].fields_by_name['name']._serialized_options = b"\xe0A\x02\xfaA)\n'generativelanguage.googleapis.com/Chunk"
+    _globals['_UPDATECHUNKREQUEST'].fields_by_name['chunk']._loaded_options = None
+    _globals['_UPDATECHUNKREQUEST'].fields_by_name['chunk']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATECHUNKREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATECHUNKREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_BATCHUPDATECHUNKSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_BATCHUPDATECHUNKSREQUEST'].fields_by_name['parent']._serialized_options = b"\xe0A\x01\xfaA)\x12'generativelanguage.googleapis.com/Chunk"
+    _globals['_BATCHUPDATECHUNKSREQUEST'].fields_by_name['requests']._loaded_options = None
+    _globals['_BATCHUPDATECHUNKSREQUEST'].fields_by_name['requests']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETECHUNKREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETECHUNKREQUEST'].fields_by_name['name']._serialized_options = b"\xe0A\x02\xfaA)\n'generativelanguage.googleapis.com/Chunk"
+    _globals['_BATCHDELETECHUNKSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_BATCHDELETECHUNKSREQUEST'].fields_by_name['parent']._serialized_options = b"\xe0A\x01\xfaA)\x12'generativelanguage.googleapis.com/Chunk"
+    _globals['_BATCHDELETECHUNKSREQUEST'].fields_by_name['requests']._loaded_options = None
+    _globals['_BATCHDELETECHUNKSREQUEST'].fields_by_name['requests']._serialized_options = b'\xe0A\x02'
+    _globals['_LISTCHUNKSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTCHUNKSREQUEST'].fields_by_name['parent']._serialized_options = b"\xe0A\x02\xfaA)\x12'generativelanguage.googleapis.com/Chunk"
+    _globals['_LISTCHUNKSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTCHUNKSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTCHUNKSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTCHUNKSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_RETRIEVERSERVICE']._loaded_options = None
+    _globals['_RETRIEVERSERVICE']._serialized_options = b'\xcaA!generativelanguage.googleapis.com'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['CreateCorpus']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['CreateCorpus']._serialized_options = b'\xdaA\x06corpus\x82\xd3\xe4\x93\x02\x1a"\x10/v1alpha/corpora:\x06corpus'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['GetCorpus']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['GetCorpus']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02\x1b\x12\x19/v1alpha/{name=corpora/*}'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['UpdateCorpus']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['UpdateCorpus']._serialized_options = b'\xdaA\x12corpus,update_mask\x82\xd3\xe4\x93\x02*2 /v1alpha/{corpus.name=corpora/*}:\x06corpus'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['DeleteCorpus']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['DeleteCorpus']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02\x1b*\x19/v1alpha/{name=corpora/*}'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['ListCorpora']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['ListCorpora']._serialized_options = b'\x82\xd3\xe4\x93\x02\x12\x12\x10/v1alpha/corpora'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['QueryCorpus']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['QueryCorpus']._serialized_options = b'\x82\xd3\xe4\x93\x02$"\x1f/v1alpha/{name=corpora/*}:query:\x01*'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['CreateDocument']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['CreateDocument']._serialized_options = b'\xdaA\x0fparent,document\x82\xd3\xe4\x93\x021"%/v1alpha/{parent=corpora/*}/documents:\x08document'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['GetDocument']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['GetDocument']._serialized_options = b"\xdaA\x04name\x82\xd3\xe4\x93\x02'\x12%/v1alpha/{name=corpora/*/documents/*}"
+    _globals['_RETRIEVERSERVICE'].methods_by_name['UpdateDocument']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['UpdateDocument']._serialized_options = b'\xdaA\x14document,update_mask\x82\xd3\xe4\x93\x02:2./v1alpha/{document.name=corpora/*/documents/*}:\x08document'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['DeleteDocument']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['DeleteDocument']._serialized_options = b"\xdaA\x04name\x82\xd3\xe4\x93\x02'*%/v1alpha/{name=corpora/*/documents/*}"
+    _globals['_RETRIEVERSERVICE'].methods_by_name['ListDocuments']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['ListDocuments']._serialized_options = b"\xdaA\x06parent\x82\xd3\xe4\x93\x02'\x12%/v1alpha/{parent=corpora/*}/documents"
+    _globals['_RETRIEVERSERVICE'].methods_by_name['QueryDocument']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['QueryDocument']._serialized_options = b'\x82\xd3\xe4\x93\x020"+/v1alpha/{name=corpora/*/documents/*}:query:\x01*'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['CreateChunk']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['CreateChunk']._serialized_options = b'\xdaA\x0cparent,chunk\x82\xd3\xe4\x93\x027"./v1alpha/{parent=corpora/*/documents/*}/chunks:\x05chunk'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['BatchCreateChunks']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['BatchCreateChunks']._serialized_options = b'\x82\xd3\xe4\x93\x02?":/v1alpha/{parent=corpora/*/documents/*}/chunks:batchCreate:\x01*'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['GetChunk']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['GetChunk']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x020\x12./v1alpha/{name=corpora/*/documents/*/chunks/*}'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['UpdateChunk']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['UpdateChunk']._serialized_options = b'\xdaA\x11chunk,update_mask\x82\xd3\xe4\x93\x02=24/v1alpha/{chunk.name=corpora/*/documents/*/chunks/*}:\x05chunk'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['BatchUpdateChunks']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['BatchUpdateChunks']._serialized_options = b'\x82\xd3\xe4\x93\x02?":/v1alpha/{parent=corpora/*/documents/*}/chunks:batchUpdate:\x01*'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['DeleteChunk']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['DeleteChunk']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x020*./v1alpha/{name=corpora/*/documents/*/chunks/*}'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['BatchDeleteChunks']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['BatchDeleteChunks']._serialized_options = b'\x82\xd3\xe4\x93\x02?":/v1alpha/{parent=corpora/*/documents/*}/chunks:batchDelete:\x01*'
+    _globals['_RETRIEVERSERVICE'].methods_by_name['ListChunks']._loaded_options = None
+    _globals['_RETRIEVERSERVICE'].methods_by_name['ListChunks']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x020\x12./v1alpha/{parent=corpora/*/documents/*}/chunks'
+    _globals['_CREATECORPUSREQUEST']._serialized_start = 334
+    _globals['_CREATECORPUSREQUEST']._serialized_end = 422
+    _globals['_GETCORPUSREQUEST']._serialized_start = 424
+    _globals['_GETCORPUSREQUEST']._serialized_end = 506
+    _globals['_UPDATECORPUSREQUEST']._serialized_start = 509
+    _globals['_UPDATECORPUSREQUEST']._serialized_end = 651
+    _globals['_DELETECORPUSREQUEST']._serialized_start = 653
+    _globals['_DELETECORPUSREQUEST']._serialized_end = 758
+    _globals['_LISTCORPORAREQUEST']._serialized_start = 760
+    _globals['_LISTCORPORAREQUEST']._serialized_end = 829
+    _globals['_LISTCORPORARESPONSE']._serialized_start = 831
+    _globals['_LISTCORPORARESPONSE']._serialized_end = 940
+    _globals['_QUERYCORPUSREQUEST']._serialized_start = 943
+    _globals['_QUERYCORPUSREQUEST']._serialized_end = 1160
+    _globals['_QUERYCORPUSRESPONSE']._serialized_start = 1162
+    _globals['_QUERYCORPUSRESPONSE']._serialized_end = 1261
+    _globals['_RELEVANTCHUNK']._serialized_start = 1263
+    _globals['_RELEVANTCHUNK']._serialized_end = 1369
+    _globals['_CREATEDOCUMENTREQUEST']._serialized_start = 1372
+    _globals['_CREATEDOCUMENTREQUEST']._serialized_end = 1534
+    _globals['_GETDOCUMENTREQUEST']._serialized_start = 1536
+    _globals['_GETDOCUMENTREQUEST']._serialized_end = 1622
+    _globals['_UPDATEDOCUMENTREQUEST']._serialized_start = 1625
+    _globals['_UPDATEDOCUMENTREQUEST']._serialized_end = 1773
+    _globals['_DELETEDOCUMENTREQUEST']._serialized_start = 1775
+    _globals['_DELETEDOCUMENTREQUEST']._serialized_end = 1884
+    _globals['_LISTDOCUMENTSREQUEST']._serialized_start = 1887
+    _globals['_LISTDOCUMENTSREQUEST']._serialized_end = 2026
+    _globals['_LISTDOCUMENTSRESPONSE']._serialized_start = 2028
+    _globals['_LISTDOCUMENTSRESPONSE']._serialized_end = 2143
+    _globals['_QUERYDOCUMENTREQUEST']._serialized_start = 2146
+    _globals['_QUERYDOCUMENTREQUEST']._serialized_end = 2367
+    _globals['_QUERYDOCUMENTRESPONSE']._serialized_start = 2369
+    _globals['_QUERYDOCUMENTRESPONSE']._serialized_end = 2470
+    _globals['_CREATECHUNKREQUEST']._serialized_start = 2473
+    _globals['_CREATECHUNKREQUEST']._serialized_end = 2623
+    _globals['_BATCHCREATECHUNKSREQUEST']._serialized_start = 2626
+    _globals['_BATCHCREATECHUNKSREQUEST']._serialized_end = 2798
+    _globals['_BATCHCREATECHUNKSRESPONSE']._serialized_start = 2800
+    _globals['_BATCHCREATECHUNKSRESPONSE']._serialized_end = 2888
+    _globals['_GETCHUNKREQUEST']._serialized_start = 2890
+    _globals['_GETCHUNKREQUEST']._serialized_end = 2970
+    _globals['_UPDATECHUNKREQUEST']._serialized_start = 2973
+    _globals['_UPDATECHUNKREQUEST']._serialized_end = 3112
+    _globals['_BATCHUPDATECHUNKSREQUEST']._serialized_start = 3115
+    _globals['_BATCHUPDATECHUNKSREQUEST']._serialized_end = 3287
+    _globals['_BATCHUPDATECHUNKSRESPONSE']._serialized_start = 3289
+    _globals['_BATCHUPDATECHUNKSRESPONSE']._serialized_end = 3377
+    _globals['_DELETECHUNKREQUEST']._serialized_start = 3379
+    _globals['_DELETECHUNKREQUEST']._serialized_end = 3462
+    _globals['_BATCHDELETECHUNKSREQUEST']._serialized_start = 3465
+    _globals['_BATCHDELETECHUNKSREQUEST']._serialized_end = 3637
+    _globals['_LISTCHUNKSREQUEST']._serialized_start = 3640
+    _globals['_LISTCHUNKSREQUEST']._serialized_end = 3773
+    _globals['_LISTCHUNKSRESPONSE']._serialized_start = 3775
+    _globals['_LISTCHUNKSRESPONSE']._serialized_end = 3881
+    _globals['_RETRIEVERSERVICE']._serialized_start = 3884
+    _globals['_RETRIEVERSERVICE']._serialized_end = 7640

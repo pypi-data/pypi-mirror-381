@@ -1,0 +1,152 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/cloud/recaptchaenterprise/v1beta1/recaptchaenterprise.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nBgoogle/cloud/recaptchaenterprise/v1beta1/recaptchaenterprise.proto\x12(google.cloud.recaptchaenterprise.v1beta1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\xad\x01\n\x17CreateAssessmentRequest\x12C\n\x06parent\x18\x01 \x01(\tB3\xe0A\x02\xfaA-\n+cloudresourcemanager.googleapis.com/Project\x12M\n\nassessment\x18\x02 \x01(\x0b24.google.cloud.recaptchaenterprise.v1beta1.AssessmentB\x03\xe0A\x02"\x97\x05\n\x10TransactionEvent\x12h\n\nevent_type\x18\x01 \x01(\x0e2O.google.cloud.recaptchaenterprise.v1beta1.TransactionEvent.TransactionEventTypeB\x03\xe0A\x01\x12\x13\n\x06reason\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x12\n\x05value\x18\x03 \x01(\x01B\x03\xe0A\x01\x123\n\nevent_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x01"\xba\x03\n\x14TransactionEventType\x12&\n"TRANSACTION_EVENT_TYPE_UNSPECIFIED\x10\x00\x12\x14\n\x10MERCHANT_APPROVE\x10\x01\x12\x11\n\rMERCHANT_DENY\x10\x02\x12\x11\n\rMANUAL_REVIEW\x10\x03\x12\x11\n\rAUTHORIZATION\x10\x04\x12\x19\n\x15AUTHORIZATION_DECLINE\x10\x05\x12\x13\n\x0fPAYMENT_CAPTURE\x10\x06\x12\x1b\n\x17PAYMENT_CAPTURE_DECLINE\x10\x07\x12\n\n\x06CANCEL\x10\x08\x12\x16\n\x12CHARGEBACK_INQUIRY\x10\t\x12\x14\n\x10CHARGEBACK_ALERT\x10\n\x12\x16\n\x12FRAUD_NOTIFICATION\x10\x0b\x12\x0e\n\nCHARGEBACK\x10\x0c\x12\x1c\n\x18CHARGEBACK_REPRESENTMENT\x10\r\x12\x16\n\x12CHARGEBACK_REVERSE\x10\x0e\x12\x12\n\x0eREFUND_REQUEST\x10\x0f\x12\x12\n\x0eREFUND_DECLINE\x10\x10\x12\n\n\x06REFUND\x10\x11\x12\x12\n\x0eREFUND_REVERSE\x10\x12"\xf9\x06\n\x19AnnotateAssessmentRequest\x12C\n\x04name\x18\x01 \x01(\tB5\xe0A\x02\xfaA/\n-recaptchaenterprise.googleapis.com/Assessment\x12g\n\nannotation\x18\x02 \x01(\x0e2N.google.cloud.recaptchaenterprise.v1beta1.AnnotateAssessmentRequest.AnnotationB\x03\xe0A\x01\x12`\n\x07reasons\x18\x03 \x03(\x0e2J.google.cloud.recaptchaenterprise.v1beta1.AnnotateAssessmentRequest.ReasonB\x03\xe0A\x01\x12\x1e\n\x11hashed_account_id\x18\x04 \x01(\x0cB\x03\xe0A\x01\x12Z\n\x11transaction_event\x18\x05 \x01(\x0b2:.google.cloud.recaptchaenterprise.v1beta1.TransactionEventB\x03\xe0A\x01"~\n\nAnnotation\x12\x1a\n\x16ANNOTATION_UNSPECIFIED\x10\x00\x12\x0e\n\nLEGITIMATE\x10\x01\x12\x0e\n\nFRAUDULENT\x10\x02\x12\x18\n\x10PASSWORD_CORRECT\x10\x03\x1a\x02\x08\x01\x12\x1a\n\x12PASSWORD_INCORRECT\x10\x04\x1a\x02\x08\x01"\xcf\x02\n\x06Reason\x12\x16\n\x12REASON_UNSPECIFIED\x10\x00\x12\x0e\n\nCHARGEBACK\x10\x01\x12\x14\n\x10CHARGEBACK_FRAUD\x10\x08\x12\x16\n\x12CHARGEBACK_DISPUTE\x10\t\x12\n\n\x06REFUND\x10\n\x12\x10\n\x0cREFUND_FRAUD\x10\x0b\x12\x18\n\x14TRANSACTION_ACCEPTED\x10\x0c\x12\x18\n\x14TRANSACTION_DECLINED\x10\r\x12\x16\n\x12PAYMENT_HEURISTICS\x10\x02\x12\x18\n\x14INITIATED_TWO_FACTOR\x10\x07\x12\x15\n\x11PASSED_TWO_FACTOR\x10\x03\x12\x15\n\x11FAILED_TWO_FACTOR\x10\x04\x12\x14\n\x10CORRECT_PASSWORD\x10\x05\x12\x16\n\x12INCORRECT_PASSWORD\x10\x06\x12\x0f\n\x0bSOCIAL_SPAM\x10\x0e"\x1c\n\x1aAnnotateAssessmentResponse"\x86\x01\n\x18PasswordLeakVerification\x12$\n\x17hashed_user_credentials\x18\x01 \x01(\x0cB\x03\xe0A\x01\x12\x1f\n\x12credentials_leaked\x18\x02 \x01(\x08B\x03\xe0A\x03\x12#\n\x16canonicalized_username\x18\x03 \x01(\tB\x03\xe0A\x01"\xb7\x07\n\nAssessment\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x03\x12>\n\x05event\x18\x02 \x01(\x0b2/.google.cloud.recaptchaenterprise.v1beta1.Event\x12\x12\n\x05score\x18\x03 \x01(\x02B\x03\xe0A\x03\x12X\n\x10token_properties\x18\x04 \x01(\x0b29.google.cloud.recaptchaenterprise.v1beta1.TokenPropertiesB\x03\xe0A\x03\x12_\n\x07reasons\x18\x05 \x03(\x0e2I.google.cloud.recaptchaenterprise.v1beta1.Assessment.ClassificationReasonB\x03\xe0A\x03\x12f\n\x1apassword_leak_verification\x18\x07 \x01(\x0b2B.google.cloud.recaptchaenterprise.v1beta1.PasswordLeakVerification\x12h\n\x1baccount_defender_assessment\x18\x08 \x01(\x0b2C.google.cloud.recaptchaenterprise.v1beta1.AccountDefenderAssessment\x12h\n\x1bfraud_prevention_assessment\x18\x0b \x01(\x0b2C.google.cloud.recaptchaenterprise.v1beta1.FraudPreventionAssessment"\xe9\x01\n\x14ClassificationReason\x12%\n!CLASSIFICATION_REASON_UNSPECIFIED\x10\x00\x12\x0e\n\nAUTOMATION\x10\x01\x12\x1a\n\x16UNEXPECTED_ENVIRONMENT\x10\x02\x12\x14\n\x10TOO_MUCH_TRAFFIC\x10\x03\x12\x1d\n\x19UNEXPECTED_USAGE_PATTERNS\x10\x04\x12\x18\n\x14LOW_CONFIDENCE_SCORE\x10\x05\x12\x15\n\x11SUSPECTED_CARDING\x10\x06\x12\x18\n\x14SUSPECTED_CHARGEBACK\x10\x07:_\xeaA\\\n-recaptchaenterprise.googleapis.com/Assessment\x12+projects/{project}/assessments/{assessment}"\xb1\x03\n\x05Event\x12\x12\n\x05token\x18\x01 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08site_key\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x17\n\nuser_agent\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x1c\n\x0fuser_ip_address\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x1c\n\x0fexpected_action\x18\x05 \x01(\tB\x03\xe0A\x01\x12\x1e\n\x11hashed_account_id\x18\x06 \x01(\x0cB\x03\xe0A\x01\x12X\n\x10transaction_data\x18\r \x01(\x0b29.google.cloud.recaptchaenterprise.v1beta1.TransactionDataB\x03\xe0A\x01\x12^\n\x10fraud_prevention\x18\x11 \x01(\x0e2?.google.cloud.recaptchaenterprise.v1beta1.Event.FraudPreventionB\x03\xe0A\x01"N\n\x0fFraudPrevention\x12 \n\x1cFRAUD_PREVENTION_UNSPECIFIED\x10\x00\x12\x0b\n\x07ENABLED\x10\x01\x12\x0c\n\x08DISABLED\x10\x02"\x9d\t\n\x0fTransactionData\x12\x1b\n\x0etransaction_id\x18\x0b \x01(\tH\x00\x88\x01\x01\x12\x16\n\x0epayment_method\x18\x01 \x01(\t\x12\x10\n\x08card_bin\x18\x02 \x01(\t\x12\x16\n\x0ecard_last_four\x18\x03 \x01(\t\x12\x15\n\rcurrency_code\x18\x04 \x01(\t\x12\r\n\x05value\x18\x05 \x01(\x01\x12\x16\n\x0eshipping_value\x18\x0c \x01(\x01\x12[\n\x10shipping_address\x18\x06 \x01(\x0b2A.google.cloud.recaptchaenterprise.v1beta1.TransactionData.Address\x12Z\n\x0fbilling_address\x18\x07 \x01(\x0b2A.google.cloud.recaptchaenterprise.v1beta1.TransactionData.Address\x12L\n\x04user\x18\x08 \x01(\x0b2>.google.cloud.recaptchaenterprise.v1beta1.TransactionData.User\x12Q\n\tmerchants\x18\r \x03(\x0b2>.google.cloud.recaptchaenterprise.v1beta1.TransactionData.User\x12M\n\x05items\x18\x0e \x03(\x0b2>.google.cloud.recaptchaenterprise.v1beta1.TransactionData.Item\x12[\n\x0cgateway_info\x18\n \x01(\x0b2E.google.cloud.recaptchaenterprise.v1beta1.TransactionData.GatewayInfo\x1a\x86\x01\n\x07Address\x12\x11\n\trecipient\x18\x01 \x01(\t\x12\x0f\n\x07address\x18\x02 \x03(\t\x12\x10\n\x08locality\x18\x03 \x01(\t\x12\x1b\n\x13administrative_area\x18\x04 \x01(\t\x12\x13\n\x0bregion_code\x18\x05 \x01(\t\x12\x13\n\x0bpostal_code\x18\x06 \x01(\t\x1a\x84\x01\n\x04User\x12\x12\n\naccount_id\x18\x06 \x01(\t\x12\x13\n\x0bcreation_ms\x18\x01 \x01(\x03\x12\r\n\x05email\x18\x02 \x01(\t\x12\x16\n\x0eemail_verified\x18\x03 \x01(\x08\x12\x14\n\x0cphone_number\x18\x04 \x01(\t\x12\x16\n\x0ephone_verified\x18\x05 \x01(\x08\x1aR\n\x04Item\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x10\n\x08quantity\x18\x03 \x01(\x03\x12\x1b\n\x13merchant_account_id\x18\x04 \x01(\t\x1ap\n\x0bGatewayInfo\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1d\n\x15gateway_response_code\x18\x02 \x01(\t\x12\x19\n\x11avs_response_code\x18\x03 \x01(\t\x12\x19\n\x11cvv_response_code\x18\x04 \x01(\tB\x11\n\x0f_transaction_id"\xff\x02\n\x0fTokenProperties\x12\r\n\x05valid\x18\x01 \x01(\x08\x12_\n\x0einvalid_reason\x18\x02 \x01(\x0e2G.google.cloud.recaptchaenterprise.v1beta1.TokenProperties.InvalidReason\x12/\n\x0bcreate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12\x10\n\x08hostname\x18\x04 \x01(\t\x12\x0e\n\x06action\x18\x05 \x01(\t"\xa8\x01\n\rInvalidReason\x12\x1e\n\x1aINVALID_REASON_UNSPECIFIED\x10\x00\x12\x1a\n\x16UNKNOWN_INVALID_REASON\x10\x01\x12\r\n\tMALFORMED\x10\x02\x12\x0b\n\x07EXPIRED\x10\x03\x12\x08\n\x04DUPE\x10\x04\x12\x15\n\rSITE_MISMATCH\x10\x05\x1a\x02\x08\x01\x12\x0b\n\x07MISSING\x10\x06\x12\x11\n\rBROWSER_ERROR\x10\x07"\xc4\x04\n\x19FraudPreventionAssessment\x12\x1d\n\x10transaction_risk\x18\x01 \x01(\x02B\x03\xe0A\x03\x12\x83\x01\n\x19stolen_instrument_verdict\x18\x02 \x01(\x0b2[.google.cloud.recaptchaenterprise.v1beta1.FraudPreventionAssessment.StolenInstrumentVerdictB\x03\xe0A\x03\x12y\n\x14card_testing_verdict\x18\x03 \x01(\x0b2V.google.cloud.recaptchaenterprise.v1beta1.FraudPreventionAssessment.CardTestingVerdictB\x03\xe0A\x03\x12\x81\x01\n\x18behavioral_trust_verdict\x18\x04 \x01(\x0b2Z.google.cloud.recaptchaenterprise.v1beta1.FraudPreventionAssessment.BehavioralTrustVerdictB\x03\xe0A\x03\x1a,\n\x17StolenInstrumentVerdict\x12\x11\n\x04risk\x18\x01 \x01(\x02B\x03\xe0A\x03\x1a\'\n\x12CardTestingVerdict\x12\x11\n\x04risk\x18\x01 \x01(\x02B\x03\xe0A\x03\x1a,\n\x16BehavioralTrustVerdict\x12\x12\n\x05trust\x18\x01 \x01(\x02B\x03\xe0A\x03"\xbb\x02\n\x19AccountDefenderAssessment\x12h\n\x06labels\x18\x01 \x03(\x0e2X.google.cloud.recaptchaenterprise.v1beta1.AccountDefenderAssessment.AccountDefenderLabel"\xb3\x01\n\x14AccountDefenderLabel\x12&\n"ACCOUNT_DEFENDER_LABEL_UNSPECIFIED\x10\x00\x12\x11\n\rPROFILE_MATCH\x10\x01\x12\x1d\n\x19SUSPICIOUS_LOGIN_ACTIVITY\x10\x02\x12\x1f\n\x1bSUSPICIOUS_ACCOUNT_CREATION\x10\x03\x12 \n\x1cRELATED_ACCOUNTS_NUMBER_HIGH\x10\x042\xcd\x04\n!RecaptchaEnterpriseServiceV1Beta1\x12\xdd\x01\n\x10CreateAssessment\x12A.google.cloud.recaptchaenterprise.v1beta1.CreateAssessmentRequest\x1a4.google.cloud.recaptchaenterprise.v1beta1.Assessment"P\xdaA\x11parent,assessment\x82\xd3\xe4\x93\x026"(/v1beta1/{parent=projects/*}/assessments:\nassessment\x12\xef\x01\n\x12AnnotateAssessment\x12C.google.cloud.recaptchaenterprise.v1beta1.AnnotateAssessmentRequest\x1aD.google.cloud.recaptchaenterprise.v1beta1.AnnotateAssessmentResponse"N\xdaA\x0fname,annotation\x82\xd3\xe4\x93\x026"1/v1beta1/{name=projects/*/assessments/*}:annotate:\x01*\x1aV\xcaA"recaptchaenterprise.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platformB\xb2\x02\n&com.google.recaptchaenterprise.v1beta1B\x18RecaptchaEnterpriseProtoP\x01Zacloud.google.com/go/recaptchaenterprise/v2/apiv1beta1/recaptchaenterprisepb;recaptchaenterprisepb\xa2\x02\x04GCRE\xaa\x02(Google.Cloud.RecaptchaEnterprise.V1Beta1\xca\x02(Google\\Cloud\\RecaptchaEnterprise\\V1beta1\xea\x02+Google::Cloud::RecaptchaEnterprise::V1beta1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.recaptchaenterprise.v1beta1.recaptchaenterprise_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n&com.google.recaptchaenterprise.v1beta1B\x18RecaptchaEnterpriseProtoP\x01Zacloud.google.com/go/recaptchaenterprise/v2/apiv1beta1/recaptchaenterprisepb;recaptchaenterprisepb\xa2\x02\x04GCRE\xaa\x02(Google.Cloud.RecaptchaEnterprise.V1Beta1\xca\x02(Google\\Cloud\\RecaptchaEnterprise\\V1beta1\xea\x02+Google::Cloud::RecaptchaEnterprise::V1beta1'
+    _globals['_CREATEASSESSMENTREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEASSESSMENTREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA-\n+cloudresourcemanager.googleapis.com/Project'
+    _globals['_CREATEASSESSMENTREQUEST'].fields_by_name['assessment']._loaded_options = None
+    _globals['_CREATEASSESSMENTREQUEST'].fields_by_name['assessment']._serialized_options = b'\xe0A\x02'
+    _globals['_TRANSACTIONEVENT'].fields_by_name['event_type']._loaded_options = None
+    _globals['_TRANSACTIONEVENT'].fields_by_name['event_type']._serialized_options = b'\xe0A\x01'
+    _globals['_TRANSACTIONEVENT'].fields_by_name['reason']._loaded_options = None
+    _globals['_TRANSACTIONEVENT'].fields_by_name['reason']._serialized_options = b'\xe0A\x01'
+    _globals['_TRANSACTIONEVENT'].fields_by_name['value']._loaded_options = None
+    _globals['_TRANSACTIONEVENT'].fields_by_name['value']._serialized_options = b'\xe0A\x01'
+    _globals['_TRANSACTIONEVENT'].fields_by_name['event_time']._loaded_options = None
+    _globals['_TRANSACTIONEVENT'].fields_by_name['event_time']._serialized_options = b'\xe0A\x01'
+    _globals['_ANNOTATEASSESSMENTREQUEST_ANNOTATION'].values_by_name['PASSWORD_CORRECT']._loaded_options = None
+    _globals['_ANNOTATEASSESSMENTREQUEST_ANNOTATION'].values_by_name['PASSWORD_CORRECT']._serialized_options = b'\x08\x01'
+    _globals['_ANNOTATEASSESSMENTREQUEST_ANNOTATION'].values_by_name['PASSWORD_INCORRECT']._loaded_options = None
+    _globals['_ANNOTATEASSESSMENTREQUEST_ANNOTATION'].values_by_name['PASSWORD_INCORRECT']._serialized_options = b'\x08\x01'
+    _globals['_ANNOTATEASSESSMENTREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_ANNOTATEASSESSMENTREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA/\n-recaptchaenterprise.googleapis.com/Assessment'
+    _globals['_ANNOTATEASSESSMENTREQUEST'].fields_by_name['annotation']._loaded_options = None
+    _globals['_ANNOTATEASSESSMENTREQUEST'].fields_by_name['annotation']._serialized_options = b'\xe0A\x01'
+    _globals['_ANNOTATEASSESSMENTREQUEST'].fields_by_name['reasons']._loaded_options = None
+    _globals['_ANNOTATEASSESSMENTREQUEST'].fields_by_name['reasons']._serialized_options = b'\xe0A\x01'
+    _globals['_ANNOTATEASSESSMENTREQUEST'].fields_by_name['hashed_account_id']._loaded_options = None
+    _globals['_ANNOTATEASSESSMENTREQUEST'].fields_by_name['hashed_account_id']._serialized_options = b'\xe0A\x01'
+    _globals['_ANNOTATEASSESSMENTREQUEST'].fields_by_name['transaction_event']._loaded_options = None
+    _globals['_ANNOTATEASSESSMENTREQUEST'].fields_by_name['transaction_event']._serialized_options = b'\xe0A\x01'
+    _globals['_PASSWORDLEAKVERIFICATION'].fields_by_name['hashed_user_credentials']._loaded_options = None
+    _globals['_PASSWORDLEAKVERIFICATION'].fields_by_name['hashed_user_credentials']._serialized_options = b'\xe0A\x01'
+    _globals['_PASSWORDLEAKVERIFICATION'].fields_by_name['credentials_leaked']._loaded_options = None
+    _globals['_PASSWORDLEAKVERIFICATION'].fields_by_name['credentials_leaked']._serialized_options = b'\xe0A\x03'
+    _globals['_PASSWORDLEAKVERIFICATION'].fields_by_name['canonicalized_username']._loaded_options = None
+    _globals['_PASSWORDLEAKVERIFICATION'].fields_by_name['canonicalized_username']._serialized_options = b'\xe0A\x01'
+    _globals['_ASSESSMENT'].fields_by_name['name']._loaded_options = None
+    _globals['_ASSESSMENT'].fields_by_name['name']._serialized_options = b'\xe0A\x03'
+    _globals['_ASSESSMENT'].fields_by_name['score']._loaded_options = None
+    _globals['_ASSESSMENT'].fields_by_name['score']._serialized_options = b'\xe0A\x03'
+    _globals['_ASSESSMENT'].fields_by_name['token_properties']._loaded_options = None
+    _globals['_ASSESSMENT'].fields_by_name['token_properties']._serialized_options = b'\xe0A\x03'
+    _globals['_ASSESSMENT'].fields_by_name['reasons']._loaded_options = None
+    _globals['_ASSESSMENT'].fields_by_name['reasons']._serialized_options = b'\xe0A\x03'
+    _globals['_ASSESSMENT']._loaded_options = None
+    _globals['_ASSESSMENT']._serialized_options = b'\xeaA\\\n-recaptchaenterprise.googleapis.com/Assessment\x12+projects/{project}/assessments/{assessment}'
+    _globals['_EVENT'].fields_by_name['token']._loaded_options = None
+    _globals['_EVENT'].fields_by_name['token']._serialized_options = b'\xe0A\x01'
+    _globals['_EVENT'].fields_by_name['site_key']._loaded_options = None
+    _globals['_EVENT'].fields_by_name['site_key']._serialized_options = b'\xe0A\x01'
+    _globals['_EVENT'].fields_by_name['user_agent']._loaded_options = None
+    _globals['_EVENT'].fields_by_name['user_agent']._serialized_options = b'\xe0A\x01'
+    _globals['_EVENT'].fields_by_name['user_ip_address']._loaded_options = None
+    _globals['_EVENT'].fields_by_name['user_ip_address']._serialized_options = b'\xe0A\x01'
+    _globals['_EVENT'].fields_by_name['expected_action']._loaded_options = None
+    _globals['_EVENT'].fields_by_name['expected_action']._serialized_options = b'\xe0A\x01'
+    _globals['_EVENT'].fields_by_name['hashed_account_id']._loaded_options = None
+    _globals['_EVENT'].fields_by_name['hashed_account_id']._serialized_options = b'\xe0A\x01'
+    _globals['_EVENT'].fields_by_name['transaction_data']._loaded_options = None
+    _globals['_EVENT'].fields_by_name['transaction_data']._serialized_options = b'\xe0A\x01'
+    _globals['_EVENT'].fields_by_name['fraud_prevention']._loaded_options = None
+    _globals['_EVENT'].fields_by_name['fraud_prevention']._serialized_options = b'\xe0A\x01'
+    _globals['_TOKENPROPERTIES_INVALIDREASON'].values_by_name['SITE_MISMATCH']._loaded_options = None
+    _globals['_TOKENPROPERTIES_INVALIDREASON'].values_by_name['SITE_MISMATCH']._serialized_options = b'\x08\x01'
+    _globals['_FRAUDPREVENTIONASSESSMENT_STOLENINSTRUMENTVERDICT'].fields_by_name['risk']._loaded_options = None
+    _globals['_FRAUDPREVENTIONASSESSMENT_STOLENINSTRUMENTVERDICT'].fields_by_name['risk']._serialized_options = b'\xe0A\x03'
+    _globals['_FRAUDPREVENTIONASSESSMENT_CARDTESTINGVERDICT'].fields_by_name['risk']._loaded_options = None
+    _globals['_FRAUDPREVENTIONASSESSMENT_CARDTESTINGVERDICT'].fields_by_name['risk']._serialized_options = b'\xe0A\x03'
+    _globals['_FRAUDPREVENTIONASSESSMENT_BEHAVIORALTRUSTVERDICT'].fields_by_name['trust']._loaded_options = None
+    _globals['_FRAUDPREVENTIONASSESSMENT_BEHAVIORALTRUSTVERDICT'].fields_by_name['trust']._serialized_options = b'\xe0A\x03'
+    _globals['_FRAUDPREVENTIONASSESSMENT'].fields_by_name['transaction_risk']._loaded_options = None
+    _globals['_FRAUDPREVENTIONASSESSMENT'].fields_by_name['transaction_risk']._serialized_options = b'\xe0A\x03'
+    _globals['_FRAUDPREVENTIONASSESSMENT'].fields_by_name['stolen_instrument_verdict']._loaded_options = None
+    _globals['_FRAUDPREVENTIONASSESSMENT'].fields_by_name['stolen_instrument_verdict']._serialized_options = b'\xe0A\x03'
+    _globals['_FRAUDPREVENTIONASSESSMENT'].fields_by_name['card_testing_verdict']._loaded_options = None
+    _globals['_FRAUDPREVENTIONASSESSMENT'].fields_by_name['card_testing_verdict']._serialized_options = b'\xe0A\x03'
+    _globals['_FRAUDPREVENTIONASSESSMENT'].fields_by_name['behavioral_trust_verdict']._loaded_options = None
+    _globals['_FRAUDPREVENTIONASSESSMENT'].fields_by_name['behavioral_trust_verdict']._serialized_options = b'\xe0A\x03'
+    _globals['_RECAPTCHAENTERPRISESERVICEV1BETA1']._loaded_options = None
+    _globals['_RECAPTCHAENTERPRISESERVICEV1BETA1']._serialized_options = b'\xcaA"recaptchaenterprise.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform'
+    _globals['_RECAPTCHAENTERPRISESERVICEV1BETA1'].methods_by_name['CreateAssessment']._loaded_options = None
+    _globals['_RECAPTCHAENTERPRISESERVICEV1BETA1'].methods_by_name['CreateAssessment']._serialized_options = b'\xdaA\x11parent,assessment\x82\xd3\xe4\x93\x026"(/v1beta1/{parent=projects/*}/assessments:\nassessment'
+    _globals['_RECAPTCHAENTERPRISESERVICEV1BETA1'].methods_by_name['AnnotateAssessment']._loaded_options = None
+    _globals['_RECAPTCHAENTERPRISESERVICEV1BETA1'].methods_by_name['AnnotateAssessment']._serialized_options = b'\xdaA\x0fname,annotation\x82\xd3\xe4\x93\x026"1/v1beta1/{name=projects/*/assessments/*}:annotate:\x01*'
+    _globals['_CREATEASSESSMENTREQUEST']._serialized_start = 261
+    _globals['_CREATEASSESSMENTREQUEST']._serialized_end = 434
+    _globals['_TRANSACTIONEVENT']._serialized_start = 437
+    _globals['_TRANSACTIONEVENT']._serialized_end = 1100
+    _globals['_TRANSACTIONEVENT_TRANSACTIONEVENTTYPE']._serialized_start = 658
+    _globals['_TRANSACTIONEVENT_TRANSACTIONEVENTTYPE']._serialized_end = 1100
+    _globals['_ANNOTATEASSESSMENTREQUEST']._serialized_start = 1103
+    _globals['_ANNOTATEASSESSMENTREQUEST']._serialized_end = 1992
+    _globals['_ANNOTATEASSESSMENTREQUEST_ANNOTATION']._serialized_start = 1528
+    _globals['_ANNOTATEASSESSMENTREQUEST_ANNOTATION']._serialized_end = 1654
+    _globals['_ANNOTATEASSESSMENTREQUEST_REASON']._serialized_start = 1657
+    _globals['_ANNOTATEASSESSMENTREQUEST_REASON']._serialized_end = 1992
+    _globals['_ANNOTATEASSESSMENTRESPONSE']._serialized_start = 1994
+    _globals['_ANNOTATEASSESSMENTRESPONSE']._serialized_end = 2022
+    _globals['_PASSWORDLEAKVERIFICATION']._serialized_start = 2025
+    _globals['_PASSWORDLEAKVERIFICATION']._serialized_end = 2159
+    _globals['_ASSESSMENT']._serialized_start = 2162
+    _globals['_ASSESSMENT']._serialized_end = 3113
+    _globals['_ASSESSMENT_CLASSIFICATIONREASON']._serialized_start = 2783
+    _globals['_ASSESSMENT_CLASSIFICATIONREASON']._serialized_end = 3016
+    _globals['_EVENT']._serialized_start = 3116
+    _globals['_EVENT']._serialized_end = 3549
+    _globals['_EVENT_FRAUDPREVENTION']._serialized_start = 3471
+    _globals['_EVENT_FRAUDPREVENTION']._serialized_end = 3549
+    _globals['_TRANSACTIONDATA']._serialized_start = 3552
+    _globals['_TRANSACTIONDATA']._serialized_end = 4733
+    _globals['_TRANSACTIONDATA_ADDRESS']._serialized_start = 4247
+    _globals['_TRANSACTIONDATA_ADDRESS']._serialized_end = 4381
+    _globals['_TRANSACTIONDATA_USER']._serialized_start = 4384
+    _globals['_TRANSACTIONDATA_USER']._serialized_end = 4516
+    _globals['_TRANSACTIONDATA_ITEM']._serialized_start = 4518
+    _globals['_TRANSACTIONDATA_ITEM']._serialized_end = 4600
+    _globals['_TRANSACTIONDATA_GATEWAYINFO']._serialized_start = 4602
+    _globals['_TRANSACTIONDATA_GATEWAYINFO']._serialized_end = 4714
+    _globals['_TOKENPROPERTIES']._serialized_start = 4736
+    _globals['_TOKENPROPERTIES']._serialized_end = 5119
+    _globals['_TOKENPROPERTIES_INVALIDREASON']._serialized_start = 4951
+    _globals['_TOKENPROPERTIES_INVALIDREASON']._serialized_end = 5119
+    _globals['_FRAUDPREVENTIONASSESSMENT']._serialized_start = 5122
+    _globals['_FRAUDPREVENTIONASSESSMENT']._serialized_end = 5702
+    _globals['_FRAUDPREVENTIONASSESSMENT_STOLENINSTRUMENTVERDICT']._serialized_start = 5571
+    _globals['_FRAUDPREVENTIONASSESSMENT_STOLENINSTRUMENTVERDICT']._serialized_end = 5615
+    _globals['_FRAUDPREVENTIONASSESSMENT_CARDTESTINGVERDICT']._serialized_start = 5617
+    _globals['_FRAUDPREVENTIONASSESSMENT_CARDTESTINGVERDICT']._serialized_end = 5656
+    _globals['_FRAUDPREVENTIONASSESSMENT_BEHAVIORALTRUSTVERDICT']._serialized_start = 5658
+    _globals['_FRAUDPREVENTIONASSESSMENT_BEHAVIORALTRUSTVERDICT']._serialized_end = 5702
+    _globals['_ACCOUNTDEFENDERASSESSMENT']._serialized_start = 5705
+    _globals['_ACCOUNTDEFENDERASSESSMENT']._serialized_end = 6020
+    _globals['_ACCOUNTDEFENDERASSESSMENT_ACCOUNTDEFENDERLABEL']._serialized_start = 5841
+    _globals['_ACCOUNTDEFENDERASSESSMENT_ACCOUNTDEFENDERLABEL']._serialized_end = 6020
+    _globals['_RECAPTCHAENTERPRISESERVICEV1BETA1']._serialized_start = 6023
+    _globals['_RECAPTCHAENTERPRISESERVICEV1BETA1']._serialized_end = 6612

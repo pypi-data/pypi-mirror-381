@@ -1,0 +1,174 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/cloud/dialogflow/v2/conversation_model.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from .....google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n3google/cloud/dialogflow/v2/conversation_model.proto\x12\x1agoogle.cloud.dialogflow.v2\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a#google/longrunning/operations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\x8d\x08\n\x11ConversationModel\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x19\n\x0cdisplay_name\x18\x02 \x01(\tB\x03\xe0A\x02\x124\n\x0bcreate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12?\n\x08datasets\x18\x04 \x03(\x0b2(.google.cloud.dialogflow.v2.InputDatasetB\x03\xe0A\x02\x12G\n\x05state\x18\x07 \x01(\x0e23.google.cloud.dialogflow.v2.ConversationModel.StateB\x03\xe0A\x03\x12\x15\n\rlanguage_code\x18\x13 \x01(\t\x12g\n!article_suggestion_model_metadata\x18\x08 \x01(\x0b2:.google.cloud.dialogflow.v2.ArticleSuggestionModelMetadataH\x00\x12Y\n\x1asmart_reply_model_metadata\x18\t \x01(\x0b23.google.cloud.dialogflow.v2.SmartReplyModelMetadataH\x00\x12\x1f\n\rsatisfies_pzs\x18\x19 \x01(\x08B\x03\xe0A\x03H\x01\x88\x01\x01\x12\x1f\n\rsatisfies_pzi\x18\x1a \x01(\x08B\x03\xe0A\x03H\x02\x88\x01\x01"\x91\x01\n\x05State\x12\x15\n\x11STATE_UNSPECIFIED\x10\x00\x12\x0c\n\x08CREATING\x10\x01\x12\x0e\n\nUNDEPLOYED\x10\x02\x12\r\n\tDEPLOYING\x10\x03\x12\x0c\n\x08DEPLOYED\x10\x04\x12\x0f\n\x0bUNDEPLOYING\x10\x05\x12\x0c\n\x08DELETING\x10\x06\x12\n\n\x06FAILED\x10\x07\x12\x0b\n\x07PENDING\x10\x08"g\n\tModelType\x12\x1a\n\x16MODEL_TYPE_UNSPECIFIED\x10\x00\x12"\n\x1eSMART_REPLY_DUAL_ENCODER_MODEL\x10\x02\x12\x1a\n\x16SMART_REPLY_BERT_MODEL\x10\x06:\xbe\x01\xeaA\xba\x01\n+dialogflow.googleapis.com/ConversationModel\x12Oprojects/{project}/locations/{location}/conversationModels/{conversation_model}\x12:projects/{project}/conversationModels/{conversation_model}B\x10\n\x0emodel_metadataB\x10\n\x0e_satisfies_pzsB\x10\n\x0e_satisfies_pzi"\xcf\x04\n\x1bConversationModelEvaluation\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x19\n\x0cdisplay_name\x18\x02 \x01(\tB\x03\xe0A\x01\x12L\n\x11evaluation_config\x18\x06 \x01(\x0b2,.google.cloud.dialogflow.v2.EvaluationConfigB\x03\xe0A\x01\x124\n\x0bcreate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12Q\n\x13smart_reply_metrics\x18\x05 \x01(\x0b2-.google.cloud.dialogflow.v2.SmartReplyMetricsB\x03\xe0A\x03H\x00\x12(\n\x1braw_human_eval_template_csv\x18\x08 \x01(\tB\x03\xe0A\x03:\xfa\x01\xeaA\xf6\x01\n5dialogflow.googleapis.com/ConversationModelEvaluation\x12Sprojects/{project}/conversationModels/{conversation_model}/evaluations/{evaluation}\x12hprojects/{project}/locations/{location}/conversationModels/{conversation_model}/evaluations/{evaluation}B\t\n\x07metrics"\x9c\x04\n\x10EvaluationConfig\x12?\n\x08datasets\x18\x03 \x03(\x0b2(.google.cloud.dialogflow.v2.InputDatasetB\x03\xe0A\x02\x12[\n\x12smart_reply_config\x18\x02 \x01(\x0b2=.google.cloud.dialogflow.v2.EvaluationConfig.SmartReplyConfigH\x00\x12_\n\x14smart_compose_config\x18\x04 \x01(\x0b2?.google.cloud.dialogflow.v2.EvaluationConfig.SmartComposeConfigH\x00\x1av\n\x10SmartReplyConfig\x12C\n\x12allowlist_document\x18\x01 \x01(\tB\'\xfaA$\n"dialogflow.googleapis.com/Document\x12\x1d\n\x10max_result_count\x18\x02 \x01(\x05B\x03\xe0A\x02\x1ax\n\x12SmartComposeConfig\x12C\n\x12allowlist_document\x18\x01 \x01(\tB\'\xfaA$\n"dialogflow.googleapis.com/Document\x12\x1d\n\x10max_result_count\x18\x02 \x01(\x05B\x03\xe0A\x02B\x17\n\x15model_specific_config"V\n\x0cInputDataset\x12F\n\x07dataset\x18\x01 \x01(\tB5\xe0A\x02\xfaA/\n-dialogflow.googleapis.com/ConversationDataset"{\n\x1eArticleSuggestionModelMetadata\x12Y\n\x13training_model_type\x18\x03 \x01(\x0e27.google.cloud.dialogflow.v2.ConversationModel.ModelTypeB\x03\xe0A\x01"t\n\x17SmartReplyModelMetadata\x12Y\n\x13training_model_type\x18\x06 \x01(\x0e27.google.cloud.dialogflow.v2.ConversationModel.ModelTypeB\x03\xe0A\x01"\xc7\x01\n\x11SmartReplyMetrics\x12\x1a\n\x12allowlist_coverage\x18\x01 \x01(\x02\x12P\n\rtop_n_metrics\x18\x02 \x03(\x0b29.google.cloud.dialogflow.v2.SmartReplyMetrics.TopNMetrics\x12\x1a\n\x12conversation_count\x18\x03 \x01(\x03\x1a(\n\x0bTopNMetrics\x12\t\n\x01n\x18\x01 \x01(\x05\x12\x0e\n\x06recall\x18\x02 \x01(\x02"\x80\x01\n\x1eCreateConversationModelRequest\x12\x0e\n\x06parent\x18\x01 \x01(\t\x12N\n\x12conversation_model\x18\x02 \x01(\x0b2-.google.cloud.dialogflow.v2.ConversationModelB\x03\xe0A\x02"0\n\x1bGetConversationModelRequest\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02"e\n\x1dListConversationModelsRequest\x12\x13\n\x06parent\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01"\x85\x01\n\x1eListConversationModelsResponse\x12J\n\x13conversation_models\x18\x01 \x03(\x0b2-.google.cloud.dialogflow.v2.ConversationModel\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"3\n\x1eDeleteConversationModelRequest\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02"3\n\x1eDeployConversationModelRequest\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02"5\n UndeployConversationModelRequest\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02":\n%GetConversationModelEvaluationRequest\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02"o\n\'ListConversationModelEvaluationsRequest\x12\x13\n\x06parent\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01"\xa4\x01\n(ListConversationModelEvaluationsResponse\x12_\n\x1econversation_model_evaluations\x18\x01 \x03(\x0b27.google.cloud.dialogflow.v2.ConversationModelEvaluation\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\xde\x01\n(CreateConversationModelEvaluationRequest\x12M\n\x06parent\x18\x01 \x01(\tB=\xe0A\x02\xfaA7\x125dialogflow.googleapis.com/ConversationModelEvaluation\x12c\n\x1dconversation_model_evaluation\x18\x02 \x01(\x0b27.google.cloud.dialogflow.v2.ConversationModelEvaluationB\x03\xe0A\x02"\xc7\x02\n(CreateConversationModelOperationMetadata\x12\x1a\n\x12conversation_model\x18\x01 \x01(\t\x12Y\n\x05state\x18\x02 \x01(\x0e2J.google.cloud.dialogflow.v2.CreateConversationModelOperationMetadata.State\x12/\n\x0bcreate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp"s\n\x05State\x12\x15\n\x11STATE_UNSPECIFIED\x10\x00\x12\x0b\n\x07PENDING\x10\x01\x12\r\n\tSUCCEEDED\x10\x02\x12\n\n\x06FAILED\x10\x03\x12\r\n\tCANCELLED\x10\x04\x12\x0e\n\nCANCELLING\x10\x05\x12\x0c\n\x08TRAINING\x10\x06"w\n(DeployConversationModelOperationMetadata\x12\x1a\n\x12conversation_model\x18\x01 \x01(\t\x12/\n\x0bcreate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp"y\n*UndeployConversationModelOperationMetadata\x12\x1a\n\x12conversation_model\x18\x01 \x01(\t\x12/\n\x0bcreate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp"w\n(DeleteConversationModelOperationMetadata\x12\x1a\n\x12conversation_model\x18\x01 \x01(\t\x12/\n\x0bcreate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp"\xf6\x02\n2CreateConversationModelEvaluationOperationMetadata\x12%\n\x1dconversation_model_evaluation\x18\x01 \x01(\t\x12\x1a\n\x12conversation_model\x18\x04 \x01(\t\x12c\n\x05state\x18\x02 \x01(\x0e2T.google.cloud.dialogflow.v2.CreateConversationModelEvaluationOperationMetadata.State\x12/\n\x0bcreate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp"g\n\x05State\x12\x15\n\x11STATE_UNSPECIFIED\x10\x00\x12\x10\n\x0cINITIALIZING\x10\x01\x12\x0b\n\x07RUNNING\x10\x02\x12\r\n\tCANCELLED\x10\x03\x12\r\n\tSUCCEEDED\x10\x04\x12\n\n\x06FAILED\x10\x052\xfe\x16\n\x12ConversationModels\x12\xe8\x02\n\x17CreateConversationModel\x12:.google.cloud.dialogflow.v2.CreateConversationModelRequest\x1a\x1d.google.longrunning.Operation"\xf1\x01\xcaA=\n\x11ConversationModel\x12(CreateConversationModelOperationMetadata\xdaA\x19parent,conversation_model\x82\xd3\xe4\x93\x02\x8e\x01"*/v2/{parent=projects/*}/conversationModels:\x12conversation_modelZL"6/v2/{parent=projects/*/locations/*}/conversationModels:\x12conversation_model\x12\xf3\x01\n\x14GetConversationModel\x127.google.cloud.dialogflow.v2.GetConversationModelRequest\x1a-.google.cloud.dialogflow.v2.ConversationModel"s\xdaA\x04name\x82\xd3\xe4\x93\x02f\x12*/v2/{name=projects/*/conversationModels/*}Z8\x126/v2/{name=projects/*/locations/*/conversationModels/*}\x12\x86\x02\n\x16ListConversationModels\x129.google.cloud.dialogflow.v2.ListConversationModelsRequest\x1a:.google.cloud.dialogflow.v2.ListConversationModelsResponse"u\xdaA\x06parent\x82\xd3\xe4\x93\x02f\x12*/v2/{parent=projects/*}/conversationModelsZ8\x126/v2/{parent=projects/*/locations/*}/conversationModels\x12\xae\x02\n\x17DeleteConversationModel\x12:.google.cloud.dialogflow.v2.DeleteConversationModelRequest\x1a\x1d.google.longrunning.Operation"\xb7\x01\xcaAA\n\x15google.protobuf.Empty\x12(DeleteConversationModelOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02f**/v2/{name=projects/*/conversationModels/*}Z8*6/v2/{name=projects/*/locations/*/conversationModels/*}\x12\xbb\x02\n\x17DeployConversationModel\x12:.google.cloud.dialogflow.v2.DeployConversationModelRequest\x1a\x1d.google.longrunning.Operation"\xc4\x01\xcaAA\n\x15google.protobuf.Empty\x12(DeployConversationModelOperationMetadata\x82\xd3\xe4\x93\x02z"1/v2/{name=projects/*/conversationModels/*}:deploy:\x01*ZB"=/v2/{name=projects/*/locations/*/conversationModels/*}:deploy:\x01*\x12\xc5\x02\n\x19UndeployConversationModel\x12<.google.cloud.dialogflow.v2.UndeployConversationModelRequest\x1a\x1d.google.longrunning.Operation"\xca\x01\xcaAC\n\x15google.protobuf.Empty\x12*UndeployConversationModelOperationMetadata\x82\xd3\xe4\x93\x02~"3/v2/{name=projects/*/conversationModels/*}:undeploy:\x01*ZD"?/v2/{name=projects/*/locations/*/conversationModels/*}:undeploy:\x01*\x12\xaf\x02\n\x1eGetConversationModelEvaluation\x12A.google.cloud.dialogflow.v2.GetConversationModelEvaluationRequest\x1a7.google.cloud.dialogflow.v2.ConversationModelEvaluation"\x90\x01\xdaA\x04name\x82\xd3\xe4\x93\x02\x82\x01\x128/v2/{name=projects/*/conversationModels/*/evaluations/*}ZF\x12D/v2/{name=projects/*/locations/*/conversationModels/*/evaluations/*}\x12\xc2\x02\n ListConversationModelEvaluations\x12C.google.cloud.dialogflow.v2.ListConversationModelEvaluationsRequest\x1aD.google.cloud.dialogflow.v2.ListConversationModelEvaluationsResponse"\x92\x01\xdaA\x06parent\x82\xd3\xe4\x93\x02\x82\x01\x128/v2/{parent=projects/*/conversationModels/*}/evaluationsZF\x12D/v2/{parent=projects/*/locations/*/conversationModels/*}/evaluations\x12\xd5\x02\n!CreateConversationModelEvaluation\x12D.google.cloud.dialogflow.v2.CreateConversationModelEvaluationRequest\x1a\x1d.google.longrunning.Operation"\xca\x01\xcaAQ\n\x1bConversationModelEvaluation\x122CreateConversationModelEvaluationOperationMetadata\xdaA$parent,conversation_model_evaluation\x82\xd3\xe4\x93\x02I"D/v2/{parent=projects/*/locations/*/conversationModels/*}/evaluations:\x01*\x1ax\xcaA\x19dialogflow.googleapis.com\xd2AYhttps://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/dialogflowB\x9c\x01\n\x1ecom.google.cloud.dialogflow.v2B\x16ConversationModelProtoP\x01Z>cloud.google.com/go/dialogflow/apiv2/dialogflowpb;dialogflowpb\xa2\x02\x02DF\xaa\x02\x1aGoogle.Cloud.Dialogflow.V2b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.dialogflow.v2.conversation_model_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x1ecom.google.cloud.dialogflow.v2B\x16ConversationModelProtoP\x01Z>cloud.google.com/go/dialogflow/apiv2/dialogflowpb;dialogflowpb\xa2\x02\x02DF\xaa\x02\x1aGoogle.Cloud.Dialogflow.V2'
+    _globals['_CONVERSATIONMODEL'].fields_by_name['display_name']._loaded_options = None
+    _globals['_CONVERSATIONMODEL'].fields_by_name['display_name']._serialized_options = b'\xe0A\x02'
+    _globals['_CONVERSATIONMODEL'].fields_by_name['create_time']._loaded_options = None
+    _globals['_CONVERSATIONMODEL'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CONVERSATIONMODEL'].fields_by_name['datasets']._loaded_options = None
+    _globals['_CONVERSATIONMODEL'].fields_by_name['datasets']._serialized_options = b'\xe0A\x02'
+    _globals['_CONVERSATIONMODEL'].fields_by_name['state']._loaded_options = None
+    _globals['_CONVERSATIONMODEL'].fields_by_name['state']._serialized_options = b'\xe0A\x03'
+    _globals['_CONVERSATIONMODEL'].fields_by_name['satisfies_pzs']._loaded_options = None
+    _globals['_CONVERSATIONMODEL'].fields_by_name['satisfies_pzs']._serialized_options = b'\xe0A\x03'
+    _globals['_CONVERSATIONMODEL'].fields_by_name['satisfies_pzi']._loaded_options = None
+    _globals['_CONVERSATIONMODEL'].fields_by_name['satisfies_pzi']._serialized_options = b'\xe0A\x03'
+    _globals['_CONVERSATIONMODEL']._loaded_options = None
+    _globals['_CONVERSATIONMODEL']._serialized_options = b'\xeaA\xba\x01\n+dialogflow.googleapis.com/ConversationModel\x12Oprojects/{project}/locations/{location}/conversationModels/{conversation_model}\x12:projects/{project}/conversationModels/{conversation_model}'
+    _globals['_CONVERSATIONMODELEVALUATION'].fields_by_name['display_name']._loaded_options = None
+    _globals['_CONVERSATIONMODELEVALUATION'].fields_by_name['display_name']._serialized_options = b'\xe0A\x01'
+    _globals['_CONVERSATIONMODELEVALUATION'].fields_by_name['evaluation_config']._loaded_options = None
+    _globals['_CONVERSATIONMODELEVALUATION'].fields_by_name['evaluation_config']._serialized_options = b'\xe0A\x01'
+    _globals['_CONVERSATIONMODELEVALUATION'].fields_by_name['create_time']._loaded_options = None
+    _globals['_CONVERSATIONMODELEVALUATION'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CONVERSATIONMODELEVALUATION'].fields_by_name['smart_reply_metrics']._loaded_options = None
+    _globals['_CONVERSATIONMODELEVALUATION'].fields_by_name['smart_reply_metrics']._serialized_options = b'\xe0A\x03'
+    _globals['_CONVERSATIONMODELEVALUATION'].fields_by_name['raw_human_eval_template_csv']._loaded_options = None
+    _globals['_CONVERSATIONMODELEVALUATION'].fields_by_name['raw_human_eval_template_csv']._serialized_options = b'\xe0A\x03'
+    _globals['_CONVERSATIONMODELEVALUATION']._loaded_options = None
+    _globals['_CONVERSATIONMODELEVALUATION']._serialized_options = b'\xeaA\xf6\x01\n5dialogflow.googleapis.com/ConversationModelEvaluation\x12Sprojects/{project}/conversationModels/{conversation_model}/evaluations/{evaluation}\x12hprojects/{project}/locations/{location}/conversationModels/{conversation_model}/evaluations/{evaluation}'
+    _globals['_EVALUATIONCONFIG_SMARTREPLYCONFIG'].fields_by_name['allowlist_document']._loaded_options = None
+    _globals['_EVALUATIONCONFIG_SMARTREPLYCONFIG'].fields_by_name['allowlist_document']._serialized_options = b'\xfaA$\n"dialogflow.googleapis.com/Document'
+    _globals['_EVALUATIONCONFIG_SMARTREPLYCONFIG'].fields_by_name['max_result_count']._loaded_options = None
+    _globals['_EVALUATIONCONFIG_SMARTREPLYCONFIG'].fields_by_name['max_result_count']._serialized_options = b'\xe0A\x02'
+    _globals['_EVALUATIONCONFIG_SMARTCOMPOSECONFIG'].fields_by_name['allowlist_document']._loaded_options = None
+    _globals['_EVALUATIONCONFIG_SMARTCOMPOSECONFIG'].fields_by_name['allowlist_document']._serialized_options = b'\xfaA$\n"dialogflow.googleapis.com/Document'
+    _globals['_EVALUATIONCONFIG_SMARTCOMPOSECONFIG'].fields_by_name['max_result_count']._loaded_options = None
+    _globals['_EVALUATIONCONFIG_SMARTCOMPOSECONFIG'].fields_by_name['max_result_count']._serialized_options = b'\xe0A\x02'
+    _globals['_EVALUATIONCONFIG'].fields_by_name['datasets']._loaded_options = None
+    _globals['_EVALUATIONCONFIG'].fields_by_name['datasets']._serialized_options = b'\xe0A\x02'
+    _globals['_INPUTDATASET'].fields_by_name['dataset']._loaded_options = None
+    _globals['_INPUTDATASET'].fields_by_name['dataset']._serialized_options = b'\xe0A\x02\xfaA/\n-dialogflow.googleapis.com/ConversationDataset'
+    _globals['_ARTICLESUGGESTIONMODELMETADATA'].fields_by_name['training_model_type']._loaded_options = None
+    _globals['_ARTICLESUGGESTIONMODELMETADATA'].fields_by_name['training_model_type']._serialized_options = b'\xe0A\x01'
+    _globals['_SMARTREPLYMODELMETADATA'].fields_by_name['training_model_type']._loaded_options = None
+    _globals['_SMARTREPLYMODELMETADATA'].fields_by_name['training_model_type']._serialized_options = b'\xe0A\x01'
+    _globals['_CREATECONVERSATIONMODELREQUEST'].fields_by_name['conversation_model']._loaded_options = None
+    _globals['_CREATECONVERSATIONMODELREQUEST'].fields_by_name['conversation_model']._serialized_options = b'\xe0A\x02'
+    _globals['_GETCONVERSATIONMODELREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETCONVERSATIONMODELREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_LISTCONVERSATIONMODELSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTCONVERSATIONMODELSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02'
+    _globals['_LISTCONVERSATIONMODELSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTCONVERSATIONMODELSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTCONVERSATIONMODELSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTCONVERSATIONMODELSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETECONVERSATIONMODELREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETECONVERSATIONMODELREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_DEPLOYCONVERSATIONMODELREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DEPLOYCONVERSATIONMODELREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_UNDEPLOYCONVERSATIONMODELREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_UNDEPLOYCONVERSATIONMODELREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_GETCONVERSATIONMODELEVALUATIONREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETCONVERSATIONMODELEVALUATIONREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_LISTCONVERSATIONMODELEVALUATIONSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTCONVERSATIONMODELEVALUATIONSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02'
+    _globals['_LISTCONVERSATIONMODELEVALUATIONSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTCONVERSATIONMODELEVALUATIONSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTCONVERSATIONMODELEVALUATIONSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTCONVERSATIONMODELEVALUATIONSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_CREATECONVERSATIONMODELEVALUATIONREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATECONVERSATIONMODELEVALUATIONREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA7\x125dialogflow.googleapis.com/ConversationModelEvaluation'
+    _globals['_CREATECONVERSATIONMODELEVALUATIONREQUEST'].fields_by_name['conversation_model_evaluation']._loaded_options = None
+    _globals['_CREATECONVERSATIONMODELEVALUATIONREQUEST'].fields_by_name['conversation_model_evaluation']._serialized_options = b'\xe0A\x02'
+    _globals['_CONVERSATIONMODELS']._loaded_options = None
+    _globals['_CONVERSATIONMODELS']._serialized_options = b'\xcaA\x19dialogflow.googleapis.com\xd2AYhttps://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/dialogflow'
+    _globals['_CONVERSATIONMODELS'].methods_by_name['CreateConversationModel']._loaded_options = None
+    _globals['_CONVERSATIONMODELS'].methods_by_name['CreateConversationModel']._serialized_options = b'\xcaA=\n\x11ConversationModel\x12(CreateConversationModelOperationMetadata\xdaA\x19parent,conversation_model\x82\xd3\xe4\x93\x02\x8e\x01"*/v2/{parent=projects/*}/conversationModels:\x12conversation_modelZL"6/v2/{parent=projects/*/locations/*}/conversationModels:\x12conversation_model'
+    _globals['_CONVERSATIONMODELS'].methods_by_name['GetConversationModel']._loaded_options = None
+    _globals['_CONVERSATIONMODELS'].methods_by_name['GetConversationModel']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02f\x12*/v2/{name=projects/*/conversationModels/*}Z8\x126/v2/{name=projects/*/locations/*/conversationModels/*}'
+    _globals['_CONVERSATIONMODELS'].methods_by_name['ListConversationModels']._loaded_options = None
+    _globals['_CONVERSATIONMODELS'].methods_by_name['ListConversationModels']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02f\x12*/v2/{parent=projects/*}/conversationModelsZ8\x126/v2/{parent=projects/*/locations/*}/conversationModels'
+    _globals['_CONVERSATIONMODELS'].methods_by_name['DeleteConversationModel']._loaded_options = None
+    _globals['_CONVERSATIONMODELS'].methods_by_name['DeleteConversationModel']._serialized_options = b'\xcaAA\n\x15google.protobuf.Empty\x12(DeleteConversationModelOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02f**/v2/{name=projects/*/conversationModels/*}Z8*6/v2/{name=projects/*/locations/*/conversationModels/*}'
+    _globals['_CONVERSATIONMODELS'].methods_by_name['DeployConversationModel']._loaded_options = None
+    _globals['_CONVERSATIONMODELS'].methods_by_name['DeployConversationModel']._serialized_options = b'\xcaAA\n\x15google.protobuf.Empty\x12(DeployConversationModelOperationMetadata\x82\xd3\xe4\x93\x02z"1/v2/{name=projects/*/conversationModels/*}:deploy:\x01*ZB"=/v2/{name=projects/*/locations/*/conversationModels/*}:deploy:\x01*'
+    _globals['_CONVERSATIONMODELS'].methods_by_name['UndeployConversationModel']._loaded_options = None
+    _globals['_CONVERSATIONMODELS'].methods_by_name['UndeployConversationModel']._serialized_options = b'\xcaAC\n\x15google.protobuf.Empty\x12*UndeployConversationModelOperationMetadata\x82\xd3\xe4\x93\x02~"3/v2/{name=projects/*/conversationModels/*}:undeploy:\x01*ZD"?/v2/{name=projects/*/locations/*/conversationModels/*}:undeploy:\x01*'
+    _globals['_CONVERSATIONMODELS'].methods_by_name['GetConversationModelEvaluation']._loaded_options = None
+    _globals['_CONVERSATIONMODELS'].methods_by_name['GetConversationModelEvaluation']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02\x82\x01\x128/v2/{name=projects/*/conversationModels/*/evaluations/*}ZF\x12D/v2/{name=projects/*/locations/*/conversationModels/*/evaluations/*}'
+    _globals['_CONVERSATIONMODELS'].methods_by_name['ListConversationModelEvaluations']._loaded_options = None
+    _globals['_CONVERSATIONMODELS'].methods_by_name['ListConversationModelEvaluations']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02\x82\x01\x128/v2/{parent=projects/*/conversationModels/*}/evaluationsZF\x12D/v2/{parent=projects/*/locations/*/conversationModels/*}/evaluations'
+    _globals['_CONVERSATIONMODELS'].methods_by_name['CreateConversationModelEvaluation']._loaded_options = None
+    _globals['_CONVERSATIONMODELS'].methods_by_name['CreateConversationModelEvaluation']._serialized_options = b'\xcaAQ\n\x1bConversationModelEvaluation\x122CreateConversationModelEvaluationOperationMetadata\xdaA$parent,conversation_model_evaluation\x82\xd3\xe4\x93\x02I"D/v2/{parent=projects/*/locations/*/conversationModels/*}/evaluations:\x01*'
+    _globals['_CONVERSATIONMODEL']._serialized_start = 298
+    _globals['_CONVERSATIONMODEL']._serialized_end = 1335
+    _globals['_CONVERSATIONMODEL_STATE']._serialized_start = 838
+    _globals['_CONVERSATIONMODEL_STATE']._serialized_end = 983
+    _globals['_CONVERSATIONMODEL_MODELTYPE']._serialized_start = 985
+    _globals['_CONVERSATIONMODEL_MODELTYPE']._serialized_end = 1088
+    _globals['_CONVERSATIONMODELEVALUATION']._serialized_start = 1338
+    _globals['_CONVERSATIONMODELEVALUATION']._serialized_end = 1929
+    _globals['_EVALUATIONCONFIG']._serialized_start = 1932
+    _globals['_EVALUATIONCONFIG']._serialized_end = 2472
+    _globals['_EVALUATIONCONFIG_SMARTREPLYCONFIG']._serialized_start = 2207
+    _globals['_EVALUATIONCONFIG_SMARTREPLYCONFIG']._serialized_end = 2325
+    _globals['_EVALUATIONCONFIG_SMARTCOMPOSECONFIG']._serialized_start = 2327
+    _globals['_EVALUATIONCONFIG_SMARTCOMPOSECONFIG']._serialized_end = 2447
+    _globals['_INPUTDATASET']._serialized_start = 2474
+    _globals['_INPUTDATASET']._serialized_end = 2560
+    _globals['_ARTICLESUGGESTIONMODELMETADATA']._serialized_start = 2562
+    _globals['_ARTICLESUGGESTIONMODELMETADATA']._serialized_end = 2685
+    _globals['_SMARTREPLYMODELMETADATA']._serialized_start = 2687
+    _globals['_SMARTREPLYMODELMETADATA']._serialized_end = 2803
+    _globals['_SMARTREPLYMETRICS']._serialized_start = 2806
+    _globals['_SMARTREPLYMETRICS']._serialized_end = 3005
+    _globals['_SMARTREPLYMETRICS_TOPNMETRICS']._serialized_start = 2965
+    _globals['_SMARTREPLYMETRICS_TOPNMETRICS']._serialized_end = 3005
+    _globals['_CREATECONVERSATIONMODELREQUEST']._serialized_start = 3008
+    _globals['_CREATECONVERSATIONMODELREQUEST']._serialized_end = 3136
+    _globals['_GETCONVERSATIONMODELREQUEST']._serialized_start = 3138
+    _globals['_GETCONVERSATIONMODELREQUEST']._serialized_end = 3186
+    _globals['_LISTCONVERSATIONMODELSREQUEST']._serialized_start = 3188
+    _globals['_LISTCONVERSATIONMODELSREQUEST']._serialized_end = 3289
+    _globals['_LISTCONVERSATIONMODELSRESPONSE']._serialized_start = 3292
+    _globals['_LISTCONVERSATIONMODELSRESPONSE']._serialized_end = 3425
+    _globals['_DELETECONVERSATIONMODELREQUEST']._serialized_start = 3427
+    _globals['_DELETECONVERSATIONMODELREQUEST']._serialized_end = 3478
+    _globals['_DEPLOYCONVERSATIONMODELREQUEST']._serialized_start = 3480
+    _globals['_DEPLOYCONVERSATIONMODELREQUEST']._serialized_end = 3531
+    _globals['_UNDEPLOYCONVERSATIONMODELREQUEST']._serialized_start = 3533
+    _globals['_UNDEPLOYCONVERSATIONMODELREQUEST']._serialized_end = 3586
+    _globals['_GETCONVERSATIONMODELEVALUATIONREQUEST']._serialized_start = 3588
+    _globals['_GETCONVERSATIONMODELEVALUATIONREQUEST']._serialized_end = 3646
+    _globals['_LISTCONVERSATIONMODELEVALUATIONSREQUEST']._serialized_start = 3648
+    _globals['_LISTCONVERSATIONMODELEVALUATIONSREQUEST']._serialized_end = 3759
+    _globals['_LISTCONVERSATIONMODELEVALUATIONSRESPONSE']._serialized_start = 3762
+    _globals['_LISTCONVERSATIONMODELEVALUATIONSRESPONSE']._serialized_end = 3926
+    _globals['_CREATECONVERSATIONMODELEVALUATIONREQUEST']._serialized_start = 3929
+    _globals['_CREATECONVERSATIONMODELEVALUATIONREQUEST']._serialized_end = 4151
+    _globals['_CREATECONVERSATIONMODELOPERATIONMETADATA']._serialized_start = 4154
+    _globals['_CREATECONVERSATIONMODELOPERATIONMETADATA']._serialized_end = 4481
+    _globals['_CREATECONVERSATIONMODELOPERATIONMETADATA_STATE']._serialized_start = 4366
+    _globals['_CREATECONVERSATIONMODELOPERATIONMETADATA_STATE']._serialized_end = 4481
+    _globals['_DEPLOYCONVERSATIONMODELOPERATIONMETADATA']._serialized_start = 4483
+    _globals['_DEPLOYCONVERSATIONMODELOPERATIONMETADATA']._serialized_end = 4602
+    _globals['_UNDEPLOYCONVERSATIONMODELOPERATIONMETADATA']._serialized_start = 4604
+    _globals['_UNDEPLOYCONVERSATIONMODELOPERATIONMETADATA']._serialized_end = 4725
+    _globals['_DELETECONVERSATIONMODELOPERATIONMETADATA']._serialized_start = 4727
+    _globals['_DELETECONVERSATIONMODELOPERATIONMETADATA']._serialized_end = 4846
+    _globals['_CREATECONVERSATIONMODELEVALUATIONOPERATIONMETADATA']._serialized_start = 4849
+    _globals['_CREATECONVERSATIONMODELEVALUATIONOPERATIONMETADATA']._serialized_end = 5223
+    _globals['_CREATECONVERSATIONMODELEVALUATIONOPERATIONMETADATA_STATE']._serialized_start = 5120
+    _globals['_CREATECONVERSATIONMODELEVALUATIONOPERATIONMETADATA_STATE']._serialized_end = 5223
+    _globals['_CONVERSATIONMODELS']._serialized_start = 5226
+    _globals['_CONVERSATIONMODELS']._serialized_end = 8168

@@ -1,0 +1,281 @@
+from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
+from google.protobuf import descriptor as _descriptor
+from typing import ClassVar as _ClassVar
+DESCRIPTOR: _descriptor.FileDescriptor
+
+class WeatherEventType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    WEATHER_EVENT_TYPE_UNSPECIFIED: _ClassVar[WeatherEventType]
+    ACID_RAIN: _ClassVar[WeatherEventType]
+    AFTERSHOCK: _ClassVar[WeatherEventType]
+    AVALANCHE: _ClassVar[WeatherEventType]
+    BLIZZARD: _ClassVar[WeatherEventType]
+    BLOWING_SNOW: _ClassVar[WeatherEventType]
+    BUSHFIRE: _ClassVar[WeatherEventType]
+    COASTAL_FLOOD: _ClassVar[WeatherEventType]
+    COASTAL_HAZARD: _ClassVar[WeatherEventType]
+    COLD: _ClassVar[WeatherEventType]
+    CYCLONE: _ClassVar[WeatherEventType]
+    DROUGHT: _ClassVar[WeatherEventType]
+    DUST_STORM: _ClassVar[WeatherEventType]
+    EARTHQUAKE: _ClassVar[WeatherEventType]
+    EXTRATROPICAL_CYCLONE: _ClassVar[WeatherEventType]
+    FIRE: _ClassVar[WeatherEventType]
+    FIRE_WEATHER: _ClassVar[WeatherEventType]
+    FLASH_FLOOD: _ClassVar[WeatherEventType]
+    FLOOD: _ClassVar[WeatherEventType]
+    FOG: _ClassVar[WeatherEventType]
+    FREEZING: _ClassVar[WeatherEventType]
+    FREEZING_AIR_TEMPERATURE: _ClassVar[WeatherEventType]
+    FREEZING_DRIZZLE: _ClassVar[WeatherEventType]
+    FREEZING_RAIN_EVENT: _ClassVar[WeatherEventType]
+    FROST: _ClassVar[WeatherEventType]
+    GALE: _ClassVar[WeatherEventType]
+    GLAZE: _ClassVar[WeatherEventType]
+    HAIL: _ClassVar[WeatherEventType]
+    HAZARDOUS_SEAS: _ClassVar[WeatherEventType]
+    HEAT: _ClassVar[WeatherEventType]
+    HUMIDITY: _ClassVar[WeatherEventType]
+    HURRICANE: _ClassVar[WeatherEventType]
+    ICE_STORM: _ClassVar[WeatherEventType]
+    INDUSTRIAL_FIRE: _ClassVar[WeatherEventType]
+    LAKE_EFFECT_SNOW: _ClassVar[WeatherEventType]
+    LANDSLIDE: _ClassVar[WeatherEventType]
+    MONSOON: _ClassVar[WeatherEventType]
+    MUDDY_FLOOD: _ClassVar[WeatherEventType]
+    OUTFLOW: _ClassVar[WeatherEventType]
+    RADIATION: _ClassVar[WeatherEventType]
+    RAIN_EVENT: _ClassVar[WeatherEventType]
+    RIVER_FLOODING: _ClassVar[WeatherEventType]
+    SEVERE_THUNDERSTORM_WARNING: _ClassVar[WeatherEventType]
+    SNOWSQUALL: _ClassVar[WeatherEventType]
+    SNOW_EVENT: _ClassVar[WeatherEventType]
+    STORM: _ClassVar[WeatherEventType]
+    STORM_SURGE: _ClassVar[WeatherEventType]
+    THUNDER: _ClassVar[WeatherEventType]
+    THUNDERSTORM: _ClassVar[WeatherEventType]
+    TORNADO: _ClassVar[WeatherEventType]
+    TORNADO_WARNING: _ClassVar[WeatherEventType]
+    TROPICAL_CYCLONE: _ClassVar[WeatherEventType]
+    TROPICAL_CYCLONE_WARNINGS_AND_WATCHES: _ClassVar[WeatherEventType]
+    TROPICAL_DISTURBANCE: _ClassVar[WeatherEventType]
+    TROPICAL_STORM: _ClassVar[WeatherEventType]
+    TSUNAMI: _ClassVar[WeatherEventType]
+    TYPHOON: _ClassVar[WeatherEventType]
+    VOLCANIC_ASH: _ClassVar[WeatherEventType]
+    VOLCANIC_ERUPTION: _ClassVar[WeatherEventType]
+    WILDFIRE: _ClassVar[WeatherEventType]
+    WIND: _ClassVar[WeatherEventType]
+    WIND_CHILL: _ClassVar[WeatherEventType]
+    WIND_WAVE: _ClassVar[WeatherEventType]
+    WINTER_STORM: _ClassVar[WeatherEventType]
+
+class Publisher(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    PUBLISHER_UNSPECIFIED: _ClassVar[Publisher]
+    AUSTRALIA_ACT_ESA: _ClassVar[Publisher]
+    AUSTRALIA_NSW_RFS: _ClassVar[Publisher]
+    AUSTRALIA_QLD_QFES: _ClassVar[Publisher]
+    AUSTRALIA_SA_CFS: _ClassVar[Publisher]
+    METEO_ALARM_AT: _ClassVar[Publisher]
+    METEO_ALARM_BS: _ClassVar[Publisher]
+    BRAZIL_CENAD: _ClassVar[Publisher]
+    BRAZIL_INMET: _ClassVar[Publisher]
+    UK_ENV_AGENCY: _ClassVar[Publisher]
+    METEO_ALARM_BG: _ClassVar[Publisher]
+    METEO_ALARM_CR: _ClassVar[Publisher]
+    METEO_ALARM_CY: _ClassVar[Publisher]
+    METEO_ALARM_CS: _ClassVar[Publisher]
+    METEO_ALARM_DK: _ClassVar[Publisher]
+    EC_INAMHI: _ClassVar[Publisher]
+    METEO_ALARM_FI: _ClassVar[Publisher]
+    METEO_ALARM_FR: _ClassVar[Publisher]
+    DE_DWD: _ClassVar[Publisher]
+    METEO_ALARM_GB: _ClassVar[Publisher]
+    METEO_ALARM_GR: _ClassVar[Publisher]
+    METEO_ALARM_HU: _ClassVar[Publisher]
+    METEO_ALARM_IS: _ClassVar[Publisher]
+    METEO_ALARM_IE: _ClassVar[Publisher]
+    METEO_ALARM_IT: _ClassVar[Publisher]
+    JM_JMS: _ClassVar[Publisher]
+    JMA: _ClassVar[Publisher]
+    METEO_ALARM_NL: _ClassVar[Publisher]
+    METEO_ALARM_LV: _ClassVar[Publisher]
+    METEO_ALARM_LT: _ClassVar[Publisher]
+    METEO_ALARM_LU: _ClassVar[Publisher]
+    MEXICO_CIRES: _ClassVar[Publisher]
+    NZ_GEONET: _ClassVar[Publisher]
+    NZ_NMS: _ClassVar[Publisher]
+    METEO_ALARM_MK: _ClassVar[Publisher]
+    METEO_ALARM_NO: _ClassVar[Publisher]
+    PHILIPPINES_PAGASA: _ClassVar[Publisher]
+    METEO_ALARM_PL: _ClassVar[Publisher]
+    METEO_ALARM_PT: _ClassVar[Publisher]
+    METEO_ALARM_RO: _ClassVar[Publisher]
+    METEO_ALARM_RS: _ClassVar[Publisher]
+    SG_MSS: _ClassVar[Publisher]
+    METEO_ALARM_SK: _ClassVar[Publisher]
+    METEO_ALARM_SI: _ClassVar[Publisher]
+    SB_MET: _ClassVar[Publisher]
+    METEO_ALARM_ES: _ClassVar[Publisher]
+    METEO_ALARM_SE: _ClassVar[Publisher]
+    METEO_ALARM_CH: _ClassVar[Publisher]
+    TAIWAN_NCDR: _ClassVar[Publisher]
+    NOAA: _ClassVar[Publisher]
+    WCATWC: _ClassVar[Publisher]
+
+class Urgency(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    URGENCY_UNKNOWN: _ClassVar[Urgency]
+    IMMEDIATE: _ClassVar[Urgency]
+    EXPECTED: _ClassVar[Urgency]
+    FUTURE: _ClassVar[Urgency]
+    PAST: _ClassVar[Urgency]
+
+class Severity(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    SEVERITY_UNKNOWN: _ClassVar[Severity]
+    EXTREME: _ClassVar[Severity]
+    SEVERE: _ClassVar[Severity]
+    MODERATE: _ClassVar[Severity]
+    MINOR: _ClassVar[Severity]
+
+class Certainty(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    CERTAINTY_UNKNOWN: _ClassVar[Certainty]
+    OBSERVED: _ClassVar[Certainty]
+    VERY_LIKELY: _ClassVar[Certainty]
+    LIKELY: _ClassVar[Certainty]
+    POSSIBLE: _ClassVar[Certainty]
+    UNLIKELY: _ClassVar[Certainty]
+WEATHER_EVENT_TYPE_UNSPECIFIED: WeatherEventType
+ACID_RAIN: WeatherEventType
+AFTERSHOCK: WeatherEventType
+AVALANCHE: WeatherEventType
+BLIZZARD: WeatherEventType
+BLOWING_SNOW: WeatherEventType
+BUSHFIRE: WeatherEventType
+COASTAL_FLOOD: WeatherEventType
+COASTAL_HAZARD: WeatherEventType
+COLD: WeatherEventType
+CYCLONE: WeatherEventType
+DROUGHT: WeatherEventType
+DUST_STORM: WeatherEventType
+EARTHQUAKE: WeatherEventType
+EXTRATROPICAL_CYCLONE: WeatherEventType
+FIRE: WeatherEventType
+FIRE_WEATHER: WeatherEventType
+FLASH_FLOOD: WeatherEventType
+FLOOD: WeatherEventType
+FOG: WeatherEventType
+FREEZING: WeatherEventType
+FREEZING_AIR_TEMPERATURE: WeatherEventType
+FREEZING_DRIZZLE: WeatherEventType
+FREEZING_RAIN_EVENT: WeatherEventType
+FROST: WeatherEventType
+GALE: WeatherEventType
+GLAZE: WeatherEventType
+HAIL: WeatherEventType
+HAZARDOUS_SEAS: WeatherEventType
+HEAT: WeatherEventType
+HUMIDITY: WeatherEventType
+HURRICANE: WeatherEventType
+ICE_STORM: WeatherEventType
+INDUSTRIAL_FIRE: WeatherEventType
+LAKE_EFFECT_SNOW: WeatherEventType
+LANDSLIDE: WeatherEventType
+MONSOON: WeatherEventType
+MUDDY_FLOOD: WeatherEventType
+OUTFLOW: WeatherEventType
+RADIATION: WeatherEventType
+RAIN_EVENT: WeatherEventType
+RIVER_FLOODING: WeatherEventType
+SEVERE_THUNDERSTORM_WARNING: WeatherEventType
+SNOWSQUALL: WeatherEventType
+SNOW_EVENT: WeatherEventType
+STORM: WeatherEventType
+STORM_SURGE: WeatherEventType
+THUNDER: WeatherEventType
+THUNDERSTORM: WeatherEventType
+TORNADO: WeatherEventType
+TORNADO_WARNING: WeatherEventType
+TROPICAL_CYCLONE: WeatherEventType
+TROPICAL_CYCLONE_WARNINGS_AND_WATCHES: WeatherEventType
+TROPICAL_DISTURBANCE: WeatherEventType
+TROPICAL_STORM: WeatherEventType
+TSUNAMI: WeatherEventType
+TYPHOON: WeatherEventType
+VOLCANIC_ASH: WeatherEventType
+VOLCANIC_ERUPTION: WeatherEventType
+WILDFIRE: WeatherEventType
+WIND: WeatherEventType
+WIND_CHILL: WeatherEventType
+WIND_WAVE: WeatherEventType
+WINTER_STORM: WeatherEventType
+PUBLISHER_UNSPECIFIED: Publisher
+AUSTRALIA_ACT_ESA: Publisher
+AUSTRALIA_NSW_RFS: Publisher
+AUSTRALIA_QLD_QFES: Publisher
+AUSTRALIA_SA_CFS: Publisher
+METEO_ALARM_AT: Publisher
+METEO_ALARM_BS: Publisher
+BRAZIL_CENAD: Publisher
+BRAZIL_INMET: Publisher
+UK_ENV_AGENCY: Publisher
+METEO_ALARM_BG: Publisher
+METEO_ALARM_CR: Publisher
+METEO_ALARM_CY: Publisher
+METEO_ALARM_CS: Publisher
+METEO_ALARM_DK: Publisher
+EC_INAMHI: Publisher
+METEO_ALARM_FI: Publisher
+METEO_ALARM_FR: Publisher
+DE_DWD: Publisher
+METEO_ALARM_GB: Publisher
+METEO_ALARM_GR: Publisher
+METEO_ALARM_HU: Publisher
+METEO_ALARM_IS: Publisher
+METEO_ALARM_IE: Publisher
+METEO_ALARM_IT: Publisher
+JM_JMS: Publisher
+JMA: Publisher
+METEO_ALARM_NL: Publisher
+METEO_ALARM_LV: Publisher
+METEO_ALARM_LT: Publisher
+METEO_ALARM_LU: Publisher
+MEXICO_CIRES: Publisher
+NZ_GEONET: Publisher
+NZ_NMS: Publisher
+METEO_ALARM_MK: Publisher
+METEO_ALARM_NO: Publisher
+PHILIPPINES_PAGASA: Publisher
+METEO_ALARM_PL: Publisher
+METEO_ALARM_PT: Publisher
+METEO_ALARM_RO: Publisher
+METEO_ALARM_RS: Publisher
+SG_MSS: Publisher
+METEO_ALARM_SK: Publisher
+METEO_ALARM_SI: Publisher
+SB_MET: Publisher
+METEO_ALARM_ES: Publisher
+METEO_ALARM_SE: Publisher
+METEO_ALARM_CH: Publisher
+TAIWAN_NCDR: Publisher
+NOAA: Publisher
+WCATWC: Publisher
+URGENCY_UNKNOWN: Urgency
+IMMEDIATE: Urgency
+EXPECTED: Urgency
+FUTURE: Urgency
+PAST: Urgency
+SEVERITY_UNKNOWN: Severity
+EXTREME: Severity
+SEVERE: Severity
+MODERATE: Severity
+MINOR: Severity
+CERTAINTY_UNKNOWN: Certainty
+OBSERVED: Certainty
+VERY_LIKELY: Certainty
+LIKELY: Certainty
+POSSIBLE: Certainty
+UNLIKELY: Certainty

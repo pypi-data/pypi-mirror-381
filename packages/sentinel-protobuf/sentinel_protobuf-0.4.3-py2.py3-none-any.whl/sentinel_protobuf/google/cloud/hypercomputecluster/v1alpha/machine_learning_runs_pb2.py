@@ -1,0 +1,217 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/cloud/hypercomputecluster/v1alpha/machine_learning_runs.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from .....google.cloud.hypercomputecluster.v1alpha import operation_metadata_pb2 as google_dot_cloud_dot_hypercomputecluster_dot_v1alpha_dot_operation__metadata__pb2
+from .....google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nDgoogle/cloud/hypercomputecluster/v1alpha/machine_learning_runs.proto\x12(google.cloud.hypercomputecluster.v1alpha\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1aAgoogle/cloud/hypercomputecluster/v1alpha/operation_metadata.proto\x1a#google/longrunning/operations.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\x8f\x0b\n\x12MachineLearningRun\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x08\x12\x19\n\x0cdisplay_name\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x14\n\x07run_set\x18\x03 \x01(\tB\x03\xe0A\x02\x12\x11\n\x04etag\x18\x04 \x01(\tB\x03\xe0A\x01\x12G\n\x07configs\x18\x05 \x01(\x0b21.google.cloud.hypercomputecluster.v1alpha.ConfigsB\x03\xe0A\x01\x12B\n\x05tools\x18\x06 \x03(\x0b2..google.cloud.hypercomputecluster.v1alpha.ToolB\x03\xe0A\x02\x12G\n\x07metrics\x18\x07 \x01(\x0b21.google.cloud.hypercomputecluster.v1alpha.MetricsB\x03\xe0A\x01\x12]\n\x06labels\x18\x08 \x03(\x0b2H.google.cloud.hypercomputecluster.v1alpha.MachineLearningRun.LabelsEntryB\x03\xe0A\x01\x12C\n\x05state\x18\t \x01(\x0e2/.google.cloud.hypercomputecluster.v1alpha.StateB\x03\xe0A\x03\x124\n\x0bcreate_time\x18\n \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x0b \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12K\n\tartifacts\x18\x0c \x01(\x0b23.google.cloud.hypercomputecluster.v1alpha.ArtifactsB\x03\xe0A\x01\x12d\n\x0corchestrator\x18\r \x01(\x0e2I.google.cloud.hypercomputecluster.v1alpha.MachineLearningRun.OrchestratorB\x03\xe0A\x02\x12X\n\x10workload_details\x18\x0e \x01(\x0b29.google.cloud.hypercomputecluster.v1alpha.WorkloadDetailsB\x03\xe0A\x01\x12]\n\trun_phase\x18\x0f \x01(\x0e2E.google.cloud.hypercomputecluster.v1alpha.MachineLearningRun.RunPhaseB\x03\xe0A\x01\x12\x1a\n\rerror_details\x18\x10 \x01(\tB\x03\xe0A\x01\x121\n\x08end_time\x18\x11 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01"I\n\x0cOrchestrator\x12\x1c\n\x18ORCHESTRATOR_UNSPECIFIED\x10\x00\x12\x07\n\x03GCE\x10\x01\x12\x07\n\x03GKE\x10\x02\x12\t\n\x05SLURM\x10\x03"L\n\x08RunPhase\x12\x19\n\x15RUN_PHASE_UNSPECIFIED\x10\x00\x12\n\n\x06ACTIVE\x10\x01\x12\r\n\tCOMPLETED\x10\x02\x12\n\n\x06FAILED\x10\x03:\xb8\x01\xeaA\xb4\x01\n5hypercomputecluster.googleapis.com/MachineLearningRun\x12Rprojects/{project}/locations/{location}/machineLearningRuns/{machine_learning_run}*\x13machineLearningRuns2\x12machineLearningRun"\xf7\x01\n\x1fCreateMachineLearningRunRequest\x12M\n\x06parent\x18\x01 \x01(\tB=\xe0A\x02\xfaA7\x125hypercomputecluster.googleapis.com/MachineLearningRun\x12_\n\x14machine_learning_run\x18\x02 \x01(\x0b2<.google.cloud.hypercomputecluster.v1alpha.MachineLearningRunB\x03\xe0A\x02\x12$\n\x17machine_learning_run_id\x18\x03 \x01(\tB\x03\xe0A\x01"\xb8\x01\n\x1fUpdateMachineLearningRunRequest\x12_\n\x14machine_learning_run\x18\x01 \x01(\x0b2<.google.cloud.hypercomputecluster.v1alpha.MachineLearningRunB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x01"\x81\x01\n\x1fDeleteMachineLearningRunRequest\x12K\n\x04name\x18\x01 \x01(\tB=\xe0A\x02\xfaA7\n5hypercomputecluster.googleapis.com/MachineLearningRun\x12\x11\n\x04etag\x18\x02 \x01(\tB\x03\xe0A\x01"k\n\x1cGetMachineLearningRunRequest\x12K\n\x04name\x18\x01 \x01(\tB=\xe0A\x02\xfaA7\n5hypercomputecluster.googleapis.com/MachineLearningRun"\xcc\x01\n\x1eListMachineLearningRunsRequest\x12M\n\x06parent\x18\x01 \x01(\tB=\xe0A\x02\xfaA7\x125hypercomputecluster.googleapis.com/MachineLearningRun\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x05 \x01(\tB\x03\xe0A\x01"\x97\x01\n\x1fListMachineLearningRunsResponse\x12[\n\x15machine_learning_runs\x18\x01 \x03(\x0b2<.google.cloud.hypercomputecluster.v1alpha.MachineLearningRun\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\x98\x01\n\x1aListProfileSessionsRequest\x12I\n\x06parent\x18\x01 \x01(\tB9\xe0A\x02\xfaA3\x121hypercomputecluster.googleapis.com/ProfileSession\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01"\x8a\x01\n\x1bListProfileSessionsResponse\x12R\n\x10profile_sessions\x18\x01 \x03(\x0b28.google.cloud.hypercomputecluster.v1alpha.ProfileSession\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"c\n\x18GetProfileSessionRequest\x12G\n\x04name\x18\x01 \x01(\tB9\xe0A\x02\xfaA3\n1hypercomputecluster.googleapis.com/ProfileSession"\xdd\x02\n\x0eProfileSession\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x08\x12\x15\n\x08gcs_path\x18\x02 \x01(\tB\x03\xe0A\x03\x124\n\x0bcreate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12\x1a\n\rdashboard_url\x18\x04 \x01(\tB\x03\xe0A\x03:\xce\x01\xeaA\xca\x01\n1hypercomputecluster.googleapis.com/ProfileSession\x12tprojects/{project}/locations/{location}/machineLearningRuns/{machine_learning_run}/profileSessions/{profile_session}*\x0fprofileSessions2\x0eprofileSession"\xda\x03\n\x07Configs\x12]\n\x0cuser_configs\x18\x01 \x03(\x0b2B.google.cloud.hypercomputecluster.v1alpha.Configs.UserConfigsEntryB\x03\xe0A\x01\x12e\n\x10software_configs\x18\x02 \x03(\x0b2F.google.cloud.hypercomputecluster.v1alpha.Configs.SoftwareConfigsEntryB\x03\xe0A\x01\x12e\n\x10hardware_configs\x18\x03 \x03(\x0b2F.google.cloud.hypercomputecluster.v1alpha.Configs.HardwareConfigsEntryB\x03\xe0A\x01\x1a2\n\x10UserConfigsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01\x1a6\n\x14SoftwareConfigsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01\x1a6\n\x14HardwareConfigsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01"\xa3\x01\n\x07Metrics\x120\n\x08avg_step\x18\x01 \x01(\x0b2\x19.google.protobuf.DurationB\x03\xe0A\x03\x12\x14\n\x07avg_mfu\x18\x02 \x01(\x02B\x03\xe0A\x03\x12\x1b\n\x0eavg_throughput\x18\x03 \x01(\x02B\x03\xe0A\x03\x123\n\x0bavg_latency\x18\x04 \x01(\x0b2\x19.google.protobuf.DurationB\x03\xe0A\x03""\n\tArtifacts\x12\x15\n\x08gcs_path\x18\x01 \x01(\tB\x03\xe0A\x02"U\n\x04Tool\x12E\n\x05xprof\x18\x01 \x01(\x0b2/.google.cloud.hypercomputecluster.v1alpha.XprofB\x03\xe0A\x02H\x00B\x06\n\x04tool"j\n\x0fWorkloadDetails\x12K\n\x03gke\x18\x01 \x01(\x0b2<.google.cloud.hypercomputecluster.v1alpha.GKEWorkloadDetailsH\x00B\n\n\x08metadata"\x92\x02\n\x12GKEWorkloadDetails\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x11\n\x04kind\x18\x02 \x01(\tB\x03\xe0A\x02\x12\x14\n\x07cluster\x18\x03 \x01(\tB\x03\xe0A\x02\x12\x16\n\tnamespace\x18\x04 \x01(\tB\x03\xe0A\x02\x12\x1c\n\x0fparent_workload\x18\x05 \x01(\tB\x03\xe0A\x01\x12]\n\x06labels\x18\x06 \x03(\x0b2H.google.cloud.hypercomputecluster.v1alpha.GKEWorkloadDetails.LabelsEntryB\x03\xe0A\x01\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01" \n\x05Xprof\x12\x17\n\nsession_id\x18\x01 \x01(\tB\x03\xe0A\x02*W\n\x05State\x12\x15\n\x11STATE_UNSPECIFIED\x10\x00\x12\x10\n\x0cSTATE_ACTIVE\x10\x01\x12\x13\n\x0fSTATE_COMPLETED\x10\x02\x12\x10\n\x0cSTATE_FAILED\x10\x032\xde\x0f\n\x13MachineLearningRuns\x12\xc1\x02\n\x18CreateMachineLearningRun\x12I.google.cloud.hypercomputecluster.v1alpha.CreateMachineLearningRunRequest\x1a\x1d.google.longrunning.Operation"\xba\x01\xcaA\'\n\x12MachineLearningRun\x12\x11OperationMetadata\xdaA3parent,machine_learning_run,machine_learning_run_id\x82\xd3\xe4\x93\x02T"</v1alpha/{parent=projects/*/locations/*}/machineLearningRuns:\x14machine_learning_run\x12\xc3\x02\n\x18UpdateMachineLearningRun\x12I.google.cloud.hypercomputecluster.v1alpha.UpdateMachineLearningRunRequest\x1a\x1d.google.longrunning.Operation"\xbc\x01\xcaA\'\n\x12MachineLearningRun\x12\x11OperationMetadata\xdaA machine_learning_run,update_mask\x82\xd3\xe4\x93\x02i2Q/v1alpha/{machine_learning_run.name=projects/*/locations/*/machineLearningRuns/*}:\x14machine_learning_run\x12\xfe\x01\n\x18DeleteMachineLearningRun\x12I.google.cloud.hypercomputecluster.v1alpha.DeleteMachineLearningRunRequest\x1a\x1d.google.longrunning.Operation"x\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02>*</v1alpha/{name=projects/*/locations/*/machineLearningRuns/*}\x12\xea\x01\n\x15GetMachineLearningRun\x12F.google.cloud.hypercomputecluster.v1alpha.GetMachineLearningRunRequest\x1a<.google.cloud.hypercomputecluster.v1alpha.MachineLearningRun"K\xdaA\x04name\x82\xd3\xe4\x93\x02>\x12</v1alpha/{name=projects/*/locations/*/machineLearningRuns/*}\x12\xfd\x01\n\x17ListMachineLearningRuns\x12H.google.cloud.hypercomputecluster.v1alpha.ListMachineLearningRunsRequest\x1aI.google.cloud.hypercomputecluster.v1alpha.ListMachineLearningRunsResponse"M\xdaA\x06parent\x82\xd3\xe4\x93\x02>\x12</v1alpha/{parent=projects/*/locations/*}/machineLearningRuns\x12\xf0\x01\n\x11GetProfileSession\x12B.google.cloud.hypercomputecluster.v1alpha.GetProfileSessionRequest\x1a8.google.cloud.hypercomputecluster.v1alpha.ProfileSession"]\xdaA\x04name\x82\xd3\xe4\x93\x02P\x12N/v1alpha/{name=projects/*/locations/*/machineLearningRuns/*/profileSessions/*}\x12\x83\x02\n\x13ListProfileSessions\x12D.google.cloud.hypercomputecluster.v1alpha.ListProfileSessionsRequest\x1aE.google.cloud.hypercomputecluster.v1alpha.ListProfileSessionsResponse"_\xdaA\x06parent\x82\xd3\xe4\x93\x02P\x12N/v1alpha/{parent=projects/*/locations/*/machineLearningRuns/*}/profileSessions\x1aV\xcaA"hypercomputecluster.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platformB\xae\x02\n,com.google.cloud.hypercomputecluster.v1alphaB\x18MachineLearningRunsProtoP\x01Z^cloud.google.com/go/hypercomputecluster/apiv1alpha/hypercomputeclusterpb;hypercomputeclusterpb\xaa\x02(Google.Cloud.HypercomputeCluster.V1Alpha\xca\x02(Google\\Cloud\\HypercomputeCluster\\V1alpha\xea\x02+Google::Cloud::HypercomputeCluster::V1alphab\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.hypercomputecluster.v1alpha.machine_learning_runs_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n,com.google.cloud.hypercomputecluster.v1alphaB\x18MachineLearningRunsProtoP\x01Z^cloud.google.com/go/hypercomputecluster/apiv1alpha/hypercomputeclusterpb;hypercomputeclusterpb\xaa\x02(Google.Cloud.HypercomputeCluster.V1Alpha\xca\x02(Google\\Cloud\\HypercomputeCluster\\V1alpha\xea\x02+Google::Cloud::HypercomputeCluster::V1alpha'
+    _globals['_MACHINELEARNINGRUN_LABELSENTRY']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN_LABELSENTRY']._serialized_options = b'8\x01'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['name']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['name']._serialized_options = b'\xe0A\x08'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['display_name']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['display_name']._serialized_options = b'\xe0A\x01'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['run_set']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['run_set']._serialized_options = b'\xe0A\x02'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['etag']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['etag']._serialized_options = b'\xe0A\x01'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['configs']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['configs']._serialized_options = b'\xe0A\x01'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['tools']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['tools']._serialized_options = b'\xe0A\x02'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['metrics']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['metrics']._serialized_options = b'\xe0A\x01'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['labels']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['labels']._serialized_options = b'\xe0A\x01'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['state']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['state']._serialized_options = b'\xe0A\x03'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['create_time']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['update_time']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['artifacts']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['artifacts']._serialized_options = b'\xe0A\x01'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['orchestrator']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['orchestrator']._serialized_options = b'\xe0A\x02'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['workload_details']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['workload_details']._serialized_options = b'\xe0A\x01'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['run_phase']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['run_phase']._serialized_options = b'\xe0A\x01'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['error_details']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['error_details']._serialized_options = b'\xe0A\x01'
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['end_time']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN'].fields_by_name['end_time']._serialized_options = b'\xe0A\x03'
+    _globals['_MACHINELEARNINGRUN']._loaded_options = None
+    _globals['_MACHINELEARNINGRUN']._serialized_options = b'\xeaA\xb4\x01\n5hypercomputecluster.googleapis.com/MachineLearningRun\x12Rprojects/{project}/locations/{location}/machineLearningRuns/{machine_learning_run}*\x13machineLearningRuns2\x12machineLearningRun'
+    _globals['_CREATEMACHINELEARNINGRUNREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEMACHINELEARNINGRUNREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA7\x125hypercomputecluster.googleapis.com/MachineLearningRun'
+    _globals['_CREATEMACHINELEARNINGRUNREQUEST'].fields_by_name['machine_learning_run']._loaded_options = None
+    _globals['_CREATEMACHINELEARNINGRUNREQUEST'].fields_by_name['machine_learning_run']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEMACHINELEARNINGRUNREQUEST'].fields_by_name['machine_learning_run_id']._loaded_options = None
+    _globals['_CREATEMACHINELEARNINGRUNREQUEST'].fields_by_name['machine_learning_run_id']._serialized_options = b'\xe0A\x01'
+    _globals['_UPDATEMACHINELEARNINGRUNREQUEST'].fields_by_name['machine_learning_run']._loaded_options = None
+    _globals['_UPDATEMACHINELEARNINGRUNREQUEST'].fields_by_name['machine_learning_run']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEMACHINELEARNINGRUNREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATEMACHINELEARNINGRUNREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETEMACHINELEARNINGRUNREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEMACHINELEARNINGRUNREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA7\n5hypercomputecluster.googleapis.com/MachineLearningRun'
+    _globals['_DELETEMACHINELEARNINGRUNREQUEST'].fields_by_name['etag']._loaded_options = None
+    _globals['_DELETEMACHINELEARNINGRUNREQUEST'].fields_by_name['etag']._serialized_options = b'\xe0A\x01'
+    _globals['_GETMACHINELEARNINGRUNREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETMACHINELEARNINGRUNREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA7\n5hypercomputecluster.googleapis.com/MachineLearningRun'
+    _globals['_LISTMACHINELEARNINGRUNSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTMACHINELEARNINGRUNSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA7\x125hypercomputecluster.googleapis.com/MachineLearningRun'
+    _globals['_LISTMACHINELEARNINGRUNSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTMACHINELEARNINGRUNSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTMACHINELEARNINGRUNSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTMACHINELEARNINGRUNSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTMACHINELEARNINGRUNSREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTMACHINELEARNINGRUNSREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTMACHINELEARNINGRUNSREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTMACHINELEARNINGRUNSREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTPROFILESESSIONSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTPROFILESESSIONSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA3\x121hypercomputecluster.googleapis.com/ProfileSession'
+    _globals['_LISTPROFILESESSIONSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTPROFILESESSIONSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTPROFILESESSIONSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTPROFILESESSIONSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_GETPROFILESESSIONREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETPROFILESESSIONREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA3\n1hypercomputecluster.googleapis.com/ProfileSession'
+    _globals['_PROFILESESSION'].fields_by_name['name']._loaded_options = None
+    _globals['_PROFILESESSION'].fields_by_name['name']._serialized_options = b'\xe0A\x08'
+    _globals['_PROFILESESSION'].fields_by_name['gcs_path']._loaded_options = None
+    _globals['_PROFILESESSION'].fields_by_name['gcs_path']._serialized_options = b'\xe0A\x03'
+    _globals['_PROFILESESSION'].fields_by_name['create_time']._loaded_options = None
+    _globals['_PROFILESESSION'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_PROFILESESSION'].fields_by_name['dashboard_url']._loaded_options = None
+    _globals['_PROFILESESSION'].fields_by_name['dashboard_url']._serialized_options = b'\xe0A\x03'
+    _globals['_PROFILESESSION']._loaded_options = None
+    _globals['_PROFILESESSION']._serialized_options = b'\xeaA\xca\x01\n1hypercomputecluster.googleapis.com/ProfileSession\x12tprojects/{project}/locations/{location}/machineLearningRuns/{machine_learning_run}/profileSessions/{profile_session}*\x0fprofileSessions2\x0eprofileSession'
+    _globals['_CONFIGS_USERCONFIGSENTRY']._loaded_options = None
+    _globals['_CONFIGS_USERCONFIGSENTRY']._serialized_options = b'8\x01'
+    _globals['_CONFIGS_SOFTWARECONFIGSENTRY']._loaded_options = None
+    _globals['_CONFIGS_SOFTWARECONFIGSENTRY']._serialized_options = b'8\x01'
+    _globals['_CONFIGS_HARDWARECONFIGSENTRY']._loaded_options = None
+    _globals['_CONFIGS_HARDWARECONFIGSENTRY']._serialized_options = b'8\x01'
+    _globals['_CONFIGS'].fields_by_name['user_configs']._loaded_options = None
+    _globals['_CONFIGS'].fields_by_name['user_configs']._serialized_options = b'\xe0A\x01'
+    _globals['_CONFIGS'].fields_by_name['software_configs']._loaded_options = None
+    _globals['_CONFIGS'].fields_by_name['software_configs']._serialized_options = b'\xe0A\x01'
+    _globals['_CONFIGS'].fields_by_name['hardware_configs']._loaded_options = None
+    _globals['_CONFIGS'].fields_by_name['hardware_configs']._serialized_options = b'\xe0A\x01'
+    _globals['_METRICS'].fields_by_name['avg_step']._loaded_options = None
+    _globals['_METRICS'].fields_by_name['avg_step']._serialized_options = b'\xe0A\x03'
+    _globals['_METRICS'].fields_by_name['avg_mfu']._loaded_options = None
+    _globals['_METRICS'].fields_by_name['avg_mfu']._serialized_options = b'\xe0A\x03'
+    _globals['_METRICS'].fields_by_name['avg_throughput']._loaded_options = None
+    _globals['_METRICS'].fields_by_name['avg_throughput']._serialized_options = b'\xe0A\x03'
+    _globals['_METRICS'].fields_by_name['avg_latency']._loaded_options = None
+    _globals['_METRICS'].fields_by_name['avg_latency']._serialized_options = b'\xe0A\x03'
+    _globals['_ARTIFACTS'].fields_by_name['gcs_path']._loaded_options = None
+    _globals['_ARTIFACTS'].fields_by_name['gcs_path']._serialized_options = b'\xe0A\x02'
+    _globals['_TOOL'].fields_by_name['xprof']._loaded_options = None
+    _globals['_TOOL'].fields_by_name['xprof']._serialized_options = b'\xe0A\x02'
+    _globals['_GKEWORKLOADDETAILS_LABELSENTRY']._loaded_options = None
+    _globals['_GKEWORKLOADDETAILS_LABELSENTRY']._serialized_options = b'8\x01'
+    _globals['_GKEWORKLOADDETAILS'].fields_by_name['id']._loaded_options = None
+    _globals['_GKEWORKLOADDETAILS'].fields_by_name['id']._serialized_options = b'\xe0A\x02'
+    _globals['_GKEWORKLOADDETAILS'].fields_by_name['kind']._loaded_options = None
+    _globals['_GKEWORKLOADDETAILS'].fields_by_name['kind']._serialized_options = b'\xe0A\x02'
+    _globals['_GKEWORKLOADDETAILS'].fields_by_name['cluster']._loaded_options = None
+    _globals['_GKEWORKLOADDETAILS'].fields_by_name['cluster']._serialized_options = b'\xe0A\x02'
+    _globals['_GKEWORKLOADDETAILS'].fields_by_name['namespace']._loaded_options = None
+    _globals['_GKEWORKLOADDETAILS'].fields_by_name['namespace']._serialized_options = b'\xe0A\x02'
+    _globals['_GKEWORKLOADDETAILS'].fields_by_name['parent_workload']._loaded_options = None
+    _globals['_GKEWORKLOADDETAILS'].fields_by_name['parent_workload']._serialized_options = b'\xe0A\x01'
+    _globals['_GKEWORKLOADDETAILS'].fields_by_name['labels']._loaded_options = None
+    _globals['_GKEWORKLOADDETAILS'].fields_by_name['labels']._serialized_options = b'\xe0A\x01'
+    _globals['_XPROF'].fields_by_name['session_id']._loaded_options = None
+    _globals['_XPROF'].fields_by_name['session_id']._serialized_options = b'\xe0A\x02'
+    _globals['_MACHINELEARNINGRUNS']._loaded_options = None
+    _globals['_MACHINELEARNINGRUNS']._serialized_options = b'\xcaA"hypercomputecluster.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform'
+    _globals['_MACHINELEARNINGRUNS'].methods_by_name['CreateMachineLearningRun']._loaded_options = None
+    _globals['_MACHINELEARNINGRUNS'].methods_by_name['CreateMachineLearningRun']._serialized_options = b'\xcaA\'\n\x12MachineLearningRun\x12\x11OperationMetadata\xdaA3parent,machine_learning_run,machine_learning_run_id\x82\xd3\xe4\x93\x02T"</v1alpha/{parent=projects/*/locations/*}/machineLearningRuns:\x14machine_learning_run'
+    _globals['_MACHINELEARNINGRUNS'].methods_by_name['UpdateMachineLearningRun']._loaded_options = None
+    _globals['_MACHINELEARNINGRUNS'].methods_by_name['UpdateMachineLearningRun']._serialized_options = b"\xcaA'\n\x12MachineLearningRun\x12\x11OperationMetadata\xdaA machine_learning_run,update_mask\x82\xd3\xe4\x93\x02i2Q/v1alpha/{machine_learning_run.name=projects/*/locations/*/machineLearningRuns/*}:\x14machine_learning_run"
+    _globals['_MACHINELEARNINGRUNS'].methods_by_name['DeleteMachineLearningRun']._loaded_options = None
+    _globals['_MACHINELEARNINGRUNS'].methods_by_name['DeleteMachineLearningRun']._serialized_options = b'\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02>*</v1alpha/{name=projects/*/locations/*/machineLearningRuns/*}'
+    _globals['_MACHINELEARNINGRUNS'].methods_by_name['GetMachineLearningRun']._loaded_options = None
+    _globals['_MACHINELEARNINGRUNS'].methods_by_name['GetMachineLearningRun']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02>\x12</v1alpha/{name=projects/*/locations/*/machineLearningRuns/*}'
+    _globals['_MACHINELEARNINGRUNS'].methods_by_name['ListMachineLearningRuns']._loaded_options = None
+    _globals['_MACHINELEARNINGRUNS'].methods_by_name['ListMachineLearningRuns']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02>\x12</v1alpha/{parent=projects/*/locations/*}/machineLearningRuns'
+    _globals['_MACHINELEARNINGRUNS'].methods_by_name['GetProfileSession']._loaded_options = None
+    _globals['_MACHINELEARNINGRUNS'].methods_by_name['GetProfileSession']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02P\x12N/v1alpha/{name=projects/*/locations/*/machineLearningRuns/*/profileSessions/*}'
+    _globals['_MACHINELEARNINGRUNS'].methods_by_name['ListProfileSessions']._loaded_options = None
+    _globals['_MACHINELEARNINGRUNS'].methods_by_name['ListProfileSessions']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02P\x12N/v1alpha/{parent=projects/*/locations/*/machineLearningRuns/*}/profileSessions'
+    _globals['_STATE']._serialized_start = 4860
+    _globals['_STATE']._serialized_end = 4947
+    _globals['_MACHINELEARNINGRUN']._serialized_start = 462
+    _globals['_MACHINELEARNINGRUN']._serialized_end = 1885
+    _globals['_MACHINELEARNINGRUN_LABELSENTRY']._serialized_start = 1500
+    _globals['_MACHINELEARNINGRUN_LABELSENTRY']._serialized_end = 1545
+    _globals['_MACHINELEARNINGRUN_ORCHESTRATOR']._serialized_start = 1547
+    _globals['_MACHINELEARNINGRUN_ORCHESTRATOR']._serialized_end = 1620
+    _globals['_MACHINELEARNINGRUN_RUNPHASE']._serialized_start = 1622
+    _globals['_MACHINELEARNINGRUN_RUNPHASE']._serialized_end = 1698
+    _globals['_CREATEMACHINELEARNINGRUNREQUEST']._serialized_start = 1888
+    _globals['_CREATEMACHINELEARNINGRUNREQUEST']._serialized_end = 2135
+    _globals['_UPDATEMACHINELEARNINGRUNREQUEST']._serialized_start = 2138
+    _globals['_UPDATEMACHINELEARNINGRUNREQUEST']._serialized_end = 2322
+    _globals['_DELETEMACHINELEARNINGRUNREQUEST']._serialized_start = 2325
+    _globals['_DELETEMACHINELEARNINGRUNREQUEST']._serialized_end = 2454
+    _globals['_GETMACHINELEARNINGRUNREQUEST']._serialized_start = 2456
+    _globals['_GETMACHINELEARNINGRUNREQUEST']._serialized_end = 2563
+    _globals['_LISTMACHINELEARNINGRUNSREQUEST']._serialized_start = 2566
+    _globals['_LISTMACHINELEARNINGRUNSREQUEST']._serialized_end = 2770
+    _globals['_LISTMACHINELEARNINGRUNSRESPONSE']._serialized_start = 2773
+    _globals['_LISTMACHINELEARNINGRUNSRESPONSE']._serialized_end = 2924
+    _globals['_LISTPROFILESESSIONSREQUEST']._serialized_start = 2927
+    _globals['_LISTPROFILESESSIONSREQUEST']._serialized_end = 3079
+    _globals['_LISTPROFILESESSIONSRESPONSE']._serialized_start = 3082
+    _globals['_LISTPROFILESESSIONSRESPONSE']._serialized_end = 3220
+    _globals['_GETPROFILESESSIONREQUEST']._serialized_start = 3222
+    _globals['_GETPROFILESESSIONREQUEST']._serialized_end = 3321
+    _globals['_PROFILESESSION']._serialized_start = 3324
+    _globals['_PROFILESESSION']._serialized_end = 3673
+    _globals['_CONFIGS']._serialized_start = 3676
+    _globals['_CONFIGS']._serialized_end = 4150
+    _globals['_CONFIGS_USERCONFIGSENTRY']._serialized_start = 3988
+    _globals['_CONFIGS_USERCONFIGSENTRY']._serialized_end = 4038
+    _globals['_CONFIGS_SOFTWARECONFIGSENTRY']._serialized_start = 4040
+    _globals['_CONFIGS_SOFTWARECONFIGSENTRY']._serialized_end = 4094
+    _globals['_CONFIGS_HARDWARECONFIGSENTRY']._serialized_start = 4096
+    _globals['_CONFIGS_HARDWARECONFIGSENTRY']._serialized_end = 4150
+    _globals['_METRICS']._serialized_start = 4153
+    _globals['_METRICS']._serialized_end = 4316
+    _globals['_ARTIFACTS']._serialized_start = 4318
+    _globals['_ARTIFACTS']._serialized_end = 4352
+    _globals['_TOOL']._serialized_start = 4354
+    _globals['_TOOL']._serialized_end = 4439
+    _globals['_WORKLOADDETAILS']._serialized_start = 4441
+    _globals['_WORKLOADDETAILS']._serialized_end = 4547
+    _globals['_GKEWORKLOADDETAILS']._serialized_start = 4550
+    _globals['_GKEWORKLOADDETAILS']._serialized_end = 4824
+    _globals['_GKEWORKLOADDETAILS_LABELSENTRY']._serialized_start = 1500
+    _globals['_GKEWORKLOADDETAILS_LABELSENTRY']._serialized_end = 1545
+    _globals['_XPROF']._serialized_start = 4826
+    _globals['_XPROF']._serialized_end = 4858
+    _globals['_MACHINELEARNINGRUNS']._serialized_start = 4950
+    _globals['_MACHINELEARNINGRUNS']._serialized_end = 6964

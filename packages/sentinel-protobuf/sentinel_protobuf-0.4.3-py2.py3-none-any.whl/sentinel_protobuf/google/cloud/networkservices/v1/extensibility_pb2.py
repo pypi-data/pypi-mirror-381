@@ -1,0 +1,159 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/cloud/networkservices/v1/extensibility.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n3google/cloud/networkservices/v1/extensibility.proto\x12\x1fgoogle.cloud.networkservices.v1\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\xfa\x0b\n\nWasmPlugin\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x08\x124\n\x0bcreate_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12\x18\n\x0bdescription\x18\x04 \x01(\tB\x03\xe0A\x01\x12L\n\x06labels\x18\x05 \x03(\x0b27.google.cloud.networkservices.v1.WasmPlugin.LabelsEntryB\x03\xe0A\x01\x12\x1c\n\x0fmain_version_id\x18\x06 \x01(\tB\x03\xe0A\x01\x12N\n\nlog_config\x18\t \x01(\x0b25.google.cloud.networkservices.v1.WasmPlugin.LogConfigB\x03\xe0A\x01\x12P\n\x08versions\x18\n \x03(\x0b29.google.cloud.networkservices.v1.WasmPlugin.VersionsEntryB\x03\xe0A\x01\x12H\n\x07used_by\x18\x0b \x03(\x0b22.google.cloud.networkservices.v1.WasmPlugin.UsedByB\x03\xe0A\x03\x1a\xcb\x03\n\x0eVersionDetails\x12\x1c\n\x12plugin_config_data\x18\t \x01(\x0cH\x00\x12\x1b\n\x11plugin_config_uri\x18\n \x01(\tH\x00\x124\n\x0bcreate_time\x18\x01 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12\x18\n\x0bdescription\x18\x03 \x01(\tB\x03\xe0A\x01\x12[\n\x06labels\x18\x04 \x03(\x0b2F.google.cloud.networkservices.v1.WasmPlugin.VersionDetails.LabelsEntryB\x03\xe0A\x01\x12\x16\n\timage_uri\x18\x05 \x01(\tB\x03\xe0A\x01\x12\x19\n\x0cimage_digest\x18\x06 \x01(\tB\x03\xe0A\x03\x12!\n\x14plugin_config_digest\x18\x0b \x01(\tB\x03\xe0A\x03\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01B\x16\n\x14plugin_config_source\x1a\x80\x02\n\tLogConfig\x12\x13\n\x06enable\x18\x01 \x01(\x08B\x03\xe0A\x01\x12\x18\n\x0bsample_rate\x18\x02 \x01(\x02B\x03\xe0A\x07\x12Z\n\rmin_log_level\x18\x03 \x01(\x0e2>.google.cloud.networkservices.v1.WasmPlugin.LogConfig.LogLevelB\x03\xe0A\x07"h\n\x08LogLevel\x12\x19\n\x15LOG_LEVEL_UNSPECIFIED\x10\x00\x12\t\n\x05TRACE\x10\x01\x12\t\n\x05DEBUG\x10\x02\x12\x08\n\x04INFO\x10\x03\x12\x08\n\x04WARN\x10\x04\x12\t\n\x05ERROR\x10\x05\x12\x0c\n\x08CRITICAL\x10\x06\x1a\x1b\n\x06UsedBy\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x03\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01\x1ak\n\rVersionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12I\n\x05value\x18\x02 \x01(\x0b2:.google.cloud.networkservices.v1.WasmPlugin.VersionDetails:\x028\x01:q\xeaAn\n)networkservices.googleapis.com/WasmPlugin\x12Aprojects/{project}/locations/{location}/wasmPlugins/{wasm_plugin}"\xf4\x04\n\x11WasmPluginVersion\x12\x1c\n\x12plugin_config_data\x18\x0c \x01(\x0cH\x00\x12\x1b\n\x11plugin_config_uri\x18\r \x01(\tH\x00\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x08\x124\n\x0bcreate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12\x18\n\x0bdescription\x18\x05 \x01(\tB\x03\xe0A\x01\x12S\n\x06labels\x18\x06 \x03(\x0b2>.google.cloud.networkservices.v1.WasmPluginVersion.LabelsEntryB\x03\xe0A\x01\x12\x16\n\timage_uri\x18\x08 \x01(\tB\x03\xe0A\x01\x12\x19\n\x0cimage_digest\x18\t \x01(\tB\x03\xe0A\x03\x12!\n\x14plugin_config_digest\x18\x0e \x01(\tB\x03\xe0A\x03\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01:\x98\x01\xeaA\x94\x01\n0networkservices.googleapis.com/WasmPluginVersion\x12`projects/{project}/locations/{location}/wasmPlugins/{wasm_plugin}/versions/{wasm_plugin_version}B\x16\n\x14plugin_config_source"\x82\x01\n\x16ListWasmPluginsRequest\x12A\n\x06parent\x18\x01 \x01(\tB1\xe0A\x02\xfaA+\x12)networkservices.googleapis.com/WasmPlugin\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"\x8a\x01\n\x17ListWasmPluginsResponse\x12A\n\x0cwasm_plugins\x18\x01 \x03(\x0b2+.google.cloud.networkservices.v1.WasmPlugin\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t"\x96\x01\n\x14GetWasmPluginRequest\x12?\n\x04name\x18\x01 \x01(\tB1\xe0A\x02\xfaA+\n)networkservices.googleapis.com/WasmPlugin\x12=\n\x04view\x18\x02 \x01(\x0e2/.google.cloud.networkservices.v1.WasmPluginView"\xc0\x01\n\x17CreateWasmPluginRequest\x12A\n\x06parent\x18\x01 \x01(\tB1\xe0A\x02\xfaA+\x12)networkservices.googleapis.com/WasmPlugin\x12\x1b\n\x0ewasm_plugin_id\x18\x02 \x01(\tB\x03\xe0A\x02\x12E\n\x0bwasm_plugin\x18\x03 \x01(\x0b2+.google.cloud.networkservices.v1.WasmPluginB\x03\xe0A\x02"\x96\x01\n\x17UpdateWasmPluginRequest\x124\n\x0bupdate_mask\x18\x01 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x01\x12E\n\x0bwasm_plugin\x18\x02 \x01(\x0b2+.google.cloud.networkservices.v1.WasmPluginB\x03\xe0A\x02"Z\n\x17DeleteWasmPluginRequest\x12?\n\x04name\x18\x01 \x01(\tB1\xe0A\x02\xfaA+\n)networkservices.googleapis.com/WasmPlugin"\x90\x01\n\x1dListWasmPluginVersionsRequest\x12H\n\x06parent\x18\x01 \x01(\tB8\xe0A\x02\xfaA2\x120networkservices.googleapis.com/WasmPluginVersion\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"\xa0\x01\n\x1eListWasmPluginVersionsResponse\x12P\n\x14wasm_plugin_versions\x18\x01 \x03(\x0b22.google.cloud.networkservices.v1.WasmPluginVersion\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t"e\n\x1bGetWasmPluginVersionRequest\x12F\n\x04name\x18\x01 \x01(\tB8\xe0A\x02\xfaA2\n0networkservices.googleapis.com/WasmPluginVersion"\xe5\x01\n\x1eCreateWasmPluginVersionRequest\x12H\n\x06parent\x18\x01 \x01(\tB8\xe0A\x02\xfaA2\x120networkservices.googleapis.com/WasmPluginVersion\x12#\n\x16wasm_plugin_version_id\x18\x02 \x01(\tB\x03\xe0A\x02\x12T\n\x13wasm_plugin_version\x18\x03 \x01(\x0b22.google.cloud.networkservices.v1.WasmPluginVersionB\x03\xe0A\x02"h\n\x1eDeleteWasmPluginVersionRequest\x12F\n\x04name\x18\x01 \x01(\tB8\xe0A\x02\xfaA2\n0networkservices.googleapis.com/WasmPluginVersion*i\n\x0eWasmPluginView\x12 \n\x1cWASM_PLUGIN_VIEW_UNSPECIFIED\x10\x00\x12\x1a\n\x16WASM_PLUGIN_VIEW_BASIC\x10\x01\x12\x19\n\x15WASM_PLUGIN_VIEW_FULL\x10\x02B\xf3\x01\n#com.google.cloud.networkservices.v1B\x12ExtensibilityProtoP\x01ZMcloud.google.com/go/networkservices/apiv1/networkservicespb;networkservicespb\xaa\x02\x1fGoogle.Cloud.NetworkServices.V1\xca\x02\x1fGoogle\\Cloud\\NetworkServices\\V1\xea\x02"Google::Cloud::NetworkServices::V1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.networkservices.v1.extensibility_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n#com.google.cloud.networkservices.v1B\x12ExtensibilityProtoP\x01ZMcloud.google.com/go/networkservices/apiv1/networkservicespb;networkservicespb\xaa\x02\x1fGoogle.Cloud.NetworkServices.V1\xca\x02\x1fGoogle\\Cloud\\NetworkServices\\V1\xea\x02"Google::Cloud::NetworkServices::V1'
+    _globals['_WASMPLUGIN_VERSIONDETAILS_LABELSENTRY']._loaded_options = None
+    _globals['_WASMPLUGIN_VERSIONDETAILS_LABELSENTRY']._serialized_options = b'8\x01'
+    _globals['_WASMPLUGIN_VERSIONDETAILS'].fields_by_name['create_time']._loaded_options = None
+    _globals['_WASMPLUGIN_VERSIONDETAILS'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_WASMPLUGIN_VERSIONDETAILS'].fields_by_name['update_time']._loaded_options = None
+    _globals['_WASMPLUGIN_VERSIONDETAILS'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_WASMPLUGIN_VERSIONDETAILS'].fields_by_name['description']._loaded_options = None
+    _globals['_WASMPLUGIN_VERSIONDETAILS'].fields_by_name['description']._serialized_options = b'\xe0A\x01'
+    _globals['_WASMPLUGIN_VERSIONDETAILS'].fields_by_name['labels']._loaded_options = None
+    _globals['_WASMPLUGIN_VERSIONDETAILS'].fields_by_name['labels']._serialized_options = b'\xe0A\x01'
+    _globals['_WASMPLUGIN_VERSIONDETAILS'].fields_by_name['image_uri']._loaded_options = None
+    _globals['_WASMPLUGIN_VERSIONDETAILS'].fields_by_name['image_uri']._serialized_options = b'\xe0A\x01'
+    _globals['_WASMPLUGIN_VERSIONDETAILS'].fields_by_name['image_digest']._loaded_options = None
+    _globals['_WASMPLUGIN_VERSIONDETAILS'].fields_by_name['image_digest']._serialized_options = b'\xe0A\x03'
+    _globals['_WASMPLUGIN_VERSIONDETAILS'].fields_by_name['plugin_config_digest']._loaded_options = None
+    _globals['_WASMPLUGIN_VERSIONDETAILS'].fields_by_name['plugin_config_digest']._serialized_options = b'\xe0A\x03'
+    _globals['_WASMPLUGIN_LOGCONFIG'].fields_by_name['enable']._loaded_options = None
+    _globals['_WASMPLUGIN_LOGCONFIG'].fields_by_name['enable']._serialized_options = b'\xe0A\x01'
+    _globals['_WASMPLUGIN_LOGCONFIG'].fields_by_name['sample_rate']._loaded_options = None
+    _globals['_WASMPLUGIN_LOGCONFIG'].fields_by_name['sample_rate']._serialized_options = b'\xe0A\x07'
+    _globals['_WASMPLUGIN_LOGCONFIG'].fields_by_name['min_log_level']._loaded_options = None
+    _globals['_WASMPLUGIN_LOGCONFIG'].fields_by_name['min_log_level']._serialized_options = b'\xe0A\x07'
+    _globals['_WASMPLUGIN_USEDBY'].fields_by_name['name']._loaded_options = None
+    _globals['_WASMPLUGIN_USEDBY'].fields_by_name['name']._serialized_options = b'\xe0A\x03'
+    _globals['_WASMPLUGIN_LABELSENTRY']._loaded_options = None
+    _globals['_WASMPLUGIN_LABELSENTRY']._serialized_options = b'8\x01'
+    _globals['_WASMPLUGIN_VERSIONSENTRY']._loaded_options = None
+    _globals['_WASMPLUGIN_VERSIONSENTRY']._serialized_options = b'8\x01'
+    _globals['_WASMPLUGIN'].fields_by_name['name']._loaded_options = None
+    _globals['_WASMPLUGIN'].fields_by_name['name']._serialized_options = b'\xe0A\x08'
+    _globals['_WASMPLUGIN'].fields_by_name['create_time']._loaded_options = None
+    _globals['_WASMPLUGIN'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_WASMPLUGIN'].fields_by_name['update_time']._loaded_options = None
+    _globals['_WASMPLUGIN'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_WASMPLUGIN'].fields_by_name['description']._loaded_options = None
+    _globals['_WASMPLUGIN'].fields_by_name['description']._serialized_options = b'\xe0A\x01'
+    _globals['_WASMPLUGIN'].fields_by_name['labels']._loaded_options = None
+    _globals['_WASMPLUGIN'].fields_by_name['labels']._serialized_options = b'\xe0A\x01'
+    _globals['_WASMPLUGIN'].fields_by_name['main_version_id']._loaded_options = None
+    _globals['_WASMPLUGIN'].fields_by_name['main_version_id']._serialized_options = b'\xe0A\x01'
+    _globals['_WASMPLUGIN'].fields_by_name['log_config']._loaded_options = None
+    _globals['_WASMPLUGIN'].fields_by_name['log_config']._serialized_options = b'\xe0A\x01'
+    _globals['_WASMPLUGIN'].fields_by_name['versions']._loaded_options = None
+    _globals['_WASMPLUGIN'].fields_by_name['versions']._serialized_options = b'\xe0A\x01'
+    _globals['_WASMPLUGIN'].fields_by_name['used_by']._loaded_options = None
+    _globals['_WASMPLUGIN'].fields_by_name['used_by']._serialized_options = b'\xe0A\x03'
+    _globals['_WASMPLUGIN']._loaded_options = None
+    _globals['_WASMPLUGIN']._serialized_options = b'\xeaAn\n)networkservices.googleapis.com/WasmPlugin\x12Aprojects/{project}/locations/{location}/wasmPlugins/{wasm_plugin}'
+    _globals['_WASMPLUGINVERSION_LABELSENTRY']._loaded_options = None
+    _globals['_WASMPLUGINVERSION_LABELSENTRY']._serialized_options = b'8\x01'
+    _globals['_WASMPLUGINVERSION'].fields_by_name['name']._loaded_options = None
+    _globals['_WASMPLUGINVERSION'].fields_by_name['name']._serialized_options = b'\xe0A\x08'
+    _globals['_WASMPLUGINVERSION'].fields_by_name['create_time']._loaded_options = None
+    _globals['_WASMPLUGINVERSION'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_WASMPLUGINVERSION'].fields_by_name['update_time']._loaded_options = None
+    _globals['_WASMPLUGINVERSION'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_WASMPLUGINVERSION'].fields_by_name['description']._loaded_options = None
+    _globals['_WASMPLUGINVERSION'].fields_by_name['description']._serialized_options = b'\xe0A\x01'
+    _globals['_WASMPLUGINVERSION'].fields_by_name['labels']._loaded_options = None
+    _globals['_WASMPLUGINVERSION'].fields_by_name['labels']._serialized_options = b'\xe0A\x01'
+    _globals['_WASMPLUGINVERSION'].fields_by_name['image_uri']._loaded_options = None
+    _globals['_WASMPLUGINVERSION'].fields_by_name['image_uri']._serialized_options = b'\xe0A\x01'
+    _globals['_WASMPLUGINVERSION'].fields_by_name['image_digest']._loaded_options = None
+    _globals['_WASMPLUGINVERSION'].fields_by_name['image_digest']._serialized_options = b'\xe0A\x03'
+    _globals['_WASMPLUGINVERSION'].fields_by_name['plugin_config_digest']._loaded_options = None
+    _globals['_WASMPLUGINVERSION'].fields_by_name['plugin_config_digest']._serialized_options = b'\xe0A\x03'
+    _globals['_WASMPLUGINVERSION']._loaded_options = None
+    _globals['_WASMPLUGINVERSION']._serialized_options = b'\xeaA\x94\x01\n0networkservices.googleapis.com/WasmPluginVersion\x12`projects/{project}/locations/{location}/wasmPlugins/{wasm_plugin}/versions/{wasm_plugin_version}'
+    _globals['_LISTWASMPLUGINSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTWASMPLUGINSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA+\x12)networkservices.googleapis.com/WasmPlugin'
+    _globals['_GETWASMPLUGINREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETWASMPLUGINREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA+\n)networkservices.googleapis.com/WasmPlugin'
+    _globals['_CREATEWASMPLUGINREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEWASMPLUGINREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA+\x12)networkservices.googleapis.com/WasmPlugin'
+    _globals['_CREATEWASMPLUGINREQUEST'].fields_by_name['wasm_plugin_id']._loaded_options = None
+    _globals['_CREATEWASMPLUGINREQUEST'].fields_by_name['wasm_plugin_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEWASMPLUGINREQUEST'].fields_by_name['wasm_plugin']._loaded_options = None
+    _globals['_CREATEWASMPLUGINREQUEST'].fields_by_name['wasm_plugin']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEWASMPLUGINREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATEWASMPLUGINREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x01'
+    _globals['_UPDATEWASMPLUGINREQUEST'].fields_by_name['wasm_plugin']._loaded_options = None
+    _globals['_UPDATEWASMPLUGINREQUEST'].fields_by_name['wasm_plugin']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETEWASMPLUGINREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEWASMPLUGINREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA+\n)networkservices.googleapis.com/WasmPlugin'
+    _globals['_LISTWASMPLUGINVERSIONSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTWASMPLUGINVERSIONSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA2\x120networkservices.googleapis.com/WasmPluginVersion'
+    _globals['_GETWASMPLUGINVERSIONREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETWASMPLUGINVERSIONREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA2\n0networkservices.googleapis.com/WasmPluginVersion'
+    _globals['_CREATEWASMPLUGINVERSIONREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEWASMPLUGINVERSIONREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA2\x120networkservices.googleapis.com/WasmPluginVersion'
+    _globals['_CREATEWASMPLUGINVERSIONREQUEST'].fields_by_name['wasm_plugin_version_id']._loaded_options = None
+    _globals['_CREATEWASMPLUGINVERSIONREQUEST'].fields_by_name['wasm_plugin_version_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEWASMPLUGINVERSIONREQUEST'].fields_by_name['wasm_plugin_version']._loaded_options = None
+    _globals['_CREATEWASMPLUGINVERSIONREQUEST'].fields_by_name['wasm_plugin_version']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETEWASMPLUGINVERSIONREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEWASMPLUGINVERSIONREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA2\n0networkservices.googleapis.com/WasmPluginVersion'
+    _globals['_WASMPLUGINVIEW']._serialized_start = 3997
+    _globals['_WASMPLUGINVIEW']._serialized_end = 4102
+    _globals['_WASMPLUGIN']._serialized_start = 216
+    _globals['_WASMPLUGIN']._serialized_end = 1746
+    _globals['_WASMPLUGIN_VERSIONDETAILS']._serialized_start = 728
+    _globals['_WASMPLUGIN_VERSIONDETAILS']._serialized_end = 1187
+    _globals['_WASMPLUGIN_VERSIONDETAILS_LABELSENTRY']._serialized_start = 1118
+    _globals['_WASMPLUGIN_VERSIONDETAILS_LABELSENTRY']._serialized_end = 1163
+    _globals['_WASMPLUGIN_LOGCONFIG']._serialized_start = 1190
+    _globals['_WASMPLUGIN_LOGCONFIG']._serialized_end = 1446
+    _globals['_WASMPLUGIN_LOGCONFIG_LOGLEVEL']._serialized_start = 1342
+    _globals['_WASMPLUGIN_LOGCONFIG_LOGLEVEL']._serialized_end = 1446
+    _globals['_WASMPLUGIN_USEDBY']._serialized_start = 1448
+    _globals['_WASMPLUGIN_USEDBY']._serialized_end = 1475
+    _globals['_WASMPLUGIN_LABELSENTRY']._serialized_start = 1118
+    _globals['_WASMPLUGIN_LABELSENTRY']._serialized_end = 1163
+    _globals['_WASMPLUGIN_VERSIONSENTRY']._serialized_start = 1524
+    _globals['_WASMPLUGIN_VERSIONSENTRY']._serialized_end = 1631
+    _globals['_WASMPLUGINVERSION']._serialized_start = 1749
+    _globals['_WASMPLUGINVERSION']._serialized_end = 2377
+    _globals['_WASMPLUGINVERSION_LABELSENTRY']._serialized_start = 1118
+    _globals['_WASMPLUGINVERSION_LABELSENTRY']._serialized_end = 1163
+    _globals['_LISTWASMPLUGINSREQUEST']._serialized_start = 2380
+    _globals['_LISTWASMPLUGINSREQUEST']._serialized_end = 2510
+    _globals['_LISTWASMPLUGINSRESPONSE']._serialized_start = 2513
+    _globals['_LISTWASMPLUGINSRESPONSE']._serialized_end = 2651
+    _globals['_GETWASMPLUGINREQUEST']._serialized_start = 2654
+    _globals['_GETWASMPLUGINREQUEST']._serialized_end = 2804
+    _globals['_CREATEWASMPLUGINREQUEST']._serialized_start = 2807
+    _globals['_CREATEWASMPLUGINREQUEST']._serialized_end = 2999
+    _globals['_UPDATEWASMPLUGINREQUEST']._serialized_start = 3002
+    _globals['_UPDATEWASMPLUGINREQUEST']._serialized_end = 3152
+    _globals['_DELETEWASMPLUGINREQUEST']._serialized_start = 3154
+    _globals['_DELETEWASMPLUGINREQUEST']._serialized_end = 3244
+    _globals['_LISTWASMPLUGINVERSIONSREQUEST']._serialized_start = 3247
+    _globals['_LISTWASMPLUGINVERSIONSREQUEST']._serialized_end = 3391
+    _globals['_LISTWASMPLUGINVERSIONSRESPONSE']._serialized_start = 3394
+    _globals['_LISTWASMPLUGINVERSIONSRESPONSE']._serialized_end = 3554
+    _globals['_GETWASMPLUGINVERSIONREQUEST']._serialized_start = 3556
+    _globals['_GETWASMPLUGINVERSIONREQUEST']._serialized_end = 3657
+    _globals['_CREATEWASMPLUGINVERSIONREQUEST']._serialized_start = 3660
+    _globals['_CREATEWASMPLUGINVERSIONREQUEST']._serialized_end = 3889
+    _globals['_DELETEWASMPLUGINVERSIONREQUEST']._serialized_start = 3891
+    _globals['_DELETEWASMPLUGINVERSIONREQUEST']._serialized_end = 3995

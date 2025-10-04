@@ -1,0 +1,205 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/cloud/geminidataanalytics/v1alpha/data_chat_service.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from .....google.cloud.geminidataanalytics.v1alpha import context_pb2 as google_dot_cloud_dot_geminidataanalytics_dot_v1alpha_dot_context__pb2
+from .....google.cloud.geminidataanalytics.v1alpha import conversation_pb2 as google_dot_cloud_dot_geminidataanalytics_dot_v1alpha_dot_conversation__pb2
+from .....google.cloud.geminidataanalytics.v1alpha import credentials_pb2 as google_dot_cloud_dot_geminidataanalytics_dot_v1alpha_dot_credentials__pb2
+from .....google.cloud.geminidataanalytics.v1alpha import datasource_pb2 as google_dot_cloud_dot_geminidataanalytics_dot_v1alpha_dot_datasource__pb2
+from google.protobuf import struct_pb2 as google_dot_protobuf_dot_struct__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n@google/cloud/geminidataanalytics/v1alpha/data_chat_service.proto\x12(google.cloud.geminidataanalytics.v1alpha\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a6google/cloud/geminidataanalytics/v1alpha/context.proto\x1a;google/cloud/geminidataanalytics/v1alpha/conversation.proto\x1a:google/cloud/geminidataanalytics/v1alpha/credentials.proto\x1a9google/cloud/geminidataanalytics/v1alpha/datasource.proto\x1a\x1cgoogle/protobuf/struct.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\xa4\x01\n\x13ListMessagesRequest\x12G\n\x06parent\x18\x01 \x01(\tB7\xe0A\x02\xfaA1\n/geminidataanalytics.googleapis.com/Conversation\x12\x16\n\tpage_size\x18\x03 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06filter\x18\x05 \x01(\tB\x03\xe0A\x01"{\n\x14ListMessagesResponse\x12J\n\x08messages\x18\x01 \x03(\x0b28.google.cloud.geminidataanalytics.v1alpha.StorageMessage\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"h\n\x0eStorageMessage\x12\x12\n\nmessage_id\x18\x01 \x01(\t\x12B\n\x07message\x18\x02 \x01(\x0b21.google.cloud.geminidataanalytics.v1alpha.Message"\xe1\x03\n\x0bChatRequest\x12P\n\x0einline_context\x18e \x01(\x0b21.google.cloud.geminidataanalytics.v1alpha.ContextB\x03\xe0A\x01H\x00\x12f\n\x16conversation_reference\x18g \x01(\x0b2?.google.cloud.geminidataanalytics.v1alpha.ConversationReferenceB\x03\xe0A\x01H\x00\x12]\n\x12data_agent_context\x18h \x01(\x0b2:.google.cloud.geminidataanalytics.v1alpha.DataAgentContextB\x03\xe0A\x01H\x00\x12F\n\x07project\x18\x01 \x01(\tB5\x18\x01\xe0A\x01\xfaA-\n+cloudresourcemanager.googleapis.com/Project\x12\x13\n\x06parent\x18\x03 \x01(\tB\x03\xe0A\x02\x12H\n\x08messages\x18\x02 \x03(\x0b21.google.cloud.geminidataanalytics.v1alpha.MessageB\x03\xe0A\x02B\x12\n\x10context_provider"\xe5\x02\n\x10DataAgentContext\x12H\n\ndata_agent\x18\x01 \x01(\tB4\xe0A\x02\xfaA.\n,geminidataanalytics.googleapis.com/DataAgent\x12O\n\x0bcredentials\x18\x02 \x01(\x0b25.google.cloud.geminidataanalytics.v1alpha.CredentialsB\x03\xe0A\x01\x12g\n\x0fcontext_version\x18\x03 \x01(\x0e2I.google.cloud.geminidataanalytics.v1alpha.DataAgentContext.ContextVersionB\x03\xe0A\x01"M\n\x0eContextVersion\x12\x1f\n\x1bCONTEXT_VERSION_UNSPECIFIED\x10\x00\x12\x0b\n\x07STAGING\x10\x01\x12\r\n\tPUBLISHED\x10\x02"\xc3\x01\n\x15ConversationReference\x12M\n\x0cconversation\x18\x01 \x01(\tB7\xe0A\x02\xfaA1\n/geminidataanalytics.googleapis.com/Conversation\x12[\n\x12data_agent_context\x18\x03 \x01(\x0b2:.google.cloud.geminidataanalytics.v1alpha.DataAgentContextB\x03\xe0A\x02"\x80\x02\n\x07Message\x12M\n\x0cuser_message\x18\x02 \x01(\x0b25.google.cloud.geminidataanalytics.v1alpha.UserMessageH\x00\x12Q\n\x0esystem_message\x18\x03 \x01(\x0b27.google.cloud.geminidataanalytics.v1alpha.SystemMessageH\x00\x122\n\ttimestamp\x18\x01 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12\x17\n\nmessage_id\x18\x04 \x01(\tB\x03\xe0A\x01B\x06\n\x04kind"%\n\x0bUserMessage\x12\x0e\n\x04text\x18\x01 \x01(\tH\x00B\x06\n\x04kind"\xcf\x04\n\rSystemMessage\x12E\n\x04text\x18\x01 \x01(\x0b25.google.cloud.geminidataanalytics.v1alpha.TextMessageH\x00\x12I\n\x06schema\x18\x02 \x01(\x0b27.google.cloud.geminidataanalytics.v1alpha.SchemaMessageH\x00\x12E\n\x04data\x18\x03 \x01(\x0b25.google.cloud.geminidataanalytics.v1alpha.DataMessageH\x00\x12M\n\x08analysis\x18\x04 \x01(\x0b29.google.cloud.geminidataanalytics.v1alpha.AnalysisMessageH\x00\x12G\n\x05chart\x18\x05 \x01(\x0b26.google.cloud.geminidataanalytics.v1alpha.ChartMessageH\x00\x12G\n\x05error\x18\x06 \x01(\x0b26.google.cloud.geminidataanalytics.v1alpha.ErrorMessageH\x00\x12X\n\x0fexample_queries\x18\r \x01(\x0b28.google.cloud.geminidataanalytics.v1alpha.ExampleQueriesB\x03\xe0A\x01H\x00\x12\x15\n\x08group_id\x18\x0c \x01(\x05H\x01\x88\x01\x01B\x06\n\x04kindB\x0b\n\t_group_id"\xc1\x01\n\x0bTextMessage\x12\x12\n\x05parts\x18\x01 \x03(\tB\x03\xe0A\x01\x12V\n\ttext_type\x18\x02 \x01(\x0e2>.google.cloud.geminidataanalytics.v1alpha.TextMessage.TextTypeB\x03\xe0A\x01"F\n\x08TextType\x12\x19\n\x15TEXT_TYPE_UNSPECIFIED\x10\x00\x12\x12\n\x0eFINAL_RESPONSE\x10\x01\x12\x0b\n\x07THOUGHT\x10\x02"\xa9\x01\n\rSchemaMessage\x12F\n\x05query\x18\x01 \x01(\x0b25.google.cloud.geminidataanalytics.v1alpha.SchemaQueryH\x00\x12H\n\x06result\x18\x02 \x01(\x0b26.google.cloud.geminidataanalytics.v1alpha.SchemaResultH\x00B\x06\n\x04kind"$\n\x0bSchemaQuery\x12\x15\n\x08question\x18\x01 \x01(\tB\x03\xe0A\x01"^\n\x0cSchemaResult\x12N\n\x0bdatasources\x18\x01 \x03(\x0b24.google.cloud.geminidataanalytics.v1alpha.DatasourceB\x03\xe0A\x01"\xe5\x02\n\x0bDataMessage\x12D\n\x05query\x18\x01 \x01(\x0b23.google.cloud.geminidataanalytics.v1alpha.DataQueryH\x00\x12\x17\n\rgenerated_sql\x18\x02 \x01(\tH\x00\x12F\n\x06result\x18\x03 \x01(\x0b24.google.cloud.geminidataanalytics.v1alpha.DataResultH\x00\x12W\n\x16generated_looker_query\x18\x04 \x01(\x0b25.google.cloud.geminidataanalytics.v1alpha.LookerQueryH\x00\x12N\n\rbig_query_job\x18\x05 \x01(\x0b25.google.cloud.geminidataanalytics.v1alpha.BigQueryJobH\x00B\x06\n\x04kind"\x89\x02\n\x0bLookerQuery\x12\x12\n\x05model\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x14\n\x07explore\x18\x02 \x01(\tB\x03\xe0A\x02\x12\x13\n\x06fields\x18\x03 \x03(\tB\x03\xe0A\x01\x12R\n\x07filters\x18\x04 \x03(\x0b2<.google.cloud.geminidataanalytics.v1alpha.LookerQuery.FilterB\x03\xe0A\x01\x12\x12\n\x05sorts\x18\x05 \x03(\tB\x03\xe0A\x01\x12\x17\n\x05limit\x18\x06 \x01(\tB\x03\xe0A\x01H\x00\x88\x01\x01\x1a0\n\x06Filter\x12\x12\n\x05field\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x12\n\x05value\x18\x02 \x01(\tB\x03\xe0A\x02B\x08\n\x06_limit"\xe1\x01\n\tDataQuery\x12L\n\x06looker\x18\x04 \x01(\x0b25.google.cloud.geminidataanalytics.v1alpha.LookerQueryB\x03\xe0A\x01H\x00\x12\x15\n\x08question\x18\x01 \x01(\tB\x03\xe0A\x01\x12\x11\n\x04name\x18\x03 \x01(\tB\x03\xe0A\x01\x12N\n\x0bdatasources\x18\x02 \x03(\x0b24.google.cloud.geminidataanalytics.v1alpha.DatasourceB\x03\xe0A\x01B\x0c\n\nquery_type"\x92\x01\n\nDataResult\x12\x11\n\x04name\x18\x03 \x01(\tB\x03\xe0A\x01\x12E\n\x06schema\x18\x05 \x01(\x0b20.google.cloud.geminidataanalytics.v1alpha.SchemaB\x03\xe0A\x01\x12*\n\x04data\x18\x02 \x03(\x0b2\x17.google.protobuf.StructB\x03\xe0A\x01"\xfb\x01\n\x0bBigQueryJob\x12\x17\n\nproject_id\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x13\n\x06job_id\x18\x02 \x01(\tB\x03\xe0A\x02\x12\x15\n\x08location\x18\x05 \x01(\tB\x03\xe0A\x01\x12`\n\x11destination_table\x18\x03 \x01(\x0b2@.google.cloud.geminidataanalytics.v1alpha.BigQueryTableReferenceB\x03\xe0A\x01\x12E\n\x06schema\x18\x07 \x01(\x0b20.google.cloud.geminidataanalytics.v1alpha.SchemaB\x03\xe0A\x01"\xb6\x01\n\x0fAnalysisMessage\x12H\n\x05query\x18\x01 \x01(\x0b27.google.cloud.geminidataanalytics.v1alpha.AnalysisQueryH\x00\x12Q\n\x0eprogress_event\x18\x02 \x01(\x0b27.google.cloud.geminidataanalytics.v1alpha.AnalysisEventH\x00B\x06\n\x04kind"F\n\rAnalysisQuery\x12\x15\n\x08question\x18\x01 \x01(\tB\x03\xe0A\x01\x12\x1e\n\x11data_result_names\x18\x02 \x03(\tB\x03\xe0A\x01"\xaa\x02\n\rAnalysisEvent\x12\x1b\n\x11planner_reasoning\x18\x02 \x01(\tH\x00\x12\x1b\n\x11coder_instruction\x18\x03 \x01(\tH\x00\x12\x0e\n\x04code\x18\x04 \x01(\tH\x00\x12\x1a\n\x10execution_output\x18\x05 \x01(\tH\x00\x12\x19\n\x0fexecution_error\x18\x06 \x01(\tH\x00\x12 \n\x16result_vega_chart_json\x18\x07 \x01(\tH\x00\x12!\n\x17result_natural_language\x18\x08 \x01(\tH\x00\x12\x19\n\x0fresult_csv_data\x18\t \x01(\tH\x00\x12\x1f\n\x15result_reference_data\x18\n \x01(\tH\x00\x12\x0f\n\x05error\x18\x0b \x01(\tH\x00B\x06\n\x04kind"\xa6\x01\n\x0cChartMessage\x12E\n\x05query\x18\x01 \x01(\x0b24.google.cloud.geminidataanalytics.v1alpha.ChartQueryH\x00\x12G\n\x06result\x18\x02 \x01(\x0b25.google.cloud.geminidataanalytics.v1alpha.ChartResultH\x00B\x06\n\x04kind"F\n\nChartQuery\x12\x19\n\x0cinstructions\x18\x01 \x01(\tB\x03\xe0A\x01\x12\x1d\n\x10data_result_name\x18\x02 \x01(\tB\x03\xe0A\x01"\x84\x01\n\x0bChartResult\x121\n\x0bvega_config\x18\x02 \x01(\x0b2\x17.google.protobuf.StructB\x03\xe0A\x01\x12B\n\x05image\x18\x03 \x01(\x0b2..google.cloud.geminidataanalytics.v1alpha.BlobB\x03\xe0A\x01"!\n\x0cErrorMessage\x12\x11\n\x04text\x18\x01 \x01(\tB\x03\xe0A\x03"f\n\x0eExampleQueries\x12T\n\x0fexample_queries\x18\x01 \x03(\x0b26.google.cloud.geminidataanalytics.v1alpha.ExampleQueryB\x03\xe0A\x01"1\n\x04Blob\x12\x16\n\tmime_type\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x11\n\x04data\x18\x02 \x01(\x0cB\x03\xe0A\x022\xcb\x0b\n\x0fDataChatService\x12\xac\x01\n\x04Chat\x125.google.cloud.geminidataanalytics.v1alpha.ChatRequest\x1a1.google.cloud.geminidataanalytics.v1alpha.Message"8\x82\xd3\xe4\x93\x022"-/v1alpha/{parent=projects/*/locations/*}:chat:\x01*0\x01\x12\x85\x02\n\x12CreateConversation\x12C.google.cloud.geminidataanalytics.v1alpha.CreateConversationRequest\x1a6.google.cloud.geminidataanalytics.v1alpha.Conversation"r\xdaA#parent,conversation,conversation_id\x82\xd3\xe4\x93\x02F"6/v1alpha/{parent=projects/*/locations/*}/conversations:\x0cconversation\x12\x87\x02\n\x12UpdateConversation\x12C.google.cloud.geminidataanalytics.v1alpha.UpdateConversationRequest\x1a6.google.cloud.geminidataanalytics.v1alpha.Conversation"t\xdaA\x18conversation,update_mask\x82\xd3\xe4\x93\x02S2C/v1alpha/{conversation.name=projects/*/locations/*/conversations/*}:\x0cconversation\x12\xd2\x01\n\x0fGetConversation\x12@.google.cloud.geminidataanalytics.v1alpha.GetConversationRequest\x1a6.google.cloud.geminidataanalytics.v1alpha.Conversation"E\xdaA\x04name\x82\xd3\xe4\x93\x028\x126/v1alpha/{name=projects/*/locations/*/conversations/*}\x12\xe5\x01\n\x11ListConversations\x12B.google.cloud.geminidataanalytics.v1alpha.ListConversationsRequest\x1aC.google.cloud.geminidataanalytics.v1alpha.ListConversationsResponse"G\xdaA\x06parent\x82\xd3\xe4\x93\x028\x126/v1alpha/{parent=projects/*/locations/*}/conversations\x12\xe1\x01\n\x0cListMessages\x12=.google.cloud.geminidataanalytics.v1alpha.ListMessagesRequest\x1a>.google.cloud.geminidataanalytics.v1alpha.ListMessagesResponse"R\xdaA\x06parent\x82\xd3\xe4\x93\x02C\x12A/v1alpha/{parent=projects/*/locations/*/conversations/*}/messages\x1aV\xcaA"geminidataanalytics.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platformB\xaa\x02\n,com.google.cloud.geminidataanalytics.v1alphaB\x14DataChatServiceProtoP\x01Z^cloud.google.com/go/geminidataanalytics/apiv1alpha/geminidataanalyticspb;geminidataanalyticspb\xaa\x02(Google.Cloud.GeminiDataAnalytics.V1Alpha\xca\x02(Google\\Cloud\\GeminiDataAnalytics\\V1alpha\xea\x02+Google::Cloud::GeminiDataAnalytics::V1alphab\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.geminidataanalytics.v1alpha.data_chat_service_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n,com.google.cloud.geminidataanalytics.v1alphaB\x14DataChatServiceProtoP\x01Z^cloud.google.com/go/geminidataanalytics/apiv1alpha/geminidataanalyticspb;geminidataanalyticspb\xaa\x02(Google.Cloud.GeminiDataAnalytics.V1Alpha\xca\x02(Google\\Cloud\\GeminiDataAnalytics\\V1alpha\xea\x02+Google::Cloud::GeminiDataAnalytics::V1alpha'
+    _globals['_LISTMESSAGESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTMESSAGESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA1\n/geminidataanalytics.googleapis.com/Conversation'
+    _globals['_LISTMESSAGESREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTMESSAGESREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTMESSAGESREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTMESSAGESREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTMESSAGESREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTMESSAGESREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_CHATREQUEST'].fields_by_name['inline_context']._loaded_options = None
+    _globals['_CHATREQUEST'].fields_by_name['inline_context']._serialized_options = b'\xe0A\x01'
+    _globals['_CHATREQUEST'].fields_by_name['conversation_reference']._loaded_options = None
+    _globals['_CHATREQUEST'].fields_by_name['conversation_reference']._serialized_options = b'\xe0A\x01'
+    _globals['_CHATREQUEST'].fields_by_name['data_agent_context']._loaded_options = None
+    _globals['_CHATREQUEST'].fields_by_name['data_agent_context']._serialized_options = b'\xe0A\x01'
+    _globals['_CHATREQUEST'].fields_by_name['project']._loaded_options = None
+    _globals['_CHATREQUEST'].fields_by_name['project']._serialized_options = b'\x18\x01\xe0A\x01\xfaA-\n+cloudresourcemanager.googleapis.com/Project'
+    _globals['_CHATREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CHATREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02'
+    _globals['_CHATREQUEST'].fields_by_name['messages']._loaded_options = None
+    _globals['_CHATREQUEST'].fields_by_name['messages']._serialized_options = b'\xe0A\x02'
+    _globals['_DATAAGENTCONTEXT'].fields_by_name['data_agent']._loaded_options = None
+    _globals['_DATAAGENTCONTEXT'].fields_by_name['data_agent']._serialized_options = b'\xe0A\x02\xfaA.\n,geminidataanalytics.googleapis.com/DataAgent'
+    _globals['_DATAAGENTCONTEXT'].fields_by_name['credentials']._loaded_options = None
+    _globals['_DATAAGENTCONTEXT'].fields_by_name['credentials']._serialized_options = b'\xe0A\x01'
+    _globals['_DATAAGENTCONTEXT'].fields_by_name['context_version']._loaded_options = None
+    _globals['_DATAAGENTCONTEXT'].fields_by_name['context_version']._serialized_options = b'\xe0A\x01'
+    _globals['_CONVERSATIONREFERENCE'].fields_by_name['conversation']._loaded_options = None
+    _globals['_CONVERSATIONREFERENCE'].fields_by_name['conversation']._serialized_options = b'\xe0A\x02\xfaA1\n/geminidataanalytics.googleapis.com/Conversation'
+    _globals['_CONVERSATIONREFERENCE'].fields_by_name['data_agent_context']._loaded_options = None
+    _globals['_CONVERSATIONREFERENCE'].fields_by_name['data_agent_context']._serialized_options = b'\xe0A\x02'
+    _globals['_MESSAGE'].fields_by_name['timestamp']._loaded_options = None
+    _globals['_MESSAGE'].fields_by_name['timestamp']._serialized_options = b'\xe0A\x03'
+    _globals['_MESSAGE'].fields_by_name['message_id']._loaded_options = None
+    _globals['_MESSAGE'].fields_by_name['message_id']._serialized_options = b'\xe0A\x01'
+    _globals['_SYSTEMMESSAGE'].fields_by_name['example_queries']._loaded_options = None
+    _globals['_SYSTEMMESSAGE'].fields_by_name['example_queries']._serialized_options = b'\xe0A\x01'
+    _globals['_TEXTMESSAGE'].fields_by_name['parts']._loaded_options = None
+    _globals['_TEXTMESSAGE'].fields_by_name['parts']._serialized_options = b'\xe0A\x01'
+    _globals['_TEXTMESSAGE'].fields_by_name['text_type']._loaded_options = None
+    _globals['_TEXTMESSAGE'].fields_by_name['text_type']._serialized_options = b'\xe0A\x01'
+    _globals['_SCHEMAQUERY'].fields_by_name['question']._loaded_options = None
+    _globals['_SCHEMAQUERY'].fields_by_name['question']._serialized_options = b'\xe0A\x01'
+    _globals['_SCHEMARESULT'].fields_by_name['datasources']._loaded_options = None
+    _globals['_SCHEMARESULT'].fields_by_name['datasources']._serialized_options = b'\xe0A\x01'
+    _globals['_LOOKERQUERY_FILTER'].fields_by_name['field']._loaded_options = None
+    _globals['_LOOKERQUERY_FILTER'].fields_by_name['field']._serialized_options = b'\xe0A\x02'
+    _globals['_LOOKERQUERY_FILTER'].fields_by_name['value']._loaded_options = None
+    _globals['_LOOKERQUERY_FILTER'].fields_by_name['value']._serialized_options = b'\xe0A\x02'
+    _globals['_LOOKERQUERY'].fields_by_name['model']._loaded_options = None
+    _globals['_LOOKERQUERY'].fields_by_name['model']._serialized_options = b'\xe0A\x02'
+    _globals['_LOOKERQUERY'].fields_by_name['explore']._loaded_options = None
+    _globals['_LOOKERQUERY'].fields_by_name['explore']._serialized_options = b'\xe0A\x02'
+    _globals['_LOOKERQUERY'].fields_by_name['fields']._loaded_options = None
+    _globals['_LOOKERQUERY'].fields_by_name['fields']._serialized_options = b'\xe0A\x01'
+    _globals['_LOOKERQUERY'].fields_by_name['filters']._loaded_options = None
+    _globals['_LOOKERQUERY'].fields_by_name['filters']._serialized_options = b'\xe0A\x01'
+    _globals['_LOOKERQUERY'].fields_by_name['sorts']._loaded_options = None
+    _globals['_LOOKERQUERY'].fields_by_name['sorts']._serialized_options = b'\xe0A\x01'
+    _globals['_LOOKERQUERY'].fields_by_name['limit']._loaded_options = None
+    _globals['_LOOKERQUERY'].fields_by_name['limit']._serialized_options = b'\xe0A\x01'
+    _globals['_DATAQUERY'].fields_by_name['looker']._loaded_options = None
+    _globals['_DATAQUERY'].fields_by_name['looker']._serialized_options = b'\xe0A\x01'
+    _globals['_DATAQUERY'].fields_by_name['question']._loaded_options = None
+    _globals['_DATAQUERY'].fields_by_name['question']._serialized_options = b'\xe0A\x01'
+    _globals['_DATAQUERY'].fields_by_name['name']._loaded_options = None
+    _globals['_DATAQUERY'].fields_by_name['name']._serialized_options = b'\xe0A\x01'
+    _globals['_DATAQUERY'].fields_by_name['datasources']._loaded_options = None
+    _globals['_DATAQUERY'].fields_by_name['datasources']._serialized_options = b'\xe0A\x01'
+    _globals['_DATARESULT'].fields_by_name['name']._loaded_options = None
+    _globals['_DATARESULT'].fields_by_name['name']._serialized_options = b'\xe0A\x01'
+    _globals['_DATARESULT'].fields_by_name['schema']._loaded_options = None
+    _globals['_DATARESULT'].fields_by_name['schema']._serialized_options = b'\xe0A\x01'
+    _globals['_DATARESULT'].fields_by_name['data']._loaded_options = None
+    _globals['_DATARESULT'].fields_by_name['data']._serialized_options = b'\xe0A\x01'
+    _globals['_BIGQUERYJOB'].fields_by_name['project_id']._loaded_options = None
+    _globals['_BIGQUERYJOB'].fields_by_name['project_id']._serialized_options = b'\xe0A\x02'
+    _globals['_BIGQUERYJOB'].fields_by_name['job_id']._loaded_options = None
+    _globals['_BIGQUERYJOB'].fields_by_name['job_id']._serialized_options = b'\xe0A\x02'
+    _globals['_BIGQUERYJOB'].fields_by_name['location']._loaded_options = None
+    _globals['_BIGQUERYJOB'].fields_by_name['location']._serialized_options = b'\xe0A\x01'
+    _globals['_BIGQUERYJOB'].fields_by_name['destination_table']._loaded_options = None
+    _globals['_BIGQUERYJOB'].fields_by_name['destination_table']._serialized_options = b'\xe0A\x01'
+    _globals['_BIGQUERYJOB'].fields_by_name['schema']._loaded_options = None
+    _globals['_BIGQUERYJOB'].fields_by_name['schema']._serialized_options = b'\xe0A\x01'
+    _globals['_ANALYSISQUERY'].fields_by_name['question']._loaded_options = None
+    _globals['_ANALYSISQUERY'].fields_by_name['question']._serialized_options = b'\xe0A\x01'
+    _globals['_ANALYSISQUERY'].fields_by_name['data_result_names']._loaded_options = None
+    _globals['_ANALYSISQUERY'].fields_by_name['data_result_names']._serialized_options = b'\xe0A\x01'
+    _globals['_CHARTQUERY'].fields_by_name['instructions']._loaded_options = None
+    _globals['_CHARTQUERY'].fields_by_name['instructions']._serialized_options = b'\xe0A\x01'
+    _globals['_CHARTQUERY'].fields_by_name['data_result_name']._loaded_options = None
+    _globals['_CHARTQUERY'].fields_by_name['data_result_name']._serialized_options = b'\xe0A\x01'
+    _globals['_CHARTRESULT'].fields_by_name['vega_config']._loaded_options = None
+    _globals['_CHARTRESULT'].fields_by_name['vega_config']._serialized_options = b'\xe0A\x01'
+    _globals['_CHARTRESULT'].fields_by_name['image']._loaded_options = None
+    _globals['_CHARTRESULT'].fields_by_name['image']._serialized_options = b'\xe0A\x01'
+    _globals['_ERRORMESSAGE'].fields_by_name['text']._loaded_options = None
+    _globals['_ERRORMESSAGE'].fields_by_name['text']._serialized_options = b'\xe0A\x03'
+    _globals['_EXAMPLEQUERIES'].fields_by_name['example_queries']._loaded_options = None
+    _globals['_EXAMPLEQUERIES'].fields_by_name['example_queries']._serialized_options = b'\xe0A\x01'
+    _globals['_BLOB'].fields_by_name['mime_type']._loaded_options = None
+    _globals['_BLOB'].fields_by_name['mime_type']._serialized_options = b'\xe0A\x02'
+    _globals['_BLOB'].fields_by_name['data']._loaded_options = None
+    _globals['_BLOB'].fields_by_name['data']._serialized_options = b'\xe0A\x02'
+    _globals['_DATACHATSERVICE']._loaded_options = None
+    _globals['_DATACHATSERVICE']._serialized_options = b'\xcaA"geminidataanalytics.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform'
+    _globals['_DATACHATSERVICE'].methods_by_name['Chat']._loaded_options = None
+    _globals['_DATACHATSERVICE'].methods_by_name['Chat']._serialized_options = b'\x82\xd3\xe4\x93\x022"-/v1alpha/{parent=projects/*/locations/*}:chat:\x01*'
+    _globals['_DATACHATSERVICE'].methods_by_name['CreateConversation']._loaded_options = None
+    _globals['_DATACHATSERVICE'].methods_by_name['CreateConversation']._serialized_options = b'\xdaA#parent,conversation,conversation_id\x82\xd3\xe4\x93\x02F"6/v1alpha/{parent=projects/*/locations/*}/conversations:\x0cconversation'
+    _globals['_DATACHATSERVICE'].methods_by_name['UpdateConversation']._loaded_options = None
+    _globals['_DATACHATSERVICE'].methods_by_name['UpdateConversation']._serialized_options = b'\xdaA\x18conversation,update_mask\x82\xd3\xe4\x93\x02S2C/v1alpha/{conversation.name=projects/*/locations/*/conversations/*}:\x0cconversation'
+    _globals['_DATACHATSERVICE'].methods_by_name['GetConversation']._loaded_options = None
+    _globals['_DATACHATSERVICE'].methods_by_name['GetConversation']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x028\x126/v1alpha/{name=projects/*/locations/*/conversations/*}'
+    _globals['_DATACHATSERVICE'].methods_by_name['ListConversations']._loaded_options = None
+    _globals['_DATACHATSERVICE'].methods_by_name['ListConversations']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x028\x126/v1alpha/{parent=projects/*/locations/*}/conversations'
+    _globals['_DATACHATSERVICE'].methods_by_name['ListMessages']._loaded_options = None
+    _globals['_DATACHATSERVICE'].methods_by_name['ListMessages']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02C\x12A/v1alpha/{parent=projects/*/locations/*/conversations/*}/messages'
+    _globals['_LISTMESSAGESREQUEST']._serialized_start = 525
+    _globals['_LISTMESSAGESREQUEST']._serialized_end = 689
+    _globals['_LISTMESSAGESRESPONSE']._serialized_start = 691
+    _globals['_LISTMESSAGESRESPONSE']._serialized_end = 814
+    _globals['_STORAGEMESSAGE']._serialized_start = 816
+    _globals['_STORAGEMESSAGE']._serialized_end = 920
+    _globals['_CHATREQUEST']._serialized_start = 923
+    _globals['_CHATREQUEST']._serialized_end = 1404
+    _globals['_DATAAGENTCONTEXT']._serialized_start = 1407
+    _globals['_DATAAGENTCONTEXT']._serialized_end = 1764
+    _globals['_DATAAGENTCONTEXT_CONTEXTVERSION']._serialized_start = 1687
+    _globals['_DATAAGENTCONTEXT_CONTEXTVERSION']._serialized_end = 1764
+    _globals['_CONVERSATIONREFERENCE']._serialized_start = 1767
+    _globals['_CONVERSATIONREFERENCE']._serialized_end = 1962
+    _globals['_MESSAGE']._serialized_start = 1965
+    _globals['_MESSAGE']._serialized_end = 2221
+    _globals['_USERMESSAGE']._serialized_start = 2223
+    _globals['_USERMESSAGE']._serialized_end = 2260
+    _globals['_SYSTEMMESSAGE']._serialized_start = 2263
+    _globals['_SYSTEMMESSAGE']._serialized_end = 2854
+    _globals['_TEXTMESSAGE']._serialized_start = 2857
+    _globals['_TEXTMESSAGE']._serialized_end = 3050
+    _globals['_TEXTMESSAGE_TEXTTYPE']._serialized_start = 2980
+    _globals['_TEXTMESSAGE_TEXTTYPE']._serialized_end = 3050
+    _globals['_SCHEMAMESSAGE']._serialized_start = 3053
+    _globals['_SCHEMAMESSAGE']._serialized_end = 3222
+    _globals['_SCHEMAQUERY']._serialized_start = 3224
+    _globals['_SCHEMAQUERY']._serialized_end = 3260
+    _globals['_SCHEMARESULT']._serialized_start = 3262
+    _globals['_SCHEMARESULT']._serialized_end = 3356
+    _globals['_DATAMESSAGE']._serialized_start = 3359
+    _globals['_DATAMESSAGE']._serialized_end = 3716
+    _globals['_LOOKERQUERY']._serialized_start = 3719
+    _globals['_LOOKERQUERY']._serialized_end = 3984
+    _globals['_LOOKERQUERY_FILTER']._serialized_start = 3926
+    _globals['_LOOKERQUERY_FILTER']._serialized_end = 3974
+    _globals['_DATAQUERY']._serialized_start = 3987
+    _globals['_DATAQUERY']._serialized_end = 4212
+    _globals['_DATARESULT']._serialized_start = 4215
+    _globals['_DATARESULT']._serialized_end = 4361
+    _globals['_BIGQUERYJOB']._serialized_start = 4364
+    _globals['_BIGQUERYJOB']._serialized_end = 4615
+    _globals['_ANALYSISMESSAGE']._serialized_start = 4618
+    _globals['_ANALYSISMESSAGE']._serialized_end = 4800
+    _globals['_ANALYSISQUERY']._serialized_start = 4802
+    _globals['_ANALYSISQUERY']._serialized_end = 4872
+    _globals['_ANALYSISEVENT']._serialized_start = 4875
+    _globals['_ANALYSISEVENT']._serialized_end = 5173
+    _globals['_CHARTMESSAGE']._serialized_start = 5176
+    _globals['_CHARTMESSAGE']._serialized_end = 5342
+    _globals['_CHARTQUERY']._serialized_start = 5344
+    _globals['_CHARTQUERY']._serialized_end = 5414
+    _globals['_CHARTRESULT']._serialized_start = 5417
+    _globals['_CHARTRESULT']._serialized_end = 5549
+    _globals['_ERRORMESSAGE']._serialized_start = 5551
+    _globals['_ERRORMESSAGE']._serialized_end = 5584
+    _globals['_EXAMPLEQUERIES']._serialized_start = 5586
+    _globals['_EXAMPLEQUERIES']._serialized_end = 5688
+    _globals['_BLOB']._serialized_start = 5690
+    _globals['_BLOB']._serialized_end = 5739
+    _globals['_DATACHATSERVICE']._serialized_start = 5742
+    _globals['_DATACHATSERVICE']._serialized_end = 7225

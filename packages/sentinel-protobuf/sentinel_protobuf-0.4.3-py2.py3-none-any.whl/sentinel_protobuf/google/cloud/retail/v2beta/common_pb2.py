@@ -1,0 +1,119 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/cloud/retail/v2beta/common.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\'google/cloud/retail/v2beta/common.proto\x12\x1agoogle.cloud.retail.v2beta\x1a\x1fgoogle/api/field_behavior.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\xd1\x02\n\tCondition\x12D\n\x0bquery_terms\x18\x01 \x03(\x0b2/.google.cloud.retail.v2beta.Condition.QueryTerm\x12J\n\x11active_time_range\x18\x03 \x03(\x0b2/.google.cloud.retail.v2beta.Condition.TimeRange\x12\x17\n\x0fpage_categories\x18\x04 \x03(\t\x1a.\n\tQueryTerm\x12\r\n\x05value\x18\x01 \x01(\t\x12\x12\n\nfull_match\x18\x02 \x01(\x08\x1ai\n\tTimeRange\x12.\n\nstart_time\x18\x01 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12,\n\x08end_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.Timestamp"\xa2\x0e\n\x04Rule\x12D\n\x0cboost_action\x18\x02 \x01(\x0b2,.google.cloud.retail.v2beta.Rule.BoostActionH\x00\x12J\n\x0fredirect_action\x18\x03 \x01(\x0b2/.google.cloud.retail.v2beta.Rule.RedirectActionH\x00\x12W\n\x16oneway_synonyms_action\x18\x06 \x01(\x0b25.google.cloud.retail.v2beta.Rule.OnewaySynonymsActionH\x00\x12X\n\x17do_not_associate_action\x18\x07 \x01(\x0b25.google.cloud.retail.v2beta.Rule.DoNotAssociateActionH\x00\x12P\n\x12replacement_action\x18\x08 \x01(\x0b22.google.cloud.retail.v2beta.Rule.ReplacementActionH\x00\x12F\n\rignore_action\x18\t \x01(\x0b2-.google.cloud.retail.v2beta.Rule.IgnoreActionH\x00\x12F\n\rfilter_action\x18\n \x01(\x0b2-.google.cloud.retail.v2beta.Rule.FilterActionH\x00\x12W\n\x16twoway_synonyms_action\x18\x0b \x01(\x0b25.google.cloud.retail.v2beta.Rule.TwowaySynonymsActionH\x00\x12\\\n\x19force_return_facet_action\x18\x0c \x01(\x0b27.google.cloud.retail.v2beta.Rule.ForceReturnFacetActionH\x00\x12Q\n\x13remove_facet_action\x18\r \x01(\x0b22.google.cloud.retail.v2beta.Rule.RemoveFacetActionH\x00\x12@\n\npin_action\x18\x0e \x01(\x0b2*.google.cloud.retail.v2beta.Rule.PinActionH\x00\x12=\n\tcondition\x18\x01 \x01(\x0b2%.google.cloud.retail.v2beta.ConditionB\x03\xe0A\x02\x1a5\n\x0bBoostAction\x12\r\n\x05boost\x18\x01 \x01(\x02\x12\x17\n\x0fproducts_filter\x18\x02 \x01(\t\x1a\x1e\n\x0cFilterAction\x12\x0e\n\x06filter\x18\x01 \x01(\t\x1a&\n\x0eRedirectAction\x12\x14\n\x0credirect_uri\x18\x01 \x01(\t\x1a(\n\x14TwowaySynonymsAction\x12\x10\n\x08synonyms\x18\x01 \x03(\t\x1aS\n\x14OnewaySynonymsAction\x12\x13\n\x0bquery_terms\x18\x03 \x03(\t\x12\x10\n\x08synonyms\x18\x04 \x03(\t\x12\x14\n\x0coneway_terms\x18\x02 \x03(\t\x1aZ\n\x14DoNotAssociateAction\x12\x13\n\x0bquery_terms\x18\x02 \x03(\t\x12\x1e\n\x16do_not_associate_terms\x18\x03 \x03(\t\x12\r\n\x05terms\x18\x01 \x03(\t\x1aP\n\x11ReplacementAction\x12\x13\n\x0bquery_terms\x18\x02 \x03(\t\x12\x18\n\x10replacement_term\x18\x03 \x01(\t\x12\x0c\n\x04term\x18\x01 \x01(\t\x1a$\n\x0cIgnoreAction\x12\x14\n\x0cignore_terms\x18\x01 \x03(\t\x1a\xd2\x01\n\x16ForceReturnFacetAction\x12s\n\x1afacet_position_adjustments\x18\x01 \x03(\x0b2O.google.cloud.retail.v2beta.Rule.ForceReturnFacetAction.FacetPositionAdjustment\x1aC\n\x17FacetPositionAdjustment\x12\x16\n\x0eattribute_name\x18\x01 \x01(\t\x12\x10\n\x08position\x18\x02 \x01(\x05\x1a,\n\x11RemoveFacetAction\x12\x17\n\x0fattribute_names\x18\x01 \x03(\t\x1a\x88\x01\n\tPinAction\x12L\n\x07pin_map\x18\x01 \x03(\x0b26.google.cloud.retail.v2beta.Rule.PinAction.PinMapEntryB\x03\xe0A\x02\x1a-\n\x0bPinMapEntry\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01B\x08\n\x06action"/\n\x08Audience\x12\x0f\n\x07genders\x18\x01 \x03(\t\x12\x12\n\nage_groups\x18\x02 \x03(\t"3\n\tColorInfo\x12\x16\n\x0ecolor_families\x18\x01 \x03(\t\x12\x0e\n\x06colors\x18\x02 \x03(\t"\x86\x01\n\x0fCustomAttribute\x12\x0c\n\x04text\x18\x01 \x03(\t\x12\x0f\n\x07numbers\x18\x02 \x03(\x01\x12\x1b\n\nsearchable\x18\x03 \x01(\x08B\x02\x18\x01H\x00\x88\x01\x01\x12\x1a\n\tindexable\x18\x04 \x01(\x08B\x02\x18\x01H\x01\x88\x01\x01B\r\n\x0b_searchableB\x0c\n\n_indexable"2\n\x0fFulfillmentInfo\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x11\n\tplace_ids\x18\x02 \x03(\t"8\n\x05Image\x12\x10\n\x03uri\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x0e\n\x06height\x18\x02 \x01(\x05\x12\r\n\x05width\x18\x03 \x01(\x05"x\n\x08Interval\x12\x11\n\x07minimum\x18\x01 \x01(\x01H\x00\x12\x1b\n\x11exclusive_minimum\x18\x02 \x01(\x01H\x00\x12\x11\n\x07maximum\x18\x03 \x01(\x01H\x01\x12\x1b\n\x11exclusive_maximum\x18\x04 \x01(\x01H\x01B\x05\n\x03minB\x05\n\x03max"\x95\x03\n\tPriceInfo\x12\x15\n\rcurrency_code\x18\x01 \x01(\t\x12\r\n\x05price\x18\x02 \x01(\x02\x12\x16\n\x0eoriginal_price\x18\x03 \x01(\x02\x12\x0c\n\x04cost\x18\x04 \x01(\x02\x128\n\x14price_effective_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.Timestamp\x125\n\x11price_expire_time\x18\x06 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12J\n\x0bprice_range\x18\x07 \x01(\x0b20.google.cloud.retail.v2beta.PriceInfo.PriceRangeB\x03\xe0A\x03\x1a\x7f\n\nPriceRange\x123\n\x05price\x18\x01 \x01(\x0b2$.google.cloud.retail.v2beta.Interval\x12<\n\x0eoriginal_price\x18\x02 \x01(\x0b2$.google.cloud.retail.v2beta.Interval"P\n\x06Rating\x12\x14\n\x0crating_count\x18\x01 \x01(\x05\x12\x16\n\x0eaverage_rating\x18\x02 \x01(\x02\x12\x18\n\x10rating_histogram\x18\x03 \x03(\x05"`\n\x08UserInfo\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x12\n\nip_address\x18\x02 \x01(\t\x12\x12\n\nuser_agent\x18\x03 \x01(\t\x12\x1b\n\x13direct_user_request\x18\x04 \x01(\x08"\xbc\x02\n\x0eLocalInventory\x12\x15\n\x08place_id\x18\x01 \x01(\tB\x03\xe0A\x01\x12>\n\nprice_info\x18\x02 \x01(\x0b2%.google.cloud.retail.v2beta.PriceInfoB\x03\xe0A\x01\x12S\n\nattributes\x18\x03 \x03(\x0b2:.google.cloud.retail.v2beta.LocalInventory.AttributesEntryB\x03\xe0A\x01\x12\x1e\n\x11fulfillment_types\x18\x04 \x03(\tB\x03\xe0A\x01\x1a^\n\x0fAttributesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12:\n\x05value\x18\x02 \x01(\x0b2+.google.cloud.retail.v2beta.CustomAttribute:\x028\x01"\xcf\x03\n\x12PinControlMetadata\x12\\\n\x10all_matched_pins\x18\x01 \x03(\x0b2B.google.cloud.retail.v2beta.PinControlMetadata.AllMatchedPinsEntry\x12U\n\x0cdropped_pins\x18\x02 \x03(\x0b2?.google.cloud.retail.v2beta.PinControlMetadata.DroppedPinsEntry\x1a!\n\x0bProductPins\x12\x12\n\nproduct_id\x18\x01 \x03(\t\x1aq\n\x13AllMatchedPinsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12I\n\x05value\x18\x02 \x01(\x0b2:.google.cloud.retail.v2beta.PinControlMetadata.ProductPins:\x028\x01\x1an\n\x10DroppedPinsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12I\n\x05value\x18\x02 \x01(\x0b2:.google.cloud.retail.v2beta.PinControlMetadata.ProductPins:\x028\x01*\x86\x01\n\x14AttributeConfigLevel\x12&\n"ATTRIBUTE_CONFIG_LEVEL_UNSPECIFIED\x10\x00\x12"\n\x1ePRODUCT_LEVEL_ATTRIBUTE_CONFIG\x10\x01\x12"\n\x1eCATALOG_LEVEL_ATTRIBUTE_CONFIG\x10\x02*i\n\x0cSolutionType\x12\x1d\n\x19SOLUTION_TYPE_UNSPECIFIED\x10\x00\x12 \n\x1cSOLUTION_TYPE_RECOMMENDATION\x10\x01\x12\x18\n\x14SOLUTION_TYPE_SEARCH\x10\x02*\xa1\x01\n\x1eRecommendationsFilteringOption\x120\n,RECOMMENDATIONS_FILTERING_OPTION_UNSPECIFIED\x10\x00\x12&\n"RECOMMENDATIONS_FILTERING_DISABLED\x10\x01\x12%\n!RECOMMENDATIONS_FILTERING_ENABLED\x10\x03*\x8b\x01\n\x15SearchSolutionUseCase\x12(\n$SEARCH_SOLUTION_USE_CASE_UNSPECIFIED\x10\x00\x12#\n\x1fSEARCH_SOLUTION_USE_CASE_SEARCH\x10\x01\x12#\n\x1fSEARCH_SOLUTION_USE_CASE_BROWSE\x10\x02B\xca\x01\n\x1ecom.google.cloud.retail.v2betaB\x0bCommonProtoP\x01Z6cloud.google.com/go/retail/apiv2beta/retailpb;retailpb\xa2\x02\x06RETAIL\xaa\x02\x1aGoogle.Cloud.Retail.V2Beta\xca\x02\x1aGoogle\\Cloud\\Retail\\V2beta\xea\x02\x1dGoogle::Cloud::Retail::V2betab\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.retail.v2beta.common_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x1ecom.google.cloud.retail.v2betaB\x0bCommonProtoP\x01Z6cloud.google.com/go/retail/apiv2beta/retailpb;retailpb\xa2\x02\x06RETAIL\xaa\x02\x1aGoogle.Cloud.Retail.V2Beta\xca\x02\x1aGoogle\\Cloud\\Retail\\V2beta\xea\x02\x1dGoogle::Cloud::Retail::V2beta'
+    _globals['_RULE_PINACTION_PINMAPENTRY']._loaded_options = None
+    _globals['_RULE_PINACTION_PINMAPENTRY']._serialized_options = b'8\x01'
+    _globals['_RULE_PINACTION'].fields_by_name['pin_map']._loaded_options = None
+    _globals['_RULE_PINACTION'].fields_by_name['pin_map']._serialized_options = b'\xe0A\x02'
+    _globals['_RULE'].fields_by_name['condition']._loaded_options = None
+    _globals['_RULE'].fields_by_name['condition']._serialized_options = b'\xe0A\x02'
+    _globals['_CUSTOMATTRIBUTE'].fields_by_name['searchable']._loaded_options = None
+    _globals['_CUSTOMATTRIBUTE'].fields_by_name['searchable']._serialized_options = b'\x18\x01'
+    _globals['_CUSTOMATTRIBUTE'].fields_by_name['indexable']._loaded_options = None
+    _globals['_CUSTOMATTRIBUTE'].fields_by_name['indexable']._serialized_options = b'\x18\x01'
+    _globals['_IMAGE'].fields_by_name['uri']._loaded_options = None
+    _globals['_IMAGE'].fields_by_name['uri']._serialized_options = b'\xe0A\x02'
+    _globals['_PRICEINFO'].fields_by_name['price_range']._loaded_options = None
+    _globals['_PRICEINFO'].fields_by_name['price_range']._serialized_options = b'\xe0A\x03'
+    _globals['_LOCALINVENTORY_ATTRIBUTESENTRY']._loaded_options = None
+    _globals['_LOCALINVENTORY_ATTRIBUTESENTRY']._serialized_options = b'8\x01'
+    _globals['_LOCALINVENTORY'].fields_by_name['place_id']._loaded_options = None
+    _globals['_LOCALINVENTORY'].fields_by_name['place_id']._serialized_options = b'\xe0A\x01'
+    _globals['_LOCALINVENTORY'].fields_by_name['price_info']._loaded_options = None
+    _globals['_LOCALINVENTORY'].fields_by_name['price_info']._serialized_options = b'\xe0A\x01'
+    _globals['_LOCALINVENTORY'].fields_by_name['attributes']._loaded_options = None
+    _globals['_LOCALINVENTORY'].fields_by_name['attributes']._serialized_options = b'\xe0A\x01'
+    _globals['_LOCALINVENTORY'].fields_by_name['fulfillment_types']._loaded_options = None
+    _globals['_LOCALINVENTORY'].fields_by_name['fulfillment_types']._serialized_options = b'\xe0A\x01'
+    _globals['_PINCONTROLMETADATA_ALLMATCHEDPINSENTRY']._loaded_options = None
+    _globals['_PINCONTROLMETADATA_ALLMATCHEDPINSENTRY']._serialized_options = b'8\x01'
+    _globals['_PINCONTROLMETADATA_DROPPEDPINSENTRY']._loaded_options = None
+    _globals['_PINCONTROLMETADATA_DROPPEDPINSENTRY']._serialized_options = b'8\x01'
+    _globals['_ATTRIBUTECONFIGLEVEL']._serialized_start = 4151
+    _globals['_ATTRIBUTECONFIGLEVEL']._serialized_end = 4285
+    _globals['_SOLUTIONTYPE']._serialized_start = 4287
+    _globals['_SOLUTIONTYPE']._serialized_end = 4392
+    _globals['_RECOMMENDATIONSFILTERINGOPTION']._serialized_start = 4395
+    _globals['_RECOMMENDATIONSFILTERINGOPTION']._serialized_end = 4556
+    _globals['_SEARCHSOLUTIONUSECASE']._serialized_start = 4559
+    _globals['_SEARCHSOLUTIONUSECASE']._serialized_end = 4698
+    _globals['_CONDITION']._serialized_start = 138
+    _globals['_CONDITION']._serialized_end = 475
+    _globals['_CONDITION_QUERYTERM']._serialized_start = 322
+    _globals['_CONDITION_QUERYTERM']._serialized_end = 368
+    _globals['_CONDITION_TIMERANGE']._serialized_start = 370
+    _globals['_CONDITION_TIMERANGE']._serialized_end = 475
+    _globals['_RULE']._serialized_start = 478
+    _globals['_RULE']._serialized_end = 2304
+    _globals['_RULE_BOOSTACTION']._serialized_start = 1432
+    _globals['_RULE_BOOSTACTION']._serialized_end = 1485
+    _globals['_RULE_FILTERACTION']._serialized_start = 1487
+    _globals['_RULE_FILTERACTION']._serialized_end = 1517
+    _globals['_RULE_REDIRECTACTION']._serialized_start = 1519
+    _globals['_RULE_REDIRECTACTION']._serialized_end = 1557
+    _globals['_RULE_TWOWAYSYNONYMSACTION']._serialized_start = 1559
+    _globals['_RULE_TWOWAYSYNONYMSACTION']._serialized_end = 1599
+    _globals['_RULE_ONEWAYSYNONYMSACTION']._serialized_start = 1601
+    _globals['_RULE_ONEWAYSYNONYMSACTION']._serialized_end = 1684
+    _globals['_RULE_DONOTASSOCIATEACTION']._serialized_start = 1686
+    _globals['_RULE_DONOTASSOCIATEACTION']._serialized_end = 1776
+    _globals['_RULE_REPLACEMENTACTION']._serialized_start = 1778
+    _globals['_RULE_REPLACEMENTACTION']._serialized_end = 1858
+    _globals['_RULE_IGNOREACTION']._serialized_start = 1860
+    _globals['_RULE_IGNOREACTION']._serialized_end = 1896
+    _globals['_RULE_FORCERETURNFACETACTION']._serialized_start = 1899
+    _globals['_RULE_FORCERETURNFACETACTION']._serialized_end = 2109
+    _globals['_RULE_FORCERETURNFACETACTION_FACETPOSITIONADJUSTMENT']._serialized_start = 2042
+    _globals['_RULE_FORCERETURNFACETACTION_FACETPOSITIONADJUSTMENT']._serialized_end = 2109
+    _globals['_RULE_REMOVEFACETACTION']._serialized_start = 2111
+    _globals['_RULE_REMOVEFACETACTION']._serialized_end = 2155
+    _globals['_RULE_PINACTION']._serialized_start = 2158
+    _globals['_RULE_PINACTION']._serialized_end = 2294
+    _globals['_RULE_PINACTION_PINMAPENTRY']._serialized_start = 2249
+    _globals['_RULE_PINACTION_PINMAPENTRY']._serialized_end = 2294
+    _globals['_AUDIENCE']._serialized_start = 2306
+    _globals['_AUDIENCE']._serialized_end = 2353
+    _globals['_COLORINFO']._serialized_start = 2355
+    _globals['_COLORINFO']._serialized_end = 2406
+    _globals['_CUSTOMATTRIBUTE']._serialized_start = 2409
+    _globals['_CUSTOMATTRIBUTE']._serialized_end = 2543
+    _globals['_FULFILLMENTINFO']._serialized_start = 2545
+    _globals['_FULFILLMENTINFO']._serialized_end = 2595
+    _globals['_IMAGE']._serialized_start = 2597
+    _globals['_IMAGE']._serialized_end = 2653
+    _globals['_INTERVAL']._serialized_start = 2655
+    _globals['_INTERVAL']._serialized_end = 2775
+    _globals['_PRICEINFO']._serialized_start = 2778
+    _globals['_PRICEINFO']._serialized_end = 3183
+    _globals['_PRICEINFO_PRICERANGE']._serialized_start = 3056
+    _globals['_PRICEINFO_PRICERANGE']._serialized_end = 3183
+    _globals['_RATING']._serialized_start = 3185
+    _globals['_RATING']._serialized_end = 3265
+    _globals['_USERINFO']._serialized_start = 3267
+    _globals['_USERINFO']._serialized_end = 3363
+    _globals['_LOCALINVENTORY']._serialized_start = 3366
+    _globals['_LOCALINVENTORY']._serialized_end = 3682
+    _globals['_LOCALINVENTORY_ATTRIBUTESENTRY']._serialized_start = 3588
+    _globals['_LOCALINVENTORY_ATTRIBUTESENTRY']._serialized_end = 3682
+    _globals['_PINCONTROLMETADATA']._serialized_start = 3685
+    _globals['_PINCONTROLMETADATA']._serialized_end = 4148
+    _globals['_PINCONTROLMETADATA_PRODUCTPINS']._serialized_start = 3888
+    _globals['_PINCONTROLMETADATA_PRODUCTPINS']._serialized_end = 3921
+    _globals['_PINCONTROLMETADATA_ALLMATCHEDPINSENTRY']._serialized_start = 3923
+    _globals['_PINCONTROLMETADATA_ALLMATCHEDPINSENTRY']._serialized_end = 4036
+    _globals['_PINCONTROLMETADATA_DROPPEDPINSENTRY']._serialized_start = 4038
+    _globals['_PINCONTROLMETADATA_DROPPEDPINSENTRY']._serialized_end = 4148
