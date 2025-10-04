@@ -1,0 +1,2 @@
+[console_scripts]
+greet = reem_samar_hanin_pkg.greet:main
