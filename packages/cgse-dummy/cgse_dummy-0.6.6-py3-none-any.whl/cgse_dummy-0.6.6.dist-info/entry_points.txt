@@ -1,0 +1,15 @@
+[console_scripts]
+dummy_cs = cgse_dummy.dummy_cs:app
+dummy_sim = cgse_dummy.dummy_sim:app
+
+[cgse.explore]
+explore = cgse_dummy.cgse_explore
+
+[cgse.service.example]
+dummy = cgse_dummy.cgse_services:dummy
+
+[cgse.settings]
+cgse-dummy = cgse_dummy:settings.yaml
+
+[cgse.version]
+cgse-dummy = egse.version:get_version_installed
