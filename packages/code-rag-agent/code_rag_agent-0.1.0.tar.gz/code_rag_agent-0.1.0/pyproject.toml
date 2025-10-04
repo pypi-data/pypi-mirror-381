@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "code-rag-agent"
+version = "0.1.0"
+description = "Production-ready RAG agent for intelligent code retrieval and question answering"
+authors = [{name = "Sandeep G", email = "sandeepg2890@gmail.com"}]
+license = {text = "Apache-2.0"}
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["rag", "code-analysis", "langchain", "vector-store", "ai", "llm", "retrieval"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    # Core
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "pydantic_settings>=2.11.0",
+
+    # LangChain ecosystem
+    "langchain>=0.1.0",
+    "langchain-community>=0.0.1",
+    "langchain-openai>=0.0.5",
+    "langchain-pinecone>=0.0.3",
+    "langchain-huggingface>=0.0.1",
+    "lark>=1.0.0",
+
+    # Vector stores
+    "pinecone-client>=3.0.0",
+
+    # Embeddings
+    "sentence-transformers>=2.0.0",
+    "einops>=0.6.0",
+
+    # CLI
+    "click>=8.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/sandeepgovi/code-rag-agent"
+Repository = "https://github.com/sandeepgovi/code-rag-agent"
+"Bug Tracker" = "https://github.com/sandeepgovi/code-rag-agent/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+code-rag-agent = "code_rag_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
