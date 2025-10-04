@@ -1,0 +1,4 @@
+[console_scripts]
+data-metrics = firecast_data.data_metrics:main
+fire = firecast.main:main
+portfolios = firecast_data.portfolios:main
