@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/pascal_bc_pkg/__init__.py
+src/pascal_bc_pkg/greet.py
+src/pascal_bc_pkg.egg-info/PKG-INFO
+src/pascal_bc_pkg.egg-info/SOURCES.txt
+src/pascal_bc_pkg.egg-info/dependency_links.txt
+src/pascal_bc_pkg.egg-info/entry_points.txt
+src/pascal_bc_pkg.egg-info/top_level.txt
+tests/test_greet.py
