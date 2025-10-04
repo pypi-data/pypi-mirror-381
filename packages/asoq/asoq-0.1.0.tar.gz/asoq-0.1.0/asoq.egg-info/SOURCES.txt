@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+asoq/__init__.py
+asoq/asoq.py
+asoq.egg-info/PKG-INFO
+asoq.egg-info/SOURCES.txt
+asoq.egg-info/dependency_links.txt
+asoq.egg-info/top_level.txt
