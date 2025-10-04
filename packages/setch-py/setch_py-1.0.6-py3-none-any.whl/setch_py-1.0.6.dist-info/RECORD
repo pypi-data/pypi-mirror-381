@@ -1,0 +1,11 @@
+setch/__init__.py,sha256=mqMuQB3aqJVPrHHqJMLjqiMKUiJjozc7EPLcX5DpKHg,22
+setch/__main__.py,sha256=ykY80s02RHRtbv8Vy_Y7H96RraadEtpRPk5QOmQk6YU,67
+setch/core.py,sha256=qmuSEe1iERNPpvoFnRGUlgu-ee_5WftTdAPaiubVoco,989
+setch/sys/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+setch/sys/check.py,sha256=1GBBAe85KTotvaSgsOEEdgazR02r98IKTePXYhxpmTo,901
+setch/sys/info.py,sha256=FJAvYPc0mveDjXmijQFoRmNlZYGkd6Bes8JW_PbXRIE,1783
+setch_py-1.0.6.dist-info/METADATA,sha256=LBohH1nkgcZfbwErxdd-LATCNMsZucfvAoOzIvXrVjc,1776
+setch_py-1.0.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+setch_py-1.0.6.dist-info/entry_points.txt,sha256=hjGy6XjCp9CAyztV_XXxy_JZPV-Bj1m09Zb-kDpodC0,46
+setch_py-1.0.6.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+setch_py-1.0.6.dist-info/RECORD,,
