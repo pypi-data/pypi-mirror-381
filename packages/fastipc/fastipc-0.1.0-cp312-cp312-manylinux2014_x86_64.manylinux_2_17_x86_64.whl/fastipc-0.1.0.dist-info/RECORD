@@ -1,0 +1,15 @@
+fastipc/__init__.py,sha256=j_HA2Al3SttoaG3ZabdzYneLlXDyi76EzedZZh-L9gs,667
+fastipc/guarded_shared_memory.py,sha256=ImlwjTQBxQfxJHF9GJjQgqmyZCE-Xkwn56j0WmSCrZU,9831
+fastipc/named_event.py,sha256=GeFAit273STnkvO58mpv52OXmYen5yMLtmNqHgg1BbI,1594
+fastipc/named_mutex.py,sha256=Ub9q1SIhD7-I3kCVJqxv7DXBuMdUnBKkMQQ6IbptsfQ,3297
+fastipc/named_semaphore.py,sha256=WTR8aQ5YU5nl-lQFMMwheUe3WwMGs-GdBV45F4oiOgM,3252
+fastipc/utils.py,sha256=ihwfojZmOUTCQJorz2OrbN1UfZJUAAYl5kMRNClJHMw,266
+fastipc/_primitives/__init__.py,sha256=WavPs0__4IrlnUN7fCu8peKX9NxoVTC5GMntQ8Q-724,258
+fastipc/_primitives/_primitives.c,sha256=V2qzPBgbeUCxxk4QklKlLdfgwo0x91Ktsr969inBNJQ,36333
+fastipc/_primitives/_primitives.cpython-312-x86_64-linux-gnu.so,sha256=AIHxiz5Ui8cCYd7VARyJp8naq0B7seVPgYDlh-yW3CU,35584
+fastipc/_primitives/_primitives.pyi,sha256=-RvyTzy4nRfwRQuOQvs4vv_mwiPjeN8weVwIt6L7eDI,8235
+fastipc-0.1.0.dist-info/METADATA,sha256=umYSi8ASujM2nLsW86BqGUtX78NyTUWcCdXVKU_wwwE,4082
+fastipc-0.1.0.dist-info/WHEEL,sha256=aSgG0F4rGPZtV0iTEIfy6dtHq6g67Lze3uLfk0vWn88,151
+fastipc-0.1.0.dist-info/top_level.txt,sha256=aqgOqcvCahuTeJRBr4-iTRxv7zAMMS7Ef-v9X3L41vc,8
+fastipc-0.1.0.dist-info/RECORD,,
+fastipc-0.1.0.dist-info/licenses/LICENSE,sha256=RBjcfNBlLxEByUk5GDNRvC3WhcP_-u3GKfdp6xsQi3U,1053
