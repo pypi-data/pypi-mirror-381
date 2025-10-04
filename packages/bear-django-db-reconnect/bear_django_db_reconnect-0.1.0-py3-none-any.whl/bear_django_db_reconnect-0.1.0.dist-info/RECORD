@@ -1,0 +1,8 @@
+db_reconnect/__init__.py,sha256=6mzGPT5dAyul9nIb4uGSaIhTc-zmi4_I0K9E0UXZAHw,92
+db_reconnect/core.py,sha256=6mK2Xd7TyRFmQ3UeQdAuOhYVdogIZvaKt_ZnvkMcoeU,735
+db_reconnect/decorators.py,sha256=rs13bYxSMH6LukBXln-GQTqWlKb-pO-mTp-0J4g6sHg,494
+db_reconnect/middleware.py,sha256=JM_u_RfAu9ckL6YXZzUJXhEHlUdtMj3sO8kGdAli19Q,518
+bear_django_db_reconnect-0.1.0.dist-info/METADATA,sha256=Lf3SnH05qPA9YyHeZjNo20o2Pc1YwlAN25Il6zyivIQ,1634
+bear_django_db_reconnect-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+bear_django_db_reconnect-0.1.0.dist-info/top_level.txt,sha256=eG5KCSOdzJ-YRL9YKCbqtuDk4-uXH2iXryua6ODnVgY,13
+bear_django_db_reconnect-0.1.0.dist-info/RECORD,,
