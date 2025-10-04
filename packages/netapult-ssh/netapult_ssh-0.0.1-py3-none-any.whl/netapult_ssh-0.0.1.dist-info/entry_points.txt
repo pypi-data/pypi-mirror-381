@@ -1,0 +1,2 @@
+[netapult.protocol]
+ssh = netapult_ssh:SSHChannel
