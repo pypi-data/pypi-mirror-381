@@ -1,0 +1,15 @@
+requests>=2.25.0
+
+[dev]
+pytest>=6.0
+pytest-cov
+black
+isort
+flake8
+mypy
+tox
+pre-commit
+
+[docs]
+sphinx
+sphinx-rtd-theme
