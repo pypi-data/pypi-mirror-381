@@ -1,0 +1,12 @@
+univorm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+univorm/db.py,sha256=3yhUmfwxQTIEEMRJFOockPeqAaZsptURxoOJBBkMABU,3121
+univorm/parser.py,sha256=YwTUsiKolsKrmY2zOzSF95isWtIFVbEj61yxAEDscx4,2817
+univorm/reader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+univorm/reader/nosql.py,sha256=xKpX6zyZFIgnMgXtaBxHhA_bDzd0no--olGW1JIiBf0,408
+univorm/reader/sql.py,sha256=TED8-APSETEPB2c0IO6TIl1FhBsPli1LZxA5r4y6jWw,603
+univorm/writer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+univorm/writer/nosql.py,sha256=Y-6d1ULKs-dLOBa6pp1fQyQDY_lJJP0y0Pz6Lrlbj9M,436
+univorm/writer/sql.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+univorm-0.4.0.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+univorm-0.4.0.dist-info/METADATA,sha256=PJhRY1NdcanuWDooam7D2rAIrj6_C8Gp3rbY1NCxLoY,20595
+univorm-0.4.0.dist-info/RECORD,,
