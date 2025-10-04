@@ -1,0 +1,15 @@
+name: pydap_docs
+channels:
+- conda-forge
+dependencies:
+- python=3.11
+- jupyter-book
+- jupyterlab
+- matplotlib
+- cartopy
+- xarray
+- dask
+- earthaccess
+- h5netcdf
+- pip:
+  - git+https://github.com/pydap/pydap.git
