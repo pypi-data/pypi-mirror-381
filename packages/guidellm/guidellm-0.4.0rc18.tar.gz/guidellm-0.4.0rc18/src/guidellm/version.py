@@ -1,0 +1,6 @@
+version = "0.4.0rc18"
+build_type = "candidate"
+build_iteration = "18"
+git_commit = "50b194ac4dd8ea2d3b5efeb771e416b6cbfce2a2"
+git_branch = "release/v0.3.1"
+git_last_tag = "v0.3.0"
