@@ -1,0 +1,7 @@
+setup.py
+qqqwww123/__init__.py
+qqqwww123/qqqwww123.py
+qqqwww123_x.egg-info/PKG-INFO
+qqqwww123_x.egg-info/SOURCES.txt
+qqqwww123_x.egg-info/dependency_links.txt
+qqqwww123_x.egg-info/top_level.txt
