@@ -1,0 +1,64 @@
+# CursorFlow PyPI Package Manifest
+# Controls exactly what gets included in the published package
+
+# INCLUDE: Essential files for users
+include README.md
+include LICENSE
+include pyproject.toml
+include setup.py
+
+# INCLUDE: Core package code (automatically included by setuptools)
+recursive-include cursorflow *.py
+
+# INCLUDE: Essential examples for users
+include examples/react_example.py
+include examples/opensas_example.py
+include examples/mockup_comparison_example.py
+include examples/comprehensive_screenshot_example.py
+
+# INCLUDE: Single comprehensive user manual
+include docs/USER_MANUAL.md
+
+# EXCLUDE: Development and internal documentation
+exclude docs/README.md
+exclude docs/development/*
+exclude docs/product/*
+exclude docs/api/*
+exclude docs/examples/*
+
+# EXCLUDE: Development files and directories
+exclude .gitignore
+exclude .github/*
+exclude tests/*
+exclude scripts/*
+exclude venv/*
+exclude dist/*
+exclude build/*
+exclude *.egg-info/*
+exclude .pytest_cache/*
+exclude __pycache__/*
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+
+# EXCLUDE: Configuration and rules (internal use)
+exclude config/*
+exclude rules/*
+exclude install_cursorflow_rules.py
+exclude PERSISTENT_SESSION_SUMMARY.md
+
+# EXCLUDE: Artifacts and temporary files
+exclude artifacts/*
+exclude .cursorflow/*
+exclude *.log
+exclude *.tmp
+
+# EXCLUDE: IDE and editor files
+exclude .vscode/*
+exclude .idea/*
+exclude *.swp
+exclude *.swo
+exclude *~
+
+# EXCLUDE: OS files
+exclude .DS_Store
+exclude Thumbs.db
