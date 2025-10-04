@@ -1,0 +1,17 @@
+[project]
+name = "market-abm"  # must be unique on PyPI!
+version = "0.0.1"
+description = "Market Simulation"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+  {name = "shazri_shahrir", email = "mdshazrishahrir@gmail.com"}
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/merbauinstitute/market_abm/"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
