@@ -1,0 +1,4 @@
+from scriptthing.shell.script_wrapper import Executable
+from scriptthing.templating.paths import get_script_by_name
+
+{{ binding_name }} = Executable(get_script_by_name(name="{{ name }}"))
