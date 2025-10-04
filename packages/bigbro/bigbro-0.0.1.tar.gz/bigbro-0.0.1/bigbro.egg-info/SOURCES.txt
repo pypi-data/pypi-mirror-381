@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+bigbro/__init__.py
+bigbro.egg-info/PKG-INFO
+bigbro.egg-info/SOURCES.txt
+bigbro.egg-info/dependency_links.txt
+bigbro.egg-info/top_level.txt
