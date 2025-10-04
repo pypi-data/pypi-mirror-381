@@ -1,0 +1,272 @@
+Metadata-Version: 2.4
+Name: RDP-MCP
+Version: 0.2.0
+Summary: MCP server for querying the RiboSeq.Org Data Portal - access ribosome profiling data through Claude and other LLMs
+Project-URL: Homepage, https://rdp.ucc.ie
+Project-URL: Repository, https://github.com/RiboSeqOrg/RiboSeqOrg-DataPortal
+Project-URL: Documentation, https://rdp.ucc.ie/about
+Author-email: "RiboSeq.Org" <riboseq@riboseq.org>
+License: MIT
+License-File: LICENSE
+Keywords: ai,bioinformatics,claude,genomics,llm,mcp,rdp,riboseq,ribosome-profiling
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.10
+Requires-Dist: httpx>=0.27.0
+Requires-Dist: mcp>=0.9.0
+Description-Content-Type: text/markdown
+
+# RDP-MCP
+
+An MCP (Model Context Protocol) server that provides AI assistants like Claude with direct access to query the [RiboSeq.Org Data Portal](https://rdp.ucc.ie).
+
+## What is this?
+
+This MCP server allows you to use Claude Desktop (or any MCP-compatible client) to search and explore ribosome profiling datasets through natural language. Instead of manually browsing the web portal, you can ask Claude questions like:
+
+- "Find all human liver samples treated with cycloheximide"
+- "Show me yeast ribosome profiling data from 2023"
+- "Get the BAM file links for samples in study PRJNA123456"
+
+## Installation
+
+### Prerequisites
+
+- Python 3.10 or higher
+- Claude Desktop (or another MCP-compatible client)
+
+### Install via uvx (Recommended)
+
+The easiest way to use this MCP server is with `uvx`, which comes with modern Python installations:
+
+```bash
+# Test that it works
+uvx --from /path/to/RiboSeqOrg-DataPortal/RDP-MCP-server RDP-MCP
+```
+
+### Install via pip
+
+Alternatively, install it in development mode:
+
+```bash
+cd RDP-MCP-server
+pip install -e .
+```
+
+## Configuration
+
+### Claude Desktop
+
+Add this to your Claude Desktop configuration file:
+
+**MacOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+**Windows**: `%APPDATA%/Claude/claude_desktop_config.json`
+
+#### Using uvx (recommended):
+
+```json
+{
+  "mcpServers": {
+    "riboseq": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "/path/to/RiboSeqOrg-DataPortal/RDP-MCP-server",
+        "RDP-MCP"
+      ]
+    }
+  }
+}
+```
+
+#### Using pip install:
+
+```json
+{
+  "mcpServers": {
+    "riboseq": {
+      "command": "RDP-MCP"
+    }
+  }
+}
+```
+
+After updating the configuration, restart Claude Desktop.
+
+## Available Tools
+
+The MCP server provides the following tools:
+
+### `count_samples` ⭐ NEW
+
+**Count samples without fetching data** - much more efficient than querying all results!
+
+Returns just the total count of samples matching your filters. Perfect for questions like:
+- "How many human liver samples are in the database?"
+- "How many samples use cycloheximide?"
+
+**Supports all the same filters as `query_samples`**
+
+### `query_samples`
+
+Search for ribosome profiling samples using metadata filters.
+
+**Features:**
+- Filter by any metadata field
+- Pagination support via `offset` parameter
+- Optional pagination metadata with `paginated=true`
+- No truncation issues - safely handle large result sets
+
+**Example parameters:**
+- `ScientificName`: Organism (e.g., "Homo sapiens", "Mus musculus")
+- `TISSUE`: Tissue type (e.g., "liver", "brain")
+- `CELL_LINE`: Cell line (e.g., "HEK293", "HeLa")
+- `INHIBITOR`: Translation inhibitor (e.g., "CHX", "harringtonine")
+- `LIBRARYTYPE`: Library type (e.g., "RPF", "RNA")
+- `CONDITION`: Experimental condition
+- `limit`: Maximum results (default: 100)
+- `offset`: Skip N results for pagination (default: 0)
+- `paginated`: Return metadata (total, has_more, etc.) - default: false
+
+### `get_sample_details`
+
+Get complete metadata for a specific sample by its Run accession (e.g., "SRR123456").
+
+### `get_file_links`
+
+Retrieve download URLs for all data files associated with a sample:
+- FASTA reads
+- BAM alignment files
+- BigWig coverage files (forward and reverse)
+- QC reports (FastQC, fastp, RiboMetric, adapter reports)
+
+### `search_by_organism`
+
+Search all samples from a specific organism, with optional additional filters.
+
+**Now supports pagination** via `offset` and `paginated` parameters.
+
+### `list_available_fields`
+
+Get a list of all queryable metadata fields.
+
+## Example Usage with Claude
+
+Once configured, you can ask Claude:
+
+> **"How many human liver samples are in the database?"**
+
+Claude will use `count_samples`:
+```json
+{
+  "ScientificName": "Homo sapiens",
+  "TISSUE": "liver"
+}
+```
+Returns: `{"count": 1234}`
+
+> **"Find all mouse brain samples with cycloheximide treatment"**
+
+Claude will use `query_samples`:
+```json
+{
+  "ScientificName": "Mus musculus",
+  "TISSUE": "brain",
+  "INHIBITOR": "CHX"
+}
+```
+
+> **"Show me the next 100 results"**
+
+Claude will use `query_samples` with pagination:
+```json
+{
+  "ScientificName": "Mus musculus",
+  "TISSUE": "brain",
+  "INHIBITOR": "CHX",
+  "offset": 100,
+  "limit": 100
+}
+```
+
+> **"Get the BigWig files for sample SRR8428520"**
+
+Claude will use `get_file_links`:
+```json
+{
+  "run_id": "SRR8428520"
+}
+```
+
+## Development
+
+To modify or extend the MCP server:
+
+1. Edit the source files in `src/riboseq_mcp/`
+2. The main server logic is in `server.py`
+3. API client wrapper is in `api_client.py`
+
+### Project Structure
+
+```
+RDP-MCP-server/
+├── pyproject.toml              # Package configuration
+├── README.md                   # This file
+└── src/
+    └── riboseq_mcp/
+        ├── __init__.py         # Package initialization
+        ├── server.py           # MCP server implementation
+        └── api_client.py       # RiboSeq API client
+```
+
+## Troubleshooting
+
+### MCP server not appearing in Claude
+
+1. Check that your `claude_desktop_config.json` is valid JSON
+2. Verify the path to the RDP-MCP-server directory is correct
+3. Restart Claude Desktop completely
+4. Check Claude Desktop logs for errors
+
+### API connection errors
+
+The server connects to `https://rdp.ucc.ie` by default. If the portal is down or unreachable, queries will fail. You can check the portal's status by visiting it in a browser.
+
+### Python version issues
+
+Ensure you're using Python 3.10 or higher:
+```bash
+python --version
+```
+
+## Contributing
+
+This MCP server is part of the RiboSeq.Org Data Portal project. To contribute:
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## License
+
+[Same as RiboSeq.Org Data Portal]
+
+## Links
+
+- [RiboSeq.Org Data Portal](https://rdp.ucc.ie)
+- [Model Context Protocol Documentation](https://modelcontextprotocol.io)
+- [Claude Desktop](https://claude.ai/download)
+
+## Support
+
+For issues or questions:
+- Open an issue on the [GitHub repository](https://github.com/RiboSeqOrg/RiboSeqOrg-DataPortal/issues)
+- Contact the RiboSeq.Org team through the portal
