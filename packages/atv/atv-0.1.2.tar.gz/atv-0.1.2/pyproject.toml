@@ -1,0 +1,45 @@
+[project]
+name = "atv"
+description = "atv(async task viewer): a TUI tool for experimenting with Python 3.14 asyncio ps/pstree features"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "textual>=0.57,<0.61",
+    "psutil>=5.9",
+]
+dynamic = ["version"]
+
+[project.urls]
+Repository = "https://github.com/jrfk/atv"
+
+[project.scripts]
+atv = "atv.cli:main"
+
+[tool.uv]
+package = true
+
+[build-system]
+requires = [
+    "hatchling>=1.25",
+    "hatch-vcs>=0.4",
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+tag-pattern = "v(?P<version>.+)"
+fallback-version = "0.0.0"
+raw-options = { local_scheme = "no-local-version" }
+
+[tool.hatch.build.hooks.vcs]
+version-file = "atv/__about__.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "dist",
+]
+
+[tool.hatch.build.targets.wheel]
+exclude = [
+    "dist",
+]
