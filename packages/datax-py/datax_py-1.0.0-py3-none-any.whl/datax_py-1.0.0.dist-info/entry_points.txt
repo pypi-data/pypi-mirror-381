@@ -1,0 +1,5 @@
+[console_scripts]
+datax = datax.cli:main
+
+[gui_scripts]
+datax-gui = datax.gui:main
