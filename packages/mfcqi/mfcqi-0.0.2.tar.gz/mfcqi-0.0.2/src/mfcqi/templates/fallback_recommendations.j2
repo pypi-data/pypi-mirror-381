@@ -1,0 +1,126 @@
+{# Fallback template when LLM is unavailable - generates recommendations from metrics alone #}
+[
+{% set recommendations = [] %}
+
+{# Security is always first priority #}
+{% if metrics.security is defined and metrics.security < 0.3 %}
+  {
+    "priority": {{ recommendations | length + 1 }},
+    "severity": "critical",
+    "title": "Critical Security Vulnerabilities Detected",
+    "description": "Security score of {{ metrics.security | round(3) }} indicates exploitable vulnerabilities in your codebase.",
+    "evidence": "Security metric below 0.3 threshold",
+    "solution": "1. Run 'bandit -r {{ codebase_path | default('src') }} -f json -o security_report.json' to identify all vulnerabilities\n2. Fix all HIGH and CRITICAL issues immediately\n3. Review MEDIUM issues for potential exploits\n4. Add input validation for all user inputs\n5. Remove any hardcoded secrets or passwords",
+    "commands": [
+      "bandit -r {{ codebase_path | default('src') }} -ll",
+      "grep -r 'password\\s*=' {{ codebase_path | default('src') }}",
+      "pip install safety && safety check"
+    ],
+    "files_affected": ["Run bandit to identify specific files"],
+    "estimated_time": "1-2 days",
+    "mfcqi_impact": "+0.15 to +0.30 improvement"
+  }{{ "," if not loop.last }}
+  {% set _ = recommendations.append(1) %}
+{% endif %}
+
+{# Complexity issues #}
+{% if metrics.halstead_volume is defined and metrics.halstead_volume < 0.5 %}
+  {{ "," if recommendations | length > 0 }}{
+    "priority": {{ recommendations | length + 1 }},
+    "severity": "high",
+    "title": "Excessive Code Complexity (Halstead Volume)",
+    "description": "Halstead Volume score of {{ metrics.halstead_volume | round(3) }} indicates overly complex code with too many unique operators and operands.",
+    "evidence": "Halstead Volume metric below 0.5 threshold",
+    "solution": "1. Identify functions longer than 50 lines\n2. Extract complex conditional logic into separate functions\n3. Replace nested conditionals with guard clauses\n4. Use consistent naming patterns to reduce unique operands\n5. Consider using design patterns to simplify complex logic",
+    "commands": [
+      "radon cc {{ codebase_path | default('src') }} -s -nc",
+      "radon hal {{ codebase_path | default('src') }} -s",
+      "pylint {{ codebase_path | default('src') }} --disable=all --enable=R0915,R0914"
+    ],
+    "files_affected": ["Check radon output for specific files"],
+    "estimated_time": "2-3 days",
+    "mfcqi_impact": "+0.10 to +0.15 improvement"
+  }
+  {% set _ = recommendations.append(1) %}
+{% endif %}
+
+{% if metrics.cyclomatic_complexity is defined and metrics.cyclomatic_complexity < 0.5 %}
+  {{ "," if recommendations | length > 0 }}{
+    "priority": {{ recommendations | length + 1 }},
+    "severity": "high",
+    "title": "High Cyclomatic Complexity",
+    "description": "Cyclomatic Complexity score of {{ metrics.cyclomatic_complexity | round(3) }} indicates too many decision paths in your code.",
+    "evidence": "Cyclomatic Complexity metric below 0.5 threshold",
+    "solution": "1. Split functions with complexity > 10\n2. Replace switch/if-elif chains with polymorphism\n3. Extract validation logic into separate functions\n4. Use early returns to reduce nesting\n5. Consider state pattern for complex state machines",
+    "commands": [
+      "radon cc {{ codebase_path | default('src') }} -s -n C",
+      "mccabe --min 10 {{ codebase_path | default('src') }}"
+    ],
+    "files_affected": ["Check radon output for specific functions"],
+    "estimated_time": "1-2 days",
+    "mfcqi_impact": "+0.08 to +0.12 improvement"
+  }
+  {% set _ = recommendations.append(1) %}
+{% endif %}
+
+{# Documentation issues #}
+{% if metrics.documentation_coverage is defined and metrics.documentation_coverage < 0.4 %}
+  {{ "," if recommendations | length > 0 }}{
+    "priority": {{ recommendations | length + 1 }},
+    "severity": "medium",
+    "title": "Poor Documentation Coverage",
+    "description": "Documentation coverage of {{ metrics.documentation_coverage | round(3) }} makes the codebase difficult to maintain and understand.",
+    "evidence": "Documentation coverage below 0.4 threshold",
+    "solution": "1. Add docstrings to all public functions and classes\n2. Document complex algorithms and business logic\n3. Include parameter types and return value descriptions\n4. Add module-level docstrings explaining purpose\n5. Use type hints for better IDE support",
+    "commands": [
+      "pydocstyle {{ codebase_path | default('src') }}",
+      "interrogate {{ codebase_path | default('src') }} -v",
+      "mypy {{ codebase_path | default('src') }} --ignore-missing-imports"
+    ],
+    "files_affected": ["All files with public APIs"],
+    "estimated_time": "1-2 days",
+    "mfcqi_impact": "+0.05 to +0.10 improvement"
+  }
+  {% set _ = recommendations.append(1) %}
+{% endif %}
+
+{# Code duplication #}
+{% if metrics.code_duplication is defined and metrics.code_duplication < 0.7 %}
+  {{ "," if recommendations | length > 0 }}{
+    "priority": {{ recommendations | length + 1 }},
+    "severity": "low",
+    "title": "High Code Duplication",
+    "description": "Code duplication score of {{ metrics.code_duplication | round(3) }} indicates significant copy-paste code.",
+    "evidence": "Duplication metric below 0.7 threshold",
+    "solution": "1. Run duplication detection to find duplicates\n2. Extract common code into utility functions\n3. Use inheritance or composition for similar classes\n4. Create shared libraries for cross-module code\n5. Consider using mixins or protocols",
+    "commands": [
+      "copydetect -t {{ codebase_path | default('src') }}",
+      "pylint {{ codebase_path | default('src') }} --disable=all --enable=R0801"
+    ],
+    "files_affected": ["Check copydetect output for duplicate blocks"],
+    "estimated_time": "1-2 days",
+    "mfcqi_impact": "+0.03 to +0.05 improvement"
+  }
+  {% set _ = recommendations.append(1) %}
+{% endif %}
+
+{# If no specific issues, provide general guidance #}
+{% if recommendations | length == 0 %}
+  {
+    "priority": 1,
+    "severity": "info",
+    "title": "General Code Quality Improvements",
+    "description": "Your MFCQI score of {{ mfcqi_score | round(3) }} indicates room for improvement across multiple areas.",
+    "evidence": "Overall MFCQI score below optimal range",
+    "solution": "1. Review metrics scoring below 0.7\n2. Run comprehensive analysis tools\n3. Set up continuous quality monitoring\n4. Establish coding standards\n5. Implement code review processes",
+    "commands": [
+      "mfcqi analyze {{ codebase_path | default('.') }} --verbose",
+      "pre-commit install",
+      "tox -e quality"
+    ],
+    "files_affected": ["Entire codebase"],
+    "estimated_time": "Ongoing",
+    "mfcqi_impact": "Gradual improvement over time"
+  }
+{% endif %}
+]

@@ -1,0 +1,282 @@
+"""
+Integration tests for LLM providers with API key detection.
+Tests are skipped if API keys are not present.
+Following strict TDD - implementing ONLY what's needed to pass tests.
+"""
+
+import os
+from unittest.mock import patch
+
+import pytest
+import requests
+
+from mfcqi.analysis.config import AnalysisConfig
+from mfcqi.analysis.engine import LLMAnalysisEngine
+from mfcqi.cli.utils.config_manager import ConfigManager
+from mfcqi.cli.utils.llm_handler import LLMHandler
+
+
+# Helper functions for API key detection
+def has_anthropic_key():
+    """Check if Anthropic API key is available."""
+    key = os.getenv("ANTHROPIC_API_KEY")
+    return key is not None and key.strip() != ""
+
+
+def has_openai_key():
+    """Check if OpenAI API key is available."""
+    key = os.getenv("OPENAI_API_KEY")
+    return key is not None and key.strip() != ""
+
+
+def has_ollama_available():
+    """Check if Ollama server is available."""
+    try:
+        response = requests.get("http://localhost:11434/api/tags", timeout=2)
+        return response.status_code == 200
+    except Exception:
+        return False
+
+
+class TestAnthropicIntegration:
+    """Integration tests for Anthropic Claude."""
+
+    @pytest.mark.skipif(not has_anthropic_key(), reason="ANTHROPIC_API_KEY not available")
+    def test_anthropic_api_connection(self):
+        """Test Anthropic API connection with real key."""
+        config = AnalysisConfig(model="claude-3-haiku-20240307")
+        engine = LLMAnalysisEngine(config=config)
+
+        # Test with minimal metrics
+        test_metrics = {
+            "mfcqi_score": 0.75,
+            "cyclomatic_complexity": 0.8,
+            "test_coverage": 0.6,
+            "documentation_coverage": 0.9,
+        }
+
+        try:
+            result = engine.analyze_with_cqi_data("/test/path", test_metrics)
+            assert result is not None
+            assert hasattr(result, "mfcqi_score")
+            assert hasattr(result, "recommendations")
+            assert result.model_used.startswith("claude")
+        except Exception as e:
+            pytest.fail(f"Anthropic API test failed: {e}")
+
+    @pytest.mark.skipif(not has_anthropic_key(), reason="ANTHROPIC_API_KEY not available")
+    def test_anthropic_model_selection(self):
+        """Test Anthropic model selection."""
+        config_manager = ConfigManager()
+        llm_handler = LLMHandler(config_manager)
+
+        # Test model selection
+        model = llm_handler.select_model("claude-3-5-sonnet-20241022", "anthropic", silent=True)
+        assert model == "claude-3-5-sonnet-20241022"
+
+    def test_anthropic_without_key(self):
+        """Test Anthropic handling without API key."""
+        # Mock KEYRING_AVAILABLE to skip keyring entirely
+        with patch.dict(os.environ, {}, clear=True):
+            with patch("mfcqi.cli.utils.config_manager.KEYRING_AVAILABLE", False):
+                config_manager = ConfigManager()
+                llm_handler = LLMHandler(config_manager)
+                model = llm_handler.select_model(
+                    "claude-3-5-sonnet-20241022", "anthropic", silent=True
+                )
+                assert model is None
+
+
+class TestOpenAIIntegration:
+    """Integration tests for OpenAI GPT."""
+
+    @pytest.mark.skipif(not has_openai_key(), reason="OPENAI_API_KEY not available")
+    def test_openai_api_connection(self):
+        """Test OpenAI API connection with real key."""
+        config = AnalysisConfig(model="gpt-4o-mini")
+        engine = LLMAnalysisEngine(config=config)
+
+        # Test with minimal metrics
+        test_metrics = {
+            "mfcqi_score": 0.75,
+            "cyclomatic_complexity": 0.8,
+            "test_coverage": 0.6,
+            "documentation_coverage": 0.9,
+        }
+
+        try:
+            result = engine.analyze_with_cqi_data("/test/path", test_metrics)
+            assert result is not None
+            assert hasattr(result, "mfcqi_score")
+            assert hasattr(result, "recommendations")
+            assert result.model_used.startswith("gpt")
+        except Exception as e:
+            pytest.fail(f"OpenAI API test failed: {e}")
+
+    @pytest.mark.skipif(not has_openai_key(), reason="OPENAI_API_KEY not available")
+    def test_openai_model_selection(self):
+        """Test OpenAI model selection."""
+        config_manager = ConfigManager()
+        llm_handler = LLMHandler(config_manager)
+
+        model = llm_handler.select_model("gpt-4o", "openai", silent=True)
+        assert model == "gpt-4o"
+
+    def test_openai_without_key(self):
+        """Test OpenAI handling without API key."""
+        # Mock KEYRING_AVAILABLE to skip keyring entirely
+        with patch.dict(os.environ, {}, clear=True):
+            with patch("mfcqi.cli.utils.config_manager.KEYRING_AVAILABLE", False):
+                config_manager = ConfigManager()
+                llm_handler = LLMHandler(config_manager)
+                model = llm_handler.select_model("gpt-4o", "openai", silent=True)
+                assert model is None
+
+
+class TestConfigManager:
+    """Test configuration manager with different setups."""
+
+    def test_config_manager_initialization(self):
+        """Test config manager creates default config."""
+        config_manager = ConfigManager()
+        config = config_manager.get_config()
+
+        assert "preferences" in config
+        assert "llm" in config
+        assert "providers" in config
+
+    def test_api_key_storage_without_keyring(self):
+        """Test API key storage when keyring not available."""
+        with patch("mfcqi.cli.utils.config_manager.KEYRING_AVAILABLE", False):
+            config_manager = ConfigManager()
+
+            with pytest.raises(RuntimeError, match="Keyring not available"):
+                config_manager.set_api_key("test_provider", "test_key")
+
+    def test_api_key_retrieval_from_env(self):
+        """Test API key retrieval from environment variables."""
+        with patch.dict(os.environ, {"TEST_PROVIDER_API_KEY": "test_key_value"}):
+            config_manager = ConfigManager()
+            key = config_manager.get_api_key("test_provider")
+            assert key == "test_key_value"
+
+    def test_has_api_key_detection(self):
+        """Test API key detection."""
+        # Test with environment variable
+        with patch.dict(os.environ, {"ANTHROPIC_API_KEY": "test_key"}):
+            with patch("mfcqi.cli.utils.config_manager.KEYRING_AVAILABLE", False):
+                config_manager = ConfigManager()
+                assert config_manager.has_api_key("anthropic") is True
+
+        # Test without key
+        with patch.dict(os.environ, {}, clear=True):
+            with patch("mfcqi.cli.utils.config_manager.KEYRING_AVAILABLE", False):
+                config_manager = ConfigManager()
+                assert config_manager.has_api_key("nonexistent") is False
+
+
+class TestLLMHandler:
+    """Test LLM handler with mocked responses."""
+
+    def setup_method(self):
+        """Set up test environment."""
+        # Mock keyring to avoid slow macOS keychain access during parallel tests
+        self.keyring_patcher = patch("mfcqi.cli.utils.config_manager.KEYRING_AVAILABLE", False)
+        self.keyring_patcher.start()
+        self.config_manager = ConfigManager()
+        self.llm_handler = LLMHandler(self.config_manager)
+
+    def teardown_method(self):
+        """Clean up test environment."""
+        self.keyring_patcher.stop()
+
+    def test_model_provider_detection(self):
+        """Test model provider detection."""
+        assert self.llm_handler._detect_provider_from_model("claude-3-5-sonnet") == "anthropic"
+        assert self.llm_handler._detect_provider_from_model("gpt-4o") == "openai"
+        assert self.llm_handler._detect_provider_from_model("unknown-model") is None
+
+    def test_cost_estimation(self):
+        """Test cost estimation for different models."""
+        estimates = {
+            "claude-3-5-sonnet": "0.002",
+            "claude-3-haiku": "0.001",
+            "gpt-4o": "0.005",
+            "gpt-4o-mini": "0.002",
+        }
+
+        for model, expected_cost in estimates.items():
+            cost = self.llm_handler._estimate_cost(model)
+            assert cost == expected_cost
+
+    def test_auto_model_selection_priority(self):
+        """Test automatic model selection priority."""
+        # Mock Ollama not available
+        with patch.object(self.llm_handler, "check_ollama_connection") as mock_ollama:
+            mock_ollama.return_value = {"available": False, "models": []}
+
+            # Mock no API keys
+            with patch.object(self.config_manager, "has_api_key", return_value=False):
+                model = self.llm_handler._auto_select_model(silent=True)
+                assert model is None
+
+
+class TestConditionalExecution:
+    """Test that tests are properly skipped when API keys are not available."""
+
+    def test_anthropic_skip_condition(self):
+        """Verify that Anthropic tests are skipped without key."""
+        assert has_anthropic_key() == bool(os.getenv("ANTHROPIC_API_KEY"))
+
+    def test_openai_skip_condition(self):
+        """Verify that OpenAI tests are skipped without key."""
+        assert has_openai_key() == bool(os.getenv("OPENAI_API_KEY"))
+
+    def test_environment_key_detection(self):
+        """Test environment variable key detection."""
+        # Test with mock environment
+        test_env = {"ANTHROPIC_API_KEY": "sk-ant-test", "OPENAI_API_KEY": "sk-test"}
+
+        with patch.dict(os.environ, test_env):
+            assert has_anthropic_key() is True
+            assert has_openai_key() is True
+
+        # Test without keys
+        with patch.dict(os.environ, {}, clear=True):
+            assert has_anthropic_key() is False
+            assert has_openai_key() is False
+
+
+# Integration test that runs regardless of API key availability
+class TestFallbackBehavior:
+    """Test fallback behavior when LLM providers are not available."""
+
+    def test_analysis_without_any_llm(self):
+        """Test that analysis works with metrics-only mode."""
+        # Mock KEYRING_AVAILABLE to skip keyring entirely
+        with patch.dict(os.environ, {}, clear=True):
+            with patch("mfcqi.cli.utils.config_manager.KEYRING_AVAILABLE", False):
+                config_manager = ConfigManager()
+                llm_handler = LLMHandler(config_manager, "http://localhost:99999")  # Invalid Ollama
+                model = llm_handler.select_model(None, None, silent=True)
+                assert model is None
+
+    def test_graceful_degradation(self):
+        """Test graceful degradation when LLM services fail."""
+        config_manager = ConfigManager()
+        llm_handler = LLMHandler(config_manager)
+
+        # Test with invalid model
+        result = llm_handler.analyze_with_llm("/test/path", {"mfcqi_score": 0.5}, "invalid:model")
+        assert result is None  # Should return None, not raise exception
+
+    def test_config_status_without_providers(self):
+        """Test config status command works without any providers."""
+        # Mock KEYRING_AVAILABLE to skip keyring entirely
+        with patch.dict(os.environ, {}, clear=True):
+            with patch("mfcqi.cli.utils.config_manager.KEYRING_AVAILABLE", False):
+                config_manager = ConfigManager()
+                # Should not raise exceptions
+                assert config_manager.has_api_key("anthropic") is False
+                assert config_manager.has_api_key("openai") is False
+                assert config_manager.get_config() is not None
