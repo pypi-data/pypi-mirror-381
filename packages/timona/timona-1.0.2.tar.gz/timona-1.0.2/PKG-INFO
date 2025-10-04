@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: timona
+Version: 1.0.2
+Summary: Tool to automate Helm deployments
+License-File: LICENSE
+Author: mihaiush
+Author-email: mihaiush@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Dist: deepmerge
+Requires-Dist: jinja2
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Project-URL: Homepage, https://github.com/mihaiush/timona
+Description-Content-Type: text/markdown
+
+# About timona
+A command line tool to automate Helm deployments.
+
+In Romanian language "timona" `/tiˈmona/` is the ship's wheel.
+
+# What can it do ?
+Starting from an yaml configuration file placed in the root of a helm chart you can:
+* describe helm releases using a templating language and create an environment for each release which will be used to generate, with the same templating engine, the helm value file,
+* test your deployment independent from the kubernetes cluster (_helm template_) or by connecting to the cluster (_dry-run helm install_),
+* deploy, delete, get status of releases,
+* view differences between config and deployed versions (_helm diff_).
+
+# Help
+For usage see https://github.com/mihaiush/timona/wiki .
+
