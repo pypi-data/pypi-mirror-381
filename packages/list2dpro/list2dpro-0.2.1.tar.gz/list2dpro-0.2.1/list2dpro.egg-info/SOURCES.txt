@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+list2dpro/__init__.py
+list2dpro/data_operations.py
+list2dpro/math_operations.py
+list2dpro.egg-info/PKG-INFO
+list2dpro.egg-info/SOURCES.txt
+list2dpro.egg-info/dependency_links.txt
+list2dpro.egg-info/top_level.txt
+tests/__init__.py
+tests/test_data_operations.py
+tests/test_math_operations.py

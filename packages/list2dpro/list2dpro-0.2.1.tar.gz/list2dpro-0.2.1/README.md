@@ -1,0 +1,248 @@
+# List2DPro
+
+List2DPro是一个强大的Python 2D列表操作库，专为游戏开发和数据处理提供便捷的矩阵操作工具。
+
+## 功能特性
+
+### List2DEdit类 - 基础矩阵编辑功能
+- 矩阵创建与初始化
+- 元素值和类型的统一设置
+- 元素交换和位置操作
+- 行和列的增删改查
+- 矩阵复制、旋转和清空
+
+### List2DGame类 - 游戏开发专用功能
+- 矩形碰撞检测
+- 点矩形检测
+- BFS路径查找
+- 视线检查算法
+- 坐标转换（世界坐标与网格坐标）
+- 随机填充和区域填充
+- 邻域单元格获取
+- 矩阵比较和碰撞检测功能
+
+### List2DMath类 - 数学运算功能
+- 矩阵加法、乘法、转置运算
+- 标量乘法和Hadamard积
+- 矩阵行列式计算
+- 矩阵统计（求和、平均值、最大值、最小值）
+- 函数应用和矩阵归一化
+- 矩阵拼接和子矩阵提取
+- 矩阵变形和随机打乱
+
+### List2DData类 - 数据操作功能
+- 数据筛选（按行、列、元素筛选）
+- 数据排序和分组操作
+- 数据去重和映射转换
+- 矩阵扁平化和重塑
+- 数据查找和替换功能
+- 数据透视表和缺失值处理
+- 数据类型标准化和随机采样
+
+## 安装
+
+### 从源码安装
+
+```bash
+# 直接获取源码文件夹
+cd list2dpro
+
+# 安装库
+pip install .
+
+# 开发模式安装（用于开发者）
+pip install -e .
+```
+
+## 快速开始
+
+### 基本使用示例
+
+```python
+from list2dpro import get_list_2d_edit, get_list_2d_game
+
+# 获取List2DEdit实例
+list_editor = get_list_2d_edit()
+
+# 创建一个5x5的矩阵，初始值为0，类型为整数
+matrix = list_editor.create_matrix(5, 5, 0, "int")
+
+# 设置矩阵中(2,2)位置的元素值为99
+list_editor.set_element(matrix, 2, 2, 99)
+
+# 获取List2DGame实例
+game = get_list_2d_game()
+
+# 检测两个矩形是否碰撞
+rect1 = [0, 0, 2, 2]
+rect2 = [1, 1, 2, 2]
+collision = game.check_rect_collision(rect1, rect2)
+print(f"矩形碰撞: {collision}")
+
+# 查找路径
+grid = [
+    [0, 0, 0, 0, 0],
+    [0, 1, 1, 1, 0],
+    [0, 0, 0, 0, 0],
+]
+start = (0, 0)
+end = (2, 4)
+path = game.find_path(grid, start, end, 1)
+print(f"路径: {path}")
+
+# 获取List2DMath实例
+math_ops = get_list_2d_math()
+
+# 矩阵加法运算
+matrix1 = [[1, 2], [3, 4]]
+matrix2 = [[5, 6], [7, 8]]
+result = math_ops.matrix_add(matrix1, matrix2)
+print(f"矩阵加法结果: {result}")
+
+# 获取List2DData实例
+data_ops = get_list_2d_data()
+
+# 数据筛选操作
+data = [['Alice', 25], ['Bob', 30], ['Charlie', 35]]
+filtered = data_ops.filter_rows(data, lambda row: row[1] > 28)
+print(f"数据筛选结果: {filtered}")
+```
+
+## API参考
+
+### List2DEdit类
+
+#### `create_matrix(height, width, default_value, element_type)`
+创建一个指定高度和宽度的矩阵，用默认值填充。
+- `height`: 矩阵高度
+- `width`: 矩阵宽度
+- `default_value`: 默认值
+- `element_type`: 元素类型
+
+#### `set_all_values(matrix, value, value_type)`
+设置矩阵中所有元素的值。
+- `matrix`: 目标矩阵
+- `value`: 新值
+- `value_type`: 值的类型
+
+#### `swap_elements(matrix, x1, y1, x2, y2)`
+交换矩阵中两个元素的位置。
+- `matrix`: 目标矩阵
+- `x1, y1`: 第一个元素的坐标
+- `x2, y2`: 第二个元素的坐标
+
+#### 更多方法...
+- `set_element(matrix, x, y, value=None, element_type=None)`
+
+### List2DMath类
+
+#### `matrix_add(matrix1, matrix2)`
+执行两个矩阵的加法运算。
+- `matrix1`: 第一个矩阵
+- `matrix2`: 第二个矩阵
+- 返回：相加后的矩阵
+
+#### `matrix_multiply(matrix1, matrix2)`
+执行两个矩阵的乘法运算。
+- `matrix1`: 第一个矩阵
+- `matrix2`: 第二个矩阵
+- 返回：相乘后的矩阵
+
+#### `matrix_transpose(matrix)`
+转置矩阵（行列互换）。
+- `matrix`: 输入矩阵
+- 返回：转置后的矩阵
+
+#### `matrix_determinant(matrix)`
+计算方阵的行列式。
+- `matrix`: 输入方阵
+- 返回：行列式值
+
+#### 更多方法...
+- `scalar_multiply(matrix, scalar)`
+- `matrix_sum(matrix)`
+- `matrix_mean(matrix)`
+- `matrix_normalize(matrix, method='minmax')`
+- `hadamard_product(matrix1, matrix2)`
+
+### List2DData类
+
+#### `filter_rows(matrix, condition)`
+根据条件筛选矩阵的行。
+- `matrix`: 输入矩阵
+- `condition`: 筛选条件函数
+- 返回：筛选后的矩阵
+
+#### `filter_columns(matrix, condition)`
+根据条件筛选矩阵的列。
+- `matrix`: 输入矩阵
+- `condition`: 筛选条件函数
+- 返回：筛选后的矩阵
+
+#### `sort_rows(matrix, key=None, reverse=False)`
+对矩阵的行进行排序。
+- `matrix`: 输入矩阵
+- `key`: 排序键函数
+- `reverse`: 是否降序排列
+- 返回：排序后的矩阵
+
+#### `group_by_column(matrix, column_index)`
+按指定列的值对矩阵进行分组。
+- `matrix`: 输入矩阵
+- `column_index`: 分组依据的列索引
+- 返回：分组后的字典
+
+#### 更多方法...
+- `remove_duplicates(matrix)`
+- `map_rows(matrix, func)`
+- `flatten_matrix(matrix)`
+- `reshape_matrix(matrix, new_shape)`
+- `find_all_matches(matrix, pattern)`
+- `delete_row(matrix, row_index)`
+- `swap_rows(matrix, row_index1, row_index2)`
+- `get_element(matrix, x, y)`
+- `get_row(matrix, row_index)`
+- `get_rows_by_condition(matrix, condition)`
+- `get_width(matrix)`
+- `get_height(matrix)`
+- `clear_matrix(matrix)`
+- `copy_matrix(matrix)`
+- `rotate_matrix(matrix, direction=1, times=1)`
+- `insert_row(matrix, row_index, row_values=None)`
+- `insert_column(matrix, col_index, col_values=None)`
+
+### List2DGame类
+
+#### `check_rect_collision(rect1, rect2)`
+检测两个矩形是否碰撞。
+- `rect1, rect2`: 矩形，格式为[x, y, width, height]
+
+#### `find_path(grid, start, end, obstacle_value)`
+使用BFS算法查找从起点到终点的路径。
+- `grid`: 网格地图，0表示可通行，1表示障碍物
+- `start`: 起点坐标(x, y)
+- `end`: 终点坐标(x, y)
+- `obstacle_value`: 障碍物值
+
+#### `has_line_of_sight(grid, start, end, obstacle_value)`
+检查从起点到终点是否有视线。
+- `grid`: 网格地图
+- `start`: 起点坐标
+- `end`: 终点坐标
+- `obstacle_value`: 障碍物值
+
+#### 更多方法...
+- `check_point_in_rect(point, rect)`
+- `world_to_grid(world_pos, cell_size)`
+- `grid_to_world(grid_pos, cell_size)`
+- `random_fill(grid, probability, filled_value, empty_value)`
+- `fill_area(grid, start_pos, fill_value)`
+- `get_neighbors(grid, pos, radius=1, include_diagonals=True)`
+- `check_matrices_same_value(matrices, pos)`
+- `check_matrices_same_type(matrices, pos)`
+- `check_matrices_value_overlap(matrix1, matrix2, target_value)`
+- `check_matrices_collision_values(matrices)`
+
+## 许可证
+
+本项目使用MIT许可证。详情请参阅LICENSE文件。
