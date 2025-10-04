@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+v0.20251003.0
+-------------
+
+* Add ansible play execution tracking to central log file (#1733)
