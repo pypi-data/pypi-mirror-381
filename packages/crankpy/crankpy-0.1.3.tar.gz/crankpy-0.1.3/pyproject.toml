@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crankpy"
+version = "0.1.3"
+description = "Python Frontend Framework with Magic Syntax, Dual-Runtime Support (Pyodide/MicroPython), Powered by Crank.js"
+readme = "README.md"
+license = "MIT"
+authors = [
+    {name = "Brian Kim", email = "briankimpossible@gmail.com"},
+]
+maintainers = [
+    {name = "Brian Kim", email = "briankimpossible@gmail.com"},
+]
+keywords = ["crank", "components", "pyscript", "pyodide", "micropython", "generators", "ui", "hyperscript", "jsx", "browser"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Environment :: Web Environment",
+    "Framework :: AsyncIO",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "pyscript>=0.2.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21.0",
+    "playwright>=1.40.0",
+    "build>=0.10.0",
+    "twine>=4.0.0",
+    "pytest-playwright>=0.5.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/bikeshaving/crankpy"
+Repository = "https://github.com/bikeshaving/crankpy"
+Documentation = "https://github.com/bikeshaving/crankpy#readme"
+"Bug Tracker" = "https://github.com/bikeshaving/crankpy/issues"
+"JavaScript Core" = "https://crank.js.org"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["crank*"]
+
+[tool.setuptools.package-data]
+crank = ["py.typed"]
