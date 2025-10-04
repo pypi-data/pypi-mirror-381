@@ -1,0 +1,17 @@
+html4vision/__init__.py,sha256=Ol_s1JPahatQJRKSMSL8TYGhFohxGXMigdZaBX9IcBA,423
+html4vision/_version.py,sha256=pW85gxuYcl_hggT02LFtxMoOoqtl9sfyyYWbrfgVtjo,738
+html4vision/common.py,sha256=Ck9RrySdSbNZ5wc-c8_QcgzyFwvaaldBPXG9szBVofY,4277
+html4vision/dragColumns.js,sha256=MBoYL1tnOU2ia3YLp3QSeXEM_sm_mCjhQxDBCktJ2ac,6216
+html4vision/limitImgLoad.js,sha256=MEtE8P-wXk9YQuIWDFMlzdbvkZJTlhUE7FkI3nTcsvc,2767
+html4vision/matchCol.js,sha256=Lq25HfF3Gx2jM2m8QvQFP1srZ9AxFbEfgEcoqqRib2s,1629
+html4vision/overlayToggle.js,sha256=EANONS9CMsqht_nuknIdTPoXmnoVe9fT9i0qscvcmjk,482
+html4vision/scaleImg.js,sha256=rKPC_D8_4XCRk6wHk7kCXe6O88281L9j40ehQfF5LtQ,502
+html4vision/server.py,sha256=6s_6CZSCyCSCwZcs-FNbqk7q93jERLDQGSl-X1SnMdA,432
+html4vision/table.py,sha256=74BESQj_I5Rh6PXvFviKYtKFzYH5slBzsnDs91MpG8I,17150
+html4vision/thumbs.py,sha256=n0aOq4PgqMtvkJVDaTrxeizBtIeLOEbutozoJt3X1fs,1905
+html4vision/tile.py,sha256=EVtvNw6Ey1bQlY7DsanTa4os4tDsto9iJF-6HdgMuhA,4867
+html4vision-0.6.1.dist-info/licenses/LICENSE.txt,sha256=kbib9UkMA-6fajZb1F0-pLzkcZXxG6IpU2tNHxDxJZA,1077
+html4vision-0.6.1.dist-info/METADATA,sha256=6a6wRexmv-vZ_TTL45jDeFPn_Em2mAdNDVEcmhY1kNw,16934
+html4vision-0.6.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+html4vision-0.6.1.dist-info/top_level.txt,sha256=iBKycBjI3Tr8dQuIkw3ZG60gRuGT6uBcAVJS3h3caB8,12
+html4vision-0.6.1.dist-info/RECORD,,
