@@ -1,0 +1,2 @@
+[console_scripts]
+biolink-mcp = biolink_mcp.server:main
