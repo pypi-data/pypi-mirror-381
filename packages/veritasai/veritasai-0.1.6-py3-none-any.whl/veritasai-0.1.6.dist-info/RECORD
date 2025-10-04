@@ -1,0 +1,10 @@
+veritasai/__init__.py,sha256=TmNZnnm2ou1ttNQqP68L_IoAVgtgKM4qf-WghpyVsSM,173
+veritasai/claim_extractor.py,sha256=JWpKHX6pQ9ahxaeyC1ffz7EhA-Fq34k7tWqjkA65998,2843
+veritasai/claim_verifier.py,sha256=J1tJ4WgLVjPfxDgBph3Bpjc7P79whlqH5fOPjbYQC-I,2935
+veritasai/evidence_retriever.py,sha256=vhox-fQxHmiBrukMJFm7WAtDdh3HAvYfLLRuJiOzm6E,1167
+veritasai/veritasai.py,sha256=6NYUymUgtZ8psj0D82T3kouP4GooBHgALgMZjGj6WjU,102
+veritasai-0.1.6.dist-info/licenses/LICENSE,sha256=Er7xKoad2EIRjZquMLp_Gd4-WFKvlSA_z0O6G4WWITE,1064
+veritasai-0.1.6.dist-info/METADATA,sha256=TbFT5fjhIrVwYcmP45iMLul0VDhGZ55OUq2SD4puMig,2235
+veritasai-0.1.6.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+veritasai-0.1.6.dist-info/top_level.txt,sha256=MQDN1onK7DQq3WzUG1vn36P8IrQbjMRAsL_cRYlc_zk,10
+veritasai-0.1.6.dist-info/RECORD,,
