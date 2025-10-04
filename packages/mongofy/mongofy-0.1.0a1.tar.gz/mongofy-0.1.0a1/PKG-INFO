@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: mongofy
+Version: 0.1.0a1
+Summary: MongoDB ODM. ALPHA VERSION - DO NOT USE
+Author-email: Adrian Makridenko <adrianmakridenko@duck.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Dynamic: license-file
+
+# Mongofy
+
+**ALPHA VERSION - DO NOT USE**

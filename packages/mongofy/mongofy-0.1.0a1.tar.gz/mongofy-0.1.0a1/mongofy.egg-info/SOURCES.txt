@@ -1,0 +1,9 @@
+LICENSE.md
+README.md
+pyproject.toml
+mongofy/__init__.py
+mongofy/py.typed
+mongofy.egg-info/PKG-INFO
+mongofy.egg-info/SOURCES.txt
+mongofy.egg-info/dependency_links.txt
+mongofy.egg-info/top_level.txt
