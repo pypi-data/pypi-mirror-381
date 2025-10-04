@@ -1,0 +1,13 @@
+License
+README.md
+pyproject.toml
+setup.py
+SPEK.egg-info/PKG-INFO
+SPEK.egg-info/SOURCES.txt
+SPEK.egg-info/dependency_links.txt
+SPEK.egg-info/entry_points.txt
+SPEK.egg-info/requires.txt
+SPEK.egg-info/top_level.txt
+spek/__init__.py
+spek/__main__.py
+spek/detector.py
