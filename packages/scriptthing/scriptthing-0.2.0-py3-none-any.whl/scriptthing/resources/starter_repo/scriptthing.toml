@@ -1,0 +1,8 @@
+[repo]
+name = "starter-repo"
+scripts_dir = "scripts"
+functions_dir = "functions"
+extensions_dir = "extensions"
+bin_dir = "bin"
+dotfiles_dir = "dotfiles"
+add_bin_to_path = true
