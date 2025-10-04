@@ -1,0 +1,8 @@
+pyfmodex>=0.7.2
+
+[dev]
+ruff
+fmod_toolkit[tests]
+
+[tests]
+pytest
