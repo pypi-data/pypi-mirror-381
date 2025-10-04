@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: PyGeoModel
+Version: 1.0.4
+Summary: An intelligent Python toolkit for geographic modeling with smart model recommendations
+Home-page: https://github.com/yourusername/PyGeoModel
+Author: Your Name
+Author-email: your.email@example.com
+Keywords: geographic modeling,GIS,machine learning,model recommendation,geospatial analysis,jupyter
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ipywidgets>=7.6.0
+Requires-Dist: requests>=2.25.0
+Requires-Dist: openai>=1.0.0
+Requires-Dist: ipyfilechooser>=0.6.0
+Requires-Dist: markdown>=3.3.0
+Requires-Dist: nest-asyncio>=1.5.0
+Requires-Dist: geopandas>=0.10.0
+Requires-Dist: rasterio>=1.2.0
+Requires-Dist: nbformat>=5.1.0
+Requires-Dist: tenacity>=8.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Model GUI Tool
+
+This is a GUI tool for displaying and running computational models, implemented using ipywidgets in Jupyter notebook.
+
+## Features
+
+- Load model definitions from JSON configuration files
+- Provide graphical interface for model selection, parameter configuration and execution
+- Display model basic information (name, description, author, tags etc.)
+- Support file chooser for model parameter inputs 
+- Provide output area for execution results
+- Support multiple model management
+- Real-time model status monitoring
+- Parameter validation and error handling
+- Support model state transitions
+- Export model results to various formats
+- Model comparison and analysis tools
+- Batch processing capabilities
+- Customizable model visualization
+- Integration with external tools and libraries
+- Comprehensive logging and debugging features
+
+## Usage
+
+1. Ensure required dependencies are installed:
