@@ -1,0 +1,9 @@
+Metadata-Version: 2.3
+Name: zeromq-router
+Version: 0.1.0
+Summary: A package that provide router based endpoint for applications using ZeroMQ
+Author: Obisike Treasure
+Author-email: Obisike Treasure <obisiket@yahoo.com>
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
