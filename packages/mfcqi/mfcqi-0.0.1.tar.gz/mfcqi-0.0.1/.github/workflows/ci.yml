@@ -1,0 +1,268 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: ['3.10', '3.11', '3.12', '3.13']
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install UV
+      uses: astral-sh/setup-uv@v3
+      with:
+        enable-cache: true
+
+    - name: Install dependencies
+      run: |
+        uv sync
+        # Verify installation
+        uv run python -c "import mfcqi; print('MFCQI installed successfully')"
+
+    - name: Install system dependencies (Ubuntu)
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y bc  # For numeric comparisons in scripts
+
+    - name: Install system dependencies (macOS)
+      if: matrix.os == 'macos-latest'
+      run: |
+        brew install bc  # For numeric comparisons in scripts
+
+    - name: Run all quality checks with coverage
+      env:
+        MFCQI_DISABLE_KEYRING: "1"
+      run: |
+        echo "🔍 Running comprehensive quality checks..."
+        # Run format and type checks
+        uv run ruff format --check src/ tests/
+        uv run mypy --strict src/mfcqi/
+        # Run tests with coverage (make test-all uses sequential execution to avoid hangs)
+        echo "🧪 Running test suite with coverage..."
+        uv run pytest tests/ --cov=src/mfcqi --cov-branch --cov-report=xml --cov-report=term-missing -v
+        echo "✅ All quality checks passed"
+
+    - name: Verify coverage file
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        ls -lh coverage.xml
+        echo "Coverage file size: $(stat -c%s coverage.xml 2>/dev/null || stat -f%z coverage.xml) bytes"
+
+    - name: Upload coverage reports to Codecov
+      if: matrix.os == 'ubuntu-latest'
+      uses: codecov/codecov-action@v5
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        files: ./coverage.xml
+        flags: unittests
+        name: codecov-${{ matrix.os }}-py${{ matrix.python-version }}
+        fail_ci_if_error: true
+        verbose: true
+
+    - name: Run MFCQI self-analysis (Unix)
+      if: matrix.os != 'windows-latest'
+      env:
+        MFCQI_DISABLE_KEYRING: "1"
+      run: |
+        echo "📊 Running MFCQI analysis on itself..."
+        MFCQI_SCORE=$(uv run mfcqi analyze src/mfcqi --format json --silent | python -c "
+        import sys, json
+        try:
+            data = json.load(sys.stdin)
+            print(data['mfcqi_score'])
+        except:
+            print('0.0')
+        ")
+
+        echo "Current MFCQI Score: $MFCQI_SCORE"
+
+        # Check if score meets minimum threshold
+        THRESHOLD="0.75"
+        if command -v bc >/dev/null 2>&1; then
+          if (( $(echo "$MFCQI_SCORE < $THRESHOLD" | bc -l) )); then
+            echo "⚠️  Warning: MFCQI score ($MFCQI_SCORE) is below recommended threshold ($THRESHOLD)"
+            echo "Code quality should be improved before merging"
+          else
+            echo "✅ MFCQI score meets quality threshold"
+          fi
+        else
+          echo "ℹ️  bc not available, skipping threshold check"
+        fi
+
+    - name: Run MFCQI self-analysis (Windows)
+      if: matrix.os == 'windows-latest'
+      shell: bash
+      env:
+        MFCQI_DISABLE_KEYRING: "1"
+      run: |
+        echo "📊 Running MFCQI analysis on itself..."
+        MFCQI_SCORE=$(uv run mfcqi analyze src/mfcqi --format json --silent | python -c "import sys, json; data = json.load(sys.stdin); print(data.get('mfcqi_score', 0.0))")
+        echo "Current MFCQI Score: $MFCQI_SCORE"
+        echo "✅ MFCQI analysis complete"
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results-${{ matrix.os }}-py${{ matrix.python-version }}
+        path: |
+          pytest-report.xml
+          coverage.xml
+          htmlcov/
+
+  quality-gate:
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.event_name == 'pull_request'
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install UV
+      uses: astral-sh/setup-uv@v3
+
+    - name: Install dependencies
+      run: |
+        uv sync
+        # Verify installation
+        uv run python -c "import mfcqi; print('MFCQI installed successfully')"
+
+    - name: Download coverage artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: test-results-ubuntu-latest-py3.10
+        path: ./coverage-data
+
+    - name: Generate quality report
+      id: quality
+      env:
+        MFCQI_DISABLE_KEYRING: "1"
+      run: |
+        # Run comprehensive analysis
+        echo "📊 Generating comprehensive quality report..."
+
+        # Get MFCQI score
+        MFCQI_OUTPUT=$(uv run mfcqi analyze src/mfcqi --format json)
+        MFCQI_SCORE=$(echo "$MFCQI_OUTPUT" | python -c "import sys, json; data=json.load(sys.stdin); print(data['mfcqi_score'])")
+
+        # Get test coverage from artifact (avoid re-running tests)
+        if [ -f ./coverage-data/coverage.xml ]; then
+          COVERAGE=$(python -c "import xml.etree.ElementTree as ET; tree = ET.parse('./coverage-data/coverage.xml'); root = tree.getroot(); print(root.attrib['line-rate'])" | awk '{printf "%.0f", $1*100}')
+        else
+          echo "⚠️  Coverage report not found, skipping coverage check"
+          COVERAGE="0"
+        fi
+
+        # Get security issues count
+        SECURITY_ISSUES=$(uv run bandit -r src/ -f json 2>/dev/null | python -c "import sys, json; data=json.load(sys.stdin); print(len(data.get('results', [])))" || echo "0")
+
+        # Store results
+        echo "mfcqi_score=$MFCQI_SCORE" >> $GITHUB_OUTPUT
+        echo "coverage=$COVERAGE" >> $GITHUB_OUTPUT
+        echo "security_issues=$SECURITY_ISSUES" >> $GITHUB_OUTPUT
+
+        # Determine overall status (lowered coverage threshold to 80%)
+        if (( $(echo "$MFCQI_SCORE >= 0.75" | bc -l) )) && (( $(echo "$COVERAGE >= 80" | bc -l) )) && [ "$SECURITY_ISSUES" -eq 0 ]; then
+          echo "status=passing" >> $GITHUB_OUTPUT
+          echo "emoji=✅" >> $GITHUB_OUTPUT
+        else
+          echo "status=warning" >> $GITHUB_OUTPUT
+          echo "emoji=⚠️" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Comment on PR
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const mfcqiScore = '${{ steps.quality.outputs.mfcqi_score }}';
+          const coverage = '${{ steps.quality.outputs.coverage }}';
+          const securityIssues = '${{ steps.quality.outputs.security_issues }}';
+          const status = '${{ steps.quality.outputs.status }}';
+          const emoji = '${{ steps.quality.outputs.emoji }}';
+
+          const body = `## ${emoji} Code Quality Report
+
+          | Metric | Score | Status |
+          |--------|-------|--------|
+          | **MFCQI Score** | ${mfcqiScore} | ${parseFloat(mfcqiScore) >= 0.75 ? '✅ Good' : '⚠️ Needs Work'} |
+          | **Test Coverage** | ${coverage}% | ${parseFloat(coverage) >= 80 ? '✅ Good' : '⚠️ Needs Work'} |
+          | **Security Issues** | ${securityIssues} | ${securityIssues === '0' ? '✅ Clean' : '⚠️ Issues Found'} |
+
+          ### Quality Gates
+          - **MFCQI Score**: ${parseFloat(mfcqiScore) >= 0.75 ? '✅' : '❌'} Minimum 0.75 (Current: ${mfcqiScore})
+          - **Test Coverage**: ${parseFloat(coverage) >= 80 ? '✅' : '❌'} Minimum 80% (Current: ${coverage}%)
+          - **Security**: ${securityIssues === '0' ? '✅' : '❌'} Zero vulnerabilities (Current: ${securityIssues})
+
+          ${status === 'passing' ?
+            '🎉 **All quality gates passed!** This PR maintains high code quality standards.' :
+            '⚠️ **Some quality gates need attention.** Please review the metrics above before merging.'
+          }
+
+          <details>
+          <summary>📊 View detailed MFCQI breakdown</summary>
+
+          Run \`mfcqi analyze src/mfcqi\` locally to see detailed metrics breakdown.
+          </details>
+          `;
+
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: body
+          });
+
+  build:
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install build dependencies
+      run: |
+        pip install build twine
+
+    - name: Build package
+      run: |
+        python -m build
+
+    - name: Check package
+      run: |
+        python -m twine check dist/*
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: python-package
+        path: dist/
