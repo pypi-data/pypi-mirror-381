@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+bear_django_remove_trailing_slash.egg-info/PKG-INFO
+bear_django_remove_trailing_slash.egg-info/SOURCES.txt
+bear_django_remove_trailing_slash.egg-info/dependency_links.txt
+bear_django_remove_trailing_slash.egg-info/requires.txt
+bear_django_remove_trailing_slash.egg-info/top_level.txt
+remove_slash/__init__.py
+remove_slash/middleware.py
