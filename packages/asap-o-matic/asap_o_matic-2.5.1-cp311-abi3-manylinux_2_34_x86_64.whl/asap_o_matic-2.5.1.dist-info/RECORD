@@ -1,0 +1,9 @@
+asap_o_matic-2.5.1.dist-info/METADATA,sha256=YHe8OmnEb0yKD4YQDsiYSEXQMrXHgT60CMiSWkwCypI,5703
+asap_o_matic-2.5.1.dist-info/WHEEL,sha256=bq3O6OkVRkKWSKQ2NQgU3L6PIdHkVqb_ocr7fdv_Hds,107
+asap_o_matic-2.5.1.dist-info/entry_points.txt,sha256=e4vMlDGgLPygLY-NVvKQH3pBEA3llmLiuzuxrBJrqIk,57
+asap_o_matic-2.5.1.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+asap_o_matic/__init__.py,sha256=zJnl3RwXEYts3BnW9cpc0Iaildg4s6dHDBJmPPnbKYA,392
+asap_o_matic/__main__.py,sha256=3_2LxCVYdRUiChrX_KkE4KVibxJtKD2oihnaAPmRFbs,13736
+asap_o_matic/asap_o_matic.abi3.so,sha256=s11iCdB0fmoMsi9MxDW7hOKZT50SR9kjVhW0ZWHwcRw,422656
+asap_o_matic/logger.py,sha256=7v7TOSWukJU8IxTbcFReX8BTs9pnl3i0g9B1BXISMyc,1423
+asap_o_matic-2.5.1.dist-info/RECORD,,
