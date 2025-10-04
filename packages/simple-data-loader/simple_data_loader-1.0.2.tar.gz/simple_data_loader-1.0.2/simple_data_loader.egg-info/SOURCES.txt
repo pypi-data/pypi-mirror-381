@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+simple_data_loader/__init__.py
+simple_data_loader/simple_data_loader.py
+simple_data_loader.egg-info/PKG-INFO
+simple_data_loader.egg-info/SOURCES.txt
+simple_data_loader.egg-info/dependency_links.txt
+simple_data_loader.egg-info/requires.txt
+simple_data_loader.egg-info/top_level.txt
+tests/__init__.py
+tests/test_data_loader_pytest.py
