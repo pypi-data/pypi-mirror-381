@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "spotlight-for-windows-seige"
+version = "0.1.1"
+description = "A Windows search utility inspired by Spotlight, with a fluent design and hot-corner activation."
+authors = ["William Gu <williamnumismatics@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyperclip = "*"
+psutil = "*"
+pynput = "*"
+pywin32 = "*"
+fuzzywuzzy = "*"
+watchdog = "*"
+python-Levenshtein = "*"
+
+[tool.poetry.scripts]
+fluent-hub = "spotlight_in_windows_seige.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

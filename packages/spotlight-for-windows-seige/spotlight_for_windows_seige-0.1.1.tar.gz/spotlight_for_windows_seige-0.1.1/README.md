@@ -1,0 +1,1 @@
+This is a python project for Spotlight in Windows from MacOS
