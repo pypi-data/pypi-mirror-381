@@ -1,0 +1,2 @@
+[nbdev]
+textit = textit._modidx:d
