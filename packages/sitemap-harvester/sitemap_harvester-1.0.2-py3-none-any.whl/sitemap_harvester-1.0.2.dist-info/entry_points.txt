@@ -1,0 +1,2 @@
+[console_scripts]
+sitemap-harvester = main:main
