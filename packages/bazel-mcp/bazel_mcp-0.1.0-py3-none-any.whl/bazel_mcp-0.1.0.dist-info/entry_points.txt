@@ -1,0 +1,2 @@
+[console_scripts]
+bazel-mcp = bazel_mcp.server:main
