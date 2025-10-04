@@ -1,0 +1,10 @@
+telescope/__init__.py,sha256=Iti99FijuD8cZeU05XgATipM2AtQoSj4rF0wBVQMWZo,901
+telescope/cli.py,sha256=MSNNrpWTQprZ1avE__gH2lJ0jWwZZQksMZwTzW-CTMA,1948
+telescope/client.py,sha256=-B55S4xOJWBBups7xGuPVqxNZ3IJOecxP7EiXOl3SLk,10356
+telescope/context.py,sha256=IbDdvxO-vaeXcI41BMawZFVhsPC6Vt9ObwyAVMpuJo0,6352
+telescope/decorators.py,sha256=T3sDSp9wQx4S8dIvi_4gRfGfMOEu-O521vfx3OEmU58,11975
+telescope/integrations.py,sha256=6mwvo_qrvDOvusgFBA_1buTscXS7VxObUFqejMCcjTM,10704
+telescope_python-1.0.5.dist-info/METADATA,sha256=7wv681MY3AjKiZhVkrKwYGpaKCbudZ7CJZNLvgg9KSs,9848
+telescope_python-1.0.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+telescope_python-1.0.5.dist-info/entry_points.txt,sha256=Yabk3YBmMVLQK-hIK3euKBI0jYVQmYjCd8QqoMUFb0I,64
+telescope_python-1.0.5.dist-info/RECORD,,
