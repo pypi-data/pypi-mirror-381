@@ -1,0 +1,7 @@
+setup.py
+safe_internal_lib/__init__.py
+safe_internal_lib.egg-info/PKG-INFO
+safe_internal_lib.egg-info/SOURCES.txt
+safe_internal_lib.egg-info/dependency_links.txt
+safe_internal_lib.egg-info/entry_points.txt
+safe_internal_lib.egg-info/top_level.txt
