@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: pytrees-rs
+Version: 1.0.3
+Project-URL: Homepage, https://github.com/haroldks/pytrees-rs
+Requires-Dist: scikit-learn
