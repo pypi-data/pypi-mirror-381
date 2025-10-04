@@ -1,0 +1,70 @@
+Metadata-Version: 2.4
+Name: pulumi_yandex_marketmaker
+Version: 0.161.6
+Summary: A Pulumi package for creating and managing yandex cloud resources.
+License: Apache-2.0
+Project-URL: Homepage, https://www.pulumi.com
+Project-URL: Repository, https://github.com/agorobets/pulumi-yandex
+Keywords: yandex,category/cloud
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: parver>=0.2.1
+Requires-Dist: pulumi<4.0.0,>=3.165.0
+Requires-Dist: semver>=2.8.1
+Requires-Dist: typing-extensions<5,>=4.11; python_version < "3.11"
+
+# Yandex Resource Provider
+
+The Yandex Resource Provider lets you manage [Yandex](http://example.com) resources.
+
+## Installing
+
+This package is available for several languages/platforms:
+
+### Node.js (JavaScript/TypeScript)
+
+To use from JavaScript or TypeScript in Node.js, install using either `npm`:
+
+```bash
+npm install @pulumi/yandex
+```
+
+or `yarn`:
+
+```bash
+yarn add @pulumi/yandex
+```
+
+### Python
+
+To use from Python, install using `pip`:
+
+```bash
+pip install pulumi_yandex
+```
+
+### Go
+
+To use from Go, use `go get` to grab the latest version of the library:
+
+```bash
+go get github.com/pulumi/pulumi-yandex/sdk/go/...
+```
+
+### .NET
+
+To use from .NET, install using `dotnet add package`:
+
+```bash
+dotnet add package Pulumi.Yandex
+```
+
+## Configuration
+
+The following configuration points are available for the `yandex` provider:
+
+- `yandex:region` (environment: `YANDEX_REGION`) - the region in which to deploy resources
+
+## Reference
+
+For detailed reference documentation, please visit [the Pulumi registry](https://www.pulumi.com/registry/packages/yandex/api-docs/).
