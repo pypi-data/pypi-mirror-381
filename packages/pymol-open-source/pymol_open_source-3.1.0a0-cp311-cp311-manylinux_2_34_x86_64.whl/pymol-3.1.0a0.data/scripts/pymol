@@ -1,0 +1,2 @@
+#!/bin/sh
+exec "/tmp/build-env-vdp2orf8/bin/python" "/tmp/build-env-vdp2orf8/lib/python3.11/site-packages/pymol/__init__.py" "$@"
