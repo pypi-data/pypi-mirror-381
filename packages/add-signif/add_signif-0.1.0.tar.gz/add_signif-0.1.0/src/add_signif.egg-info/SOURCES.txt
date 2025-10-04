@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/add_signif/__init__.py
+src/add_signif/core.py
+src/add_signif.egg-info/PKG-INFO
+src/add_signif.egg-info/SOURCES.txt
+src/add_signif.egg-info/dependency_links.txt
+src/add_signif.egg-info/requires.txt
+src/add_signif.egg-info/top_level.txt

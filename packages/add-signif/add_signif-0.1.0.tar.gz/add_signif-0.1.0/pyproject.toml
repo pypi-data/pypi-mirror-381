@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "add_signif"
+version = "0.1.0"
+description = "Add significance bars to a plot."
+authors = [{ name = "Devin Austin", email = "devinaustinb@gmail.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["matplotlib"]
