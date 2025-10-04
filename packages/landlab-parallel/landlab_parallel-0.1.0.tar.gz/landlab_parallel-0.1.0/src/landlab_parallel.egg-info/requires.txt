@@ -1,0 +1,10 @@
+landlab
+meshio
+numpy
+pymetis
+
+[dev]
+nox
+
+[testing]
+pytest

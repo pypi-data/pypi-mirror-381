@@ -1,0 +1,121 @@
+Metadata-Version: 2.4
+Name: landlab-parallel
+Version: 0.1.0
+Summary: Utilities for working with landlab in a parallel environment
+Author: Eric Hutton
+Author-email: mcflugen@gmail.com
+Maintainer: Eric Hutton
+Maintainer-email: mcflugen@gmail.com
+License: MIT
+Project-URL: homepage, https://github.com/mcflugen/landlab-parallel
+Project-URL: documentation, https://github.com/mcflugen/landlab-parallel/blob/main/README.md
+Project-URL: repository, https://github.com/mcflugen/landlab-parallel
+Project-URL: changelog, https://github.com/mcflugen/landlab-parallel/blob/main/CHANGES.md
+Keywords: landlab,mpi,parallel,python
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+License-File: AUTHORS.md
+Requires-Dist: landlab
+Requires-Dist: meshio
+Requires-Dist: numpy
+Requires-Dist: pymetis
+Provides-Extra: dev
+Requires-Dist: nox; extra == "dev"
+Provides-Extra: testing
+Requires-Dist: pytest; extra == "testing"
+Dynamic: license-file
+
+[![License](https://img.shields.io/github/license/mcflugen/landlab-parallel.svg)](LICENSE)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/mcflugen/landlab-parallel/main.svg)](https://results.pre-commit.ci/latest/github/mcflugen/landlab-parallel/main)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+# landlab-parallel
+
+Some utilities for working with [landlab](https://landlab.csdms.io) in a
+parallel environment.
+
+## Installation
+
+```bash
+pip install git+https://github.com/mcflugen/landlab-parallel.git
+```
+
+> **NOTE**: To run the example, you'll need to install `mpi4py`, which may be
+easiest to do in a `conda` environment,
+
+```bash
+conda create -n mpi4py mpi4py
+conda activate mpi4py
+```
+
+## Run
+
+The `run_example.py` command has a simple command-line interface,
+
+```bash
+run_example.py SIZE [--mode {raster,odd-r}] [--seed SEED]
+```
+* `SIZE`: Integer. The grid will have dimensions `(SIZE, 2 * SIZE)`.
+* `--mode`: Optional. Grid layout type. Choices:
+  * `raster`
+  * `odd-r`
+* `--seed`: Optional. Integer random seed for initializing grid elevations.
+
+### Example
+
+> **NOTE**: If you are on a Mac, you may need to first set the fabric interface
+  used by *libfabric*,
+```bash
+export FI_PROVIDER=tcp
+```
+
+To run an example,
+```bash
+mpiexec -n 4 python ./run_example.py 128 --mode=odd-r --seed=1945
+```
+
+# Contributors
+
+- [Eric Hutton](https://github.com/mcflugen)
+
+# Release Notes
+
+## 0.1.0 (not yet released)
+
+- Initial code import [#1](https://github.com/mcflugen/landlab-parallel/issues/1)
+- Added new function, `vtu_dump`, that dumps a *landlab* grid to *vtu* format
+  [#2](https://github.com/mcflugen/landlab-parallel/issues/2).
+- Added new function, `pvtu_dump`, that compbines a set of *vtu* files
+  [#3](https://github.com/mcflugen/landlab-parallel/issues/3).
+- Fixed an issue where the lower-left corner of the tiles were not be calculated
+  correctly [#4](https://github.com/mcflugen/landlab-parallel/issues/4).
+- Added a command-line argument, `mode`, that allows the user to modify
+  the type of grid used for the example
+  [#5](https://github.com/mcflugen/landlab-parallel/issues/5).
+- Added a command-line argument, `seed`, that allows the user to provide
+  a seed for the random number generator used to create the initial elevations
+  [#6](https://github.com/mcflugen/landlab-parallel/issues/6).
+- Added a new component, `Uplift`, that uplifts the landscape
+  [#7](https://github.com/mcflugen/landlab-parallel/issues/7).
+- Modified the time loop to exchange ghost node data after every component is
+  updated and also added drainage area to the list of data fields that are exchanged
+  [#8](https://github.com/mcflugen/landlab-parallel/issues/8).
+- Fixed a bug where the mode passed from the cli was ignored
+  [#9](https://github.com/mcflugen/landlab-parallel/issues/9).
+- Mask-out data at closed nodes when writing to *vtu*
+  [#10](https://github.com/mcflugen/landlab-parallel/issues/10).
+- Fixed an issue where ghost nodes were not being set correctly for some hex grids.
+  [#12](https://github.com/mcflugen/landlab-parallel/issues/12).
+- Added support for creating d8-style tiles, which connect diagonal nodes
+  [#13](https://github.com/mcflugen/landlab-parallel/issues/13).
