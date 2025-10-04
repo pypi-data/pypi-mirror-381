@@ -1,0 +1,10 @@
+file_darshan/__init__.py,sha256=hUZXWyWPLwy2pqk1RzdoOfUZla30EzhXSpsxWmRmw3M,178
+file_darshan/ai_helper.py,sha256=QxBT9eh-TTyU8RabrDlxTIjIvpzOzNK_Ks8aRnfLvMo,586
+file_darshan/cli.py,sha256=-ddRuxgLmpa3j0Md6isjiNKzTTR_zr36VDsY4ZehePI,563
+file_darshan/summarizer.py,sha256=c4LfF89uDmf2wBnQef48pnq_in6rigu3Dby_ARccrKw,1382
+filedarshan-0.1.0.dist-info/licenses/LICENSE,sha256=o3h6jAKItJds83t16GJqTbjobXoT6hYZB8Zxm_tqGRM,1143
+filedarshan-0.1.0.dist-info/METADATA,sha256=LiH2lF9Ya0w_Wy5mCfPvgMGST5tIcIe9cb-9dxvYp5Q,1407
+filedarshan-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+filedarshan-0.1.0.dist-info/entry_points.txt,sha256=CElLVAeunGmRjUZ5p2sul-mmdGGyb_bnCuEF3Dqr5-Y,54
+filedarshan-0.1.0.dist-info/top_level.txt,sha256=ftsZElGVjgdsGpkZyY1baLvaBp6q1bPLHKThC7BqNuY,13
+filedarshan-0.1.0.dist-info/RECORD,,
