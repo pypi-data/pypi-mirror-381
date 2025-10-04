@@ -1,0 +1,3 @@
+[console_scripts]
+whiffpy=whiffpy.cli:main
+
