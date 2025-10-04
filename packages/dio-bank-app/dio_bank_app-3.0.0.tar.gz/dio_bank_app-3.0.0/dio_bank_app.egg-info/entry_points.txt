@@ -1,0 +1,2 @@
+[console_scripts]
+bank-app = bank_app.cli:run
