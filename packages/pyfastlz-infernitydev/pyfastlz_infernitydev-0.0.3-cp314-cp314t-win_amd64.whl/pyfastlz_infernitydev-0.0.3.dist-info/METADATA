@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: pyfastlz-infernitydev
+Version: 0.0.3
+Summary: An extended wrapper for FastLZ which takes in and returns the length seperately, instead of in the bytes field
+Home-page: https://github.com/infernitydev/pyfastlz-infernitydev
+Author: 'Jared Suttles, Paul Chan, whirlingstars'
+License: BSD License
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Archiving :: Compression
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Dynamic: description
+Dynamic: description-content-type
+
+FastLZ
+======
+
+Python wrapper for [FastLZ], a lightning-fast lossless compression library.
+
+
+Installation
+------------
+
+To install fastlz, simply:
+
+```bash
+$ pip install pyfastlz-infernitydev
+```
+
+[FastLZ]: https://github.com/ariya/FastLZ
+
+
+Usage
+-----
+
+Compressing is quite simple:
+```py
+from pyfastlz import compress
+
+compressed, uncompressed_length = compress(uncompressed_bytes)
+```
+
+And decompressing uses the length from earlier:
+```
+from pyfastlz import decompress
+
+decompressed = decompress(compressed, uncompressed_length)
+```
