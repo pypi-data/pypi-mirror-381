@@ -1,0 +1,8 @@
+logly-0.1.4.dist-info/METADATA,sha256=ub0MnLLTby912Q1lffNXIHhHGsIfCwgLJzh9zVWc6ZQ,13675
+logly-0.1.4.dist-info/WHEEL,sha256=Iz7QqxpWQRXToFIDkGspPPKDuV_klwuhW8ziiU5jhR8,96
+logly-0.1.4.dist-info/licenses/LICENSE,sha256=pvIW50O8HECtrwvpgfGOKYk0Vt8wd0z5H1mqDHoI_II,1091
+logly/__init__.py,sha256=dyvpzbGqwjhi0XvcqfBB6m3UfBaH8aWBPmJP_PHrMsQ,29615
+logly/_logly.cp310-win_amd64.pyd,sha256=4c2dGJH3qH9WLgSRw4DG8W6lrMgEgKq39vSGB0S1INs,1970176
+logly/_logly.pyi,sha256=eRMHWpmB-1eQcCP2YdG1HpkCXSV65qMA1ccBYKaX08I,13727
+logly/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logly-0.1.4.dist-info/RECORD,,
