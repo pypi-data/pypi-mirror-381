@@ -1,0 +1,16 @@
+.*
+!/.dockerignore
+!/.github
+!/.gitignore
+!/.pre-commit-config.yaml
+/build
+/dist
+/env
+/errors
+/.venv
+/VERSION
+**/__pycache__/*
+openapi-specs/
+/config.toml
+/workflows
+/site
