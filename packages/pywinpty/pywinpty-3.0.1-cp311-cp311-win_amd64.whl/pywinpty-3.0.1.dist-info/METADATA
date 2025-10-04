@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: pywinpty
+Version: 3.0.1
+License-File: LICENSE.txt
+Summary: Pseudo terminal support for Windows from Python.
+Requires-Python: >=3.9
