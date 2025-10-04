@@ -1,0 +1,10 @@
+agent.py,sha256=7LORnMq5Fx6D3pdXLcfSs2i60KSo69sX5ANOKCVWui8,9194
+cli.py,sha256=-TyGgTUZbAYVdUppMIppHtarRudIYBDRHEatQ4EDf7E,14578
+tool_functions.py,sha256=Ae-5jZUAhdIbQHYYIufb6RoQFe8R0kirHFNA8YxkpYw,13952
+tools.py,sha256=_CinsYsF3wryvC0nLMKDxUbumbdcSmVUlr0HKKsyvEI,6020
+nexus_ai_agent-1.0.2.dist-info/licenses/LICENSE,sha256=l6425dmjnidzk4JQwhT01C8SpICmjSBMNREAdPnPA9E,1087
+nexus_ai_agent-1.0.2.dist-info/METADATA,sha256=OANQXmPbG0qjpMSGFthQYQXr62BwcKGK1otpMOq1F8M,9923
+nexus_ai_agent-1.0.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+nexus_ai_agent-1.0.2.dist-info/entry_points.txt,sha256=xoua_pqIOyhfcyZJgPFxZos8hw93O54B0NH_ANUwEc8,35
+nexus_ai_agent-1.0.2.dist-info/top_level.txt,sha256=qqETDcR3fkRHwN1b65lQP2JZlaZngOnuoRTaMNOpxLE,31
+nexus_ai_agent-1.0.2.dist-info/RECORD,,
