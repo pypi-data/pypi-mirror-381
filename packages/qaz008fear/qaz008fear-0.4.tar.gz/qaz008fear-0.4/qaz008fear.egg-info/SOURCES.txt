@@ -1,0 +1,7 @@
+setup.py
+qaz008fear/__init__.py
+qaz008fear/qaz008fear.py
+qaz008fear.egg-info/PKG-INFO
+qaz008fear.egg-info/SOURCES.txt
+qaz008fear.egg-info/dependency_links.txt
+qaz008fear.egg-info/top_level.txt
