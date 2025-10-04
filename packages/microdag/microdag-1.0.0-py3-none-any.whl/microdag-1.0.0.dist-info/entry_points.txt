@@ -1,0 +1,2 @@
+[console_scripts]
+microdag = microdag.cli:main
