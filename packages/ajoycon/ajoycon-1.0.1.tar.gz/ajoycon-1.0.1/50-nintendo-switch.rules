@@ -1,0 +1,12 @@
+# Nintendo Switch Joy-Con controllers
+# Allow user access to Joy-Con devices via hidraw
+
+# Match by device path for Bluetooth HID devices
+# Joy-Con (L)
+KERNEL=="hidraw*", KERNELS=="0005:057E:2006.*", MODE="0666"
+
+# Joy-Con (R)
+KERNEL=="hidraw*", KERNELS=="0005:057E:2007.*", MODE="0666"
+
+# Pro Controller (optional)
+KERNEL=="hidraw*", KERNELS=="0005:057E:2009.*", MODE="0666"

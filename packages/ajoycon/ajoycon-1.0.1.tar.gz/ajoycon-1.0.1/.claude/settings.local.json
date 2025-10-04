@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bluetoothctl:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(python3:*)",
+      "Bash(uv run:*)",
+      "Bash(udevadm:*)",
+      "Bash(timeout 3 uv run python examples/basic_usage.py)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
