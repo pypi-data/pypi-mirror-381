@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+qvenv.py
+qvenv.egg-info/PKG-INFO
+qvenv.egg-info/SOURCES.txt
+qvenv.egg-info/dependency_links.txt
+qvenv.egg-info/entry_points.txt
+qvenv.egg-info/top_level.txt
