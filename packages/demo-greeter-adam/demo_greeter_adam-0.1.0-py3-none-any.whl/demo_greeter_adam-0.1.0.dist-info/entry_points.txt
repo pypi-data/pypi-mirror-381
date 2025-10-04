@@ -1,0 +1,2 @@
+[console_scripts]
+greet = demo_greeter_adam.greet:main
