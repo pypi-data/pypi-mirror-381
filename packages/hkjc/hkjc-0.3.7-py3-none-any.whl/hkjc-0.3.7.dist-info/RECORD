@@ -1,0 +1,12 @@
+hkjc/__init__.py,sha256=xKkhk53z9aGyGkiwQ_RNc7Qa82lp1Oinyx83m_pBv_E,627
+hkjc/harville_model.py,sha256=MZjPLS-1nbEhp1d4Syuq13DtraKnd7TlNqBmOOCwxgc,15976
+hkjc/historical.py,sha256=wKTJi--0Mx_x0vO0ysOGD37oM8453woQK-cLzPOLgiQ,336
+hkjc/live_odds.py,sha256=m3sO5AIam73Qr2my8aUW4slE7G8xZk6tnMDRPAWS_bs,5447
+hkjc/optimization.py,sha256=OArQ3w9bwcIV_lTNuE5za6AROoa90xk_gwAoGwQ-8RE,3784
+hkjc/processing.py,sha256=vU6bO-a11ACqi1MqPppfiDaH-8wba8IFIqo--7HE2hM,3307
+hkjc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hkjc/qpbanker.py,sha256=vhvYb5_nGrKgYgre9gGF6tgswovca5C9pZVOPGxEP1Q,4804
+hkjc/speedpro.py,sha256=Tb8YqWnD7nnRv0I5onnWxGtsRi3bQZZumWnZncT2n4M,1968
+hkjc-0.3.7.dist-info/METADATA,sha256=FORsh2hdGEvoLXO3sGLTV1s9j3CZrtddeCnyJMe25XI,413
+hkjc-0.3.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hkjc-0.3.7.dist-info/RECORD,,
