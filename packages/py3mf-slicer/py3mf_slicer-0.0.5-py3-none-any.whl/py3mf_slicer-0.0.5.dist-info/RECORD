@@ -1,0 +1,16 @@
+py3mf_slicer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py3mf_slicer/get_items.py,sha256=7FFc7IhWmooqgGuG9x55gx-edbYtZexMBBBUEa29eAM,12917
+py3mf_slicer/load.py,sha256=9BjAuPBREQq_OUxYsv8mNm7Ts_XKJiMcieIs2B-hYOc,1595
+py3mf_slicer/slice.py,sha256=dv_X0H-9LtC2u2gqTAXqpWf-nZ7SCwQ8U0IHgJTQmhs,3660
+py3mf_slicer/transform.py,sha256=ikW7M7rW_BKsHNrt-f83di3RGE4dOxR_LLQXyKMiMa4,766
+py3mf_slicer/visualize.py,sha256=ZJDG23iuxd8faYj6toyMzCPCRXz4cYqS3bm3e6piQIQ,2237
+py3mf_slicer/write.py,sha256=TSoSNO_82CuVrvHcR2IK16y7KKTmfAKwWdC9TYmUcWY,114
+py3mf_slicer-0.0.5.dist-info/licenses/LICENSE,sha256=Zudy7_muSGUoFcQh98FEHSS-Qr4HF4vjkcL4Bh5lYwg,1065
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_complex_geometry.py,sha256=80QDZ2mgHeZqoT5b5Lh9mmK9z0QdO84LY64xTDzWzfI,4640
+tests/test_module1.py,sha256=5QLUEePzMEKLvew8bJPTbS0Tc3IGLQk16IpFLe7kqAk,3371
+tests/test_vis.py,sha256=5DvmdAPXCM1-rgTE12USQAaRvlrwcc6OBNgyZOTr-Xc,679
+py3mf_slicer-0.0.5.dist-info/METADATA,sha256=B_gUbuWGV5WPwWSJ4vy3k9EbnHouFKpO5RSJ3FKV_HI,1099
+py3mf_slicer-0.0.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+py3mf_slicer-0.0.5.dist-info/top_level.txt,sha256=qd3djEjw6yF4c78GsNhMt4Uwas4X-xloq8oOtp_Pe-c,19
+py3mf_slicer-0.0.5.dist-info/RECORD,,
