@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+arithop/__init__.py
+arithop/__main__.py
+arithop/operations.py
+arithoperation/__init__.py
+arithoperation/__main__.py
+arithoperation/operations.py
+arithoperator.egg-info/PKG-INFO
+arithoperator.egg-info/SOURCES.txt
+arithoperator.egg-info/dependency_links.txt
+arithoperator.egg-info/entry_points.txt
+arithoperator.egg-info/requires.txt
+arithoperator.egg-info/top_level.txt
+test/test_operations.py
