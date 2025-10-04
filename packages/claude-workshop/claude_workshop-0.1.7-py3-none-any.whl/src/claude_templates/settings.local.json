@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(touch:*)",
+      "Bash(pip install:*)",
+      "Bash(workshop:*)",
+      "Bash(cat:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git rm:*)",
+      "Read(//Users/zachswift/.config/**)",
+      "Read(//Users/zachswift/**)",
+      "Bash(chmod:*)",
+      "Bash(.claude/workshop-session-start.sh:*)",
+      "Bash(pip show:*)",
+      "Bash(python3:*)",
+      "Bash(grep:*)",
+      "Bash(pip search:*)",
+      "WebFetch(domain:pypi.org)",
+      "Bash(cd:*)",
+      "Bash(python -m pytest tests/test_storage.py -v)",
+      "Bash(python:*)",
+      "Bash(git tag:*)",
+      "Bash(TWINE_USERNAME=__token__ TWINE_PASSWORD=pypi-AgEIcHlwaS5vcmcCJGIzMDQxNDk2LTkxNDktNGZlNy1hYWZlLTNhMjdhY2JjMDM3NwACKlszLCJlOWE4ZDU3Ny1mZGE1LTQwMzItYmQxMy1mMzlhZjhiMmExODciXQAABiCskZ3VDp2ZGQJhFlLcdkXoJJsU8c1Gr_DoU_8G92Msgw python -m twine upload dist/claude_workshop-0.1.5*)",
+      "Bash(TWINE_USERNAME=__token__ TWINE_PASSWORD=pypi-AgEIcHlwaS5vcmcCJGIzMDQxNDk2LTkxNDktNGZlNy1hYWZlLTNhMjdhY2JjMDM3NwACKlszLCJlOWE4ZDU3Ny1mZGE1LTQwMzItYmQxMy1mMzlhZjhiMmExODciXQAABiCskZ3VDp2ZGQJhFlLcdkXoJJsU8c1Gr_DoU_8G92Msgw python -m twine upload dist/claude_workshop-0.1.6*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
