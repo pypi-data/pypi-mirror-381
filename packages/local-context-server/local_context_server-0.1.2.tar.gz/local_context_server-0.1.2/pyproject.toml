@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "local-context-server"  # <-- Or whatever unique name you published
+version = "0.1.2"              # <-- IMPORTANT: Increase the version number
+dependencies = [
+    "fastmcp",
+    "pydantic",
+    "appdirs",
+]
+requires-python = ">=3.8"
+authors = [
+  { name="David Marcas", email="david.marcas@email.com" },
+]
+description = "An MCP server to give long term memory to IA agents"
+
+[project.scripts]
+context-server = "context_server.main:run"
+
+# --- SECTION ADDED FOR ROBUSTNESS ---
+# This explicitly tells the build system to include the 'context_server' folder as a package.
+[tool.setuptools]
+packages = ["context_server"]
