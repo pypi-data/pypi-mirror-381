@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: help50lite
+Version: 0.1.0
+Summary: A lightweight version of help50 with multilingual support.
+Author-email: Ramon Rodrigues <ramon@ramonrodrigues.dev>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# help50lite
+
+This is a reimplementation of CS50's `help50` that provides multilanguage support (Spanish, French, Portuguese, and more) in error explanation messages.

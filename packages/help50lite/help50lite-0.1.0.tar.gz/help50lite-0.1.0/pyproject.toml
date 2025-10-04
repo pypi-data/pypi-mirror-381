@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "help50lite"
+version = "0.1.0"
+description = "A lightweight version of help50 with multilingual support."
+readme = "README.md"
+authors = [{ name = "Ramon Rodrigues", email = "ramon@ramonrodrigues.dev" }]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = []
+
+[project.scripts]
+help50lite = "help50lite.cli:main"
