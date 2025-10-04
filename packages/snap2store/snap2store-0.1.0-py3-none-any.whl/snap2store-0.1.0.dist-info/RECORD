@@ -1,0 +1,12 @@
+psd/iPadPro13-M4-Silver-Portrait.psd,sha256=IYIwVnDt-QYhhhEjNUwmjoI4zB5zgwwDGNBioKprKwA,2393622
+psd/iPhone17ProMax-DeepBlue-Portrait.psd,sha256=KLvZOFJ146SqhF6twKeeH1vZv4NbhzaHvsV_QWyKsbY,19489119
+snap2store/__init__.py,sha256=CT3jdUE-32_jtCNphm7rxKrLlFSfGfuUwvrkcKeLNeM,21
+snap2store/ipad_batch.py,sha256=RIAfIhAQY7Fxf9BOYEs9UCn6UNvzgpGDY3R4txynhV8,3683
+snap2store/iphone_batch.py,sha256=mOjU3PHN78SLoPvJY0uyYXaLQ545MGDhGPpYRH-b1e0,4718
+snap2store/main.py,sha256=tYdqoC2P7tRDh25ZyqEf7eXcWB2kAo3bB3IJ6OVq5Jw,5344
+snap2store-0.1.0.dist-info/licenses/LICENSE,sha256=XdySlG_rEJn_GNK_89drzK8mHqlU3UBM7K0ffv3W6tM,1065
+snap2store-0.1.0.dist-info/METADATA,sha256=UTX3-yv6hj1Ae0o3R5lxMh8kItWEM17w3OZ0byNbnNQ,5688
+snap2store-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+snap2store-0.1.0.dist-info/entry_points.txt,sha256=I2ZhpAOTTdtNdgWVVQERnRqrRvqxnDZNS8vheg58Dpw,52
+snap2store-0.1.0.dist-info/top_level.txt,sha256=o2mbiYApN2AlfidpvaFX0tTIgd-MwskT-dFbjUYWnh0,11
+snap2store-0.1.0.dist-info/RECORD,,
