@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "question": "What is the output of print(type([]))?",
+        "options": ["A) <class 'list'>", "B) <class 'tuple'>", "C) <class 'dict'>", "D) <class 'set'>"],
+        "answer": "A",
+        "explanation": "Lists are built-in Python types."
+    },
+    {
+        "id": 2,
+        "question": "Which keyword is used to define a function in Python?",
+        "options": ["A) func", "B) def", "C) lambda", "D) define"],
+        "answer": "B",
+        "explanation": "The `def` keyword defines a function."
+    },
+    {
+        "id": 3,
+        "question": "Which operator is used for exponentiation in Python?",
+        "options": ["A) ^", "B) **", "C) //", "D) %"],
+        "answer": "B",
+        "explanation": "`**` is the exponentiation operator."
+    },
+    {
+        "id": 4,
+        "question": "What does the len() function return for an empty list?",
+        "options": ["A) None", "B) 0", "C) -1", "D) Error"],
+        "answer": "B",
+        "explanation": "len() returns 0 for empty collections."
+    },
+    {
+        "id": 5,
+        "question": "Which method is used to add an element to the end of a list?",
+        "options": ["A) add()", "B) insert()", "C) append()", "D) extend()"],
+        "answer": "C",
+        "explanation": "append() adds a single element to the end of a list."
+    },
+    {
+        "id": 6,
+        "question": "What is the result of 7 // 2 in Python?",
+        "options": ["A) 3.5", "B) 3", "C) 4", "D) 3.0"],
+        "answer": "B",
+        "explanation": "// is floor division, returning an integer result."
+    },
+    {
+        "id": 7,
+        "question": "Which data type is immutable in Python?",
+        "options": ["A) list", "B) dict", "C) tuple", "D) set"],
+        "answer": "C",
+        "explanation": "Tuples are immutable, meaning they cannot be changed after creation."
+    },
+    {
+        "id": 8,
+        "question": "What is the correct way to create an empty dictionary?",
+        "options": ["A) dict()", "B) {}", "C) Both A and B", "D) None of the above"],
+        "answer": "C",
+        "explanation": "Both dict() and {} create empty dictionaries."
+    },
+    {
+        "id": 9,
+        "question": "Which keyword is used to exit a loop prematurely?",
+        "options": ["A) exit", "B) break", "C) stop", "D) end"],
+        "answer": "B",
+        "explanation": "break is used to exit a loop immediately."
+    },
+    {
+        "id": 10,
+        "question": "What does the range(3) function generate?",
+        "options": ["A) [0, 1, 2]", "B) [1, 2, 3]", "C) [0, 1, 2, 3]", "D) [1, 2]"],
+        "answer": "A",
+        "explanation": "range(3) generates numbers from 0 to 2 (exclusive of 3)."
+    },
+    {
+        "id": 11,
+        "question": "Which method removes an item from a list by value?",
+        "options": ["A) remove()", "B) delete()", "C) pop()", "D) clear()"],
+        "answer": "A",
+        "explanation": "remove() removes the first occurrence of a value from a list."
+    },
+    {
+        "id": 12,
+        "question": "What is the output of 'hello'.upper()?",
+        "options": ["A) HELLO", "B) hello", "C) Hello", "D) Error"],
+        "answer": "A",
+        "explanation": "upper() converts all characters to uppercase."
+    },
+    {
+        "id": 13,
+        "question": "Which operator checks if a value is in a sequence?",
+        "options": ["A) contains", "B) in", "C) has", "D) find"],
+        "answer": "B",
+        "explanation": "The 'in' operator checks membership in a sequence."
+    },
+    {
+        "id": 14,
+        "question": "What does the sorted() function return?",
+        "options": ["A) Modifies original list", "B) Returns new sorted list", "C) Returns tuple", "D) Returns None"],
+        "answer": "B",
+        "explanation": "sorted() returns a new sorted list without modifying the original."
+    },
+    {
+        "id": 15,
+        "question": "Which statement is used to handle exceptions?",
+        "options": ["A) try-except", "B) catch", "C) error", "D) handle"],
+        "answer": "A",
+        "explanation": "try-except blocks are used for exception handling in Python."
+    }
+]

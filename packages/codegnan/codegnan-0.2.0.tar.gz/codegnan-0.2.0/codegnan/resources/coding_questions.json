@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "function_name": "is_palindrome",
+        "question": "Write a function `is_palindrome(s)` that returns True if string s is a palindrome, else False.",
+        "test_cases": [
+            {"input": "racecar", "output": true},
+            {"input": "hello", "output": false}
+        ]
+    },
+    {
+        "id": 2,
+        "function_name": "sum_evens",
+        "question": "Write a function `sum_evens(n)` that returns the sum of all even numbers from 1 to n.",
+        "test_cases": [
+            {"input": 6, "output": 12},
+            {"input": 3, "output": 2}
+        ]
+    },
+    {
+        "id": 3,
+        "function_name": "count_vowels",
+        "question": "Write a function `count_vowels(s)` that returns the number of vowels (a, e, i, o, u) in string s (case insensitive).",
+        "test_cases": [
+            {"input": "Hello World", "output": 3},
+            {"input": "Python", "output": 1}
+        ]
+    },
+    {
+        "id": 4,
+        "function_name": "factorial",
+        "question": "Write a function `factorial(n)` that returns the factorial of n (n!).",
+        "test_cases": [
+            {"input": 5, "output": 120},
+            {"input": 3, "output": 6}
+        ]
+    },
+    {
+        "id": 5,
+        "function_name": "find_max",
+        "question": "Write a function `find_max(lst)` that returns the maximum number in list lst.",
+        "test_cases": [
+            {"input": [1, 5, 3, 9, 2], "output": 9},
+            {"input": [-1, -5, -3], "output": -1}
+        ]
+    },
+    {
+        "id": 6,
+        "function_name": "reverse_string",
+        "question": "Write a function `reverse_string(s)` that returns the reversed version of string s.",
+        "test_cases": [
+            {"input": "hello", "output": "olleh"},
+            {"input": "Python", "output": "nohtyP"}
+        ]
+    },
+    {
+        "id": 7,
+        "function_name": "is_prime",
+        "question": "Write a function `is_prime(n)` that returns True if n is a prime number, else False.",
+        "test_cases": [
+            {"input": 17, "output": true},
+            {"input": 15, "output": false}
+        ]
+    },
+    {
+        "id": 8,
+        "function_name": "fibonacci",
+        "question": "Write a function `fibonacci(n)` that returns the nth number in the Fibonacci sequence (0-indexed).",
+        "test_cases": [
+            {"input": 5, "output": 5},
+            {"input": 8, "output": 21}
+        ]
+    },
+    {
+        "id": 9,
+        "function_name": "remove_duplicates",
+        "question": "Write a function `remove_duplicates(lst)` that returns a new list with duplicates removed, preserving order.",
+        "test_cases": [
+            {"input": [1, 2, 2, 3, 4, 4, 5], "output": [1, 2, 3, 4, 5]},
+            {"input": ["a", "b", "a", "c"], "output": ["a", "b", "c"]}
+        ]
+    },
+    {
+        "id": 10,
+        "function_name": "word_count",
+        "question": "Write a function `word_count(s)` that returns the number of words in string s (words separated by spaces).",
+        "test_cases": [
+            {"input": "Hello world Python", "output": 3},
+            {"input": "Codegnan Quest", "output": 2}
+        ]
+    }
+]
