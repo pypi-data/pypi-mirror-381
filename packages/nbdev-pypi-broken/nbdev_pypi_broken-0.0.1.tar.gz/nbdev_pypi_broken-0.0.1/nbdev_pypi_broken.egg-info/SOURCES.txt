@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+settings.ini
+setup.py
+nbdev_pypi_broken/__init__.py
+nbdev_pypi_broken/_modidx.py
+nbdev_pypi_broken/core.py
+nbdev_pypi_broken.egg-info/PKG-INFO
+nbdev_pypi_broken.egg-info/SOURCES.txt
+nbdev_pypi_broken.egg-info/dependency_links.txt
+nbdev_pypi_broken.egg-info/entry_points.txt
+nbdev_pypi_broken.egg-info/not-zip-safe
+nbdev_pypi_broken.egg-info/requires.txt
+nbdev_pypi_broken.egg-info/top_level.txt
