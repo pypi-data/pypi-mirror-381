@@ -1,0 +1,8 @@
+include README.md
+include LICENSE
+recursive-include scriptthing/templates *.py *.sh *.js *.jinja2
+recursive-include scriptthing/config *.toml
+recursive-include scriptthing/bindings *.sh *.js *.zsh *.fish
+include scriptthing/core/__init__.py
+global-exclude *.pyc
+global-exclude __pycache__/*
