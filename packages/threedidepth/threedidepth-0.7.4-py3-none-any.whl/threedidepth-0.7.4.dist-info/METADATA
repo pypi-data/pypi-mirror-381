@@ -1,0 +1,228 @@
+Metadata-Version: 2.4
+Name: threedidepth
+Version: 0.7.4
+Summary: Calculate waterdepths for 3Di results.
+Home-page: https://github.com/nens/threedidepth
+Author: Arjan Verkerk
+Author-email: arjan.verkerk@nelen-schuurmans.nl
+License: BSD license
+Keywords: threedidepth
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.5
+License-File: LICENSE
+Requires-Dist: h5py
+Requires-Dist: h5netcdf
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: threedigrid
+Provides-Extra: test
+Requires-Dist: flake8; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+threedidepth
+============
+
+Waterdepth
+----------
+
+Calculate waterdepths for 3Di results. For results of type 'raw' the variable
+'s1' is used as waterlevel. For results of type 'aggregate', the variable
+'s1_max' is used as waterlevel.
+
+Concentrations
+--------------
+Calculate concentrations for 3Di water quality results.
+
+
+Features
+--------
+
+* Interpolated or gridcell-constant waterlevels or concentrations
+* Interfaces with threediresults via `threedigrid`
+* Progress indicator support
+* Low memory consumption
+
+For the interpolated mode, the 'lizard'-method is used. For a detailed
+description, read the docstring for the `LizardLevelCalculator`.
+
+For the maximum waterlevel calculation, the maximum waterlevel for each point
+is taken before the interpolation is applied. This can lead to situations where
+the highest waterlevel for a pixel for a certain timestep is higher than the
+maximum waterlevel for the pixel.
+
+
+Installation
+------------
+
+Make sure GDAL is available as (`from osgeo import gdal`)
+
+$ pip install threedidepth
+
+
+Usage
+-----
+
+From the cli::
+
+    $ threedidepth gridadmin.h5 results_3di.nc dem.tif waterdepth.tif
+    $ threediwq gridadmin.h5 water_quality_results_3di.nc substance1 <xmin ymin xmax ymax> concentration.tif
+
+Or python::
+
+    >>> threedidepth.calculate_waterdepth(...)
+    >>> threedidepth.calculate_water_quality(...)
+
+
+Development installation with Docker Compose
+--------------------------------------------
+
+For development, clone the repository and use a docker compose setup::
+
+    $ docker compose build --build-arg uid=`id -u` --build-arg gid=`id -g` lib
+    $ docker compose up --no-start
+    $ docker compose start
+    $ docker compose exec lib bash
+
+Create a virtualenv::
+
+    # note that Dockerfile prepends .venv/bin to $PATH
+    (docker)$ python3 -m venv .venv --system-site-packages
+
+Install dependencies & package and run tests::
+
+    (docker)$ pip install -r requirements.txt
+    (docker)$ pip install -e .[test]
+    (docker)$ pytest
+
+Update packages::
+    
+    (docker)$ rm -rf .venv
+    (docker)$ python3 -m venv .venv --system-site-packages
+    (docker)$ pip install -e .
+    (docker)$ pip freeze | grep -v threedidepth > requirements.txt
+
+
+Changelog of threedidepth
+=========================
+
+
+0.7.4 (2025-10-03)
+------------------
+
+- Remove faulty assertion. Add a note.
+
+
+0.7.3 (2025-10-03)
+------------------
+
+- Handle broken WaterQuality results gracefully.
+
+
+0.7.2 (2025-10-03)
+------------------
+
+- Add timestamps to band descriptions.
+
+
+0.7.1 (2025-09-24)
+------------------
+
+- Keep old mode constants available for backwards compatibility.
+
+
+0.7.0 (2025-09-23)
+------------------
+
+- Add support for water quality results.
+
+
+0.6.3 (2024-03-22)
+------------------
+
+- Fix no_data_value is undefined.
+
+
+0.6.2 (2024-03-14)
+------------------
+
+- Assign a default value if no_data_value is undefined.
+
+
+0.6.1 (2023-07-11)
+------------------
+
+- Add release action for automatic upload to GitHub and PyPI.
+
+
+0.6.0 (2023-07-10)
+------------------
+
+- Update dependency versions
+- Add support for calculating maximum waterlevel as well as per timestep.
+
+
+0.5 (2021-07-02)
+----------------
+
+- Added support for result type 'aggregate'.
+
+- Got rid of NetCDF4 dependency by using h5netcdf.
+
+- Fix coordinates of NetCDF output. (#17)
+
+
+0.4 (2021-03-23)
+----------------
+
+- Enabled multiple calculation steps.
+
+- Added netCDF output option.
+
+
+0.3 (2021-02-10)
+----------------
+
+- Reorder to match the lizard triangulation.
+
+
+0.2 (2020-12-10)
+----------------
+
+- Implemented lizard method and set it as default.
+
+
+0.1.2 (2020-09-21)
+------------------
+
+- Fix off-by-one-pixel nodgrid.
+
+
+0.1.1 (2020-09-11)
+------------------
+
+- Fix flipped nodgrid.
+
+
+0.1 (2020-09-03)
+----------------
+
+- First version.

@@ -1,0 +1,12 @@
+threedidepth/__init__.py,sha256=FsRRUZGGpZkGF1ncW6kIaXreAFddGyUz7dQMwavmPQE,212
+threedidepth/calculate.py,sha256=vs3aHYjYxizVuG6SqQzdiMnluD5XBMW0tBx3KBj0yWM,31961
+threedidepth/commands.py,sha256=gX6jOq-NpLYVbFWuXzPlmOHb1Dkh2yviZh07KoYOGco,4411
+threedidepth/fixes.py,sha256=734e4IvnyKac-FI0c6Fz6zx_rE5UxNDhIOjBdvsxgdw,1446
+threedidepth/morton.py,sha256=Hk5HHTvJvgqC8UHDZEav6UObNBHps0dCoQuETjpY1wc,5403
+threedidepth/tiffs.py,sha256=usWqHFERR_R4tHq0LxmhTdrcvsI5vj9VHNrU2uQJ_RA,1951
+threedidepth-0.7.4.dist-info/licenses/LICENSE,sha256=5G63mlqp5zCILQ7QS-GV2-6sXfjFF3_LtZ9Hid0U7VM,1507
+threedidepth-0.7.4.dist-info/METADATA,sha256=da9ANpJmLVz7PYJrZqA4ed6W6kbczwC36RgBZAyFan0,4882
+threedidepth-0.7.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+threedidepth-0.7.4.dist-info/entry_points.txt,sha256=yn1WHwpfozt-JjOC3ZRcKWWUyw2Qv02-4_7cHfjHpJc,112
+threedidepth-0.7.4.dist-info/top_level.txt,sha256=Wc_lq-nsuOejfOhgFUARDKdknLKR5dYg9Ra6EAcSNZI,13
+threedidepth-0.7.4.dist-info/RECORD,,
