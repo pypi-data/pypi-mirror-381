@@ -1,0 +1,2 @@
+[console_scripts]
+yourbubble = yourbubble.messagerie:main
