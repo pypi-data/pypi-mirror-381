@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: com-terra-error
+Version: 0.1.0
+Summary: Reusable error handling utility
+License: MIT
+Author: Telephone.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Dist: fastapi (>=0.111.0,<=0.116.1)
+Requires-Dist: starlette (>=0.27.0)
+Description-Content-Type: text/markdown
+
+# python-be-common-error

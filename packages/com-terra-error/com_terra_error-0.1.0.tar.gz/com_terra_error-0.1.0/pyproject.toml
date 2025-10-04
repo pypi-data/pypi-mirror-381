@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "com-terra-error"
+version = "0.1.0"
+description = "Reusable error handling utility"
+authors = ["Telephone.com"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = ">=0.111.0,<=0.116.1"
+starlette = ">=0.27.0"
+
+[[tool.poetry.packages]]
+include = "error"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
