@@ -1,0 +1,2 @@
+[console_scripts]
+macos-serving = inference.cli:main
