@@ -1,0 +1,13 @@
+numpy>=1.21.0
+
+[dev]
+pytest>=7.0
+pytest-cov
+mypy
+python-dotenv>=1.0.0
+
+[openai]
+openai>=1.0.0
+
+[sentence-transformers]
+sentence-transformers>=2.2.0

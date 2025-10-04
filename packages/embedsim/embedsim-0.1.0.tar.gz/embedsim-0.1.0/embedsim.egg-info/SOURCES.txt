@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+embedsim/__init__.py
+embedsim/backends.py
+embedsim/embedsim.py
+embedsim.egg-info/PKG-INFO
+embedsim.egg-info/SOURCES.txt
+embedsim.egg-info/dependency_links.txt
+embedsim.egg-info/requires.txt
+embedsim.egg-info/top_level.txt
+tests/test_corpus.py
+tests/test_groupsim.py
+tests/test_pairsim.py
