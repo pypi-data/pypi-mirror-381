@@ -1,0 +1,8 @@
+embedsim/__init__.py,sha256=YaO6nyR6GeyRlFdPRMwejowL8t4fd3E4M9Q5k6vUAN8,253
+embedsim/backends.py,sha256=JZrOgg_TeQOYTpe5MCT8wJZ96BPRNtqmo_R0zzeKwrs,4292
+embedsim/embedsim.py,sha256=K6eb2eOKCxsoU3eDcHuaE3UQtFRmKfU-V-IVINeBXpM,4427
+embedsim-0.1.0.dist-info/licenses/LICENSE,sha256=JX1_V83UXgzfaK4r7PR6GwefN94fM4KT9uA459KEAgs,1065
+embedsim-0.1.0.dist-info/METADATA,sha256=wIbXq_0XprFfIC3RyXGXTzFsbAIeyVBup5MpgyVsU8I,4798
+embedsim-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+embedsim-0.1.0.dist-info/top_level.txt,sha256=kmNAWVkK28oxkvulZ0HljGfkk6qdPofDCDQJOhaaKaA,9
+embedsim-0.1.0.dist-info/RECORD,,
