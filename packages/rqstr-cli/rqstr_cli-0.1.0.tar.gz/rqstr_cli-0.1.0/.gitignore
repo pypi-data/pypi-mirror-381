@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+**/*.rest.test
+!test/resources/**/*.rest.test
+
+.request_collection_schema.json
+live
+*.log
+out
+src/rqstr/_version.py
+.ruff_cache
+.rqstr_schema.json
+
+*coverage*
