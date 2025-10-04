@@ -1,0 +1,11 @@
+fakedb/__init__.py,sha256=w0Sh4Eg9AWlKJlVWQbd2XHDdNRe93VdgiNKRonFgsBo,2526
+fakedb/fake_mongo.py,sha256=MfLNwCT1hy5p2K7xtb9FDxeRaQNSGJMxEN_tM1Rxrto,11520
+fakedb/fake_postgres.py,sha256=MYQbCkFmah9gHLm0D0QKlgw_HE5s8lc-94dSZbpou-I,15472
+fakedb/model_adapters.py,sha256=ZPL6oyKGxPehRSe1soXLYEj4KHJNrCDcNn0S5-P4lqs,6664
+fakedb/storage_backends.py,sha256=pe3-gBr3ZzYuuRp2NsbwxeF_m-2dNDAa7EiXpT1sNGY,16882
+fakedb/.ipynb_checkpoints/fake_mongo-checkpoint.py,sha256=9Us7dITqXvzEjFov5On9jZuOJXCNpaGU-82-uH1qiz4,10956
+fakedb/.ipynb_checkpoints/fake_postgres-checkpoint.py,sha256=KRjnsbn4HGwlFingIJ6vJ-jb7wj5SFUTQHKZ46ZRQbg,15851
+fakedb-0.1.0.dist-info/METADATA,sha256=LnZ-Fi-xgOhRlYUooOPcg490AHQYn9yByFTyCOYFCP0,2420
+fakedb-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+fakedb-0.1.0.dist-info/top_level.txt,sha256=7Sa9vgFAOjPpy3VX0-dbLfPgt98258DrGZQ9DfnqgSQ,7
+fakedb-0.1.0.dist-info/RECORD,,
