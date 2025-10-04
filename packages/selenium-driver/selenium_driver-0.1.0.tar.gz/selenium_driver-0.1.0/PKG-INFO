@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: selenium_driver
+Version: 0.1.0
+Summary: Pacote para automação Selenium customizado
+Home-page: https://github.com/seu_usuario/selenium_driver
+Author: Seu Nome
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.MD
+Requires-Dist: selenium>=4.0.0
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# SeleniumDriver
+
+Pacote Python para automação de navegadores com Selenium, com funções utilitárias para abrir sites, esperar elementos, clicar, preencher campos e muito mais.
+
+## Instalação
+
+Você pode instalar diretamente do PyPI:
+
+```bash
+pip install selenium_driver
+```
