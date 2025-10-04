@@ -1,0 +1,12 @@
+arithop/__init__.py,sha256=PZisAIz53YwVwKq6DCaEIpbQv-8kaXoWLYHiYzCfzP4,131
+arithop/__main__.py,sha256=Ccez54h76H8Hh6ya3WxU4m5Yupwm_k0Bp-sqcUflHYs,939
+arithop/operations.py,sha256=Qfn2_z6L-l_0aERWrHIMAbWh2qmVI51VikhGY0nGGCg,796
+arithoperation/__init__.py,sha256=PZisAIz53YwVwKq6DCaEIpbQv-8kaXoWLYHiYzCfzP4,131
+arithoperation/__main__.py,sha256=Ccez54h76H8Hh6ya3WxU4m5Yupwm_k0Bp-sqcUflHYs,939
+arithoperation/operations.py,sha256=Qfn2_z6L-l_0aERWrHIMAbWh2qmVI51VikhGY0nGGCg,796
+test/test_operations.py,sha256=rcOjDFN67T1TFrhclSL3epBS4mT8BDi_RN03qsWnwAk,633
+arithoperator-1.0.1.dist-info/METADATA,sha256=kxD2UHU1VlYaQEvMaMFOCN4bkulB9-ro92rp5qteaFg,1126
+arithoperator-1.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+arithoperator-1.0.1.dist-info/entry_points.txt,sha256=xDPLkMyckIpZdTOg2lJT-236WhO5K7UAONSVJqeWaPs,50
+arithoperator-1.0.1.dist-info/top_level.txt,sha256=3FGuzU6i-M2K9pXtu9yRyVFetS8OYWgVXkvZJTcvmig,28
+arithoperator-1.0.1.dist-info/RECORD,,
