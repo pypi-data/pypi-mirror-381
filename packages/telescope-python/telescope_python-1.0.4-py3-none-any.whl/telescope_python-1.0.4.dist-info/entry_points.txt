@@ -1,0 +1,3 @@
+[console_scripts]
+telescope-test=telescope.cli:test_connection
+
