@@ -1,0 +1,14 @@
+mathhunt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mathhunt/__data/__init__.py,sha256=06VCRxJIY_a2jIHL5PnnVkrldJEDzOxChZ4YRn1B29w,241
+mathhunt/__data/bradis_table.json,sha256=mHswuMG7IQZRDiaqp_SelTZ53u4Yl2tXG_VmOdxTx5U,245392
+mathhunt/functions/__init__.py,sha256=5uSI6PKolygX46jtmUnZSbdaT4gYIRjCfc8L_9jB2cI,24
+mathhunt/functions/functions.py,sha256=UFHK-OZwUZV4JCJCPY-fNwYha7BUx4M66GAy9SsAMWE,16964
+mathhunt/geometry/__init__.py,sha256=BU2bkTVwOtSLk7WWNMzPfr_Mvha0dkTyZNQ1FtQff5Q,160
+mathhunt/geometry/distances.py,sha256=BcB9hbwlQxUK-fAtIwLTs8m1ufT8rb43QdHlseUR5TI,5822
+mathhunt/geometry/shapes.py,sha256=UNugyURs6cq3rvwiWagT2xwrAt2_XfTmvI--38O2bgY,5360
+mathhunt/logic/__init__.py,sha256=85aWC3s9ioHmKr3rtAzanjJm-bEFHLBa42EClhRY0IY,330
+mathhunt/logic/logic.py,sha256=wtk0HcQ7irhTp3N8459jS_LJBFybY_BmxYshr5uc3RU,2140
+mathhunt-0.3.0.dist-info/METADATA,sha256=14B74NMlmkJYGuY-ga0iD1nBGWdp8NSOQp5TJEyuFwk,10349
+mathhunt-0.3.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mathhunt-0.3.0.dist-info/top_level.txt,sha256=V0p9AauXIog074Y_QP2Hz-TeglqQ1qFmEBqXfucl1dg,9
+mathhunt-0.3.0.dist-info/RECORD,,
