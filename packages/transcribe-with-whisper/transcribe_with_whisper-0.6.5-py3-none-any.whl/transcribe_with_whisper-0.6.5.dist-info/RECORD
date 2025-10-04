@@ -1,0 +1,9 @@
+transcribe_with_whisper/__init__.py,sha256=Yem2669TqpcJMvlb6VBryKFlcRSwnB2BFH91BtTBTrw,7138
+transcribe_with_whisper/main.py,sha256=X3TLso1goZUhpeoU5FodwrcS0OwBwBeZRv3uTlgm7tY,37200
+transcribe_with_whisper/mercuryscribe.py,sha256=ki5QsFRUaD68sG86SZ-ZY59BypD1xSnSLVJD27qEHGg,742
+transcribe_with_whisper/server_app.py,sha256=eoA-bb2HvxMMq4HdMC_j_s2X3XCP58i0T-5XPsaFVUs,59387
+transcribe_with_whisper-0.6.5.dist-info/METADATA,sha256=1HB0dct_XCdHY5zWCpEjlLyOt3A6aOPkWPr2cGlXMnY,20146
+transcribe_with_whisper-0.6.5.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+transcribe_with_whisper-0.6.5.dist-info/entry_points.txt,sha256=SwkLG5ASPLO3MymUldwmpaPlOcSH38nwNVkI9ABvFVk,137
+transcribe_with_whisper-0.6.5.dist-info/top_level.txt,sha256=BI_SP_TmxpYX2zp9KTk-_A7vhLNdJmGw0WASTm5cblw,24
+transcribe_with_whisper-0.6.5.dist-info/RECORD,,
