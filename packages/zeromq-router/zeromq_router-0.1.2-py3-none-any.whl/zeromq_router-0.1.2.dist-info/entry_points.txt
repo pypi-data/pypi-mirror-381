@@ -1,0 +1,3 @@
+[console_scripts]
+zeromq-router = zeromq_router:main
+
