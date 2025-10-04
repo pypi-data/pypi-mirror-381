@@ -1,0 +1,34 @@
+structure_rules:
+  base_structure:
+    - description: "Core project files required for any repository including documentation, configuration, and tooling files"
+    - require: "environment.yml"
+    - require: "LICENSE"
+    - require: 'README\.md'
+    - require: 'PUBLISHING\.md'
+    - require: 'conflicting_test_config\.yaml'
+    - require: '\.pre-commit-config\.yaml'
+    - require: '\.pre-commit-hooks\.yaml'
+    - require: '\.markdownlint\.yaml'
+    - require: 'pyproject\.toml'
+    - require: 'repo_structure\.iml'
+    - require: 'renovate\.json'
+    - require: '\.python-version'
+    - require: '\.pylintrc'
+  python_package:
+    - description: "Standard Python package structure with modules, tests, and configuration files"
+    - require: '__main__\.py'
+    - require: '__init__\.py'
+    - require: '.*\.py'
+    - require: 'config\.schema\.json'
+    - require: 'test_config_.*\.yaml'
+
+directory_map:
+  /:
+    - description: "Root directory containing project documentation, configuration files, and main project structure"
+    - use_rule: base_structure
+  /repo_structure/:
+    - description: "Main Python package directory containing the core application logic and modules"
+    - use_rule: python_package
+  /.github/:
+    - description: "GitHub-specific configuration and workflow files - ignored from structure validation"
+    - use_rule: ignore
