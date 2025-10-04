@@ -1,0 +1,12 @@
+fastosteoid.cp314-win_amd64.pyd,sha256=F4uKiiG7wEWqLLhFOC_DNq35IH4rx-6AwtW4xM6y5sE,157696
+osteoid/__init__.py,sha256=WYC1P4VmG3xmZ3FyPCizRLxmOuxy35Blux-Wc-Eq2uk,88
+osteoid/exceptions.py,sha256=dE3jwy6vAwINBdGe8MTjaaxKGKeZCBvHOr546WenFsA,669
+osteoid/lib.py,sha256=Qk2WqAn6QKqFIHpF5qis_raTxltXCFdTgSa3WIkTe2s,23830
+osteoid/skeleton.py,sha256=jOtKWHVbyMaUQ-QvxSFXVgRCkZvUwZ0nPEmM18ngaXs,40205
+osteoid/util.py,sha256=3-a0ZpWGXSvIElPMCJxry1nx_xLRVYsuvvNWlFCf-vI,483
+osteoid/viewer.py,sha256=RPkzZLCnXIpDF1tnpKkuKKdsrXloisH4nodK2AQ5PKM,3687
+osteoid-0.5.0.dist-info/licenses/LICENSE,sha256=P1lSlkv3LozSMAdmVBMjCbDxg0bSGCl7p0O3ec8EDF4,1524
+osteoid-0.5.0.dist-info/METADATA,sha256=5o0GvyCcA3nqY9KgXE3T8jR31hgLeKJt98GM7ULYKbk,3070
+osteoid-0.5.0.dist-info/WHEEL,sha256=7k6Wcy588iJYe5lf5K095NLg-uoBTnE-T8eHJ92G4_4,101
+osteoid-0.5.0.dist-info/top_level.txt,sha256=NDa_x3oYk2zWeZYjGkejJuxpqzNm3eYcIAkP1be4JVY,20
+osteoid-0.5.0.dist-info/RECORD,,
