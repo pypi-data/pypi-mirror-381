@@ -1,0 +1,14 @@
+claude_workshop-0.1.0.dist-info/licenses/LICENSE,sha256=cB1Euuyil2onq_FDJRLUhvbKM3xewiyHn7-DwqSnAhg,1076
+src/__init__.py,sha256=0E1fxdDLSIJMMFUiYX1G0qtAi14-WPbz4DOep-D7LYw,81
+src/cli.py,sha256=nOeZjEazY1r88SoBKn3DaP6GEayJpti4T4gwFftf0Cc,19544
+src/display.py,sha256=nVDDixjKdewQz9_dX-i8NUoTvyVYtUQoztQ8sp9Sdnw,15012
+src/git_utils.py,sha256=Ll_RE6uKjhR7LSHOTsQULsoDvjAlj-o5qVrE5Km-Llw,1473
+src/migrate.py,sha256=vBGlOLSFzrMuhv1Ltp3vS5-HyBGZT9VASsBBxajYwoM,6282
+src/schema.sql,sha256=NwGmRhQQ6D9xFUWH2orUHlszQCh1x3N6FIKWroOoGho,5216
+src/storage.py,sha256=aOlsDDTYCC_TSWL0Q5EjDhfVOEMfAED2mfGTKatgp_A,16276
+src/storage_sqlite.py,sha256=qkBI-Nhlnx8MsEs08YVvcysw2pTQFkASVSg3SOaXkrA,23332
+claude_workshop-0.1.0.dist-info/METADATA,sha256=uaVHZiy39OpmQrZ3AEoAfxDisi2M8aIYqiG5jCVBZ_U,6879
+claude_workshop-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+claude_workshop-0.1.0.dist-info/entry_points.txt,sha256=N2UqCibwYen-oKmk92IHCvxEH0q4t4ViPDasZb0RbX4,42
+claude_workshop-0.1.0.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+claude_workshop-0.1.0.dist-info/RECORD,,
