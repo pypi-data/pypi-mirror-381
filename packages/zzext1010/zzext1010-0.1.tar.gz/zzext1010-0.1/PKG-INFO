@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: zzext1010
+Version: 0.1
+Summary: geoestadistica
+Home-page: https://github.com/fededimant/zzext1010
+Author: fede
+Author-email: fededimant@hotmail.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: summary

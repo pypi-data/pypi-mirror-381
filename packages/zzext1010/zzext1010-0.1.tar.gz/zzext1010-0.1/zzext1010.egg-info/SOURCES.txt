@@ -1,0 +1,5 @@
+setup.py
+zzext1010.egg-info/PKG-INFO
+zzext1010.egg-info/SOURCES.txt
+zzext1010.egg-info/dependency_links.txt
+zzext1010.egg-info/top_level.txt
