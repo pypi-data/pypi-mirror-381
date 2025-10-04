@@ -1,0 +1,5 @@
+[console_scripts]
+provolone = provolone.cli:main
+
+[provolone.datasets]
+example = provolone.datasets.example.loader

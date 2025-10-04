@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "provolone"
+version = "0.0.1"
+description = "Package to create and track provenance metadata for datasets"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{ name = "Daniel Greenwald" }]
+keywords = ["data", "economics", "datasets", "pandas", "snapshots"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+  "pandas>=2.1",
+  "pyarrow>=17",          # feather/parquet IO + Arrow bridge
+  "pydantic>=2.8",        # Phase 3 config
+  "pydantic-settings>=2.3",
+  "python-dateutil>=2.9",
+  "typer>=0.9.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/dgreenwald/provolone"
+Repository = "https://github.com/dgreenwald/provolone"
+Issues = "https://github.com/dgreenwald/provolone/issues"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2",
+  "ruff>=0.6",
+  "black>=24.8",
+  "mypy>=1.11",
+]
+
+[project.scripts]
+provolone = "provolone.cli:main"
+
+[project.entry-points."provolone.datasets"]
+example = "provolone.datasets.example.loader"
+
+[tool.setuptools]
+package-dir = {"" = "src"}            # src layout
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["provolone*"]                # picks up provolone and subpackages
+
+# Ruff + Black (we’ll flesh out rules in Phase 5, but harmless to add now)
+[tool.ruff]
+line-length = 100
+target-version = "py311"
