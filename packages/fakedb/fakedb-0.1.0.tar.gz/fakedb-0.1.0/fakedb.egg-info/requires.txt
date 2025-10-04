@@ -1,0 +1,13 @@
+
+[cloud]
+google-cloud-storage>=2.0
+
+[dev]
+pytest>=7
+pytest-asyncio>=0.21
+pytest-cov>=4
+
+[extras]
+pydantic>=1.10
+sqlmodel>=0.0.8
+sqlalchemy>=1.4

@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+pyproject.toml
+fakedb/__init__.py
+fakedb/fake_mongo.py
+fakedb/fake_postgres.py
+fakedb/model_adapters.py
+fakedb/storage_backends.py
+fakedb.egg-info/PKG-INFO
+fakedb.egg-info/SOURCES.txt
+fakedb.egg-info/dependency_links.txt
+fakedb.egg-info/requires.txt
+fakedb.egg-info/top_level.txt
+fakedb/.ipynb_checkpoints/fake_mongo-checkpoint.py
+fakedb/.ipynb_checkpoints/fake_postgres-checkpoint.py
