@@ -1,0 +1,90 @@
+[build-system]
+requires = ["flit_core >=3.10.0,<4"]
+build-backend = "flit_core.buildapi"
+[project]
+name = "scrapy-contrib-bigexporters"
+authors = [
+    {name = "Jörn Franke", email = "oss@zuinnote.eu"},
+]
+version = "0.6.0"
+description = "Scrapy exporter for Big Data formats"
+readme = "README.rst"
+classifiers = ["Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Libraries",
+    "Operating System :: OS Independent"
+]
+
+requires-python = ">=3.12"
+dependencies = [
+    "Scrapy>=2.13.3"
+]
+[project.optional-dependencies]
+avro = [
+    "fastavro>=1.12.0"
+]
+iceberg = [
+    "pyiceberg>=0.10.0",
+    "pyarrow"
+]
+parquet = [
+    "fastparquet>=2024.11.0",
+    "pandas>=2.2.0"
+]
+orc = [
+    "pyorc>=0.10.0"
+]
+test = [
+    "pyiceberg[sql-sqlite]>=0.10",
+    "coverage>=7.10",
+    "tox>=4.30.0",
+    "pytest>=8.4.0"
+]
+doc = [
+    "sphinx>=8.2.0"
+]
+dev = [
+    "black>=25.9.0",
+    "prospector>=1.17.0",
+    "pylint>=3.3.0",
+    "bandit>=1.8.0",
+    "pycodestyle>=2.14.0",
+    "mccabe>=0.7.0",
+    "mypy>=1.18.0"
+]
+[project.urls]
+homepage = "https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters"
+documentation = "https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters"
+source = "https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters"
+download = "https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters"
+tracker = "https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters/issues"
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = [
+    "tests"
+]
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = True
+[testenv]
+deps = pytest >= 8.0.0, <9
+commands = pytest
+"""
+
+[tool.flit.sdist]
+exclude = [".pypirc"]
+
+
+
+ 
+[tool.flit.module]
+name = "zuinnote"

@@ -1,0 +1,141 @@
+Metadata-Version: 2.4
+Name: scrapy-contrib-bigexporters
+Version: 0.6.0
+Summary: Scrapy exporter for Big Data formats
+Author-email: Jörn Franke <oss@zuinnote.eu>
+Requires-Python: >=3.12
+Description-Content-Type: text/x-rst
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: Scrapy>=2.13.3
+Requires-Dist: fastavro>=1.12.0 ; extra == "avro"
+Requires-Dist: black>=25.9.0 ; extra == "dev"
+Requires-Dist: prospector>=1.17.0 ; extra == "dev"
+Requires-Dist: pylint>=3.3.0 ; extra == "dev"
+Requires-Dist: bandit>=1.8.0 ; extra == "dev"
+Requires-Dist: pycodestyle>=2.14.0 ; extra == "dev"
+Requires-Dist: mccabe>=0.7.0 ; extra == "dev"
+Requires-Dist: mypy>=1.18.0 ; extra == "dev"
+Requires-Dist: sphinx>=8.2.0 ; extra == "doc"
+Requires-Dist: pyiceberg>=0.10.0 ; extra == "iceberg"
+Requires-Dist: pyarrow ; extra == "iceberg"
+Requires-Dist: pyorc>=0.10.0 ; extra == "orc"
+Requires-Dist: fastparquet>=2024.11.0 ; extra == "parquet"
+Requires-Dist: pandas>=2.2.0 ; extra == "parquet"
+Requires-Dist: pyiceberg[sql-sqlite]>=0.10 ; extra == "test"
+Requires-Dist: coverage>=7.10 ; extra == "test"
+Requires-Dist: tox>=4.30.0 ; extra == "test"
+Requires-Dist: pytest>=8.4.0 ; extra == "test"
+Project-URL: documentation, https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters
+Project-URL: download, https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters
+Project-URL: homepage, https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters
+Project-URL: source, https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters
+Project-URL: tracker, https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters/issues
+Provides-Extra: avro
+Provides-Extra: dev
+Provides-Extra: doc
+Provides-Extra: iceberg
+Provides-Extra: orc
+Provides-Extra: parquet
+Provides-Extra: test
+
+===========================
+scrapy-contrib-bigexporters
+===========================
+
+
+Overview
+========
+
+scrapy-contrib-bigexporters provides additional exporters for the web crawling and scraping framework Scrapy (https://scrapy.org).
+
+The following big data formats are supported:
+
+* Avro: https://avro.apache.org/
+* Parquet: https://parquet.apache.org/
+* Orc: https://orc.apache.org
+
+The library is published using `pypi trusted publishers <https://docs.pypi.org/trusted-publishers/>`_
+
+Requirements
+============
+
+* Python 3.12+
+* Scrapy 2.13+
+* Works on Linux, Windows, macOS, BSD
+* Parquet export requires fastparquet 2024.1+
+* Avro export requires fastavro 1.12+
+* ORC export requires pyorc 0.10+
+* Iceberg export requires pyiceberg 0.10+
+
+Install
+=======
+
+The quick way (pip)::
+
+    pip install scrapy-contrib-bigexporters
+
+Alternatively, you can install it from `conda-forge <https://anaconda.org/conda-forge/scrapy-contrib-bigexporters>`_::
+
+    conda install -c conda-forge scrapy-contrib-bigexporters
+
+Depending on which format you want to use you need to install one or more of the following libraries.
+
+Avro::
+
+    pip install fastavro
+    
+Avro is a file format.
+
+Iceberg::
+
+    pip install pyiceberg pyarrow
+
+Iceberg is an open table format.
+
+Note: Most likely you will need to add specific dependencies so that Iceberg works for you. See `pyiceberg installation <https://py.iceberg.apache.org/#installation>`_
+
+ORC::
+
+    pip install pyorc
+
+ORC is a file format.
+
+Parquet::
+
+    pip install fastparquet
+
+Parquet is a file format.
+
+Additional libraries may be needed for specific compression algorithms. The open table format may require additional libraries also to use different filesystems, catalogs and compression formats. See "Use".
+
+Use
+====
+
+Use of the library is simple. Install it with your Scrapy project as described above.You only need to configure the exporter in the Scrapy settings, run your scraper and the data will be exported into your desired format. There is no development needed.
+
+See here for configuring the exporter in settings:
+
+* `Avro <https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters/src/branch/main/docs/avro.rst>`_
+* `Iceberg <https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters/src/branch/main/docs/iceberg.rst>`_
+* `Parquet <https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters/src/branch/main/docs/parquet.rst>`_
+* `ORC <https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters/src/branch/main/docs/orc.rst>`_
+
+Source
+======
+
+The source is available at:
+
+* Codeberg (a non-commercial European hosted Git for Open Source): https://codeberg.org/ZuInnoTe/scrapy-contrib-bigexporters
+* Github (an US hosted commercial Git platform): https://github.com/ZuInnoTe/scrapy-contrib-bigexporters
+
