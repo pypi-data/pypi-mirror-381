@@ -1,0 +1,86 @@
+Metadata-Version: 2.4
+Name: context-local-server
+Version: 0.1.1
+Summary: A stdio MCP server to provide long-term memory for AI agents.
+Author-email: David Marcas Luna <david.marcas@gmail.com>
+License: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: fastmcp
+Requires-Dist: pydantic
+
+# AI Agent Context Server
+
+**local-context-server** is a lightweight, local MCP (Model Context Protocol) server designed to provide long-term memory for AI agents like Gemini, Claude, and others within environments like Cursor.
+
+It allows an AI agent to save, load, list, and search for *"contexts"*—pieces of knowledge such as application maps, test data, or business requirements—making it possible to create adaptive and intelligent QA automation.
+
+## Features
+
+- **Persistent Memory:** Store any JSON-serializable data in a local SQLite database.
+
+- **Simple Tool API:** Provides four core tools for the AI to manage its knowledge:
+  - `save_context`: Save or update a piece of knowledge.
+  - `load_context`: Retrieve knowledge by its unique ID.
+  - `list_contexts`: Browse all available knowledge.
+  - `search_contexts`: Search for knowledge by keyword.
+
+- **Automatic Database Location:** The server automatically creates and manages its database file (`memory_tests.db`) in a folder named `context-database` inside your user's home directory. This requires no configuration.
+
+# Installation & Usage
+
+The server is designed to be run on-the-fly by an MCP client like Cursor, requiring no manual setup for end-users.
+
+## Prerequisites
+
+Python 3.8+
+pipx (a tool for running Python applications in isolated environments)
+
+
+```Bash
+pip install pipx
+Usage in Cursor
+````
+
+To use this server with Cursor, add the following to your .cursor/mcp.json configuration file. This command downloads and runs the server package from PyPI.
+
+```JSON
+"mcpServers": {
+    "context-local-server": {
+      "command": "pipx",
+      "args": [
+        "run",
+        "context-local-server"
+      ]
+    },
+}
+```
+
+# How to Use with an AI Agent
+
+Once configured in Cursor, you can interact with the server using the name you defined in mcp.json.
+
+## Saving a Context
+```
+Your mission is to execute the login flow and document the steps. As you perform each action (navigate, enter text, click) with @mobile-mcp, add a description of that action to a list.
+
+When you have successfully logged in, use @local-context-server to save the complete list of steps with the id flow_login_v1.
+```
+
+## Listing all Contexts
+
+```
+Use @local-context-server, execute list_contexts to show me all the knowledge you have.
+```
+
+## Searching for a Context
+
+```
+Your mission is to perform the login flow. I don't remember the exact ID. Use @local-context-server to search for contexts related to "login" (search by keyword "login" or related), load the correct one, and then execute the steps using @mobile-mcp.
+```
+
+## Using a Context
+
+```
+Perform a login using @mobile-mcp. Use the context app_map_v1 from @local-context-server as your knowledge base for the element IDs.
+```
