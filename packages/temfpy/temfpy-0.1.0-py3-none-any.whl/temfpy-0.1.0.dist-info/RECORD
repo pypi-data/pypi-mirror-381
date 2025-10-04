@@ -1,0 +1,13 @@
+temfpy/__init__.py,sha256=6ksEl1ZQylN04IS73D3SB7HSGBgfoHW0-E6kST1iI44,345
+temfpy/_version.py,sha256=5jwwVncvCiTnhOedfkzzxmxsggwmTBORdFL_4wq0ZeY,704
+temfpy/gutzwiller.py,sha256=ILwPZrC2nmMaafeSed6RPiGnX7U-sx1GOaWhBY0VX3g,5764
+temfpy/iMPS.py,sha256=ZAYJzvklDHpHZM4GjXyW0I3KHiWrowJk3qrYRU-ekVA,11378
+temfpy/pfaffian.py,sha256=6F_OJJz-NhKrQuIjKem3xu12cPLrfr2jBkHBFpymuJ4,73431
+temfpy/schmidt_utils.py,sha256=PozzOZzzVwE-B6YZmq74lLLAW-qlw3zvSCOz-7cHNl0,10537
+temfpy/slater.py,sha256=j8hFMSWlEFl_4lFpZWRpP30WSpkcF_6fa5YZYCXCwlU,52572
+temfpy/testing.py,sha256=zpjFRk6Op8o-sEx5hO78B4xIzuYovfhtDzMt_IasiiI,5282
+temfpy/utils.py,sha256=1ol60xcR14SHnTUx4veB4ViFXtyymee691-24GFi3-c,3490
+temfpy-0.1.0.dist-info/METADATA,sha256=nYJwdVtX-ftRxgDhavwTrS0OLNMbTHF_D4D7s-BjDNg,4972
+temfpy-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+temfpy-0.1.0.dist-info/licenses/LICENSE,sha256=bTADZ7BigyspWisQoJGzKKxKksDuja57hskiTrYCJvo,1073
+temfpy-0.1.0.dist-info/RECORD,,
