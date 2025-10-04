@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+errors/__init__.py
+errors/attribute_error.py
+errors/index_error.py
+errors/key_error.py
+errors/module_not_found_error.py
+errors/name_error.py
+errors/type_error.py
+errors/value_error.py
+errors/zero_division_error.py
+errorx.egg-info/PKG-INFO
+errorx.egg-info/SOURCES.txt
+errorx.egg-info/dependency_links.txt
+errorx.egg-info/top_level.txt
