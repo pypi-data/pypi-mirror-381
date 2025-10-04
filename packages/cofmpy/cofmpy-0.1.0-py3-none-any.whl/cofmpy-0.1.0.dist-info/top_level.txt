@@ -1,0 +1,6 @@
+LICENSES
+cofmpy
+docs
+notebooks
+tests
+use_cases
