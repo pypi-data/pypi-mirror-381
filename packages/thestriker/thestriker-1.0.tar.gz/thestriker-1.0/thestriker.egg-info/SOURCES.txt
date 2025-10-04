@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+thestriker/__init__.py
+thestriker/charfreq.py
+thestriker.egg-info/PKG-INFO
+thestriker.egg-info/SOURCES.txt
+thestriker.egg-info/dependency_links.txt
+thestriker.egg-info/top_level.txt
