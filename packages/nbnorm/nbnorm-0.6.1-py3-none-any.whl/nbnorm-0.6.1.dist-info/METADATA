@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: nbnorm
+Version: 0.6.1
+Summary: convenience tool to do mass notebook normalization.
+Project-URL: Repository, https://github.com/flotpython/nbnorm
+Project-URL: Bug Tracker, https://github.com/flotpython/nbnorm/issues
+Project-URL: Changelog, https://github.com/flotpython/nbnorm/blob/main/CHANGELOG.md
+Author-email: Thierry Parmentelat <thierry.parmentelat@minesparis.psl.eu>
+License: MIT License
+Keywords: education,jupyter,notebook,teaching
+Requires-Python: >=3.8
+Requires-Dist: jupytext
+Description-Content-Type: text/markdown
+
+# nbnorm
+
+a convenience tool to do mass notebook normalization
+
+initially developped for https://github.com/flotpython/course,
+and initially located in https://github.com/flotpython/tools,
+but substantially modified later on.
+
+**WARNING**: this is a moving target as it gets hacked along upon our current needs, not supposed to be a stable tool.
