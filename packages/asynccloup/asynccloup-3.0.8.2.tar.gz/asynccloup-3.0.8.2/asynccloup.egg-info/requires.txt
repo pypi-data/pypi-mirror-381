@@ -1,0 +1,5 @@
+anyio<5.0,>=4.10
+asyncclick<9.0,>=8.0
+
+[:python_version <= "3.10"]
+typing_extensions
