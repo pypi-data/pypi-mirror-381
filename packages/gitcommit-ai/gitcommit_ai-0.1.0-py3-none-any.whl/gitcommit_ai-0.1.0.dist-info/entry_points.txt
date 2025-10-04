@@ -1,0 +1,2 @@
+[console_scripts]
+gitcommit-ai = gitcommit_ai.cli.main:main
