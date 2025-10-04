@@ -1,0 +1,9 @@
+free_deepl_translator/__init__.py,sha256=dUnef_Y0dZMhqvcck_1w6EYMfp4xJo5UCP6LZUuYcuo,45
+free_deepl_translator/deepl_connector.py,sha256=vK-yAH4GcB9l1WUlcQ3y5Pb0hQGYo53YImAxD-Jv6Pw,7702
+free_deepl_translator/deepl_msgpack.py,sha256=zjhpzppsS_KNU1CNIrj0nq9VQeU9Jm-wcMmVh8cFu2Y,1433
+free_deepl_translator/deepl_protobuf.py,sha256=_wUMNIE2AvpZa62ZJ6rWv3DjfWoE9D7Sr0-stBvRdhk,9563
+free_deepl_translator/deepl_translator.py,sha256=OFeRdvO7O83lDBj6E169q_b4fcAhdXmbDSQx6lsFJM0,11110
+free_deepl_translator-1.2.0.dist-info/METADATA,sha256=vKWdb_CjaB8OLbrLzRTbb6wk0cpbyUOD-AeKMjfqbJ0,2732
+free_deepl_translator-1.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+free_deepl_translator-1.2.0.dist-info/top_level.txt,sha256=k9M9ZULHFF5rs0qPwBhG8cJsxPYh6h6xW634CldR6sc,22
+free_deepl_translator-1.2.0.dist-info/RECORD,,
