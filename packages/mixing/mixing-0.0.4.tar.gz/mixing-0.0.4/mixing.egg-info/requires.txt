@@ -1,0 +1,6 @@
+moviepy
+config2py
+dol
+opencv-python
+
+[testing]
