@@ -1,0 +1,6 @@
+fabric_ceph_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fabric_ceph_client/fabric_ceph_client.py,sha256=NICrywdQV3Oc6-kgh5HodaiGhS_lgm7DDzfdwKzF4t4,12186
+fabric_ceph_client-1.0.0b3.dist-info/licenses/LICENSE,sha256=lhIEP813x-4d3q9fgpi6Y394Xo9nqU8S_B2faQClrFA,1071
+fabric_ceph_client-1.0.0b3.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+fabric_ceph_client-1.0.0b3.dist-info/METADATA,sha256=F5F-SuktPZUEc2JxunFYojb7oGew6WPYdUY6X5X4e0U,264
+fabric_ceph_client-1.0.0b3.dist-info/RECORD,,
