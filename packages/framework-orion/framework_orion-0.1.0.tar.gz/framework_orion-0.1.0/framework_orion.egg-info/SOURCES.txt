@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+framework_orion/__init__.py
+framework_orion.egg-info/PKG-INFO
+framework_orion.egg-info/SOURCES.txt
+framework_orion.egg-info/dependency_links.txt
+framework_orion.egg-info/top_level.txt
