@@ -1,0 +1,2 @@
+[console_scripts]
+with-keepass = with_keepass:__main__.main
