@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: query_level_uncertainty
+Version: 0.0.2
+Summary: A pipeline to estiamate uncertainty without generating any tokens
+License-File: LICENSE
