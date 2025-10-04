@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rpa-db-manager"               # nome único no PyPI
+version = "0.1.0"
+description = "Database manager for quick integration of Botcity RPA + Pandas Dataframes + SQLAlchemy for simple data persistance."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [
+  { name="Ausier Neto", email="ausierneto@gmail.com" }
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "sqlalchemy>=2.0.43",
+  "pandas>=2.3.3"
+]
+
+[project.urls]
+Homepage = "https://github.com/AusierNeto/automation-database-manager"
+Documentation = "https://github.com/AusierNeto/automation-database-manager"
+Source = "https://github.com/AusierNeto/automation-database-manager"
+Issues = "https://github.com/AusierNeto/automation-database-manager/issues"
