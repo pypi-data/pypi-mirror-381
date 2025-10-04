@@ -1,0 +1,3 @@
+[console_scripts]
+deep-organizer = deep_organizer.cli:main
+deep_organizer = deep_organizer.cli:main
