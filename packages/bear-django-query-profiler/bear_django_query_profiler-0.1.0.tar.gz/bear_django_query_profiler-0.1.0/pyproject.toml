@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bear-django-query-profiler"
+version = "0.1.0"
+authors = [
+  { name = "Bohdan Riabunets", email = "bearablyk@gmail.com" },
+]
+description = "A simple Django middleware to log SQL queries during development."
+readme = "README.md"
+
+license = "MIT"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Framework :: Django",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Topic :: System :: Logging",
+]
+
+dependencies = [
+    "Django>=3.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/bearablyk/django-query-profiler"
+Issues = "https://github.com/bearablyk/django-query-profiler/issues"
+

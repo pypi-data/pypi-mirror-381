@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+bear_django_query_profiler.egg-info/PKG-INFO
+bear_django_query_profiler.egg-info/SOURCES.txt
+bear_django_query_profiler.egg-info/dependency_links.txt
+bear_django_query_profiler.egg-info/requires.txt
+bear_django_query_profiler.egg-info/top_level.txt
+query_profiler/__init__.py
+query_profiler/middleware.py
