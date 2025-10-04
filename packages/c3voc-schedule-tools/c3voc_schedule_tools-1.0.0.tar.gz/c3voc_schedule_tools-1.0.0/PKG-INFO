@@ -1,0 +1,30 @@
+Metadata-Version: 2.3
+Name: c3voc-schedule-tools
+Version: 1.0.0
+Summary: Library to generate, convert and validate [schedule files](https://c3voc.de/wiki/schedule) for events which use the [pretalx](https://github.com/pretalx/pretalx), [frab][frab-website] or every other system able to generate schedule.json or CSV files in the correct format.
+License: EUPL-1.2
+Author: Andi Hubel
+Author-email: andi@muc.ccc.de
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: GitPython (>=3.1.41,<4.0.0)
+Requires-Dist: aiohttp (>=3.7.4.post0)
+Requires-Dist: beautifulsoup4 (>=4.12.3,<5.0.0)
+Requires-Dist: gql (>=3.0.0a5)
+Requires-Dist: html5lib (>=1.1,<2.0)
+Requires-Dist: icalendar (>=5.0.12,<6.0.0)
+Requires-Dist: lxml (>=4.9.1,<5.0.0)
+Requires-Dist: python-dateutil (>=2.8.2,<3.0.0)
+Requires-Dist: pytz (>=2022.6,<2023.0)
+Requires-Dist: requests (>=2.32.0,<3.0.0)
+Requires-Dist: six (>=1.16.0,<2.0.0)
+Project-URL: Homepage, https://c3voc.de/wiki/schedule
+Project-URL: Repository, https://github.com/voc/schedule
+Description-Content-Type: text/markdown
+
+
