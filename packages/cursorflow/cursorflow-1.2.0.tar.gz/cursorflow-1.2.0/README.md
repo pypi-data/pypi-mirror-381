@@ -1,0 +1,403 @@
+# CursorFlow 🔥
+
+**Ultra-fast CSS iteration engine with hot reload integration for Cursor AI**
+
+CursorFlow is a universal UI testing framework optimized for rapid CSS development and debugging. It automatically detects and leverages hot reload environments to enable **3-5x faster CSS iteration cycles** while preserving application state.
+
+## 🚀 What CursorFlow Does
+
+### **CSS Iteration with Hot Reload**
+- **Persistent browser sessions** that survive between CSS changes
+- **Automatic hot reload detection** (webpack HMR, Vite, Next.js, etc.)
+- **Instant CSS application** without page reloads or lost state
+- **Real-time visual feedback** with comprehensive screenshots and metrics
+
+### **Universal UI Testing**
+- Browser automation actions (navigate, click, fill forms, take screenshots)
+- Server log monitoring and correlation with browser events
+- Cross-framework error detection and debugging
+- Structured data output optimized for Cursor AI analysis
+
+### **Intelligent Session Management**
+- Smart session lifecycle with automatic cleanup
+- File change monitoring and hot reload synchronization
+- Performance analytics and optimization recommendations
+- Framework-agnostic hot reload support
+
+## Installation
+
+```bash
+pip install cursorflow
+```
+
+### Dependencies
+CursorFlow will automatically install browser dependencies on first use. To install manually:
+
+```bash
+playwright install chromium
+```
+
+## 🔥 Quick Start - Hot Reload CSS Iteration
+
+### 1. **Ultra-Fast CSS Iteration (Recommended)**
+```python
+from cursorflow import CursorFlow
+
+# Initialize with hot reload support
+flow = CursorFlow(
+    base_url="http://localhost:3000",  # Your dev server
+    log_config={"source": "local", "paths": ["logs/app.log"]},
+    browser_config={"hot_reload_enabled": True, "keep_alive": True}
+)
+
+# CSS changes to test rapidly
+css_changes = [
+    {
+        "name": "improve-spacing", 
+        "css": ".container { gap: 2rem; padding: 1.5rem; }",
+        "rationale": "Better visual hierarchy"
+    },
+    {
+        "name": "add-shadows",
+        "css": ".card { box-shadow: 0 4px 6px rgba(0,0,0,0.1); }",
+        "rationale": "Add depth and visual interest"
+    }
+]
+
+# Execute with persistent session - 3-5x faster than normal!
+results = await flow.css_iteration_persistent(
+    base_actions=[{"navigate": "/dashboard"}, {"wait_for": "#main-content"}],
+    css_changes=css_changes,
+    session_options={"hot_reload": True, "keep_session_alive": True}
+)
+
+# Check results
+print(f"🔥 Hot reload used: {results.get('hot_reload_used')}")
+print(f"⚡ Iterations per minute: {results.get('persistent_analysis', {}).get('iteration_speed_metrics', {}).get('iterations_per_minute', 0):.1f}")
+```
+
+### 2. **CLI Usage (Traditional)**
+```bash
+# Initialize project configuration
+cursorflow init .
+
+# Quick component test
+cursorflow test dashboard-component \
+  --actions '[
+    {"navigate": "/dashboard"},
+    {"wait_for": "#main-content"}, 
+    {"screenshot": "dashboard-loaded"}
+  ]' \
+  --base-url http://localhost:3000
+```
+
+### 3. **Session Continuation (No Page Reload!)**
+```python
+# First iteration - sets up persistent session
+results1 = await flow.css_iteration_persistent(
+    base_actions=[{"navigate": "/page"}],
+    css_changes=[{"name": "initial", "css": ".container { display: flex; }"}],
+    session_options={"session_id": "my_session", "keep_session_alive": True}
+)
+
+# Continue with same session - INSTANT feedback!
+results2 = await flow.css_iteration_persistent(
+    base_actions=[],  # No base actions needed - session preserved!
+    css_changes=[{"name": "refine", "css": ".container { gap: 1rem; }"}],
+    session_options={"session_id": "my_session", "reuse_session": True}
+)
+```
+
+## 🔥 Hot Reload Framework Support
+
+CursorFlow automatically detects and optimizes for:
+
+| Framework | Hot Reload Type | Speed Boost | Auto-Detection |
+|-----------|----------------|-------------|----------------|
+| **Webpack HMR** | Hot Module Replacement | 5x faster | ✅ Automatic |
+| **Vite** | Lightning HMR | 5x faster | ✅ Automatic |
+| **Next.js** | Fast Refresh | 4x faster | ✅ Automatic |
+| **Create React App** | React Hot Reload | 4x faster | ✅ Automatic |
+| **Vue CLI** | Vue HMR | 4x faster | ✅ Automatic |
+| **Angular CLI** | Angular HMR | 3x faster | ✅ Automatic |
+
+### **Benefits of Hot Reload Integration**
+- ⚡ **3-5x faster CSS iterations** compared to full page reloads
+- 🎯 **Preserved application state** during styling changes
+- 🔥 **Instant visual feedback** without interrupting user flows
+- 🧠 **Intelligent session management** with automatic optimization
+- 📊 **Performance analytics** to track iteration efficiency
+
+## CLI Commands
+
+### test
+Run UI test sequence and collect data.
+
+```bash
+cursorflow test [TEST_NAME] [OPTIONS]
+```
+
+**Options:**
+- `--actions`: JSON file or inline JSON string with test actions
+- `--base-url`: Base URL for testing (default: http://localhost:3000)
+- `--logs`: Log source type (local, ssh, docker, systemd)
+- `--config`: Configuration file path
+- `--verbose`: Show detailed output
+
+### init
+Initialize CursorFlow configuration in a project.
+
+```bash
+cursorflow init PROJECT_PATH
+```
+
+### install-rules
+Install Cursor AI rules for CursorFlow usage.
+
+```bash
+cursorflow install-rules
+```
+
+### update
+Update CursorFlow package and rules.
+
+```bash
+cursorflow update
+```
+
+## Available Actions
+
+### **CSS Iteration Actions (Hot Reload Optimized)**
+| Action | Purpose | Syntax |
+|--------|---------|--------|
+| `css_iteration_persistent` | Ultra-fast CSS testing with hot reload | `await flow.css_iteration_persistent(base_actions, css_changes, session_options)` |
+| `session_continuation` | Continue existing session without reload | `session_options={"session_id": "my_session", "reuse_session": True}` |
+| `hot_reload_detection` | Automatic framework detection | Automatic - works with Webpack, Vite, Next.js, etc. |
+
+### **Standard Browser Actions**
+| Action | Purpose | Syntax |
+|--------|---------|--------|
+| `navigate` | Go to URL/path | `{"navigate": "/dashboard"}` |
+| `click` | Click element | `{"click": "#button"}` |
+| `fill` | Fill input field | `{"fill": {"selector": "#email", "value": "test@example.com"}}` |
+| `wait` | Wait seconds | `{"wait": 2}` |
+| `wait_for` | Wait for element | `{"wait_for": "#results"}` |
+| `screenshot` | Take screenshot | `{"screenshot": "page-state"}` |
+
+📚 **Complete Documentation:**
+- [Hot Reload Guide](docs/user/HOT_RELOAD_GUIDE.md) - Comprehensive hot reload usage
+- [Action System](docs/user/ACTION_SYSTEM.md) - All available actions
+- [CSS Iteration Examples](examples/hot_reload_css_iteration.py) - Working code examples
+
+## Configuration
+
+### **Hot Reload Optimized Configuration**
+
+```json
+{
+  "environments": {
+    "local": {
+      "base_url": "http://localhost:3000",
+      "log_paths": {
+        "app": "logs/app.log",
+        "dev_server": ".next/trace.log"
+      },
+      "hot_reload": {
+        "enabled": true,
+        "framework": "auto-detect",
+        "file_monitoring": true
+      }
+    }
+  },
+  "browser": {
+    "headless": false,
+    "hot_reload_enabled": true,
+    "keep_alive": true,
+    "debug_mode": true,
+    "timeout": 30000
+  },
+  "session_management": {
+    "max_sessions": 5,
+    "session_timeout": 3600,
+    "auto_cleanup": true
+  },
+  "auth": {
+    "method": "form",
+    "username_selector": "#username",
+    "password_selector": "#password",
+    "submit_selector": "#login-button"
+  }
+}
+```
+
+### **Quick Configuration for Popular Frameworks**
+
+**Next.js/React:**
+```json
+{
+  "environments": {
+    "local": {
+      "base_url": "http://localhost:3000",
+      "log_paths": {"app": ".next/trace.log"},
+      "hot_reload": {"framework": "nextjs"}
+    }
+  }
+}
+```
+
+**Vite:**
+```json
+{
+  "environments": {
+    "local": {
+      "base_url": "http://localhost:5173",
+      "hot_reload": {"framework": "vite"}
+    }
+  }
+}
+```
+
+## Output
+
+### **Enhanced Hot Reload Results**
+
+CursorFlow generates comprehensive analysis optimized for Cursor AI:
+
+```json
+{
+  "session_id": "css_session_20240925_134401",
+  "success": true,
+  "hot_reload_used": true,
+  "execution_time": 4.2,
+  
+  "session_context": {
+    "session_persistent": true,
+    "hot_reload_available": true,
+    "session_age_seconds": 1200,
+    "iteration_count": 15
+  },
+  
+  "persistent_analysis": {
+    "hot_reload_effectiveness": {
+      "hot_reload_usage_rate": 0.95,
+      "time_saved_seconds": 45.2,
+      "quality": "excellent"
+    },
+    "iteration_speed_metrics": {
+      "iterations_per_minute": 12.5,
+      "average_iteration_time": 4.8
+    }
+  },
+  
+  "iterations": [
+    {
+      "name": "improve-spacing",
+      "hot_reload_used": true,
+      "screenshot": ".cursorflow/artifacts/improve-spacing.png",
+      "console_errors": [],
+      "performance_impact": {"render_time": 45}
+    }
+  ],
+  
+  "session_management": {
+    "recommended_action": "continue_session_optimal",
+    "keep_session_alive": true,
+    "next_iteration_strategy": "continue_with_hot_reload"
+  },
+  
+  "recommended_actions": [
+    {
+      "action": "implement_css_changes",
+      "css_to_apply": ".container { gap: 2rem; }",
+      "target_files": ["components/Dashboard.css"],
+      "benefits": ["Faster iterations", "Maintained state"]
+    }
+  ]
+}
+```
+
+### **Traditional Test Output**
+```json
+{
+  "session_id": "test_20240925_134401",
+  "browser_events": [...],
+  "server_logs": [...],
+  "organized_timeline": [...],
+  "artifacts": {
+    "screenshots": ["login-page.png", "after-login.png"]
+  }
+}
+```
+
+## Log Sources
+
+CursorFlow can monitor various log sources:
+
+- **Local files**: `--logs local` (default)
+- **SSH remote**: `--logs ssh` (requires SSH config in cursor-test-config.json)
+- **Docker containers**: `--logs docker`
+- **System logs**: `--logs systemd`
+
+## Updates
+
+Check for updates:
+```bash
+cursorflow check-updates
+```
+
+Update to latest version:
+```bash
+cursorflow update
+```
+
+CursorFlow automatically checks for updates when used in projects.
+
+## Requirements
+
+- Python 3.8+
+- Chromium browser (installed automatically via Playwright)
+- Network access to target application
+
+## Project Structure
+
+```
+cursorflow/
+├── artifacts/              # Test artifacts and screenshots
+├── config/                 # Example configuration files
+├── cursorflow/             # Main package source code
+│   ├── core/              # Core testing engine
+│   └── log_sources/       # Log monitoring implementations
+├── docs/                   # Complete documentation
+│   ├── api/               # API specifications
+│   ├── development/       # Development guides
+│   ├── examples/          # Usage examples
+│   ├── product/           # Product requirements
+│   └── user/              # User guides
+├── examples/               # Code examples
+├── rules/                  # Cursor AI integration rules
+├── scripts/                # Release and automation scripts
+└── tests/                  # Test suite
+```
+
+## 📚 Documentation
+
+### **🔥 Hot Reload & CSS Iteration**
+- **[Hot Reload Guide](docs/user/HOT_RELOAD_GUIDE.md)** - Complete guide to ultra-fast CSS iteration
+- **[CSS Iteration Examples](examples/hot_reload_css_iteration.py)** - Working code examples
+- **[Framework Integration](docs/user/FRAMEWORK_INTEGRATION.md)** - Webpack, Vite, Next.js setup
+
+### **📖 Complete Guides**
+- **[Getting Started](docs/user/GETTING_STARTED.md)** - Installation and basic usage
+- **[Usage Guide](docs/user/USAGE_GUIDE.md)** - Comprehensive usage patterns
+- **[Action System](docs/user/ACTION_SYSTEM.md)** - All available actions and syntax
+- **[Examples](examples/)** - Real-world code examples and workflows
+
+### **🔧 Development & API**
+- **[API Reference](docs/api/)** - Complete API documentation
+- **[Development Guide](docs/development/)** - Contributing and releases
+- **[Implementation Details](docs/development/IMPLEMENTATION_ROADMAP.md)** - Technical architecture
+
+## Support
+
+- Issues: [GitHub Issues](https://github.com/haley-marketing-group/cursorflow/issues)
+- Repository: [haley-marketing-group/cursorflow](https://github.com/haley-marketing-group/cursorflow)
