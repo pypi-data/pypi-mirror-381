@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+bear_django_request_normalizer.egg-info/PKG-INFO
+bear_django_request_normalizer.egg-info/SOURCES.txt
+bear_django_request_normalizer.egg-info/dependency_links.txt
+bear_django_request_normalizer.egg-info/requires.txt
+bear_django_request_normalizer.egg-info/top_level.txt
+request_normalizer/RequestRepository.py
+request_normalizer/__init__.py
+request_normalizer/middleware.py
