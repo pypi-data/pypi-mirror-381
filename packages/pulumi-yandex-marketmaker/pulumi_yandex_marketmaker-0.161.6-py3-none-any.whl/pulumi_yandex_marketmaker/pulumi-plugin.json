@@ -1,0 +1,6 @@
+{
+  "resource": true,
+  "name": "yandex",
+  "version": "0.161.6",
+  "server": "https://github.com/agorobets/pulumi-yandex/releases/download/v${VERSION}/"
+}
