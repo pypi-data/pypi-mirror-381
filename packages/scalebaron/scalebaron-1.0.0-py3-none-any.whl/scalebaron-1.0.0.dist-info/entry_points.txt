@@ -1,0 +1,4 @@
+[console_scripts]
+download_test_elemental_images = scalebaron.download:main
+muaddata = scalebaron.muaddata:main
+scalebaron = scalebaron.scalebaron:main
