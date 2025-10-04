@@ -1,0 +1,8 @@
+mcp_vertica/__init__.py,sha256=PrmqN54IHRwZFb_1ykSv-6m2Hrp76bzfcrfQbeFDgfc,6346
+mcp_vertica/connection.py,sha256=iUU7rJFmOM_TIL-or-umrxvuGgEWWKYS1dvhERL9wPQ,9241
+mcp_vertica/mcp.py,sha256=bity1lfv1N9yMEJNE9ZY-AHs1wov_tQt9pTa2O2Amew,15820
+mcp_vertica-0.1.7.dist-info/METADATA,sha256=ZjZjC-5kU4mTq8fwskZmRLIUDuhd17_P11vJqYWiRrE,306
+mcp_vertica-0.1.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_vertica-0.1.7.dist-info/entry_points.txt,sha256=1dvaMvcip7_UYdfljd19wvy8kbB5LrR2d0HpGKCE0m0,48
+mcp_vertica-0.1.7.dist-info/licenses/LICENSE,sha256=QDQWgcFSMryX557cyvO3eNU8V89xfCl_X0WCThbKSIs,1086
+mcp_vertica-0.1.7.dist-info/RECORD,,
