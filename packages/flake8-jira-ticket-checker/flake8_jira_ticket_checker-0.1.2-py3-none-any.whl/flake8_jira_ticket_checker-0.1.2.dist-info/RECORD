@@ -1,0 +1,9 @@
+flake8_jira_ticket_checker/__init__.py,sha256=xsNHmiwCmj9E-hR-o4a0g6MEwhsh-NDhBrwwNVeNKss,130
+flake8_jira_ticket_checker/__version__.py,sha256=U8uqegyzBko39UY4Z2U7L8Od3TIai1KOUtxLg3ad0OI,81
+flake8_jira_ticket_checker/jira_checker.py,sha256=d8gyJZJ_PeZkE4IgQhUgK-ghVL3G7vktEIxDlLIzvOQ,13270
+flake8_jira_ticket_checker-0.1.2.dist-info/licenses/LICENSE,sha256=5HE5hFTLlfV4B8gycssA3xdr0Z1BTlI3pQdPsz4DBQI,1096
+flake8_jira_ticket_checker-0.1.2.dist-info/METADATA,sha256=HNT1-cmAUyHRlEmxDM5_wwUW9KBPkD-8z570rMOW0RY,3353
+flake8_jira_ticket_checker-0.1.2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+flake8_jira_ticket_checker-0.1.2.dist-info/entry_points.txt,sha256=hgM9YY-zJL28dNreI1UQeFuU4V-9579IYGy65Zs8-AU,83
+flake8_jira_ticket_checker-0.1.2.dist-info/top_level.txt,sha256=juq2vb6Sy6vMqGWpOCw9rJfm1O43lRn944-JjHGrRCc,27
+flake8_jira_ticket_checker-0.1.2.dist-info/RECORD,,
