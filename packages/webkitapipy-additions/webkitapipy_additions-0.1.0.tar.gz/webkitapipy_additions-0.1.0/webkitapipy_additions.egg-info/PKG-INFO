@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: webkitapipy_additions
+Version: 0.1.0
+Summary: Apple internal extensions to the webkitapipy library (type stubs only).
+Author-email: Elliott Williams <emw@apple.com>
+License-Expression: LicenseRef-Proprietary
+Project-URL: Homepage, https://github.com/WebKit/WebKit/tree/main/Tools/Scripts/libraries/webkitapipy
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: MacOS
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9

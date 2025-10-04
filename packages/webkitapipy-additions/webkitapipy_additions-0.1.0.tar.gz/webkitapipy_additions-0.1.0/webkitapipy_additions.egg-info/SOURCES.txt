@@ -1,0 +1,6 @@
+pyproject.toml
+webkitapipy_additions/program.pyi
+webkitapipy_additions.egg-info/PKG-INFO
+webkitapipy_additions.egg-info/SOURCES.txt
+webkitapipy_additions.egg-info/dependency_links.txt
+webkitapipy_additions.egg-info/top_level.txt
