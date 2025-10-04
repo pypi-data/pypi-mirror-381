@@ -1,0 +1,47 @@
+[project]
+name = "ecotransformers"
+version = "1.0.0"
+description = "Towards Net-Zero AI: Reducing Latency and Energy Consumption with Eco-Transformers"
+authors = [
+    { name = "Shriaarthy E", email = "shriaarthy89@gmail.com" },
+    { name = "Sangeetha S", email = "vns.sangeetha@gmail.com" }
+]
+
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License"
+]
+
+dependencies = [
+    "torch>=1.13.0",
+    "transformers>=4.30.0",
+    "codecarbon>=2.2.2",
+    "evaluate>=0.4.0",
+    "numpy>=1.24.0",
+    "rouge_score>=0.1.2",
+    "nltk>=3.8.0",
+    "absl-py>=1.4.0"
+]
+
+[project.scripts]
+eco_transformer = "ecotransformers.main:transformer"
+
+[project.urls]
+Homepage = "https://github.com/aarthyviven/ecotransformers"
+Repository = "https://github.com/aarthyviven/ecotransformers"
+
+[tool.setuptools.packages.find]
+include = ["ecotransformers"]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
