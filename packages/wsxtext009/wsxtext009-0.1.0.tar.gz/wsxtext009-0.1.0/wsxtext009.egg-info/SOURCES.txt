@@ -1,0 +1,7 @@
+setup.py
+mi_paquete/__init__.py
+wsxtext009/__init__.py
+wsxtext009.egg-info/PKG-INFO
+wsxtext009.egg-info/SOURCES.txt
+wsxtext009.egg-info/dependency_links.txt
+wsxtext009.egg-info/top_level.txt
