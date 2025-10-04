@@ -1,0 +1,150 @@
+Metadata-Version: 2.4
+Name: filechat
+Version: 0.4.0
+Summary: A local read-only AI coding assistant
+Author-email: Milos Svana <milos@svana.name>
+License-Expression: MIT
+Requires-Python: >=3.12
+Requires-Dist: einops>=0.8.1
+Requires-Dist: faiss-cpu>=1.11.0.post1
+Requires-Dist: mistralai>=1.9.3
+Requires-Dist: onnxruntime>=1.22.1
+Requires-Dist: openai>=1.109.0
+Requires-Dist: pip-system-certs>=5.2
+Requires-Dist: pydantic>=2.11.7
+Requires-Dist: rich>=14.1.0
+Requires-Dist: textual>=5.3.0
+Requires-Dist: tokenizers>=0.21.4
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: watchdog>=6.0.0
+Provides-Extra: cuda
+Requires-Dist: nvidia-cublas-cu12; extra == 'cuda'
+Requires-Dist: nvidia-cuda-nvrtc-cu12; extra == 'cuda'
+Requires-Dist: nvidia-cudnn-cu12; extra == 'cuda'
+Requires-Dist: nvidia-cufft-cu12; extra == 'cuda'
+Requires-Dist: nvidia-curand-cu12; extra == 'cuda'
+Requires-Dist: onnxruntime-gpu; extra == 'cuda'
+Provides-Extra: xpu
+Requires-Dist: onnxruntime-openvino; extra == 'xpu'
+Description-Content-Type: text/markdown
+
+# FileChat
+
+FileChat is an AI assistant designed to help users understand and improve their local projects.
+It allows you to chat about files in your local folder while maintaining full control over your code.
+
+**FileChat is still quite new and under intense development. Expect bugs! If you find some or if you have a feature suggestion, please create an issue**
+
+Here is a short video:
+
+[filechat.webm](https://github.com/user-attachments/assets/c6fc6f1c-cea9-432e-bb80-0639ec6a01e0)
+
+
+## Features
+
+- **Project Indexing**: Creates a searchable index of your project files
+- **Contextual Chat**: Ask questions about your project with AI that understands your codebase
+- **Real-time Updates**: Automatically detects and indexes file changes
+- **Chat History**: ChatGPT-like chat history for each directory
+- **Configurable**: Customize which files to index, and choose your own LLM provider. We currently support models from:
+    - [Mistral AI](https://mistral.ai/)
+    - [OpenAI](https://openai.com/)
+    - Self-hosted servers with OpenAI-compatible API like [Ollama](https://ollama.com/) or [llama.cpp](https://github.com/ggml-org/llama.cpp).
+      We recommend a context window of at least 16384.
+
+## Installation
+
+### Prerequisites
+
+- Python 3.12 or higher
+- An API key for the LLM provider you want to use or access to a self-hosted LLM server with an OpenAI-compatible API
+- On Windows, you need [Visual C++ Redistributable](https://learn.microsoft.com/en-au/cpp/windows/latest-supported-vc-redist?view=msvc-170).
+  It's very likely you have it already installed on your machine.
+
+### Option 1: Install from PyPI
+
+You can use any Package management tool you like. Here is an example for `pip`:
+
+```bash
+pip install filechat
+```
+
+And here is an example of installing FileChat as a UV tool:
+
+```bash
+uv tool install filechat
+```
+
+**On Linux, you should also specify the hardware accelerator as an optional dependency**.
+This accelerator will be used to run the local embedding model.
+We support `xpu` (Intel Arc), and `cuda`.
+If you don't specify a hardware accelerator, the embedding model will run on a CPU.
+Here is an example of installing FileChat with `xpu` support:
+
+PIP:
+
+```bash
+pip install filechat[xpu]
+```
+
+UV Tool:
+
+```bash
+uv tool install filechat[xpu]
+```
+
+### Option 2: Clone the repository and use UV
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/msvana/filechat
+cd filechat
+```
+
+2. Install dependencies using [`uv`](https://docs.astral.sh/uv/):
+
+```bash
+uv sync
+```
+
+3. (Optional) Install GPU support:
+
+```bash
+# CUDA (NVIDIA)
+uv sync --extra cuda
+
+# XPU (Intel Arc)
+uv sync --extra xpu
+```
+
+## Usage
+
+```bash
+filechat /path/to/your/project
+```
+
+## Configuration
+
+On the first run, FileChat guides you through an initial setup where you will choose your LLM provider, select a model, and set an API key.
+These settings will be then stored at `~/.config/filechat.json`. Feel free to change the file as you need.
+
+You can invoke the initial setup at any time by running FileChat with the `--setup` or `-s` flag.
+You can make FileChat use a different config file path by using the `--config` or `-c` argument.
+
+Here is an example of a valid config file:
+
+```json
+{
+    "max_file_size_kb": 25,
+    "ignored_dirs": [".git", "__pycache__", ".venv", ".pytest_cache", "node_modules", "dist"],
+    "allowed_suffixes": [".md", ".txt", ".json", ".toml", ".html", ".css", ...],
+    "index_store_path": "/home/milos/.cache/filechat",
+    "model": {
+        "provider": "openai",
+        "model": "gpt-5-mini",
+        "api_key": "[VALID_OPENAI_API_KEY]",
+        "base_url": null
+    }
+}
+```

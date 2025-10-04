@@ -1,0 +1,13 @@
+filechat/__init__.py,sha256=mN1b3PyLcStotXZ1dW7GkJrHUkl1qs9ejdEWzTUH9rk,2111
+filechat/chat.py,sha256=OZzHMGLXabM29IdsAfH60LThsQ1qNcsVXiwl5lFDGxA,12532
+filechat/config.py,sha256=NmsfMC3J0tp1LCJNSjn1Mgz9edYwH-epJG2IPTawpxA,5556
+filechat/embedder.py,sha256=wPUntlvoOlYRjE-gFe0nV5l8zRJmbq-XAMfKHgn8U00,2220
+filechat/index.py,sha256=IVCJBNWdkOe3ws6PVfLBXiWxiYi3kyzsELISFsUViqw,8220
+filechat/tools.py,sha256=g7BdzZu3wp11GtAhY6pfRvskTBNDieR6q-KI4I2KjJY,3401
+filechat/tui.py,sha256=Uq0rWwoHuroOfegSRILFPaHpMtpZAdr2rWTpzkCgDys,7533
+filechat/utils.py,sha256=kK13010XIMsv8Zf0E-6sdK_j-nU_-clGB3DjoJP1Xd0,445
+filechat/watcher.py,sha256=YE92A_sBX65wKlivJebgp24Dzi2fG81BRK4scyRGMeQ,2654
+filechat-0.4.0.dist-info/METADATA,sha256=46SOevGhmuUenGv7PlHHv12b2979gSzHYsFKFntnuMI,4635
+filechat-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+filechat-0.4.0.dist-info/entry_points.txt,sha256=KbcvPWA7Z5DDVXctutfR25gsngIlFxwLYT43vIGGcK4,43
+filechat-0.4.0.dist-info/RECORD,,
