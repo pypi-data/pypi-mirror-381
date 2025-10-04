@@ -1,0 +1,16 @@
+pyproject.toml
+Pure_Python_Geospatial_Export.egg-info/PKG-INFO
+Pure_Python_Geospatial_Export.egg-info/SOURCES.txt
+Pure_Python_Geospatial_Export.egg-info/dependency_links.txt
+Pure_Python_Geospatial_Export.egg-info/requires.txt
+Pure_Python_Geospatial_Export.egg-info/top_level.txt
+ppge/__init__.py
+ppge/geomet/__init__.py
+ppge/geomet/esri.py
+ppge/geomet/geopackage.py
+ppge/geomet/tool.py
+ppge/geomet/util.py
+ppge/geomet/wkb.py
+ppge/geomet/wkt.py
+ppge/pyshp/__init__.py
+ppge/pyshp/setup.py
