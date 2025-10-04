@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+dbtfetch/__init__.py
+dbtfetch/cli.py
+dbtfetch.egg-info/PKG-INFO
+dbtfetch.egg-info/SOURCES.txt
+dbtfetch.egg-info/dependency_links.txt
+dbtfetch.egg-info/entry_points.txt
+dbtfetch.egg-info/requires.txt
+dbtfetch.egg-info/top_level.txt
