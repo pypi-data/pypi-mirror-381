@@ -1,0 +1,12 @@
+
+[build]
+build
+commitizen
+twine
+
+[dev]
+commitizen
+pre-commit
+pytest-cov
+pytest>=7.0
+ruff
