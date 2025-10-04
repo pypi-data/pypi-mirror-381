@@ -1,0 +1,8 @@
+pytest_llm/__init__.py,sha256=joq3gCMmTnShZy1GAj9rFgNmJ2AWNawbrpAD4R0Ni1Y,5395
+pytest_llm/_version.py,sha256=vEUwh1d37Cn5Y_fMYKF28wpvxzeQ3F-yffm2k9RmcwA,712
+pytest_llm/hooks.py,sha256=BA5C-saKic8dgQ9E3aRn1-cMyi21EeNSKBAXRPjiVoA,103
+pytest_llm-0.1.0.dist-info/entry_points.txt,sha256=scHFzroFno35yrVsMMkpq_ZVegroAZYMq3EZHmh93c8,34
+pytest_llm-0.1.0.dist-info/licenses/LICENSE,sha256=MhAPJyVn0bc2LsKtSbwHMXfmPi5oKqjHYRcOTlDiT38,1303
+pytest_llm-0.1.0.dist-info/WHEEL,sha256=G2gURzTEtmeR8nrdXUJfNiB3VYVxigPQ-bEQujpNiNs,82
+pytest_llm-0.1.0.dist-info/METADATA,sha256=XFmY99JjDpLdjS_4jqyDGXeNJ1Ci34VDi4mULWHkdZQ,3134
+pytest_llm-0.1.0.dist-info/RECORD,,
