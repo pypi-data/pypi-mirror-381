@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include requirements.txt
+recursive-include goodgleif/data *.parquet
+recursive-include goodgleif/data *.txt
+recursive-include goodgleif/config *.yaml

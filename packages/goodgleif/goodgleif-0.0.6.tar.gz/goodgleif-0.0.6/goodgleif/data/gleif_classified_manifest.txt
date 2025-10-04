@@ -1,0 +1,15 @@
+GLEIF Classified Dataset Partitions
+===================================
+
+This dataset has been partitioned into 5 files for GitHub compatibility:
+
+Part 1: gleif_classified_part_1.parquet
+Part 2: gleif_classified_part_2.parquet
+Part 3: gleif_classified_part_3.parquet
+Part 4: gleif_classified_part_4.parquet
+Part 5: gleif_classified_part_5.parquet
+
+Total companies: 3,078,018
+Columns: LEI, Entity.LegalName, Entity.LegalAddress.Country, Entity.EntityCategory, Entity.EntitySubCategory, probably_metals_and_mining, probably_financial, probably_transportation, probably_automotive, probably_technology, probably_healthcare, probably_real_estate, probably_retail_consumer, probably_manufacturing
+
+To load the full dataset, use GoodGleif with auto-partition loading.
