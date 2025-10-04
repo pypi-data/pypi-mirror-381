@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: orbit-boost
+Version: 0.1.0
+Summary: Orbit Boost: oblique softmax boosting with ridge warm-start and BOSS sampling
+Author-email: Abdulvahap Mutlu <abdulvahapmutlu1@gmail.com>
+License: MIT
+License-File: LICENSE
+Keywords: boosting,classification,machine-learning,tabular
+Requires-Python: >=3.9
+Requires-Dist: joblib>=1.2
+Requires-Dist: numpy>=1.23
+Requires-Dist: pandas>=1.5
+Requires-Dist: scikit-learn>=1.1
+Description-Content-Type: text/markdown
+
+# Readme
