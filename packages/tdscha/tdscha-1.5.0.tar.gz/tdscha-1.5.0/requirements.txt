@@ -1,0 +1,7 @@
+numpy
+scipy
+spglib
+cellconstructor
+python-sscha
+mpi4py
+julia
