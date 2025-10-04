@@ -1,0 +1,2 @@
+[console_scripts]
+yaml-validator = yaml_validator.cli:main
