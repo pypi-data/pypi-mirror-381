@@ -1,0 +1,3 @@
+[console_scripts]
+ez-mcp-chatbot = ez_mcp_toolbox.chatbot:main_sync
+ez-mcp-server = ez_mcp_toolbox.server:main_sync
