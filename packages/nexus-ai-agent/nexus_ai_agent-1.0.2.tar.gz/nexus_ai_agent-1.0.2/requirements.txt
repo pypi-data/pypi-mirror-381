@@ -1,0 +1,9 @@
+# Core Dependencies
+anthropic>=0.40.0
+python-dotenv>=1.0.0
+
+# CLI and UI
+rich>=13.7.0
+
+# Optional but recommended
+click>=8.1.0
