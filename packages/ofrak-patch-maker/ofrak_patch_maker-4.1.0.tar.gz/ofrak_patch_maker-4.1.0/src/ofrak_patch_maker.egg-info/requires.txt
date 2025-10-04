@@ -1,0 +1,8 @@
+immutabledict>=2.2.0
+ofrak_type==2.*,>=2.3.0
+
+[:platform_system != "Windows"]
+python-magic>=0.4.27
+
+[:platform_system == "Windows"]
+python-magic-bin==0.4.14
