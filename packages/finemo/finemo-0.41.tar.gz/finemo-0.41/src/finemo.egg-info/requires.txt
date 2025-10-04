@@ -1,0 +1,13 @@
+numpy
+scipy
+torch
+numba
+polars>=1.0
+matplotlib
+h5py
+hdf5plugin
+tqdm
+pyBigWig
+pyfaidx
+jinja2
+jaxtyping

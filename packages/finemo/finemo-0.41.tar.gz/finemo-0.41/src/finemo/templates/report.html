@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fi-NeMo Report</title>
+    <style>
+        /* Adapted from https://github.com/oxalorg/sakura/ */
+        html {
+            font-size: 62.5%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+        }
+        
+        body {
+            font-size: 1.8rem;
+            line-height: 1.618;
+            max-width: 60em;
+            margin: auto;
+            color: #222222;
+            background-color: #ffffff;
+            padding: 13px;
+        }
+        
+        @media (max-width: 684px) {
+        body {
+            font-size: 1.53rem;
+        }
+        }
+        @media (max-width: 382px) {
+        body {
+            font-size: 1.35rem;
+        }
+        }
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.1;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            -ms-word-break: break-all;
+            word-break: break-word;
+        }
+        
+        h1 {
+            font-size: 2.35em;
+        }
+        
+        h2 {
+            font-size: 1.75em;
+        }
+        
+        h3 {
+            font-size: 1.25em;
+        }
+        
+        p {
+            margin-top: 0px;
+            margin-bottom: 2.5rem;
+        }
+        
+        small, sub, sup {
+            font-size: 75%;
+        }
+        
+        hr {
+            border-color: #007559;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #007559;
+        }
+        a:visited {
+            color: #004232;
+        }
+        a:hover {
+            color: #006994;
+            border-bottom: 2px solid #222222;
+        }
+        
+        ul {
+            padding-left: 1.4em;
+            margin-top: 0px;
+            margin-bottom: 2.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.4em;
+        }
+        
+        blockquote {
+            margin-left: 0px;
+            margin-right: 0px;
+            padding-left: 1em;
+            padding-top: 0.8em;
+            padding-bottom: 0.8em;
+            padding-right: 0.8em;
+            border-left: 5px solid #007559;
+            margin-bottom: 2.5rem;
+            background-color: #f7f7f7;
+        }
+        
+        blockquote p {
+            margin-bottom: 0;
+        }
+        
+        img, video {
+            height: auto;
+            max-width: 100%;
+            margin-top: 0px;
+            margin-bottom: 2.5rem;
+        }
+        
+        /* Pre and Code */
+        pre {
+            background-color: #f7f7f7;
+            display: block;
+            padding: 1em;
+            overflow-x: auto;
+            margin-top: 0px;
+            margin-bottom: 2.5rem;
+            font-size: 0.9em;
+        }
+        
+        code, kbd, samp {
+            font-size: 0.9em;
+            padding: 0 0.5em;
+            background-color: #f7f7f7;
+            white-space: pre-wrap;
+            }
+        
+        pre > code {
+            padding: 0;
+            background-color: transparent;
+            white-space: pre;
+            font-size: 1em;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+            font-variant-numeric: tabular-nums;
+            text-align: justify;
+        }
+
+        td, th {
+            padding: 0.5em;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .num_col {
+            text-align: right;
+        }
+
+        td.num_col {
+            padding-left: 2em;
+        }
+
+        th.cwm, th.distplot {
+            padding-left: 2em;
+        }
+
+        .cwm img {
+            max-width: unset;
+            margin-bottom: 0
+        }
+
+        .distplot img {
+            max-width: unset;
+            margin-bottom: 0
+        }
+        
+    </style>
+</head>
+
+<body>
+<h1>Fi-NeMo Motif Hit Calling Report</h1>
+
+<p>
+    This report provides a comprehensive analysis of motif instance calling results from Fi-NeMo, 
+    a GPU-accelerated method for identifying transcription factor binding sites using neural network
+    contribution scores. Fi-NeMo uses a competitive optimization approach to comprehensively map motif
+    instances by solving a sparse linear reconstruction problem. The report compares Fi-NeMo hits 
+    with TF-MoDISco seqlets (when available) and provides detailed statistics on hit quality and 
+    motif discovery performance.
+</p>
+
+{% if not use_seqlets %}
+<blockquote>
+    <strong>Note:</strong> Seqlet comparisons are not shown because a TF-MoDISco H5 file with seqlet data was not provided.
+</blockquote>
+{% elif not compute_recall %}
+<blockquote>
+    <strong>Note:</strong> Seqlet recall and other statistics directly comparing hits and seqlets are not computed because the <code>-n/--no-recall</code> argument was specified.
+</blockquote>
+{% endif %}
+
+{% if use_seqlets %}
+<h2>TF-MoDISco seqlet comparisons</h2>
+<p>
+    The following figures and statistics compare the called hits with the seqlets used by TF-MoDISco to construct each motif. 
+</p>
+
+<h3>Hit vs. seqlet counts</h3>
+<p>
+    This scatter plot compares the number of motif instances called by Fi-NeMo versus the number of TF-MoDISco seqlets 
+    identified for each motif. The dashed line represents perfect agreement (<code>y = x</code>). Fi-NeMo typically identifies 
+    an order of magnitude more motif instances than TF-MoDISco because: (1) TF-MoDISco applies stringent filtering criteria 
+    during seqlet identification, and (2) TF-MoDISco often analyzes smaller genomic windows than those used for hit calling.
+</p>
+<img src="hit_vs_seqlet_counts.svg" width="780">
+{% endif %}
+
+<h3>Motif-specific hit and seqlet analysis</h3>
+<p>
+    This table provides detailed statistics for each motif, comparing the consistency between Fi-NeMo hits 
+    and TF-MoDISco seqlets. The analysis includes hit counts, overlap statistics, and visual comparisons 
+    of contribution weight matrices (CWMs).
+</p>
+
+<p>
+    <strong>Statistical measures include:</strong>
+</p>
+<ul>
+    <li><strong>Hits</strong>: Total number of motif instances called by Fi-NeMo across all genomic regions</li>
+    {% if compute_recall %}
+    <li><strong>Restricted Hits</strong>: Fi-NeMo hits overlapping with TF-MoDISco input regions (enables direct comparison)</li>
+    {% endif %}
+    {% if use_seqlets %}
+    <li><strong>Seqlets</strong>: Unique TF-MoDISco seqlets used to construct this motif pattern</li>
+    {% endif %}
+    {% if compute_recall %}
+    <li><strong>Hit/Seqlet Overlaps</strong>: Fi-NeMo hits that spatially coincide with TF-MoDISco seqlets (successful recovery)</li>
+    <li><strong>Missed Seqlets</strong>: TF-MoDISco seqlets not identified as hits by Fi-NeMo (potential false negatives)</li>
+    <li><strong>Additional Restricted Hits</strong>: Fi-NeMo hits not identified as seqlets by TF-MoDISco (potential new discoveries)</li>
+    <li><strong>Seqlet Recall</strong>: Fraction of TF-MoDISco seqlets successfully recovered as Fi-NeMo hits</li>
+    {% endif %}
+    <li><strong>Hit-Seqlet CWM Similarity</strong>: Cosine similarity between average contribution scores of hits vs. seqlets</li>
+</ul>
+<p>
+    <strong>Important notes:</strong>
+</p>
+<ul>
+    <li>Seqlet counts may appear lower than in TF-MoDISco-lite reports due to removal of duplicate seqlets</li>
+    {% if compute_recall %}
+    <li>Palindromic motifs may show reduced recall due to strand orientation ambiguity</li>
+    <li>If seqlet recall is near zero across all motifs, verify that the <code>-W/--modisco-region-width</code> parameter matches the original TF-MoDISco analysis window</li>
+    {% endif %}
+</ul>
+<p>
+    <strong>Contribution Weight Matrix (CWM) visualizations:</strong><br>
+    CWMs represent average contribution scores across motif instances and show the functional importance 
+    of each nucleotide position. The following CWMs are displayed for comparison:
+</p>
+<ul>
+    <li><strong>Hit CWM (FC/RC)</strong>: Average contribution patterns from Fi-NeMo hits on forward/reverse strands</li>
+    <li><strong>TF-MoDISco CWM (FC/RC)</strong>: Average contribution patterns from TF-MoDISco seqlets on forward/reverse strands</li>
+    {% if compute_recall %}
+    <li><strong>Missed-Seqlet-Only CWM</strong>: Contribution patterns from seqlets not recovered by Fi-NeMo (identifies potential algorithmic disagreements)</li>
+    <li><strong>Additional-Restricted-Hit CWM</strong>: Contribution patterns from Fi-NeMo hits not identified by TF-MoDISco</li>
+    {% endif %}
+</ul>
+<p>
+    All CWM plots span the full untrimmed motif width, with the core trimmed region highlighted by shading.
+    {% if compute_recall %}
+    The hit-seqlet CWM similarity quantifies the overall agreement between Fi-NeMo's discovered instances 
+    and TF-MoDISco's original motif definitions.
+    {% endif %}
+</p>
+
+<table class="wide_table">
+    <thead>
+        <tr>
+            <th>Motif Name</th>
+            {% if compute_recall %}
+            <th class="num_col">Seqlet Recall</th>
+            {% endif %}
+            <th class="num_col">Hit-Seqlet CWM Similarity</th>
+            <th class="num_col">Hits</th>
+            {% if compute_recall %}
+            <th class="num_col">Restricted Hits</th>
+            {% endif %}
+            {% if use_seqlets %}
+            <th class="num_col">Seqlets</th>
+            {% endif %}
+            {% if compute_recall %}
+            <th class="num_col">Hit/Seqlet Overlaps</th>
+            <th class="num_col">Missed Seqlets</th>
+            <th class="num_col">Additional Restricted Hits</th>
+            {% endif %}
+            <th class="cwm">Hit CWM (FC)</th>
+            <th class="cwm">Hit CWM (RC)</th>
+            <th class="cwm">TF-MoDISco CWM (FC)</th>
+            <th class="cwm">TF-MoDISco CWM (RC)</th>
+            {% if compute_recall %}
+            <th class="cwm">Missed-Seqlet-Only CWM</th>
+            <th class="cwm">Additional-Restricted-Hit CWM</th>
+            {% endif %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in report_data %}
+        <tr>
+            <td><code>{{ item.motif_name }}</code></td>
+            {% if compute_recall %}
+            <td class="num_col">{{ '%0.3f'| format(item.seqlet_recall|float) }}</td>
+            {% endif %}
+            <td class="num_col">{{ '%0.3f'| format(item.cwm_similarity|float) }}</td>
+            <td class="num_col">{{ item.num_hits_total }}</td>
+            {% if compute_recall %}
+            <td class="num_col">{{ item.num_hits_restricted }}</td>
+            {% endif %}
+            {% if use_seqlets %}
+            <td class="num_col">{{ item.num_seqlets }}</td>
+            {% endif %}
+            {% if compute_recall %}
+            <td class="num_col">{{ item.num_overlaps }}</td>
+            <td class="num_col">{{ item.num_seqlets_only }}</td>
+            <td class="num_col">{{ item.num_hits_restricted_only }}</td>
+            {% endif %}
+            <td class="cwm"><img src="CWMs/{{ item.motif_name|urlencode }}/hits_fc.svg" width="360"></td>
+            <td class="cwm"><img src="CWMs/{{ item.motif_name|urlencode }}/hits_rc.svg" width="360"></td>
+            <td class="cwm"><img src="CWMs/{{ item.motif_name|urlencode }}/modisco_fc.svg" width="360"></td>
+            <td class="cwm"><img src="CWMs/{{ item.motif_name|urlencode }}/modisco_rc.svg" width="360"></td>
+            {% if compute_recall %}
+            <td class="cwm"><img src="CWMs/{{ item.motif_name|urlencode }}/seqlets_only.svg" width="360"></td>
+            <td class="cwm"><img src="CWMs/{{ item.motif_name|urlencode }}/hits_restricted_only.svg" width="360"></td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% if compute_recall %}
+
+<h3>Motif cross-assignment analysis</h3>
+<p>
+    This confusion matrix identifies cases where Fi-NeMo hits of one motif type spatially overlap with 
+    TF-MoDISco seqlets of different motif types. Such cross-assignments can reveal related motif families,
+    algorithm differences, or cases where similar-looking motifs compete for the same binding sites.
+</p>
+<p>
+    The y-axis represents seqlet motif identity, the x-axis represents hit motif identity, and color intensity 
+    indicates the estimated overlap frequency per base of seqlet sequence. High off-diagonal values suggest
+    potential motif ambiguity and/or algorithmic disagreements at groups of putative TF binding sites.
+</p>
+<img src="seqlet_confusion.svg" width="780">
+
+{% endif %}
+
+<h2>Hit Quality and Distribution Analysis</h2>
+<p>
+    These visualizations examine the quality and distribution of Fi-NeMo hits across genomic regions and motifs,
+    measuring algorithm performance and signal strength.
+</p>
+
+<h3>Genome-wide hit density</h3>
+<p>
+    This histogram shows the distribution of total hit counts per genomic region (across all motifs). 
+    A good distribution should show nearly all regions containing at least one hit.
+</p>
+<img src="total_hit_distribution.svg" width="780">
+
+<h3>Motif-specific hit quality metrics</h3>
+<p>
+    These distribution plots characterize the quality and prevalence of hits for individual motifs:
+</p>
+<ul>
+    <li><strong>Hits Per Region</strong>: Frequency of motif occurrence across genomic regions (higher values suggest more prevalent motifs)</li>
+    <li><strong>Hit Coefficient</strong>: Strength of motif instance assignment by the optimization algorithm (higher values indicate stronger matches)</li>
+    <li><strong>Hit Similarity</strong>: Cosine similarity between individual hits and the motif CWM (higher values indicate closer pattern matching)</li>
+    <li><strong>Hit Importance</strong>: Total contribution score magnitude within hit regions (reflects functional significance from the neural network model)</li>
+</ul>
+<table>
+    <thead>
+        <tr>
+            <th>Motif Name</th>
+            <th class="distplot">Hits Per Region</th>
+            <th class="distplot">Hit Coefficient</th>
+            <th class="distplot">Hit Similarity</th>
+            <th class="distplot">Hit Importance</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for m in motif_names %}
+        <tr>
+            <td><code>{{ m }}</code></td>
+            <td class="distplot"><img src="motif_hit_distributions/{{ m|urlencode }}.svg" width="360"></td>
+            <td class="distplot"><img src="motif_stat_distributions/{{ m|urlencode }}_coefficients.svg" width="360"></td>
+            <td class="distplot"><img src="motif_stat_distributions/{{ m|urlencode }}_similarities.svg" width="360"></td>
+            <td class="distplot"><img src="motif_stat_distributions/{{ m|urlencode }}_importances.svg" width="360"></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Motif co-occurrence analysis</h3>
+<p>
+    This correlation heatmap reveals which motifs tend to occur together in the same genomic regions, 
+    potentially indicating cooperative transcription factor binding or shared regulatory mechanisms.
+    Color intensity represents cosine similarity between motif occurrence patterns, where occurrence 
+    is defined as the presence of at least one hit for each motif within individual regions.
+</p>
+<p>
+    High positive correlations (dark colors) suggest motifs that frequently co-occur. 
+    Low correlations suggest independent or mutually exclusive binding patterns.
+</p>
+<img src="motif_cooocurrence.svg" width="780">
+
+</body>
+</html>
