@@ -1,0 +1,2 @@
+[console_scripts]
+copilotkey = copilotkey.__main__:main
