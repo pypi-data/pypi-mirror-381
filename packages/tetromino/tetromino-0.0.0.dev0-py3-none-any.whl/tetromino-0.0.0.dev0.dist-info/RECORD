@@ -1,0 +1,9 @@
+tetris/__init__.py,sha256=uI2IttvuqbwdHpPbEycDOEYtFWrXRy5KP8bFMukV8Aw,932
+tetris/__main__.py,sha256=d69apU1k_KpsqHYypn1SFas-fP193N0JzgsiT-LgHzI,67
+tetris/app.py,sha256=PGmOlbDNBVVYOWniAXllzT-GeXL1maA2bY4Q6j-H4MI,15601
+tetris/cli.py,sha256=EZ5WlH4xCZ5MrTyVDyVpM3Mq7vlKQZ6Ks55WBBI3pPk,1813
+tetris/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tetromino-0.0.0.dev0.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+tetromino-0.0.0.dev0.dist-info/entry_points.txt,sha256=dzYeKxvn5GqjhQZ6Hj-Cb-ruwCKcjWVaf-RNiKYZCes,44
+tetromino-0.0.0.dev0.dist-info/METADATA,sha256=o5Q_oPO_NJ2Nk9BH3oRub7le5lnVP__3gPSLfjmjOOI,1984
+tetromino-0.0.0.dev0.dist-info/RECORD,,
