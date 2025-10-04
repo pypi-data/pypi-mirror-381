@@ -1,0 +1,137 @@
+"""
+Python bindings for scriptthing scripts
+
+Individual scripts can be imported directly:
+    from scriptthing.bindings import my_script
+    
+Note: Script names with hyphens or dots are converted to underscores for valid Python identifiers.
+For example, 'my-script.py' becomes 'my_script_py' when imported.
+
+Scripts with argparse provide typed parameters. Scripts with output format comments provide typed returns.
+"""
+
+# Import the existing Executable wrapper
+from .shell.script_wrapper import Executable, CompletedScriptResult
+from typing import Dict, List, Any
+
+# ========================================
+# Generated Script Bindings
+# ========================================
+
+{% for script in scripts -%}
+
+# {{ script.name }}
+{% if script.metadata.has_typed_interface -%}
+def {{ script.binding_name }}(
+{%- for param in script.metadata.positional %}
+    {{ param.name }}: {{ param.type }},
+{%- endfor -%}
+{%- for param in script.metadata.optional %}
+    {{ param.name }}: {{ param.type }}
+{%- if param.default is not none %} = {{ param.default if param.type != 'str' else "'" + param.default|string + "'" }}{% else %} = None{% endif %},
+{%- endfor %}
+    stdin_input=None,
+) -> {% if script.output_format %}{{ script.output_format.return_type }}{% else %}CompletedScriptResult{% endif %}:
+    """Generated binding for {{ script.name }} script.
+    
+    {% if script.metadata.description -%}
+    {{ script.metadata.description }}
+    
+    {% endif -%}
+    Args:
+{%- for param in script.metadata.positional %}
+        {{ param.name }} ({{ param.type }}): {{ param.help or 'No description available' }}
+{%- endfor %}
+{%- for param in script.metadata.optional %}
+        {{ param.name }} ({{ param.type }}, optional): {{ param.help or 'No description available' }}
+            {%- if param.default is not none %} Defaults to {{ param.default if param.type != 'str' else "'" + param.default|string + "'" }}.{% else %} Defaults to None.{% endif %}
+{%- endfor %}
+        stdin_input (optional): Data to pass to script's standard input.
+    
+    Returns:
+        {% if script.output_format -%}
+        {{ script.output_format.return_type }}: Script output converted from {{ script.output_format.format }} format.
+        {%- else -%}
+        CompletedScriptResult: Object containing stdout and stderr from script execution.
+        {%- endif %}
+    """
+    {% if script.output_format -%}
+    result = Executable("{{ script.name }}")(
+{%- for param in script.metadata.positional %}
+        {{ param.name }},
+{%- endfor -%}
+{%- for param in script.metadata.optional %}
+        {{ param.name }}={{ param.name }},
+{%- endfor %}
+        stdin_input=stdin_input,
+    )
+    {% if script.output_format.format == 'json' -%}
+    return result.json
+    {%- elif script.output_format.format == 'jsonl' -%}
+    return result.jsonl
+    {%- elif script.output_format.format == 'text' -%}
+    return result.text
+    {%- elif script.output_format.format == 'lines' -%}
+    return result.lines
+    {%- else -%}
+    return result.text
+    {%- endif %}
+    {%- else -%}
+    return Executable("{{ script.name }}")(
+{%- for param in script.metadata.positional %}
+        {{ param.name }},
+{%- endfor -%}
+{%- for param in script.metadata.optional %}
+        {{ param.name }}={{ param.name }},
+{%- endfor %}
+        stdin_input=stdin_input,
+    )
+    {%- endif %}
+{% else -%}
+def {{ script.binding_name }}(*args, stdin_input=None, **kwargs) -> {% if script.output_format %}{{ script.output_format.return_type }}{% else %}CompletedScriptResult{% endif %}:
+    """Generated binding for {{ script.name }} script.
+    
+    Args:
+        *args: Positional arguments to pass to the script.
+        stdin_input (optional): Data to pass to script's standard input.
+        **kwargs: Keyword arguments converted to command-line flags.
+    
+    Returns:
+        {% if script.output_format -%}
+        {{ script.output_format.return_type }}: Script output converted from {{ script.output_format.format }} format.
+        {%- else -%}
+        CompletedScriptResult: Object containing stdout and stderr from script execution.
+        {%- endif %}
+    """
+    {% if script.output_format -%}
+    result = Executable("{{ script.name }}")(*args, stdin_input=stdin_input, **kwargs)
+    {% if script.output_format.format == 'json' -%}
+    return result.json
+    {%- elif script.output_format.format == 'jsonl' -%}
+    return result.jsonl
+    {%- elif script.output_format.format == 'text' -%}
+    return result.text
+    {%- elif script.output_format.format == 'lines' -%}
+    return result.lines
+    {%- else -%}
+    return result.text
+    {%- endif %}
+    {%- else -%}
+    return Executable("{{ script.name }}")(*args, stdin_input=stdin_input, **kwargs)
+    {%- endif %}
+{% endif -%}
+{% if not loop.last %}
+
+{% endif -%}
+{% endfor -%}
+
+
+# ========================================
+# Module Exports
+# ========================================
+
+__all__ = [
+{% for script in scripts -%}
+    "{{ script.binding_name }}",
+{% endfor -%}
+]
