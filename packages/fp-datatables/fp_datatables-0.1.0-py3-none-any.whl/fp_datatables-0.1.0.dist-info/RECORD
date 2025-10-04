@@ -1,0 +1,11 @@
+datatables/__init__.py,sha256=JRV3gbyf1Ir_vvjDL5pR0ZKjpOvKoKanWjwKWF45qCM,607
+datatables/contract.py,sha256=eN17AEXZgalt9DFcqE7DVGyBWBvCVLTegCRhXNtY2Ts,774
+datatables/core.py,sha256=Qvb2JYjbIcaqkjjHc9g6NkUNdE8B9TjcxBfgaRrHbBo,2159
+datatables/database.py,sha256=7fhfuebUQoLHtVxstqT7VxIozSqO0OnqAZwkdbDiRZw,1639
+datatables/exceptions.py,sha256=7tWBJzLD5K89Ll-2vzyIDPm4LKqb3Y1Be3Zb9WlgI38,332
+datatables/schema.py,sha256=CYWkG8B0jMKw1T4GAT7n3XxhJPs3-sBY_Ot_AWtLSvw,989
+datatables/utils.py,sha256=ZcYFHlSvhEr2llQNCjl3J1r3Xw-axgMlDDg2ykySy9I,6336
+fp_datatables-0.1.0.dist-info/METADATA,sha256=a6m99NnN9RnNI_GF6iE63xVEZian0wKn_cVzIGifqsY,337
+fp_datatables-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+fp_datatables-0.1.0.dist-info/top_level.txt,sha256=V5TXi8YMVY4ethyxASAtUH4BBRJifasgM88-TSXVhXc,11
+fp_datatables-0.1.0.dist-info/RECORD,,
