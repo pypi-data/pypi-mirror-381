@@ -1,0 +1,11 @@
+uploadassist/__init__.py,sha256=XZKoD9RR4sJeKBr2XgQX5e7M0qnoJpFo_wPTLLgTRnU,19042
+uploadassist/cli.py,sha256=oSCExC2Z3fhP13KmMmOdBr_aXePFOA1MwqF2H_9UAZE,3332
+uploadassist/deps.py,sha256=vfg_qMvVITtu4pCSz2wE7HUaCeX0IwVWntugfP-dIQA,7083
+uploadassist/latexmk.py,sha256=Dqc_DtPtinhTL6R9eQXNi1KMwqtJzaerYhGS1J-6ITY,2107
+uploadassist/utils.py,sha256=YEUv0kIrYQ3z53IhPgmrv2yOxm2mZdKDPXxgtTJzSsE,1040
+uploadassist-0.0.1.dev1.dist-info/licenses/LICENSE,sha256=j8mdp9N2NerzgyXyX6Eyb0pOuTfE6EBMJk5-1dfSbzg,1519
+uploadassist-0.0.1.dev1.dist-info/METADATA,sha256=7oIFeNGKU-m07T9tn9Kr4arDT3Lvj7gxmcJlAf1MBy0,6390
+uploadassist-0.0.1.dev1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+uploadassist-0.0.1.dev1.dist-info/entry_points.txt,sha256=kjHsSZN9m1V33aPqQdAG8pwX9_5VDbp-ClxdhSUYe2M,55
+uploadassist-0.0.1.dev1.dist-info/top_level.txt,sha256=fOw0K5PCfzJ_ehq6frZ4rVddKdgw_NswBuAWVeyfEBo,13
+uploadassist-0.0.1.dev1.dist-info/RECORD,,
