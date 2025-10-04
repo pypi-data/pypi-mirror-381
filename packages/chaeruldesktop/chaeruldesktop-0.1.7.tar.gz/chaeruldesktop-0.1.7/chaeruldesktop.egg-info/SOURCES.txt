@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+chaeruldesktop/__init__.py
+chaeruldesktop/app_desktop.py
+chaeruldesktop.egg-info/PKG-INFO
+chaeruldesktop.egg-info/SOURCES.txt
+chaeruldesktop.egg-info/dependency_links.txt
+chaeruldesktop.egg-info/requires.txt
+chaeruldesktop.egg-info/top_level.txt
+chaeruldesktop/icon/app.ico
+chaeruldesktop/icon/circle-user.png
+chaeruldesktop/icon/crossed-eye.png
+chaeruldesktop/icon/eye.png
+chaeruldesktop/icon/lock.png
