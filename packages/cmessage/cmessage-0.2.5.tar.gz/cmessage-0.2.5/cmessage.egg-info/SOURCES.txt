@@ -1,0 +1,8 @@
+README.md
+setup.py
+cmessage/__init__.py
+cmessage/cmessage.py
+cmessage.egg-info/PKG-INFO
+cmessage.egg-info/SOURCES.txt
+cmessage.egg-info/dependency_links.txt
+cmessage.egg-info/top_level.txt

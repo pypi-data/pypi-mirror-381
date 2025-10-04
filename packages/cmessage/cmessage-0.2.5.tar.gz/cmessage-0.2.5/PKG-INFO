@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: cmessage
+Version: 0.2.5
+Summary: Simple ctypes-based MessageBox wrapper for Windows
+Home-page: https://github.com/yourusername/cmessage
+Author: Your Name
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Utilities
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# cmessage
+
+Simple ctypes-based MessageBox wrapper for Windows.
+
+## Usage
+
+```python
+import cmessage
+
+cm = cmessage.CMessage()
+message = cm.Message()
+message.Show("Title", "Message", lambda: print("Clicked!"), cm.ICON_NONE)
