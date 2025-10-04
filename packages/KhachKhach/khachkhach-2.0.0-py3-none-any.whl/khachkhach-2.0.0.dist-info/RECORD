@@ -1,0 +1,16 @@
+khachkhach/__init__.py,sha256=eQMxhZsRkndWekePhmXMppg8gErdoTYu37jWBo0K6ic,285
+khachkhach/data_processor.py,sha256=643xXPozR0pU-eTao8xRwKFeuffH-k0KPoQm8EIHiEA,7298
+khachkhach/detection_engine.py,sha256=7lswwUiQ_B_t7WI7JqlhOrXi2Uc4YSCaJcaHEboJcUU,8085
+khachkhach/requirements.txt,sha256=aybmaqbDRw_6TLYcHHPp5GH6LT3gZqrtqOQF7IO-1N8,89
+khachkhach/utils.py,sha256=VDBp8n4zQ3LWimPPU9saJ3kbZsy4mk64uLMAnuJ0M4g,698
+khachkhach/video_processor.py,sha256=Xf7GbBfycc_SBg26gsJqgM88pEmBRdgOhqWBy2RkNoY,4103
+khachkhach/__pycache__/__init__.cpython-312.pyc,sha256=AuCNR_GgE9YuBvz18Y8_mH7076eTfmn9Sp-uwVWa7xA,449
+khachkhach/__pycache__/data_processor.cpython-312.pyc,sha256=XhKvv9w8SspSNT9f_yAsAlnd5mp6j6eWoRVDGqEQiYo,8875
+khachkhach/__pycache__/detection_engine.cpython-312.pyc,sha256=tqXQBh6qKwOEJaMN6r-JOWU4izElSoVXLPfinPYDc8o,9793
+khachkhach/__pycache__/utils.cpython-312.pyc,sha256=3JGW4XqV3p-usPqxxMwd_gI030JNw6fcVbxoKYP0e-g,1243
+khachkhach/__pycache__/video_processor.cpython-312.pyc,sha256=XCtHLK6CXFfr63wqHDYcYh7az1d4933NcnHlRnsP_9U,5028
+khachkhach-2.0.0.dist-info/licenses/LICENSE,sha256=R2-U1bD740GZxLbJVQ5u20vJgAkv1W_bSVfVCKC4Qd4,1088
+khachkhach-2.0.0.dist-info/METADATA,sha256=JQJPKcm0pdvWVpGKPcEgKZ11ReTAIKaG0ObWCw2bZw0,2452
+khachkhach-2.0.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+khachkhach-2.0.0.dist-info/top_level.txt,sha256=aN-_bGL8LzKa2p6Nib2JTA4I81G0LIG-wVfWTN9F6Hc,11
+khachkhach-2.0.0.dist-info/RECORD,,
