@@ -1,0 +1,109 @@
+Metadata-Version: 2.4
+Name: core-sentry
+Version: 1.0.1
+Summary: This project provides common components related to the integration with Sentry...
+Author-email: Alejandro Cora González <alek.cora.glez@gmail.com>
+Maintainer: Alejandro Cora González
+License-Expression: MIT
+Project-URL: Homepage, https://gitlab.com/bytecode-solutions/core/core-sentry
+Project-URL: Repository, https://gitlab.com/bytecode-solutions/core/core-sentry
+Project-URL: Documentation, https://core-sentry.readthedocs.io/en/latest/
+Project-URL: Issues, https://gitlab.com/bytecode-solutions/core/core-sentry/-/issues
+Project-URL: Changelog, https://gitlab.com/bytecode-solutions/core/core-sentry/-/blob/master/CHANGELOG.md
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: core-tests>=2.0.2
+Requires-Dist: sentry-sdk>=2.29.1
+Provides-Extra: dev
+Requires-Dist: core-dev-tools>=1.0.1; extra == "dev"
+Dynamic: license-file
+
+core-sentry
+===============================================================================
+
+This project provides a set of common components related to the 
+integration with Sentry designed to facilitate tracking errors and 
+logs monitoring...
+
+===============================================================================
+
+.. image:: https://img.shields.io/pypi/pyversions/core-sentry.svg
+    :target: https://pypi.org/project/core-sentry/
+    :alt: Python Versions
+
+.. image:: https://img.shields.io/badge/license-MIT-blue.svg
+    :target: https://gitlab.com/bytecode-solutions/core/core-sentry/-/blob/main/LICENSE
+    :alt: License
+
+.. image:: https://gitlab.com/bytecode-solutions/core/core-sentry/badges/release/pipeline.svg
+    :target: https://gitlab.com/bytecode-solutions/core/core-sentry/-/pipelines
+    :alt: Pipeline Status
+
+.. image:: https://readthedocs.org/projects/core-sentry/badge/?version=latest
+    :target: https://readthedocs.org/projects/core-sentry/
+    :alt: Docs Status
+
+.. image:: https://img.shields.io/badge/security-bandit-yellow.svg
+    :target: https://github.com/PyCQA/bandit
+    :alt: Security
+
+|
+
+Execution Environment
+---------------------------------------
+
+Install libraries
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: shell
+
+    pip install --upgrade pip
+    pip install virtualenv
+..
+
+Create the Python Virtual Environment.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: shell
+
+    virtualenv --python={{python-version}} .venv
+    virtualenv --python=python3.11 .venv
+..
+
+Activate the Virtual Environment.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: shell
+
+    source .venv/bin/activate
+..
+
+Install required libraries.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: shell
+
+    pip install .
+..
+
+Check tests and coverage.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: shell
+
+    python manager.py run-tests
+    python manager.py run-coverage
+..
