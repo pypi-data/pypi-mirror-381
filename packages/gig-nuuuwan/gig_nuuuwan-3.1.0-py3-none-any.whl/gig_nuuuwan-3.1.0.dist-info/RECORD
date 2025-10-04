@@ -1,0 +1,17 @@
+gig/__init__.py,sha256=W87P8-FzD5BywAW7MRQwx2XqZCJ9l_TwO0qawoxUEVI,242
+gig/core/Ent.py,sha256=0mEvnx-Zdkzi0p0wAIPhG-_3YRb9oaICgRXty0-LOh4,306
+gig/core/EntBase.py,sha256=ONxcnnM00k3HY2b52pDtAzBCSjFhoMGMV2o4Sz7-HXU,1232
+gig/core/EntGIGMixin.py,sha256=nHh1dlCysaVZeMXoP8dBtqD8hJNv250nfYt7ajFUnJc,138
+gig/core/EntGeoMixin.py,sha256=Q7I5Tc5yCzZqS1rUn5viQ0dROv0fSdX5Cg5yr2bULcM,2330
+gig/core/EntJSONMixin.py,sha256=bI4uUdjcHpS1MHrnDqH5K8DYbUhuIeZEVeQMfCQ1VTs,198
+gig/core/EntLoadMixin.py,sha256=t9YLTt0s3MfqHa8N5RfCYjT-ZzDRhcRobBDlMEoXHTA,2423
+gig/core/EntType.py,sha256=itU9B3aybn3i6PDP074EB4ZU_JT7MHo3qe7IynoyrJY,2419
+gig/core/GIGConstants.py,sha256=OeHacZo7Rp5QvFrGonP9S9dqczyonFRz9MeKImyfb2s,263
+gig/core/GIGTable.py,sha256=E5LhgT7JL15mRCcVOMILOFKb-1L9PEYrFi9SvfcukH8,1697
+gig/core/GIGTableRow.py,sha256=NlpBJdinJpR90cNk7X20a6kAZNWGPDxEJ1qJuHRcKRs,1132
+gig/core/__init__.py,sha256=_WUbOdtM5vEUV75bapSmfsTOl-CVWerEybUZU7zi1qI,485
+gig_nuuuwan-3.1.0.dist-info/licenses/LICENSE,sha256=DfIcv5mgPaPf0aSleXQh9n8i2rYdxtNVawdbmpk94bU,1064
+gig_nuuuwan-3.1.0.dist-info/METADATA,sha256=qmE5bXLHfNgF1YIF_2ue9m7zPuUskaf3oao_IY3IHAk,813
+gig_nuuuwan-3.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+gig_nuuuwan-3.1.0.dist-info/top_level.txt,sha256=Ym2TTFSjTMxDIhlT9Ow26xXNsA43PyoZv75XwlcdRtA,4
+gig_nuuuwan-3.1.0.dist-info/RECORD,,
