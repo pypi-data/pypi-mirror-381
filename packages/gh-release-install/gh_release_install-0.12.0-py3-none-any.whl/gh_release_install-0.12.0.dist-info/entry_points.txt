@@ -1,0 +1,2 @@
+[console_scripts]
+gh-release-install = gh_release_install.cli:run
