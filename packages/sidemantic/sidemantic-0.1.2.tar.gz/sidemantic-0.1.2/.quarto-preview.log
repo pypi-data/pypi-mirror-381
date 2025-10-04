@@ -1,0 +1,813 @@
+[1m[34mTerminating existing preview server....[39m[22m[1m[34mDONE
+[39m[22m
+[1m[34mPreparing to preview[39m[22m
+
+[32mWatching files for changes[39m
+[32mBrowse at [39m[4m[32mhttp://localhost:43117/[39m[24m
+Listening on http://127.0.0.1:43117/
+[32mGET: /[39m
+[32mGET: /[39m
+[32mGET: /examples.html[39m
+[32mGET: /marimo-demo.html[39m
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+[32mGET: /marimo-demo.html[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-app.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook (live server)
+  page-layout: full
+  description: Embedded marimo app served by a local Python server
+  
+[32mGET: /marimo-app.html[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-wasm.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook (WASM + Altair)
+  page-layout: article
+  description: All-in-browser marimo app using Altair, no MPL
+  
+['starlette>=0.42', 'anyio>=4', 'sniffio>=1.3', 'h11>=0.14'] was not installed: micropip is only available in WASM notebooks.[1mpandoc [22m
+  to: html
+  output-file: marimo-wasm-altair.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook (WASM + Altair)
+  page-layout: article
+  description: All-in-browser marimo app using Altair. No MPL, no starlette.
+  
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[1mpandoc [22m
+  to: html
+  output-file: marimo-wasm-altair.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook (WASM + Altair)
+  page-layout: article
+  description: All-in-browser marimo app using Altair. No MPL, no starlette.
+  
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+[32mGET: /marimo-app.html[39m
+[32mGET: /marimo-app.html[39m
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[32mGET: /examples.html[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-export-altair.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook (Exported WASM Altair)
+  page-layout: full
+  description: Self-contained, read-only marimo export running in the browser
+  
+[32mGET: /examples.html[39m
+[32mGET: /marimo-export-altair.html[39m
+[32mGET: /marimo-export-altair/index.html[39m
+[31m  /wasm/controller.js (404: Not Found)[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-wasm-altair.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook (WASM + Altair)
+  page-layout: article
+  description: All-in-browser marimo app using Altair. No MPL, no starlette.
+  
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[32mGET: /marimo-export-altair.html[39m
+[32mGET: /marimo-export-altair/index.html[39m
+[31m  /wasm/controller.js (404: Not Found)[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[32mGET: /marimo-export-altair.html[39m
+[32mGET: /marimo-export-altair/index.html[39m
+[31m  /wasm/controller.js (404: Not Found)[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[91mERROR: NotFound: No such file or directory (os error 2): lstat '/Users/nico/Code/sidemantic/docs/.quarto/quarto-session-temp8709da2befb0d195/c11341e714028bf5-5b4ad623e5705c0698d39aec6f10cf02.css'
+
+Stack trace:
+    at Object.lstatSync (ext:deno_fs/30_fs.js:405:3)
+    at copyTo (file:///Applications/quarto/bin/quarto.js:78836:24)
+    at doCopy (file:///Applications/quarto/bin/quarto.js:78877:5)
+    at copyFileIfNewer (file:///Applications/quarto/bin/quarto.js:78894:5)
+    at copyDependencyFile (file:///Applications/quarto/bin/quarto.js:112047:3)
+    at copyFile3 (file:///Applications/quarto/bin/quarto.js:111960:7)
+    at file:///Applications/quarto/bin/quarto.js:111982:9
+    at Array.forEach (<anonymous>)
+    at processHtmlDependencies (file:///Applications/quarto/bin/quarto.js:111981:30)
+    at readAndInjectDependencies (file:///Applications/quarto/bin/quarto.js:111863:23)[39m
+[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[32mGET: /examples.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-wasm-altair.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[32mGET: /examples.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-wasm-altair.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.MarimoExceptionRaisedError: Cannot cast DatetimeArray to dtype datetime64[M]
+MarimoExceptionRaisedError: An ancestor raised an exception (TypeError): 
+MarimoExceptionRaisedError: An ancestor raised an exception (TypeError): 
+MarimoExceptionRaisedError: An ancestor raised an exception (TypeError): 
+MarimoExceptionRaisedError: An ancestor raised an exception (TypeError): 
+MarimoExceptionRaisedError: An ancestor raised an exception (TypeError): 
+Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.[32mGET: /marimo-wasm-altair.html[39m
+[32mGET: /marimo-wasm-altair.html[39m
+[31mGET: /marimo-wasm-altair.html (404: Not Found)[39m
+[31mGET: /marimo-wasm-altair.html (404: Not Found)[39m
+[31mGET: /marimo-wasm-altair.html (404: Not Found)[39m
+[31mGET: / (404: Not Found)[39m
+[32mGET: /[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-wasm-altair.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-wasm-altair.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-wasm-altair.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-wasm-altair.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-wasm-altair.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[32mGET: /marimo-wasm-altair.html[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-wasm-altair.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-wasm-altair.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-wasm-altair.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['altair>=5.2,<6', './assets/sidemantic-0.1.1-py3-none-any.whl'] was not installed: micropip is only available in WASM notebooks.MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.[32mGET: /marimo-wasm-altair.html[39m
+[31mGET: /marimo-wasm-altair.html (404: Not Found)[39m
+[31mGET: /marimo-wasm-altair.html (404: Not Found)[39m
+[31mGET: /marimo-wasm-altair.html (404: Not Found)[39m
+[31mGET: / (404: Not Found)[39m
+[32mGET: /[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.[91mERROR: NotFound: No such file or directory (os error 2): lstat '/Users/nico/Code/sidemantic/docs/.quarto/quarto-session-temp90265d22c5c7d2a7/1e9f4c9fe3c22a84-5b4ad623e5705c0698d39aec6f10cf02.css'
+
+Stack trace:
+    at Object.lstatSync (ext:deno_fs/30_fs.js:405:3)
+    at copyTo (file:///Applications/quarto/bin/quarto.js:78836:24)
+    at doCopy (file:///Applications/quarto/bin/quarto.js:78877:5)
+    at copyFileIfNewer (file:///Applications/quarto/bin/quarto.js:78894:5)
+    at copyDependencyFile (file:///Applications/quarto/bin/quarto.js:112047:3)
+    at copyFile3 (file:///Applications/quarto/bin/quarto.js:111960:7)
+    at file:///Applications/quarto/bin/quarto.js:111982:9
+    at Array.forEach (<anonymous>)
+    at processHtmlDependencies (file:///Applications/quarto/bin/quarto.js:111981:30)
+    at readAndInjectDependencies (file:///Applications/quarto/bin/quarto.js:111863:23)[39m
+[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6', './assets/sidemantic-0.1.1-py3-none-any.whl'] was not installed: micropip is only available in WASM notebooks.MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.[33mWARN: Unable to resolve link target: marimo-interactive.qmd[39m
+[32mGET: /marimo-wasm-altair.html[39m
+['altair>=5.2,<6', './assets/sidemantic-0.1.1-py3-none-any.whl'] was not installed: micropip is only available in WASM notebooks.MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.[33mWARN: Unable to resolve link target: marimo-interactive.qmd[39m
+[32mGET: /marimo-wasm-altair.html[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+[31m  /marimo-interactive.qmd (404: Not Found)[39m
+['altair>=5.2,<6', './assets/sidemantic-0.1.1-py3-none-any.whl'] was not installed: micropip is only available in WASM notebooks.MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.[32mGET: /marimo-interactive.html[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-interactive.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['altair>=5.2,<6', './assets/sidemantic-0.1.1-py3-none-any.whl'] was not installed: micropip is only available in WASM notebooks.MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.[32mGET: /marimo-interactive.html[39m
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+[32mGET: /marimo-interactive.html[39m
+[32mGET: /marimo-interactive.html[39m
+[32mGET: /marimo-interactive.html[39m
+[32mGET: /marimo-interactive.html[39m
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+[32mGET: /marimo-interactive.html[39m
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+[32mGET: /marimo-interactive.html[39m
+[32mGET: /marimo-interactive.html[39m
+[32mGET: /marimo-interactive.html[39m
+['altair>=5.2,<6', './assets/sidemantic-0.1.1-py3-none-any.whl'] was not installed: micropip is only available in WASM notebooks.MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.[32mGET: /marimo-interactive.html[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-interactive.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+['altair>=5.2,<6', './assets/sidemantic-0.1.1a1-py3-none-any.whl'] was not installed: micropip is only available in WASM notebooks.MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.[32mGET: /marimo-interactive.html[39m
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-interactive.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.[32mGET: /marimo-interactive.html[39m
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-interactive.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['altair>=5.2,<6'] was not installed: micropip is only available in WASM notebooks.MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.[32mGET: /marimo-interactive.html[39m
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-interactive.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['sqlglot>=25,<26', 'pydantic>=2,<3', 'altair>=5,<6'] was not installed: micropip is only available in WASM notebooks../assets/sidemantic-0.1.1-py3-none-any.whl was not installed: micropip is only available in WASM notebooks.MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.[32mGET: /marimo-interactive.html[39m
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-interactive.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['sqlglot>=25,<26', 'pydantic>=2,<3', 'altair>=5,<6'] was not installed: micropip is only available in WASM notebooks.sidemantic==0.1.1 was not installed: micropip is only available in WASM notebooks.MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.[32mGET: /marimo-interactive.html[39m
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-interactive.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['sqlglot>=25,<26', 'pydantic>=2,<3', 'altair>=5,<6'] was not installed: micropip is only available in WASM notebooks.sidemantic==0.1.1 was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-interactive.html[39m
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+['altair>=5.2,<6', './assets/sidemantic-0.1.1-py3-none-any.whl'] was not installed: micropip is only available in WASM notebooks.MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.[32mGET: /marimo-interactive.html[39m
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+[31m  /.well-known/appspecific/com.chrome.devtools.json (404: Not Found)[39m
+Uninstalled 1 package in 1ms
+Installed 1 package in 1ms
+['altair>=5.2,<6', './assets/sidemantic-0.1.1-py3-none-any.whl'] was not installed: micropip is only available in WASM notebooks.MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.[32mGET: /marimo-interactive.html[39m
+[1mpandoc [22m
+  to: html
+  output-file: marimo-interactive.html
+  standalone: true
+  title-prefix: Sidemantic
+  section-divs: true
+  html-math-method: mathjax
+  wrap: none
+  default-image-extension: png
+  toc: true
+  toc-depth: 3
+  variables: {}
+  
+[1mmetadata[22m
+  document-css: false
+  link-citations: true
+  date-format: long
+  lang: en
+  external-env: true
+  theme: cosmo
+  title: Interactive Notebook
+  page-layout: article
+  description: Explore Sidemantic with an interactive notebook.
+  
+['sqlglot>=25,<26', 'pydantic>=2,<3', 'altair>=5,<6'] was not installed: micropip is only available in WASM notebooks.sidemantic==0.1.2 was not installed: micropip is only available in WASM notebooks.[32mGET: /marimo-interactive.html[39m
+[31m  /site_libs/quarto-search/fuse.min.js (404: Not Found)[39m
+[31m  /site_libs/quarto-search/quarto-search.js (404: Not Found)[39m
+[31m  /site_libs/quarto-html/quarto.js (404: Not Found)[39m
+[31m  /site_libs/quarto-html/tabsets/tabsets.js (404: Not Found)[39m
+[31m  /site_libs/quarto-html/axe/axe-check.js (404: Not Found)[39m
+[31m  /site_libs/quarto-html/popper.min.js (404: Not Found)[39m
+[31m  /site_libs/quarto-html/tippy.umd.min.js (404: Not Found)[39m
+[31m  /site_libs/quarto-html/anchor.min.js (404: Not Found)[39m
+[31m  /site_libs/bootstrap/bootstrap.min.js (404: Not Found)[39m
+['altair>=5.2,<6', './assets/sidemantic-0.1.1-py3-none-any.whl'] was not installed: micropip is only available in WASM notebooks.MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+MarimoExceptionRaisedError: name 'df' is not defined
+Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.Warning: Only the `disabled` codeblock attribute is utilized for pandoc export. Be sure to set desired code attributes in quarto form.[32mGET: /marimo-interactive.html[39m

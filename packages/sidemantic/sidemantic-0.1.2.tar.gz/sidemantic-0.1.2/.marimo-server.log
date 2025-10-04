@@ -1,0 +1,14 @@
+
+        Running demo.py ⚡
+
+        ➜  URL: http://localhost:43118
+
+[E 251003 23:16:32 ops:302] (error_id=66c127d1-8373-4491-8961-9becb13e0aa0) IO Error: Could not set lock on file "/Users/nico/Code/sidemantic/examples/demo.db": Conflicting lock is held in /Users/nico/.local/share/uv/python/cpython-3.12.6-macos-aarch64-none/bin/python3.12 (PID 40829) by user nico. See also https://duckdb.org/docs/stable/connect/concurrency
+[E 251003 23:16:32 ops:302] (error_id=6f0d5b81-5946-4859-ad11-edd98c1cd910) An ancestor raised an exception (MarimoSQLError): 
+[E 251003 23:16:32 ops:302] (error_id=e31eba02-3a54-4daa-8ecd-d8077bfc0f78) An ancestor raised an exception (MarimoSQLError): 
+[E 251003 23:16:32 ops:302] (error_id=48e2ab13-c87f-4242-a22a-db27cb9c85c2) An ancestor raised an exception (MarimoSQLError): 
+[E 251003 23:16:32 ops:302] (error_id=69c85fa6-414e-40e0-b473-9e7d73cc3b3b) An ancestor raised an exception (MarimoSQLError): 
+[E 251003 23:16:32 ops:302] (error_id=4fb0753d-73e4-4fdf-b82f-d2d75b65714b) An ancestor raised an exception (MarimoSQLError): 
+[E 251003 23:16:32 ops:302] (error_id=8495ed85-82d3-4a3b-8d88-98b141e88236) An ancestor raised an exception (MarimoSQLError): 
+[E 251003 23:16:32 ops:302] (error_id=e006a2bb-ceed-414c-bfa1-a4acb7e8a906) An ancestor raised an exception (MarimoSQLError): 
+[E 251003 23:16:32 ops:302] (error_id=d2f13f57-b135-4820-a6a6-74b21ce19e02) An ancestor raised an exception (MarimoSQLError): 
