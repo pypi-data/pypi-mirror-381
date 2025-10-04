@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+DevAssist.egg-info/PKG-INFO
+DevAssist.egg-info/SOURCES.txt
+DevAssist.egg-info/dependency_links.txt
+DevAssist.egg-info/top_level.txt
