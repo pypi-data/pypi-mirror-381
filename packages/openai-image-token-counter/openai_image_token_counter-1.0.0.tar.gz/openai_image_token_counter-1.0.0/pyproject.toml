@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openai-image-token-counter"
+version = "1.0.0"
+description = "Calculate token costs for images in OpenAI Vision API"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Eduardo J. Barrios", email = "contact@edujbarrios.com"}
+]
+maintainers = [
+    {name = "Eduardo J. Barrios", email = "contact@edujbarrios.com"}
+]
+keywords = ["openai", "vision", "api", "tokens", "image", "calculator", "cost", "estimation"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "Pillow>=8.0.0",
+    "PyYAML>=5.4.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=21.0",
+    "flake8>=3.8",
+    "mypy>=0.800",
+    "build>=0.7.0",
+    "twine>=3.4.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/edujbarrios/openai-image-token-counter"
+"Bug Reports" = "https://github.com/edujbarrios/openai-image-token-counter/issues"
+"Source" = "https://github.com/edujbarrios/openai-image-token-counter"
+"Documentation" = "https://github.com/edujbarrios/openai-image-token-counter#readme"
+
+[project.scripts]
+openai-image-tokens = "openai_image_token_counter.cli:main"
+
+[tool.setuptools]
+packages = ["openai_image_token_counter"]
+
+[tool.setuptools.package-data]
+"*" = ["*.mdx"]

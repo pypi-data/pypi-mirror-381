@@ -1,0 +1,2 @@
+[console_scripts]
+openai-image-tokens = openai_image_token_counter.cli:main

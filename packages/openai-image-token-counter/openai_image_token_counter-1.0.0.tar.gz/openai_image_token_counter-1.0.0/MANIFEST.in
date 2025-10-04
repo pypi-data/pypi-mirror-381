@@ -1,0 +1,8 @@
+include README.md
+include LICENSE
+include CHANGELOG.md
+include token_config.mdx
+include requirements.txt
+recursive-include openai_image_token_counter *.py
+recursive-include tests *.py
+exclude examples.py

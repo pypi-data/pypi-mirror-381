@@ -1,0 +1,168 @@
+# OpenAI Image Token Configuration
+
+This file contains all token calculation configuration for OpenAI Vision API models.
+It's easy to maintain and update when OpenAI changes their calculation algorithms.
+
+## Models and Calculation Methods
+
+### 32px Patch Models (GPT-4.1/o4-mini family)
+
+These models use 32px x 32px patches to calculate tokens:
+
+```yaml
+patch_32_models:
+  gpt-5-mini:
+    multiplier: 1.62
+    calculation_method: "patch_32"
+  gpt-5-nano:
+    multiplier: 2.46
+    calculation_method: "patch_32"
+  gpt-4.1-mini:
+    multiplier: 1.62
+    calculation_method: "patch_32"
+  gpt-4.1-nano:
+    multiplier: 2.46
+    calculation_method: "patch_32"
+  o4-mini:
+    multiplier: 1.72
+    calculation_method: "patch_32"
+```
+
+#### Calculation Algorithm for 32px Patches
+
+1. **Calculate raw patches**: `raw_patches = ceil(width/32) × ceil(height/32)`
+
+2. **If exceeds 1536 patches, scale down**:
+   ```
+   r = √(32² × 1536 / (width × height))
+   r = r × min(floor(width×r/32) / (width×r/32), floor(height×r/32) / (height×r/32))
+   ```
+
+3. **Final tokens**: `image_tokens = ceil(resized_width/32) × ceil(resized_height/32)`
+
+4. **Apply multiplier**: `final_tokens = image_tokens × multiplier`
+
+### 512px Tile Models (GPT-4o/o-series family)
+
+These models use 512px x 512px tiles with detail modes:
+
+```yaml
+tile_512_models:
+  gpt-5:
+    base_tokens: 70
+    tile_tokens: 140
+    calculation_method: "tile_512"
+  gpt-5-chat-latest:
+    base_tokens: 70
+    tile_tokens: 140
+    calculation_method: "tile_512"
+  gpt-4o:
+    base_tokens: 85
+    tile_tokens: 170
+    calculation_method: "tile_512"
+  gpt-4.1:
+    base_tokens: 85
+    tile_tokens: 170
+    calculation_method: "tile_512"
+  gpt-4.5:
+    base_tokens: 85
+    tile_tokens: 170
+    calculation_method: "tile_512"
+  gpt-4o-mini:
+    base_tokens: 2833
+    tile_tokens: 5667
+    calculation_method: "tile_512"
+  o1:
+    base_tokens: 75
+    tile_tokens: 150
+    calculation_method: "tile_512"
+  o1-pro:
+    base_tokens: 75
+    tile_tokens: 150
+    calculation_method: "tile_512"
+  o3:
+    base_tokens: 75
+    tile_tokens: 150
+    calculation_method: "tile_512"
+  computer-use-preview:
+    base_tokens: 65
+    tile_tokens: 129
+    calculation_method: "tile_512"
+```
+
+#### Calculation Algorithm for 512px Tiles
+
+**Low Detail Mode**: `tokens = base_tokens`
+
+**High Detail Mode**:
+1. **Scale to 2048x2048**: If width > 2048 or height > 2048, scale proportionally
+2. **Scale shortest side to 768px**: `scale = 768 / min(width, height)`
+3. **Count tiles**: `tiles = ceil(width/512) × ceil(height/512)`
+4. **Final tokens**: `tokens = base_tokens + (tiles × tile_tokens)`
+
+### GPT Image 1
+
+Special model with fidelity bonuses:
+
+```yaml
+gpt_image_1:
+  base_tokens: 65
+  tile_tokens: 129
+  calculation_method: "image_1"
+  fidelity_bonuses:
+    square: 4160  # aspect_ratio <= 1.2
+    rectangular: 6240  # aspect_ratio > 1.2
+```
+
+#### Calculation Algorithm for GPT Image 1
+
+1. **Scale to 2048x2048**: If needed
+2. **Scale shortest side to 768px**: `scale = 768 / min(width, height)` (same as other 512px tile models)
+3. **Count tiles**: `tiles = ceil(width/512) × ceil(height/512)`
+4. **Base tokens**: `tokens = base_tokens + (tiles × tile_tokens)`
+5. **High fidelity bonus**:
+   - If `aspect_ratio <= 1.2`: `tokens += 4160`
+   - If `aspect_ratio > 1.2`: `tokens += 6240`
+
+## Documented Calculation Examples
+
+### Example 1: 1024x1024 Image (32px Patches)
+- Width: 1024 → (1024 + 32 - 1) // 32 = 32 patches
+- Height: 1024 → (1024 + 32 - 1) // 32 = 32 patches  
+- Tokens: 32 × 32 = 1024 (below 1536 limit)
+
+### Example 2: 1800x2400 Image (32px Patches)
+- Raw patches: 57 × 75 = 4275 (exceeds 1536)
+- Scale factor: sqrt(1536 × 32² / (1800 × 2400)) = 0.603
+- Final dimensions: 1056 × 1408
+- Tokens: 33 × 44 = 1452
+
+### Example 3: 1024x1024 High Detail Image (GPT-4o)
+- No initial scaling (< 2048)
+- Scale to 768x768 (shortest side)
+- Tiles: 4 tiles of 512px
+- Tokens: 170 × 4 + 85 = 765
+
+### Example 4: 2048x4096 High Detail Image (GPT-4o)
+- Scale to 1024x2048 (2048 limit)
+- Scale to 768x1536 (shortest side 768)
+- Tiles: 6 tiles of 512px
+- Tokens: 170 × 6 + 85 = 1105
+
+## Limits Configuration
+
+```yaml
+limits:
+  max_patches_32px: 1536
+  max_dimension_512px: 2048
+  shortest_side_512px: 768
+  shortest_side_image1: 512
+  patch_size_32px: 32
+  tile_size_512px: 512
+```
+
+## Last Update
+
+- **Date**: October 3rd, 2025
+- **Source**: Official OpenAI Vision API Documentation
+- **Version**: 1.0.0
