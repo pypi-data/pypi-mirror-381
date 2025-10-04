@@ -1,0 +1,2 @@
+[console_scripts]
+uploadassist = uploadassist.cli:main
