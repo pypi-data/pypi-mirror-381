@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: arknet
+Version: 0.1.0
+Summary: Arknet: minimal, typed, library-grade Python package.
+Project-URL: Homepage, https://example.com/arknet
+Project-URL: Issues, https://example.com/arknet/issues
+Author: Arknet Authors
+License: MIT
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# arknet
+
+Minimal, typed library with a tiny CLI.
+
+```bash
+python -m pip install .
+arknet "hello"

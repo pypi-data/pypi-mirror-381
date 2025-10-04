@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "arknet"
+version = "0.1.0"
+description = "Arknet: minimal, typed, library-grade Python package."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Arknet Authors" }]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://example.com/arknet"
+Issues = "https://example.com/arknet/issues"
+
+[project.scripts]
+arknet = "arknet.__main__:main"
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+
+[tool.pytest.ini_options]
+addopts = "-q"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "src/arknet",
+  "pyproject.toml",
+  "README.md",
+  "LICENSE",
+  "tests",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/arknet"]
