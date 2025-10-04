@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/open_actuator/__init__.py
+src/open_actuator.egg-info/PKG-INFO
+src/open_actuator.egg-info/SOURCES.txt
+src/open_actuator.egg-info/dependency_links.txt
+src/open_actuator.egg-info/requires.txt
+src/open_actuator.egg-info/top_level.txt
