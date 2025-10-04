@@ -1,0 +1,71 @@
+[project]
+name = "oarepo-dashboard"
+dynamic = ["version"]
+description = "Support for user dashboard (records, communities, requests)"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+authors = [
+    { name = "Mirek Simek", email = "miroslav.simek@cesnet.cz" }
+]
+dependencies = [
+    "oarepo[rdm,tests]>=14,<15",
+    "oarepo-runtime>=2.0.0dev0,<3.0.0",
+    "oarepo-ui>=6.0.0dev11,<7.0.0",
+    "oarepo-rdm>=1.0.0dev0,<2.0.0",
+    "cachetools",
+    "openpyxl",
+]
+
+[project.optional-dependencies]
+dev = [
+    "oarepo-tools",
+    "pytest>=7.1.2",
+]
+
+tests = [
+    "pytest>=7.1.2",
+]
+
+oarepo14 = [
+    "oarepo[rdm,tests]>=14.0.0,<15.0.0",
+]
+
+[project.entry-points."invenio_base.blueprints"]
+oarepo_dashboard_components = "oarepo_dashboard.ui.dashboard_components:create_blueprint"
+invenio_app_rdm_users = "invenio_app_rdm.users_ui.views:create_ui_blueprint"
+
+[project.entry-points."invenio_assets.webpack"]
+oarepo_dashboard_i18n = "oarepo_dashboard.i18n.webpack:theme"
+oarepo_dashboard_components_ui_theme = "oarepo_dashboard.ui.dashboard_components.webpack:theme"
+
+[project.entry-points."invenio_i18n.translations"]
+oarepo_dashboard_messages = "oarepo_dashboard"
+
+[project.entry-points."invenio_base.finalize_app"]
+oarepo_dashboard_finalize_app = "oarepo_dashboard.ui.dashboard_components:finalize_app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "oarepo_dashboard/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/oarepo_dashboard",
+]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests"
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests"]
+
+

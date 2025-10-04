@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: oarepo-dashboard
+Version: 2.0.0.dev2
+Summary: Support for user dashboard (records, communities, requests)
+Author-email: Mirek Simek <miroslav.simek@cesnet.cz>
+Requires-Python: <3.14,>=3.13
+Requires-Dist: cachetools
+Requires-Dist: oarepo-rdm<2.0.0,>=1.0.0dev0
+Requires-Dist: oarepo-runtime<3.0.0,>=2.0.0dev0
+Requires-Dist: oarepo-ui<7.0.0,>=6.0.0dev11
+Requires-Dist: oarepo[rdm,tests]<15,>=14
+Requires-Dist: openpyxl
+Provides-Extra: dev
+Requires-Dist: oarepo-tools; extra == 'dev'
+Requires-Dist: pytest>=7.1.2; extra == 'dev'
+Provides-Extra: oarepo14
+Requires-Dist: oarepo[rdm,tests]<15.0.0,>=14.0.0; extra == 'oarepo14'
+Provides-Extra: tests
+Requires-Dist: pytest>=7.1.2; extra == 'tests'
+Description-Content-Type: text/markdown
+
+# oarepo-dashboard
