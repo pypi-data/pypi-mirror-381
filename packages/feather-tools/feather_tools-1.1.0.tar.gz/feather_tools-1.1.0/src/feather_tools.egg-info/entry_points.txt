@@ -1,0 +1,6 @@
+[console_scripts]
+csv2f = feather_tools.csv2f:main
+f2csv = feather_tools.f2csv:main
+fless = feather_tools.fless:main
+ftail = feather_tools.ftail:main
+fwc = feather_tools.fwc:main
