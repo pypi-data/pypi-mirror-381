@@ -1,0 +1,2 @@
+[console_scripts]
+accelera-benchmark = examples.benchmark:main
