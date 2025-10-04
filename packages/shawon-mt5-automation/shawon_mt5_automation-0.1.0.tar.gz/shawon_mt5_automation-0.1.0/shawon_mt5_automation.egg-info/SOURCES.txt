@@ -1,0 +1,7 @@
+README.md
+setup.py
+shawon_mt5_automation.egg-info/PKG-INFO
+shawon_mt5_automation.egg-info/SOURCES.txt
+shawon_mt5_automation.egg-info/dependency_links.txt
+shawon_mt5_automation.egg-info/requires.txt
+shawon_mt5_automation.egg-info/top_level.txt
