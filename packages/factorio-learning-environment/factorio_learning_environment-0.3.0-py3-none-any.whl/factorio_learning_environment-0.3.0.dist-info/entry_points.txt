@@ -1,0 +1,3 @@
+[console_scripts]
+fle = fle.run:main
+fle-mcp = fle.server:main
