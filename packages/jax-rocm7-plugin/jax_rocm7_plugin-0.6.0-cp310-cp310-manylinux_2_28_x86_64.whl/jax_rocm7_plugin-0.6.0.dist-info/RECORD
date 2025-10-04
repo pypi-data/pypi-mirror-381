@@ -1,0 +1,13 @@
+jax_rocm7_plugin/_hybrid.so,sha256=MLk6Zl7rKX3zGIdENAYO9Q1eJPlFvyoUnpAXme4_TN0,1828464
+jax_rocm7_plugin/_linalg.so,sha256=Tzx4zqnl6ERzjuiF8AxdQoalqeHEVHb8UmtzQQPIzxE,961568
+jax_rocm7_plugin/_prng.so,sha256=m_Jaq9wmsTCCWt7ICNqc52jY7q5iM4mEtXS5LkDwd-M,840520
+jax_rocm7_plugin/_rnn.so,sha256=pFA0uUhsNK7KzjMAtKGtU0gPKeKNeJ3mBm6mBFoACD8,1019168
+jax_rocm7_plugin/_solver.so,sha256=yjl8VP7PG5v6mZF1mh737vbnPhbljeVbZdjabS5yv-Q,1209888
+jax_rocm7_plugin/_sparse.so,sha256=XbYNtGlNbAbJIyyp-WlHS0BAFdB8eu5kcrFAbk_IRPk,952304
+jax_rocm7_plugin/_triton.so,sha256=HtKgGcKu5ebN2VXduyemliZzxTylqKw0_R9CkZv4xW0,4443064
+jax_rocm7_plugin/rocm_plugin_extension.so,sha256=rIlzPwHq-k-lQs0E2VWhFy8W57jtC3NBYH6hxzMIaZ4,12171256
+jax_rocm7_plugin/version.py,sha256=X_FN0sD_nEHSPx9trufBbxIurXABcEu0q8Yfuz487bI,6725
+jax_rocm7_plugin-0.6.0.dist-info/METADATA,sha256=P_lwgBAhUKkzLLEORmfZ3tnnl-4OE9yax7YXNqxxvWI,1285
+jax_rocm7_plugin-0.6.0.dist-info/WHEEL,sha256=DRFGfbmk00iwRfDF9fpLQAJbF-b4Wp23htOC54ltOsw,114
+jax_rocm7_plugin-0.6.0.dist-info/top_level.txt,sha256=LPoxLNNPa1A-ucyP6ranwKl6c0PncP6lmZJBDr8WbPg,17
+jax_rocm7_plugin-0.6.0.dist-info/RECORD,,
