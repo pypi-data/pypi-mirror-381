@@ -1,0 +1,10 @@
+mcss_package/__init__.py,sha256=AKHkE8MvUvdEt4SeGQVELdWZtiNFZm1RW0FttqL4k6g,37
+mcss_package/alignment.py,sha256=g0qeAT8d1I61LG3_6RJqRE5dssx_sTUtlkfgyclG0IA,54
+mcss_package/clustering.py,sha256=R084hbAq0FgHmiBx0gdL6EN4uA4ijhs6iu7lIe5sVPE,39
+mcss_package/config.py,sha256=SQVE3BHQ9Fb2ChftU2roLHcruC-T23zY4ctlmkhaQhk,259
+mcss_package/runner.py,sha256=F9SgdXKlKexViDDjPw3RfXvU2M1rOT5zh9fnD-Ppy1w,37
+mcss_package-0.1.0.dist-info/licenses/LICENSE,sha256=gW0xyAfZedq_y5TKuLqdU6iZJcBFvb5ZYNpa4jPHHJA,42
+mcss_package-0.1.0.dist-info/METADATA,sha256=usdKszWezY1UeZH7SfzzH71e9i3MiYtGsdsmjCiFL4c,570
+mcss_package-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mcss_package-0.1.0.dist-info/top_level.txt,sha256=DKZgjCUD1HXQzZ86gPgFnORiw13AuTpyHscIK51AFJk,13
+mcss_package-0.1.0.dist-info/RECORD,,
