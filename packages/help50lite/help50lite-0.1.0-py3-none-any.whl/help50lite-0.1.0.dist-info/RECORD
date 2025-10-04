@@ -1,0 +1,12 @@
+help50lite/__init__.py,sha256=mThci_GuAbupdddZ0N_y-hC9Niwl--wjZESWtDQ8Hb8,184
+help50lite/__main__.py,sha256=0g3iknXOS9gZUcpL_trgAcuCJnZZKjdsT_xt61WOVb4,60
+help50lite/cli.py,sha256=ib47GqAeUHA7ezVv0p3P8DijLW60l57jzoGDhpW-gno,1238
+help50lite/engine.py,sha256=ij8rqQneO8B0p0ZlNyj_kaiacbGIRdnsBjUiq25vV9g,531
+help50lite/registry.py,sha256=h8n1MJa4LMG3sQjK0JlFr1VuROZK6EzV63QV459L_vk,420
+help50lite/helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+help50lite/helpers/make_helpers.py,sha256=xWvugohKaRFtjc0yxl3lZ4mJEZqazkD4eHXsKOxOOGw,1016
+help50lite-0.1.0.dist-info/METADATA,sha256=LaDajKwovS0-LIH1fhlD_Stc_nmxAdyNEdKLcRLxt84,423
+help50lite-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+help50lite-0.1.0.dist-info/entry_points.txt,sha256=jnX2xFt8cZdkn2CHORpU1IpyWSiX9bV7K_VE40e7Vgk,51
+help50lite-0.1.0.dist-info/top_level.txt,sha256=y5m6oCu6TAxd15g57kKMWHkXye0jCuUnzNI0Mj198qM,11
+help50lite-0.1.0.dist-info/RECORD,,

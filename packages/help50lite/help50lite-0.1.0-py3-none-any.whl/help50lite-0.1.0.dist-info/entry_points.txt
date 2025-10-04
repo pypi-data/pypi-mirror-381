@@ -1,0 +1,2 @@
+[console_scripts]
+help50lite = help50lite.cli:main
