@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jax-rocm7-pjrt"          # PyPI name uses hyphens
+version = "0.6.0rc1"             # Use a pre-release to avoid confusing users
+description = "Minimal stub to satisfy PyPI file-size increase requirements for jax-rocm7-pjrt"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "Apache-2.0" }
+authors = [{ name = "AMD ROCm JAX Team" }]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: Apache Software License",
+]
+
+[project.urls]
+Homepage = "https://github.com/ROCm/rocm-jax"
+
