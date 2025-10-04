@@ -1,0 +1,79 @@
+[project]
+name = "glitchlings"
+version = "0.2.0"
+description = "Monsters for your language games."
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "confusable-homoglyphs>=3.3.1",
+    "datasets>=4.0.0",
+    "jellyfish>=1.2.0",
+    "nltk>=3.9.1",
+]
+
+authors = [
+    { name = "osoleve" }
+]
+
+keywords = ["nlp", "text", "adversarial augmentation", "text augmentation"]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Testing",
+]
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+Homepage = "https://github.com/osoleve/glitchlings"
+Repository = "https://github.com/osoleve/glitchlings.git"
+Issues = "https://github.com/osoleve/glitchlings/issues"
+Changelog = "https://github.com/osoleve/glitchlings/releases"
+
+[project.scripts]
+glitchlings = "glitchlings.main:main"
+
+[project.optional-dependencies]
+prime = [
+    "verifiers>=0.1.3.post0",
+]
+dev = [
+    "pytest>=8.0.0",
+    "hypothesis>=6.140.0",
+]
+
+[build-system]
+requires = ["setuptools>=64", "wheel", "setuptools-rust>=1.8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[[tool.setuptools-rust.ext-modules]]
+target = "glitchlings._zoo_rust"
+path = "rust/zoo/Cargo.toml"
+binding = "PyO3"
+debug = false
+
+[[tool.setuptools-rust.ext-modules]]
+target = "glitchlings._typogre_rust"
+path = "rust/typogre/Cargo.toml"
+binding = "PyO3"
+debug = false
+
+[tool.pytest.ini_options]
+pythonpath = [
+    "src",
+]
