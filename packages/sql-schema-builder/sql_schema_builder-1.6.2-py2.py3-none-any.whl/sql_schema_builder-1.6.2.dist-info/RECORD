@@ -1,0 +1,9 @@
+sql_schema_builder/MySQLSchema.py,sha256=zI8QTUZD7yehR5IdTFqKmYSYiv438ENXyhf7RlzuKKQ,14100
+sql_schema_builder/PgSQLSchema.py,sha256=d9yg69VzcB6LKUMDfVKyRZO0Leqe1OBgaL1-JZeJgxU,16468
+sql_schema_builder/SQLSchemaBuilder.py,sha256=QImV5H42wI1Y2A87fmcRDVxnSz-R3_6Qkf65u1I8syo,6783
+sql_schema_builder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sql_schema_builder-1.6.2.dist-info/licenses/LICENSE,sha256=YqfBEtSwcR9xKZBVEzO17tYajDznqY4qQr0ujTR0ywY,1072
+sql_schema_builder-1.6.2.dist-info/METADATA,sha256=vrNxSpyoXlD6HZ2uXFxQlUglEepP3W-FVeXnqsayUzQ,713
+sql_schema_builder-1.6.2.dist-info/WHEEL,sha256=JNWh1Fm1UdwIQV075glCn4MVuCRs0sotJIq-J6rbxCU,109
+sql_schema_builder-1.6.2.dist-info/top_level.txt,sha256=oG69FDRtKo0oTgfTO_FP7_vflVthqxvdvIjcBO4U9ac,19
+sql_schema_builder-1.6.2.dist-info/RECORD,,
