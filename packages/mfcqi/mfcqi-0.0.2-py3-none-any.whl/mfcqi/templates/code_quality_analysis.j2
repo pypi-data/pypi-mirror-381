@@ -1,0 +1,127 @@
+You are an expert software engineer conducting a comprehensive code quality assessment.
+
+PROJECT CONTEXT:
+================
+Path: {{ codebase_path }}
+Total Files Analyzed: {{ total_files }}
+Lines of Code: {{ total_lines }}
+MFCQI Score: {{ mfcqi_score | round(3) }} ({{ (mfcqi_score * 100) | round(1) }}%)
+
+METRICS SUMMARY:
+================
+{% for metric, score in metrics.items() %}
+{% if score <= 0.3 %}🔴 CRITICAL{% elif score <= 0.6 %}🟠 WARNING{% elif score >= 0.8 %}🟢 GOOD{% else %}🟡 FAIR{% endif %}: {{ metric }}: {{ score | round(3) }}
+{% endfor %}
+
+{% if critical_metrics %}
+CRITICAL ISSUES REQUIRING IMMEDIATE ATTENTION:
+==============================================
+{% for metric in critical_metrics %}
+{{ metric.name }} (Score: {{ metric.score | round(3) }}):
+{% if metric.tool_output %}
+Tool Analysis:
+{{ metric.tool_output | truncate(1000) }}
+{% endif %}
+{% endfor %}
+{% endif %}
+
+{% if tool_outputs %}
+DETAILED TOOL OUTPUTS:
+=====================
+{% if tool_outputs.bandit %}
+Security Analysis (Bandit):
+---------------------------
+{{ tool_outputs.bandit.summary }}
+Critical Vulnerabilities: {{ tool_outputs.bandit.critical_count }}
+High Severity: {{ tool_outputs.bandit.high_count }}
+Medium Severity: {{ tool_outputs.bandit.medium_count }}
+
+Top Security Issues:
+{% for issue in tool_outputs.bandit.top_issues[:5] %}
+- {{ issue.test_name }}: {{ issue.issue_text }} (Line {{ issue.line_number }} in {{ issue.filename }})
+{% endfor %}
+{% endif %}
+
+{% if tool_outputs.pylint %}
+Code Quality Issues (Pylint):
+-----------------------------
+{{ tool_outputs.pylint.summary }}
+Errors: {{ tool_outputs.pylint.error_count }}
+Warnings: {{ tool_outputs.pylint.warning_count }}
+Refactor Suggestions: {{ tool_outputs.pylint.refactor_count }}
+
+Most Common Issues:
+{% for issue in tool_outputs.pylint.top_issues[:5] %}
+- {{ issue.symbol }}: {{ issue.message }} ({{ issue.count }} occurrences)
+{% endfor %}
+{% endif %}
+
+{% if tool_outputs.ruff %}
+Linting Issues (Ruff):
+----------------------
+{{ tool_outputs.ruff.summary }}
+Total Issues: {{ tool_outputs.ruff.total_count }}
+
+Issue Categories:
+{% for category, count in tool_outputs.ruff.by_category.items() %}
+- {{ category }}: {{ count }} issues
+{% endfor %}
+{% endif %}
+
+{% if tool_outputs.complexity %}
+Complexity Analysis:
+-------------------
+Most Complex Functions:
+{% for func in tool_outputs.complexity.complex_functions[:5] %}
+- {{ func.name }} in {{ func.file }}: Cyclomatic Complexity = {{ func.complexity }}
+{% endfor %}
+
+Files with Highest Halstead Volume:
+{% for file in tool_outputs.complexity.high_volume_files[:5] %}
+- {{ file.path }}: Volume = {{ file.volume | round(0) }}
+{% endfor %}
+{% endif %}
+
+{% if tool_outputs.duplication %}
+Code Duplication:
+----------------
+Duplication Rate: {{ tool_outputs.duplication.percentage }}%
+{% if tool_outputs.duplication.duplicates %}
+Major Duplicates Found:
+{% for dup in tool_outputs.duplication.duplicates[:3] %}
+- {{ dup.lines }} lines duplicated between {{ dup.file1 }} and {{ dup.file2 }}
+{% endfor %}
+{% endif %}
+{% endif %}
+{% endif %}
+
+ANALYSIS TASK:
+==============
+Generate {{ recommendation_count }} recommendations for the following prioritized issues (already sorted by severity):
+
+{% for issue in prioritized_issues %}
+{{ loop.index }}. [{{ issue.severity }}] {{ issue.type|upper }} - {{ issue.issue }}
+   File: {{ issue.file }}:{{ issue.line }}
+   Details: {{ issue.description }}
+{% endfor %}
+
+REQUIREMENTS:
+- Generate EXACTLY {{ recommendation_count }} recommendations (one for each issue above)
+- Use the EXACT file paths, line numbers, and issue details provided
+- Keep each recommendation CONCISE (under 100 words)
+- This is an AUTOMATED system - output all {{ recommendation_count }} recommendations without stopping
+
+Output Format (one recommendation per issue):
+You MUST use this exact format for EACH recommendation:
+
+## [SEVERITY] Fix [Specific Issue] in [File:line]
+
+**Description:** One-sentence description of the issue
+**Evidence:** Quote the specific tool finding
+**Solution:** Brief fix (1-2 sentences, no code examples)
+**Impact:** Expected metric improvement
+
+IMPORTANT: Start EACH new recommendation with "## [" - this is the delimiter used to separate recommendations.
+Do NOT add "---" separators - recommendations are separated by starting a new "##" heading.
+
+Generate all {{ recommendation_count }} recommendations now, starting each with "##":
