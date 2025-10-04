@@ -1,0 +1,13 @@
+morphsync/__init__.py,sha256=VZ6VnwwD749Y4ruVE2s4qZpx7Pno3hKSHgOCvd8krQ0,305
+morphsync/base.py,sha256=m6IAab44DDvW4YqPq-CmeZE-z5ePEgsfGvM4aI0RLKM,9377
+morphsync/data.py,sha256=dGs-0xzWJ3gbmKlgt4VAQuE6_LZSK95ciMM-Bv-OdXc,2557
+morphsync/graph.py,sha256=7wbi-krRlqe4Pwe_KDn_ToYE4iVl90AFqahtSBwBD6s,3719
+morphsync/io.py,sha256=JmocQKH_VEd42D0zOI5R5L3GWmaIkpGmB7dvf6yIM4Q,1987
+morphsync/mapping.py,sha256=AF3oaRbRAaw-41CsMe9J9JpyaqYD0pMFLHu9flP2SWE,1830
+morphsync/mesh.py,sha256=2K8PyrLCUenLYeQFWRI9h7PAa5y2_JNVNg8ARF6tAIY,2342
+morphsync/morph.py,sha256=v7uIVDpp_ZnYcyb_9n5Ikw_1ncU7n-b2P6kZ22Hvk1c,25882
+morphsync/points.py,sha256=XzFcT9NfHOs3ZFJoacpvpFKDXbvOVAhoCeq1D9c4O2Y,1819
+morphsync/table.py,sha256=8_tSbwxkP6xuTBYYAS9BwDJHUfWj14-96ehGoAekLBs,910
+morphsync-0.2.1.dist-info/METADATA,sha256=HFjqBagdujYW3SenC9ZsCRAJHOX-VeB9mJxGfP6lxkI,3659
+morphsync-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+morphsync-0.2.1.dist-info/RECORD,,
