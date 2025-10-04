@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+bads/__init__.py
+bads/h0rn3t.py
+bads.egg-info/PKG-INFO
+bads.egg-info/SOURCES.txt
+bads.egg-info/dependency_links.txt
+bads.egg-info/requires.txt
+bads.egg-info/top_level.txt

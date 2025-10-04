@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bads"
+version = "0.1.0"
+description = "BADS Community: A simple threaded path scanner"
+readme = "README.md"
+requires-python = ">=3.6"
+authors = [
+  { name = "H0rn3t Sp1d3rs" }
+]
+license = { file = "LICENSE" }
+dependencies = [
+  "requests",
+  "colorama",
+]
+
+[tool.setuptools.packages.find]
+where = [""]
