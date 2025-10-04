@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: name-resolver-mcp
+Version: 0.1.0
+Summary: MCP server for Name Resolution Service - search and resolve biological entity names to standard identifiers
+Project-URL: Homepage, https://github.com/cbizon/RoboMCP
+Project-URL: Repository, https://github.com/cbizon/RoboMCP
+Project-URL: Issues, https://github.com/cbizon/RoboMCP/issues
+Author: Chris Bizon
+License: MIT
+Keywords: bioinformatics,biomedical,mcp,name-resolution,translator
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.10
+Requires-Dist: fastmcp>=0.1.0
+Requires-Dist: httpx>=0.24.0
+Description-Content-Type: text/markdown
+
+# Name Resolver MCP
+
+MCP server for the Name Resolution Service - search and resolve biological entity names to standard identifiers.
+
+## Documentation
+
+For full documentation, installation instructions, and usage examples, see the main [RoboMCP repository](https://github.com/cbizon/RoboMCP).
+
+## Quick Start
+
+```bash
+# Run with uvx (no installation needed)
+uvx name-resolver-mcp
+```
+
+## Tools
+
+- `lookup` - Search for biological entities by name with filtering options
+- `synonyms` - Get all known synonyms for biological entity CURIEs
+
+## License
+
+MIT License - see the [main repository](https://github.com/cbizon/RoboMCP) for details.
