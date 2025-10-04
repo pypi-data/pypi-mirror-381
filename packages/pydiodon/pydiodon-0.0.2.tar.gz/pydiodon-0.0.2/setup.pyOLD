@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+
+import os
+from distutils.core import setup# obsolete
+from setuptools import setup
+
+setup(name='pydiodon',
+      version='0.0.1',
+      description='',
+      author='Alain Franc',
+      author_email='alain.franc@inrae.fr',
+      url='',
+      py_modules=['pydiodon'],
+      scripts=['pca_yaml.py'],
+      data_files=(
+        [
+          (
+            os.environ['HOME'] + "/.pydiodon/datasets",
+            [
+              "../data4tests/pca_template_withnames.csv",
+              "../data4tests/pca_template_nonames.csv",
+              "../data4tests/pca_template_withnames.txt",
+              "../data4tests/pca_template_nonames.txt",  
+              "../data4tests/pca_template_withnames.h5",
+              "../data4tests/pca_template_nonames.h5",
+              "../data4tests/pca_template_withnames.txt.gz",
+              "../data4tests/pca_template_nonames.txt.gz",
+              "../data4tests/pca_template_withnames.txt.bz2",
+              "../data4tests/pca_template_nonames.txt.bz2",
+              "../data4tests/pca_template_nonames.csv.zip",
+              "../data4tests/pca_template_nonames.txt.zip",
+              "../data4tests/guiana_trees.dissw",
+              "../data4tests/diatoms_sweden.txt"
+            ]
+          )
+        ]
+      )
+    )
+

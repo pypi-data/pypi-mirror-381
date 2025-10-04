@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>pydiodon.coa &#8212; pydiodon 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="pydiodon-coa">
+<h1>pydiodon.coa<a class="headerlink" href="#pydiodon-coa" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.coa">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">coa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'svd'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transpose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">withloops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pydiodon.html#coa"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.coa" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does</strong></p>
+<p>Correspondance Analysis of an array X</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>X</strong><span class="classifier">a 2D numpy array, <cite>n x p</cite></span></dt><dd><p>array to be analysed</p>
+</dd>
+<dt><strong>k</strong><span class="classifier">an integer</span></dt><dd><p>number of axis to compute</p>
+</dd>
+<dt><strong>meth</strong><span class="classifier">a string</span></dt><dd><p>method for numerical computing</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>L</strong><span class="classifier">a 1D numpy array</span></dt><dd><p>vector of eigenvalues</p>
+</dd>
+<dt><strong>Y_r</strong><span class="classifier">a 2D numpy array,`n x k`</span></dt><dd><p>coordinates of row points</p>
+</dd>
+<dt><strong>Y_c</strong><span class="classifier">a 2D numpy array, <cite>p x k</cite></span></dt><dd><p>coordinates of column points</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>If <span class="math notranslate nohighlight">\(k=-1\)</span>, all axis are computed. If <span class="math notranslate nohighlight">\(k &gt; 0\)</span>, only <cite>k</cite> 
+first axis and components are computed.</p>
+<p><em>methods for PCA core</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>evd</p></td>
+<td><p>EVD</p></td>
+</tr>
+<tr class="row-even"><td><p>svd</p></td>
+<td><p>SVD with <cite>numpy.linalg.svd()</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>grp</p></td>
+<td><p>SVD with gaussian random projection</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="s2">&quot;../data4tests/coa4tests.txt&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">rownames</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="p">,</span> <span class="n">Y_r</span><span class="p">,</span> <span class="n">Y_c</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">coa</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>note on the example</strong></p>
+<p>The dataset is in <cite>text</cite> format with tabs as delimiters. It contains 
+headers and row names. These are default parameters for fucntion 
+<cite>dio.load()</cite></p>
+<p><strong>References:</strong></p>
+<p>Nenadic &amp; Greenacre, <em>Journal of Statistical Software</em>, <strong>20(3):</strong> 2-13, 2007</p>
+<p>Lebart, Morineau &amp; Fénelon, 1982, pp. 305-320</p>
+<p><em>af, revised 21.02.21, 22.11.05</em></p>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Alain Franc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/fonctions/pydiodon.coa.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

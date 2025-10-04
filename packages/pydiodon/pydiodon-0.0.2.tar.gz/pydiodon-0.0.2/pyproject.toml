@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pydiodon"
+dynamic = [ "version",]
+authors = [
+  { name="Alain Franc", email="Alain.Franc@inrae.fr" },
+]
+description = "pydiodon"
+readme = {"file" = "README.md", "content-type" = "text/markdown"}
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "numpy",
+  "numpy.linalg",
+  "scipy",
+  #"scipy.interpolate",
+  #"matplotlib.pyplot",
+  #"time",
+  "h5py",
+  ]
+
+[tool.hatch.version]
+path = "pydiodon.py"

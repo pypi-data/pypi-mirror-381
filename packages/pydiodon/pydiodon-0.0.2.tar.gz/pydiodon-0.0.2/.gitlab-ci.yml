@@ -1,0 +1,41 @@
+stages:
+  - build
+  - test
+  - deploy
+
+docker:
+  image: docker:19.03.12
+  stage: build
+  services:
+    - docker:19.03.12-dind
+  tags: ['docker']
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -f Dockerfile -t $CI_REGISTRY_IMAGE/ubuntu . | tee build.log
+    - docker push $CI_REGISTRY_IMAGE/ubuntu
+  artifacts:
+    untracked: true
+
+test:
+  image: $CI_REGISTRY_IMAGE/ubuntu
+  stage: test
+  tags: ['docker']
+  script:
+    - ./tools/run_tests.sh
+  artifacts:
+    untracked: true
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
+      junit: test.xml
+
+pages:
+  image: $CI_REGISTRY_IMAGE/ubuntu
+  stage: deploy
+  tags: ['docker']
+  artifacts:
+    paths:
+      - public
+  script:
+    - cd doc && make html && cd .. && mv doc/_build/html/ public/

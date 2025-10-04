@@ -1,0 +1,108 @@
+# ======================================================================
+#
+# template for yaml configuration file for pca()
+#
+# started:  May 8th, 2021
+# version: 21.05.11
+# af
+# ======================================================================
+
+# dataset	: loading dataset
+# pca		: running pca()
+# scatY		: plotting components (scatter plot)
+# plotL		: plotting eigenvalues
+# pltVar	: plotting variables
+# pltCorr	: plotting correlation matrix
+
+# ---------------------------------------------------------------dataset
+
+filename: /home/jmf/Codons/Mesures/mesures_C_noNA.txt 
+fmt: ascii
+delimiter: \t
+colnames: no
+rownames: no
+datasetnames: values
+dtype: float32 
+
+
+# -------------------------------------------------------------------pca
+
+pca_pretreatment: standard
+pca_k: -1
+pca_meth: evd
+pca_correlmat: yes
+
+# -------------------------------------------------------------scatter Y
+
+scatY: no
+scatY_n_axis: 2
+scatY_dot_size: 10
+scatY_color: blue
+scatY_names: []
+scatY_title: no
+scatY_x11: yes
+scatY_plotfile: no
+scatY_fmt: png
+
+# ------------------------------------------------------------ heatmap Y
+
+hmY: yes
+hmY_axis_1: 0
+hmY_axis_2: 1
+hmY_bins: 256
+hmY_range: no
+hmY_log: yes
+hmY_scale: no
+hmY_title: no
+hmY_x11: yes
+hmY_plotfile: no
+hmY_fmt: png
+
+# -----------------------------------------------------------------plot L
+
+pltL: yes
+eig_frac: no
+eig_cum: yes
+eig_dot_size: 20
+eig_nb_val: -1
+eig_col: purple
+eig_title: no
+eig_x11: yes
+eig_plotfile: no
+eig_fmt: png
+
+
+# --------------------------------------------------------------plot_var
+
+pltVar: yes
+var_n_axis: 2
+var_varnames: no
+var_x11: yes
+var_plotfile: no
+var_fmt: png
+
+# -----------------------------------------------------------plot_correl
+
+imcorrel: yes
+corr_x11: yes
+corr_plotfile: no
+corr_fmt: png
+
+# ---------------------------------------------------------qual per item
+
+qual: no
+
+# --------------------------------------------------- plot qual per item
+
+pltQual: no
+pltQual_r: 2
+pltQual_col: chartreuse
+pltQual_title: no
+pltQual_x11: yes
+pltQual_plotfile: no
+pltQual_fmt: png
+
+
+# ======================================================================
+
+

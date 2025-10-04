@@ -1,0 +1,1799 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>pydiodon module &#8212; pydiodon 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to pydiodon’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-pydiodon">
+<span id="pydiodon-module"></span><h1>pydiodon module<a class="headerlink" href="#module-pydiodon" title="Permalink to this headline">¶</a></h1>
+<p><strong>what it is:</strong></p>
+<p>a python library for linear dimension reduction.</p>
+<p><strong>Content:</strong></p>
+<p>The library is organised into several functional blocks, as follows:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 18%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>block</p></th>
+<th class="head"><p>functions</p></th>
+<th class="head"><p>what it does</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Core</p></td>
+<td><p>mat_evd()
+svd_grp()</p></td>
+<td><p>eigen-values -vectors of a matrix
+SVD with random projection</p></td>
+</tr>
+<tr class="row-odd"><td><p>Methods</p></td>
+<td><p>coa()
+mds()
+pca()
+pca_core()
+pca_met()
+pca_iv()</p></td>
+<td><p>Correspondence Analysis
+Multidimensional Scaling
+Principal Component Analysis
+core method for PCA
+PCA with metrics
+PCA with latent variables</p></td>
+</tr>
+<tr class="row-even"><td><p>Pretreatments</p></td>
+<td><p>bicenter()
+center_col()
+center_row()
+dis3gram()
+scale()</p></td>
+<td><p>bicentering
+columnwise centering
+rowise centering
+computes the Gram matrix from distances
+scales columnwise</p></td>
+</tr>
+<tr class="row-odd"><td><p>Plotting</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Interpretation</p></td>
+<td><p>qual_proj()</p></td>
+<td><p>quality of a projection</p></td>
+</tr>
+<tr class="row-odd"><td><p>I/O</p></td>
+<td><p>loadfile()</p></td>
+<td><p>generic function for loading datasets</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Identity card</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">maintainer</dt>
+<dd class="field-odd"><p>Alain Franc</p>
+</dd>
+<dt class="field-even">mail</dt>
+<dd class="field-even"><p><a class="reference external" href="mailto:alain&#46;franc&#37;&#52;&#48;inrae&#46;fr">alain<span>&#46;</span>franc<span>&#64;</span>inrae<span>&#46;</span>fr</a></p>
+</dd>
+<dt class="field-odd">contributors</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Olivier Coulaud</p></li>
+<li><p>Alain Franc</p></li>
+<li><p>Jean-Marc Frigerio</p></li>
+<li><p>Romain Peressoni</p></li>
+<li><p>Florent Pruvost</p></li>
+</ul>
+</dd>
+<dt class="field-even">started</dt>
+<dd class="field-even"><p>21/02/17</p>
+</dd>
+<dt class="field-odd">version</dt>
+<dd class="field-odd"><p>22.10.28</p>
+</dd>
+<dt class="field-even">release</dt>
+<dd class="field-even"><p>0.0.1</p>
+</dd>
+<dt class="field-odd">licence</dt>
+<dd class="field-odd"><p>GPL-3</p>
+</dd>
+</dl>
+<p>This file is part of diodon project. You can redistribute it and/or modify 
+it under the terms of the GNU General Public License as published by 
+the Free Software Foundation, either version 3 of the License, or any later version.</p>
+<p>This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty 
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+See the GNU General Public License for more details.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.bicentering">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">bicentering</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#bicentering"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.bicentering" title="Permalink to this definition">¶</a></dt>
+<dd><p>bicentering a matrix</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>A</strong><span class="classifier">a <cite>n x p</cite> numpy array</span></dt><dd><p>the matrix to be bicentered</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>m</strong><span class="classifier">a float</span></dt><dd><p>global mean of the matrix</p>
+</dd>
+<dt><strong>r</strong><span class="classifier">a 1D numpy array (<cite>n</cite> values)</span></dt><dd><p>rowise means</p>
+</dd>
+<dt><strong>c</strong><span class="classifier">a 1D numpy arrau (<cite>p</cite> values)</span></dt><dd><p>columnwise means</p>
+</dd>
+<dt><strong>R</strong><span class="classifier">a 2D numpy array (<cite>n x p</cite>)</span></dt><dd><p>bicentered matrix</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>If <cite>A</cite> is a matrix, builds a matrix <cite>R</cite> of same dimension centered 
+on rows and columns.</p>
+<p><span class="math notranslate nohighlight">\(m = (1/np) \sum_{i,j} a_{ij}\)</span></p>
+<p><span class="math notranslate nohighlight">\(r = (r_1,...,r_n)\)</span> with    
+<span class="math notranslate nohighlight">\(r_i = (1/p)\sum_j a_{ij} - m\)</span></p>
+<p><span class="math notranslate nohighlight">\(c = (c_1,...,c_p)\)</span> with 
+<span class="math notranslate nohighlight">\(c_j = (1/n)\sum_i a_{ij} - m\)</span></p>
+<p>such that</p>
+<p><span class="math notranslate nohighlight">\(\sum_ir_i = \sum_jc_j=0\)</span></p>
+<p>and</p>
+<p>for any row <cite>i</cite>, <span class="math notranslate nohighlight">\(\sum_j R_{ij}=0\)</span> and for any column <cite>j</cite>, <span class="math notranslate nohighlight">\(\sum_i R_{ij}=0\)</span></p>
+<p>The matrix <cite>R</cite> can describe interactions in a additive model with two categorical variables, as in</p>
+<p><span class="math notranslate nohighlight">\(a_{ij} = m + r_i + c_j + R_{ij}\)</span></p>
+<p><strong>example</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">=</span> <span class="mi">4</span> <span class="p">;</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">p</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">p</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">R</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">bicenter</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>af, revised 21.02.19, 22.09.21, 22.10.13</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.center_col">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">center_col</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#center_col"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.center_col" title="Permalink to this definition">¶</a></dt>
+<dd><p>centers a matrix columnwise</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>A</strong><span class="classifier">a 2D numpy array <cite>n</cite> x <cite>p</cite></span></dt><dd><p>the matrix to be centered</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>Ac</strong><span class="classifier">a 2D numpy array</span></dt><dd><p><cite>n</cite> x <cite>p</cite>, centered columnwise</p>
+</dd>
+<dt><strong>m</strong><span class="classifier">1D numpy array, <cite>p</cite> values</span></dt><dd><p>means per column</p>
+</dd>
+<dt><strong>example</strong></dt><dd></dd>
+</dl>
+<dl class="simple">
+<dt><em>af, rp, 21.02.19, 22.10.13</em></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.center_row">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">center_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#center_row"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.center_row" title="Permalink to this definition">¶</a></dt>
+<dd><p>centers a matrix row-wise</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>A</strong><span class="classifier">a 2D numpy array, <cite>n</cite> x <cite>p</cite></span></dt><dd><p>the matrix to be centered</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>Ac</strong><span class="classifier">a 2D <cite>n</cite> x <cite>p</cite> numpy array</span></dt><dd><p>A  centered row-wise</p>
+</dd>
+<dt><strong>m</strong><span class="classifier">a 1D numpy array (<cite>n</cite> values)</span></dt><dd><p>means per row</p>
+</dd>
+<dt><strong>Example</strong></dt><dd></dd>
+</dl>
+<dl class="simple">
+<dt><em>af &amp; rp, 21.02.19, 22.10.13</em></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.centering_operator">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">centering_operator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#centering_operator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.centering_operator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Centering operator for a matrix</p>
+<p>will probably be deprecated (22.09.21)</p>
+<p><strong>argument</strong></p>
+<p><cite>m</cite> : an integer ; vector or matrix dimension</p>
+<p><strong>returns</strong></p>
+<p><cite>H</cite>: a numpy array, <cite>m x m</cite></p>
+<p><strong>Notes</strong></p>
+<p>If <cite>A</cite> is a <cite>n x p</cite> matrix</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(HA\)</span> is <cite>A</cite> with centered columns       (<cite>H</cite> is <cite>n x n</cite>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(AH\)</span> is <cite>A</cite> with centered row           (<cite>H</cite> is <cite>p x p</cite>)</p></li>
+</ul>
+<p><strong>example</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">=</span> <span class="mi">4</span> <span class="p">;</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">p</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">p</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">H_row</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">centering_operator</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">H_col</span> <span class="o">=</span> <span class="n">diod</span><span class="o">.</span><span class="n">centering_operator</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Ar</span> <span class="o">=</span> <span class="n">A</span> <span class="o">@</span> <span class="n">H_row</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Ac</span> <span class="o">=</span> <span class="n">H_col</span> <span class="o">@</span> <span class="n">A</span>
+</pre></div>
+</div>
+<p>revised 21.02.27</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.coa">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">coa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'svd'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transpose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">withloops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#coa"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.coa" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does</strong></p>
+<p>Correspondance Analysis of an array X</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>X</strong><span class="classifier">a 2D numpy array, <cite>n x p</cite></span></dt><dd><p>array to be analysed</p>
+</dd>
+<dt><strong>k</strong><span class="classifier">an integer</span></dt><dd><p>number of axis to compute</p>
+</dd>
+<dt><strong>meth</strong><span class="classifier">a string</span></dt><dd><p>method for numerical computing</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>L</strong><span class="classifier">a 1D numpy array</span></dt><dd><p>vector of eigenvalues</p>
+</dd>
+<dt><strong>Y_r</strong><span class="classifier">a 2D numpy array,`n x k`</span></dt><dd><p>coordinates of row points</p>
+</dd>
+<dt><strong>Y_c</strong><span class="classifier">a 2D numpy array, <cite>p x k</cite></span></dt><dd><p>coordinates of column points</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>If <span class="math notranslate nohighlight">\(k=-1\)</span>, all axis are computed. If <span class="math notranslate nohighlight">\(k &gt; 0\)</span>, only <cite>k</cite> 
+first axis and components are computed.</p>
+<p><em>methods for PCA core</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>evd</p></td>
+<td><p>EVD</p></td>
+</tr>
+<tr class="row-even"><td><p>svd</p></td>
+<td><p>SVD with <cite>numpy.linalg.svd()</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>grp</p></td>
+<td><p>SVD with gaussian random projection</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="s2">&quot;../data4tests/coa4tests.txt&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">rownames</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="p">,</span> <span class="n">Y_r</span><span class="p">,</span> <span class="n">Y_c</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">coa</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>note on the example</strong></p>
+<p>The dataset is in <cite>text</cite> format with tabs as delimiters. It contains 
+headers and row names. These are default parameters for fucntion 
+<cite>dio.load()</cite></p>
+<p><strong>References:</strong></p>
+<p>Nenadic &amp; Greenacre, <em>Journal of Statistical Software</em>, <strong>20(3):</strong> 2-13, 2007</p>
+<p>Lebart, Morineau &amp; Fénelon, 1982, pp. 305-320</p>
+<p><em>af, revised 21.02.21, 22.11.05</em></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.dis2gram">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">dis2gram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no_loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#dis2gram"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.dis2gram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes a Gram matrix <cite>gram</cite> knowing a distance matrix <cite>dis</cite></p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dis: a 2D numpy array, size `n` x  `n`, of floats</strong></dt><dd><p>is a distance or dissimilarity matrix to be analyzed</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>gram</strong><span class="classifier">a 2D numpy array, size <cite>n</cite> x  <cite>n</cite>,  of floats</span></dt><dd><p>the associated Gram matrix</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>if
+<span class="math notranslate nohighlight">\(d_{i.}^2 = (1/n) \sum_j d_{ij}^2\)</span> and <span class="math notranslate nohighlight">\(d_{..}^2 = (1/n^2) \sum_{i,j} d_{ij}^2\)</span></p>
+<p>then</p>
+<p><span class="math notranslate nohighlight">\(gram[i,j] = -(1/2) (d_{ij}^2 - d_{i.}^2 - d_{.j}^2 + d_{..}^2)\)</span></p>
+<p><em>af, 07/11/2017, 22.10.13</em></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.hovering">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">hovering</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">F1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'b'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#hovering"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.hovering" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does</strong></p>
+<p>display a label of one dot selected with the mouse in a scatter plot</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>F1</strong><span class="classifier">1D numy array</span></dt><dd><p>first axis</p>
+</dd>
+<dt><strong>F2</strong><span class="classifier">1D numpy array</span></dt><dd><p>second axis</p>
+</dd>
+<dt><strong>prefix</strong><span class="classifier">forgotten</span></dt><dd></dd>
+<dt><strong>c</strong><span class="classifier">string</span></dt><dd><p>forgotten</p>
+</dd>
+<dt><strong>s</strong><span class="classifier">integer</span></dt><dd><p>forgotten</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>A scatter plot with F1 on axis 1 and F2 on axis 2 is displayed.
+When the mouse clicks on a point, a comment is displayed on the console
+with the index of the item cliked, and the value of the label for this item</p>
+<p>This is event based, i.e. cliking with the mouse can be repeated as many
+times as wished.</p>
+<p>Adapted from <a class="reference external" href="http://matplotlib.sourceforge.net/examples/event_handling/pick_event_demo.html">http://matplotlib.sourceforge.net/examples/event_handling/pick_event_demo.html</a></p>
+<p><em>af, 25/10/2017</em></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.load_ascii">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">load_ascii</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colnames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rownames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#load_ascii"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.load_ascii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads an ascii file as a numpy array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>filename</strong><span class="classifier">string</span></dt><dd><p>the name of the file to load</p>
+</dd>
+<dt><strong>delimiter</strong><span class="classifier">character</span></dt><dd><p>delimiters between values in a row</p>
+</dd>
+<dt><strong>colnames</strong><span class="classifier">boolean</span></dt><dd><p>True if there are column names in the first row of the file
+False otherwise</p>
+</dd>
+<dt><strong>rownames</strong><span class="classifier">boolean</span></dt><dd><p>True if there are rownames in the first column of the file
+False otherwise</p>
+</dd>
+<dt><strong>dtype</strong><span class="classifier">string</span></dt><dd><p>as dtype in numpy.loadtxt (type of values in the numpy array)</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>A</strong><span class="classifier">a 2D numpy array</span></dt><dd><p>the values in the file</p>
+</dd>
+<dt><strong>rn</strong><span class="classifier">list of strings</span></dt><dd><p>row names (if <code class="docutils literal notranslate"><span class="pre">rownames==True</span></code>)</p>
+</dd>
+<dt><strong>cn</strong><span class="classifier">list of strings</span></dt><dd><p>column names (if <code class="docutils literal notranslate"><span class="pre">colnames==True</span></code>)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.load_dataset">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">load_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datadir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'../../data4tests/'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#load_dataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.load_dataset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.load_hdf5">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">load_hdf5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datasetname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colnames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rownames</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#load_hdf5"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.load_hdf5" title="Permalink to this definition">¶</a></dt>
+<dd><p>loads a hdf5 file as a numpy array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>filename</strong><span class="classifier">string</span></dt><dd><p>the name of the file</p>
+</dd>
+<dt><strong>datasetname</strong><span class="classifier">string</span></dt><dd><p>the name of the hdf5 dataset with data values</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>see loadfile</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.loadfile">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">loadfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\t'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rownames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datasetname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'values'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'float32'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#loadfile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.loadfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>A generic function for loading datasets as numpy arrays</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>filename</strong><span class="classifier">string</span></dt><dd><p>contains the data set to be loaded (compulsory)</p>
+</dd>
+<dt><strong>fmt</strong><span class="classifier">string</span></dt><dd><p>explicit format of the file (optional);   
+if it is not given the format will be guessed from the suffix (see notes)</p>
+</dd>
+<dt><strong>delimiter</strong><span class="classifier">character</span></dt><dd><p>the delimiter between values in a row</p>
+</dd>
+<dt><strong>colnames</strong><span class="classifier">boolean or string; whether column names</span></dt><dd><ul class="simple">
+<li><p>for an ascii file, it is boolean, as True if column names are as first row in the file, and False otherwise;</p></li>
+<li><p>for an hdf5 file, gives the name of the dataset with the column names</p></li>
+<li><p>optional, default value is <cite>False</cite></p></li>
+</ul>
+</dd>
+<dt><strong>rownames</strong><span class="classifier">boolean or string; whether row names</span></dt><dd><ul class="simple">
+<li><p>for an ascii file, it is boolean, as True if row names are as first column in the file, and False otherwise</p></li>
+<li><p>for an hdf5 file, gives the name of the dataset with the row names</p></li>
+<li><p>optional, default value is None.</p></li>
+</ul>
+</dd>
+<dt><strong>datasetname</strong><span class="classifier">string</span></dt><dd><ul class="simple">
+<li><p>for hdf5 files : hdf5 dataset for values</p></li>
+<li><p>optional, default value is “value”</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>A</strong><span class="classifier">a numpy array</span></dt><dd><p>the values of the data set</p>
+</dd>
+<dt><strong>rn</strong><span class="classifier">list of strings</span></dt><dd><p>row names (optional)</p>
+</dd>
+<dt><strong>cn</strong><span class="classifier">list of strings</span></dt><dd><p>column names (optional)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>Recognized formats are: <code class="docutils literal notranslate"><span class="pre">ascii</span></code>, <code class="docutils literal notranslate"><span class="pre">hdf5</span></code> and <code class="docutils literal notranslate"><span class="pre">compressed</span> <span class="pre">ascii</span></code>.</p></li>
+<li><p>Delimiters in ascii format can be blanks, comma, semi-columns, tabulations</p></li>
+<li><p>Ascii data sets with <code class="docutils literal notranslate"><span class="pre">tab</span></code> delimiters are expected to be with suffix <code class="docutils literal notranslate"><span class="pre">.txt</span></code> or <code class="docutils literal notranslate"><span class="pre">.tsv</span></code>.</p></li>
+<li><p>Ascii data sets with other delimiters are expected to be with siffix <code class="docutils literal notranslate"><span class="pre">.csv</span></code>.</p></li>
+</ul>
+<p>When the filename is read, the function splits the name on the last dot, and
+interprets the string after as the suffix. Then, there is a call</p>
+<ul class="simple">
+<li><p>to <code class="docutils literal notranslate"><span class="pre">load_ascii()</span></code> if the suffix is <code class="docutils literal notranslate"><span class="pre">.txt</span></code>, <code class="docutils literal notranslate"><span class="pre">tsv</span></code>, <code class="docutils literal notranslate"><span class="pre">.gz</span></code> or <code class="docutils literal notranslate"><span class="pre">.bz2</span></code>,</p></li>
+<li><p>to <code class="docutils literal notranslate"><span class="pre">load_hdf5</span></code> if the suffix is <code class="docutils literal notranslate"><span class="pre">h5</span></code> or <code class="docutils literal notranslate"><span class="pre">hdf5</span></code>,</p></li>
+<li><p>and unzips the file before a call to <code class="docutils literal notranslate"><span class="pre">load_ascii()</span></code> if the sufix is <code class="docutils literal notranslate"><span class="pre">zip</span></code>.</p></li>
+</ul>
+<p class="rubric">Examples</p>
+<p>Here is a call for loading an <code class="docutils literal notranslate"><span class="pre">ascii</span></code> file with extension <code class="docutils literal notranslate"><span class="pre">.txt</span></code> hence with tab as delimiters, and with rownames and colnames.
+In such a case, the call must specifiy that there are colnames and rownames to be read:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;pca_template_withnames.txt&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="p">,</span> <span class="n">colnames</span><span class="p">,</span> <span class="n">rownames</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">loadfile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">colnames</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rownames</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">colnames</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">rownames</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If it is not specified (default values), an array without colnames and rownames will be loaded, as in</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;pca_template_nonames.txt&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">loadfile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here is a call of a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file where delimiters have to be specified:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;pca_template_nonames.csv&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">loadfile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;;&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p>Here is how to load a <code class="docutils literal notranslate"><span class="pre">zip</span></code> file from a <code class="docutils literal notranslate"><span class="pre">.txt</span></code> file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;pca_template_nonames.txt.zip&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">loadfile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and from a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file with semi-column as delimiter</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;pca_template_nonames.csv.zip&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">loadfile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here is an example for loading a <code class="docutils literal notranslate"><span class="pre">hdf5</span></code> file with <cite>values</cite>, <cite>colnames</cite> 
+and <cite>rownames</cite> as datasets:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;pca_template_withnames.h5&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="p">,</span> <span class="n">colnames</span><span class="p">,</span> <span class="n">rownames</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">loadfile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">colnames</span><span class="o">=</span><span class="s1">&#39;colnames&#39;</span><span class="p">,</span> <span class="n">rownames</span><span class="o">=</span><span class="s1">&#39;rownames&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p>version 21.03.23</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.mat_evd">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">mat_evd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#mat_evd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.mat_evd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the eigenvalues and eigenvectors of a matrix</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>mat</strong><span class="classifier">a numpy array, <cite>n x n</cite> (a matrix)</span></dt><dd></dd>
+<dt><strong>k</strong><span class="classifier">an integer</span></dt><dd><p>the number of axis to be computed</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>V</strong><span class="classifier">a 2D numpy array</span></dt><dd><p>of size <cite>n x k</cite>: the <cite>k</cite> eigenvectors</p>
+</dd>
+<dt><strong>L</strong><span class="classifier">a 1D numpy array</span></dt><dd><p>a vector ; the first <cite>k</cite> eigenvalues</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>if <cite>k=-1</cite>, all eigenvalues and eigenvectors are returned.</p>
+<p>This simply uses <code class="docutils literal notranslate"><span class="pre">numpy.linalg.eigh()</span></code>, and adds some features like</p>
+<ul class="simple">
+<li><p>sorts eigenvalues in decreasing order</p></li>
+<li><p>sorts eigenvectors in corresponding order</p></li>
+<li><p>sets to zero the imaginary parts (numerical approximation)</p></li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># building a symmetric matrix</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span> <span class="o">+</span> <span class="n">A</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># computing eigenvalues and eigenvectors</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">V</span><span class="p">,</span> <span class="n">L</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">mat_evd</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>version 21.03.21, 22.09.21, 22.10.13, 22.10.25</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.mds">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">mds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'svd'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no_loop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#mds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.mds" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does</strong></p>
+<p>Multidimensional Scaling of a distance or dissimilarity array</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>dis</strong><span class="classifier">numpy array, <cite>n x n</cite></span></dt><dd><p>distances or dissimilarities</p>
+</dd>
+<dt><strong>k</strong><span class="classifier">integer</span></dt><dd><p>number of axis</p>
+</dd>
+<dt><strong>meth</strong><span class="classifier">string</span></dt><dd><p>method for MDS (see notes)</p>
+</dd>
+<dt><strong>no_loop</strong><span class="classifier">boolean</span></dt><dd><p>see notes</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">2D numpy array,</span></dt><dd><p><cite>n x k</cite>, coordinates of points</p>
+</dd>
+<dt><strong>S</strong><span class="classifier">1D numpy array</span></dt><dd><p><cite>k</cite> values, singular values      |</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p><strong>Objective</strong>: builds a point cloud where one point represents an item, such that the discrepancies beween distances in a matrix <cite>dis</cite> and between associated 
+points in <span class="math notranslate nohighlight">\(R^k\)</span> is as small as possible.  It is classical MDS, not Least Square Scaling.</p>
+<div class="line-block">
+<div class="line"><strong>Procedure:</strong> There are three steps  </div>
+<div class="line">1. computes the Gram matrix <cite>G</cite> between items from distance matrix <cite>dis</cite>  </div>
+<div class="line">2. runs a SVD or EVD of <cite>G</cite>  </div>
+<div class="line">3. computes the coordinates from the SVD (or EVD) in <cite>X</cite>   </div>
+</div>
+<div class="line-block">
+<div class="line"><strong>argument no_loop</strong> : it is used in the computation of the Gram matrix:</div>
+<div class="line">- if <cite>n</cite> is large, <code class="docutils literal notranslate"><span class="pre">no_loop=False</span></code> is recommended</div>
+<div class="line">- if not, <code class="docutils literal notranslate"><span class="pre">no_loop=True</span></code> is recommended (default value)</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>methods for MDS:</strong> the argument <code class="docutils literal notranslate"><span class="pre">meth</span></code> specifies which method is selected for the core of MDS. Default value is <code class="docutils literal notranslate"><span class="pre">svd</span></code>.  Let <cite>G</cite> be the Gram matrix associated to the distance array.</div>
+<div class="line">- if <code class="docutils literal notranslate"><span class="pre">meth=svd</span></code>, the a SVD of <cite>G</cite> is run</div>
+<div class="line">- if <code class="docutils literal notranslate"><span class="pre">meth=grp</span></code>, the SVD is run with Gaussian Random Projection   </div>
+<div class="line">- if <code class="docutils literal notranslate"><span class="pre">meth=evd</span></code>, the eigenvalues and eigenvectors of <cite>G</cite> are computed  </div>
+</div>
+<div class="line-block">
+<div class="line">Here are some suggestions for selection of the method:</div>
+<div class="line">- if <cite>n</cite> is not too large (<span class="math notranslate nohighlight">\(n &lt; 10,000\)</span>), <code class="docutils literal notranslate"><span class="pre">svd</span></code> method is recommended</div>
+<div class="line">- if <cite>n</cite> is large, <code class="docutils literal notranslate"><span class="pre">grp</span></code> method is recommended, and compulsory if <cite>n</cite> is very large </div>
+<div class="line">- if <cite>k</cite> is small, <span class="math notranslate nohighlight">\(k \simeq 10\)</span>, <code class="docutils literal notranslate"><span class="pre">evd</span></code> method is recommended.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>computations</strong> : EVD or SVD of the Gram matrix are two equivalent ways to compute a solution. Let <cite>G</cite> be the Gram matrix. They are linked by</div>
+<div class="line">- EVD: <span class="math notranslate nohighlight">\(GU = US\)</span> ; <cite>U</cite> is the matrix of columnwise eigenvectors of <cite>G</cite> and <cite>S</cite> the diagonal matrix of its eigenvalues</div>
+<div class="line">- SVD: <span class="math notranslate nohighlight">\(G = USU'\)</span> is the SVD of <cite>G</cite> (which is symmetric, <cite>U’</cite> is the transpose of <cite>U</cite>)</div>
+<div class="line">Then, in both cases, if <cite>X</cite> is the matrix of coordinates of <cite>n</cite> items in <span class="math notranslate nohighlight">\(R^r\)</span>, <span class="math notranslate nohighlight">\(X = US^{1/2}\)</span></div>
+</div>
+<p><strong>Examples</strong></p>
+<p>This is a first toy example for running a MDS.</p>
+<p>First, building a Euclidean distance matrix.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">scipy.spatial.distance</span> <span class="k">as</span> <span class="nn">ssd</span> <span class="c1"># for computing distances</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># creates a m x n point cloud</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="mi">10</span> <span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># computes the pairwise distances</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">D</span> <span class="o">=</span> <span class="n">ssd</span><span class="o">.</span><span class="n">pdist</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">D</span> <span class="o">=</span> <span class="n">ssd</span><span class="o">.</span><span class="n">squareform</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>       <span class="c1"># distance matrix in square form</span>
+</pre></div>
+</div>
+<p>Second, run the MDS</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># runs the MDS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span> <span class="n">S</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">mds</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Third, interpret the quality and displays the result</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># plotting the quality</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Eigenvalues&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># plotting the point cloud</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">F1</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="p">;</span> <span class="n">F2</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">F1</span><span class="p">,</span> <span class="n">F2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;chartreuse&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;axis 1&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;axis 2&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This example is in <code class="docutils literal notranslate"><span class="pre">mds_xmpl_1.py</span></code></p>
+<p>Here is now a real life example.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rank</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;guiana_trees.dissw&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Dis</span><span class="p">,</span> <span class="n">rn</span><span class="p">,</span> <span class="n">cn</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">rownames</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">colnames</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span> <span class="n">S</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">mds</span><span class="p">(</span><span class="n">Dis</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="n">rank</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is focused on running the MDS of <cite>Dis</cite> . Here is a complementary example for visualizing the results.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># plotting the singular values</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Quality along the axis&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># plotting the point cloud, axis 1 and 2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">F1</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">];</span> <span class="n">F2</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">];</span> <span class="n">F3</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">F1</span><span class="p">,</span><span class="n">F2</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;axis 1&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;axis 2&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;data set: Guiana trees&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This example is in <code class="docutils literal notranslate"><span class="pre">mds_xmpl_guiana_trees.py</span></code></p>
+<ul class="simple">
+<li><p>The data set can be downloaded from <a class="reference external" href="https://doi.org/10.15454/XSJ079">https://doi.org/10.15454/XSJ079</a> where it is dataset  <code class="docutils literal notranslate"><span class="pre">guiana_trees.dissw</span></code>.</p></li>
+<li><p>Related publication: Caron, H, Molino, J‐F, Sabatier, D, et al. Chloroplast DNA variation in a hyperdiverse tropical tree community. <em>Ecol Evol.</em> 2019; <strong>9:</strong> 4897– 4905. <a class="reference external" href="https://doi.org/10.1002/ece3.5096">https://doi.org/10.1002/ece3.5096</a></p></li>
+<li><p>Can be downloaded from Wiley website at <a class="reference external" href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/ece3.5096">https://onlinelibrary.wiley.com/doi/pdf/10.1002/ece3.5096</a> doi: DOI: 10.1002/ece3.5096</p></li>
+</ul>
+<p><strong>References</strong></p>
+<div class="line-block">
+<div class="line">[1] T.F. Cox and M. A. A. Cox. <em>Multidimensional Scaling - Second edition</em>, volume <strong>88</strong> of Monographs on Statistics and Applied Probability. Chapman &amp; al., 2001.   </div>
+<div class="line">[2] I. Borg and P. J. F. Groenen. <em>Modern Multidimensional Scaling</em>. Springer Series in Statistics. Springer, second edition, 2005.</div>
+<div class="line">[3] K. V. Mardia, J.T. Kent, and J. M. Bibby. <em>Multivariate Analysis. Probability and Mathematical Statistics</em>. Academic Press, 1979.</div>
+</div>
+<p><strong>Diodon notes:</strong> section 10</p>
+<p><em>07/11/2017 - revised 21.03.20, 22.10.13</em></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.pca">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">pca</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pretreatment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'standard'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'svd'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#pca"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.pca" title="Permalink to this definition">¶</a></dt>
+<dd><p>Principal Component Analysis</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>A</strong><span class="classifier">a numpy array</span></dt><dd><p>the array to be analyzed</p>
+</dd>
+<dt><strong>k</strong><span class="classifier">integer</span></dt><dd><p>number of axes to be computed</p>
+</dd>
+<dt><strong>meth</strong><span class="classifier">string</span></dt><dd><p>method for numerical calculation (see notes)</p>
+</dd>
+<dt><strong>pretreatment</strong><span class="classifier">string</span></dt><dd><p>which pretreatment to apply ;</p>
+<p>accepted values are: <code class="docutils literal notranslate"><span class="pre">standard</span></code>, <code class="docutils literal notranslate"><span class="pre">bicentering</span></code>, <code class="docutils literal notranslate"><span class="pre">col_centering</span></code>, <code class="docutils literal notranslate"><span class="pre">row_centering</span></code>, <code class="docutils literal notranslate"><span class="pre">scaling</span></code></p>
+<p>see notes for details</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The method runs as follows:</p>
+<ul class="simple">
+<li><p>first  it implements the required pretreatments</p></li>
+<li><p>second: it runs the function <cite>pca_core</cite> on the transformed matrix</p></li>
+<li><p>third: it returns the eigenvalues, the principal axis, the principal components and the correlation matrix if required</p></li>
+</ul>
+<p><strong>methods for PCA:</strong> the argument <code class="docutils literal notranslate"><span class="pre">meth</span></code> specifies which method is selected for the core of MDS. Default value is <code class="docutils literal notranslate"><span class="pre">svd</span></code>. 
+Let <cite>A</cite> be the the matrix to analyse.</p>
+<ul class="simple">
+<li><p>if <code class="docutils literal notranslate"><span class="pre">meth=svd</span></code>, the a SVD of <cite>A</cite> is run</p></li>
+<li><p>if <code class="docutils literal notranslate"><span class="pre">meth=grp</span></code>, the SVD is run with Gaussian Random Projection</p></li>
+<li><p>if <code class="docutils literal notranslate"><span class="pre">meth=evd</span></code>, the eigenvalues and eigenvectors of <cite>A</cite> are computed</p></li>
+</ul>
+<p><strong>pretreatments:</strong> here are the accepted pretreatments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">standard</span></code>: the matrix is centered and scaled columnwise</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bicentering</span></code>: Matrix is centered rwowise and columnwise; it is a useful alternative to CoA known as “double averaging”</p></li>
+</ul>
+<p><strong>Examples</strong></p>
+<p>This is an example of a standard PCA of a random matrix, with <span class="math notranslate nohighlight">\(m\)</span> rows and 
+<span class="math notranslate nohighlight">\(n\)</span> columns, with elements as realisation of a uniform law between 0 and 1.</p>
+<p>First build the random matrix</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="mi">200</span> <span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Second, run the PCA</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">pca</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Third, plots some results (eigenvectors and point cloud)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="p">;</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Y</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">Y</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span> <span class="p">;</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The above program runs centered scaled PCA, with here default option <code class="docutils literal notranslate"><span class="pre">pretreatment=&quot;standard&quot;</span></code>.
+For PCA without centering nor scaling, the command is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">C</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">pca</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">standard</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For PCA with column centering but without scaling, the command is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">C</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">pca</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">standard</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">col_centering</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p>(in such a case, the argument <code class="docutils literal notranslate"><span class="pre">standard</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">False</span></code>. If
+not, the array will be scaled as well). Scaling without centering is quite unusual.</p>
+<p>For bicentering, the command is</p>
+<dl>
+<dt>firefox </dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">C</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">pca</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">bicenter</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>      
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>These are the most usuful options for pretreatment.</p>
+<p>Prescribed rank is simply called by (with standard pretreatment)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rank</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">pca</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="n">rank</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>for having the 10 first components and axis only.</p>
+<p><em>revised</em> 21.03.03 - 21.04.20</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.pca_core">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">pca_core</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'svd'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#pca_core"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.pca_core" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does</strong></p>
+<p>core method for PCA (Principal Component Analysis) of an array <cite>A</cite></p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>A</strong><span class="classifier">a <cite>n x p</cite>  numpy array,</span></dt><dd><p>array to be analysed</p>
+</dd>
+<dt><strong>k</strong><span class="classifier">an integer</span></dt><dd><p>number of axis to compute</p>
+</dd>
+<dt><strong>meth</strong><span class="classifier">a string</span></dt><dd><p>method for numerical computing</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>Y</strong><span class="classifier">a 2D numpy array, <cite>n x k</cite></span></dt><dd><p>matrix of principal components</p>
+</dd>
+<dt><strong>L</strong><span class="classifier">a 1D numpy array</span></dt><dd><p>vector of eigenvalues</p>
+</dd>
+<dt><strong>V</strong><span class="classifier">a 2D numpy array, <cite>p x k</cite></span></dt><dd><p>matrix of eigenvectors (new basis)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p><cite>A</cite> is an array, and <code class="docutils literal notranslate"><span class="pre">pca_core</span></code> computes the PCA of <cite>A</cite>, without any centering 
+nor scaling nor weights nor constraints. PCA with centering, scaling, 
+weights or constraints is called by function <code class="docutils literal notranslate"><span class="pre">pca()</span></code> which in turns calls this function <cite>pca_core()</cite>.</p>
+<p>if <cite>k = -1</cite>, all axis are computed. If <cite>k &gt; 0</cite>, only <cite>k</cite> 
+first axis and components are computed.</p>
+<p>if <cite>meth</cite> is</p>
+<ul class="simple">
+<li><p><cite>evd</cite>, runs by eigendecomposition of <cite>A’A</cite></p></li>
+<li><p><cite>svd</cite>, runs by singular value decomposition of <cite>A</cite></p></li>
+<li><p><cite>grp</cite>, runs by SVD of <cite>A</cite> with Gaussian random projection</p></li>
+</ul>
+<blockquote>
+<div><p>Default value is <cite>svd</cite>.</p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">With EVD, it runs as follows:  </div>
+<div class="line">1. Computes the correlation matrix <span class="math notranslate nohighlight">\(C=A'A\)</span>    </div>
+<div class="line">2. Computes the eigevalues and eigevectors of <span class="math notranslate nohighlight">\(C\)</span>: <span class="math notranslate nohighlight">\(Cv_j = \lambda_j v_j\)</span>   </div>
+<div class="line">3. Computes the principal components as <span class="math notranslate nohighlight">\(y_j=Av_j\)</span>, or, globally, <span class="math notranslate nohighlight">\(Y=AV\)</span></div>
+</div>
+<div class="line-block">
+<div class="line">with SVD, it runs as follows:</div>
+<div class="line">1. <span class="math notranslate nohighlight">\(U,\Sigma,V = SVD(A)\)</span></div>
+<div class="line">2. <span class="math notranslate nohighlight">\(Y = U\Sigma\)</span></div>
+<div class="line">3. <span class="math notranslate nohighlight">\(L=\Sigma^2\)</span> </div>
+</div>
+<p><strong>Example</strong></p>
+<p>This is an example of a standard PCA of a random matrix, with <span class="math notranslate nohighlight">\(m\)</span> rows and 
+<span class="math notranslate nohighlight">\(n\)</span> columns, with elements as realisation of a Gaussian law with mean 0 and 
+standrd deviation 1. As such, there is no need to center nor to scale, 
+and the use of <code class="docutils literal notranslate"><span class="pre">pca_core()</span></code> is relevant.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="mi">200</span> <span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">pca_core</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="p">;</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Y</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">Y</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span> <span class="p">;</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><em>af, revised 21.03.01; 21.06.27; 22.09.23, 22.10.13</em></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.pca_evd">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">pca_evd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#pca_evd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.pca_evd" title="Permalink to this definition">¶</a></dt>
+<dd><p>runs the PCA with eigendecomposition of A’A</p>
+<p class="rubric">Notes</p>
+<p>No documentation (used behind pca_core)   
+21/06/27</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.pca_grp">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">pca_grp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#pca_grp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.pca_grp" title="Permalink to this definition">¶</a></dt>
+<dd><p>runs the PCA with SVD with gaussian random projection</p>
+<p class="rubric">Notes</p>
+<p>No documentation (used behind pca_core)
+21.06.27</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.pca_iv">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">pca_iv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'svd'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pretreatment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'col_centering'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transpose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#pca_iv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.pca_iv" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does</strong></p>
+<p>PCA of an array <cite>A</cite> with instrumental variables</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>A</strong><span class="classifier">a numpy array, the items/variable to be analyzed</span></dt><dd></dd>
+<dt><strong>B</strong><span class="classifier">a numpy array, the intrumental variables</span></dt><dd></dd>
+<dt><strong>k</strong><span class="classifier">an integer</span></dt><dd></dd>
+<dt><strong>meth</strong><span class="classifier">a string ; method for numerical calculation</span></dt><dd></dd>
+<dt><strong>pretreatment</strong><span class="classifier">a string, the pretreatment of <cite>A</cite> and <cite>B</cite></span></dt><dd><p>currently, only <a href="#id1"><span class="problematic" id="id2">`</span></a>col_centering`is implemented</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>Y</strong><span class="classifier">a <cite>n</cite> <cite>x</cite> <cite>k</cite> 2D numpy array</span></dt><dd><p>the components</p>
+</dd>
+<dt><strong>L</strong><span class="classifier">a <cite>k</cite> 1D numpy array</span></dt><dd><p>the eigenvalues</p>
+</dd>
+<dt><strong>V</strong><span class="classifier">a <cite>p</cite> <cite>x</cite> <cite>k</cite> 2D numpy array</span></dt><dd><p>the new basis</p>
+</dd>
+<dt><strong>A_proj</strong><span class="classifier">a <cite>n</cite> <cite>x</cite> <cite>p</cite> 2D numpy array</span></dt><dd><p>the projection of <cite>A</cite> on the subspace of <span class="math notranslate nohighlight">\(R^n\)</span> spanned by the columns of <cite>B</cite></p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p><cite>A_pre</cite> is a copy of <cite>A</cite> for tracking preatreatments, and recover the
+matrix analyzed after preatreatments, without impacting <cite>A</cite></p>
+<p>The algorithm is as follows:</p>
+<ul class="simple">
+<li><p>Build <span class="math notranslate nohighlight">\(P = B(B'B)^{-1}B'\)</span> which is the projector in <span class="math notranslate nohighlight">\(R^n\)</span> on the subspace spanned by the columns of <cite>B</cite>.</p></li>
+<li><p>build <cite>A_proj = PA</cite> which is the projection of <cite>A</cite> on the subspace spanned by the columns of <cite>B</cite></p></li>
+<li><p>do PCA of <cite>A_proj</cite> : <cite>Y,L,V = PCA(A_proj)</cite></p></li>
+</ul>
+<p><strong>warning</strong></p>
+<p>This has not been tested; no guarantee on the quality of the result.</p>
+<p>21/02/2018, révised 22.09.28, 22.10.14</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.pca_iv_qual_proj">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">pca_iv_qual_proj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A_proj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#pca_iv_qual_proj"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.pca_iv_qual_proj" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does</strong></p>
+<p>Computes the quality of the projection of <cite>A</cite> on the space spanned by the columns of <cite>B</cite></p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>A</strong><span class="classifier">a <cite>n</cite> <cite>x</cite> <cite>p</cite>   2D numpy array</span></dt><dd><p>the matrix to be analyzed by PVA_iv</p>
+</dd>
+<dt><strong>A_proj</strong><span class="classifier">a <cite>n</cite> <cite>x</cite> <cite>p</cite>   2D numpy array</span></dt><dd><p>the projection of <cite>A</cite> on the subspace of <span class="math notranslate nohighlight">\(R^n\)</span> spanned by the columns of <cite>B</cite></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>rho</strong><span class="classifier">a real</span></dt><dd><p>the quality of the projection</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p><cite>rho</cite> is the ratio of the square norm of <cite>A_proj</cite> upon the square norm of <cite>A</cite></p>
+<p>22.09.28</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.pca_iv_qual_proj_axis">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">pca_iv_qual_proj_axis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A_proj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x11</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#pca_iv_qual_proj_axis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.pca_iv_qual_proj_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does</strong>
+Computes and plots the quality of projection of each column of <cite>A</cite> on <cite>Ap</cite></p>
+<p class="rubric">Notes</p>
+<p>Documentation ongoing</p>
+<p><em>af, &#64; Cayenne, 21/02/2018</em></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.pca_iv_regressors">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">pca_iv_regressors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">varnames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x11</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#pca_iv_regressors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.pca_iv_regressors" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does</strong></p>
+<p>will probably be deprecated</p>
+<p class="rubric">Notes</p>
+<p>Documentation ongoing</p>
+<p>22.10.26</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.pca_met">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">pca_met</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pretreatment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'col_centering'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'svd'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#pca_met"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.pca_met" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does</strong></p>
+<p>PCA of an array <cite>A</cite> with metrics on rows and/or columns</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>A</strong><span class="classifier">a  <span class="math notranslate nohighlight">\(n \times p\)</span> 2D numpy array</span></dt><dd><p>the array to be analysed</p>
+</dd>
+<dt><strong>N</strong><span class="classifier">a 2D numpy array</span></dt><dd><p>a Symmetric Definite Positive (SDP) matrix defining an inner product
+on <span class="math notranslate nohighlight">\(R^n\)</span></p>
+</dd>
+<dt><strong>P</strong><span class="classifier">a 2D numpy array</span></dt><dd><p>a SDP matrix defining an inner product
+on <span class="math notranslate nohighlight">\(R^p\)</span></p>
+</dd>
+<dt><strong>k</strong><span class="classifier">an integer</span></dt><dd><p>the number of axis to be computed</p>
+<p>if <span class="math notranslate nohighlight">\(k = -1\)</span>, all axis are computed</p>
+</dd>
+<dt><strong>pretreatment</strong><span class="classifier">a string</span></dt><dd><p>the pretreatment to apply</p>
+<p>possible values are: <a href="#id3"><span class="problematic" id="id4">``</span></a>col_centering ``</p>
+</dd>
+<dt><strong>meth</strong><span class="classifier">a string</span></dt><dd><p>method for numerical calculation of PCA</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>Y</strong><span class="classifier">a <span class="math notranslate nohighlight">\(n \times k\)</span> 2D numpy array</span></dt><dd><p>the princial components</p>
+</dd>
+<dt><strong>L</strong><span class="classifier">a <cite>k</cite> 1D numpy array</span></dt><dd><p>the eigenvalues</p>
+</dd>
+<dt><strong>V</strong><span class="classifier">a  <span class="math notranslate nohighlight">\(p \times k\)</span>  2D numpy array</span></dt><dd><p>the new basis</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>If <span class="math notranslate nohighlight">\(A\)</span> has <span class="math notranslate nohighlight">\(n\)</span> rows and <cite>p</cite> columns, we assume that an inner product 
+has been defined on <span class="math notranslate nohighlight">\(R^n\)</span> by a SDP matrix <cite>N</cite> and on <span class="math notranslate nohighlight">\(R^p\)</span> by a SDP matrix <cite>P</cite>.</p>
+<p>This is how the algorithm works:</p>
+<ul class="simple">
+<li><p>first: computes the square roots of <cite>N</cite> and <cite>P</cite>; this is done with a <code class="docutils literal notranslate"><span class="pre">SVD</span></code>. If</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(N = M^2\)</span> and <span class="math notranslate nohighlight">\(N = U \Sigma U^t\)</span> (<span class="math notranslate nohighlight">\(U=V\)</span> in the SVD because <cite>N</cite> is symmetric), 
+then <span class="math notranslate nohighlight">\(M = U \Sigma^{1/2} U^t\)</span>; simlarily, if <span class="math notranslate nohighlight">\(P=Q^2\)</span>, Then <span class="math notranslate nohighlight">\(Q = V\Phi^{1/2} V^t\)</span> 
+if the SVD of <cite>P</cite> is <span class="math notranslate nohighlight">\(P = V \Phi V^t\)</span>.</p>
+<ul class="simple">
+<li><p>second: computes <span class="math notranslate nohighlight">\(R = MAQ\)</span></p></li>
+<li><p>third: run the <code class="docutils literal notranslate"><span class="pre">PCA</span></code> of <cite>R</cite>: <span class="math notranslate nohighlight">\((Z, \Lambda, X) = PCA(R)\)</span></p></li>
+<li><p>fourth: computes <span class="math notranslate nohighlight">\(M^{-1}\)</span> and <span class="math notranslate nohighlight">\(Q^{-1}\)</span> as <span class="math notranslate nohighlight">\(M^{-1}=U \Sigma^{-1/2} U^t\)</span> and</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(Q^{-1}=V \Phi^{-1/2} V^t\)</span></p>
+<ul class="simple">
+<li><p>fifth: computes <span class="math notranslate nohighlight">\(Y = M^{-1}Z\)</span> and <span class="math notranslate nohighlight">\(V = Q^{-1}X\)</span></p></li>
+</ul>
+<p>The result is <span class="math notranslate nohighlight">\((Y, V, \Lambda)\)</span></p>
+<p>Let us note that <code class="docutils literal notranslate"><span class="pre">numpy</span></code> contains a function, called <code class="docutils literal notranslate"><span class="pre">scipy.linalg.sqrtm</span></code> which computes 
+the square root of a square <cite>n</cite> <cite>x</cite> <cite>n</cite> matrix, from algorithm published in Deadman, E., Higham, N. J. and Ralha, R. 
+(2013) “Blocked Schur Algorithms for Computing the Matrix Square Root, Lecture Notes in Computer Science, 7782. pp. 171-182,
+which is not used here. Indeed, using the SVD permits to compute easily <span class="math notranslate nohighlight">\(M=N^{1/2}\)</span> and <span class="math notranslate nohighlight">\(M^{-1}=N^{-1/2}\)</span>, and the
+same for <cite>P</cite>.</p>
+<p><strong>Warnings</strong></p>
+<ul class="simple">
+<li><p>Pretreatment has not been implemented, but centering by column</p></li>
+<li><p>still under work - not frozen for a release</p></li>
+</ul>
+<p><strong>Diodon Documentation</strong></p>
+<ul class="simple">
+<li><p>see section 6, and algorithm <code class="docutils literal notranslate"><span class="pre">pca_met()</span></code> in section 11.</p></li>
+</ul>
+<p>28/12/2017, revised 22.09.28</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.pca_svd">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">pca_svd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#pca_svd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.pca_svd" title="Permalink to this definition">¶</a></dt>
+<dd><p>runs the PCA with SVD of A</p>
+<p class="rubric">Notes</p>
+<p>No documentation (used behind pca_core)
+21/06/27</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.plot_coa">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">plot_coa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Y_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y_c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_dsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row_dsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row_col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'blue'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'red'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rownames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x11</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#plot_coa"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.plot_coa" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does</strong></p>
+<p>Scatter plot of the result of a Correspondence Analysis</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>Y_r</strong><span class="classifier">a 2D numpy array</span></dt><dd><p>the principal components for the rows</p>
+</dd>
+<dt><strong>Y_c</strong><span class="classifier">a 2D numpy array</span></dt><dd><p>the principal components for the columns</p>
+</dd>
+<dt><strong>axis_1</strong><span class="classifier">an integer</span></dt><dd><p>the first axis of the scatter plot (starting at 1)</p>
+</dd>
+<dt><strong>axis_2</strong><span class="classifier">an integer</span></dt><dd><p>the second axis of the scatter plot (starting at 1)</p>
+</dd>
+<dt><strong>col_dsize</strong><span class="classifier">an integer</span></dt><dd><div class="line-block">
+<div class="line">dot size for dots associated with columns   </div>
+<div class="line">default value is 20</div>
+</div>
+</dd>
+<dt><strong>row_dsize</strong><span class="classifier">an integer</span></dt><dd><div class="line-block">
+<div class="line">dot size for dots associated with rows  </div>
+<div class="line">default value is 20</div>
+</div>
+</dd>
+<dt><strong>row_col</strong><span class="classifier">a string</span></dt><dd><div class="line-block">
+<div class="line">color for dots associated with rows  </div>
+<div class="line">default value is <cite>blue</cite> </div>
+</div>
+</dd>
+<dt><strong>col_col</strong><span class="classifier">a string</span></dt><dd><div class="line-block">
+<div class="line">color for dots associated with columns  </div>
+<div class="line">default value is <cite>red</cite> </div>
+</div>
+</dd>
+<dt><strong>rownames</strong><span class="classifier">a list</span></dt><dd><div class="line-block">
+<div class="line">list of names of rows to be plotted  </div>
+<div class="line">default value is [] (no name is plotted)</div>
+</div>
+</dd>
+<dt><strong>colnames</strong><span class="classifier">a list</span></dt><dd><div class="line-block">
+<div class="line">list of names of columns to be plotted  </div>
+<div class="line">defalt value is [] (no name is plotted)</div>
+</div>
+</dd>
+<dt><strong>title</strong><span class="classifier">a string</span></dt><dd><div class="line-block">
+<div class="line">the title of the plot  </div>
+<div class="line">default value is <cite>None</cite> (no title)</div>
+</div>
+</dd>
+<dt><strong>x11</strong><span class="classifier">a boolean</span></dt><dd><div class="line-block">
+<div class="line">whether to display the plot on the screen </div>
+<div class="line">default value is <cite>True</cite> (plot displayed)</div>
+</div>
+</dd>
+<dt><strong>plotfile</strong><span class="classifier">a string</span></dt><dd><div class="line-block">
+<div class="line">the name of the file where to save the plot </div>
+<div class="line">default value is <cite>None</cite> (plot not saved)</div>
+</div>
+</dd>
+<dt><strong>fmt</strong><span class="classifier">a string</span></dt><dd><div class="line-block">
+<div class="line">format of the file where the plot is saved  </div>
+<div class="line">possible values are : <cite>png</cite>, <cite>eps</cite>, <cite>pdf</cite>  </div>
+<div class="line">default value is <cite>png</cite></div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>a scatter plot</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The numbering of the axis in calling the function is natural, and bagins at 1. It is translated 
+to start at 0 as in python in the function itself.</p>
+<p><em>af, 25/10/2017, revised 22.10.26</em></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.plot_components_heatmap">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">plot_components_heatmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ocean'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x11</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#plot_components_heatmap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.plot_components_heatmap" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does:</strong></p>
+<p>builds the density heatmap of the point cloud of the components of a PCA</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>Y</strong><span class="classifier">a <span class="math notranslate nohighlight">\(n \times k\)</span> 2D numpy array</span></dt><dd><p>array of the components</p>
+</dd>
+<dt><strong>bins</strong><span class="classifier">an integer</span></dt><dd><p>the size of the image, in pixels</p>
+</dd>
+<dt><strong>axis_1</strong><span class="classifier">an integer</span></dt><dd><div class="line-block">
+<div class="line">first axis to be plotted </div>
+<div class="line">columns in the image </div>
+</div>
+</dd>
+<dt><strong>axis_2</strong><span class="classifier">an integer</span></dt><dd><div class="line-block">
+<div class="line">second axis of Y </div>
+<div class="line">rows in the image</div>
+</div>
+</dd>
+<dt><strong>bins</strong><span class="classifier">an integer</span></dt><dd><div class="line-block">
+<div class="line">the size of the image </div>
+<div class="line">it is also the number of classes per axis in the 2D histogram</div>
+</div>
+</dd>
+<dt><strong>cmap</strong><span class="classifier">a string</span></dt><dd><div class="line-block">
+<div class="line">the matplotlib colormap for the heatmap </div>
+<div class="line">default value is <cite>ocean</cite> </div>
+<div class="line">classical default value in matplotlib is <cite>viridis</cite></div>
+<div class="line">see <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">https://matplotlib.org/stable/tutorials/colors/colormaps.html</a> for a choice</div>
+</div>
+</dd>
+<dt><strong>range</strong><span class="classifier">is <cite>None</cite></span></dt><dd><p>compulsory for callind 2D histogram</p>
+</dd>
+<dt><strong>log</strong><span class="classifier">a boolean</span></dt><dd><div class="line-block">
+<div class="line">whether to translate the densities in a logarithmic scale  </div>
+<div class="line">default value is <cite>True</cite> </div>
+</div>
+</dd>
+<dt><strong>scale</strong><span class="classifier">a boolean</span></dt><dd><div class="line-block">
+<div class="line">deprecated</div>
+<div class="line">default value is <cite>False</cite> </div>
+</div>
+</dd>
+<dt><strong>title</strong><span class="classifier">a string</span></dt><dd><div class="line-block">
+<div class="line">the title of the heatmap</div>
+<div class="line">default value is <cite>None</cite> (no title)</div>
+</div>
+</dd>
+<dt><strong>x11</strong><span class="classifier">a boolean</span></dt><dd><div class="line-block">
+<div class="line">whether to display the plot on the screen </div>
+<div class="line">default value is <cite>True</cite> (plot displayed)</div>
+</div>
+</dd>
+<dt><strong>plotfile</strong><span class="classifier">a string</span></dt><dd><div class="line-block">
+<div class="line">the name of the file where to save the plot </div>
+<div class="line">default value is <cite>None</cite> (plot not saved)</div>
+</div>
+</dd>
+<dt><strong>fmt</strong><span class="classifier">a string</span></dt><dd><div class="line-block">
+<div class="line">format of the file where the plot is saved  </div>
+<div class="line">possible values are : <cite>png</cite>, <cite>eps</cite>, <cite>pdf</cite>  </div>
+<div class="line">default value is <cite>png</cite></div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>a heatmap</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p><cite>Y</cite> is a numpy array of coordinates, as produced by the MDS</p>
+<p>when two axis are selected</p>
+<ul class="simple">
+<li><p>the two components are extracted</p></li>
+<li><p>a 2D histogram of their values is computed with a call to <cite>np.histogram2d()</cite></p></li>
+<li><p>the heatmap is drawn with the values of the 2D histogram</p></li>
+</ul>
+<p>af, 25/01/2020, revised 22.10.36</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.plot_components_quality">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">plot_components_quality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Qual</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ocean'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diam</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x11</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#plot_components_quality"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.plot_components_quality" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does</strong>
+Scatter plot of the components with each dot colored according to the cumulated quality of the item for a given axis</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.plot_components_scatter">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">plot_components_scatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dot_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'red'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x11</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#plot_components_scatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.plot_components_scatter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scatter plot of the result of a Principal Component Analysis</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>Y</strong><span class="classifier">a <span class="math notranslate nohighlight">\(n \times k\)</span> 2D numpy array,</span></dt><dd><p>the matrix of columnwise principal components</p>
+</dd>
+<dt><strong>axis_1</strong><span class="classifier">an integer, the first axis</span></dt><dd><p>axis are labelled from 1 to <cite>k</cite></p>
+</dd>
+<dt><strong>axis_2</strong><span class="classifier">an integer, the second axis</span></dt><dd><p>second axis is labelled from <cite>axis_1 + 1</cite> to <cite>k</cite></p>
+</dd>
+<dt><strong>dot_size</strong><span class="classifier">an integer</span></dt><dd><p>the size of dots in the plot, one dot per item</p>
+</dd>
+<dt><strong>color</strong><span class="classifier">a string</span></dt><dd><p>color of doats in the plot</p>
+</dd>
+<dt><strong>names</strong><span class="classifier">a list of <cite>n</cite> strings</span></dt><dd><p>labels of dots in ythe plot</p>
+</dd>
+<dt><strong>title</strong><span class="classifier">string</span></dt><dd><p>title of the plot</p>
+</dd>
+<dt><strong>x11</strong><span class="classifier">boolean</span></dt><dd><p>the plot is displayed on the scvreen if <cite>x11=True</cite></p>
+</dd>
+<dt><strong>plotfile</strong><span class="classifier">string</span></dt><dd><p>name of the file to save the plot</p>
+<p>the plot is not saved if <cite>plotfile=None</cite></p>
+</dd>
+<dt><strong>fmt</strong><span class="classifier">string</span></dt><dd><p>format of the file to save the plot.</p>
+<p>accepted values are <cite>png</cite>, <cite>eps</cite>, <cite>pdf</cite>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>a scatter plot</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>None</p>
+<p><em>af, 21/02/2018, revised 22.10.14</em></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.plot_components_splines">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">plot_components_splines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'red'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x11</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#plot_components_splines"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.plot_components_splines" title="Permalink to this definition">¶</a></dt>
+<dd><p>lines smoothed with cublic splines</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.plot_correlation_matrix">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">plot_correlation_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x11</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#plot_correlation_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.plot_correlation_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>plots a heatmap of the correlation matrix
+!!! ongoing work !!!</p>
+<p>af, 22.10.27</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.plot_cumulated_quality_per_item">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">plot_cumulated_quality_per_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'blue'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x11</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#plot_cumulated_quality_per_item"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.plot_cumulated_quality_per_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>plots the quality per item</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>Y</strong><span class="classifier">a 2D  <span class="math notranslate nohighlight">\(n \times p\)</span> numpy array</span></dt><dd><p>a matrix of principal components</p>
+</dd>
+<dt><strong>r</strong><span class="classifier">an integer, the axis for plotting cumulated quality</span></dt><dd><p>default value is 2</p>
+</dd>
+<dt><strong>col</strong><span class="classifier">a string</span></dt><dd><div class="line-block">
+<div class="line">the color to use for plotting the quality </div>
+<div class="line">default value is <cite>blue</cite>  </div>
+</div>
+</dd>
+<dt><strong>title</strong><span class="classifier">string</span></dt><dd><p>title of the plot</p>
+</dd>
+<dt><strong>x11</strong><span class="classifier">boolean</span></dt><dd><p>the plot is displayed on the scvreen if <cite>x11=True</cite></p>
+</dd>
+<dt><strong>plotfile</strong><span class="classifier">string</span></dt><dd><p>name of the file to save the plot</p>
+<p>the plot is not saved if <cite>plotfile=None</cite></p>
+</dd>
+<dt><strong>fmt</strong><span class="classifier">string</span></dt><dd><p>format of the file to save the plot.</p>
+<p>accepted values are <cite>png</cite>, <cite>eps</cite>, <cite>pdf</cite>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>Qual</strong><span class="classifier">1D <span class="math notranslate nohighlight">\(r\)</span> numpy array</span></dt><dd><p>the rowise cumulated quality per axis up to <cite>r</cite>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>For each row <cite>i</cite> of the matrix of components <cite>Y</cite></p>
+<ul class="simple">
+<li><p>computes <span class="math notranslate nohighlight">\(Qual[i] = \sum_{j \leq r} Y[i,j]^2 / \sum_{k \leq p} Y[i,k]^2\)</span></p></li>
+<li><p>once an axis <cite>r</cite> has been selected, draws the plot of <span class="math notranslate nohighlight">\((i, Q(i,r))\)</span> with <cite>i</cite> on <cite>x</cite> axis.</p></li>
+</ul>
+<p>af, révisé 22.10.28</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.plot_eig">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">plot_eig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">L</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frac</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dot_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'red'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x11</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#plot_eig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.plot_eig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plots the singular or eigenvalues</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>L</strong><span class="classifier">1D numpy array</span></dt><dd><p>the eigenvalues of <cite>A’A</cite></p>
+</dd>
+<dt><strong>k</strong><span class="classifier">integer</span></dt><dd><div class="line-block">
+<div class="line">the number of eigenvalues to plot or print  </div>
+<div class="line">default value is -1, which means all positive eigenvalues</div>
+</div>
+</dd>
+<dt><strong>frac</strong><span class="classifier">boolean</span></dt><dd><p>if True, the fraction of the norm of <cite>A’A</cite> is displayed per eigenvalue</p>
+</dd>
+<dt><strong>cum</strong><span class="classifier">boolean</span></dt><dd><p>if true, the cumulated eigenvalues are displayed
+can be combined with <cite>frac=True</cite></p>
+</dd>
+<dt><strong>Log</strong><span class="classifier">Boolean</span></dt><dd><p>if True, the Log of the genvalues is displayed</p>
+</dd>
+<dt><strong>dot_size</strong><span class="classifier">integer</span></dt><dd><p>if &gt; 0, a dot is displayed per eigenvalue</p>
+</dd>
+<dt><strong>nb_val</strong><span class="classifier">integer</span></dt><dd><p>number of eigen,values to display;</p>
+<p>if <cite>nb_val=-1</cite>, all eigenvalues are displayed</p>
+</dd>
+<dt><strong>col</strong><span class="classifier">string</span></dt><dd><p>color for the plot</p>
+</dd>
+<dt><strong>title</strong><span class="classifier">string</span></dt><dd><p>title on top of the plot;</p>
+<p>if <cite>None</cite>, no title is displayed</p>
+</dd>
+<dt><strong>pr</strong><span class="classifier">boolean</span></dt><dd><div class="line-block">
+<div class="line">prints on the screen the eigenvalues if True</div>
+<div class="line">inherits the choices for k, frac and cum.</div>
+</div>
+</dd>
+<dt><strong>x11</strong><span class="classifier">Boolean</span></dt><dd><p>if True, the plot is displayed on screen</p>
+</dd>
+<dt><strong>plotfile</strong><span class="classifier">string</span></dt><dd><p>if not <cite>None</cite>, the save is save in a file named <cite>plotfile</cite></p>
+</dd>
+<dt><strong>fmt</strong><span class="classifier">string</span></dt><dd><p>the format of the plot;</p>
+<p>accepted formats are <cite>png</cite>, <cite>eps</cite>, <cite>pdf</cite></p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>The eigenvalues <span class="math notranslate nohighlight">\(L_i\)</span> are such that <span class="math notranslate nohighlight">\(\sum_i L_i = ||A'A||^2\)</span>. Then, the quality of representation in axis <cite>i</cite> is <span class="math notranslate nohighlight">\(L_i/\sum_j L_j\)</span>.  
+This is displayed by setting <cite>frac=True</cite>.</p></li>
+<li><p>the cumulated eigenvalues are simply given by <span class="math notranslate nohighlight">\(\psi_i = \sum_{j \leq i}L_j\)</span></p></li>
+</ul>
+<p>af, 25/10/2017 - revised 19.09.18, 22.10.14</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.plot_var">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">plot_var</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">V</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">varnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x11</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#plot_var"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.plot_var" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>*what it does*</strong>
+Plots the correlations between the variables</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>V</strong><span class="classifier">a <span class="math notranslate nohighlight">\(p \times p\)</span> 2D numpy array</span></dt><dd><p>column <cite>k</cite> of <cite>V</cite> is the <a href="#id5"><span class="problematic" id="id6">`</span></a>k-<a href="#id7"><span class="problematic" id="id8">`</span></a>th principal axis</p>
+</dd>
+<dt><strong>varnames</strong><span class="classifier">a list of strings</span></dt><dd><div class="line-block">
+<div class="line">the names of the variables (the columns of <cite>A</cite> on which the PCA has been done)</div>
+<div class="line">default value is None (no names are displayed)</div>
+</div>
+</dd>
+<dt><strong>axis_1</strong><span class="classifier">an integer</span></dt><dd><div class="line-block">
+<div class="line">the first principal axis to be displayed</div>
+<div class="line">starts at 1</div>
+</div>
+</dd>
+<dt><strong>axis_2</strong><span class="classifier">an integer</span></dt><dd><p>the second principal axis to be displayed</p>
+</dd>
+<dt><strong>title</strong><span class="classifier">string</span></dt><dd><p>title of the plot</p>
+</dd>
+<dt><strong>x11</strong><span class="classifier">boolean</span></dt><dd><p>the plot is displayed on the scvreen if <cite>x11=True</cite></p>
+</dd>
+<dt><strong>plotfile</strong><span class="classifier">string</span></dt><dd><p>name of the file to save the plot</p>
+<p>the plot is not saved if <cite>plotfile=None</cite></p>
+</dd>
+<dt><strong>fmt</strong><span class="classifier">string</span></dt><dd><p>format of the file to save the plot.</p>
+<p>accepted values are <cite>png</cite>, <cite>eps</cite>, <cite>pdf</cite>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>a plot</dt><dd></dd>
+<dt>af, 22.10.28</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.plot_var_heatmap">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">plot_var_heatmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">V</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">varnames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'viridis'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x11</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#plot_var_heatmap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.plot_var_heatmap" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does</strong>
+Plots a heatmap of the coordinates of the principal axis</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>V</strong><span class="classifier">a <span class="math notranslate nohighlight">\(p \times p\)</span> 2D numpy array</span></dt><dd><p>the coordonates of the principal axis in the basis of the variables</p>
+</dd>
+<dt><strong>varnames</strong><span class="classifier">a list of strings</span></dt><dd><div class="line-block">
+<div class="line">the names of the variables</div>
+<div class="line">(names of the columns of <cite>A</cite> on which PCA has been done)</div>
+</div>
+</dd>
+<dt><strong>cmap</strong><span class="classifier">a string</span></dt><dd><div class="line-block">
+<div class="line">the matplotlib colormap for drawing the heatmap</div>
+<div class="line">default value is <cite>viridis</cite> </div>
+</div>
+</dd>
+<dt><strong>title</strong><span class="classifier">string</span></dt><dd><p>title of the plot</p>
+</dd>
+<dt><strong>x11</strong><span class="classifier">boolean</span></dt><dd><p>the plot is displayed on the scvreen if <cite>x11=True</cite></p>
+</dd>
+<dt><strong>plotfile</strong><span class="classifier">string</span></dt><dd><p>name of the file to save the plot</p>
+<p>the plot is not saved if <cite>plotfile=None</cite></p>
+</dd>
+<dt><strong>fmt</strong><span class="classifier">string</span></dt><dd><p>format of the file to save the plot.</p>
+<p>accepted values are <cite>png</cite>, <cite>eps</cite>, <cite>pdf</cite>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>a heatmap</dt><dd></dd>
+<dt>af, 22.10.28</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.project_on">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">project_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#project_on"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.project_on" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does:</strong></p>
+<p>Builds the projection operator on space spanned by the columns of A</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>A</strong><span class="classifier">a <span class="math notranslate nohighlight">\(n \times p\)</span> 2D numpy array</span></dt><dd><p>the projector is on the space in <span class="math notranslate nohighlight">\(\mathbf{R}^n\)</span> spanned by the columns of <cite>A</cite></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>P</strong><span class="classifier">a 2D numpy array, <span class="math notranslate nohighlight">\(n \times n\)</span></span></dt><dd><p>the projector</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This function uses the QR decomposition of <cite>A</cite>, which avoids to compute 
+<span class="math notranslate nohighlight">\((A'A)^{-1}\)</span> which is costly (one product, one inverse). It proceeds as</p>
+<ul class="simple">
+<li><p>A = QR</p></li>
+<li><p>P = QQ’</p></li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">10</span> <span class="p">;</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">p</span><span class="p">)</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">project_on</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><em>af, 22/02/2018, 22.10.13, 22.10.28</em></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.scale">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#scale"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does:</strong></p>
+<p>scales a matrix columnwise</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>A</strong><span class="classifier">a 2D numpy array, <cite>n</cite> x <cite>p</cite></span></dt><dd><p>the matrix to be scaled</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>As</strong><span class="classifier">a 2D numpy array</span></dt><dd><p>matrix <cite>A</cite> with scaled columns</p>
+</dd>
+<dt><strong>a</strong><span class="classifier">a 1D numpy array, <cite>p</cite> values</span></dt><dd><p>the norm of each column of <cite>A</cite></p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>It is recommended to center <cite>A</cite> columnwise before scaling.</p>
+<p>Each coordinates <span class="math notranslate nohighlight">\(a_{ij}\)</span> of <cite>A</cite> is replaced by 
+<span class="math notranslate nohighlight">\(a_{ij} / ||a_{.j}||\)</span> where <span class="math notranslate nohighlight">\(||a_{.j}||\)</span> is the norm 
+of column <cite>j</cite>:  <span class="math notranslate nohighlight">\(||a_{.j}||^2 = \sum_i a_{ij}^2\)</span></p>
+<p><strong>Example</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pydiodon</span> <span class="k">as</span> <span class="nn">dio</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">=</span> <span class="mi">4</span> <span class="p">;</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">p</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">p</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Ac</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">center_col</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>  
+<span class="gp">&gt;&gt;&gt; </span><span class="n">As</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">dio</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">Ac</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>af, 21.02.19, 22.10.13</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.svd_grp">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">svd_grp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#svd_grp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.svd_grp" title="Permalink to this definition">¶</a></dt>
+<dd><p>SVD of a (large) matrix <cite>A</cite> by <em>Gaussian Random Projection</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>A</strong><span class="classifier">a 2D numpy array</span></dt><dd><p>the matrix to be studied (dimension <span class="math notranslate nohighlight">\(n \times p\)</span>)</p>
+</dd>
+<dt><strong>k</strong><span class="classifier">an integer</span></dt><dd><p>the number of components to be computed</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>U</strong><span class="classifier">a 2D numpy array</span></dt><dd><p>(dimension <span class="math notranslate nohighlight">\(n \times k\)</span>)</p>
+</dd>
+<dt><strong>S</strong><span class="classifier">a 1D numpy array</span></dt><dd><p>(<cite>k</cite> values)</p>
+</dd>
+<dt><strong>V</strong><span class="classifier">a 2D numpy array</span></dt><dd><p>(dimension <span class="math notranslate nohighlight">\(p \times k\)</span>)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Builds the SVD of <cite>A</cite> as <span class="math notranslate nohighlight">\(A = U\Sigma V^t\)</span> where <span class="math notranslate nohighlight">\(\Sigma\)</span> is the 
+diagonal matrix with diagonal <cite>S</cite> and <span class="math notranslate nohighlight">\(V^t\)</span> is the transpose of <cite>V</cite>.</p>
+<p>Here are the different steps of the computation:</p>
+<ol class="arabic">
+<li><p><cite>A</cite> is a <span class="math notranslate nohighlight">\(n \times p\)</span> matrix</p></li>
+<li><p>builds <span class="math notranslate nohighlight">\(\Omega\)</span>, a <span class="math notranslate nohighlight">\(p \times k\)</span> random matrix (Gaussian)</p></li>
+<li><p>computes <cite>Y = A</cite><span class="math notranslate nohighlight">\(\Omega\)</span> (dimension <span class="math notranslate nohighlight">\(n \times k\)</span>)</p></li>
+<li><dl>
+<dt>computes a QR decomposition of Y</dt><dd><div class="line-block">
+<div class="line"><cite>Y = QR</cite>, with</div>
+<div class="line"><cite>Q</cite> is orthonormal (<span class="math notranslate nohighlight">\(n \times k\)</span>)</div>
+<div class="line"><cite>R</cite>   is upper triangular (<cite>:math:`k times k</cite>)</div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>computes <cite>B = Q^t A</cite> </dt><dd><p><cite>B</cite> is <cite>:math:`k times p</cite> (with <cite>k &lt; p</cite>) and its SVD is supposed to be close to the one of <cite>A</cite></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math notranslate nohighlight">\(U_B\)</span>, <cite>S</cite>, and <cite>V</cite> are SVD of <cite>B</cite>:</dt><dd><p><span class="math notranslate nohighlight">\(B = U_B S V'\)</span>, <cite>S</cite> is diagonal</p>
+</dd>
+</dl>
+</li>
+<li><p>then, <span class="math notranslate nohighlight">\(U_A\)</span>, <cite>S</cite> and <cite>V</cite> are close to svd of <cite>A</cite> : <span class="math notranslate nohighlight">\(A = U_A S V'\)</span></p></li>
+</ol>
+<p><em>Sizes and computation of the matrices</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 37%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>matrix</p></th>
+<th class="head"><p>value</p></th>
+<th class="head"><p>size</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>A</cite></p></td>
+<td><p>input</p></td>
+<td><p><span class="math notranslate nohighlight">\(n \times p\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Omega\)</span></p></td>
+<td><p>random</p></td>
+<td><p><span class="math notranslate nohighlight">\(p \times k\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><cite>Y</cite></p></td>
+<td><p><span class="math notranslate nohighlight">\(A\Omega\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n \times k\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>Q</cite></p></td>
+<td><p><cite>Y = QR</cite></p></td>
+<td><p><span class="math notranslate nohighlight">\(n \times k\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><cite>B</cite></p></td>
+<td><p><cite>B = Q^t A</cite></p></td>
+<td><p><span class="math notranslate nohighlight">\(k \times p\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(U_B\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(B = U_BSV^t\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(k \times k\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><cite>U</cite></p></td>
+<td><p><span class="math notranslate nohighlight">\(U = QU_B\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n \times k\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">References</p>
+<p>[1] Halko &amp; al., 2011, <em>SIAM Reviews</em>, <strong>53(2):</strong> 217-288</p>
+<p>af, rp, fp
+21.03.21; 22.06.16, 22.10.28</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.write_ascii">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">write_ascii</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\t'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rownames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">np_fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%.18e'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'float32'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#write_ascii"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.write_ascii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write an ascii file</p>
+<p class="rubric">Notes</p>
+<p>Not expected to be used by the user (see writefile())
+22.10.28</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.write_hdf5">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">write_hdf5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rownames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datasetname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'values'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'float32'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#write_hdf5"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.write_hdf5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a hdf5 file</p>
+<p class="rubric">Notes</p>
+<p>No documentation because is not expected to be used by the user (see writefile())
+22.10.28</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pydiodon.writefile">
+<span class="sig-prename descclassname"><span class="pre">pydiodon.</span></span><span class="sig-name descname"><span class="pre">writefile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\t'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rownames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datasetname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'values'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">np_fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%.18e'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'float32'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pydiodon.html#writefile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pydiodon.writefile" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>what it does</strong></p>
+<p>A generic function for saving a numpy array as a file</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>A</strong><span class="classifier">a numpy array</span></dt><dd><p>the array to be saved as a file</p>
+</dd>
+<dt><strong>filename</strong><span class="classifier">string</span></dt><dd><p>the name of the file for saving the array (compulsory)</p>
+</dd>
+<dt><strong>fmt</strong><span class="classifier">string</span></dt><dd><p>explicit format of the file (compulsory) 
+one item among <code class="docutils literal notranslate"><span class="pre">ascii</span></code>, <code class="docutils literal notranslate"><span class="pre">hdf5</span></code>, <code class="docutils literal notranslate"><span class="pre">zip</span></code> ; see notes</p>
+</dd>
+<dt><strong>delimiter</strong><span class="classifier">character</span></dt><dd><p>the delimiter between values in a row</p>
+</dd>
+<dt><strong>colnames</strong><span class="classifier">boolean or string</span></dt><dd><p>column names</p>
+<p>for an ascii file, it is boolean, with True if column names are as first row in the file, and False otherwise</p>
+<p>for an hdf5 file, gives the name of the dataset with the column names</p>
+<div class="line-block">
+<div class="line">optional</div>
+<div class="line">default value is None.</div>
+</div>
+</dd>
+<dt><strong>rownames</strong><span class="classifier">boolean or string</span></dt><dd><p>row names</p>
+<p>for an ascii file, it is boolean, as True is row names are as first column in the file, and False otherwise</p>
+<p>for an hdf5 file, gives the name of the dataset with the row names</p>
+<div class="line-block">
+<div class="line">optional</div>
+<div class="line">default value is None.             </div>
+</div>
+</dd>
+<dt><strong>datasetname</strong><span class="classifier">string</span></dt><dd><div class="line-block">
+<div class="line">for writing files in hdf5 format only : hdf5 dataset for values</div>
+<div class="line">optional</div>
+<div class="line">default value is “value”</div>
+</div>
+</dd>
+<dt><strong>fmt</strong><span class="classifier">string</span></dt><dd><p>is exactly the parameter <code class="docutils literal notranslate"><span class="pre">fmt</span></code> of <code class="docutils literal notranslate"><span class="pre">numpy.savetxt()</span></code> for print format in ascii files
+to be done</p>
+</dd>
+<dt><strong>dtype</strong><span class="classifier">to be done</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>writes a file</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>It writes the array in a file and returns no value. Parameters and choices are mirrored
+from function <code class="docutils literal notranslate"><span class="pre">loadfile()</span></code> as it is the reverse operation.</p>
+<p>Possible formats are: <code class="docutils literal notranslate"><span class="pre">ascii</span></code>, <code class="docutils literal notranslate"><span class="pre">hdf5</span></code> and <code class="docutils literal notranslate"><span class="pre">compressed</span> <span class="pre">ascii</span></code>.   
+Delimiters in ascii format can be blanks, comma, semi-columns, tabulations.  
+Ascii data sets with <code class="docutils literal notranslate"><span class="pre">tab</span></code> delimiters are expected to be with suffix <code class="docutils literal notranslate"><span class="pre">.txt</span></code>.
+Ascii data sets with other delimiters are expected to be with siffix <code class="docutils literal notranslate"><span class="pre">.csv</span></code>.</p>
+<p><em>jmf &amp; af, 21.04.22, 22.10.28</em></p>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to pydiodon’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Alain Franc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.3.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/pydiodon.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,18 @@
+[
+  "tests/test_center.py::test_center_col",
+  "tests/test_center.py::test_center_row",
+  "tests/test_pydiodon.py::Test_io::test_loadfile",
+  "tests/test_pydiodon.py::Test_io::test_writefile",
+  "tests/test_pydiodon.py::Test_methods::test_pca",
+  "tests/test_pydiodon.py::Test_methods::test_pca_core",
+  "tests/test_pydiodon.py::Test_pretreatments::test_center_col",
+  "tests/test_pydiodon.py::Test_pretreatments::test_center_row",
+  "tests/test_pydiodon.py::Test_pretreatments::test_centering_operator",
+  "tests/test_pydiodon_jmf.py::Test_io::test_loadfile",
+  "tests/test_pydiodon_jmf.py::Test_io::test_writefile",
+  "tests/test_pydiodon_jmf.py::Test_methods::test_pca",
+  "tests/test_pydiodon_jmf.py::Test_methods::test_pca_core",
+  "tests/test_pydiodon_jmf.py::Test_pretreatments::test_center_col",
+  "tests/test_pydiodon_jmf.py::Test_pretreatments::test_center_row",
+  "tests/test_pydiodon_jmf.py::Test_pretreatments::test_centering_operator"
+]

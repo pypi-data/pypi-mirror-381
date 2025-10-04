@@ -1,0 +1,17 @@
+.gitlab-ci.yml
+Dockerfile
+README.md
+pydiodon.py
+setup.py
+sonar-project.properties
+doc/Makefile
+doc/conf.py
+doc/index.rst
+doc/make.bat
+doc/pydiodon.rst
+pydiodon.egg-info/PKG-INFO
+pydiodon.egg-info/SOURCES.txt
+pydiodon.egg-info/dependency_links.txt
+pydiodon.egg-info/top_level.txt
+tools/patch-sonar-properties.perl
+tools/run_tests.sh

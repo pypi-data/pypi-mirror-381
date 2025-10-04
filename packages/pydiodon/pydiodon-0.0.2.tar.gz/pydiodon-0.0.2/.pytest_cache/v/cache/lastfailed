@@ -1,0 +1,6 @@
+{
+  "tests/test_pydiodon.py::Test_methods::test_pca": true,
+  "tests/test_pydiodon.py::Test_methods::test_pca_core": true,
+  "tests/test_pydiodon_jmf.py::Test_methods::test_pca": true,
+  "tests/test_pydiodon_jmf.py::Test_methods::test_pca_core": true
+}
