@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: oneforall-gui
+Version: 0.1.0a0
+Summary: OneForAll — lightweight Python GUI toolkit using pywebview and Python-only components.
+Author-email: Rohit Ahirwal <lucifer@codewithlucifer.com>
+License: MIT
+Requires-Python: >=3.9
+License-File: LICENSE
+License-File: NOTICE.md
+Requires-Dist: pywebview
+Requires-Dist: typer
+Requires-Dist: watchdog
+Requires-Dist: pyinstaller
+Provides-Extra: dev
+Requires-Dist: black>=24.0.0; extra == "dev"
+Requires-Dist: isort>=5.13.0; extra == "dev"
+Requires-Dist: flake8>=7.0.0; extra == "dev"
+Requires-Dist: mypy>=1.11.0; extra == "dev"
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=5.0.0; extra == "dev"
+Requires-Dist: pre-commit>=4.0.0; extra == "dev"
+Requires-Dist: jinja2; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest>=8.0.0; extra == "test"
+Requires-Dist: pytest-cov>=5.0.0; extra == "test"
+Requires-Dist: pytest-mock>=3.14.0; extra == "test"
+Requires-Dist: pytest-asyncio>=0.24.0; extra == "test"
+Dynamic: license-file

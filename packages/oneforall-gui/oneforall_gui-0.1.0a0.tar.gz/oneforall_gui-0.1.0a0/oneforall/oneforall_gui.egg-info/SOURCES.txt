@@ -1,0 +1,11 @@
+LICENSE
+NOTICE.md
+README.md
+pyproject.toml
+oneforall/oneforall_gui.egg-info/PKG-INFO
+oneforall/oneforall_gui.egg-info/SOURCES.txt
+oneforall/oneforall_gui.egg-info/dependency_links.txt
+oneforall/oneforall_gui.egg-info/entry_points.txt
+oneforall/oneforall_gui.egg-info/requires.txt
+oneforall/oneforall_gui.egg-info/top_level.txt
+tests/test_components.py
