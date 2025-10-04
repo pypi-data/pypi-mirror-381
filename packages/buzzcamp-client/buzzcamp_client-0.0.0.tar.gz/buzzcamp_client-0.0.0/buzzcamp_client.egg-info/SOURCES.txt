@@ -1,0 +1,7 @@
+README.md
+__init__.py
+setup.py
+buzzcamp_client.egg-info/PKG-INFO
+buzzcamp_client.egg-info/SOURCES.txt
+buzzcamp_client.egg-info/dependency_links.txt
+buzzcamp_client.egg-info/top_level.txt
