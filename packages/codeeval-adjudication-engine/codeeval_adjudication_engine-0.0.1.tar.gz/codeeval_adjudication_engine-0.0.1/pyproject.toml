@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "codeeval_adjudication_engine"
+version = "0.0.1"
+description = "Manages the business logic for the review workflow, ensures randomized and blinded presentation of the Delta, records votes with robust concurrency control (Pessimistic Locking), calculates consensus based on defined rules, handles operational overrides, and constructs the True Gold Standard (TGS)."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/gowthamrao/codeeval_adjudication_engine"
+Repository = "https://github.com/gowthamrao/codeeval_adjudication_engine"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "flake8",
+    "pytest",
+    "pytest-cov",
+]
+
+[tool.hatch.envs.test]
+dependencies = [
+  "codeeval-adjudication-engine[dev]",
+]
+[tool.hatch.envs.test.scripts]
+run = "pytest"
+
+[tool.isort]
+profile = "black"
+known_first_party = ["codeeval_adjudication_engine"]
+
+[tool.black]
+line-length = 88
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = "E203"

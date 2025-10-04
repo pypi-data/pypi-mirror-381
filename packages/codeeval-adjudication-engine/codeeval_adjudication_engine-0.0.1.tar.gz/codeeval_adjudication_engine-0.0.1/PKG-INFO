@@ -1,0 +1,140 @@
+Metadata-Version: 2.4
+Name: codeeval_adjudication_engine
+Version: 0.0.1
+Summary: Manages the business logic for the review workflow, ensures randomized and blinded presentation of the Delta, records votes with robust concurrency control (Pessimistic Locking), calculates consensus based on defined rules, handles operational overrides, and constructs the True Gold Standard (TGS).
+Project-URL: Homepage, https://github.com/gowthamrao/codeeval_adjudication_engine
+Project-URL: Repository, https://github.com/gowthamrao/codeeval_adjudication_engine
+License: Prosperity Public License
+        
+           the all-in-one noncommercial software license
+        
+                              The Prosperity Public License 3.0.0
+        
+           Contributor: Gowtham A Rao
+        
+           Source Code: .
+        
+        Purpose
+        
+           This license allows you to use and share this software for
+           noncommercial purposes for free and to try this software for commercial
+           purposes for thirty days.
+        
+        Agreement
+        
+           In order to receive this license, you have to agree to its rules. Those
+           rules are both obligations under that agreement and conditions to your
+           license. Don’t do anything with this software that triggers a rule you
+           can’t or won’t follow.
+        
+        Notices
+        
+           Make sure everyone who gets a copy of any part of this software from
+           you, with or without changes, also gets the text of this license and
+           the contributor and source code lines above.
+        
+        Commercial Trial
+        
+           Limit your use of this software for commercial purposes to a thirty-day
+           trial period. If you use this software for work, your company gets one
+           trial period for all personnel, not one trial per person.
+        
+        Contributions Back
+        
+           Developing feedback, changes, or additions that you contribute back to
+           the contributor on the terms of a standardized public software license
+           such as the Blue Oak Model License 1.0.0, the Apache License 2.0,
+           the MIT license, or the two-clause BSD license doesn’t count as
+           use for a commercial purpose.
+        
+        Personal Uses
+        
+           Personal use for research, experiment, and testing for the benefit of
+           public knowledge, personal study, private entertainment, hobby
+           projects, amateur pursuits, or religious observance, without any
+           anticipated commercial application, doesn’t count as use for a
+           commercial purpose.
+        
+        Noncommercial Organizations
+        
+           Use by any charitable organization, educational institution, public
+           research organization, public safety or health organization,
+           environmental protection organization, or government institution
+           doesn’t count as use for a commercial purpose regardless of the source
+           of funding or obligations resulting from the funding.
+        
+        Defense
+        
+           Don’t make any legal claim against anyone accusing this software, with
+           or without changes, alone or with other technology, of infringing any
+           patent.
+        
+        Copyright
+        
+           The contributor licenses you to do everything with this software that
+           would otherwise infringe their copyright in it.
+        
+        Patent
+        
+           The contributor licenses you to do everything with this software that
+           would otherwise infringe any patents they can license or become able to
+           license.
+        
+        Reliability
+        
+           The contributor can’t revoke this license.
+        
+        Excuse
+        
+           You’re excused for unknowingly breaking Notices if you take all
+           practical steps to comply within thirty days of learning you broke the
+           rule.
+        
+        No Liability
+        
+           As far as the law allows, this software comes as is, without any
+           warranty or condition, and the contributor won’t be liable to anyone
+           for any damages related to this software or this license, under any
+           kind of legal claim.
+License-File: LICENSE
+License-File: NOTICE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=3.8
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: flake8; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# codeeval_adjudication_engine
+
+## I. Introduction and Scope
+
+### 1.1 Purpose
+
+The `codeeval_adjudication_engine` package orchestrates the business logic for Phase 2 of the MMM experiment (Blinded Comparative Adjudication). It is responsible for managing the flow of "Delta" concepts to the Adjudicators, ensuring strict adherence to the blinding and randomization protocols (BRD F3), recording votes with high integrity under concurrent load, calculating consensus in real-time (BRD F4.1), managing operational overrides required for live event resilience, and ultimately constructing the True Gold Standard (TGS) (BRD F4.2).
+
+### 1.2 Scope
+
+This package manages the logic between the backend data layer (provided by `platform`) and the front-end user interface.
+
+| Area                  | In-Scope                                                                                                  | Out-of-Scope                                                                       |
+| :-------------------- | :-------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------- |
+| **Workflow Management** | Managing the state of concepts, Clinical Ideas, and the active Adjudicator Roster.                        |                                                                                    |
+| **Blinded Data Filtering** | CRITICAL: Actively filtering the Concept Pool to ensure restricted information (e.g., Agreement Level) is never exposed. (BRD F3.3.2, NFR7) | Arm Anonymization (identity blinding) (handled by `security_core`).                  |
+| **Randomization**     | Ensuring the sequence of Delta concepts is randomized independently per user session. (BRD F3.2.1)        |                                                                                    |
+| **Vote Recording**    | Recording votes within robust transaction boundaries utilizing concurrency control mechanisms. (BRD F3.4) | Implementation of the Data Access Layer (DAL) or locking mechanisms (handled by `platform`). |
+| **Consensus Calculation**| Implementation of the Unanimity consensus rule, accounting for dynamic adjudicator assignments. (BRD F4.1) |                                                                                    |
+| **TGS Construction**  | Finalizing the TGS based on the Intersection and consensus outcomes. (BRD F4.2)                           | Statistical analysis (handled by `sap_engine`).                                      |
+| **Operational Overrides**| Logic for handling dynamic adjudicator removal/replacement (e.g., dropout) and triggering consensus recalculation. | The API endpoints or RBAC enforcement for overrides (handled by `platform`).          |
