@@ -1,0 +1,17 @@
+agent.py,sha256=FzsCZoSFV1Lg45u38hto9ko7h9_Vf9ZOFNRxox9-jQw,13415
+cli.py,sha256=5l2c7i7rXFBNK4NPjBC06jdxaAPi0yddRlYTUTijh6c,15473
+config.py,sha256=75E4jBb7WFFv1RWAj6IJFmvmS9tcq6gApPHIexMCSTM,1623
+llm.py,sha256=LASve9le2vzOGa8BuS3G0i8Ou9qVFDWTtIzeVPAcBAc,4821
+main.py,sha256=XUnXRp7UMbbEi1lqLPxpkNCmELCYoavkKVQT_QF4i0U,8565
+tools/__init__.py,sha256=rmqj0EMJP55TzcjQcmY8xAPIABBJk9mh5pqyFi4g0bA,3134
+tools/base.py,sha256=uOb34X7KkKowaJwacosWLkiw7k9r-g19YLlEExMYFVI,2252
+tools/code_executor.py,sha256=XDs65Azl7OmuWO28tmCu7xYWksOnJiBKj17azHOALXY,5128
+tools/file_ops.py,sha256=4XLGYgOkTmbR-QcGFFNWHCAYAp5ALh2PPn5q52ivHSo,5020
+tools/scrape.py,sha256=AVbNB6dLQz25tBqkVic1WZ5zYF7ValAtQrtQ7NBaHbk,7053
+tools/search.py,sha256=FWIScKYbJrlvBf1lYHtnPo2HxL-rbdAOkpnd_cwX3q8,5385
+web_research_agent-1.2.0.dist-info/licenses/LICENSE,sha256=-3WJOOnHbp7UlPgD6rwjDFBtA9osfcW5PWTVM9xkPHI,1078
+web_research_agent-1.2.0.dist-info/METADATA,sha256=HG7r8o6hgzxzdxY2MF86XTlUO2sknSfREE-BcgU053Y,11984
+web_research_agent-1.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+web_research_agent-1.2.0.dist-info/entry_points.txt,sha256=_4adImXeuInffXCHxe07EKcBMVplyr72CfJv86EHaEs,41
+web_research_agent-1.2.0.dist-info/top_level.txt,sha256=Jay7JQI72cgri6_VcQ_xCbv5MHpr5QY-ptPIcDqRpPo,32
+web_research_agent-1.2.0.dist-info/RECORD,,
