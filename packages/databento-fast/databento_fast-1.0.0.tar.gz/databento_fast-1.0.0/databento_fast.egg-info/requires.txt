@@ -1,0 +1,9 @@
+pybind11>=2.10.0
+
+[databento]
+databento>=0.30.0
+
+[dev]
+pytest
+numpy
+pandas
