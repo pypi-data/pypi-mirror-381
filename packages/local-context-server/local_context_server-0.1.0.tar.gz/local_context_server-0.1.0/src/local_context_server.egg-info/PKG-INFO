@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: local-context-server
+Version: 0.1.0
+Summary: Un servidor MCP para dar memoria a largo plazo a agentes de IA.
+Author-email: David Marcas Luna <david.marcas@gmail.com>
+Requires-Python: >=3.8
+Requires-Dist: fastmcp
+Requires-Dist: pydantic
+Requires-Dist: appdirs

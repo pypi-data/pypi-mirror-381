@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "local-context-server"
+version = "0.1.0"
+dependencies = [
+    "fastmcp",
+    "pydantic",
+    "appdirs",
+]
+requires-python = ">=3.8"
+authors = [
+  { name="David Marcas Luna", email="david.marcas@gmail.com" },
+]
+description = "Un servidor MCP para dar memoria a largo plazo a agentes de IA."
+
+[project.scripts]
+context-server = "context_server.main:run"
