@@ -1,0 +1,2 @@
+[console_scripts]
+lumu-mcp-server = lumu_mcp_server.server:main
