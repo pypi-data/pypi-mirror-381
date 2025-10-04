@@ -1,0 +1,14 @@
+TEsimVar/TE_real.py,sha256=mj6zStCX3rIXZsTrffnbeigQ0pkszSJyZ5WoMO_HhNs,6701
+TEsimVar/TEpan.py,sha256=oLROuGVvnoh5k6tiZK20USus5A8-KLk_snw3TZkg3ik,5982
+TEsimVar/__init__.py,sha256=P1kRuZW02tF-ekLuBqSjV_tIKKqcbfRPDdpp9C8ftUY,21
+TEsimVar/__main__.py,sha256=SrKHvjq02gT92cXcrivBKZyKDtlnvLTxELniXXdysrI,12679
+TEsimVar/build_pool.py,sha256=zWPg4O9-CjL9-7twSxcRzm8hTY3cX48xk2GHjqN-4YU,12072
+TEsimVar/compare_vcf.py,sha256=x7Kq65fo3EV-AN1wqK8v1wPbR3BHepW4RYUDYYr-57Y,5652
+TEsimVar/reads.py,sha256=lkJ4ur2pjAWrsprOHMItEW6K7AmOm3dT4CzFBujUenc,3232
+TEsimVar/simulate.py,sha256=aL4d5sTY82Fchyai0WLI0j0NEbwDIBSS9-yvKr4dqRs,13815
+tesimvar-0.8.0.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tesimvar-0.8.0.dist-info/METADATA,sha256=oa3MIg-KCjehvnRRaIoJP4LIi1qihFn6lt0h5HHzVWw,997
+tesimvar-0.8.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+tesimvar-0.8.0.dist-info/entry_points.txt,sha256=RRr3-1dB9TOXpxnyHiX2d7jvrzRUZ3l_gGzwAUoDM0g,52
+tesimvar-0.8.0.dist-info/top_level.txt,sha256=kp2suJj5_YRUQ5vpZMJRL9X23tRGKSu9iuoK3WJlnZ8,9
+tesimvar-0.8.0.dist-info/RECORD,,
