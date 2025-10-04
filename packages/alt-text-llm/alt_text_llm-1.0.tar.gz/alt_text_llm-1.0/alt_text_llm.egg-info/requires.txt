@@ -1,0 +1,12 @@
+gitpython
+requests
+ruamel.yaml
+markdown-it-py
+rich
+tqdm
+
+[dev]
+pytest
+mypy
+types-requests
+pytest-asyncio
