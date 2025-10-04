@@ -1,0 +1,14 @@
+robeex_ai_drone_api/.gitignore,sha256=74oa8YR8gNxKxB6lCtoqmgtB2xpZnWM539Qsl4wI_lg,12
+robeex_ai_drone_api/__init__.py,sha256=ttobofoL3BwkP_a6cjXRhav4pZBwXA8OUL5K6O9TxTs,447
+robeex_ai_drone_api/__main__.py,sha256=IFkX650MEVb5kyHe56T9lQAGwUMqbt0x-PNaBAhGmlQ,1054
+robeex_ai_drone_api/ai_drone.py,sha256=d-VSOb-H17oJJR-qoY0eTM57uLuTPIxoIbZsJOUPuYA,1888
+robeex_ai_drone_api/nav_api.py,sha256=Ik5iAFOxhmwEnDi3wyL6enwGcvuo5KT16ldrrusE6XE,11456
+robeex_ai_drone_api/rc_api.py,sha256=cePQxwtJxaRuSV_tVOGaEBxfchh9uYo63aCmzlS-AMo,4816
+robeex_ai_drone_api/rgb_led_api.py,sha256=c5UL-mVoE0W6wtTLDosYzNxuZ47sGmyylHpuIdSuA7s,4626
+robeex_ai_drone_api/utils.py,sha256=kCdXU5pI0da_5qTu9GbS5Uh-3A5yVgzD0EXpv9pSdw8,1488
+robeex_ai_drone_api/vec2.py,sha256=4Xi8MUkTKe5CZEvhGA216798ty1IRzLTAkKuWJU13CA,426
+robeex_ai_drone_api/video_api.py,sha256=nOn1nSGRGovyaUnO8ncmpiMnxMetlt_WPeV_CRVPEAo,4982
+robeex_ai_drone_api-0.2.7.dist-info/LICENSE.md,sha256=qnjK8vU6erRhO2nUGg0oVlX_CboIfPxrmT3Bv99hXqI,1067
+robeex_ai_drone_api-0.2.7.dist-info/METADATA,sha256=rPSLd6VCUAal5LVq6xV8mSlFCqA5qYh0khiOd1Kndn0,3421
+robeex_ai_drone_api-0.2.7.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+robeex_ai_drone_api-0.2.7.dist-info/RECORD,,
