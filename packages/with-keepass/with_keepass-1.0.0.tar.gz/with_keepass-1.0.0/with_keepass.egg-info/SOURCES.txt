@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+with_keepass/__init__.py
+with_keepass/__main__.py
+with_keepass.egg-info/PKG-INFO
+with_keepass.egg-info/SOURCES.txt
+with_keepass.egg-info/dependency_links.txt
+with_keepass.egg-info/entry_points.txt
+with_keepass.egg-info/requires.txt
+with_keepass.egg-info/top_level.txt
