@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ap_health_report"
+version = "0.1.0"
+description = "WiFi AP log analysis and health reporting"
+authors = [
+    {name = "AirowireAILabs", email = "ailabs@airowire.com"},
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.7"
+dependencies = [
+    "pandas>=1.0.0",
+    "numpy>=1.18.0"
+]
