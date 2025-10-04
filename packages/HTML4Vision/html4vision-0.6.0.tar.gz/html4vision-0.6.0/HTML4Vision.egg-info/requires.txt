@@ -1,0 +1,7 @@
+Flask
+dominate
+Pillow>=9.1
+
+[dev]
+ruff>=0.9
+mypy>=1.10
