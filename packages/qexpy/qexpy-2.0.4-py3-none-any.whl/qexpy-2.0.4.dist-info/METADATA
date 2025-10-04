@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: qexpy
+Version: 2.0.4
+Summary: Package to handle error analysis and data plotting aimed at undergraduate physics.
+Home-page: https://qexpy.readthedocs.io/en/latest/index.html
+Author: Astral Cai, Connor Kapahi, Prof. Ryan Martin
+Author-email: astralcai@gmail.com, ryan.martin@queensu.ca
+License: GNU GPL v3
+Project-URL: Bug Tracker, https://github.com/Queens-Physics/qexpy/issues
+Project-URL: Documentation, https://qexpy.readthedocs.io/en/latest/index.html
+Project-URL: Source Code, https://github.com/Queens-Physics/qexpy
+Keywords: physics,laboratories,labs,undergraduate,data analysis,uncertainties,plotting,error analysis,error propagation,uncertainty propagation
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: IPython
+Provides-Extra: dev
+Requires-Dist: pylint; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Provides-Extra: doc
+Requires-Dist: jupyterlab; extra == "doc"
+Requires-Dist: sphinx; extra == "doc"
+Requires-Dist: nbsphinx; extra == "doc"
+Requires-Dist: nbsphinx_link; extra == "doc"
+Requires-Dist: sphinx_autodoc_typehints; extra == "doc"
+Requires-Dist: sphinx_rtd_theme; extra == "doc"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
+
+QExPy (Queen’s Experimental Physics) is a Python 3 package designed to facilitate data analysis in undergraduate physics laboratories. The package contains a module to easily propagate errors in uncertainty calculations, and a module that provides an intuitive interface to plot and fit data. The package is designed to be efficient, correct, and to allow for a pedagogic introduction to error analysis. The package is extensively tested in the Jupyter Notebook environment to allow high quality reports to be generated directly from a browser.
