@@ -1,0 +1,4 @@
+global-exclude *.onnx
+recursive-include src/floorplan_epc_detector/samclip/clip/data *.gz *.txt
+recursive-include src/floorplan_epc_detector/samclip/images *.jpg *.jpeg *.png *.webp
+recursive-include src/floorplan_epc_detector/samclip/output *.jpg *.jpeg *.png *.webp

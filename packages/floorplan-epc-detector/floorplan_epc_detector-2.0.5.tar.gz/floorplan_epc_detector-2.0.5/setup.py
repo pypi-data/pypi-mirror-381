@@ -1,0 +1,42 @@
+from setuptools import setup, find_namespace_packages
+
+setup(
+    name="floorplan-epc-detector",
+    version="2.0.5",
+    packages=find_namespace_packages(where="src", include=["*", "floorplan_epc_detector*", "floorplan_epc_detector.*"]),
+    package_dir={"": "src"},
+    include_package_data=True,
+    install_requires=[
+        "onnxruntime>=1.12.0",
+        "onnxruntime-extensions",
+        "numpy>=1.19.0",
+        "requests>=2.25.0",
+        "Pillow>=10.0.0",
+        "tqdm>=4.65.0",
+        "sentencepiece",
+        "opencv-python-headless",
+        "ftfy",
+        "regex",
+        "scipy",
+        "gdown",
+        "huggingface-hub",
+        "torch>=2.0.0",
+        "torchvision>=0.15.0"
+    ],
+    author="Oliver Brown",
+    description="A package for making predictions using a custom-trained ONNX floorplan/epc/proprty_image model",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/Resipedia/domusview_epc_floorplan_image_detection",
+    project_urls={
+        "Bug Tracker": "https://github.com/Resipedia/domusview_epc_floorplan_image_detection/issues",
+        "Source": "https://github.com/Resipedia/domusview_epc_floorplan_image_detection",
+    },
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Development Status :: 4 - Beta",
+    ],
+    python_requires=">=3.7",
+)
