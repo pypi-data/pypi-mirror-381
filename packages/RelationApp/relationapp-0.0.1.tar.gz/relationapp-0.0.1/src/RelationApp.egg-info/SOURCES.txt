@@ -1,0 +1,9 @@
+pyproject.toml
+src/RelationApp.egg-info/PKG-INFO
+src/RelationApp.egg-info/SOURCES.txt
+src/RelationApp.egg-info/dependency_links.txt
+src/RelationApp.egg-info/requires.txt
+src/RelationApp.egg-info/top_level.txt
+src/relation_app/Schema.py
+src/relation_app/Service.py
+src/relation_app/__init__.py
