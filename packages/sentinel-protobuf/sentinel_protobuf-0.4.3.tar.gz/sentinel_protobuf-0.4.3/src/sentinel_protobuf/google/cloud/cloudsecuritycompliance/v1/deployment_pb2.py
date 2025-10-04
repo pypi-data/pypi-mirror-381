@@ -1,0 +1,191 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/cloud/cloudsecuritycompliance/v1/deployment.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from .....google.cloud.cloudsecuritycompliance.v1 import common_pb2 as google_dot_cloud_dot_cloudsecuritycompliance_dot_v1_dot_common__pb2
+from .....google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n8google/cloud/cloudsecuritycompliance/v1/deployment.proto\x12\'google.cloud.cloudsecuritycompliance.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a4google/cloud/cloudsecuritycompliance/v1/common.proto\x1a#google/longrunning/operations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\xd2\x07\n\x13FrameworkDeployment\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x08\x12b\n\x16target_resource_config\x18\x02 \x01(\x0b2=.google.cloud.cloudsecuritycompliance.v1.TargetResourceConfigB\x03\xe0A\x02\x12%\n\x18computed_target_resource\x18\x03 \x01(\tB\x03\xe0A\x03\x12S\n\tframework\x18\x04 \x01(\x0b2;.google.cloud.cloudsecuritycompliance.v1.FrameworkReferenceB\x03\xe0A\x02\x12\x18\n\x0bdescription\x18\x05 \x01(\tB\x03\xe0A\x01\x12b\n\x16cloud_control_metadata\x18\x06 \x03(\x0b2=.google.cloud.cloudsecuritycompliance.v1.CloudControlMetadataB\x03\xe0A\x02\x12W\n\x10deployment_state\x18\x07 \x01(\x0e28.google.cloud.cloudsecuritycompliance.v1.DeploymentStateB\x03\xe0A\x03\x124\n\x0bcreate_time\x18\t \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\n \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12\x11\n\x04etag\x18\x0b \x01(\tB\x03\xe0A\x01\x12)\n\x1ctarget_resource_display_name\x18\r \x01(\tB\x03\xe0A\x03\x12z\n#cloud_control_deployment_references\x18\x0e \x03(\x0b2H.google.cloud.cloudsecuritycompliance.v1.CloudControlDeploymentReferenceB\x03\xe0A\x03:\xca\x01\xeaA\xc6\x01\n:cloudsecuritycompliance.googleapis.com/FrameworkDeployment\x12]organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}*\x14frameworkDeployments2\x13frameworkDeployment"\xe9\x07\n\x16CloudControlDeployment\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x08\x12b\n\x16target_resource_config\x18\x02 \x01(\x0b2=.google.cloud.cloudsecuritycompliance.v1.TargetResourceConfigB\x03\xe0A\x02\x12\x1c\n\x0ftarget_resource\x18\x03 \x01(\tB\x03\xe0A\x03\x12b\n\x16cloud_control_metadata\x18\x04 \x01(\x0b2=.google.cloud.cloudsecuritycompliance.v1.CloudControlMetadataB\x03\xe0A\x02\x12\x18\n\x0bdescription\x18\x05 \x01(\tB\x03\xe0A\x01\x12W\n\x10deployment_state\x18\x06 \x01(\x0e28.google.cloud.cloudsecuritycompliance.v1.DeploymentStateB\x03\xe0A\x03\x124\n\x0bcreate_time\x18\x07 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x08 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12\x11\n\x04etag\x18\t \x01(\tB\x03\xe0A\x01\x12g\n#parameter_substituted_cloud_control\x18\n \x01(\x0b25.google.cloud.cloudsecuritycompliance.v1.CloudControlB\x03\xe0A\x03\x12s\n\x1fframework_deployment_references\x18\x0b \x03(\x0b2E.google.cloud.cloudsecuritycompliance.v1.FrameworkDeploymentReferenceB\x03\xe0A\x03\x12)\n\x1ctarget_resource_display_name\x18\x0c \x01(\tB\x03\xe0A\x03:\xda\x01\xeaA\xd6\x01\n=cloudsecuritycompliance.googleapis.com/CloudControlDeployment\x12dorganizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}*\x17cloudControlDeployments2\x16cloudControlDeployment"\xc9\x01\n\x14TargetResourceConfig\x12\'\n\x18existing_target_resource\x18\x01 \x01(\tB\x03\xe0A\x01H\x00\x12u\n\x1ftarget_resource_creation_config\x18\x02 \x01(\x0b2E.google.cloud.cloudsecuritycompliance.v1.TargetResourceCreationConfigB\x03\xe0A\x01H\x00B\x11\n\x0fresource_config"\x88\x02\n\x1cTargetResourceCreationConfig\x12d\n\x16folder_creation_config\x18\x01 \x01(\x0b2=.google.cloud.cloudsecuritycompliance.v1.FolderCreationConfigB\x03\xe0A\x01H\x00\x12f\n\x17project_creation_config\x18\x02 \x01(\x0b2>.google.cloud.cloudsecuritycompliance.v1.ProjectCreationConfigB\x03\xe0A\x01H\x00B\x1a\n\x18resource_creation_config"M\n\x14FolderCreationConfig\x12\x13\n\x06parent\x18\x01 \x01(\tB\x03\xe0A\x02\x12 \n\x13folder_display_name\x18\x02 \x01(\tB\x03\xe0A\x02"p\n\x15ProjectCreationConfig\x12\x13\n\x06parent\x18\x01 \x01(\tB\x03\xe0A\x02\x12!\n\x14project_display_name\x18\x02 \x01(\tB\x03\xe0A\x02\x12\x1f\n\x12billing_account_id\x18\x03 \x01(\tB\x03\xe0A\x02"\xd1\x01\n\x14CloudControlMetadata\x12`\n\x15cloud_control_details\x18\x01 \x01(\x0b2<.google.cloud.cloudsecuritycompliance.v1.CloudControlDetailsB\x03\xe0A\x02\x12W\n\x10enforcement_mode\x18\x02 \x01(\x0e28.google.cloud.cloudsecuritycompliance.v1.EnforcementModeB\x03\xe0A\x02"\xfd\x01\n CreateFrameworkDeploymentRequest\x12R\n\x06parent\x18\x01 \x01(\tBB\xe0A\x02\xfaA<\x12:cloudsecuritycompliance.googleapis.com/FrameworkDeployment\x12$\n\x17framework_deployment_id\x18\x02 \x01(\tB\x03\xe0A\x01\x12_\n\x14framework_deployment\x18\x03 \x01(\x0b2<.google.cloud.cloudsecuritycompliance.v1.FrameworkDeploymentB\x03\xe0A\x02"\x87\x01\n DeleteFrameworkDeploymentRequest\x12P\n\x04name\x18\x01 \x01(\tBB\xe0A\x02\xfaA<\n:cloudsecuritycompliance.googleapis.com/FrameworkDeployment\x12\x11\n\x04etag\x18\x02 \x01(\tB\x03\xe0A\x01"q\n\x1dGetFrameworkDeploymentRequest\x12P\n\x04name\x18\x01 \x01(\tBB\xe0A\x02\xfaA<\n:cloudsecuritycompliance.googleapis.com/FrameworkDeployment"\xd2\x01\n\x1fListFrameworkDeploymentsRequest\x12R\n\x06parent\x18\x01 \x01(\tBB\xe0A\x02\xfaA<\x12:cloudsecuritycompliance.googleapis.com/FrameworkDeployment\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x05 \x01(\tB\x03\xe0A\x01"\x98\x01\n ListFrameworkDeploymentsResponse\x12[\n\x15framework_deployments\x18\x01 \x03(\x0b2<.google.cloud.cloudsecuritycompliance.v1.FrameworkDeployment\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"w\n GetCloudControlDeploymentRequest\x12S\n\x04name\x18\x01 \x01(\tBE\xe0A\x02\xfaA?\n=cloudsecuritycompliance.googleapis.com/CloudControlDeployment"\xd8\x01\n"ListCloudControlDeploymentsRequest\x12U\n\x06parent\x18\x01 \x01(\tBE\xe0A\x02\xfaA?\x12=cloudsecuritycompliance.googleapis.com/CloudControlDeployment\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x05 \x01(\tB\x03\xe0A\x01"\xa2\x01\n#ListCloudControlDeploymentsResponse\x12b\n\x19cloud_control_deployments\x18\x01 \x03(\x0b2?.google.cloud.cloudsecuritycompliance.v1.CloudControlDeployment\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\x8a\x01\n\x1fCloudControlDeploymentReference\x12g\n\x18cloud_control_deployment\x18\x01 \x01(\tBE\xe0A\x03\xfaA?\n=cloudsecuritycompliance.googleapis.com/CloudControlDeployment"\x84\x02\n\x1cFrameworkDeploymentReference\x12`\n\x14framework_deployment\x18\x01 \x01(\tBB\xe0A\x03\xfaA<\n:cloudsecuritycompliance.googleapis.com/FrameworkDeployment\x12]\n\x13framework_reference\x18\x02 \x01(\x0b2;.google.cloud.cloudsecuritycompliance.v1.FrameworkReferenceB\x03\xe0A\x01\x12#\n\x16framework_display_name\x18\x03 \x01(\tB\x03\xe0A\x01*\x9c\x02\n\x0fDeploymentState\x12 \n\x1cDEPLOYMENT_STATE_UNSPECIFIED\x10\x00\x12\x1f\n\x1bDEPLOYMENT_STATE_VALIDATING\x10\x01\x12\x1d\n\x19DEPLOYMENT_STATE_CREATING\x10\x02\x12\x1d\n\x19DEPLOYMENT_STATE_DELETING\x10\x03\x12\x1b\n\x17DEPLOYMENT_STATE_FAILED\x10\x04\x12\x1a\n\x16DEPLOYMENT_STATE_READY\x10\x05\x12\'\n#DEPLOYMENT_STATE_PARTIALLY_DEPLOYED\x10\x06\x12&\n"DEPLOYMENT_STATE_PARTIALLY_DELETED\x10\x072\xfd\r\n\nDeployment\x12\xec\x02\n\x19CreateFrameworkDeployment\x12I.google.cloud.cloudsecuritycompliance.v1.CreateFrameworkDeploymentRequest\x1a\x1d.google.longrunning.Operation"\xe4\x01\xcaAP\n\x13FrameworkDeployment\x129google.cloud.cloudsecuritycompliance.v1.OperationMetadata\xdaA3parent,framework_deployment,framework_deployment_id\x82\xd3\xe4\x93\x02U"=/v1/{parent=organizations/*/locations/*}/frameworkDeployments:\x14framework_deployment\x12\xa9\x02\n\x19DeleteFrameworkDeployment\x12I.google.cloud.cloudsecuritycompliance.v1.DeleteFrameworkDeploymentRequest\x1a\x1d.google.longrunning.Operation"\xa1\x01\xcaAR\n\x15google.protobuf.Empty\x129google.cloud.cloudsecuritycompliance.v1.OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02?*=/v1/{name=organizations/*/locations/*/frameworkDeployments/*}\x12\xec\x01\n\x16GetFrameworkDeployment\x12F.google.cloud.cloudsecuritycompliance.v1.GetFrameworkDeploymentRequest\x1a<.google.cloud.cloudsecuritycompliance.v1.FrameworkDeployment"L\xdaA\x04name\x82\xd3\xe4\x93\x02?\x12=/v1/{name=organizations/*/locations/*/frameworkDeployments/*}\x12\xff\x01\n\x18ListFrameworkDeployments\x12H.google.cloud.cloudsecuritycompliance.v1.ListFrameworkDeploymentsRequest\x1aI.google.cloud.cloudsecuritycompliance.v1.ListFrameworkDeploymentsResponse"N\xdaA\x06parent\x82\xd3\xe4\x93\x02?\x12=/v1/{parent=organizations/*/locations/*}/frameworkDeployments\x12\xf8\x01\n\x19GetCloudControlDeployment\x12I.google.cloud.cloudsecuritycompliance.v1.GetCloudControlDeploymentRequest\x1a?.google.cloud.cloudsecuritycompliance.v1.CloudControlDeployment"O\xdaA\x04name\x82\xd3\xe4\x93\x02B\x12@/v1/{name=organizations/*/locations/*/cloudControlDeployments/*}\x12\x8b\x02\n\x1bListCloudControlDeployments\x12K.google.cloud.cloudsecuritycompliance.v1.ListCloudControlDeploymentsRequest\x1aL.google.cloud.cloudsecuritycompliance.v1.ListCloudControlDeploymentsResponse"Q\xdaA\x06parent\x82\xd3\xe4\x93\x02B\x12@/v1/{parent=organizations/*/locations/*}/cloudControlDeployments\x1aZ\xcaA&cloudsecuritycompliance.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platformB\xa8\x02\n+com.google.cloud.cloudsecuritycompliance.v1B\x0fDeploymentProtoP\x01Zecloud.google.com/go/cloudsecuritycompliance/apiv1/cloudsecuritycompliancepb;cloudsecuritycompliancepb\xaa\x02\'Google.Cloud.CloudSecurityCompliance.V1\xca\x02\'Google\\Cloud\\CloudSecurityCompliance\\V1\xea\x02*Google::Cloud::CloudSecurityCompliance::V1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.cloudsecuritycompliance.v1.deployment_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b"\n+com.google.cloud.cloudsecuritycompliance.v1B\x0fDeploymentProtoP\x01Zecloud.google.com/go/cloudsecuritycompliance/apiv1/cloudsecuritycompliancepb;cloudsecuritycompliancepb\xaa\x02'Google.Cloud.CloudSecurityCompliance.V1\xca\x02'Google\\Cloud\\CloudSecurityCompliance\\V1\xea\x02*Google::Cloud::CloudSecurityCompliance::V1"
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['name']._loaded_options = None
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['name']._serialized_options = b'\xe0A\x08'
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['target_resource_config']._loaded_options = None
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['target_resource_config']._serialized_options = b'\xe0A\x02'
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['computed_target_resource']._loaded_options = None
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['computed_target_resource']._serialized_options = b'\xe0A\x03'
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['framework']._loaded_options = None
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['framework']._serialized_options = b'\xe0A\x02'
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['description']._loaded_options = None
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['description']._serialized_options = b'\xe0A\x01'
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['cloud_control_metadata']._loaded_options = None
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['cloud_control_metadata']._serialized_options = b'\xe0A\x02'
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['deployment_state']._loaded_options = None
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['deployment_state']._serialized_options = b'\xe0A\x03'
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['create_time']._loaded_options = None
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['update_time']._loaded_options = None
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['etag']._loaded_options = None
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['etag']._serialized_options = b'\xe0A\x01'
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['target_resource_display_name']._loaded_options = None
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['target_resource_display_name']._serialized_options = b'\xe0A\x03'
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['cloud_control_deployment_references']._loaded_options = None
+    _globals['_FRAMEWORKDEPLOYMENT'].fields_by_name['cloud_control_deployment_references']._serialized_options = b'\xe0A\x03'
+    _globals['_FRAMEWORKDEPLOYMENT']._loaded_options = None
+    _globals['_FRAMEWORKDEPLOYMENT']._serialized_options = b'\xeaA\xc6\x01\n:cloudsecuritycompliance.googleapis.com/FrameworkDeployment\x12]organizations/{organization}/locations/{location}/frameworkDeployments/{framework_deployment}*\x14frameworkDeployments2\x13frameworkDeployment'
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['name']._loaded_options = None
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['name']._serialized_options = b'\xe0A\x08'
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['target_resource_config']._loaded_options = None
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['target_resource_config']._serialized_options = b'\xe0A\x02'
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['target_resource']._loaded_options = None
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['target_resource']._serialized_options = b'\xe0A\x03'
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['cloud_control_metadata']._loaded_options = None
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['cloud_control_metadata']._serialized_options = b'\xe0A\x02'
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['description']._loaded_options = None
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['description']._serialized_options = b'\xe0A\x01'
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['deployment_state']._loaded_options = None
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['deployment_state']._serialized_options = b'\xe0A\x03'
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['create_time']._loaded_options = None
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['update_time']._loaded_options = None
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['etag']._loaded_options = None
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['etag']._serialized_options = b'\xe0A\x01'
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['parameter_substituted_cloud_control']._loaded_options = None
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['parameter_substituted_cloud_control']._serialized_options = b'\xe0A\x03'
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['framework_deployment_references']._loaded_options = None
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['framework_deployment_references']._serialized_options = b'\xe0A\x03'
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['target_resource_display_name']._loaded_options = None
+    _globals['_CLOUDCONTROLDEPLOYMENT'].fields_by_name['target_resource_display_name']._serialized_options = b'\xe0A\x03'
+    _globals['_CLOUDCONTROLDEPLOYMENT']._loaded_options = None
+    _globals['_CLOUDCONTROLDEPLOYMENT']._serialized_options = b'\xeaA\xd6\x01\n=cloudsecuritycompliance.googleapis.com/CloudControlDeployment\x12dorganizations/{organization}/locations/{location}/cloudControlDeployments/{cloud_control_deployment}*\x17cloudControlDeployments2\x16cloudControlDeployment'
+    _globals['_TARGETRESOURCECONFIG'].fields_by_name['existing_target_resource']._loaded_options = None
+    _globals['_TARGETRESOURCECONFIG'].fields_by_name['existing_target_resource']._serialized_options = b'\xe0A\x01'
+    _globals['_TARGETRESOURCECONFIG'].fields_by_name['target_resource_creation_config']._loaded_options = None
+    _globals['_TARGETRESOURCECONFIG'].fields_by_name['target_resource_creation_config']._serialized_options = b'\xe0A\x01'
+    _globals['_TARGETRESOURCECREATIONCONFIG'].fields_by_name['folder_creation_config']._loaded_options = None
+    _globals['_TARGETRESOURCECREATIONCONFIG'].fields_by_name['folder_creation_config']._serialized_options = b'\xe0A\x01'
+    _globals['_TARGETRESOURCECREATIONCONFIG'].fields_by_name['project_creation_config']._loaded_options = None
+    _globals['_TARGETRESOURCECREATIONCONFIG'].fields_by_name['project_creation_config']._serialized_options = b'\xe0A\x01'
+    _globals['_FOLDERCREATIONCONFIG'].fields_by_name['parent']._loaded_options = None
+    _globals['_FOLDERCREATIONCONFIG'].fields_by_name['parent']._serialized_options = b'\xe0A\x02'
+    _globals['_FOLDERCREATIONCONFIG'].fields_by_name['folder_display_name']._loaded_options = None
+    _globals['_FOLDERCREATIONCONFIG'].fields_by_name['folder_display_name']._serialized_options = b'\xe0A\x02'
+    _globals['_PROJECTCREATIONCONFIG'].fields_by_name['parent']._loaded_options = None
+    _globals['_PROJECTCREATIONCONFIG'].fields_by_name['parent']._serialized_options = b'\xe0A\x02'
+    _globals['_PROJECTCREATIONCONFIG'].fields_by_name['project_display_name']._loaded_options = None
+    _globals['_PROJECTCREATIONCONFIG'].fields_by_name['project_display_name']._serialized_options = b'\xe0A\x02'
+    _globals['_PROJECTCREATIONCONFIG'].fields_by_name['billing_account_id']._loaded_options = None
+    _globals['_PROJECTCREATIONCONFIG'].fields_by_name['billing_account_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CLOUDCONTROLMETADATA'].fields_by_name['cloud_control_details']._loaded_options = None
+    _globals['_CLOUDCONTROLMETADATA'].fields_by_name['cloud_control_details']._serialized_options = b'\xe0A\x02'
+    _globals['_CLOUDCONTROLMETADATA'].fields_by_name['enforcement_mode']._loaded_options = None
+    _globals['_CLOUDCONTROLMETADATA'].fields_by_name['enforcement_mode']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEFRAMEWORKDEPLOYMENTREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEFRAMEWORKDEPLOYMENTREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA<\x12:cloudsecuritycompliance.googleapis.com/FrameworkDeployment'
+    _globals['_CREATEFRAMEWORKDEPLOYMENTREQUEST'].fields_by_name['framework_deployment_id']._loaded_options = None
+    _globals['_CREATEFRAMEWORKDEPLOYMENTREQUEST'].fields_by_name['framework_deployment_id']._serialized_options = b'\xe0A\x01'
+    _globals['_CREATEFRAMEWORKDEPLOYMENTREQUEST'].fields_by_name['framework_deployment']._loaded_options = None
+    _globals['_CREATEFRAMEWORKDEPLOYMENTREQUEST'].fields_by_name['framework_deployment']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETEFRAMEWORKDEPLOYMENTREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEFRAMEWORKDEPLOYMENTREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA<\n:cloudsecuritycompliance.googleapis.com/FrameworkDeployment'
+    _globals['_DELETEFRAMEWORKDEPLOYMENTREQUEST'].fields_by_name['etag']._loaded_options = None
+    _globals['_DELETEFRAMEWORKDEPLOYMENTREQUEST'].fields_by_name['etag']._serialized_options = b'\xe0A\x01'
+    _globals['_GETFRAMEWORKDEPLOYMENTREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETFRAMEWORKDEPLOYMENTREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA<\n:cloudsecuritycompliance.googleapis.com/FrameworkDeployment'
+    _globals['_LISTFRAMEWORKDEPLOYMENTSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTFRAMEWORKDEPLOYMENTSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA<\x12:cloudsecuritycompliance.googleapis.com/FrameworkDeployment'
+    _globals['_LISTFRAMEWORKDEPLOYMENTSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTFRAMEWORKDEPLOYMENTSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTFRAMEWORKDEPLOYMENTSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTFRAMEWORKDEPLOYMENTSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTFRAMEWORKDEPLOYMENTSREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTFRAMEWORKDEPLOYMENTSREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTFRAMEWORKDEPLOYMENTSREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTFRAMEWORKDEPLOYMENTSREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_GETCLOUDCONTROLDEPLOYMENTREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETCLOUDCONTROLDEPLOYMENTREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA?\n=cloudsecuritycompliance.googleapis.com/CloudControlDeployment'
+    _globals['_LISTCLOUDCONTROLDEPLOYMENTSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTCLOUDCONTROLDEPLOYMENTSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA?\x12=cloudsecuritycompliance.googleapis.com/CloudControlDeployment'
+    _globals['_LISTCLOUDCONTROLDEPLOYMENTSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTCLOUDCONTROLDEPLOYMENTSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTCLOUDCONTROLDEPLOYMENTSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTCLOUDCONTROLDEPLOYMENTSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTCLOUDCONTROLDEPLOYMENTSREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTCLOUDCONTROLDEPLOYMENTSREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTCLOUDCONTROLDEPLOYMENTSREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTCLOUDCONTROLDEPLOYMENTSREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_CLOUDCONTROLDEPLOYMENTREFERENCE'].fields_by_name['cloud_control_deployment']._loaded_options = None
+    _globals['_CLOUDCONTROLDEPLOYMENTREFERENCE'].fields_by_name['cloud_control_deployment']._serialized_options = b'\xe0A\x03\xfaA?\n=cloudsecuritycompliance.googleapis.com/CloudControlDeployment'
+    _globals['_FRAMEWORKDEPLOYMENTREFERENCE'].fields_by_name['framework_deployment']._loaded_options = None
+    _globals['_FRAMEWORKDEPLOYMENTREFERENCE'].fields_by_name['framework_deployment']._serialized_options = b'\xe0A\x03\xfaA<\n:cloudsecuritycompliance.googleapis.com/FrameworkDeployment'
+    _globals['_FRAMEWORKDEPLOYMENTREFERENCE'].fields_by_name['framework_reference']._loaded_options = None
+    _globals['_FRAMEWORKDEPLOYMENTREFERENCE'].fields_by_name['framework_reference']._serialized_options = b'\xe0A\x01'
+    _globals['_FRAMEWORKDEPLOYMENTREFERENCE'].fields_by_name['framework_display_name']._loaded_options = None
+    _globals['_FRAMEWORKDEPLOYMENTREFERENCE'].fields_by_name['framework_display_name']._serialized_options = b'\xe0A\x01'
+    _globals['_DEPLOYMENT']._loaded_options = None
+    _globals['_DEPLOYMENT']._serialized_options = b'\xcaA&cloudsecuritycompliance.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform'
+    _globals['_DEPLOYMENT'].methods_by_name['CreateFrameworkDeployment']._loaded_options = None
+    _globals['_DEPLOYMENT'].methods_by_name['CreateFrameworkDeployment']._serialized_options = b'\xcaAP\n\x13FrameworkDeployment\x129google.cloud.cloudsecuritycompliance.v1.OperationMetadata\xdaA3parent,framework_deployment,framework_deployment_id\x82\xd3\xe4\x93\x02U"=/v1/{parent=organizations/*/locations/*}/frameworkDeployments:\x14framework_deployment'
+    _globals['_DEPLOYMENT'].methods_by_name['DeleteFrameworkDeployment']._loaded_options = None
+    _globals['_DEPLOYMENT'].methods_by_name['DeleteFrameworkDeployment']._serialized_options = b'\xcaAR\n\x15google.protobuf.Empty\x129google.cloud.cloudsecuritycompliance.v1.OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02?*=/v1/{name=organizations/*/locations/*/frameworkDeployments/*}'
+    _globals['_DEPLOYMENT'].methods_by_name['GetFrameworkDeployment']._loaded_options = None
+    _globals['_DEPLOYMENT'].methods_by_name['GetFrameworkDeployment']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02?\x12=/v1/{name=organizations/*/locations/*/frameworkDeployments/*}'
+    _globals['_DEPLOYMENT'].methods_by_name['ListFrameworkDeployments']._loaded_options = None
+    _globals['_DEPLOYMENT'].methods_by_name['ListFrameworkDeployments']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02?\x12=/v1/{parent=organizations/*/locations/*}/frameworkDeployments'
+    _globals['_DEPLOYMENT'].methods_by_name['GetCloudControlDeployment']._loaded_options = None
+    _globals['_DEPLOYMENT'].methods_by_name['GetCloudControlDeployment']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02B\x12@/v1/{name=organizations/*/locations/*/cloudControlDeployments/*}'
+    _globals['_DEPLOYMENT'].methods_by_name['ListCloudControlDeployments']._loaded_options = None
+    _globals['_DEPLOYMENT'].methods_by_name['ListCloudControlDeployments']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02B\x12@/v1/{parent=organizations/*/locations/*}/cloudControlDeployments'
+    _globals['_DEPLOYMENTSTATE']._serialized_start = 5017
+    _globals['_DEPLOYMENTSTATE']._serialized_end = 5301
+    _globals['_FRAMEWORKDEPLOYMENT']._serialized_start = 370
+    _globals['_FRAMEWORKDEPLOYMENT']._serialized_end = 1348
+    _globals['_CLOUDCONTROLDEPLOYMENT']._serialized_start = 1351
+    _globals['_CLOUDCONTROLDEPLOYMENT']._serialized_end = 2352
+    _globals['_TARGETRESOURCECONFIG']._serialized_start = 2355
+    _globals['_TARGETRESOURCECONFIG']._serialized_end = 2556
+    _globals['_TARGETRESOURCECREATIONCONFIG']._serialized_start = 2559
+    _globals['_TARGETRESOURCECREATIONCONFIG']._serialized_end = 2823
+    _globals['_FOLDERCREATIONCONFIG']._serialized_start = 2825
+    _globals['_FOLDERCREATIONCONFIG']._serialized_end = 2902
+    _globals['_PROJECTCREATIONCONFIG']._serialized_start = 2904
+    _globals['_PROJECTCREATIONCONFIG']._serialized_end = 3016
+    _globals['_CLOUDCONTROLMETADATA']._serialized_start = 3019
+    _globals['_CLOUDCONTROLMETADATA']._serialized_end = 3228
+    _globals['_CREATEFRAMEWORKDEPLOYMENTREQUEST']._serialized_start = 3231
+    _globals['_CREATEFRAMEWORKDEPLOYMENTREQUEST']._serialized_end = 3484
+    _globals['_DELETEFRAMEWORKDEPLOYMENTREQUEST']._serialized_start = 3487
+    _globals['_DELETEFRAMEWORKDEPLOYMENTREQUEST']._serialized_end = 3622
+    _globals['_GETFRAMEWORKDEPLOYMENTREQUEST']._serialized_start = 3624
+    _globals['_GETFRAMEWORKDEPLOYMENTREQUEST']._serialized_end = 3737
+    _globals['_LISTFRAMEWORKDEPLOYMENTSREQUEST']._serialized_start = 3740
+    _globals['_LISTFRAMEWORKDEPLOYMENTSREQUEST']._serialized_end = 3950
+    _globals['_LISTFRAMEWORKDEPLOYMENTSRESPONSE']._serialized_start = 3953
+    _globals['_LISTFRAMEWORKDEPLOYMENTSRESPONSE']._serialized_end = 4105
+    _globals['_GETCLOUDCONTROLDEPLOYMENTREQUEST']._serialized_start = 4107
+    _globals['_GETCLOUDCONTROLDEPLOYMENTREQUEST']._serialized_end = 4226
+    _globals['_LISTCLOUDCONTROLDEPLOYMENTSREQUEST']._serialized_start = 4229
+    _globals['_LISTCLOUDCONTROLDEPLOYMENTSREQUEST']._serialized_end = 4445
+    _globals['_LISTCLOUDCONTROLDEPLOYMENTSRESPONSE']._serialized_start = 4448
+    _globals['_LISTCLOUDCONTROLDEPLOYMENTSRESPONSE']._serialized_end = 4610
+    _globals['_CLOUDCONTROLDEPLOYMENTREFERENCE']._serialized_start = 4613
+    _globals['_CLOUDCONTROLDEPLOYMENTREFERENCE']._serialized_end = 4751
+    _globals['_FRAMEWORKDEPLOYMENTREFERENCE']._serialized_start = 4754
+    _globals['_FRAMEWORKDEPLOYMENTREFERENCE']._serialized_end = 5014
+    _globals['_DEPLOYMENT']._serialized_start = 5304
+    _globals['_DEPLOYMENT']._serialized_end = 7093

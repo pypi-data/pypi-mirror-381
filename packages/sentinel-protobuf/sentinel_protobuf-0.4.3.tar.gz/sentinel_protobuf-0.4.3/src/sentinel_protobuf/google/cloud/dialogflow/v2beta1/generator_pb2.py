@@ -1,0 +1,174 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/cloud/dialogflow/v2beta1/generator.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n/google/cloud/dialogflow/v2beta1/generator.proto\x12\x1fgoogle.cloud.dialogflow.v2beta1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\xbc\x01\n\x16CreateGeneratorRequest\x12C\n\x06parent\x18\x01 \x01(\tB3\xe0A\x02\xfaA-\n+cloudresourcemanager.googleapis.com/Project\x12B\n\tgenerator\x18\x02 \x01(\x0b2*.google.cloud.dialogflow.v2beta1.GeneratorB\x03\xe0A\x02\x12\x19\n\x0cgenerator_id\x18\x03 \x01(\tB\x03\xe0A\x01"P\n\x13GetGeneratorRequest\x129\n\x04name\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\n#dialogflow.googleapis.com/Generator"\x8d\x01\n\x15ListGeneratorsRequest\x12C\n\x06parent\x18\x01 \x01(\tB3\xe0A\x02\xfaA-\n+cloudresourcemanager.googleapis.com/Project\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01"q\n\x16ListGeneratorsResponse\x12>\n\ngenerators\x18\x01 \x03(\x0b2*.google.cloud.dialogflow.v2beta1.Generator\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"S\n\x16DeleteGeneratorRequest\x129\n\x04name\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\n#dialogflow.googleapis.com/Generator"\x92\x01\n\x16UpdateGeneratorRequest\x12B\n\tgenerator\x18\x01 \x01(\x0b2*.google.cloud.dialogflow.v2beta1.GeneratorB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x01"\x8c\x02\n\x0cMessageEntry\x12E\n\x04role\x18\x01 \x01(\x0e22.google.cloud.dialogflow.v2beta1.MessageEntry.RoleB\x03\xe0A\x01\x12\x11\n\x04text\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x1a\n\rlanguage_code\x18\x03 \x01(\tB\x03\xe0A\x01\x124\n\x0bcreate_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x01"P\n\x04Role\x12\x14\n\x10ROLE_UNSPECIFIED\x10\x00\x12\x0f\n\x0bHUMAN_AGENT\x10\x01\x12\x13\n\x0fAUTOMATED_AGENT\x10\x02\x12\x0c\n\x08END_USER\x10\x03"b\n\x13ConversationContext\x12K\n\x0fmessage_entries\x18\x01 \x03(\x0b2-.google.cloud.dialogflow.v2beta1.MessageEntryB\x03\xe0A\x01"v\n\x18SummarizationSectionList\x12Z\n\x16summarization_sections\x18\x01 \x03(\x0b25.google.cloud.dialogflow.v2beta1.SummarizationSectionB\x03\xe0A\x01"\xb4\x03\n\x0eFewShotExample\x12W\n\x14conversation_context\x18\x03 \x01(\x0b24.google.cloud.dialogflow.v2beta1.ConversationContextB\x03\xe0A\x01\x12W\n\nextra_info\x18\x04 \x03(\x0b2>.google.cloud.dialogflow.v2beta1.FewShotExample.ExtraInfoEntryB\x03\xe0A\x01\x12_\n\x1asummarization_section_list\x18\x06 \x01(\x0b29.google.cloud.dialogflow.v2beta1.SummarizationSectionListH\x00\x12I\n\x06output\x18\x07 \x01(\x0b24.google.cloud.dialogflow.v2beta1.GeneratorSuggestionB\x03\xe0A\x02\x1a0\n\x0eExtraInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01B\x12\n\x10instruction_list"\xc4\x01\n\x12InferenceParameter\x12#\n\x11max_output_tokens\x18\x01 \x01(\x05B\x03\xe0A\x01H\x00\x88\x01\x01\x12\x1d\n\x0btemperature\x18\x02 \x01(\x01B\x03\xe0A\x01H\x01\x88\x01\x01\x12\x17\n\x05top_k\x18\x03 \x01(\x05B\x03\xe0A\x01H\x02\x88\x01\x01\x12\x17\n\x05top_p\x18\x04 \x01(\x01B\x03\xe0A\x01H\x03\x88\x01\x01B\x14\n\x12_max_output_tokensB\x0e\n\x0c_temperatureB\x08\n\x06_top_kB\x08\n\x06_top_p"\xe1\x02\n\x14SummarizationSection\x12\x10\n\x03key\x18\x01 \x01(\tB\x03\xe0A\x01\x12\x17\n\ndefinition\x18\x02 \x01(\tB\x03\xe0A\x01\x12M\n\x04type\x18\x03 \x01(\x0e2:.google.cloud.dialogflow.v2beta1.SummarizationSection.TypeB\x03\xe0A\x01"\xce\x01\n\x04Type\x12\x14\n\x10TYPE_UNSPECIFIED\x10\x00\x12\r\n\tSITUATION\x10\x01\x12\n\n\x06ACTION\x10\x02\x12\x0e\n\nRESOLUTION\x10\x03\x12\x1b\n\x17REASON_FOR_CANCELLATION\x10\x04\x12\x19\n\x15CUSTOMER_SATISFACTION\x10\x05\x12\x0c\n\x08ENTITIES\x10\x06\x12\x14\n\x10CUSTOMER_DEFINED\x10\x07\x12\x15\n\x11SITUATION_CONCISE\x10\t\x12\x12\n\x0eACTION_CONCISE\x10\n"\xfc\x01\n\x14SummarizationContext\x12Z\n\x16summarization_sections\x18\x01 \x03(\x0b25.google.cloud.dialogflow.v2beta1.SummarizationSectionB\x03\xe0A\x01\x12O\n\x11few_shot_examples\x18\x02 \x03(\x0b2/.google.cloud.dialogflow.v2beta1.FewShotExampleB\x03\xe0A\x01\x12\x14\n\x07version\x18\x03 \x01(\tB\x03\xe0A\x01\x12!\n\x14output_language_code\x18\x06 \x01(\tB\x03\xe0A\x01"$\n\x0fFreeFormContext\x12\x11\n\x04text\x18\x01 \x01(\tB\x03\xe0A\x01"\xb0\x05\n\tGenerator\x12\x14\n\x04name\x18\x01 \x01(\tB\x06\xe0A\x08\xe0A\x03\x12\x18\n\x0bdescription\x18\x02 \x01(\tB\x03\xe0A\x01\x12M\n\x11free_form_context\x18\x0b \x01(\x0b20.google.cloud.dialogflow.v2beta1.FreeFormContextH\x00\x12V\n\x15summarization_context\x18\r \x01(\x0b25.google.cloud.dialogflow.v2beta1.SummarizationContextH\x00\x12U\n\x13inference_parameter\x18\x04 \x01(\x0b23.google.cloud.dialogflow.v2beta1.InferenceParameterB\x03\xe0A\x01\x12I\n\rtrigger_event\x18\x05 \x01(\x0e2-.google.cloud.dialogflow.v2beta1.TriggerEventB\x03\xe0A\x01\x12\x1e\n\x0fpublished_model\x18\x0f \x01(\tB\x03\xe0A\x01H\x01\x124\n\x0bcreate_time\x18\x08 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\t \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03:\x7f\xeaA|\n#dialogflow.googleapis.com/Generator\x12>projects/{project}/locations/{location}/generators/{generator}*\ngenerators2\tgeneratorB\t\n\x07contextB\x12\n\x10foundation_model"+\n\x12FreeFormSuggestion\x12\x15\n\x08response\x18\x01 \x01(\tB\x03\xe0A\x02"\xb3\x01\n\x11SummarySuggestion\x12`\n\x10summary_sections\x18\x01 \x03(\x0b2A.google.cloud.dialogflow.v2beta1.SummarySuggestion.SummarySectionB\x03\xe0A\x02\x1a<\n\x0eSummarySection\x12\x14\n\x07section\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x14\n\x07summary\x18\x02 \x01(\tB\x03\xe0A\x02"\xd4\x01\n\x13GeneratorSuggestion\x12X\n\x14free_form_suggestion\x18\x01 \x01(\x0b23.google.cloud.dialogflow.v2beta1.FreeFormSuggestionB\x03\xe0A\x01H\x00\x12U\n\x12summary_suggestion\x18\x02 \x01(\x0b22.google.cloud.dialogflow.v2beta1.SummarySuggestionB\x03\xe0A\x01H\x00B\x0c\n\nsuggestion*}\n\x0cTriggerEvent\x12\x1d\n\x19TRIGGER_EVENT_UNSPECIFIED\x10\x00\x12\x14\n\x10END_OF_UTTERANCE\x10\x01\x12\x0f\n\x0bMANUAL_CALL\x10\x02\x12\x14\n\x10CUSTOMER_MESSAGE\x10\x03\x12\x11\n\rAGENT_MESSAGE\x10\x042\xd6\t\n\nGenerators\x12\x95\x02\n\x0fCreateGenerator\x127.google.cloud.dialogflow.v2beta1.CreateGeneratorRequest\x1a*.google.cloud.dialogflow.v2beta1.Generator"\x9c\x01\xdaA\x1dparent,generator,generator_id\x82\xd3\xe4\x93\x02v"3/v2beta1/{parent=projects/*/locations/*}/generators:\tgeneratorZ4"\'/v2beta1/{parent=projects/*}/generators:\tgenerator\x12\xb4\x01\n\x0cGetGenerator\x124.google.cloud.dialogflow.v2beta1.GetGeneratorRequest\x1a*.google.cloud.dialogflow.v2beta1.Generator"B\xdaA\x04name\x82\xd3\xe4\x93\x025\x123/v2beta1/{name=projects/*/locations/*/generators/*}\x12\xf2\x01\n\x0eListGenerators\x126.google.cloud.dialogflow.v2beta1.ListGeneratorsRequest\x1a7.google.cloud.dialogflow.v2beta1.ListGeneratorsResponse"o\xdaA\x06parent\x82\xd3\xe4\x93\x02`\x123/v2beta1/{parent=projects/*/locations/*}/generatorsZ)\x12\'/v2beta1/{parent=projects/*}/generators\x12\xa6\x01\n\x0fDeleteGenerator\x127.google.cloud.dialogflow.v2beta1.DeleteGeneratorRequest\x1a\x16.google.protobuf.Empty"B\xdaA\x04name\x82\xd3\xe4\x93\x025*3/v2beta1/{name=projects/*/locations/*/generators/*}\x12\xe0\x01\n\x0fUpdateGenerator\x127.google.cloud.dialogflow.v2beta1.UpdateGeneratorRequest\x1a*.google.cloud.dialogflow.v2beta1.Generator"h\xdaA\x15generator,update_mask\x82\xd3\xe4\x93\x02J2=/v2beta1/{generator.name=projects/*/locations/*/generators/*}:\tgenerator\x1ax\xcaA\x19dialogflow.googleapis.com\xd2AYhttps://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/dialogflowB\xa3\x01\n#com.google.cloud.dialogflow.v2beta1B\x0eGeneratorProtoP\x01ZCcloud.google.com/go/dialogflow/apiv2beta1/dialogflowpb;dialogflowpb\xa2\x02\x02DF\xaa\x02\x1fGoogle.Cloud.Dialogflow.V2Beta1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.dialogflow.v2beta1.generator_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n#com.google.cloud.dialogflow.v2beta1B\x0eGeneratorProtoP\x01ZCcloud.google.com/go/dialogflow/apiv2beta1/dialogflowpb;dialogflowpb\xa2\x02\x02DF\xaa\x02\x1fGoogle.Cloud.Dialogflow.V2Beta1'
+    _globals['_CREATEGENERATORREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEGENERATORREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA-\n+cloudresourcemanager.googleapis.com/Project'
+    _globals['_CREATEGENERATORREQUEST'].fields_by_name['generator']._loaded_options = None
+    _globals['_CREATEGENERATORREQUEST'].fields_by_name['generator']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEGENERATORREQUEST'].fields_by_name['generator_id']._loaded_options = None
+    _globals['_CREATEGENERATORREQUEST'].fields_by_name['generator_id']._serialized_options = b'\xe0A\x01'
+    _globals['_GETGENERATORREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETGENERATORREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA%\n#dialogflow.googleapis.com/Generator'
+    _globals['_LISTGENERATORSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTGENERATORSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA-\n+cloudresourcemanager.googleapis.com/Project'
+    _globals['_LISTGENERATORSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTGENERATORSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTGENERATORSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTGENERATORSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETEGENERATORREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEGENERATORREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA%\n#dialogflow.googleapis.com/Generator'
+    _globals['_UPDATEGENERATORREQUEST'].fields_by_name['generator']._loaded_options = None
+    _globals['_UPDATEGENERATORREQUEST'].fields_by_name['generator']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEGENERATORREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATEGENERATORREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x01'
+    _globals['_MESSAGEENTRY'].fields_by_name['role']._loaded_options = None
+    _globals['_MESSAGEENTRY'].fields_by_name['role']._serialized_options = b'\xe0A\x01'
+    _globals['_MESSAGEENTRY'].fields_by_name['text']._loaded_options = None
+    _globals['_MESSAGEENTRY'].fields_by_name['text']._serialized_options = b'\xe0A\x01'
+    _globals['_MESSAGEENTRY'].fields_by_name['language_code']._loaded_options = None
+    _globals['_MESSAGEENTRY'].fields_by_name['language_code']._serialized_options = b'\xe0A\x01'
+    _globals['_MESSAGEENTRY'].fields_by_name['create_time']._loaded_options = None
+    _globals['_MESSAGEENTRY'].fields_by_name['create_time']._serialized_options = b'\xe0A\x01'
+    _globals['_CONVERSATIONCONTEXT'].fields_by_name['message_entries']._loaded_options = None
+    _globals['_CONVERSATIONCONTEXT'].fields_by_name['message_entries']._serialized_options = b'\xe0A\x01'
+    _globals['_SUMMARIZATIONSECTIONLIST'].fields_by_name['summarization_sections']._loaded_options = None
+    _globals['_SUMMARIZATIONSECTIONLIST'].fields_by_name['summarization_sections']._serialized_options = b'\xe0A\x01'
+    _globals['_FEWSHOTEXAMPLE_EXTRAINFOENTRY']._loaded_options = None
+    _globals['_FEWSHOTEXAMPLE_EXTRAINFOENTRY']._serialized_options = b'8\x01'
+    _globals['_FEWSHOTEXAMPLE'].fields_by_name['conversation_context']._loaded_options = None
+    _globals['_FEWSHOTEXAMPLE'].fields_by_name['conversation_context']._serialized_options = b'\xe0A\x01'
+    _globals['_FEWSHOTEXAMPLE'].fields_by_name['extra_info']._loaded_options = None
+    _globals['_FEWSHOTEXAMPLE'].fields_by_name['extra_info']._serialized_options = b'\xe0A\x01'
+    _globals['_FEWSHOTEXAMPLE'].fields_by_name['output']._loaded_options = None
+    _globals['_FEWSHOTEXAMPLE'].fields_by_name['output']._serialized_options = b'\xe0A\x02'
+    _globals['_INFERENCEPARAMETER'].fields_by_name['max_output_tokens']._loaded_options = None
+    _globals['_INFERENCEPARAMETER'].fields_by_name['max_output_tokens']._serialized_options = b'\xe0A\x01'
+    _globals['_INFERENCEPARAMETER'].fields_by_name['temperature']._loaded_options = None
+    _globals['_INFERENCEPARAMETER'].fields_by_name['temperature']._serialized_options = b'\xe0A\x01'
+    _globals['_INFERENCEPARAMETER'].fields_by_name['top_k']._loaded_options = None
+    _globals['_INFERENCEPARAMETER'].fields_by_name['top_k']._serialized_options = b'\xe0A\x01'
+    _globals['_INFERENCEPARAMETER'].fields_by_name['top_p']._loaded_options = None
+    _globals['_INFERENCEPARAMETER'].fields_by_name['top_p']._serialized_options = b'\xe0A\x01'
+    _globals['_SUMMARIZATIONSECTION'].fields_by_name['key']._loaded_options = None
+    _globals['_SUMMARIZATIONSECTION'].fields_by_name['key']._serialized_options = b'\xe0A\x01'
+    _globals['_SUMMARIZATIONSECTION'].fields_by_name['definition']._loaded_options = None
+    _globals['_SUMMARIZATIONSECTION'].fields_by_name['definition']._serialized_options = b'\xe0A\x01'
+    _globals['_SUMMARIZATIONSECTION'].fields_by_name['type']._loaded_options = None
+    _globals['_SUMMARIZATIONSECTION'].fields_by_name['type']._serialized_options = b'\xe0A\x01'
+    _globals['_SUMMARIZATIONCONTEXT'].fields_by_name['summarization_sections']._loaded_options = None
+    _globals['_SUMMARIZATIONCONTEXT'].fields_by_name['summarization_sections']._serialized_options = b'\xe0A\x01'
+    _globals['_SUMMARIZATIONCONTEXT'].fields_by_name['few_shot_examples']._loaded_options = None
+    _globals['_SUMMARIZATIONCONTEXT'].fields_by_name['few_shot_examples']._serialized_options = b'\xe0A\x01'
+    _globals['_SUMMARIZATIONCONTEXT'].fields_by_name['version']._loaded_options = None
+    _globals['_SUMMARIZATIONCONTEXT'].fields_by_name['version']._serialized_options = b'\xe0A\x01'
+    _globals['_SUMMARIZATIONCONTEXT'].fields_by_name['output_language_code']._loaded_options = None
+    _globals['_SUMMARIZATIONCONTEXT'].fields_by_name['output_language_code']._serialized_options = b'\xe0A\x01'
+    _globals['_FREEFORMCONTEXT'].fields_by_name['text']._loaded_options = None
+    _globals['_FREEFORMCONTEXT'].fields_by_name['text']._serialized_options = b'\xe0A\x01'
+    _globals['_GENERATOR'].fields_by_name['name']._loaded_options = None
+    _globals['_GENERATOR'].fields_by_name['name']._serialized_options = b'\xe0A\x08\xe0A\x03'
+    _globals['_GENERATOR'].fields_by_name['description']._loaded_options = None
+    _globals['_GENERATOR'].fields_by_name['description']._serialized_options = b'\xe0A\x01'
+    _globals['_GENERATOR'].fields_by_name['inference_parameter']._loaded_options = None
+    _globals['_GENERATOR'].fields_by_name['inference_parameter']._serialized_options = b'\xe0A\x01'
+    _globals['_GENERATOR'].fields_by_name['trigger_event']._loaded_options = None
+    _globals['_GENERATOR'].fields_by_name['trigger_event']._serialized_options = b'\xe0A\x01'
+    _globals['_GENERATOR'].fields_by_name['published_model']._loaded_options = None
+    _globals['_GENERATOR'].fields_by_name['published_model']._serialized_options = b'\xe0A\x01'
+    _globals['_GENERATOR'].fields_by_name['create_time']._loaded_options = None
+    _globals['_GENERATOR'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_GENERATOR'].fields_by_name['update_time']._loaded_options = None
+    _globals['_GENERATOR'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_GENERATOR']._loaded_options = None
+    _globals['_GENERATOR']._serialized_options = b'\xeaA|\n#dialogflow.googleapis.com/Generator\x12>projects/{project}/locations/{location}/generators/{generator}*\ngenerators2\tgenerator'
+    _globals['_FREEFORMSUGGESTION'].fields_by_name['response']._loaded_options = None
+    _globals['_FREEFORMSUGGESTION'].fields_by_name['response']._serialized_options = b'\xe0A\x02'
+    _globals['_SUMMARYSUGGESTION_SUMMARYSECTION'].fields_by_name['section']._loaded_options = None
+    _globals['_SUMMARYSUGGESTION_SUMMARYSECTION'].fields_by_name['section']._serialized_options = b'\xe0A\x02'
+    _globals['_SUMMARYSUGGESTION_SUMMARYSECTION'].fields_by_name['summary']._loaded_options = None
+    _globals['_SUMMARYSUGGESTION_SUMMARYSECTION'].fields_by_name['summary']._serialized_options = b'\xe0A\x02'
+    _globals['_SUMMARYSUGGESTION'].fields_by_name['summary_sections']._loaded_options = None
+    _globals['_SUMMARYSUGGESTION'].fields_by_name['summary_sections']._serialized_options = b'\xe0A\x02'
+    _globals['_GENERATORSUGGESTION'].fields_by_name['free_form_suggestion']._loaded_options = None
+    _globals['_GENERATORSUGGESTION'].fields_by_name['free_form_suggestion']._serialized_options = b'\xe0A\x01'
+    _globals['_GENERATORSUGGESTION'].fields_by_name['summary_suggestion']._loaded_options = None
+    _globals['_GENERATORSUGGESTION'].fields_by_name['summary_suggestion']._serialized_options = b'\xe0A\x01'
+    _globals['_GENERATORS']._loaded_options = None
+    _globals['_GENERATORS']._serialized_options = b'\xcaA\x19dialogflow.googleapis.com\xd2AYhttps://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/dialogflow'
+    _globals['_GENERATORS'].methods_by_name['CreateGenerator']._loaded_options = None
+    _globals['_GENERATORS'].methods_by_name['CreateGenerator']._serialized_options = b'\xdaA\x1dparent,generator,generator_id\x82\xd3\xe4\x93\x02v"3/v2beta1/{parent=projects/*/locations/*}/generators:\tgeneratorZ4"\'/v2beta1/{parent=projects/*}/generators:\tgenerator'
+    _globals['_GENERATORS'].methods_by_name['GetGenerator']._loaded_options = None
+    _globals['_GENERATORS'].methods_by_name['GetGenerator']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x025\x123/v2beta1/{name=projects/*/locations/*/generators/*}'
+    _globals['_GENERATORS'].methods_by_name['ListGenerators']._loaded_options = None
+    _globals['_GENERATORS'].methods_by_name['ListGenerators']._serialized_options = b"\xdaA\x06parent\x82\xd3\xe4\x93\x02`\x123/v2beta1/{parent=projects/*/locations/*}/generatorsZ)\x12'/v2beta1/{parent=projects/*}/generators"
+    _globals['_GENERATORS'].methods_by_name['DeleteGenerator']._loaded_options = None
+    _globals['_GENERATORS'].methods_by_name['DeleteGenerator']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x025*3/v2beta1/{name=projects/*/locations/*/generators/*}'
+    _globals['_GENERATORS'].methods_by_name['UpdateGenerator']._loaded_options = None
+    _globals['_GENERATORS'].methods_by_name['UpdateGenerator']._serialized_options = b'\xdaA\x15generator,update_mask\x82\xd3\xe4\x93\x02J2=/v2beta1/{generator.name=projects/*/locations/*/generators/*}:\tgenerator'
+    _globals['_TRIGGEREVENT']._serialized_start = 3972
+    _globals['_TRIGGEREVENT']._serialized_end = 4097
+    _globals['_CREATEGENERATORREQUEST']._serialized_start = 296
+    _globals['_CREATEGENERATORREQUEST']._serialized_end = 484
+    _globals['_GETGENERATORREQUEST']._serialized_start = 486
+    _globals['_GETGENERATORREQUEST']._serialized_end = 566
+    _globals['_LISTGENERATORSREQUEST']._serialized_start = 569
+    _globals['_LISTGENERATORSREQUEST']._serialized_end = 710
+    _globals['_LISTGENERATORSRESPONSE']._serialized_start = 712
+    _globals['_LISTGENERATORSRESPONSE']._serialized_end = 825
+    _globals['_DELETEGENERATORREQUEST']._serialized_start = 827
+    _globals['_DELETEGENERATORREQUEST']._serialized_end = 910
+    _globals['_UPDATEGENERATORREQUEST']._serialized_start = 913
+    _globals['_UPDATEGENERATORREQUEST']._serialized_end = 1059
+    _globals['_MESSAGEENTRY']._serialized_start = 1062
+    _globals['_MESSAGEENTRY']._serialized_end = 1330
+    _globals['_MESSAGEENTRY_ROLE']._serialized_start = 1250
+    _globals['_MESSAGEENTRY_ROLE']._serialized_end = 1330
+    _globals['_CONVERSATIONCONTEXT']._serialized_start = 1332
+    _globals['_CONVERSATIONCONTEXT']._serialized_end = 1430
+    _globals['_SUMMARIZATIONSECTIONLIST']._serialized_start = 1432
+    _globals['_SUMMARIZATIONSECTIONLIST']._serialized_end = 1550
+    _globals['_FEWSHOTEXAMPLE']._serialized_start = 1553
+    _globals['_FEWSHOTEXAMPLE']._serialized_end = 1989
+    _globals['_FEWSHOTEXAMPLE_EXTRAINFOENTRY']._serialized_start = 1921
+    _globals['_FEWSHOTEXAMPLE_EXTRAINFOENTRY']._serialized_end = 1969
+    _globals['_INFERENCEPARAMETER']._serialized_start = 1992
+    _globals['_INFERENCEPARAMETER']._serialized_end = 2188
+    _globals['_SUMMARIZATIONSECTION']._serialized_start = 2191
+    _globals['_SUMMARIZATIONSECTION']._serialized_end = 2544
+    _globals['_SUMMARIZATIONSECTION_TYPE']._serialized_start = 2338
+    _globals['_SUMMARIZATIONSECTION_TYPE']._serialized_end = 2544
+    _globals['_SUMMARIZATIONCONTEXT']._serialized_start = 2547
+    _globals['_SUMMARIZATIONCONTEXT']._serialized_end = 2799
+    _globals['_FREEFORMCONTEXT']._serialized_start = 2801
+    _globals['_FREEFORMCONTEXT']._serialized_end = 2837
+    _globals['_GENERATOR']._serialized_start = 2840
+    _globals['_GENERATOR']._serialized_end = 3528
+    _globals['_FREEFORMSUGGESTION']._serialized_start = 3530
+    _globals['_FREEFORMSUGGESTION']._serialized_end = 3573
+    _globals['_SUMMARYSUGGESTION']._serialized_start = 3576
+    _globals['_SUMMARYSUGGESTION']._serialized_end = 3755
+    _globals['_SUMMARYSUGGESTION_SUMMARYSECTION']._serialized_start = 3695
+    _globals['_SUMMARYSUGGESTION_SUMMARYSECTION']._serialized_end = 3755
+    _globals['_GENERATORSUGGESTION']._serialized_start = 3758
+    _globals['_GENERATORSUGGESTION']._serialized_end = 3970
+    _globals['_GENERATORS']._serialized_start = 4100
+    _globals['_GENERATORS']._serialized_end = 5338

@@ -1,0 +1,153 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/shopping/merchant/issueresolution/v1beta/issueresolution.proto')
+_sym_db = _symbol_database.Default()
+from ......google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from ......google.api import client_pb2 as google_dot_api_dot_client__pb2
+from ......google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from ......google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nEgoogle/shopping/merchant/issueresolution/v1beta/issueresolution.proto\x12/google.shopping.merchant.issueresolution.v1beta\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto"v\n\x1bRenderAccountIssuesResponse\x12W\n\x0frendered_issues\x18\x01 \x03(\x0b2>.google.shopping.merchant.issueresolution.v1beta.RenderedIssue"\xed\x01\n\x1aRenderAccountIssuesRequest\x128\n\x04name\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"merchantapi.googleapis.com/Account\x12\x1a\n\rlanguage_code\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x16\n\ttime_zone\x18\x03 \x01(\tB\x03\xe0A\x01\x12a\n\x07payload\x18\x04 \x01(\x0b2K.google.shopping.merchant.issueresolution.v1beta.RenderIssuesRequestPayloadB\x03\xe0A\x01"\xab\x02\n\x1aRenderIssuesRequestPayload\x12`\n\x0econtent_option\x18\x01 \x01(\x0e2>.google.shopping.merchant.issueresolution.v1beta.ContentOptionB\x03\xe0A\x01H\x00\x88\x01\x01\x12{\n\x18user_input_action_option\x18\x02 \x01(\x0e2O.google.shopping.merchant.issueresolution.v1beta.UserInputActionRenderingOptionB\x03\xe0A\x01H\x01\x88\x01\x01B\x11\n\x0f_content_optionB\x1b\n\x19_user_input_action_option"v\n\x1bRenderProductIssuesResponse\x12W\n\x0frendered_issues\x18\x01 \x03(\x0b2>.google.shopping.merchant.issueresolution.v1beta.RenderedIssue"\xed\x01\n\x1aRenderProductIssuesRequest\x128\n\x04name\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"merchantapi.googleapis.com/Product\x12\x1a\n\rlanguage_code\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x16\n\ttime_zone\x18\x03 \x01(\tB\x03\xe0A\x01\x12a\n\x07payload\x18\x04 \x01(\x0b2K.google.shopping.merchant.issueresolution.v1beta.RenderIssuesRequestPayloadB\x03\xe0A\x01"\xb5\x02\n\rRenderedIssue\x12\x1d\n\x13prerendered_content\x18\x03 \x01(\tH\x00\x125\n+prerendered_out_of_court_dispute_settlement\x18\x05 \x01(\tH\x01\x12\r\n\x05title\x18\x01 \x01(\t\x12G\n\x06impact\x18\x02 \x01(\x0b27.google.shopping.merchant.issueresolution.v1beta.Impact\x12H\n\x07actions\x18\x04 \x03(\x0b27.google.shopping.merchant.issueresolution.v1beta.ActionB\t\n\x07contentB!\n\x1fout_of_court_dispute_settlement"\xbb\x01\n\x06Impact\x12\x14\n\x07message\x18\x01 \x01(\tB\x03\xe0A\x01\x12K\n\x08severity\x18\x02 \x01(\x0e29.google.shopping.merchant.issueresolution.v1beta.Severity\x12N\n\nbreakdowns\x18\x03 \x03(\x0b2:.google.shopping.merchant.issueresolution.v1beta.Breakdown"\x96\x01\n\tBreakdown\x12R\n\x07regions\x18\x01 \x03(\x0b2A.google.shopping.merchant.issueresolution.v1beta.Breakdown.Region\x12\x0f\n\x07details\x18\x04 \x03(\t\x1a$\n\x06Region\x12\x0c\n\x04code\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t"\xda\x04\n\x06Action\x12e\n\x15builtin_simple_action\x18\x02 \x01(\x0b2D.google.shopping.merchant.issueresolution.v1beta.BuiltInSimpleActionH\x00\x12Z\n\x0fexternal_action\x18\x03 \x01(\x0b2?.google.shopping.merchant.issueresolution.v1beta.ExternalActionH\x00\x12l\n\x19builtin_user_input_action\x18\x07 \x01(\x0b2G.google.shopping.merchant.issueresolution.v1beta.BuiltInUserInputActionH\x00\x12\x14\n\x0cbutton_label\x18\x04 \x01(\t\x12\x14\n\x0cis_available\x18\x05 \x01(\x08\x12O\n\x07reasons\x18\x06 \x03(\x0b2>.google.shopping.merchant.issueresolution.v1beta.Action.Reason\x1a\x97\x01\n\x06Reason\x12\x0f\n\x07message\x18\x01 \x01(\t\x12\x13\n\x06detail\x18\x02 \x01(\tH\x00\x88\x01\x01\x12Q\n\x06action\x18\x03 \x01(\x0b27.google.shopping.merchant.issueresolution.v1beta.ActionB\x03\xe0A\x01H\x01\x88\x01\x01B\t\n\x07_detailB\t\n\x07_actionB\x08\n\x06action"\x98\x05\n\x13BuiltInSimpleAction\x12j\n\x04type\x18\x01 \x01(\x0e2\\.google.shopping.merchant.issueresolution.v1beta.BuiltInSimpleAction.BuiltInSimpleActionType\x12\x1b\n\x0eattribute_code\x18\x02 \x01(\tH\x00\x88\x01\x01\x12w\n\x12additional_content\x18\x03 \x01(\x0b2V.google.shopping.merchant.issueresolution.v1beta.BuiltInSimpleAction.AdditionalContentH\x01\x88\x01\x01\x1a6\n\x11AdditionalContent\x12\r\n\x05title\x18\x01 \x01(\t\x12\x12\n\nparagraphs\x18\x02 \x03(\t"\x9c\x02\n\x17BuiltInSimpleActionType\x12+\n\'BUILT_IN_SIMPLE_ACTION_TYPE_UNSPECIFIED\x10\x00\x12\x10\n\x0cVERIFY_PHONE\x10\x01\x12\x11\n\rCLAIM_WEBSITE\x10\x02\x12\x10\n\x0cADD_PRODUCTS\x10\x03\x12\x14\n\x10ADD_CONTACT_INFO\x10\x04\x12\x14\n\x10LINK_ADS_ACCOUNT\x10\x05\x12$\n ADD_BUSINESS_REGISTRATION_NUMBER\x10\x06\x12\x17\n\x13EDIT_ITEM_ATTRIBUTE\x10\x07\x12\x15\n\x11FIX_ACCOUNT_ISSUE\x10\x08\x12\x1b\n\x17SHOW_ADDITIONAL_CONTENT\x10\tB\x11\n\x0f_attribute_codeB\x15\n\x13_additional_content"|\n\x16BuiltInUserInputAction\x12\x16\n\x0eaction_context\x18\x01 \x01(\t\x12J\n\x05flows\x18\x03 \x03(\x0b2;.google.shopping.merchant.issueresolution.v1beta.ActionFlow"\x83\x03\n\nActionFlow\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05label\x18\x02 \x01(\t\x12K\n\x06inputs\x18\x03 \x03(\x0b2;.google.shopping.merchant.issueresolution.v1beta.InputField\x12\x14\n\x0cdialog_title\x18\x04 \x01(\t\x12]\n\x0edialog_message\x18\x07 \x01(\x0b2@.google.shopping.merchant.issueresolution.v1beta.TextWithTooltipH\x00\x88\x01\x01\x12U\n\x0edialog_callout\x18\x08 \x01(\x0b28.google.shopping.merchant.issueresolution.v1beta.CalloutH\x01\x88\x01\x01\x12\x1b\n\x13dialog_button_label\x18\t \x01(\tB\x11\n\x0f_dialog_messageB\x11\n\x0f_dialog_callout"\xb6\t\n\nInputField\x12[\n\ntext_input\x18\x04 \x01(\x0b2E.google.shopping.merchant.issueresolution.v1beta.InputField.TextInputH\x00\x12_\n\x0cchoice_input\x18\x05 \x01(\x0b2G.google.shopping.merchant.issueresolution.v1beta.InputField.ChoiceInputH\x00\x12c\n\x0echeckbox_input\x18\x06 \x01(\x0b2I.google.shopping.merchant.issueresolution.v1beta.InputField.CheckboxInputH\x00\x12\n\n\x02id\x18\x01 \x01(\t\x12O\n\x05label\x18\x02 \x01(\x0b2@.google.shopping.merchant.issueresolution.v1beta.TextWithTooltip\x12\x10\n\x08required\x18\x03 \x01(\x08\x1a\x95\x03\n\tTextInput\x12a\n\x04type\x18\x01 \x01(\x0e2S.google.shopping.merchant.issueresolution.v1beta.InputField.TextInput.TextInputType\x12^\n\x0fadditional_info\x18\x02 \x01(\x0b2@.google.shopping.merchant.issueresolution.v1beta.TextWithTooltipH\x00\x88\x01\x01\x12\x18\n\x0bformat_info\x18\x03 \x01(\tH\x01\x88\x01\x01\x12\x17\n\naria_label\x18\x04 \x01(\tH\x02\x88\x01\x01"_\n\rTextInputType\x12\x1f\n\x1bTEXT_INPUT_TYPE_UNSPECIFIED\x10\x00\x12\x16\n\x12GENERIC_SHORT_TEXT\x10\x01\x12\x15\n\x11GENERIC_LONG_TEXT\x10\x02B\x12\n\x10_additional_infoB\x0e\n\x0c_format_infoB\r\n\x0b_aria_label\x1a\xdd\x02\n\x0bChoiceInput\x12j\n\x07options\x18\x01 \x03(\x0b2Y.google.shopping.merchant.issueresolution.v1beta.InputField.ChoiceInput.ChoiceInputOption\x1a\xe1\x01\n\x11ChoiceInputOption\x12\n\n\x02id\x18\x01 \x01(\t\x12O\n\x05label\x18\x02 \x01(\x0b2@.google.shopping.merchant.issueresolution.v1beta.TextWithTooltip\x12Z\n\x10additional_input\x18\x03 \x01(\x0b2;.google.shopping.merchant.issueresolution.v1beta.InputFieldH\x00\x88\x01\x01B\x13\n\x11_additional_input\x1a\x0f\n\rCheckboxInputB\r\n\x0bvalue_input"\xa2\x02\n\x0fTextWithTooltip\x12\x16\n\x0csimple_value\x18\x01 \x01(\tH\x00\x12\x1e\n\x14simple_tooltip_value\x18\x02 \x01(\tH\x01\x12m\n\x12tooltip_icon_style\x18\x03 \x01(\x0e2Q.google.shopping.merchant.issueresolution.v1beta.TextWithTooltip.TooltipIconStyle"N\n\x10TooltipIconStyle\x12"\n\x1eTOOLTIP_ICON_STYLE_UNSPECIFIED\x10\x00\x12\x08\n\x04INFO\x10\x01\x12\x0c\n\x08QUESTION\x10\x02B\x07\n\x05valueB\x0f\n\rtooltip_value"\x9a\x02\n\x07Callout\x12]\n\nstyle_hint\x18\x01 \x01(\x0e2I.google.shopping.merchant.issueresolution.v1beta.Callout.CalloutStyleHint\x12V\n\x0cfull_message\x18\x03 \x01(\x0b2@.google.shopping.merchant.issueresolution.v1beta.TextWithTooltip"X\n\x10CalloutStyleHint\x12"\n\x1eCALLOUT_STYLE_HINT_UNSPECIFIED\x10\x00\x12\t\n\x05ERROR\x10\x01\x12\x0b\n\x07WARNING\x10\x02\x12\x08\n\x04INFO\x10\x03"\xdf\x02\n\x0eExternalAction\x12`\n\x04type\x18\x01 \x01(\x0e2R.google.shopping.merchant.issueresolution.v1beta.ExternalAction.ExternalActionType\x12\x0b\n\x03uri\x18\x02 \x01(\t"\xdd\x01\n\x12ExternalActionType\x12$\n EXTERNAL_ACTION_TYPE_UNSPECIFIED\x10\x00\x12+\n\'REVIEW_PRODUCT_ISSUE_IN_MERCHANT_CENTER\x10\x01\x12+\n\'REVIEW_ACCOUNT_ISSUE_IN_MERCHANT_CENTER\x10\x02\x12\x1f\n\x1bLEGAL_APPEAL_IN_HELP_CENTER\x10\x03\x12&\n"VERIFY_IDENTITY_IN_MERCHANT_CENTER\x10\x04"\xc9\x01\n\x14TriggerActionRequest\x128\n\x04name\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"merchantapi.googleapis.com/Account\x12[\n\x07payload\x18\x02 \x01(\x0b2E.google.shopping.merchant.issueresolution.v1beta.TriggerActionPayloadB\x03\xe0A\x02\x12\x1a\n\rlanguage_code\x18\x03 \x01(\tB\x03\xe0A\x01"\x8c\x01\n\x14TriggerActionPayload\x12\x1b\n\x0eaction_context\x18\x01 \x01(\tB\x03\xe0A\x02\x12W\n\x0caction_input\x18\x02 \x01(\x0b2<.google.shopping.merchant.issueresolution.v1beta.ActionInputB\x03\xe0A\x02"(\n\x15TriggerActionResponse\x12\x0f\n\x07message\x18\x01 \x01(\t"\x82\x01\n\x0bActionInput\x12\x1b\n\x0eaction_flow_id\x18\x01 \x01(\tB\x03\xe0A\x02\x12V\n\x0cinput_values\x18\x02 \x03(\x0b2;.google.shopping.merchant.issueresolution.v1beta.InputValueB\x03\xe0A\x02"\xff\x03\n\nInputValue\x12f\n\x10text_input_value\x18\x02 \x01(\x0b2J.google.shopping.merchant.issueresolution.v1beta.InputValue.TextInputValueH\x00\x12j\n\x12choice_input_value\x18\x03 \x01(\x0b2L.google.shopping.merchant.issueresolution.v1beta.InputValue.ChoiceInputValueH\x00\x12n\n\x14checkbox_input_value\x18\x04 \x01(\x0b2N.google.shopping.merchant.issueresolution.v1beta.InputValue.CheckboxInputValueH\x00\x12\x1b\n\x0einput_field_id\x18\x01 \x01(\tB\x03\xe0A\x02\x1a$\n\x0eTextInputValue\x12\x12\n\x05value\x18\x01 \x01(\tB\x03\xe0A\x02\x1a7\n\x10ChoiceInputValue\x12#\n\x16choice_input_option_id\x18\x01 \x01(\tB\x03\xe0A\x02\x1a(\n\x12CheckboxInputValue\x12\x12\n\x05value\x18\x01 \x01(\x08B\x03\xe0A\x02B\x07\n\x05value*F\n\x08Severity\x12\x18\n\x14SEVERITY_UNSPECIFIED\x10\x00\x12\t\n\x05ERROR\x10\x01\x12\x0b\n\x07WARNING\x10\x02\x12\x08\n\x04INFO\x10\x03*F\n\rContentOption\x12\x1e\n\x1aCONTENT_OPTION_UNSPECIFIED\x10\x00\x12\x15\n\x11PRE_RENDERED_HTML\x10\x01*\x96\x01\n\x1eUserInputActionRenderingOption\x122\n.USER_INPUT_ACTION_RENDERING_OPTION_UNSPECIFIED\x10\x00\x12\x1f\n\x1bREDIRECT_TO_MERCHANT_CENTER\x10\x01\x12\x1f\n\x1bBUILT_IN_USER_INPUT_ACTIONS\x10\x022\xf2\x06\n\x16IssueResolutionService\x12\x87\x02\n\x13RenderAccountIssues\x12K.google.shopping.merchant.issueresolution.v1beta.RenderAccountIssuesRequest\x1aL.google.shopping.merchant.issueresolution.v1beta.RenderAccountIssuesResponse"U\xdaA\x04name\x82\xd3\xe4\x93\x02H"=/issueresolution/v1beta/{name=accounts/*}:renderaccountissues:\x07payload\x12\x92\x02\n\x13RenderProductIssues\x12K.google.shopping.merchant.issueresolution.v1beta.RenderProductIssuesRequest\x1aL.google.shopping.merchant.issueresolution.v1beta.RenderProductIssuesResponse"`\xdaA\x04name\x82\xd3\xe4\x93\x02S"H/issueresolution/v1beta/{name=accounts/*/products/*}:renderproductissues:\x07payload\x12\xef\x01\n\rTriggerAction\x12E.google.shopping.merchant.issueresolution.v1beta.TriggerActionRequest\x1aF.google.shopping.merchant.issueresolution.v1beta.TriggerActionResponse"O\xdaA\x04name\x82\xd3\xe4\x93\x02B"7/issueresolution/v1beta/{name=accounts/*}:triggeraction:\x07payload\x1aG\xcaA\x1amerchantapi.googleapis.com\xd2A\'https://www.googleapis.com/auth/contentB\xd5\x03\n3com.google.shopping.merchant.issueresolution.v1betaB\x14IssueResolutionProtoP\x01Zccloud.google.com/go/shopping/merchant/issueresolution/apiv1beta/issueresolutionpb;issueresolutionpb\xaa\x02/Google.Shopping.Merchant.IssueResolution.V1Beta\xca\x02/Google\\Shopping\\Merchant\\IssueResolution\\V1beta\xea\x023Google::Shopping::Merchant::IssueResolution::V1beta\xeaA8\n"merchantapi.googleapis.com/Account\x12\x12accounts/{account}\xeaAK\n"merchantapi.googleapis.com/Product\x12%accounts/{account}/products/{product}b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.shopping.merchant.issueresolution.v1beta.issueresolution_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n3com.google.shopping.merchant.issueresolution.v1betaB\x14IssueResolutionProtoP\x01Zccloud.google.com/go/shopping/merchant/issueresolution/apiv1beta/issueresolutionpb;issueresolutionpb\xaa\x02/Google.Shopping.Merchant.IssueResolution.V1Beta\xca\x02/Google\\Shopping\\Merchant\\IssueResolution\\V1beta\xea\x023Google::Shopping::Merchant::IssueResolution::V1beta\xeaA8\n"merchantapi.googleapis.com/Account\x12\x12accounts/{account}\xeaAK\n"merchantapi.googleapis.com/Product\x12%accounts/{account}/products/{product}'
+    _globals['_RENDERACCOUNTISSUESREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_RENDERACCOUNTISSUESREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA$\n"merchantapi.googleapis.com/Account'
+    _globals['_RENDERACCOUNTISSUESREQUEST'].fields_by_name['language_code']._loaded_options = None
+    _globals['_RENDERACCOUNTISSUESREQUEST'].fields_by_name['language_code']._serialized_options = b'\xe0A\x01'
+    _globals['_RENDERACCOUNTISSUESREQUEST'].fields_by_name['time_zone']._loaded_options = None
+    _globals['_RENDERACCOUNTISSUESREQUEST'].fields_by_name['time_zone']._serialized_options = b'\xe0A\x01'
+    _globals['_RENDERACCOUNTISSUESREQUEST'].fields_by_name['payload']._loaded_options = None
+    _globals['_RENDERACCOUNTISSUESREQUEST'].fields_by_name['payload']._serialized_options = b'\xe0A\x01'
+    _globals['_RENDERISSUESREQUESTPAYLOAD'].fields_by_name['content_option']._loaded_options = None
+    _globals['_RENDERISSUESREQUESTPAYLOAD'].fields_by_name['content_option']._serialized_options = b'\xe0A\x01'
+    _globals['_RENDERISSUESREQUESTPAYLOAD'].fields_by_name['user_input_action_option']._loaded_options = None
+    _globals['_RENDERISSUESREQUESTPAYLOAD'].fields_by_name['user_input_action_option']._serialized_options = b'\xe0A\x01'
+    _globals['_RENDERPRODUCTISSUESREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_RENDERPRODUCTISSUESREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA$\n"merchantapi.googleapis.com/Product'
+    _globals['_RENDERPRODUCTISSUESREQUEST'].fields_by_name['language_code']._loaded_options = None
+    _globals['_RENDERPRODUCTISSUESREQUEST'].fields_by_name['language_code']._serialized_options = b'\xe0A\x01'
+    _globals['_RENDERPRODUCTISSUESREQUEST'].fields_by_name['time_zone']._loaded_options = None
+    _globals['_RENDERPRODUCTISSUESREQUEST'].fields_by_name['time_zone']._serialized_options = b'\xe0A\x01'
+    _globals['_RENDERPRODUCTISSUESREQUEST'].fields_by_name['payload']._loaded_options = None
+    _globals['_RENDERPRODUCTISSUESREQUEST'].fields_by_name['payload']._serialized_options = b'\xe0A\x01'
+    _globals['_IMPACT'].fields_by_name['message']._loaded_options = None
+    _globals['_IMPACT'].fields_by_name['message']._serialized_options = b'\xe0A\x01'
+    _globals['_ACTION_REASON'].fields_by_name['action']._loaded_options = None
+    _globals['_ACTION_REASON'].fields_by_name['action']._serialized_options = b'\xe0A\x01'
+    _globals['_TRIGGERACTIONREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_TRIGGERACTIONREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA$\n"merchantapi.googleapis.com/Account'
+    _globals['_TRIGGERACTIONREQUEST'].fields_by_name['payload']._loaded_options = None
+    _globals['_TRIGGERACTIONREQUEST'].fields_by_name['payload']._serialized_options = b'\xe0A\x02'
+    _globals['_TRIGGERACTIONREQUEST'].fields_by_name['language_code']._loaded_options = None
+    _globals['_TRIGGERACTIONREQUEST'].fields_by_name['language_code']._serialized_options = b'\xe0A\x01'
+    _globals['_TRIGGERACTIONPAYLOAD'].fields_by_name['action_context']._loaded_options = None
+    _globals['_TRIGGERACTIONPAYLOAD'].fields_by_name['action_context']._serialized_options = b'\xe0A\x02'
+    _globals['_TRIGGERACTIONPAYLOAD'].fields_by_name['action_input']._loaded_options = None
+    _globals['_TRIGGERACTIONPAYLOAD'].fields_by_name['action_input']._serialized_options = b'\xe0A\x02'
+    _globals['_ACTIONINPUT'].fields_by_name['action_flow_id']._loaded_options = None
+    _globals['_ACTIONINPUT'].fields_by_name['action_flow_id']._serialized_options = b'\xe0A\x02'
+    _globals['_ACTIONINPUT'].fields_by_name['input_values']._loaded_options = None
+    _globals['_ACTIONINPUT'].fields_by_name['input_values']._serialized_options = b'\xe0A\x02'
+    _globals['_INPUTVALUE_TEXTINPUTVALUE'].fields_by_name['value']._loaded_options = None
+    _globals['_INPUTVALUE_TEXTINPUTVALUE'].fields_by_name['value']._serialized_options = b'\xe0A\x02'
+    _globals['_INPUTVALUE_CHOICEINPUTVALUE'].fields_by_name['choice_input_option_id']._loaded_options = None
+    _globals['_INPUTVALUE_CHOICEINPUTVALUE'].fields_by_name['choice_input_option_id']._serialized_options = b'\xe0A\x02'
+    _globals['_INPUTVALUE_CHECKBOXINPUTVALUE'].fields_by_name['value']._loaded_options = None
+    _globals['_INPUTVALUE_CHECKBOXINPUTVALUE'].fields_by_name['value']._serialized_options = b'\xe0A\x02'
+    _globals['_INPUTVALUE'].fields_by_name['input_field_id']._loaded_options = None
+    _globals['_INPUTVALUE'].fields_by_name['input_field_id']._serialized_options = b'\xe0A\x02'
+    _globals['_ISSUERESOLUTIONSERVICE']._loaded_options = None
+    _globals['_ISSUERESOLUTIONSERVICE']._serialized_options = b"\xcaA\x1amerchantapi.googleapis.com\xd2A'https://www.googleapis.com/auth/content"
+    _globals['_ISSUERESOLUTIONSERVICE'].methods_by_name['RenderAccountIssues']._loaded_options = None
+    _globals['_ISSUERESOLUTIONSERVICE'].methods_by_name['RenderAccountIssues']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02H"=/issueresolution/v1beta/{name=accounts/*}:renderaccountissues:\x07payload'
+    _globals['_ISSUERESOLUTIONSERVICE'].methods_by_name['RenderProductIssues']._loaded_options = None
+    _globals['_ISSUERESOLUTIONSERVICE'].methods_by_name['RenderProductIssues']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02S"H/issueresolution/v1beta/{name=accounts/*/products/*}:renderproductissues:\x07payload'
+    _globals['_ISSUERESOLUTIONSERVICE'].methods_by_name['TriggerAction']._loaded_options = None
+    _globals['_ISSUERESOLUTIONSERVICE'].methods_by_name['TriggerAction']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02B"7/issueresolution/v1beta/{name=accounts/*}:triggeraction:\x07payload'
+    _globals['_SEVERITY']._serialized_start = 6879
+    _globals['_SEVERITY']._serialized_end = 6949
+    _globals['_CONTENTOPTION']._serialized_start = 6951
+    _globals['_CONTENTOPTION']._serialized_end = 7021
+    _globals['_USERINPUTACTIONRENDERINGOPTION']._serialized_start = 7024
+    _globals['_USERINPUTACTIONRENDERINGOPTION']._serialized_end = 7174
+    _globals['_RENDERACCOUNTISSUESRESPONSE']._serialized_start = 237
+    _globals['_RENDERACCOUNTISSUESRESPONSE']._serialized_end = 355
+    _globals['_RENDERACCOUNTISSUESREQUEST']._serialized_start = 358
+    _globals['_RENDERACCOUNTISSUESREQUEST']._serialized_end = 595
+    _globals['_RENDERISSUESREQUESTPAYLOAD']._serialized_start = 598
+    _globals['_RENDERISSUESREQUESTPAYLOAD']._serialized_end = 897
+    _globals['_RENDERPRODUCTISSUESRESPONSE']._serialized_start = 899
+    _globals['_RENDERPRODUCTISSUESRESPONSE']._serialized_end = 1017
+    _globals['_RENDERPRODUCTISSUESREQUEST']._serialized_start = 1020
+    _globals['_RENDERPRODUCTISSUESREQUEST']._serialized_end = 1257
+    _globals['_RENDEREDISSUE']._serialized_start = 1260
+    _globals['_RENDEREDISSUE']._serialized_end = 1569
+    _globals['_IMPACT']._serialized_start = 1572
+    _globals['_IMPACT']._serialized_end = 1759
+    _globals['_BREAKDOWN']._serialized_start = 1762
+    _globals['_BREAKDOWN']._serialized_end = 1912
+    _globals['_BREAKDOWN_REGION']._serialized_start = 1876
+    _globals['_BREAKDOWN_REGION']._serialized_end = 1912
+    _globals['_ACTION']._serialized_start = 1915
+    _globals['_ACTION']._serialized_end = 2517
+    _globals['_ACTION_REASON']._serialized_start = 2356
+    _globals['_ACTION_REASON']._serialized_end = 2507
+    _globals['_BUILTINSIMPLEACTION']._serialized_start = 2520
+    _globals['_BUILTINSIMPLEACTION']._serialized_end = 3184
+    _globals['_BUILTINSIMPLEACTION_ADDITIONALCONTENT']._serialized_start = 2801
+    _globals['_BUILTINSIMPLEACTION_ADDITIONALCONTENT']._serialized_end = 2855
+    _globals['_BUILTINSIMPLEACTION_BUILTINSIMPLEACTIONTYPE']._serialized_start = 2858
+    _globals['_BUILTINSIMPLEACTION_BUILTINSIMPLEACTIONTYPE']._serialized_end = 3142
+    _globals['_BUILTINUSERINPUTACTION']._serialized_start = 3186
+    _globals['_BUILTINUSERINPUTACTION']._serialized_end = 3310
+    _globals['_ACTIONFLOW']._serialized_start = 3313
+    _globals['_ACTIONFLOW']._serialized_end = 3700
+    _globals['_INPUTFIELD']._serialized_start = 3703
+    _globals['_INPUTFIELD']._serialized_end = 4909
+    _globals['_INPUTFIELD_TEXTINPUT']._serialized_start = 4120
+    _globals['_INPUTFIELD_TEXTINPUT']._serialized_end = 4525
+    _globals['_INPUTFIELD_TEXTINPUT_TEXTINPUTTYPE']._serialized_start = 4379
+    _globals['_INPUTFIELD_TEXTINPUT_TEXTINPUTTYPE']._serialized_end = 4474
+    _globals['_INPUTFIELD_CHOICEINPUT']._serialized_start = 4528
+    _globals['_INPUTFIELD_CHOICEINPUT']._serialized_end = 4877
+    _globals['_INPUTFIELD_CHOICEINPUT_CHOICEINPUTOPTION']._serialized_start = 4652
+    _globals['_INPUTFIELD_CHOICEINPUT_CHOICEINPUTOPTION']._serialized_end = 4877
+    _globals['_INPUTFIELD_CHECKBOXINPUT']._serialized_start = 4879
+    _globals['_INPUTFIELD_CHECKBOXINPUT']._serialized_end = 4894
+    _globals['_TEXTWITHTOOLTIP']._serialized_start = 4912
+    _globals['_TEXTWITHTOOLTIP']._serialized_end = 5202
+    _globals['_TEXTWITHTOOLTIP_TOOLTIPICONSTYLE']._serialized_start = 5098
+    _globals['_TEXTWITHTOOLTIP_TOOLTIPICONSTYLE']._serialized_end = 5176
+    _globals['_CALLOUT']._serialized_start = 5205
+    _globals['_CALLOUT']._serialized_end = 5487
+    _globals['_CALLOUT_CALLOUTSTYLEHINT']._serialized_start = 5399
+    _globals['_CALLOUT_CALLOUTSTYLEHINT']._serialized_end = 5487
+    _globals['_EXTERNALACTION']._serialized_start = 5490
+    _globals['_EXTERNALACTION']._serialized_end = 5841
+    _globals['_EXTERNALACTION_EXTERNALACTIONTYPE']._serialized_start = 5620
+    _globals['_EXTERNALACTION_EXTERNALACTIONTYPE']._serialized_end = 5841
+    _globals['_TRIGGERACTIONREQUEST']._serialized_start = 5844
+    _globals['_TRIGGERACTIONREQUEST']._serialized_end = 6045
+    _globals['_TRIGGERACTIONPAYLOAD']._serialized_start = 6048
+    _globals['_TRIGGERACTIONPAYLOAD']._serialized_end = 6188
+    _globals['_TRIGGERACTIONRESPONSE']._serialized_start = 6190
+    _globals['_TRIGGERACTIONRESPONSE']._serialized_end = 6230
+    _globals['_ACTIONINPUT']._serialized_start = 6233
+    _globals['_ACTIONINPUT']._serialized_end = 6363
+    _globals['_INPUTVALUE']._serialized_start = 6366
+    _globals['_INPUTVALUE']._serialized_end = 6877
+    _globals['_INPUTVALUE_TEXTINPUTVALUE']._serialized_start = 6733
+    _globals['_INPUTVALUE_TEXTINPUTVALUE']._serialized_end = 6769
+    _globals['_INPUTVALUE_CHOICEINPUTVALUE']._serialized_start = 6771
+    _globals['_INPUTVALUE_CHOICEINPUTVALUE']._serialized_end = 6826
+    _globals['_INPUTVALUE_CHECKBOXINPUTVALUE']._serialized_start = 6828
+    _globals['_INPUTVALUE_CHECKBOXINPUTVALUE']._serialized_end = 6868
+    _globals['_ISSUERESOLUTIONSERVICE']._serialized_start = 7177
+    _globals['_ISSUERESOLUTIONSERVICE']._serialized_end = 8059

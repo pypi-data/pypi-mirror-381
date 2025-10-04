@@ -1,0 +1,149 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/cloud/aiplatform/v1/publisher_model.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from .....google.cloud.aiplatform.v1 import machine_resources_pb2 as google_dot_cloud_dot_aiplatform_dot_v1_dot_machine__resources__pb2
+from .....google.cloud.aiplatform.v1 import model_pb2 as google_dot_cloud_dot_aiplatform_dot_v1_dot_model__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n0google/cloud/aiplatform/v1/publisher_model.proto\x12\x1agoogle.cloud.aiplatform.v1\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a2google/cloud/aiplatform/v1/machine_resources.proto\x1a&google/cloud/aiplatform/v1/model.proto"\xeb#\n\x0ePublisherModel\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x03\x12\x1a\n\nversion_id\x18\x02 \x01(\tB\x06\xe0A\x05\xe0A\x03\x12`\n\x14open_source_category\x18\x07 \x01(\x0e2=.google.cloud.aiplatform.v1.PublisherModel.OpenSourceCategoryB\x03\xe0A\x02\x12W\n\x11supported_actions\x18\x13 \x01(\x0b27.google.cloud.aiplatform.v1.PublisherModel.CallToActionB\x03\xe0A\x01\x12\x17\n\nframeworks\x18\x17 \x03(\tB\x03\xe0A\x01\x12Q\n\x0claunch_stage\x18\x1d \x01(\x0e26.google.cloud.aiplatform.v1.PublisherModel.LaunchStageB\x03\xe0A\x01\x12S\n\rversion_state\x18% \x01(\x0e27.google.cloud.aiplatform.v1.PublisherModel.VersionStateB\x03\xe0A\x01\x12(\n\x18publisher_model_template\x18\x1e \x01(\tB\x06\xe0A\x05\xe0A\x03\x12J\n\x10predict_schemata\x18\x1f \x01(\x0b2+.google.cloud.aiplatform.v1.PredictSchemataB\x03\xe0A\x01\x1a{\n\x11ResourceReference\x12\r\n\x03uri\x18\x01 \x01(\tH\x00\x12\x17\n\rresource_name\x18\x02 \x01(\tH\x00\x12\x16\n\x08use_case\x18\x03 \x01(\tB\x02\x18\x01H\x00\x12\x19\n\x0bdescription\x18\x04 \x01(\tB\x02\x18\x01H\x00B\x0b\n\treference\x1a9\n\rDocumentation\x12\x12\n\x05title\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x14\n\x07content\x18\x02 \x01(\tB\x03\xe0A\x02\x1a\xf6\x19\n\x0cCallToAction\x12_\n\rview_rest_api\x18\x01 \x01(\x0b2C.google.cloud.aiplatform.v1.PublisherModel.CallToAction.ViewRestApiB\x03\xe0A\x01\x12n\n\ropen_notebook\x18\x02 \x01(\x0b2R.google.cloud.aiplatform.v1.PublisherModel.CallToAction.RegionalResourceReferencesB\x03\xe0A\x01\x12g\n\x0eopen_notebooks\x18\x0c \x01(\x0b2E.google.cloud.aiplatform.v1.PublisherModel.CallToAction.OpenNotebooksB\x03\xe0A\x01H\x00\x88\x01\x01\x12s\n\x12create_application\x18\x03 \x01(\x0b2R.google.cloud.aiplatform.v1.PublisherModel.CallToAction.RegionalResourceReferencesB\x03\xe0A\x01\x12z\n\x19open_fine_tuning_pipeline\x18\x04 \x01(\x0b2R.google.cloud.aiplatform.v1.PublisherModel.CallToAction.RegionalResourceReferencesB\x03\xe0A\x01\x12}\n\x1aopen_fine_tuning_pipelines\x18\r \x01(\x0b2O.google.cloud.aiplatform.v1.PublisherModel.CallToAction.OpenFineTuningPipelinesB\x03\xe0A\x01H\x01\x88\x01\x01\x12|\n\x1bopen_prompt_tuning_pipeline\x18\x05 \x01(\x0b2R.google.cloud.aiplatform.v1.PublisherModel.CallToAction.RegionalResourceReferencesB\x03\xe0A\x01\x12k\n\nopen_genie\x18\x06 \x01(\x0b2R.google.cloud.aiplatform.v1.PublisherModel.CallToAction.RegionalResourceReferencesB\x03\xe0A\x01\x12S\n\x06deploy\x18\x07 \x01(\x0b2>.google.cloud.aiplatform.v1.PublisherModel.CallToAction.DeployB\x03\xe0A\x01\x12Z\n\ndeploy_gke\x18\x0e \x01(\x0b2A.google.cloud.aiplatform.v1.PublisherModel.CallToAction.DeployGkeB\x03\xe0A\x01\x12z\n\x19open_generation_ai_studio\x18\x08 \x01(\x0b2R.google.cloud.aiplatform.v1.PublisherModel.CallToAction.RegionalResourceReferencesB\x03\xe0A\x01\x12o\n\x0erequest_access\x18\t \x01(\x0b2R.google.cloud.aiplatform.v1.PublisherModel.CallToAction.RegionalResourceReferencesB\x03\xe0A\x01\x12y\n\x18open_evaluation_pipeline\x18\x0b \x01(\x0b2R.google.cloud.aiplatform.v1.PublisherModel.CallToAction.RegionalResourceReferencesB\x03\xe0A\x01\x1a\xcf\x03\n\x1aRegionalResourceReferences\x12{\n\nreferences\x18\x01 \x03(\x0b2b.google.cloud.aiplatform.v1.PublisherModel.CallToAction.RegionalResourceReferences.ReferencesEntryB\x03\xe0A\x02\x12\x12\n\x05title\x18\x02 \x01(\tB\x03\xe0A\x02\x12 \n\x0eresource_title\x18\x03 \x01(\tB\x03\xe0A\x01H\x00\x88\x01\x01\x12#\n\x11resource_use_case\x18\x04 \x01(\tB\x03\xe0A\x01H\x01\x88\x01\x01\x12&\n\x14resource_description\x18\x05 \x01(\tB\x03\xe0A\x01H\x02\x88\x01\x01\x1ao\n\x0fReferencesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12K\n\x05value\x18\x02 \x01(\x0b2<.google.cloud.aiplatform.v1.PublisherModel.ResourceReference:\x028\x01B\x11\n\x0f_resource_titleB\x14\n\x12_resource_use_caseB\x17\n\x15_resource_description\x1ax\n\x0bViewRestApi\x12U\n\x0edocumentations\x18\x01 \x03(\x0b28.google.cloud.aiplatform.v1.PublisherModel.DocumentationB\x03\xe0A\x02\x12\x12\n\x05title\x18\x02 \x01(\tB\x03\xe0A\x02\x1a{\n\rOpenNotebooks\x12j\n\tnotebooks\x18\x01 \x03(\x0b2R.google.cloud.aiplatform.v1.PublisherModel.CallToAction.RegionalResourceReferencesB\x03\xe0A\x02\x1a\x91\x01\n\x17OpenFineTuningPipelines\x12v\n\x15fine_tuning_pipelines\x18\x01 \x03(\x0b2R.google.cloud.aiplatform.v1.PublisherModel.CallToAction.RegionalResourceReferencesB\x03\xe0A\x02\x1a\xfc\x06\n\x06Deploy\x12M\n\x13dedicated_resources\x18\x05 \x01(\x0b2..google.cloud.aiplatform.v1.DedicatedResourcesH\x00\x12M\n\x13automatic_resources\x18\x06 \x01(\x0b2..google.cloud.aiplatform.v1.AutomaticResourcesH\x00\x12\x1a\n\x10shared_resources\x18\x07 \x01(\tH\x00\x12\x1f\n\x12model_display_name\x18\x01 \x01(\tB\x03\xe0A\x01\x12S\n\x15large_model_reference\x18\x02 \x01(\x0b2/.google.cloud.aiplatform.v1.LargeModelReferenceB\x03\xe0A\x01\x12K\n\x0econtainer_spec\x18\x03 \x01(\x0b2..google.cloud.aiplatform.v1.ModelContainerSpecB\x03\xe0A\x01\x12\x19\n\x0cartifact_uri\x18\x04 \x01(\tB\x03\xe0A\x01\x12"\n\x10deploy_task_name\x18\n \x01(\tB\x03\xe0A\x01H\x01\x88\x01\x01\x12p\n\x0fdeploy_metadata\x18\x0b \x01(\x0b2M.google.cloud.aiplatform.v1.PublisherModel.CallToAction.Deploy.DeployMetadataB\x03\xe0A\x01H\x02\x88\x01\x01\x12\x12\n\x05title\x18\x08 \x01(\tB\x03\xe0A\x02\x12 \n\x13public_artifact_uri\x18\t \x01(\tB\x03\xe0A\x01\x1a\xcc\x01\n\x0eDeployMetadata\x12n\n\x06labels\x18\x01 \x03(\x0b2Y.google.cloud.aiplatform.v1.PublisherModel.CallToAction.Deploy.DeployMetadata.LabelsEntryB\x03\xe0A\x01\x12\x1b\n\x0esample_request\x18\x02 \x01(\tB\x03\xe0A\x01\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01B\x16\n\x14prediction_resourcesB\x13\n\x11_deploy_task_nameB\x12\n\x10_deploy_metadata\x1a*\n\tDeployGke\x12\x1d\n\x10gke_yaml_configs\x18\x01 \x03(\tB\x03\xe0A\x01B\x11\n\x0f_open_notebooksB\x1d\n\x1b_open_fine_tuning_pipelines"\xdb\x01\n\x12OpenSourceCategory\x12$\n OPEN_SOURCE_CATEGORY_UNSPECIFIED\x10\x00\x12\x0f\n\x0bPROPRIETARY\x10\x01\x12+\n\'GOOGLE_OWNED_OSS_WITH_GOOGLE_CHECKPOINT\x10\x02\x120\n,THIRD_PARTY_OWNED_OSS_WITH_GOOGLE_CHECKPOINT\x10\x03\x12\x14\n\x10GOOGLE_OWNED_OSS\x10\x04\x12\x19\n\x15THIRD_PARTY_OWNED_OSS\x10\x05"n\n\x0bLaunchStage\x12\x1c\n\x18LAUNCH_STAGE_UNSPECIFIED\x10\x00\x12\x10\n\x0cEXPERIMENTAL\x10\x01\x12\x13\n\x0fPRIVATE_PREVIEW\x10\x02\x12\x12\n\x0ePUBLIC_PREVIEW\x10\x03\x12\x06\n\x02GA\x10\x04"c\n\x0cVersionState\x12\x1d\n\x19VERSION_STATE_UNSPECIFIED\x10\x00\x12\x18\n\x14VERSION_STATE_STABLE\x10\x01\x12\x1a\n\x16VERSION_STATE_UNSTABLE\x10\x02:T\xeaAQ\n(aiplatform.googleapis.com/PublisherModel\x12%publishers/{publisher}/models/{model}B\xd1\x01\n\x1ecom.google.cloud.aiplatform.v1B\x13PublisherModelProtoP\x01Z>cloud.google.com/go/aiplatform/apiv1/aiplatformpb;aiplatformpb\xaa\x02\x1aGoogle.Cloud.AIPlatform.V1\xca\x02\x1aGoogle\\Cloud\\AIPlatform\\V1\xea\x02\x1dGoogle::Cloud::AIPlatform::V1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.aiplatform.v1.publisher_model_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x1ecom.google.cloud.aiplatform.v1B\x13PublisherModelProtoP\x01Z>cloud.google.com/go/aiplatform/apiv1/aiplatformpb;aiplatformpb\xaa\x02\x1aGoogle.Cloud.AIPlatform.V1\xca\x02\x1aGoogle\\Cloud\\AIPlatform\\V1\xea\x02\x1dGoogle::Cloud::AIPlatform::V1'
+    _globals['_PUBLISHERMODEL_RESOURCEREFERENCE'].fields_by_name['use_case']._loaded_options = None
+    _globals['_PUBLISHERMODEL_RESOURCEREFERENCE'].fields_by_name['use_case']._serialized_options = b'\x18\x01'
+    _globals['_PUBLISHERMODEL_RESOURCEREFERENCE'].fields_by_name['description']._loaded_options = None
+    _globals['_PUBLISHERMODEL_RESOURCEREFERENCE'].fields_by_name['description']._serialized_options = b'\x18\x01'
+    _globals['_PUBLISHERMODEL_DOCUMENTATION'].fields_by_name['title']._loaded_options = None
+    _globals['_PUBLISHERMODEL_DOCUMENTATION'].fields_by_name['title']._serialized_options = b'\xe0A\x02'
+    _globals['_PUBLISHERMODEL_DOCUMENTATION'].fields_by_name['content']._loaded_options = None
+    _globals['_PUBLISHERMODEL_DOCUMENTATION'].fields_by_name['content']._serialized_options = b'\xe0A\x02'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_REGIONALRESOURCEREFERENCES_REFERENCESENTRY']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_REGIONALRESOURCEREFERENCES_REFERENCESENTRY']._serialized_options = b'8\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_REGIONALRESOURCEREFERENCES'].fields_by_name['references']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_REGIONALRESOURCEREFERENCES'].fields_by_name['references']._serialized_options = b'\xe0A\x02'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_REGIONALRESOURCEREFERENCES'].fields_by_name['title']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_REGIONALRESOURCEREFERENCES'].fields_by_name['title']._serialized_options = b'\xe0A\x02'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_REGIONALRESOURCEREFERENCES'].fields_by_name['resource_title']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_REGIONALRESOURCEREFERENCES'].fields_by_name['resource_title']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_REGIONALRESOURCEREFERENCES'].fields_by_name['resource_use_case']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_REGIONALRESOURCEREFERENCES'].fields_by_name['resource_use_case']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_REGIONALRESOURCEREFERENCES'].fields_by_name['resource_description']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_REGIONALRESOURCEREFERENCES'].fields_by_name['resource_description']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_VIEWRESTAPI'].fields_by_name['documentations']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_VIEWRESTAPI'].fields_by_name['documentations']._serialized_options = b'\xe0A\x02'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_VIEWRESTAPI'].fields_by_name['title']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_VIEWRESTAPI'].fields_by_name['title']._serialized_options = b'\xe0A\x02'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_OPENNOTEBOOKS'].fields_by_name['notebooks']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_OPENNOTEBOOKS'].fields_by_name['notebooks']._serialized_options = b'\xe0A\x02'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_OPENFINETUNINGPIPELINES'].fields_by_name['fine_tuning_pipelines']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_OPENFINETUNINGPIPELINES'].fields_by_name['fine_tuning_pipelines']._serialized_options = b'\xe0A\x02'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY_DEPLOYMETADATA_LABELSENTRY']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY_DEPLOYMETADATA_LABELSENTRY']._serialized_options = b'8\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY_DEPLOYMETADATA'].fields_by_name['labels']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY_DEPLOYMETADATA'].fields_by_name['labels']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY_DEPLOYMETADATA'].fields_by_name['sample_request']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY_DEPLOYMETADATA'].fields_by_name['sample_request']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY'].fields_by_name['model_display_name']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY'].fields_by_name['model_display_name']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY'].fields_by_name['large_model_reference']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY'].fields_by_name['large_model_reference']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY'].fields_by_name['container_spec']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY'].fields_by_name['container_spec']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY'].fields_by_name['artifact_uri']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY'].fields_by_name['artifact_uri']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY'].fields_by_name['deploy_task_name']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY'].fields_by_name['deploy_task_name']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY'].fields_by_name['deploy_metadata']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY'].fields_by_name['deploy_metadata']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY'].fields_by_name['title']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY'].fields_by_name['title']._serialized_options = b'\xe0A\x02'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY'].fields_by_name['public_artifact_uri']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY'].fields_by_name['public_artifact_uri']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOYGKE'].fields_by_name['gke_yaml_configs']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOYGKE'].fields_by_name['gke_yaml_configs']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['view_rest_api']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['view_rest_api']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['open_notebook']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['open_notebook']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['open_notebooks']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['open_notebooks']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['create_application']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['create_application']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['open_fine_tuning_pipeline']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['open_fine_tuning_pipeline']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['open_fine_tuning_pipelines']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['open_fine_tuning_pipelines']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['open_prompt_tuning_pipeline']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['open_prompt_tuning_pipeline']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['open_genie']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['open_genie']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['deploy']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['deploy']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['deploy_gke']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['deploy_gke']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['open_generation_ai_studio']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['open_generation_ai_studio']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['request_access']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['request_access']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['open_evaluation_pipeline']._loaded_options = None
+    _globals['_PUBLISHERMODEL_CALLTOACTION'].fields_by_name['open_evaluation_pipeline']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL'].fields_by_name['name']._loaded_options = None
+    _globals['_PUBLISHERMODEL'].fields_by_name['name']._serialized_options = b'\xe0A\x03'
+    _globals['_PUBLISHERMODEL'].fields_by_name['version_id']._loaded_options = None
+    _globals['_PUBLISHERMODEL'].fields_by_name['version_id']._serialized_options = b'\xe0A\x05\xe0A\x03'
+    _globals['_PUBLISHERMODEL'].fields_by_name['open_source_category']._loaded_options = None
+    _globals['_PUBLISHERMODEL'].fields_by_name['open_source_category']._serialized_options = b'\xe0A\x02'
+    _globals['_PUBLISHERMODEL'].fields_by_name['supported_actions']._loaded_options = None
+    _globals['_PUBLISHERMODEL'].fields_by_name['supported_actions']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL'].fields_by_name['frameworks']._loaded_options = None
+    _globals['_PUBLISHERMODEL'].fields_by_name['frameworks']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL'].fields_by_name['launch_stage']._loaded_options = None
+    _globals['_PUBLISHERMODEL'].fields_by_name['launch_stage']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL'].fields_by_name['version_state']._loaded_options = None
+    _globals['_PUBLISHERMODEL'].fields_by_name['version_state']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL'].fields_by_name['publisher_model_template']._loaded_options = None
+    _globals['_PUBLISHERMODEL'].fields_by_name['publisher_model_template']._serialized_options = b'\xe0A\x05\xe0A\x03'
+    _globals['_PUBLISHERMODEL'].fields_by_name['predict_schemata']._loaded_options = None
+    _globals['_PUBLISHERMODEL'].fields_by_name['predict_schemata']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHERMODEL']._loaded_options = None
+    _globals['_PUBLISHERMODEL']._serialized_options = b'\xeaAQ\n(aiplatform.googleapis.com/PublisherModel\x12%publishers/{publisher}/models/{model}'
+    _globals['_PUBLISHERMODEL']._serialized_start = 233
+    _globals['_PUBLISHERMODEL']._serialized_end = 4820
+    _globals['_PUBLISHERMODEL_RESOURCEREFERENCE']._serialized_start = 796
+    _globals['_PUBLISHERMODEL_RESOURCEREFERENCE']._serialized_end = 919
+    _globals['_PUBLISHERMODEL_DOCUMENTATION']._serialized_start = 921
+    _globals['_PUBLISHERMODEL_DOCUMENTATION']._serialized_end = 978
+    _globals['_PUBLISHERMODEL_CALLTOACTION']._serialized_start = 981
+    _globals['_PUBLISHERMODEL_CALLTOACTION']._serialized_end = 4299
+    _globals['_PUBLISHERMODEL_CALLTOACTION_REGIONALRESOURCEREFERENCES']._serialized_start = 2452
+    _globals['_PUBLISHERMODEL_CALLTOACTION_REGIONALRESOURCEREFERENCES']._serialized_end = 2915
+    _globals['_PUBLISHERMODEL_CALLTOACTION_REGIONALRESOURCEREFERENCES_REFERENCESENTRY']._serialized_start = 2738
+    _globals['_PUBLISHERMODEL_CALLTOACTION_REGIONALRESOURCEREFERENCES_REFERENCESENTRY']._serialized_end = 2849
+    _globals['_PUBLISHERMODEL_CALLTOACTION_VIEWRESTAPI']._serialized_start = 2917
+    _globals['_PUBLISHERMODEL_CALLTOACTION_VIEWRESTAPI']._serialized_end = 3037
+    _globals['_PUBLISHERMODEL_CALLTOACTION_OPENNOTEBOOKS']._serialized_start = 3039
+    _globals['_PUBLISHERMODEL_CALLTOACTION_OPENNOTEBOOKS']._serialized_end = 3162
+    _globals['_PUBLISHERMODEL_CALLTOACTION_OPENFINETUNINGPIPELINES']._serialized_start = 3165
+    _globals['_PUBLISHERMODEL_CALLTOACTION_OPENFINETUNINGPIPELINES']._serialized_end = 3310
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY']._serialized_start = 3313
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY']._serialized_end = 4205
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY_DEPLOYMETADATA']._serialized_start = 3936
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY_DEPLOYMETADATA']._serialized_end = 4140
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY_DEPLOYMETADATA_LABELSENTRY']._serialized_start = 4095
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOY_DEPLOYMETADATA_LABELSENTRY']._serialized_end = 4140
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOYGKE']._serialized_start = 4207
+    _globals['_PUBLISHERMODEL_CALLTOACTION_DEPLOYGKE']._serialized_end = 4249
+    _globals['_PUBLISHERMODEL_OPENSOURCECATEGORY']._serialized_start = 4302
+    _globals['_PUBLISHERMODEL_OPENSOURCECATEGORY']._serialized_end = 4521
+    _globals['_PUBLISHERMODEL_LAUNCHSTAGE']._serialized_start = 4523
+    _globals['_PUBLISHERMODEL_LAUNCHSTAGE']._serialized_end = 4633
+    _globals['_PUBLISHERMODEL_VERSIONSTATE']._serialized_start = 4635
+    _globals['_PUBLISHERMODEL_VERSIONSTATE']._serialized_end = 4734

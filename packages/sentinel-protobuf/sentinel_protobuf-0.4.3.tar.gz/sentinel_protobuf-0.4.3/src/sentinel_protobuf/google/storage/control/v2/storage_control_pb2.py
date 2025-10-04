@@ -1,0 +1,384 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/storage/control/v2/storage_control.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import field_info_pb2 as google_dot_api_dot_field__info__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from .....google.api import routing_pb2 as google_dot_api_dot_routing__pb2
+from .....google.iam.v1 import iam_policy_pb2 as google_dot_iam_dot_v1_dot_iam__policy__pb2
+from .....google.iam.v1 import policy_pb2 as google_dot_iam_dot_v1_dot_policy__pb2
+from .....google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n/google/storage/control/v2/storage_control.proto\x12\x19google.storage.control.v2\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x1bgoogle/api/field_info.proto\x1a\x19google/api/resource.proto\x1a\x18google/api/routing.proto\x1a\x1egoogle/iam/v1/iam_policy.proto\x1a\x1agoogle/iam/v1/policy.proto\x1a#google/longrunning/operations.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto"+\n\x11PendingRenameInfo\x12\x16\n\toperation\x18\x01 \x01(\tB\x03\xe0A\x03"\xe2\x02\n\x06Folder\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x08\x12\x1b\n\x0emetageneration\x18\x03 \x01(\x03B\x03\xe0A\x03\x124\n\x0bcreate_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12N\n\x13pending_rename_info\x18\x07 \x01(\x0b2,.google.storage.control.v2.PendingRenameInfoB\x03\xe0A\x03:l\xeaAi\n\x1dstorage.googleapis.com/Folder\x127projects/{project}/buckets/{bucket}/folders/{folder=**}*\x07folders2\x06folder"\xf4\x01\n\x10GetFolderRequest\x123\n\x04name\x18\x06 \x01(\tB%\xe0A\x02\xfaA\x1f\n\x1dstorage.googleapis.com/Folder\x12$\n\x17if_metageneration_match\x18\x03 \x01(\x03H\x00\x88\x01\x01\x12(\n\x1bif_metageneration_not_match\x18\x04 \x01(\x03H\x01\x88\x01\x01\x12\x1f\n\nrequest_id\x18\x05 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01B\x1a\n\x18_if_metageneration_matchB\x1e\n\x1c_if_metageneration_not_match"\xd5\x01\n\x13CreateFolderRequest\x125\n\x06parent\x18\x01 \x01(\tB%\xe0A\x02\xfaA\x1f\x12\x1dstorage.googleapis.com/Folder\x126\n\x06folder\x18\x02 \x01(\x0b2!.google.storage.control.v2.FolderB\x03\xe0A\x02\x12\x16\n\tfolder_id\x18\x03 \x01(\tB\x03\xe0A\x02\x12\x16\n\trecursive\x18\x04 \x01(\x08B\x03\xe0A\x01\x12\x1f\n\nrequest_id\x18\x05 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"\xf7\x01\n\x13DeleteFolderRequest\x123\n\x04name\x18\x06 \x01(\tB%\xe0A\x02\xfaA\x1f\n\x1dstorage.googleapis.com/Folder\x12$\n\x17if_metageneration_match\x18\x03 \x01(\x03H\x00\x88\x01\x01\x12(\n\x1bif_metageneration_not_match\x18\x04 \x01(\x03H\x01\x88\x01\x01\x12\x1f\n\nrequest_id\x18\x05 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01B\x1a\n\x18_if_metageneration_matchB\x1e\n\x1c_if_metageneration_not_match"\x8c\x02\n\x12ListFoldersRequest\x125\n\x06parent\x18\x01 \x01(\tB%\xe0A\x02\xfaA\x1f\x12\x1dstorage.googleapis.com/Folder\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06prefix\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x16\n\tdelimiter\x18\x08 \x01(\tB\x03\xe0A\x01\x12 \n\x13lexicographic_start\x18\x06 \x01(\tB\x03\xe0A\x01\x12\x1e\n\x11lexicographic_end\x18\x07 \x01(\tB\x03\xe0A\x01\x12\x1f\n\nrequest_id\x18\t \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"b\n\x13ListFoldersResponse\x122\n\x07folders\x18\x01 \x03(\x0b2!.google.storage.control.v2.Folder\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\x9b\x02\n\x13RenameFolderRequest\x123\n\x04name\x18\x07 \x01(\tB%\xe0A\x02\xfaA\x1f\n\x1dstorage.googleapis.com/Folder\x12"\n\x15destination_folder_id\x18\x08 \x01(\tB\x03\xe0A\x02\x12$\n\x17if_metageneration_match\x18\x04 \x01(\x03H\x00\x88\x01\x01\x12(\n\x1bif_metageneration_not_match\x18\x05 \x01(\x03H\x01\x88\x01\x01\x12\x1f\n\nrequest_id\x18\x06 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01B\x1a\n\x18_if_metageneration_matchB\x1e\n\x1c_if_metageneration_not_match"\x9a\x02\n"CommonLongRunningOperationMetadata\x124\n\x0bcreate_time\x18\x01 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x121\n\x08end_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12\x11\n\x04type\x18\x04 \x01(\tB\x03\xe0A\x03\x12#\n\x16requested_cancellation\x18\x05 \x01(\x08B\x03\xe0A\x03\x12\x1d\n\x10progress_percent\x18\x06 \x01(\x05B\x03\xe0A\x03"\xa7\x01\n\x14RenameFolderMetadata\x12V\n\x0fcommon_metadata\x18\x01 \x01(\x0b2=.google.storage.control.v2.CommonLongRunningOperationMetadata\x12\x18\n\x10source_folder_id\x18\x02 \x01(\t\x12\x1d\n\x15destination_folder_id\x18\x03 \x01(\t"\xf8\x03\n\rStorageLayout\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x03\x12\x15\n\x08location\x18\x02 \x01(\tB\x03\xe0A\x03\x12\x1a\n\rlocation_type\x18\x03 \x01(\tB\x03\xe0A\x03\x12d\n\x17custom_placement_config\x18\x04 \x01(\x0b2>.google.storage.control.v2.StorageLayout.CustomPlacementConfigB\x03\xe0A\x03\x12c\n\x16hierarchical_namespace\x18\x05 \x01(\x0b2>.google.storage.control.v2.StorageLayout.HierarchicalNamespaceB\x03\xe0A\x03\x1a/\n\x15CustomPlacementConfig\x12\x16\n\x0edata_locations\x18\x01 \x03(\t\x1a(\n\x15HierarchicalNamespace\x12\x0f\n\x07enabled\x18\x01 \x01(\x08:{\xeaAx\n$storage.googleapis.com/StorageLayout\x121projects/{project}/buckets/{bucket}/storageLayout*\x0estorageLayouts2\rstorageLayout"\x86\x01\n\x17GetStorageLayoutRequest\x12:\n\x04name\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\n$storage.googleapis.com/StorageLayout\x12\x0e\n\x06prefix\x18\x02 \x01(\t\x12\x1f\n\nrequest_id\x18\x03 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"\xbf\x02\n\rManagedFolder\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x08\x12\x1b\n\x0emetageneration\x18\x03 \x01(\x03B\x03\xe0A\x03\x124\n\x0bcreate_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03:\x91\x01\xeaA\x8d\x01\n$storage.googleapis.com/ManagedFolder\x12Fprojects/{project}/buckets/{bucket}/managedFolders/{managed_folder=**}*\x0emanagedFolders2\rmanagedFolder"\x82\x02\n\x17GetManagedFolderRequest\x12:\n\x04name\x18\x06 \x01(\tB,\xe0A\x02\xfaA&\n$storage.googleapis.com/ManagedFolder\x12$\n\x17if_metageneration_match\x18\x03 \x01(\x03H\x00\x88\x01\x01\x12(\n\x1bif_metageneration_not_match\x18\x04 \x01(\x03H\x01\x88\x01\x01\x12\x1f\n\nrequest_id\x18\x05 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01B\x1a\n\x18_if_metageneration_matchB\x1e\n\x1c_if_metageneration_not_match"\xe2\x01\n\x1aCreateManagedFolderRequest\x12<\n\x06parent\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\x12$storage.googleapis.com/ManagedFolder\x12E\n\x0emanaged_folder\x18\x02 \x01(\x0b2(.google.storage.control.v2.ManagedFolderB\x03\xe0A\x02\x12\x1e\n\x11managed_folder_id\x18\x03 \x01(\tB\x03\xe0A\x02\x12\x1f\n\nrequest_id\x18\x04 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"\x9e\x02\n\x1aDeleteManagedFolderRequest\x12:\n\x04name\x18\x07 \x01(\tB,\xe0A\x02\xfaA&\n$storage.googleapis.com/ManagedFolder\x12$\n\x17if_metageneration_match\x18\x03 \x01(\x03H\x00\x88\x01\x01\x12(\n\x1bif_metageneration_not_match\x18\x04 \x01(\x03H\x01\x88\x01\x01\x12\x17\n\x0fallow_non_empty\x18\x05 \x01(\x08\x12\x1f\n\nrequest_id\x18\x06 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01B\x1a\n\x18_if_metageneration_matchB\x1e\n\x1c_if_metageneration_not_match"\xc0\x01\n\x19ListManagedFoldersRequest\x12<\n\x06parent\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\x12$storage.googleapis.com/ManagedFolder\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06prefix\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x1f\n\nrequest_id\x18\x05 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"x\n\x1aListManagedFoldersResponse\x12A\n\x0fmanaged_folders\x18\x01 \x03(\x0b2(.google.storage.control.v2.ManagedFolder\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\xb0\x02\n\x1bCreateAnywhereCacheMetadata\x12V\n\x0fcommon_metadata\x18\x01 \x01(\x0b2=.google.storage.control.v2.CommonLongRunningOperationMetadata\x12\x1e\n\x11anywhere_cache_id\x18\x02 \x01(\tH\x00\x88\x01\x01\x12\x11\n\x04zone\x18\x06 \x01(\tH\x01\x88\x01\x01\x12+\n\x03ttl\x18\x03 \x01(\x0b2\x19.google.protobuf.DurationH\x02\x88\x01\x01\x12\x1d\n\x10admission_policy\x18\x05 \x01(\tH\x03\x88\x01\x01B\x14\n\x12_anywhere_cache_idB\x07\n\x05_zoneB\x06\n\x04_ttlB\x13\n\x11_admission_policy"\xb0\x02\n\x1bUpdateAnywhereCacheMetadata\x12V\n\x0fcommon_metadata\x18\x01 \x01(\x0b2=.google.storage.control.v2.CommonLongRunningOperationMetadata\x12\x1e\n\x11anywhere_cache_id\x18\x02 \x01(\tH\x00\x88\x01\x01\x12\x11\n\x04zone\x18\x05 \x01(\tH\x01\x88\x01\x01\x12+\n\x03ttl\x18\x03 \x01(\x0b2\x19.google.protobuf.DurationH\x02\x88\x01\x01\x12\x1d\n\x10admission_policy\x18\x04 \x01(\tH\x03\x88\x01\x01B\x14\n\x12_anywhere_cache_idB\x07\n\x05_zoneB\x06\n\x04_ttlB\x13\n\x11_admission_policy"\xa5\x03\n\rAnywhereCache\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x05\x12\x11\n\x04zone\x18\n \x01(\tB\x03\xe0A\x05\x12&\n\x03ttl\x18\x03 \x01(\x0b2\x19.google.protobuf.Duration\x12\x18\n\x10admission_policy\x18\t \x01(\t\x12\x12\n\x05state\x18\x05 \x01(\tB\x03\xe0A\x03\x124\n\x0bcreate_time\x18\x06 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x07 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12\x1b\n\x0epending_update\x18\x08 \x01(\x08B\x03\xe0A\x03:\x8e\x01\xeaA\x8a\x01\n$storage.googleapis.com/AnywhereCache\x12Cprojects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}*\x0eanywhereCaches2\ranywhereCache"\xc2\x01\n\x1aCreateAnywhereCacheRequest\x12<\n\x06parent\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\x12$storage.googleapis.com/AnywhereCache\x12E\n\x0eanywhere_cache\x18\x03 \x01(\x0b2(.google.storage.control.v2.AnywhereCacheB\x03\xe0A\x02\x12\x1f\n\nrequest_id\x18\x04 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"\xba\x01\n\x1aUpdateAnywhereCacheRequest\x12E\n\x0eanywhere_cache\x18\x01 \x01(\x0b2(.google.storage.control.v2.AnywhereCacheB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02\x12\x1f\n\nrequest_id\x18\x03 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"z\n\x1bDisableAnywhereCacheRequest\x12:\n\x04name\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\n$storage.googleapis.com/AnywhereCache\x12\x1f\n\nrequest_id\x18\x02 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"x\n\x19PauseAnywhereCacheRequest\x12:\n\x04name\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\n$storage.googleapis.com/AnywhereCache\x12\x1f\n\nrequest_id\x18\x02 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"y\n\x1aResumeAnywhereCacheRequest\x12:\n\x04name\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\n$storage.googleapis.com/AnywhereCache\x12\x1f\n\nrequest_id\x18\x02 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"v\n\x17GetAnywhereCacheRequest\x12:\n\x04name\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\n$storage.googleapis.com/AnywhereCache\x12\x1f\n\nrequest_id\x18\x02 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"\xa1\x01\n\x19ListAnywhereCachesRequest\x12<\n\x06parent\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\x12$storage.googleapis.com/AnywhereCache\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\x12\x1f\n\nrequest_id\x18\x04 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"x\n\x1aListAnywhereCachesResponse\x12A\n\x0fanywhere_caches\x18\x01 \x03(\x0b2(.google.storage.control.v2.AnywhereCache\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\x8e\x0e\n\x12IntelligenceConfig\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x08\x12X\n\x0eedition_config\x18\x02 \x01(\x0e2;.google.storage.control.v2.IntelligenceConfig.EditionConfigB\x03\xe0A\x01\x124\n\x0bupdate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12I\n\x06filter\x18\x04 \x01(\x0b24.google.storage.control.v2.IntelligenceConfig.FilterB\x03\xe0A\x01\x12u\n\x1deffective_intelligence_config\x18\x05 \x01(\x0b2I.google.storage.control.v2.IntelligenceConfig.EffectiveIntelligenceConfigB\x03\xe0A\x03\x12O\n\x0ctrial_config\x18\x07 \x01(\x0b29.google.storage.control.v2.IntelligenceConfig.TrialConfig\x1a\xfc\x04\n\x06Filter\x12v\n included_cloud_storage_locations\x18\x01 \x01(\x0b2J.google.storage.control.v2.IntelligenceConfig.Filter.CloudStorageLocationsH\x00\x12v\n excluded_cloud_storage_locations\x18\x02 \x01(\x0b2J.google.storage.control.v2.IntelligenceConfig.Filter.CloudStorageLocationsH\x00\x12r\n\x1eincluded_cloud_storage_buckets\x18\x03 \x01(\x0b2H.google.storage.control.v2.IntelligenceConfig.Filter.CloudStorageBucketsH\x01\x12r\n\x1eexcluded_cloud_storage_buckets\x18\x04 \x01(\x0b2H.google.storage.control.v2.IntelligenceConfig.Filter.CloudStorageBucketsH\x01\x1a/\n\x15CloudStorageLocations\x12\x16\n\tlocations\x18\x01 \x03(\tB\x03\xe0A\x01\x1a5\n\x13CloudStorageBuckets\x12\x1e\n\x11bucket_id_regexes\x18\x01 \x03(\tB\x03\xe0A\x01B\x19\n\x17cloud_storage_locationsB\x17\n\x15cloud_storage_buckets\x1a\x8a\x02\n\x1bEffectiveIntelligenceConfig\x12z\n\x11effective_edition\x18\x01 \x01(\x0e2Z.google.storage.control.v2.IntelligenceConfig.EffectiveIntelligenceConfig.EffectiveEditionB\x03\xe0A\x03\x12 \n\x13intelligence_config\x18\x02 \x01(\tB\x03\xe0A\x03"M\n\x10EffectiveEdition\x12!\n\x1dEFFECTIVE_EDITION_UNSPECIFIED\x10\x00\x12\x08\n\x04NONE\x10\x01\x12\x0c\n\x08STANDARD\x10\x02\x1aC\n\x0bTrialConfig\x124\n\x0bexpire_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03"c\n\rEditionConfig\x12\x1e\n\x1aEDITION_CONFIG_UNSPECIFIED\x10\x00\x12\x0b\n\x07INHERIT\x10\x01\x12\x0c\n\x08DISABLED\x10\x02\x12\x0c\n\x08STANDARD\x10\x03\x12\t\n\x05TRIAL\x10\x05:\x8b\x02\xeaA\x87\x02\n)storage.googleapis.com/IntelligenceConfig\x128folders/{folder}/locations/{location}/intelligenceConfig\x12;organizations/{org}/locations/{location}/intelligenceConfig\x12:projects/{project}/locations/{location}/intelligenceConfig*\x13intelligenceConfigs2\x12intelligenceConfig"\xd5\x01\n+UpdateOrganizationIntelligenceConfigRequest\x12O\n\x13intelligence_config\x18\x01 \x01(\x0b2-.google.storage.control.v2.IntelligenceConfigB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02\x12\x1f\n\nrequest_id\x18\x03 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"\xcf\x01\n%UpdateFolderIntelligenceConfigRequest\x12O\n\x13intelligence_config\x18\x01 \x01(\x0b2-.google.storage.control.v2.IntelligenceConfigB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02\x12\x1f\n\nrequest_id\x18\x03 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"\xd0\x01\n&UpdateProjectIntelligenceConfigRequest\x12O\n\x13intelligence_config\x18\x01 \x01(\x0b2-.google.storage.control.v2.IntelligenceConfigB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02\x12\x1f\n\nrequest_id\x18\x03 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"k\n(GetOrganizationIntelligenceConfigRequest\x12?\n\x04name\x18\x01 \x01(\tB1\xe0A\x02\xfaA+\n)storage.googleapis.com/IntelligenceConfig"e\n"GetFolderIntelligenceConfigRequest\x12?\n\x04name\x18\x01 \x01(\tB1\xe0A\x02\xfaA+\n)storage.googleapis.com/IntelligenceConfig"f\n#GetProjectIntelligenceConfigRequest\x12?\n\x04name\x18\x01 \x01(\tB1\xe0A\x02\xfaA+\n)storage.googleapis.com/IntelligenceConfig2\xee*\n\x0eStorageControl\x12\x9a\x01\n\x0cCreateFolder\x12..google.storage.control.v2.CreateFolderRequest\x1a!.google.storage.control.v2.Folder"7\xdaA\x17parent,folder,folder_id\x8a\xd3\xe4\x93\x02\x17\x12\x15\n\x06parent\x12\x0b{bucket=**}\x12\x8f\x01\n\x0cDeleteFolder\x12..google.storage.control.v2.DeleteFolderRequest\x1a\x16.google.protobuf.Empty"7\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**\x12\x94\x01\n\tGetFolder\x12+.google.storage.control.v2.GetFolderRequest\x1a!.google.storage.control.v2.Folder"7\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**\x12\x94\x01\n\x0bListFolders\x12-.google.storage.control.v2.ListFoldersRequest\x1a..google.storage.control.v2.ListFoldersResponse"&\xdaA\x06parent\x8a\xd3\xe4\x93\x02\x17\x12\x15\n\x06parent\x12\x0b{bucket=**}\x12\xcd\x01\n\x0cRenameFolder\x12..google.storage.control.v2.RenameFolderRequest\x1a\x1d.google.longrunning.Operation"n\xcaA\x1e\n\x06Folder\x12\x14RenameFolderMetadata\xdaA\x1aname,destination_folder_id\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**\x12\xa9\x01\n\x10GetStorageLayout\x122.google.storage.control.v2.GetStorageLayoutRequest\x1a(.google.storage.control.v2.StorageLayout"7\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**\x12\xbf\x01\n\x13CreateManagedFolder\x125.google.storage.control.v2.CreateManagedFolderRequest\x1a(.google.storage.control.v2.ManagedFolder"G\xdaA\'parent,managed_folder,managed_folder_id\x8a\xd3\xe4\x93\x02\x17\x12\x15\n\x06parent\x12\x0b{bucket=**}\x12\x9d\x01\n\x13DeleteManagedFolder\x125.google.storage.control.v2.DeleteManagedFolderRequest\x1a\x16.google.protobuf.Empty"7\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**\x12\xa9\x01\n\x10GetManagedFolder\x122.google.storage.control.v2.GetManagedFolderRequest\x1a(.google.storage.control.v2.ManagedFolder"7\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**\x12\xa9\x01\n\x12ListManagedFolders\x124.google.storage.control.v2.ListManagedFoldersRequest\x1a5.google.storage.control.v2.ListManagedFoldersResponse"&\xdaA\x06parent\x8a\xd3\xe4\x93\x02\x17\x12\x15\n\x06parent\x12\x0b{bucket=**}\x12\xd1\x01\n\x13CreateAnywhereCache\x125.google.storage.control.v2.CreateAnywhereCacheRequest\x1a\x1d.google.longrunning.Operation"d\xcaA,\n\rAnywhereCache\x12\x1bCreateAnywhereCacheMetadata\xdaA\x15parent,anywhere_cache\x8a\xd3\xe4\x93\x02\x17\x12\x15\n\x06parent\x12\x0b{bucket=**}\x12\xf9\x01\n\x13UpdateAnywhereCache\x125.google.storage.control.v2.UpdateAnywhereCacheRequest\x1a\x1d.google.longrunning.Operation"\x8b\x01\xcaA,\n\rAnywhereCache\x12\x1bUpdateAnywhereCacheMetadata\xdaA\x1aanywhere_cache,update_mask\x8a\xd3\xe4\x93\x029\x127\n\x13anywhere_cache.name\x12 {bucket=projects/*/buckets/*}/**\x12\xb1\x01\n\x14DisableAnywhereCache\x126.google.storage.control.v2.DisableAnywhereCacheRequest\x1a(.google.storage.control.v2.AnywhereCache"7\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**\x12\xad\x01\n\x12PauseAnywhereCache\x124.google.storage.control.v2.PauseAnywhereCacheRequest\x1a(.google.storage.control.v2.AnywhereCache"7\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**\x12\xaf\x01\n\x13ResumeAnywhereCache\x125.google.storage.control.v2.ResumeAnywhereCacheRequest\x1a(.google.storage.control.v2.AnywhereCache"7\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**\x12\xa9\x01\n\x10GetAnywhereCache\x122.google.storage.control.v2.GetAnywhereCacheRequest\x1a(.google.storage.control.v2.AnywhereCache"7\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**\x12\xa9\x01\n\x12ListAnywhereCaches\x124.google.storage.control.v2.ListAnywhereCachesRequest\x1a5.google.storage.control.v2.ListAnywhereCachesResponse"&\xdaA\x06parent\x8a\xd3\xe4\x93\x02\x17\x12\x15\n\x06parent\x12\x0b{bucket=**}\x12\xd2\x01\n\x1cGetProjectIntelligenceConfig\x12>.google.storage.control.v2.GetProjectIntelligenceConfigRequest\x1a-.google.storage.control.v2.IntelligenceConfig"C\xdaA\x04name\x82\xd3\xe4\x93\x026\x124/v2/{name=projects/*/locations/*/intelligenceConfig}\x12\x9d\x02\n\x1fUpdateProjectIntelligenceConfig\x12A.google.storage.control.v2.UpdateProjectIntelligenceConfigRequest\x1a-.google.storage.control.v2.IntelligenceConfig"\x87\x01\xdaA\x1fintelligence_config,update_mask\x82\xd3\xe4\x93\x02_2H/v2/{intelligence_config.name=projects/*/locations/*/intelligenceConfig}:\x13intelligence_config\x12\xcf\x01\n\x1bGetFolderIntelligenceConfig\x12=.google.storage.control.v2.GetFolderIntelligenceConfigRequest\x1a-.google.storage.control.v2.IntelligenceConfig"B\xdaA\x04name\x82\xd3\xe4\x93\x025\x123/v2/{name=folders/*/locations/*/intelligenceConfig}\x12\x9a\x02\n\x1eUpdateFolderIntelligenceConfig\x12@.google.storage.control.v2.UpdateFolderIntelligenceConfigRequest\x1a-.google.storage.control.v2.IntelligenceConfig"\x86\x01\xdaA\x1fintelligence_config,update_mask\x82\xd3\xe4\x93\x02^2G/v2/{intelligence_config.name=folders/*/locations/*/intelligenceConfig}:\x13intelligence_config\x12\xe1\x01\n!GetOrganizationIntelligenceConfig\x12C.google.storage.control.v2.GetOrganizationIntelligenceConfigRequest\x1a-.google.storage.control.v2.IntelligenceConfig"H\xdaA\x04name\x82\xd3\xe4\x93\x02;\x129/v2/{name=organizations/*/locations/*/intelligenceConfig}\x12\xac\x02\n$UpdateOrganizationIntelligenceConfig\x12F.google.storage.control.v2.UpdateOrganizationIntelligenceConfigRequest\x1a-.google.storage.control.v2.IntelligenceConfig"\x8c\x01\xdaA\x1fintelligence_config,update_mask\x82\xd3\xe4\x93\x02d2M/v2/{intelligence_config.name=organizations/*/locations/*/intelligenceConfig}:\x13intelligence_config\x12\xa3\x01\n\x0cGetIamPolicy\x12".google.iam.v1.GetIamPolicyRequest\x1a\x15.google.iam.v1.Policy"X\xdaA\x08resource\x8a\xd3\xe4\x93\x02G\x12\x17\n\x08resource\x12\x0b{bucket=**}\x12,\n\x08resource\x12 {bucket=projects/*/buckets/*}/**\x12\xaa\x01\n\x0cSetIamPolicy\x12".google.iam.v1.SetIamPolicyRequest\x1a\x15.google.iam.v1.Policy"_\xdaA\x0fresource,policy\x8a\xd3\xe4\x93\x02G\x12\x17\n\x08resource\x12\x0b{bucket=**}\x12,\n\x08resource\x12 {bucket=projects/*/buckets/*}/**\x12\x96\x02\n\x12TestIamPermissions\x12(.google.iam.v1.TestIamPermissionsRequest\x1a).google.iam.v1.TestIamPermissionsResponse"\xaa\x01\xdaA\x14resource,permissions\x8a\xd3\xe4\x93\x02\x8c\x01\x12\x17\n\x08resource\x12\x0b{bucket=**}\x124\n\x08resource\x12({bucket=projects/*/buckets/*}/objects/**\x12;\n\x08resource\x12/{bucket=projects/*/buckets/*}/managedFolders/**\x1a\xa7\x02\xcaA\x16storage.googleapis.com\xd2A\x8a\x02https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/cloud-platform.read-only,https://www.googleapis.com/auth/devstorage.full_control,https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/devstorage.read_writeB\xa6\x02\n\x1dcom.google.storage.control.v2B\x13StorageControlProtoP\x01Z=cloud.google.com/go/storage/control/apiv2/controlpb;controlpb\xaa\x02\x1fGoogle.Cloud.Storage.Control.V2\xca\x02\x1fGoogle\\Cloud\\Storage\\Control\\V2\xea\x02#Google::Cloud::Storage::Control::V2\xeaAD\n\x1dstorage.googleapis.com/Bucket\x12#projects/{project}/buckets/{bucket}b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.storage.control.v2.storage_control_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x1dcom.google.storage.control.v2B\x13StorageControlProtoP\x01Z=cloud.google.com/go/storage/control/apiv2/controlpb;controlpb\xaa\x02\x1fGoogle.Cloud.Storage.Control.V2\xca\x02\x1fGoogle\\Cloud\\Storage\\Control\\V2\xea\x02#Google::Cloud::Storage::Control::V2\xeaAD\n\x1dstorage.googleapis.com/Bucket\x12#projects/{project}/buckets/{bucket}'
+    _globals['_PENDINGRENAMEINFO'].fields_by_name['operation']._loaded_options = None
+    _globals['_PENDINGRENAMEINFO'].fields_by_name['operation']._serialized_options = b'\xe0A\x03'
+    _globals['_FOLDER'].fields_by_name['name']._loaded_options = None
+    _globals['_FOLDER'].fields_by_name['name']._serialized_options = b'\xe0A\x08'
+    _globals['_FOLDER'].fields_by_name['metageneration']._loaded_options = None
+    _globals['_FOLDER'].fields_by_name['metageneration']._serialized_options = b'\xe0A\x03'
+    _globals['_FOLDER'].fields_by_name['create_time']._loaded_options = None
+    _globals['_FOLDER'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_FOLDER'].fields_by_name['update_time']._loaded_options = None
+    _globals['_FOLDER'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_FOLDER'].fields_by_name['pending_rename_info']._loaded_options = None
+    _globals['_FOLDER'].fields_by_name['pending_rename_info']._serialized_options = b'\xe0A\x03'
+    _globals['_FOLDER']._loaded_options = None
+    _globals['_FOLDER']._serialized_options = b'\xeaAi\n\x1dstorage.googleapis.com/Folder\x127projects/{project}/buckets/{bucket}/folders/{folder=**}*\x07folders2\x06folder'
+    _globals['_GETFOLDERREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETFOLDERREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA\x1f\n\x1dstorage.googleapis.com/Folder'
+    _globals['_GETFOLDERREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_GETFOLDERREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_CREATEFOLDERREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEFOLDERREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA\x1f\x12\x1dstorage.googleapis.com/Folder'
+    _globals['_CREATEFOLDERREQUEST'].fields_by_name['folder']._loaded_options = None
+    _globals['_CREATEFOLDERREQUEST'].fields_by_name['folder']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEFOLDERREQUEST'].fields_by_name['folder_id']._loaded_options = None
+    _globals['_CREATEFOLDERREQUEST'].fields_by_name['folder_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEFOLDERREQUEST'].fields_by_name['recursive']._loaded_options = None
+    _globals['_CREATEFOLDERREQUEST'].fields_by_name['recursive']._serialized_options = b'\xe0A\x01'
+    _globals['_CREATEFOLDERREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_CREATEFOLDERREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_DELETEFOLDERREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEFOLDERREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA\x1f\n\x1dstorage.googleapis.com/Folder'
+    _globals['_DELETEFOLDERREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_DELETEFOLDERREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_LISTFOLDERSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTFOLDERSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA\x1f\x12\x1dstorage.googleapis.com/Folder'
+    _globals['_LISTFOLDERSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTFOLDERSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTFOLDERSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTFOLDERSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTFOLDERSREQUEST'].fields_by_name['prefix']._loaded_options = None
+    _globals['_LISTFOLDERSREQUEST'].fields_by_name['prefix']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTFOLDERSREQUEST'].fields_by_name['delimiter']._loaded_options = None
+    _globals['_LISTFOLDERSREQUEST'].fields_by_name['delimiter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTFOLDERSREQUEST'].fields_by_name['lexicographic_start']._loaded_options = None
+    _globals['_LISTFOLDERSREQUEST'].fields_by_name['lexicographic_start']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTFOLDERSREQUEST'].fields_by_name['lexicographic_end']._loaded_options = None
+    _globals['_LISTFOLDERSREQUEST'].fields_by_name['lexicographic_end']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTFOLDERSREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_LISTFOLDERSREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_RENAMEFOLDERREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_RENAMEFOLDERREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA\x1f\n\x1dstorage.googleapis.com/Folder'
+    _globals['_RENAMEFOLDERREQUEST'].fields_by_name['destination_folder_id']._loaded_options = None
+    _globals['_RENAMEFOLDERREQUEST'].fields_by_name['destination_folder_id']._serialized_options = b'\xe0A\x02'
+    _globals['_RENAMEFOLDERREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_RENAMEFOLDERREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_COMMONLONGRUNNINGOPERATIONMETADATA'].fields_by_name['create_time']._loaded_options = None
+    _globals['_COMMONLONGRUNNINGOPERATIONMETADATA'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_COMMONLONGRUNNINGOPERATIONMETADATA'].fields_by_name['end_time']._loaded_options = None
+    _globals['_COMMONLONGRUNNINGOPERATIONMETADATA'].fields_by_name['end_time']._serialized_options = b'\xe0A\x03'
+    _globals['_COMMONLONGRUNNINGOPERATIONMETADATA'].fields_by_name['update_time']._loaded_options = None
+    _globals['_COMMONLONGRUNNINGOPERATIONMETADATA'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_COMMONLONGRUNNINGOPERATIONMETADATA'].fields_by_name['type']._loaded_options = None
+    _globals['_COMMONLONGRUNNINGOPERATIONMETADATA'].fields_by_name['type']._serialized_options = b'\xe0A\x03'
+    _globals['_COMMONLONGRUNNINGOPERATIONMETADATA'].fields_by_name['requested_cancellation']._loaded_options = None
+    _globals['_COMMONLONGRUNNINGOPERATIONMETADATA'].fields_by_name['requested_cancellation']._serialized_options = b'\xe0A\x03'
+    _globals['_COMMONLONGRUNNINGOPERATIONMETADATA'].fields_by_name['progress_percent']._loaded_options = None
+    _globals['_COMMONLONGRUNNINGOPERATIONMETADATA'].fields_by_name['progress_percent']._serialized_options = b'\xe0A\x03'
+    _globals['_STORAGELAYOUT'].fields_by_name['name']._loaded_options = None
+    _globals['_STORAGELAYOUT'].fields_by_name['name']._serialized_options = b'\xe0A\x03'
+    _globals['_STORAGELAYOUT'].fields_by_name['location']._loaded_options = None
+    _globals['_STORAGELAYOUT'].fields_by_name['location']._serialized_options = b'\xe0A\x03'
+    _globals['_STORAGELAYOUT'].fields_by_name['location_type']._loaded_options = None
+    _globals['_STORAGELAYOUT'].fields_by_name['location_type']._serialized_options = b'\xe0A\x03'
+    _globals['_STORAGELAYOUT'].fields_by_name['custom_placement_config']._loaded_options = None
+    _globals['_STORAGELAYOUT'].fields_by_name['custom_placement_config']._serialized_options = b'\xe0A\x03'
+    _globals['_STORAGELAYOUT'].fields_by_name['hierarchical_namespace']._loaded_options = None
+    _globals['_STORAGELAYOUT'].fields_by_name['hierarchical_namespace']._serialized_options = b'\xe0A\x03'
+    _globals['_STORAGELAYOUT']._loaded_options = None
+    _globals['_STORAGELAYOUT']._serialized_options = b'\xeaAx\n$storage.googleapis.com/StorageLayout\x121projects/{project}/buckets/{bucket}/storageLayout*\x0estorageLayouts2\rstorageLayout'
+    _globals['_GETSTORAGELAYOUTREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETSTORAGELAYOUTREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA&\n$storage.googleapis.com/StorageLayout'
+    _globals['_GETSTORAGELAYOUTREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_GETSTORAGELAYOUTREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_MANAGEDFOLDER'].fields_by_name['name']._loaded_options = None
+    _globals['_MANAGEDFOLDER'].fields_by_name['name']._serialized_options = b'\xe0A\x08'
+    _globals['_MANAGEDFOLDER'].fields_by_name['metageneration']._loaded_options = None
+    _globals['_MANAGEDFOLDER'].fields_by_name['metageneration']._serialized_options = b'\xe0A\x03'
+    _globals['_MANAGEDFOLDER'].fields_by_name['create_time']._loaded_options = None
+    _globals['_MANAGEDFOLDER'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_MANAGEDFOLDER'].fields_by_name['update_time']._loaded_options = None
+    _globals['_MANAGEDFOLDER'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_MANAGEDFOLDER']._loaded_options = None
+    _globals['_MANAGEDFOLDER']._serialized_options = b'\xeaA\x8d\x01\n$storage.googleapis.com/ManagedFolder\x12Fprojects/{project}/buckets/{bucket}/managedFolders/{managed_folder=**}*\x0emanagedFolders2\rmanagedFolder'
+    _globals['_GETMANAGEDFOLDERREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETMANAGEDFOLDERREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA&\n$storage.googleapis.com/ManagedFolder'
+    _globals['_GETMANAGEDFOLDERREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_GETMANAGEDFOLDERREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_CREATEMANAGEDFOLDERREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEMANAGEDFOLDERREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA&\x12$storage.googleapis.com/ManagedFolder'
+    _globals['_CREATEMANAGEDFOLDERREQUEST'].fields_by_name['managed_folder']._loaded_options = None
+    _globals['_CREATEMANAGEDFOLDERREQUEST'].fields_by_name['managed_folder']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEMANAGEDFOLDERREQUEST'].fields_by_name['managed_folder_id']._loaded_options = None
+    _globals['_CREATEMANAGEDFOLDERREQUEST'].fields_by_name['managed_folder_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEMANAGEDFOLDERREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_CREATEMANAGEDFOLDERREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_DELETEMANAGEDFOLDERREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEMANAGEDFOLDERREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA&\n$storage.googleapis.com/ManagedFolder'
+    _globals['_DELETEMANAGEDFOLDERREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_DELETEMANAGEDFOLDERREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_LISTMANAGEDFOLDERSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTMANAGEDFOLDERSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA&\x12$storage.googleapis.com/ManagedFolder'
+    _globals['_LISTMANAGEDFOLDERSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTMANAGEDFOLDERSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTMANAGEDFOLDERSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTMANAGEDFOLDERSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTMANAGEDFOLDERSREQUEST'].fields_by_name['prefix']._loaded_options = None
+    _globals['_LISTMANAGEDFOLDERSREQUEST'].fields_by_name['prefix']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTMANAGEDFOLDERSREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_LISTMANAGEDFOLDERSREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_ANYWHERECACHE'].fields_by_name['name']._loaded_options = None
+    _globals['_ANYWHERECACHE'].fields_by_name['name']._serialized_options = b'\xe0A\x05'
+    _globals['_ANYWHERECACHE'].fields_by_name['zone']._loaded_options = None
+    _globals['_ANYWHERECACHE'].fields_by_name['zone']._serialized_options = b'\xe0A\x05'
+    _globals['_ANYWHERECACHE'].fields_by_name['state']._loaded_options = None
+    _globals['_ANYWHERECACHE'].fields_by_name['state']._serialized_options = b'\xe0A\x03'
+    _globals['_ANYWHERECACHE'].fields_by_name['create_time']._loaded_options = None
+    _globals['_ANYWHERECACHE'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_ANYWHERECACHE'].fields_by_name['update_time']._loaded_options = None
+    _globals['_ANYWHERECACHE'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_ANYWHERECACHE'].fields_by_name['pending_update']._loaded_options = None
+    _globals['_ANYWHERECACHE'].fields_by_name['pending_update']._serialized_options = b'\xe0A\x03'
+    _globals['_ANYWHERECACHE']._loaded_options = None
+    _globals['_ANYWHERECACHE']._serialized_options = b'\xeaA\x8a\x01\n$storage.googleapis.com/AnywhereCache\x12Cprojects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}*\x0eanywhereCaches2\ranywhereCache'
+    _globals['_CREATEANYWHERECACHEREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEANYWHERECACHEREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA&\x12$storage.googleapis.com/AnywhereCache'
+    _globals['_CREATEANYWHERECACHEREQUEST'].fields_by_name['anywhere_cache']._loaded_options = None
+    _globals['_CREATEANYWHERECACHEREQUEST'].fields_by_name['anywhere_cache']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEANYWHERECACHEREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_CREATEANYWHERECACHEREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_UPDATEANYWHERECACHEREQUEST'].fields_by_name['anywhere_cache']._loaded_options = None
+    _globals['_UPDATEANYWHERECACHEREQUEST'].fields_by_name['anywhere_cache']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEANYWHERECACHEREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATEANYWHERECACHEREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEANYWHERECACHEREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_UPDATEANYWHERECACHEREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_DISABLEANYWHERECACHEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DISABLEANYWHERECACHEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA&\n$storage.googleapis.com/AnywhereCache'
+    _globals['_DISABLEANYWHERECACHEREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_DISABLEANYWHERECACHEREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_PAUSEANYWHERECACHEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_PAUSEANYWHERECACHEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA&\n$storage.googleapis.com/AnywhereCache'
+    _globals['_PAUSEANYWHERECACHEREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_PAUSEANYWHERECACHEREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_RESUMEANYWHERECACHEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_RESUMEANYWHERECACHEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA&\n$storage.googleapis.com/AnywhereCache'
+    _globals['_RESUMEANYWHERECACHEREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_RESUMEANYWHERECACHEREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_GETANYWHERECACHEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETANYWHERECACHEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA&\n$storage.googleapis.com/AnywhereCache'
+    _globals['_GETANYWHERECACHEREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_GETANYWHERECACHEREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_LISTANYWHERECACHESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTANYWHERECACHESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA&\x12$storage.googleapis.com/AnywhereCache'
+    _globals['_LISTANYWHERECACHESREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_LISTANYWHERECACHESREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_INTELLIGENCECONFIG_FILTER_CLOUDSTORAGELOCATIONS'].fields_by_name['locations']._loaded_options = None
+    _globals['_INTELLIGENCECONFIG_FILTER_CLOUDSTORAGELOCATIONS'].fields_by_name['locations']._serialized_options = b'\xe0A\x01'
+    _globals['_INTELLIGENCECONFIG_FILTER_CLOUDSTORAGEBUCKETS'].fields_by_name['bucket_id_regexes']._loaded_options = None
+    _globals['_INTELLIGENCECONFIG_FILTER_CLOUDSTORAGEBUCKETS'].fields_by_name['bucket_id_regexes']._serialized_options = b'\xe0A\x01'
+    _globals['_INTELLIGENCECONFIG_EFFECTIVEINTELLIGENCECONFIG'].fields_by_name['effective_edition']._loaded_options = None
+    _globals['_INTELLIGENCECONFIG_EFFECTIVEINTELLIGENCECONFIG'].fields_by_name['effective_edition']._serialized_options = b'\xe0A\x03'
+    _globals['_INTELLIGENCECONFIG_EFFECTIVEINTELLIGENCECONFIG'].fields_by_name['intelligence_config']._loaded_options = None
+    _globals['_INTELLIGENCECONFIG_EFFECTIVEINTELLIGENCECONFIG'].fields_by_name['intelligence_config']._serialized_options = b'\xe0A\x03'
+    _globals['_INTELLIGENCECONFIG_TRIALCONFIG'].fields_by_name['expire_time']._loaded_options = None
+    _globals['_INTELLIGENCECONFIG_TRIALCONFIG'].fields_by_name['expire_time']._serialized_options = b'\xe0A\x03'
+    _globals['_INTELLIGENCECONFIG'].fields_by_name['name']._loaded_options = None
+    _globals['_INTELLIGENCECONFIG'].fields_by_name['name']._serialized_options = b'\xe0A\x08'
+    _globals['_INTELLIGENCECONFIG'].fields_by_name['edition_config']._loaded_options = None
+    _globals['_INTELLIGENCECONFIG'].fields_by_name['edition_config']._serialized_options = b'\xe0A\x01'
+    _globals['_INTELLIGENCECONFIG'].fields_by_name['update_time']._loaded_options = None
+    _globals['_INTELLIGENCECONFIG'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_INTELLIGENCECONFIG'].fields_by_name['filter']._loaded_options = None
+    _globals['_INTELLIGENCECONFIG'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_INTELLIGENCECONFIG'].fields_by_name['effective_intelligence_config']._loaded_options = None
+    _globals['_INTELLIGENCECONFIG'].fields_by_name['effective_intelligence_config']._serialized_options = b'\xe0A\x03'
+    _globals['_INTELLIGENCECONFIG']._loaded_options = None
+    _globals['_INTELLIGENCECONFIG']._serialized_options = b'\xeaA\x87\x02\n)storage.googleapis.com/IntelligenceConfig\x128folders/{folder}/locations/{location}/intelligenceConfig\x12;organizations/{org}/locations/{location}/intelligenceConfig\x12:projects/{project}/locations/{location}/intelligenceConfig*\x13intelligenceConfigs2\x12intelligenceConfig'
+    _globals['_UPDATEORGANIZATIONINTELLIGENCECONFIGREQUEST'].fields_by_name['intelligence_config']._loaded_options = None
+    _globals['_UPDATEORGANIZATIONINTELLIGENCECONFIGREQUEST'].fields_by_name['intelligence_config']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEORGANIZATIONINTELLIGENCECONFIGREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATEORGANIZATIONINTELLIGENCECONFIGREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEORGANIZATIONINTELLIGENCECONFIGREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_UPDATEORGANIZATIONINTELLIGENCECONFIGREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_UPDATEFOLDERINTELLIGENCECONFIGREQUEST'].fields_by_name['intelligence_config']._loaded_options = None
+    _globals['_UPDATEFOLDERINTELLIGENCECONFIGREQUEST'].fields_by_name['intelligence_config']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEFOLDERINTELLIGENCECONFIGREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATEFOLDERINTELLIGENCECONFIGREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEFOLDERINTELLIGENCECONFIGREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_UPDATEFOLDERINTELLIGENCECONFIGREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_UPDATEPROJECTINTELLIGENCECONFIGREQUEST'].fields_by_name['intelligence_config']._loaded_options = None
+    _globals['_UPDATEPROJECTINTELLIGENCECONFIGREQUEST'].fields_by_name['intelligence_config']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEPROJECTINTELLIGENCECONFIGREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATEPROJECTINTELLIGENCECONFIGREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEPROJECTINTELLIGENCECONFIGREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_UPDATEPROJECTINTELLIGENCECONFIGREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_GETORGANIZATIONINTELLIGENCECONFIGREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETORGANIZATIONINTELLIGENCECONFIGREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA+\n)storage.googleapis.com/IntelligenceConfig'
+    _globals['_GETFOLDERINTELLIGENCECONFIGREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETFOLDERINTELLIGENCECONFIGREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA+\n)storage.googleapis.com/IntelligenceConfig'
+    _globals['_GETPROJECTINTELLIGENCECONFIGREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETPROJECTINTELLIGENCECONFIGREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA+\n)storage.googleapis.com/IntelligenceConfig'
+    _globals['_STORAGECONTROL']._loaded_options = None
+    _globals['_STORAGECONTROL']._serialized_options = b'\xcaA\x16storage.googleapis.com\xd2A\x8a\x02https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/cloud-platform.read-only,https://www.googleapis.com/auth/devstorage.full_control,https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/devstorage.read_write'
+    _globals['_STORAGECONTROL'].methods_by_name['CreateFolder']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['CreateFolder']._serialized_options = b'\xdaA\x17parent,folder,folder_id\x8a\xd3\xe4\x93\x02\x17\x12\x15\n\x06parent\x12\x0b{bucket=**}'
+    _globals['_STORAGECONTROL'].methods_by_name['DeleteFolder']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['DeleteFolder']._serialized_options = b'\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**'
+    _globals['_STORAGECONTROL'].methods_by_name['GetFolder']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['GetFolder']._serialized_options = b'\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**'
+    _globals['_STORAGECONTROL'].methods_by_name['ListFolders']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['ListFolders']._serialized_options = b'\xdaA\x06parent\x8a\xd3\xe4\x93\x02\x17\x12\x15\n\x06parent\x12\x0b{bucket=**}'
+    _globals['_STORAGECONTROL'].methods_by_name['RenameFolder']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['RenameFolder']._serialized_options = b'\xcaA\x1e\n\x06Folder\x12\x14RenameFolderMetadata\xdaA\x1aname,destination_folder_id\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**'
+    _globals['_STORAGECONTROL'].methods_by_name['GetStorageLayout']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['GetStorageLayout']._serialized_options = b'\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**'
+    _globals['_STORAGECONTROL'].methods_by_name['CreateManagedFolder']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['CreateManagedFolder']._serialized_options = b"\xdaA'parent,managed_folder,managed_folder_id\x8a\xd3\xe4\x93\x02\x17\x12\x15\n\x06parent\x12\x0b{bucket=**}"
+    _globals['_STORAGECONTROL'].methods_by_name['DeleteManagedFolder']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['DeleteManagedFolder']._serialized_options = b'\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**'
+    _globals['_STORAGECONTROL'].methods_by_name['GetManagedFolder']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['GetManagedFolder']._serialized_options = b'\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**'
+    _globals['_STORAGECONTROL'].methods_by_name['ListManagedFolders']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['ListManagedFolders']._serialized_options = b'\xdaA\x06parent\x8a\xd3\xe4\x93\x02\x17\x12\x15\n\x06parent\x12\x0b{bucket=**}'
+    _globals['_STORAGECONTROL'].methods_by_name['CreateAnywhereCache']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['CreateAnywhereCache']._serialized_options = b'\xcaA,\n\rAnywhereCache\x12\x1bCreateAnywhereCacheMetadata\xdaA\x15parent,anywhere_cache\x8a\xd3\xe4\x93\x02\x17\x12\x15\n\x06parent\x12\x0b{bucket=**}'
+    _globals['_STORAGECONTROL'].methods_by_name['UpdateAnywhereCache']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['UpdateAnywhereCache']._serialized_options = b'\xcaA,\n\rAnywhereCache\x12\x1bUpdateAnywhereCacheMetadata\xdaA\x1aanywhere_cache,update_mask\x8a\xd3\xe4\x93\x029\x127\n\x13anywhere_cache.name\x12 {bucket=projects/*/buckets/*}/**'
+    _globals['_STORAGECONTROL'].methods_by_name['DisableAnywhereCache']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['DisableAnywhereCache']._serialized_options = b'\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**'
+    _globals['_STORAGECONTROL'].methods_by_name['PauseAnywhereCache']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['PauseAnywhereCache']._serialized_options = b'\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**'
+    _globals['_STORAGECONTROL'].methods_by_name['ResumeAnywhereCache']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['ResumeAnywhereCache']._serialized_options = b'\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**'
+    _globals['_STORAGECONTROL'].methods_by_name['GetAnywhereCache']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['GetAnywhereCache']._serialized_options = b'\xdaA\x04name\x8a\xd3\xe4\x93\x02*\x12(\n\x04name\x12 {bucket=projects/*/buckets/*}/**'
+    _globals['_STORAGECONTROL'].methods_by_name['ListAnywhereCaches']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['ListAnywhereCaches']._serialized_options = b'\xdaA\x06parent\x8a\xd3\xe4\x93\x02\x17\x12\x15\n\x06parent\x12\x0b{bucket=**}'
+    _globals['_STORAGECONTROL'].methods_by_name['GetProjectIntelligenceConfig']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['GetProjectIntelligenceConfig']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x026\x124/v2/{name=projects/*/locations/*/intelligenceConfig}'
+    _globals['_STORAGECONTROL'].methods_by_name['UpdateProjectIntelligenceConfig']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['UpdateProjectIntelligenceConfig']._serialized_options = b'\xdaA\x1fintelligence_config,update_mask\x82\xd3\xe4\x93\x02_2H/v2/{intelligence_config.name=projects/*/locations/*/intelligenceConfig}:\x13intelligence_config'
+    _globals['_STORAGECONTROL'].methods_by_name['GetFolderIntelligenceConfig']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['GetFolderIntelligenceConfig']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x025\x123/v2/{name=folders/*/locations/*/intelligenceConfig}'
+    _globals['_STORAGECONTROL'].methods_by_name['UpdateFolderIntelligenceConfig']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['UpdateFolderIntelligenceConfig']._serialized_options = b'\xdaA\x1fintelligence_config,update_mask\x82\xd3\xe4\x93\x02^2G/v2/{intelligence_config.name=folders/*/locations/*/intelligenceConfig}:\x13intelligence_config'
+    _globals['_STORAGECONTROL'].methods_by_name['GetOrganizationIntelligenceConfig']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['GetOrganizationIntelligenceConfig']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02;\x129/v2/{name=organizations/*/locations/*/intelligenceConfig}'
+    _globals['_STORAGECONTROL'].methods_by_name['UpdateOrganizationIntelligenceConfig']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['UpdateOrganizationIntelligenceConfig']._serialized_options = b'\xdaA\x1fintelligence_config,update_mask\x82\xd3\xe4\x93\x02d2M/v2/{intelligence_config.name=organizations/*/locations/*/intelligenceConfig}:\x13intelligence_config'
+    _globals['_STORAGECONTROL'].methods_by_name['GetIamPolicy']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['GetIamPolicy']._serialized_options = b'\xdaA\x08resource\x8a\xd3\xe4\x93\x02G\x12\x17\n\x08resource\x12\x0b{bucket=**}\x12,\n\x08resource\x12 {bucket=projects/*/buckets/*}/**'
+    _globals['_STORAGECONTROL'].methods_by_name['SetIamPolicy']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['SetIamPolicy']._serialized_options = b'\xdaA\x0fresource,policy\x8a\xd3\xe4\x93\x02G\x12\x17\n\x08resource\x12\x0b{bucket=**}\x12,\n\x08resource\x12 {bucket=projects/*/buckets/*}/**'
+    _globals['_STORAGECONTROL'].methods_by_name['TestIamPermissions']._loaded_options = None
+    _globals['_STORAGECONTROL'].methods_by_name['TestIamPermissions']._serialized_options = b'\xdaA\x14resource,permissions\x8a\xd3\xe4\x93\x02\x8c\x01\x12\x17\n\x08resource\x12\x0b{bucket=**}\x124\n\x08resource\x12({bucket=projects/*/buckets/*}/objects/**\x12;\n\x08resource\x12/{bucket=projects/*/buckets/*}/managedFolders/**'
+    _globals['_PENDINGRENAMEINFO']._serialized_start = 473
+    _globals['_PENDINGRENAMEINFO']._serialized_end = 516
+    _globals['_FOLDER']._serialized_start = 519
+    _globals['_FOLDER']._serialized_end = 873
+    _globals['_GETFOLDERREQUEST']._serialized_start = 876
+    _globals['_GETFOLDERREQUEST']._serialized_end = 1120
+    _globals['_CREATEFOLDERREQUEST']._serialized_start = 1123
+    _globals['_CREATEFOLDERREQUEST']._serialized_end = 1336
+    _globals['_DELETEFOLDERREQUEST']._serialized_start = 1339
+    _globals['_DELETEFOLDERREQUEST']._serialized_end = 1586
+    _globals['_LISTFOLDERSREQUEST']._serialized_start = 1589
+    _globals['_LISTFOLDERSREQUEST']._serialized_end = 1857
+    _globals['_LISTFOLDERSRESPONSE']._serialized_start = 1859
+    _globals['_LISTFOLDERSRESPONSE']._serialized_end = 1957
+    _globals['_RENAMEFOLDERREQUEST']._serialized_start = 1960
+    _globals['_RENAMEFOLDERREQUEST']._serialized_end = 2243
+    _globals['_COMMONLONGRUNNINGOPERATIONMETADATA']._serialized_start = 2246
+    _globals['_COMMONLONGRUNNINGOPERATIONMETADATA']._serialized_end = 2528
+    _globals['_RENAMEFOLDERMETADATA']._serialized_start = 2531
+    _globals['_RENAMEFOLDERMETADATA']._serialized_end = 2698
+    _globals['_STORAGELAYOUT']._serialized_start = 2701
+    _globals['_STORAGELAYOUT']._serialized_end = 3205
+    _globals['_STORAGELAYOUT_CUSTOMPLACEMENTCONFIG']._serialized_start = 2991
+    _globals['_STORAGELAYOUT_CUSTOMPLACEMENTCONFIG']._serialized_end = 3038
+    _globals['_STORAGELAYOUT_HIERARCHICALNAMESPACE']._serialized_start = 3040
+    _globals['_STORAGELAYOUT_HIERARCHICALNAMESPACE']._serialized_end = 3080
+    _globals['_GETSTORAGELAYOUTREQUEST']._serialized_start = 3208
+    _globals['_GETSTORAGELAYOUTREQUEST']._serialized_end = 3342
+    _globals['_MANAGEDFOLDER']._serialized_start = 3345
+    _globals['_MANAGEDFOLDER']._serialized_end = 3664
+    _globals['_GETMANAGEDFOLDERREQUEST']._serialized_start = 3667
+    _globals['_GETMANAGEDFOLDERREQUEST']._serialized_end = 3925
+    _globals['_CREATEMANAGEDFOLDERREQUEST']._serialized_start = 3928
+    _globals['_CREATEMANAGEDFOLDERREQUEST']._serialized_end = 4154
+    _globals['_DELETEMANAGEDFOLDERREQUEST']._serialized_start = 4157
+    _globals['_DELETEMANAGEDFOLDERREQUEST']._serialized_end = 4443
+    _globals['_LISTMANAGEDFOLDERSREQUEST']._serialized_start = 4446
+    _globals['_LISTMANAGEDFOLDERSREQUEST']._serialized_end = 4638
+    _globals['_LISTMANAGEDFOLDERSRESPONSE']._serialized_start = 4640
+    _globals['_LISTMANAGEDFOLDERSRESPONSE']._serialized_end = 4760
+    _globals['_CREATEANYWHERECACHEMETADATA']._serialized_start = 4763
+    _globals['_CREATEANYWHERECACHEMETADATA']._serialized_end = 5067
+    _globals['_UPDATEANYWHERECACHEMETADATA']._serialized_start = 5070
+    _globals['_UPDATEANYWHERECACHEMETADATA']._serialized_end = 5374
+    _globals['_ANYWHERECACHE']._serialized_start = 5377
+    _globals['_ANYWHERECACHE']._serialized_end = 5798
+    _globals['_CREATEANYWHERECACHEREQUEST']._serialized_start = 5801
+    _globals['_CREATEANYWHERECACHEREQUEST']._serialized_end = 5995
+    _globals['_UPDATEANYWHERECACHEREQUEST']._serialized_start = 5998
+    _globals['_UPDATEANYWHERECACHEREQUEST']._serialized_end = 6184
+    _globals['_DISABLEANYWHERECACHEREQUEST']._serialized_start = 6186
+    _globals['_DISABLEANYWHERECACHEREQUEST']._serialized_end = 6308
+    _globals['_PAUSEANYWHERECACHEREQUEST']._serialized_start = 6310
+    _globals['_PAUSEANYWHERECACHEREQUEST']._serialized_end = 6430
+    _globals['_RESUMEANYWHERECACHEREQUEST']._serialized_start = 6432
+    _globals['_RESUMEANYWHERECACHEREQUEST']._serialized_end = 6553
+    _globals['_GETANYWHERECACHEREQUEST']._serialized_start = 6555
+    _globals['_GETANYWHERECACHEREQUEST']._serialized_end = 6673
+    _globals['_LISTANYWHERECACHESREQUEST']._serialized_start = 6676
+    _globals['_LISTANYWHERECACHESREQUEST']._serialized_end = 6837
+    _globals['_LISTANYWHERECACHESRESPONSE']._serialized_start = 6839
+    _globals['_LISTANYWHERECACHESRESPONSE']._serialized_end = 6959
+    _globals['_INTELLIGENCECONFIG']._serialized_start = 6962
+    _globals['_INTELLIGENCECONFIG']._serialized_end = 8768
+    _globals['_INTELLIGENCECONFIG_FILTER']._serialized_start = 7423
+    _globals['_INTELLIGENCECONFIG_FILTER']._serialized_end = 8059
+    _globals['_INTELLIGENCECONFIG_FILTER_CLOUDSTORAGELOCATIONS']._serialized_start = 7905
+    _globals['_INTELLIGENCECONFIG_FILTER_CLOUDSTORAGELOCATIONS']._serialized_end = 7952
+    _globals['_INTELLIGENCECONFIG_FILTER_CLOUDSTORAGEBUCKETS']._serialized_start = 7954
+    _globals['_INTELLIGENCECONFIG_FILTER_CLOUDSTORAGEBUCKETS']._serialized_end = 8007
+    _globals['_INTELLIGENCECONFIG_EFFECTIVEINTELLIGENCECONFIG']._serialized_start = 8062
+    _globals['_INTELLIGENCECONFIG_EFFECTIVEINTELLIGENCECONFIG']._serialized_end = 8328
+    _globals['_INTELLIGENCECONFIG_EFFECTIVEINTELLIGENCECONFIG_EFFECTIVEEDITION']._serialized_start = 8251
+    _globals['_INTELLIGENCECONFIG_EFFECTIVEINTELLIGENCECONFIG_EFFECTIVEEDITION']._serialized_end = 8328
+    _globals['_INTELLIGENCECONFIG_TRIALCONFIG']._serialized_start = 8330
+    _globals['_INTELLIGENCECONFIG_TRIALCONFIG']._serialized_end = 8397
+    _globals['_INTELLIGENCECONFIG_EDITIONCONFIG']._serialized_start = 8399
+    _globals['_INTELLIGENCECONFIG_EDITIONCONFIG']._serialized_end = 8498
+    _globals['_UPDATEORGANIZATIONINTELLIGENCECONFIGREQUEST']._serialized_start = 8771
+    _globals['_UPDATEORGANIZATIONINTELLIGENCECONFIGREQUEST']._serialized_end = 8984
+    _globals['_UPDATEFOLDERINTELLIGENCECONFIGREQUEST']._serialized_start = 8987
+    _globals['_UPDATEFOLDERINTELLIGENCECONFIGREQUEST']._serialized_end = 9194
+    _globals['_UPDATEPROJECTINTELLIGENCECONFIGREQUEST']._serialized_start = 9197
+    _globals['_UPDATEPROJECTINTELLIGENCECONFIGREQUEST']._serialized_end = 9405
+    _globals['_GETORGANIZATIONINTELLIGENCECONFIGREQUEST']._serialized_start = 9407
+    _globals['_GETORGANIZATIONINTELLIGENCECONFIGREQUEST']._serialized_end = 9514
+    _globals['_GETFOLDERINTELLIGENCECONFIGREQUEST']._serialized_start = 9516
+    _globals['_GETFOLDERINTELLIGENCECONFIGREQUEST']._serialized_end = 9617
+    _globals['_GETPROJECTINTELLIGENCECONFIGREQUEST']._serialized_start = 9619
+    _globals['_GETPROJECTINTELLIGENCECONFIGREQUEST']._serialized_end = 9721
+    _globals['_STORAGECONTROL']._serialized_start = 9724
+    _globals['_STORAGECONTROL']._serialized_end = 15210

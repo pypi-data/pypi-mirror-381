@@ -1,0 +1,216 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/cloud/managedkafka/v1/managed_kafka.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import field_info_pb2 as google_dot_api_dot_field__info__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from .....google.cloud.managedkafka.v1 import resources_pb2 as google_dot_cloud_dot_managedkafka_dot_v1_dot_resources__pb2
+from .....google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n0google/cloud/managedkafka/v1/managed_kafka.proto\x12\x1cgoogle.cloud.managedkafka.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x1bgoogle/api/field_info.proto\x1a\x19google/api/resource.proto\x1a,google/cloud/managedkafka/v1/resources.proto\x1a#google/longrunning/operations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto"\xaf\x01\n\x13ListClustersRequest\x12;\n\x06parent\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\x12#managedkafka.googleapis.com/Cluster\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x05 \x01(\tB\x03\xe0A\x01"}\n\x14ListClustersResponse\x127\n\x08clusters\x18\x01 \x03(\x0b2%.google.cloud.managedkafka.v1.Cluster\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t"N\n\x11GetClusterRequest\x129\n\x04name\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\n#managedkafka.googleapis.com/Cluster"\xca\x01\n\x14CreateClusterRequest\x12;\n\x06parent\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\x12#managedkafka.googleapis.com/Cluster\x12\x17\n\ncluster_id\x18\x02 \x01(\tB\x03\xe0A\x02\x12;\n\x07cluster\x18\x03 \x01(\x0b2%.google.cloud.managedkafka.v1.ClusterB\x03\xe0A\x02\x12\x1f\n\nrequest_id\x18\x04 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"\xaa\x01\n\x14UpdateClusterRequest\x124\n\x0bupdate_mask\x18\x01 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02\x12;\n\x07cluster\x18\x02 \x01(\x0b2%.google.cloud.managedkafka.v1.ClusterB\x03\xe0A\x02\x12\x1f\n\nrequest_id\x18\x03 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"r\n\x14DeleteClusterRequest\x129\n\x04name\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\n#managedkafka.googleapis.com/Cluster\x12\x1f\n\nrequest_id\x18\x02 \x01(\tB\x0b\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01"\x7f\n\x11ListTopicsRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\x12!managedkafka.googleapis.com/Topic\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01"b\n\x12ListTopicsResponse\x123\n\x06topics\x18\x01 \x03(\x0b2#.google.cloud.managedkafka.v1.Topic\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"J\n\x0fGetTopicRequest\x127\n\x04name\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!managedkafka.googleapis.com/Topic"\x9f\x01\n\x12CreateTopicRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\x12!managedkafka.googleapis.com/Topic\x12\x15\n\x08topic_id\x18\x02 \x01(\tB\x03\xe0A\x02\x127\n\x05topic\x18\x03 \x01(\x0b2#.google.cloud.managedkafka.v1.TopicB\x03\xe0A\x02"\x83\x01\n\x12UpdateTopicRequest\x124\n\x0bupdate_mask\x18\x01 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02\x127\n\x05topic\x18\x02 \x01(\x0b2#.google.cloud.managedkafka.v1.TopicB\x03\xe0A\x02"M\n\x12DeleteTopicRequest\x127\n\x04name\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!managedkafka.googleapis.com/Topic"\x8f\x01\n\x19ListConsumerGroupsRequest\x12A\n\x06parent\x18\x01 \x01(\tB1\xe0A\x02\xfaA+\x12)managedkafka.googleapis.com/ConsumerGroup\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01"{\n\x1aListConsumerGroupsResponse\x12D\n\x0fconsumer_groups\x18\x01 \x03(\x0b2+.google.cloud.managedkafka.v1.ConsumerGroup\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"Z\n\x17GetConsumerGroupRequest\x12?\n\x04name\x18\x01 \x01(\tB1\xe0A\x02\xfaA+\n)managedkafka.googleapis.com/ConsumerGroup"\x9c\x01\n\x1aUpdateConsumerGroupRequest\x124\n\x0bupdate_mask\x18\x01 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02\x12H\n\x0econsumer_group\x18\x02 \x01(\x0b2+.google.cloud.managedkafka.v1.ConsumerGroupB\x03\xe0A\x02"]\n\x1aDeleteConsumerGroupRequest\x12?\n\x04name\x18\x01 \x01(\tB1\xe0A\x02\xfaA+\n)managedkafka.googleapis.com/ConsumerGroup"{\n\x0fListAclsRequest\x127\n\x06parent\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\x12\x1fmanagedkafka.googleapis.com/Acl\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01"\\\n\x10ListAclsResponse\x12/\n\x04acls\x18\x01 \x03(\x0b2!.google.cloud.managedkafka.v1.Acl\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"F\n\rGetAclRequest\x125\n\x04name\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fmanagedkafka.googleapis.com/Acl"\x95\x01\n\x10CreateAclRequest\x127\n\x06parent\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\x12\x1fmanagedkafka.googleapis.com/Acl\x12\x13\n\x06acl_id\x18\x02 \x01(\tB\x03\xe0A\x02\x123\n\x03acl\x18\x03 \x01(\x0b2!.google.cloud.managedkafka.v1.AclB\x03\xe0A\x02"}\n\x10UpdateAclRequest\x123\n\x03acl\x18\x01 \x01(\x0b2!.google.cloud.managedkafka.v1.AclB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x01"I\n\x10DeleteAclRequest\x125\n\x04name\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fmanagedkafka.googleapis.com/Acl"\x8a\x01\n\x12AddAclEntryRequest\x124\n\x03acl\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fmanagedkafka.googleapis.com/Acl\x12>\n\tacl_entry\x18\x02 \x01(\x0b2&.google.cloud.managedkafka.v1.AclEntryB\x03\xe0A\x02"Z\n\x13AddAclEntryResponse\x12.\n\x03acl\x18\x01 \x01(\x0b2!.google.cloud.managedkafka.v1.Acl\x12\x13\n\x0bacl_created\x18\x02 \x01(\x08"\x8d\x01\n\x15RemoveAclEntryRequest\x124\n\x03acl\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fmanagedkafka.googleapis.com/Acl\x12>\n\tacl_entry\x18\x02 \x01(\x0b2&.google.cloud.managedkafka.v1.AclEntryB\x03\xe0A\x02"k\n\x16RemoveAclEntryResponse\x120\n\x03acl\x18\x01 \x01(\x0b2!.google.cloud.managedkafka.v1.AclH\x00\x12\x15\n\x0bacl_deleted\x18\x02 \x01(\x08H\x00B\x08\n\x06result2\xd1 \n\x0cManagedKafka\x12\xb4\x01\n\x0cListClusters\x121.google.cloud.managedkafka.v1.ListClustersRequest\x1a2.google.cloud.managedkafka.v1.ListClustersResponse"=\xdaA\x06parent\x82\xd3\xe4\x93\x02.\x12,/v1/{parent=projects/*/locations/*}/clusters\x12\xa1\x01\n\nGetCluster\x12/.google.cloud.managedkafka.v1.GetClusterRequest\x1a%.google.cloud.managedkafka.v1.Cluster";\xdaA\x04name\x82\xd3\xe4\x93\x02.\x12,/v1/{name=projects/*/locations/*/clusters/*}\x12\xdc\x01\n\rCreateCluster\x122.google.cloud.managedkafka.v1.CreateClusterRequest\x1a\x1d.google.longrunning.Operation"x\xcaA\x1c\n\x07Cluster\x12\x11OperationMetadata\xdaA\x19parent,cluster,cluster_id\x82\xd3\xe4\x93\x027",/v1/{parent=projects/*/locations/*}/clusters:\x07cluster\x12\xde\x01\n\rUpdateCluster\x122.google.cloud.managedkafka.v1.UpdateClusterRequest\x1a\x1d.google.longrunning.Operation"z\xcaA\x1c\n\x07Cluster\x12\x11OperationMetadata\xdaA\x13cluster,update_mask\x82\xd3\xe4\x93\x02?24/v1/{cluster.name=projects/*/locations/*/clusters/*}:\x07cluster\x12\xcc\x01\n\rDeleteCluster\x122.google.cloud.managedkafka.v1.DeleteClusterRequest\x1a\x1d.google.longrunning.Operation"h\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02.*,/v1/{name=projects/*/locations/*/clusters/*}\x12\xb7\x01\n\nListTopics\x12/.google.cloud.managedkafka.v1.ListTopicsRequest\x1a0.google.cloud.managedkafka.v1.ListTopicsResponse"F\xdaA\x06parent\x82\xd3\xe4\x93\x027\x125/v1/{parent=projects/*/locations/*/clusters/*}/topics\x12\xa4\x01\n\x08GetTopic\x12-.google.cloud.managedkafka.v1.GetTopicRequest\x1a#.google.cloud.managedkafka.v1.Topic"D\xdaA\x04name\x82\xd3\xe4\x93\x027\x125/v1/{name=projects/*/locations/*/clusters/*/topics/*}\x12\xc2\x01\n\x0bCreateTopic\x120.google.cloud.managedkafka.v1.CreateTopicRequest\x1a#.google.cloud.managedkafka.v1.Topic"\\\xdaA\x15parent,topic,topic_id\x82\xd3\xe4\x93\x02>"5/v1/{parent=projects/*/locations/*/clusters/*}/topics:\x05topic\x12\xc4\x01\n\x0bUpdateTopic\x120.google.cloud.managedkafka.v1.UpdateTopicRequest\x1a#.google.cloud.managedkafka.v1.Topic"^\xdaA\x11topic,update_mask\x82\xd3\xe4\x93\x02D2;/v1/{topic.name=projects/*/locations/*/clusters/*/topics/*}:\x05topic\x12\x9d\x01\n\x0bDeleteTopic\x120.google.cloud.managedkafka.v1.DeleteTopicRequest\x1a\x16.google.protobuf.Empty"D\xdaA\x04name\x82\xd3\xe4\x93\x027*5/v1/{name=projects/*/locations/*/clusters/*/topics/*}\x12\xd7\x01\n\x12ListConsumerGroups\x127.google.cloud.managedkafka.v1.ListConsumerGroupsRequest\x1a8.google.cloud.managedkafka.v1.ListConsumerGroupsResponse"N\xdaA\x06parent\x82\xd3\xe4\x93\x02?\x12=/v1/{parent=projects/*/locations/*/clusters/*}/consumerGroups\x12\xc5\x01\n\x10GetConsumerGroup\x125.google.cloud.managedkafka.v1.GetConsumerGroupRequest\x1a+.google.cloud.managedkafka.v1.ConsumerGroup"M\xdaA\x04name\x82\xd3\xe4\x93\x02@\x12>/v1/{name=projects/*/locations/*/clusters/*/consumerGroups/**}\x12\x81\x02\n\x13UpdateConsumerGroup\x128.google.cloud.managedkafka.v1.UpdateConsumerGroupRequest\x1a+.google.cloud.managedkafka.v1.ConsumerGroup"\x82\x01\xdaA\x1aconsumer_group,update_mask\x82\xd3\xe4\x93\x02_2M/v1/{consumer_group.name=projects/*/locations/*/clusters/*/consumerGroups/**}:\x0econsumer_group\x12\xb6\x01\n\x13DeleteConsumerGroup\x128.google.cloud.managedkafka.v1.DeleteConsumerGroupRequest\x1a\x16.google.protobuf.Empty"M\xdaA\x04name\x82\xd3\xe4\x93\x02@*>/v1/{name=projects/*/locations/*/clusters/*/consumerGroups/**}\x12\xaf\x01\n\x08ListAcls\x12-.google.cloud.managedkafka.v1.ListAclsRequest\x1a..google.cloud.managedkafka.v1.ListAclsResponse"D\xdaA\x06parent\x82\xd3\xe4\x93\x025\x123/v1/{parent=projects/*/locations/*/clusters/*}/acls\x12\x9d\x01\n\x06GetAcl\x12+.google.cloud.managedkafka.v1.GetAclRequest\x1a!.google.cloud.managedkafka.v1.Acl"C\xdaA\x04name\x82\xd3\xe4\x93\x026\x124/v1/{name=projects/*/locations/*/clusters/*/acls/**}\x12\xb4\x01\n\tCreateAcl\x12..google.cloud.managedkafka.v1.CreateAclRequest\x1a!.google.cloud.managedkafka.v1.Acl"T\xdaA\x11parent,acl,acl_id\x82\xd3\xe4\x93\x02:"3/v1/{parent=projects/*/locations/*/clusters/*}/acls:\x03acl\x12\xb7\x01\n\tUpdateAcl\x12..google.cloud.managedkafka.v1.UpdateAclRequest\x1a!.google.cloud.managedkafka.v1.Acl"W\xdaA\x0facl,update_mask\x82\xd3\xe4\x93\x02?28/v1/{acl.name=projects/*/locations/*/clusters/*/acls/**}:\x03acl\x12\x98\x01\n\tDeleteAcl\x12..google.cloud.managedkafka.v1.DeleteAclRequest\x1a\x16.google.protobuf.Empty"C\xdaA\x04name\x82\xd3\xe4\x93\x026*4/v1/{name=projects/*/locations/*/clusters/*/acls/**}\x12\xd6\x01\n\x0bAddAclEntry\x120.google.cloud.managedkafka.v1.AddAclEntryRequest\x1a1.google.cloud.managedkafka.v1.AddAclEntryResponse"b\xdaA\racl,acl_entry\x82\xd3\xe4\x93\x02L"?/v1/{acl=projects/*/locations/*/clusters/*/acls/**}:addAclEntry:\tacl_entry\x12\xe2\x01\n\x0eRemoveAclEntry\x123.google.cloud.managedkafka.v1.RemoveAclEntryRequest\x1a4.google.cloud.managedkafka.v1.RemoveAclEntryResponse"e\xdaA\racl,acl_entry\x82\xd3\xe4\x93\x02O"B/v1/{acl=projects/*/locations/*/clusters/*/acls/**}:removeAclEntry:\tacl_entry\x1aO\xcaA\x1bmanagedkafka.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platformB\xdd\x01\n com.google.cloud.managedkafka.v1B\x11ManagedKafkaProtoP\x01ZDcloud.google.com/go/managedkafka/apiv1/managedkafkapb;managedkafkapb\xaa\x02\x1cGoogle.Cloud.ManagedKafka.V1\xca\x02\x1cGoogle\\Cloud\\ManagedKafka\\V1\xea\x02\x1fGoogle::Cloud::ManagedKafka::V1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.managedkafka.v1.managed_kafka_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n com.google.cloud.managedkafka.v1B\x11ManagedKafkaProtoP\x01ZDcloud.google.com/go/managedkafka/apiv1/managedkafkapb;managedkafkapb\xaa\x02\x1cGoogle.Cloud.ManagedKafka.V1\xca\x02\x1cGoogle\\Cloud\\ManagedKafka\\V1\xea\x02\x1fGoogle::Cloud::ManagedKafka::V1'
+    _globals['_LISTCLUSTERSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTCLUSTERSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA%\x12#managedkafka.googleapis.com/Cluster'
+    _globals['_LISTCLUSTERSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTCLUSTERSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTCLUSTERSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTCLUSTERSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTCLUSTERSREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTCLUSTERSREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTCLUSTERSREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTCLUSTERSREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_GETCLUSTERREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETCLUSTERREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA%\n#managedkafka.googleapis.com/Cluster'
+    _globals['_CREATECLUSTERREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATECLUSTERREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA%\x12#managedkafka.googleapis.com/Cluster'
+    _globals['_CREATECLUSTERREQUEST'].fields_by_name['cluster_id']._loaded_options = None
+    _globals['_CREATECLUSTERREQUEST'].fields_by_name['cluster_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATECLUSTERREQUEST'].fields_by_name['cluster']._loaded_options = None
+    _globals['_CREATECLUSTERREQUEST'].fields_by_name['cluster']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATECLUSTERREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_CREATECLUSTERREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_UPDATECLUSTERREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATECLUSTERREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATECLUSTERREQUEST'].fields_by_name['cluster']._loaded_options = None
+    _globals['_UPDATECLUSTERREQUEST'].fields_by_name['cluster']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATECLUSTERREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_UPDATECLUSTERREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_DELETECLUSTERREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETECLUSTERREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA%\n#managedkafka.googleapis.com/Cluster'
+    _globals['_DELETECLUSTERREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_DELETECLUSTERREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01\xe2\x8c\xcf\xd7\x08\x02\x08\x01'
+    _globals['_LISTTOPICSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTTOPICSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\x12!managedkafka.googleapis.com/Topic'
+    _globals['_LISTTOPICSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTTOPICSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTTOPICSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTTOPICSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_GETTOPICREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETTOPICREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA#\n!managedkafka.googleapis.com/Topic'
+    _globals['_CREATETOPICREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATETOPICREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\x12!managedkafka.googleapis.com/Topic'
+    _globals['_CREATETOPICREQUEST'].fields_by_name['topic_id']._loaded_options = None
+    _globals['_CREATETOPICREQUEST'].fields_by_name['topic_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATETOPICREQUEST'].fields_by_name['topic']._loaded_options = None
+    _globals['_CREATETOPICREQUEST'].fields_by_name['topic']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATETOPICREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATETOPICREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATETOPICREQUEST'].fields_by_name['topic']._loaded_options = None
+    _globals['_UPDATETOPICREQUEST'].fields_by_name['topic']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETETOPICREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETETOPICREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA#\n!managedkafka.googleapis.com/Topic'
+    _globals['_LISTCONSUMERGROUPSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTCONSUMERGROUPSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA+\x12)managedkafka.googleapis.com/ConsumerGroup'
+    _globals['_LISTCONSUMERGROUPSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTCONSUMERGROUPSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTCONSUMERGROUPSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTCONSUMERGROUPSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_GETCONSUMERGROUPREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETCONSUMERGROUPREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA+\n)managedkafka.googleapis.com/ConsumerGroup'
+    _globals['_UPDATECONSUMERGROUPREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATECONSUMERGROUPREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATECONSUMERGROUPREQUEST'].fields_by_name['consumer_group']._loaded_options = None
+    _globals['_UPDATECONSUMERGROUPREQUEST'].fields_by_name['consumer_group']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETECONSUMERGROUPREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETECONSUMERGROUPREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA+\n)managedkafka.googleapis.com/ConsumerGroup'
+    _globals['_LISTACLSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTACLSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA!\x12\x1fmanagedkafka.googleapis.com/Acl'
+    _globals['_LISTACLSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTACLSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTACLSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTACLSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_GETACLREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETACLREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fmanagedkafka.googleapis.com/Acl'
+    _globals['_CREATEACLREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEACLREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA!\x12\x1fmanagedkafka.googleapis.com/Acl'
+    _globals['_CREATEACLREQUEST'].fields_by_name['acl_id']._loaded_options = None
+    _globals['_CREATEACLREQUEST'].fields_by_name['acl_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEACLREQUEST'].fields_by_name['acl']._loaded_options = None
+    _globals['_CREATEACLREQUEST'].fields_by_name['acl']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEACLREQUEST'].fields_by_name['acl']._loaded_options = None
+    _globals['_UPDATEACLREQUEST'].fields_by_name['acl']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEACLREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATEACLREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETEACLREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEACLREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fmanagedkafka.googleapis.com/Acl'
+    _globals['_ADDACLENTRYREQUEST'].fields_by_name['acl']._loaded_options = None
+    _globals['_ADDACLENTRYREQUEST'].fields_by_name['acl']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fmanagedkafka.googleapis.com/Acl'
+    _globals['_ADDACLENTRYREQUEST'].fields_by_name['acl_entry']._loaded_options = None
+    _globals['_ADDACLENTRYREQUEST'].fields_by_name['acl_entry']._serialized_options = b'\xe0A\x02'
+    _globals['_REMOVEACLENTRYREQUEST'].fields_by_name['acl']._loaded_options = None
+    _globals['_REMOVEACLENTRYREQUEST'].fields_by_name['acl']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fmanagedkafka.googleapis.com/Acl'
+    _globals['_REMOVEACLENTRYREQUEST'].fields_by_name['acl_entry']._loaded_options = None
+    _globals['_REMOVEACLENTRYREQUEST'].fields_by_name['acl_entry']._serialized_options = b'\xe0A\x02'
+    _globals['_MANAGEDKAFKA']._loaded_options = None
+    _globals['_MANAGEDKAFKA']._serialized_options = b'\xcaA\x1bmanagedkafka.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform'
+    _globals['_MANAGEDKAFKA'].methods_by_name['ListClusters']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['ListClusters']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02.\x12,/v1/{parent=projects/*/locations/*}/clusters'
+    _globals['_MANAGEDKAFKA'].methods_by_name['GetCluster']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['GetCluster']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02.\x12,/v1/{name=projects/*/locations/*/clusters/*}'
+    _globals['_MANAGEDKAFKA'].methods_by_name['CreateCluster']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['CreateCluster']._serialized_options = b'\xcaA\x1c\n\x07Cluster\x12\x11OperationMetadata\xdaA\x19parent,cluster,cluster_id\x82\xd3\xe4\x93\x027",/v1/{parent=projects/*/locations/*}/clusters:\x07cluster'
+    _globals['_MANAGEDKAFKA'].methods_by_name['UpdateCluster']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['UpdateCluster']._serialized_options = b'\xcaA\x1c\n\x07Cluster\x12\x11OperationMetadata\xdaA\x13cluster,update_mask\x82\xd3\xe4\x93\x02?24/v1/{cluster.name=projects/*/locations/*/clusters/*}:\x07cluster'
+    _globals['_MANAGEDKAFKA'].methods_by_name['DeleteCluster']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['DeleteCluster']._serialized_options = b'\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02.*,/v1/{name=projects/*/locations/*/clusters/*}'
+    _globals['_MANAGEDKAFKA'].methods_by_name['ListTopics']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['ListTopics']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x027\x125/v1/{parent=projects/*/locations/*/clusters/*}/topics'
+    _globals['_MANAGEDKAFKA'].methods_by_name['GetTopic']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['GetTopic']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x027\x125/v1/{name=projects/*/locations/*/clusters/*/topics/*}'
+    _globals['_MANAGEDKAFKA'].methods_by_name['CreateTopic']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['CreateTopic']._serialized_options = b'\xdaA\x15parent,topic,topic_id\x82\xd3\xe4\x93\x02>"5/v1/{parent=projects/*/locations/*/clusters/*}/topics:\x05topic'
+    _globals['_MANAGEDKAFKA'].methods_by_name['UpdateTopic']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['UpdateTopic']._serialized_options = b'\xdaA\x11topic,update_mask\x82\xd3\xe4\x93\x02D2;/v1/{topic.name=projects/*/locations/*/clusters/*/topics/*}:\x05topic'
+    _globals['_MANAGEDKAFKA'].methods_by_name['DeleteTopic']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['DeleteTopic']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x027*5/v1/{name=projects/*/locations/*/clusters/*/topics/*}'
+    _globals['_MANAGEDKAFKA'].methods_by_name['ListConsumerGroups']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['ListConsumerGroups']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02?\x12=/v1/{parent=projects/*/locations/*/clusters/*}/consumerGroups'
+    _globals['_MANAGEDKAFKA'].methods_by_name['GetConsumerGroup']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['GetConsumerGroup']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02@\x12>/v1/{name=projects/*/locations/*/clusters/*/consumerGroups/**}'
+    _globals['_MANAGEDKAFKA'].methods_by_name['UpdateConsumerGroup']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['UpdateConsumerGroup']._serialized_options = b'\xdaA\x1aconsumer_group,update_mask\x82\xd3\xe4\x93\x02_2M/v1/{consumer_group.name=projects/*/locations/*/clusters/*/consumerGroups/**}:\x0econsumer_group'
+    _globals['_MANAGEDKAFKA'].methods_by_name['DeleteConsumerGroup']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['DeleteConsumerGroup']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02@*>/v1/{name=projects/*/locations/*/clusters/*/consumerGroups/**}'
+    _globals['_MANAGEDKAFKA'].methods_by_name['ListAcls']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['ListAcls']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x025\x123/v1/{parent=projects/*/locations/*/clusters/*}/acls'
+    _globals['_MANAGEDKAFKA'].methods_by_name['GetAcl']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['GetAcl']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x026\x124/v1/{name=projects/*/locations/*/clusters/*/acls/**}'
+    _globals['_MANAGEDKAFKA'].methods_by_name['CreateAcl']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['CreateAcl']._serialized_options = b'\xdaA\x11parent,acl,acl_id\x82\xd3\xe4\x93\x02:"3/v1/{parent=projects/*/locations/*/clusters/*}/acls:\x03acl'
+    _globals['_MANAGEDKAFKA'].methods_by_name['UpdateAcl']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['UpdateAcl']._serialized_options = b'\xdaA\x0facl,update_mask\x82\xd3\xe4\x93\x02?28/v1/{acl.name=projects/*/locations/*/clusters/*/acls/**}:\x03acl'
+    _globals['_MANAGEDKAFKA'].methods_by_name['DeleteAcl']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['DeleteAcl']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x026*4/v1/{name=projects/*/locations/*/clusters/*/acls/**}'
+    _globals['_MANAGEDKAFKA'].methods_by_name['AddAclEntry']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['AddAclEntry']._serialized_options = b'\xdaA\racl,acl_entry\x82\xd3\xe4\x93\x02L"?/v1/{acl=projects/*/locations/*/clusters/*/acls/**}:addAclEntry:\tacl_entry'
+    _globals['_MANAGEDKAFKA'].methods_by_name['RemoveAclEntry']._loaded_options = None
+    _globals['_MANAGEDKAFKA'].methods_by_name['RemoveAclEntry']._serialized_options = b'\xdaA\racl,acl_entry\x82\xd3\xe4\x93\x02O"B/v1/{acl=projects/*/locations/*/clusters/*/acls/**}:removeAclEntry:\tacl_entry'
+    _globals['_LISTCLUSTERSREQUEST']._serialized_start = 373
+    _globals['_LISTCLUSTERSREQUEST']._serialized_end = 548
+    _globals['_LISTCLUSTERSRESPONSE']._serialized_start = 550
+    _globals['_LISTCLUSTERSRESPONSE']._serialized_end = 675
+    _globals['_GETCLUSTERREQUEST']._serialized_start = 677
+    _globals['_GETCLUSTERREQUEST']._serialized_end = 755
+    _globals['_CREATECLUSTERREQUEST']._serialized_start = 758
+    _globals['_CREATECLUSTERREQUEST']._serialized_end = 960
+    _globals['_UPDATECLUSTERREQUEST']._serialized_start = 963
+    _globals['_UPDATECLUSTERREQUEST']._serialized_end = 1133
+    _globals['_DELETECLUSTERREQUEST']._serialized_start = 1135
+    _globals['_DELETECLUSTERREQUEST']._serialized_end = 1249
+    _globals['_LISTTOPICSREQUEST']._serialized_start = 1251
+    _globals['_LISTTOPICSREQUEST']._serialized_end = 1378
+    _globals['_LISTTOPICSRESPONSE']._serialized_start = 1380
+    _globals['_LISTTOPICSRESPONSE']._serialized_end = 1478
+    _globals['_GETTOPICREQUEST']._serialized_start = 1480
+    _globals['_GETTOPICREQUEST']._serialized_end = 1554
+    _globals['_CREATETOPICREQUEST']._serialized_start = 1557
+    _globals['_CREATETOPICREQUEST']._serialized_end = 1716
+    _globals['_UPDATETOPICREQUEST']._serialized_start = 1719
+    _globals['_UPDATETOPICREQUEST']._serialized_end = 1850
+    _globals['_DELETETOPICREQUEST']._serialized_start = 1852
+    _globals['_DELETETOPICREQUEST']._serialized_end = 1929
+    _globals['_LISTCONSUMERGROUPSREQUEST']._serialized_start = 1932
+    _globals['_LISTCONSUMERGROUPSREQUEST']._serialized_end = 2075
+    _globals['_LISTCONSUMERGROUPSRESPONSE']._serialized_start = 2077
+    _globals['_LISTCONSUMERGROUPSRESPONSE']._serialized_end = 2200
+    _globals['_GETCONSUMERGROUPREQUEST']._serialized_start = 2202
+    _globals['_GETCONSUMERGROUPREQUEST']._serialized_end = 2292
+    _globals['_UPDATECONSUMERGROUPREQUEST']._serialized_start = 2295
+    _globals['_UPDATECONSUMERGROUPREQUEST']._serialized_end = 2451
+    _globals['_DELETECONSUMERGROUPREQUEST']._serialized_start = 2453
+    _globals['_DELETECONSUMERGROUPREQUEST']._serialized_end = 2546
+    _globals['_LISTACLSREQUEST']._serialized_start = 2548
+    _globals['_LISTACLSREQUEST']._serialized_end = 2671
+    _globals['_LISTACLSRESPONSE']._serialized_start = 2673
+    _globals['_LISTACLSRESPONSE']._serialized_end = 2765
+    _globals['_GETACLREQUEST']._serialized_start = 2767
+    _globals['_GETACLREQUEST']._serialized_end = 2837
+    _globals['_CREATEACLREQUEST']._serialized_start = 2840
+    _globals['_CREATEACLREQUEST']._serialized_end = 2989
+    _globals['_UPDATEACLREQUEST']._serialized_start = 2991
+    _globals['_UPDATEACLREQUEST']._serialized_end = 3116
+    _globals['_DELETEACLREQUEST']._serialized_start = 3118
+    _globals['_DELETEACLREQUEST']._serialized_end = 3191
+    _globals['_ADDACLENTRYREQUEST']._serialized_start = 3194
+    _globals['_ADDACLENTRYREQUEST']._serialized_end = 3332
+    _globals['_ADDACLENTRYRESPONSE']._serialized_start = 3334
+    _globals['_ADDACLENTRYRESPONSE']._serialized_end = 3424
+    _globals['_REMOVEACLENTRYREQUEST']._serialized_start = 3427
+    _globals['_REMOVEACLENTRYREQUEST']._serialized_end = 3568
+    _globals['_REMOVEACLENTRYRESPONSE']._serialized_start = 3570
+    _globals['_REMOVEACLENTRYRESPONSE']._serialized_end = 3677
+    _globals['_MANAGEDKAFKA']._serialized_start = 3680
+    _globals['_MANAGEDKAFKA']._serialized_end = 7857

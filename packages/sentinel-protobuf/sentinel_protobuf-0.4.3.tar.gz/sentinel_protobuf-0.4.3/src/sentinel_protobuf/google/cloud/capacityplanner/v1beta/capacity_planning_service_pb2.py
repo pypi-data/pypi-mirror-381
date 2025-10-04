@@ -1,0 +1,184 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/cloud/capacityplanner/v1beta/capacity_planning_service.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from .....google.cloud.capacityplanner.v1beta import location_pb2 as google_dot_cloud_dot_capacityplanner_dot_v1beta_dot_location__pb2
+from .....google.cloud.capacityplanner.v1beta import resource_pb2 as google_dot_cloud_dot_capacityplanner_dot_v1beta_dot_resource__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nCgoogle/cloud/capacityplanner/v1beta/capacity_planning_service.proto\x12#google.cloud.capacityplanner.v1beta\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a2google/cloud/capacityplanner/v1beta/location.proto\x1a2google/cloud/capacityplanner/v1beta/resource.proto\x1a\x1fgoogle/protobuf/timestamp.proto"[\n\x16GetCapacityPlanRequest\x12A\n\x04name\x18\x01 \x01(\tB3\xe0A\x02\xfaA-\n+capacityplanner.googleapis.com/CapacityPlan"\xa8\x01\n\x19QueryCapacityPlansRequest\x12C\n\x06parent\x18\x01 \x01(\tB3\xe0A\x02\xfaA-\x12+capacityplanner.googleapis.com/CapacityPlan\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08location\x18\x04 \x01(\tB\x03\xe0A\x01"\x80\x01\n\x1aQueryCapacityPlansResponse\x12I\n\x0ecapacity_plans\x18\x01 \x03(\x0b21.google.cloud.capacityplanner.v1beta.CapacityPlan\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\x95\x01\n QueryCapacityPlanInsightsRequest\x12\x13\n\x06parent\x18\x01 \x01(\tB\x03\xe0A\x02\x12\\\n\x15capacity_plan_filters\x18\x02 \x01(\x0b28.google.cloud.capacityplanner.v1beta.CapacityPlanFiltersB\x03\xe0A\x02"\x86\x01\n!QueryCapacityPlanInsightsResponse\x12a\n\x1daggregated_capacity_plan_view\x18\x01 \x01(\x0b25.google.cloud.capacityplanner.v1beta.CapacityPlanViewB\x03\xe0A\x01"\xcd\x01\n\x13CapacityPlanFilters\x12G\n\x04keys\x18\x01 \x03(\x0b24.google.cloud.capacityplanner.v1beta.CapacityPlanKeyB\x03\xe0A\x02\x12N\n\x0ecapacity_types\x18\x02 \x03(\x0e21.google.cloud.capacityplanner.v1beta.CapacityTypeB\x03\xe0A\x02\x12\x1d\n\x10capacity_plan_id\x18\x03 \x01(\tB\x03\xe0A\x01"\x8f\x02\n\x0fCapacityPlanKey\x12W\n\x12resource_container\x18\x01 \x01(\x0b26.google.cloud.capacityplanner.v1beta.ResourceContainerB\x03\xe0A\x02\x12P\n\x0fresource_id_key\x18\x02 \x01(\x0b22.google.cloud.capacityplanner.v1beta.ResourceIdKeyB\x03\xe0A\x02\x12Q\n\x0blocation_id\x18\x03 \x01(\x0b27.google.cloud.capacityplanner.v1beta.LocationIdentifierB\x03\xe0A\x02"\xaf\x01\n\x10CapacityPlanView\x12F\n\x03key\x18\x01 \x01(\x0b24.google.cloud.capacityplanner.v1beta.CapacityPlanKeyB\x03\xe0A\x02\x12S\n\x11time_series_views\x18\x02 \x03(\x0b23.google.cloud.capacityplanner.v1beta.TimeSeriesViewB\x03\xe0A\x02"\xa5\x01\n\x0eTimeSeriesView\x12D\n\x04type\x18\x01 \x01(\x0e21.google.cloud.capacityplanner.v1beta.CapacityTypeB\x03\xe0A\x02\x12M\n\x0ecapacity_value\x18\x02 \x01(\x0b20.google.cloud.capacityplanner.v1beta.DemandValueB\x03\xe0A\x02"\xec\x04\n\x0cCapacityPlan\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x08\x12Z\n\x18capacity_demand_metadata\x18\x02 \x01(\x0b23.google.cloud.capacityplanner.v1beta.DemandMetadataB\x03\xe0A\x01\x12P\n\x0fservice_demands\x18\x03 \x03(\x0b22.google.cloud.capacityplanner.v1beta.ServiceDemandB\x03\xe0A\x02\x12@\n\x08reporter\x18\x04 \x01(\x0b2).google.cloud.capacityplanner.v1beta.UserB\x03\xe0A\x03\x12>\n\x05state\x18\x05 \x01(\x0e2*.google.cloud.capacityplanner.v1beta.StateB\x03\xe0A\x03\x124\n\x0bcreate_time\x18\x06 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x07 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12\x18\n\x0bdescription\x18\x08 \x01(\tB\x03\xe0A\x01\x12\x12\n\x05title\x18\t \x01(\tB\x03\xe0A\x01:\x7f\xeaA|\n+capacityplanner.googleapis.com/CapacityPlan\x120projects/{project}/capacityPlans/{capacity_plan}*\rcapacityPlans2\x0ccapacityPlan"h\n\x0eDemandMetadata\x12V\n\x12demand_preferences\x18\x01 \x03(\x0b25.google.cloud.capacityplanner.v1beta.DemandPreferenceB\x03\xe0A\x01"n\n\x10DemandPreference\x12\x1a\n\rpreference_id\x18\x01 \x01(\tB\x03\xe0A\x03\x12>\n\x05value\x18\x02 \x01(\x0b2*.google.cloud.capacityplanner.v1beta.ValueB\x03\xe0A\x02"\xcc\x01\n\rServiceDemand\x12\x14\n\x07service\x18\x01 \x01(\tB\x03\xe0A\x02\x12Q\n\x0fdemand_metadata\x18\x02 \x01(\x0b23.google.cloud.capacityplanner.v1beta.DemandMetadataB\x03\xe0A\x01\x12R\n\x10resource_demands\x18\x03 \x03(\x0b23.google.cloud.capacityplanner.v1beta.ResourceDemandB\x03\xe0A\x02"\x8f\x06\n\x0eResourceDemand\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0A\x03\x12W\n\x12resource_container\x18\x02 \x01(\x0b26.google.cloud.capacityplanner.v1beta.ResourceContainerB\x03\xe0A\x02\x12Q\n\x0bresource_id\x18\x03 \x01(\x0b27.google.cloud.capacityplanner.v1beta.ResourceIdentifierB\x03\xe0A\x02\x12Q\n\x0blocation_id\x18\x04 \x01(\x0b27.google.cloud.capacityplanner.v1beta.LocationIdentifierB\x03\xe0A\x02\x12>\n\x05state\x18\x05 \x01(\x0e2*.google.cloud.capacityplanner.v1beta.StateB\x03\xe0A\x03\x12@\n\x08reporter\x18\x06 \x01(\x0b2).google.cloud.capacityplanner.v1beta.UserB\x03\xe0A\x03\x124\n\x0bcreate_time\x18\x07 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x08 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12M\n\rdemand_values\x18\t \x01(\x0b21.google.cloud.capacityplanner.v1beta.DemandValuesB\x03\xe0A\x02\x12Q\n\x0fdemand_metadata\x18\n \x01(\x0b23.google.cloud.capacityplanner.v1beta.DemandMetadataB\x03\xe0A\x01\x12]\n\x16child_resource_demands\x18\x0b \x03(\x0b28.google.cloud.capacityplanner.v1beta.ChildResourceDemandB\x03\xe0A\x01"\x1a\n\x04User\x12\x12\n\x05email\x18\x01 \x01(\tB\x03\xe0A\x02"U\n\x0cDemandValues\x12E\n\x06values\x18\x01 \x03(\x0b20.google.cloud.capacityplanner.v1beta.DemandValueB\x03\xe0A\x02"\xa8\x01\n\x0bDemandValue\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02\x12H\n\x0btime_values\x18\x02 \x03(\x0b2..google.cloud.capacityplanner.v1beta.TimeValueB\x03\xe0A\x02\x12<\n\x04unit\x18\x03 \x01(\x0e2).google.cloud.capacityplanner.v1beta.UnitB\x03\xe0A\x02"]\n\tTimeValue\x12-\n\x04time\x18\x01 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x02\x12\x17\n\x05value\x18\x02 \x01(\x01B\x03\xe0A\x02H\x00\x88\x01\x01B\x08\n\x06_value"\x8a\x02\n\x13ChildResourceDemand\x12Q\n\x0bresource_id\x18\x01 \x01(\x0b27.google.cloud.capacityplanner.v1beta.ResourceIdentifierB\x03\xe0A\x02\x12M\n\rdemand_values\x18\x02 \x01(\x0b21.google.cloud.capacityplanner.v1beta.DemandValuesB\x03\xe0A\x02\x12Q\n\x0fdemand_metadata\x18\x03 \x01(\x0b23.google.cloud.capacityplanner.v1beta.DemandMetadataB\x03\xe0A\x01*\xb1\x01\n\x05State\x12\x15\n\x11STATE_UNSPECIFIED\x10\x00\x12\x12\n\x0ePENDING_REVIEW\x10\x01\x12\r\n\tIN_REVIEW\x10\x03\x12\x18\n\x14APPROVED_PROVISIONAL\x10\x08\x12\x0c\n\x08OBSOLETE\x10\x05\x12\x17\n\x13CANNOT_BE_FULFILLED\x10\x07\x12\x19\n\x15ON_HOLD_CONTACT_SALES\x10\t\x12\x12\n\x0eIN_FULFILLMENT\x10\n*\x97\x01\n\x0cCapacityType\x12\x19\n\x15CAPACITY_TYPE_UNKNOWN\x10\x00\x12!\n\x1dCAPACITY_TYPE_INORGANIC_DRAFT\x10\x01\x12#\n\x1fCAPACITY_TYPE_INORGANIC_PENDING\x10\x02\x12$\n CAPACITY_TYPE_INORGANIC_APPROVED\x10\x032\xb9\x07\n\x17CapacityPlanningService\x12\xbb\x01\n\x0fGetCapacityPlan\x12;.google.cloud.capacityplanner.v1beta.GetCapacityPlanRequest\x1a1.google.cloud.capacityplanner.v1beta.CapacityPlan"8\xdaA\x04name\x82\xd3\xe4\x93\x02+\x12)/v1beta/{name=projects/*/capacityPlans/*}\x12\xc3\x02\n\x12QueryCapacityPlans\x12>.google.cloud.capacityplanner.v1beta.QueryCapacityPlansRequest\x1a?.google.cloud.capacityplanner.v1beta.QueryCapacityPlansResponse"\xab\x01\xdaA\x06parent\x82\xd3\xe4\x93\x02\x9b\x01\x124/v1beta/{parent=organizations/*}/capacityPlans:queryZ0\x12./v1beta/{parent=folders/*}/capacityPlans:queryZ1\x12//v1beta/{parent=projects/*}/capacityPlans:query\x12\x8c\x02\n\x19QueryCapacityPlanInsights\x12E.google.cloud.capacityplanner.v1beta.QueryCapacityPlanInsightsRequest\x1aF.google.cloud.capacityplanner.v1beta.QueryCapacityPlanInsightsResponse"`\xdaA\x1cparent,capacity_plan_filters\x82\xd3\xe4\x93\x02;"6/v1beta/{parent=projects/*}/capacityPlanInsights:query:\x01*\x1a\x8a\x01\xcaA\x1ecapacityplanner.googleapis.com\xd2Afhttps://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/devstorage.full_controlB\x91\x02\n\'com.google.cloud.capacityplanner.v1betaB\x1cCapacityPlanningServiceProtoP\x01ZQcloud.google.com/go/capacityplanner/apiv1beta/capacityplannerpb;capacityplannerpb\xaa\x02#Google.Cloud.CapacityPlanner.V1Beta\xca\x02#Google\\Cloud\\CapacityPlanner\\V1beta\xea\x02&Google::Cloud::CapacityPlanner::V1betab\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.capacityplanner.v1beta.capacity_planning_service_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b"\n'com.google.cloud.capacityplanner.v1betaB\x1cCapacityPlanningServiceProtoP\x01ZQcloud.google.com/go/capacityplanner/apiv1beta/capacityplannerpb;capacityplannerpb\xaa\x02#Google.Cloud.CapacityPlanner.V1Beta\xca\x02#Google\\Cloud\\CapacityPlanner\\V1beta\xea\x02&Google::Cloud::CapacityPlanner::V1beta"
+    _globals['_GETCAPACITYPLANREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETCAPACITYPLANREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA-\n+capacityplanner.googleapis.com/CapacityPlan'
+    _globals['_QUERYCAPACITYPLANSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_QUERYCAPACITYPLANSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA-\x12+capacityplanner.googleapis.com/CapacityPlan'
+    _globals['_QUERYCAPACITYPLANSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_QUERYCAPACITYPLANSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_QUERYCAPACITYPLANSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_QUERYCAPACITYPLANSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_QUERYCAPACITYPLANSREQUEST'].fields_by_name['location']._loaded_options = None
+    _globals['_QUERYCAPACITYPLANSREQUEST'].fields_by_name['location']._serialized_options = b'\xe0A\x01'
+    _globals['_QUERYCAPACITYPLANINSIGHTSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_QUERYCAPACITYPLANINSIGHTSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02'
+    _globals['_QUERYCAPACITYPLANINSIGHTSREQUEST'].fields_by_name['capacity_plan_filters']._loaded_options = None
+    _globals['_QUERYCAPACITYPLANINSIGHTSREQUEST'].fields_by_name['capacity_plan_filters']._serialized_options = b'\xe0A\x02'
+    _globals['_QUERYCAPACITYPLANINSIGHTSRESPONSE'].fields_by_name['aggregated_capacity_plan_view']._loaded_options = None
+    _globals['_QUERYCAPACITYPLANINSIGHTSRESPONSE'].fields_by_name['aggregated_capacity_plan_view']._serialized_options = b'\xe0A\x01'
+    _globals['_CAPACITYPLANFILTERS'].fields_by_name['keys']._loaded_options = None
+    _globals['_CAPACITYPLANFILTERS'].fields_by_name['keys']._serialized_options = b'\xe0A\x02'
+    _globals['_CAPACITYPLANFILTERS'].fields_by_name['capacity_types']._loaded_options = None
+    _globals['_CAPACITYPLANFILTERS'].fields_by_name['capacity_types']._serialized_options = b'\xe0A\x02'
+    _globals['_CAPACITYPLANFILTERS'].fields_by_name['capacity_plan_id']._loaded_options = None
+    _globals['_CAPACITYPLANFILTERS'].fields_by_name['capacity_plan_id']._serialized_options = b'\xe0A\x01'
+    _globals['_CAPACITYPLANKEY'].fields_by_name['resource_container']._loaded_options = None
+    _globals['_CAPACITYPLANKEY'].fields_by_name['resource_container']._serialized_options = b'\xe0A\x02'
+    _globals['_CAPACITYPLANKEY'].fields_by_name['resource_id_key']._loaded_options = None
+    _globals['_CAPACITYPLANKEY'].fields_by_name['resource_id_key']._serialized_options = b'\xe0A\x02'
+    _globals['_CAPACITYPLANKEY'].fields_by_name['location_id']._loaded_options = None
+    _globals['_CAPACITYPLANKEY'].fields_by_name['location_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CAPACITYPLANVIEW'].fields_by_name['key']._loaded_options = None
+    _globals['_CAPACITYPLANVIEW'].fields_by_name['key']._serialized_options = b'\xe0A\x02'
+    _globals['_CAPACITYPLANVIEW'].fields_by_name['time_series_views']._loaded_options = None
+    _globals['_CAPACITYPLANVIEW'].fields_by_name['time_series_views']._serialized_options = b'\xe0A\x02'
+    _globals['_TIMESERIESVIEW'].fields_by_name['type']._loaded_options = None
+    _globals['_TIMESERIESVIEW'].fields_by_name['type']._serialized_options = b'\xe0A\x02'
+    _globals['_TIMESERIESVIEW'].fields_by_name['capacity_value']._loaded_options = None
+    _globals['_TIMESERIESVIEW'].fields_by_name['capacity_value']._serialized_options = b'\xe0A\x02'
+    _globals['_CAPACITYPLAN'].fields_by_name['name']._loaded_options = None
+    _globals['_CAPACITYPLAN'].fields_by_name['name']._serialized_options = b'\xe0A\x08'
+    _globals['_CAPACITYPLAN'].fields_by_name['capacity_demand_metadata']._loaded_options = None
+    _globals['_CAPACITYPLAN'].fields_by_name['capacity_demand_metadata']._serialized_options = b'\xe0A\x01'
+    _globals['_CAPACITYPLAN'].fields_by_name['service_demands']._loaded_options = None
+    _globals['_CAPACITYPLAN'].fields_by_name['service_demands']._serialized_options = b'\xe0A\x02'
+    _globals['_CAPACITYPLAN'].fields_by_name['reporter']._loaded_options = None
+    _globals['_CAPACITYPLAN'].fields_by_name['reporter']._serialized_options = b'\xe0A\x03'
+    _globals['_CAPACITYPLAN'].fields_by_name['state']._loaded_options = None
+    _globals['_CAPACITYPLAN'].fields_by_name['state']._serialized_options = b'\xe0A\x03'
+    _globals['_CAPACITYPLAN'].fields_by_name['create_time']._loaded_options = None
+    _globals['_CAPACITYPLAN'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CAPACITYPLAN'].fields_by_name['update_time']._loaded_options = None
+    _globals['_CAPACITYPLAN'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CAPACITYPLAN'].fields_by_name['description']._loaded_options = None
+    _globals['_CAPACITYPLAN'].fields_by_name['description']._serialized_options = b'\xe0A\x01'
+    _globals['_CAPACITYPLAN'].fields_by_name['title']._loaded_options = None
+    _globals['_CAPACITYPLAN'].fields_by_name['title']._serialized_options = b'\xe0A\x01'
+    _globals['_CAPACITYPLAN']._loaded_options = None
+    _globals['_CAPACITYPLAN']._serialized_options = b'\xeaA|\n+capacityplanner.googleapis.com/CapacityPlan\x120projects/{project}/capacityPlans/{capacity_plan}*\rcapacityPlans2\x0ccapacityPlan'
+    _globals['_DEMANDMETADATA'].fields_by_name['demand_preferences']._loaded_options = None
+    _globals['_DEMANDMETADATA'].fields_by_name['demand_preferences']._serialized_options = b'\xe0A\x01'
+    _globals['_DEMANDPREFERENCE'].fields_by_name['preference_id']._loaded_options = None
+    _globals['_DEMANDPREFERENCE'].fields_by_name['preference_id']._serialized_options = b'\xe0A\x03'
+    _globals['_DEMANDPREFERENCE'].fields_by_name['value']._loaded_options = None
+    _globals['_DEMANDPREFERENCE'].fields_by_name['value']._serialized_options = b'\xe0A\x02'
+    _globals['_SERVICEDEMAND'].fields_by_name['service']._loaded_options = None
+    _globals['_SERVICEDEMAND'].fields_by_name['service']._serialized_options = b'\xe0A\x02'
+    _globals['_SERVICEDEMAND'].fields_by_name['demand_metadata']._loaded_options = None
+    _globals['_SERVICEDEMAND'].fields_by_name['demand_metadata']._serialized_options = b'\xe0A\x01'
+    _globals['_SERVICEDEMAND'].fields_by_name['resource_demands']._loaded_options = None
+    _globals['_SERVICEDEMAND'].fields_by_name['resource_demands']._serialized_options = b'\xe0A\x02'
+    _globals['_RESOURCEDEMAND'].fields_by_name['id']._loaded_options = None
+    _globals['_RESOURCEDEMAND'].fields_by_name['id']._serialized_options = b'\xe0A\x03'
+    _globals['_RESOURCEDEMAND'].fields_by_name['resource_container']._loaded_options = None
+    _globals['_RESOURCEDEMAND'].fields_by_name['resource_container']._serialized_options = b'\xe0A\x02'
+    _globals['_RESOURCEDEMAND'].fields_by_name['resource_id']._loaded_options = None
+    _globals['_RESOURCEDEMAND'].fields_by_name['resource_id']._serialized_options = b'\xe0A\x02'
+    _globals['_RESOURCEDEMAND'].fields_by_name['location_id']._loaded_options = None
+    _globals['_RESOURCEDEMAND'].fields_by_name['location_id']._serialized_options = b'\xe0A\x02'
+    _globals['_RESOURCEDEMAND'].fields_by_name['state']._loaded_options = None
+    _globals['_RESOURCEDEMAND'].fields_by_name['state']._serialized_options = b'\xe0A\x03'
+    _globals['_RESOURCEDEMAND'].fields_by_name['reporter']._loaded_options = None
+    _globals['_RESOURCEDEMAND'].fields_by_name['reporter']._serialized_options = b'\xe0A\x03'
+    _globals['_RESOURCEDEMAND'].fields_by_name['create_time']._loaded_options = None
+    _globals['_RESOURCEDEMAND'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_RESOURCEDEMAND'].fields_by_name['update_time']._loaded_options = None
+    _globals['_RESOURCEDEMAND'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_RESOURCEDEMAND'].fields_by_name['demand_values']._loaded_options = None
+    _globals['_RESOURCEDEMAND'].fields_by_name['demand_values']._serialized_options = b'\xe0A\x02'
+    _globals['_RESOURCEDEMAND'].fields_by_name['demand_metadata']._loaded_options = None
+    _globals['_RESOURCEDEMAND'].fields_by_name['demand_metadata']._serialized_options = b'\xe0A\x01'
+    _globals['_RESOURCEDEMAND'].fields_by_name['child_resource_demands']._loaded_options = None
+    _globals['_RESOURCEDEMAND'].fields_by_name['child_resource_demands']._serialized_options = b'\xe0A\x01'
+    _globals['_USER'].fields_by_name['email']._loaded_options = None
+    _globals['_USER'].fields_by_name['email']._serialized_options = b'\xe0A\x02'
+    _globals['_DEMANDVALUES'].fields_by_name['values']._loaded_options = None
+    _globals['_DEMANDVALUES'].fields_by_name['values']._serialized_options = b'\xe0A\x02'
+    _globals['_DEMANDVALUE'].fields_by_name['name']._loaded_options = None
+    _globals['_DEMANDVALUE'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_DEMANDVALUE'].fields_by_name['time_values']._loaded_options = None
+    _globals['_DEMANDVALUE'].fields_by_name['time_values']._serialized_options = b'\xe0A\x02'
+    _globals['_DEMANDVALUE'].fields_by_name['unit']._loaded_options = None
+    _globals['_DEMANDVALUE'].fields_by_name['unit']._serialized_options = b'\xe0A\x02'
+    _globals['_TIMEVALUE'].fields_by_name['time']._loaded_options = None
+    _globals['_TIMEVALUE'].fields_by_name['time']._serialized_options = b'\xe0A\x02'
+    _globals['_TIMEVALUE'].fields_by_name['value']._loaded_options = None
+    _globals['_TIMEVALUE'].fields_by_name['value']._serialized_options = b'\xe0A\x02'
+    _globals['_CHILDRESOURCEDEMAND'].fields_by_name['resource_id']._loaded_options = None
+    _globals['_CHILDRESOURCEDEMAND'].fields_by_name['resource_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CHILDRESOURCEDEMAND'].fields_by_name['demand_values']._loaded_options = None
+    _globals['_CHILDRESOURCEDEMAND'].fields_by_name['demand_values']._serialized_options = b'\xe0A\x02'
+    _globals['_CHILDRESOURCEDEMAND'].fields_by_name['demand_metadata']._loaded_options = None
+    _globals['_CHILDRESOURCEDEMAND'].fields_by_name['demand_metadata']._serialized_options = b'\xe0A\x01'
+    _globals['_CAPACITYPLANNINGSERVICE']._loaded_options = None
+    _globals['_CAPACITYPLANNINGSERVICE']._serialized_options = b'\xcaA\x1ecapacityplanner.googleapis.com\xd2Afhttps://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/devstorage.full_control'
+    _globals['_CAPACITYPLANNINGSERVICE'].methods_by_name['GetCapacityPlan']._loaded_options = None
+    _globals['_CAPACITYPLANNINGSERVICE'].methods_by_name['GetCapacityPlan']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02+\x12)/v1beta/{name=projects/*/capacityPlans/*}'
+    _globals['_CAPACITYPLANNINGSERVICE'].methods_by_name['QueryCapacityPlans']._loaded_options = None
+    _globals['_CAPACITYPLANNINGSERVICE'].methods_by_name['QueryCapacityPlans']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02\x9b\x01\x124/v1beta/{parent=organizations/*}/capacityPlans:queryZ0\x12./v1beta/{parent=folders/*}/capacityPlans:queryZ1\x12//v1beta/{parent=projects/*}/capacityPlans:query'
+    _globals['_CAPACITYPLANNINGSERVICE'].methods_by_name['QueryCapacityPlanInsights']._loaded_options = None
+    _globals['_CAPACITYPLANNINGSERVICE'].methods_by_name['QueryCapacityPlanInsights']._serialized_options = b'\xdaA\x1cparent,capacity_plan_filters\x82\xd3\xe4\x93\x02;"6/v1beta/{parent=projects/*}/capacityPlanInsights:query:\x01*'
+    _globals['_STATE']._serialized_start = 4357
+    _globals['_STATE']._serialized_end = 4534
+    _globals['_CAPACITYTYPE']._serialized_start = 4537
+    _globals['_CAPACITYTYPE']._serialized_end = 4688
+    _globals['_GETCAPACITYPLANREQUEST']._serialized_start = 360
+    _globals['_GETCAPACITYPLANREQUEST']._serialized_end = 451
+    _globals['_QUERYCAPACITYPLANSREQUEST']._serialized_start = 454
+    _globals['_QUERYCAPACITYPLANSREQUEST']._serialized_end = 622
+    _globals['_QUERYCAPACITYPLANSRESPONSE']._serialized_start = 625
+    _globals['_QUERYCAPACITYPLANSRESPONSE']._serialized_end = 753
+    _globals['_QUERYCAPACITYPLANINSIGHTSREQUEST']._serialized_start = 756
+    _globals['_QUERYCAPACITYPLANINSIGHTSREQUEST']._serialized_end = 905
+    _globals['_QUERYCAPACITYPLANINSIGHTSRESPONSE']._serialized_start = 908
+    _globals['_QUERYCAPACITYPLANINSIGHTSRESPONSE']._serialized_end = 1042
+    _globals['_CAPACITYPLANFILTERS']._serialized_start = 1045
+    _globals['_CAPACITYPLANFILTERS']._serialized_end = 1250
+    _globals['_CAPACITYPLANKEY']._serialized_start = 1253
+    _globals['_CAPACITYPLANKEY']._serialized_end = 1524
+    _globals['_CAPACITYPLANVIEW']._serialized_start = 1527
+    _globals['_CAPACITYPLANVIEW']._serialized_end = 1702
+    _globals['_TIMESERIESVIEW']._serialized_start = 1705
+    _globals['_TIMESERIESVIEW']._serialized_end = 1870
+    _globals['_CAPACITYPLAN']._serialized_start = 1873
+    _globals['_CAPACITYPLAN']._serialized_end = 2493
+    _globals['_DEMANDMETADATA']._serialized_start = 2495
+    _globals['_DEMANDMETADATA']._serialized_end = 2599
+    _globals['_DEMANDPREFERENCE']._serialized_start = 2601
+    _globals['_DEMANDPREFERENCE']._serialized_end = 2711
+    _globals['_SERVICEDEMAND']._serialized_start = 2714
+    _globals['_SERVICEDEMAND']._serialized_end = 2918
+    _globals['_RESOURCEDEMAND']._serialized_start = 2921
+    _globals['_RESOURCEDEMAND']._serialized_end = 3704
+    _globals['_USER']._serialized_start = 3706
+    _globals['_USER']._serialized_end = 3732
+    _globals['_DEMANDVALUES']._serialized_start = 3734
+    _globals['_DEMANDVALUES']._serialized_end = 3819
+    _globals['_DEMANDVALUE']._serialized_start = 3822
+    _globals['_DEMANDVALUE']._serialized_end = 3990
+    _globals['_TIMEVALUE']._serialized_start = 3992
+    _globals['_TIMEVALUE']._serialized_end = 4085
+    _globals['_CHILDRESOURCEDEMAND']._serialized_start = 4088
+    _globals['_CHILDRESOURCEDEMAND']._serialized_end = 4354
+    _globals['_CAPACITYPLANNINGSERVICE']._serialized_start = 4691
+    _globals['_CAPACITYPLANNINGSERVICE']._serialized_end = 5644

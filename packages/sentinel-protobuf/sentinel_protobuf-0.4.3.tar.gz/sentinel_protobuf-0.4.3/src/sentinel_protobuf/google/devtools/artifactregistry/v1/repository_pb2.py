@@ -1,0 +1,180 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/devtools/artifactregistry/v1/repository.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n4google/devtools/artifactregistry/v1/repository.proto\x12#google.devtools.artifactregistry.v1\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a\x1egoogle/protobuf/duration.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto"s\n\x0eUpstreamPolicy\x12\n\n\x02id\x18\x01 \x01(\t\x12C\n\nrepository\x18\x02 \x01(\tB/\xfaA,\n*artifactregistry.googleapis.com/Repository\x12\x10\n\x08priority\x18\x03 \x01(\x05"\xa8\x03\n\x16CleanupPolicyCondition\x12\\\n\ttag_state\x18\x02 \x01(\x0e2D.google.devtools.artifactregistry.v1.CleanupPolicyCondition.TagStateH\x00\x88\x01\x01\x12\x14\n\x0ctag_prefixes\x18\x03 \x03(\t\x12\x1d\n\x15version_name_prefixes\x18\x04 \x03(\t\x12\x1d\n\x15package_name_prefixes\x18\x05 \x03(\t\x122\n\nolder_than\x18\x06 \x01(\x0b2\x19.google.protobuf.DurationH\x01\x88\x01\x01\x122\n\nnewer_than\x18\x07 \x01(\x0b2\x19.google.protobuf.DurationH\x02\x88\x01\x01"H\n\x08TagState\x12\x19\n\x15TAG_STATE_UNSPECIFIED\x10\x00\x12\n\n\x06TAGGED\x10\x01\x12\x0c\n\x08UNTAGGED\x10\x02\x12\x07\n\x03ANY\x10\x03B\x0c\n\n_tag_stateB\r\n\x0b_older_thanB\r\n\x0b_newer_than"h\n\x1fCleanupPolicyMostRecentVersions\x12\x1d\n\x15package_name_prefixes\x18\x01 \x03(\t\x12\x17\n\nkeep_count\x18\x02 \x01(\x05H\x00\x88\x01\x01B\r\n\x0b_keep_count"\xe8\x02\n\rCleanupPolicy\x12P\n\tcondition\x18\x02 \x01(\x0b2;.google.devtools.artifactregistry.v1.CleanupPolicyConditionH\x00\x12d\n\x14most_recent_versions\x18\x04 \x01(\x0b2D.google.devtools.artifactregistry.v1.CleanupPolicyMostRecentVersionsH\x00\x12\n\n\x02id\x18\x01 \x01(\t\x12I\n\x06action\x18\x03 \x01(\x0e29.google.devtools.artifactregistry.v1.CleanupPolicy.Action"6\n\x06Action\x12\x16\n\x12ACTION_UNSPECIFIED\x10\x00\x12\n\n\x06DELETE\x10\x01\x12\x08\n\x04KEEP\x10\x02B\x10\n\x0econdition_type"i\n\x17VirtualRepositoryConfig\x12N\n\x11upstream_policies\x18\x01 \x03(\x0b23.google.devtools.artifactregistry.v1.UpstreamPolicy"\xcd\x1f\n\x16RemoteRepositoryConfig\x12i\n\x11docker_repository\x18\x02 \x01(\x0b2L.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.DockerRepositoryH\x00\x12g\n\x10maven_repository\x18\x03 \x01(\x0b2K.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.MavenRepositoryH\x00\x12c\n\x0enpm_repository\x18\x04 \x01(\x0b2I.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.NpmRepositoryH\x00\x12i\n\x11python_repository\x18\x05 \x01(\x0b2L.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.PythonRepositoryH\x00\x12c\n\x0eapt_repository\x18\x06 \x01(\x0b2I.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.AptRepositoryH\x00\x12c\n\x0eyum_repository\x18\x07 \x01(\x0b2I.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.YumRepositoryH\x00\x12o\n\x11common_repository\x18\x0e \x01(\x0b2R.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.CommonRemoteRepositoryH\x00\x12\x13\n\x0bdescription\x18\x01 \x01(\t\x12r\n\x14upstream_credentials\x18\t \x01(\x0b2O.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.UpstreamCredentialsB\x03\xe0A\x01\x12(\n\x1bdisable_upstream_validation\x18\x0c \x01(\x08B\x03\xe0A\x04\x1a\xbf\x02\n\x13UpstreamCredentials\x12\x94\x01\n\x1dusername_password_credentials\x18\x01 \x01(\x0b2k.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.UpstreamCredentials.UsernamePasswordCredentialsH\x00\x1a\x81\x01\n\x1bUsernamePasswordCredentials\x12\x10\n\x08username\x18\x01 \x01(\t\x12P\n\x17password_secret_version\x18\x02 \x01(\tB/\xfaA,\n*secretmanager.googleapis.com/SecretVersionB\r\n\x0bcredentials\x1a\xfe\x02\n\x10DockerRepository\x12z\n\x11public_repository\x18\x01 \x01(\x0e2].google.devtools.artifactregistry.v1.RemoteRepositoryConfig.DockerRepository.PublicRepositoryH\x00\x12z\n\x11custom_repository\x18\x03 \x01(\x0b2].google.devtools.artifactregistry.v1.RemoteRepositoryConfig.DockerRepository.CustomRepositoryH\x00\x1a\x1f\n\x10CustomRepository\x12\x0b\n\x03uri\x18\x01 \x01(\t"E\n\x10PublicRepository\x12!\n\x1dPUBLIC_REPOSITORY_UNSPECIFIED\x10\x00\x12\x0e\n\nDOCKER_HUB\x10\x01B\n\n\x08upstream\x1a\xfe\x02\n\x0fMavenRepository\x12y\n\x11public_repository\x18\x01 \x01(\x0e2\\.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.MavenRepository.PublicRepositoryH\x00\x12y\n\x11custom_repository\x18\x03 \x01(\x0b2\\.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.MavenRepository.CustomRepositoryH\x00\x1a\x1f\n\x10CustomRepository\x12\x0b\n\x03uri\x18\x01 \x01(\t"H\n\x10PublicRepository\x12!\n\x1dPUBLIC_REPOSITORY_UNSPECIFIED\x10\x00\x12\x11\n\rMAVEN_CENTRAL\x10\x01B\n\n\x08upstream\x1a\xf0\x02\n\rNpmRepository\x12w\n\x11public_repository\x18\x01 \x01(\x0e2Z.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.NpmRepository.PublicRepositoryH\x00\x12w\n\x11custom_repository\x18\x03 \x01(\x0b2Z.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.NpmRepository.CustomRepositoryH\x00\x1a\x1f\n\x10CustomRepository\x12\x0b\n\x03uri\x18\x01 \x01(\t"@\n\x10PublicRepository\x12!\n\x1dPUBLIC_REPOSITORY_UNSPECIFIED\x10\x00\x12\t\n\x05NPMJS\x10\x01B\n\n\x08upstream\x1a\xf8\x02\n\x10PythonRepository\x12z\n\x11public_repository\x18\x01 \x01(\x0e2].google.devtools.artifactregistry.v1.RemoteRepositoryConfig.PythonRepository.PublicRepositoryH\x00\x12z\n\x11custom_repository\x18\x03 \x01(\x0b2].google.devtools.artifactregistry.v1.RemoteRepositoryConfig.PythonRepository.CustomRepositoryH\x00\x1a\x1f\n\x10CustomRepository\x12\x0b\n\x03uri\x18\x01 \x01(\t"?\n\x10PublicRepository\x12!\n\x1dPUBLIC_REPOSITORY_UNSPECIFIED\x10\x00\x12\x08\n\x04PYPI\x10\x01B\n\n\x08upstream\x1a\xc1\x04\n\rAptRepository\x12w\n\x11public_repository\x18\x01 \x01(\x0b2Z.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.AptRepository.PublicRepositoryH\x00\x12w\n\x11custom_repository\x18\x03 \x01(\x0b2Z.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.AptRepository.CustomRepositoryH\x00\x1a\x90\x02\n\x10PublicRepository\x12\x82\x01\n\x0frepository_base\x18\x01 \x01(\x0e2i.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.AptRepository.PublicRepository.RepositoryBase\x12\x17\n\x0frepository_path\x18\x02 \x01(\t"^\n\x0eRepositoryBase\x12\x1f\n\x1bREPOSITORY_BASE_UNSPECIFIED\x10\x00\x12\n\n\x06DEBIAN\x10\x01\x12\n\n\x06UBUNTU\x10\x02\x12\x13\n\x0fDEBIAN_SNAPSHOT\x10\x03\x1a\x1f\n\x10CustomRepository\x12\x0b\n\x03uri\x18\x01 \x01(\tB\n\n\x08upstream\x1a\xed\x04\n\rYumRepository\x12w\n\x11public_repository\x18\x01 \x01(\x0b2Z.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.YumRepository.PublicRepositoryH\x00\x12w\n\x11custom_repository\x18\x03 \x01(\x0b2Z.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.YumRepository.CustomRepositoryH\x00\x1a\xbc\x02\n\x10PublicRepository\x12\x82\x01\n\x0frepository_base\x18\x01 \x01(\x0e2i.google.devtools.artifactregistry.v1.RemoteRepositoryConfig.YumRepository.PublicRepository.RepositoryBase\x12\x17\n\x0frepository_path\x18\x02 \x01(\t"\x89\x01\n\x0eRepositoryBase\x12\x1f\n\x1bREPOSITORY_BASE_UNSPECIFIED\x10\x00\x12\n\n\x06CENTOS\x10\x01\x12\x10\n\x0cCENTOS_DEBUG\x10\x02\x12\x10\n\x0cCENTOS_VAULT\x10\x03\x12\x11\n\rCENTOS_STREAM\x10\x04\x12\t\n\x05ROCKY\x10\x05\x12\x08\n\x04EPEL\x10\x06\x1a\x1f\n\x10CustomRepository\x12\x0b\n\x03uri\x18\x01 \x01(\tB\n\n\x08upstream\x1a*\n\x16CommonRemoteRepository\x12\x10\n\x03uri\x18\x01 \x01(\tB\x03\xe0A\x02B\x0f\n\rremote_source"\xb4\x14\n\nRepository\x12]\n\x0cmaven_config\x18\t \x01(\x0b2E.google.devtools.artifactregistry.v1.Repository.MavenRepositoryConfigH\x00\x12_\n\rdocker_config\x18\x11 \x01(\x0b2F.google.devtools.artifactregistry.v1.Repository.DockerRepositoryConfigH\x00\x12a\n\x19virtual_repository_config\x18\x0e \x01(\x0b2<.google.devtools.artifactregistry.v1.VirtualRepositoryConfigH\x01\x12_\n\x18remote_repository_config\x18\x0f \x01(\x0b2;.google.devtools.artifactregistry.v1.RemoteRepositoryConfigH\x01\x12\x0c\n\x04name\x18\x01 \x01(\t\x12K\n\x06format\x18\x02 \x01(\x0e26.google.devtools.artifactregistry.v1.Repository.FormatB\x03\xe0A\x01\x12\x13\n\x0bdescription\x18\x03 \x01(\t\x12K\n\x06labels\x18\x04 \x03(\x0b2;.google.devtools.artifactregistry.v1.Repository.LabelsEntry\x124\n\x0bcreate_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x06 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12\x14\n\x0ckms_key_name\x18\x08 \x01(\t\x12G\n\x04mode\x18\n \x01(\x0e24.google.devtools.artifactregistry.v1.Repository.ModeB\x03\xe0A\x01\x12c\n\x10cleanup_policies\x18\x0c \x03(\x0b2D.google.devtools.artifactregistry.v1.Repository.CleanupPoliciesEntryB\x03\xe0A\x01\x12\x17\n\nsize_bytes\x18\r \x01(\x03B\x03\xe0A\x03\x12\x1a\n\rsatisfies_pzs\x18\x10 \x01(\x08B\x03\xe0A\x03\x12#\n\x16cleanup_policy_dry_run\x18\x12 \x01(\x08B\x03\xe0A\x01\x12w\n\x1dvulnerability_scanning_config\x18\x13 \x01(\x0b2K.google.devtools.artifactregistry.v1.Repository.VulnerabilityScanningConfigB\x03\xe0A\x01\x12&\n\x19disallow_unspecified_mode\x18\x15 \x01(\x08B\x03\xe0A\x01\x12\x1a\n\rsatisfies_pzi\x18\x16 \x01(\x08B\x03\xe0A\x03\x12\x19\n\x0cregistry_uri\x18\x1a \x01(\tB\x03\xe0A\x03\x1a\xf3\x01\n\x15MavenRepositoryConfig\x12!\n\x19allow_snapshot_overwrites\x18\x01 \x01(\x08\x12k\n\x0eversion_policy\x18\x02 \x01(\x0e2S.google.devtools.artifactregistry.v1.Repository.MavenRepositoryConfig.VersionPolicy"J\n\rVersionPolicy\x12\x1e\n\x1aVERSION_POLICY_UNSPECIFIED\x10\x00\x12\x0b\n\x07RELEASE\x10\x01\x12\x0c\n\x08SNAPSHOT\x10\x02\x1a0\n\x16DockerRepositoryConfig\x12\x16\n\x0eimmutable_tags\x18\x01 \x01(\x08\x1a\xc7\x04\n\x1bVulnerabilityScanningConfig\x12|\n\x11enablement_config\x18\x01 \x01(\x0e2\\.google.devtools.artifactregistry.v1.Repository.VulnerabilityScanningConfig.EnablementConfigB\x03\xe0A\x01\x129\n\x10last_enable_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12z\n\x10enablement_state\x18\x03 \x01(\x0e2[.google.devtools.artifactregistry.v1.Repository.VulnerabilityScanningConfig.EnablementStateB\x03\xe0A\x03\x12$\n\x17enablement_state_reason\x18\x04 \x01(\tB\x03\xe0A\x03"R\n\x10EnablementConfig\x12!\n\x1dENABLEMENT_CONFIG_UNSPECIFIED\x10\x00\x12\r\n\tINHERITED\x10\x01\x12\x0c\n\x08DISABLED\x10\x02"y\n\x0fEnablementState\x12 \n\x1cENABLEMENT_STATE_UNSPECIFIED\x10\x00\x12\x18\n\x14SCANNING_UNSUPPORTED\x10\x01\x12\x15\n\x11SCANNING_DISABLED\x10\x02\x12\x13\n\x0fSCANNING_ACTIVE\x10\x03\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01\x1aj\n\x14CleanupPoliciesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12A\n\x05value\x18\x02 \x01(\x0b22.google.devtools.artifactregistry.v1.CleanupPolicy:\x028\x01"|\n\x06Format\x12\x16\n\x12FORMAT_UNSPECIFIED\x10\x00\x12\n\n\x06DOCKER\x10\x01\x12\t\n\x05MAVEN\x10\x02\x12\x07\n\x03NPM\x10\x03\x12\x07\n\x03APT\x10\x05\x12\x07\n\x03YUM\x10\x06\x12\n\n\x06PYTHON\x10\x08\x12\x07\n\x03KFP\x10\t\x12\x06\n\x02GO\x10\n\x12\x0b\n\x07GENERIC\x10\x0b"d\n\x04Mode\x12\x14\n\x10MODE_UNSPECIFIED\x10\x00\x12\x17\n\x13STANDARD_REPOSITORY\x10\x01\x12\x16\n\x12VIRTUAL_REPOSITORY\x10\x02\x12\x15\n\x11REMOTE_REPOSITORY\x10\x03:r\xeaAo\n*artifactregistry.googleapis.com/Repository\x12Aprojects/{project}/locations/{location}/repositories/{repository}B\x0f\n\rformat_configB\r\n\x0bmode_config"\xb0\x01\n\x17ListRepositoriesRequest\x12B\n\x06parent\x18\x01 \x01(\tB2\xe0A\x02\xfaA,\x12*artifactregistry.googleapis.com/Repository\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x05 \x01(\tB\x03\xe0A\x01"z\n\x18ListRepositoriesResponse\x12E\n\x0crepositories\x18\x01 \x03(\x0b2/.google.devtools.artifactregistry.v1.Repository\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"X\n\x14GetRepositoryRequest\x12@\n\x04name\x18\x01 \x01(\tB2\xe0A\x02\xfaA,\n*artifactregistry.googleapis.com/Repository"\xc3\x01\n\x17CreateRepositoryRequest\x12B\n\x06parent\x18\x01 \x01(\tB2\xe0A\x02\xfaA,\x12*artifactregistry.googleapis.com/Repository\x12\x1a\n\rrepository_id\x18\x02 \x01(\tB\x03\xe0A\x02\x12H\n\nrepository\x18\x03 \x01(\x0b2/.google.devtools.artifactregistry.v1.RepositoryB\x03\xe0A\x02"\x8f\x01\n\x17UpdateRepositoryRequest\x12C\n\nrepository\x18\x01 \x01(\x0b2/.google.devtools.artifactregistry.v1.Repository\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMask"[\n\x17DeleteRepositoryRequest\x12@\n\x04name\x18\x01 \x01(\tB2\xe0A\x02\xfaA,\n*artifactregistry.googleapis.com/RepositoryB\xe7\x03\n\'com.google.devtools.artifactregistry.v1B\x0fRepositoryProtoP\x01ZPcloud.google.com/go/artifactregistry/apiv1/artifactregistrypb;artifactregistrypb\xaa\x02 Google.Cloud.ArtifactRegistry.V1\xca\x02 Google\\Cloud\\ArtifactRegistry\\V1\xea\x02#Google::Cloud::ArtifactRegistry::V1\xeaAk\n*secretmanager.googleapis.com/SecretVersion\x12=projects/{project}/secrets/{secret}/versions/{secret_version}\xeaA|\n\'servicedirectory.googleapis.com/Service\x12Qprojects/{project}/locations/{location}/namespaces/{namespace}/services/{service}b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.devtools.artifactregistry.v1.repository_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b"\n'com.google.devtools.artifactregistry.v1B\x0fRepositoryProtoP\x01ZPcloud.google.com/go/artifactregistry/apiv1/artifactregistrypb;artifactregistrypb\xaa\x02 Google.Cloud.ArtifactRegistry.V1\xca\x02 Google\\Cloud\\ArtifactRegistry\\V1\xea\x02#Google::Cloud::ArtifactRegistry::V1\xeaAk\n*secretmanager.googleapis.com/SecretVersion\x12=projects/{project}/secrets/{secret}/versions/{secret_version}\xeaA|\n'servicedirectory.googleapis.com/Service\x12Qprojects/{project}/locations/{location}/namespaces/{namespace}/services/{service}"
+    _globals['_UPSTREAMPOLICY'].fields_by_name['repository']._loaded_options = None
+    _globals['_UPSTREAMPOLICY'].fields_by_name['repository']._serialized_options = b'\xfaA,\n*artifactregistry.googleapis.com/Repository'
+    _globals['_REMOTEREPOSITORYCONFIG_UPSTREAMCREDENTIALS_USERNAMEPASSWORDCREDENTIALS'].fields_by_name['password_secret_version']._loaded_options = None
+    _globals['_REMOTEREPOSITORYCONFIG_UPSTREAMCREDENTIALS_USERNAMEPASSWORDCREDENTIALS'].fields_by_name['password_secret_version']._serialized_options = b'\xfaA,\n*secretmanager.googleapis.com/SecretVersion'
+    _globals['_REMOTEREPOSITORYCONFIG_COMMONREMOTEREPOSITORY'].fields_by_name['uri']._loaded_options = None
+    _globals['_REMOTEREPOSITORYCONFIG_COMMONREMOTEREPOSITORY'].fields_by_name['uri']._serialized_options = b'\xe0A\x02'
+    _globals['_REMOTEREPOSITORYCONFIG'].fields_by_name['upstream_credentials']._loaded_options = None
+    _globals['_REMOTEREPOSITORYCONFIG'].fields_by_name['upstream_credentials']._serialized_options = b'\xe0A\x01'
+    _globals['_REMOTEREPOSITORYCONFIG'].fields_by_name['disable_upstream_validation']._loaded_options = None
+    _globals['_REMOTEREPOSITORYCONFIG'].fields_by_name['disable_upstream_validation']._serialized_options = b'\xe0A\x04'
+    _globals['_REPOSITORY_VULNERABILITYSCANNINGCONFIG'].fields_by_name['enablement_config']._loaded_options = None
+    _globals['_REPOSITORY_VULNERABILITYSCANNINGCONFIG'].fields_by_name['enablement_config']._serialized_options = b'\xe0A\x01'
+    _globals['_REPOSITORY_VULNERABILITYSCANNINGCONFIG'].fields_by_name['last_enable_time']._loaded_options = None
+    _globals['_REPOSITORY_VULNERABILITYSCANNINGCONFIG'].fields_by_name['last_enable_time']._serialized_options = b'\xe0A\x03'
+    _globals['_REPOSITORY_VULNERABILITYSCANNINGCONFIG'].fields_by_name['enablement_state']._loaded_options = None
+    _globals['_REPOSITORY_VULNERABILITYSCANNINGCONFIG'].fields_by_name['enablement_state']._serialized_options = b'\xe0A\x03'
+    _globals['_REPOSITORY_VULNERABILITYSCANNINGCONFIG'].fields_by_name['enablement_state_reason']._loaded_options = None
+    _globals['_REPOSITORY_VULNERABILITYSCANNINGCONFIG'].fields_by_name['enablement_state_reason']._serialized_options = b'\xe0A\x03'
+    _globals['_REPOSITORY_LABELSENTRY']._loaded_options = None
+    _globals['_REPOSITORY_LABELSENTRY']._serialized_options = b'8\x01'
+    _globals['_REPOSITORY_CLEANUPPOLICIESENTRY']._loaded_options = None
+    _globals['_REPOSITORY_CLEANUPPOLICIESENTRY']._serialized_options = b'8\x01'
+    _globals['_REPOSITORY'].fields_by_name['format']._loaded_options = None
+    _globals['_REPOSITORY'].fields_by_name['format']._serialized_options = b'\xe0A\x01'
+    _globals['_REPOSITORY'].fields_by_name['create_time']._loaded_options = None
+    _globals['_REPOSITORY'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_REPOSITORY'].fields_by_name['update_time']._loaded_options = None
+    _globals['_REPOSITORY'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_REPOSITORY'].fields_by_name['mode']._loaded_options = None
+    _globals['_REPOSITORY'].fields_by_name['mode']._serialized_options = b'\xe0A\x01'
+    _globals['_REPOSITORY'].fields_by_name['cleanup_policies']._loaded_options = None
+    _globals['_REPOSITORY'].fields_by_name['cleanup_policies']._serialized_options = b'\xe0A\x01'
+    _globals['_REPOSITORY'].fields_by_name['size_bytes']._loaded_options = None
+    _globals['_REPOSITORY'].fields_by_name['size_bytes']._serialized_options = b'\xe0A\x03'
+    _globals['_REPOSITORY'].fields_by_name['satisfies_pzs']._loaded_options = None
+    _globals['_REPOSITORY'].fields_by_name['satisfies_pzs']._serialized_options = b'\xe0A\x03'
+    _globals['_REPOSITORY'].fields_by_name['cleanup_policy_dry_run']._loaded_options = None
+    _globals['_REPOSITORY'].fields_by_name['cleanup_policy_dry_run']._serialized_options = b'\xe0A\x01'
+    _globals['_REPOSITORY'].fields_by_name['vulnerability_scanning_config']._loaded_options = None
+    _globals['_REPOSITORY'].fields_by_name['vulnerability_scanning_config']._serialized_options = b'\xe0A\x01'
+    _globals['_REPOSITORY'].fields_by_name['disallow_unspecified_mode']._loaded_options = None
+    _globals['_REPOSITORY'].fields_by_name['disallow_unspecified_mode']._serialized_options = b'\xe0A\x01'
+    _globals['_REPOSITORY'].fields_by_name['satisfies_pzi']._loaded_options = None
+    _globals['_REPOSITORY'].fields_by_name['satisfies_pzi']._serialized_options = b'\xe0A\x03'
+    _globals['_REPOSITORY'].fields_by_name['registry_uri']._loaded_options = None
+    _globals['_REPOSITORY'].fields_by_name['registry_uri']._serialized_options = b'\xe0A\x03'
+    _globals['_REPOSITORY']._loaded_options = None
+    _globals['_REPOSITORY']._serialized_options = b'\xeaAo\n*artifactregistry.googleapis.com/Repository\x12Aprojects/{project}/locations/{location}/repositories/{repository}'
+    _globals['_LISTREPOSITORIESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTREPOSITORIESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA,\x12*artifactregistry.googleapis.com/Repository'
+    _globals['_LISTREPOSITORIESREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTREPOSITORIESREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTREPOSITORIESREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTREPOSITORIESREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_GETREPOSITORYREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETREPOSITORYREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA,\n*artifactregistry.googleapis.com/Repository'
+    _globals['_CREATEREPOSITORYREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEREPOSITORYREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA,\x12*artifactregistry.googleapis.com/Repository'
+    _globals['_CREATEREPOSITORYREQUEST'].fields_by_name['repository_id']._loaded_options = None
+    _globals['_CREATEREPOSITORYREQUEST'].fields_by_name['repository_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEREPOSITORYREQUEST'].fields_by_name['repository']._loaded_options = None
+    _globals['_CREATEREPOSITORYREQUEST'].fields_by_name['repository']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETEREPOSITORYREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEREPOSITORYREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA,\n*artifactregistry.googleapis.com/Repository'
+    _globals['_UPSTREAMPOLICY']._serialized_start = 252
+    _globals['_UPSTREAMPOLICY']._serialized_end = 367
+    _globals['_CLEANUPPOLICYCONDITION']._serialized_start = 370
+    _globals['_CLEANUPPOLICYCONDITION']._serialized_end = 794
+    _globals['_CLEANUPPOLICYCONDITION_TAGSTATE']._serialized_start = 678
+    _globals['_CLEANUPPOLICYCONDITION_TAGSTATE']._serialized_end = 750
+    _globals['_CLEANUPPOLICYMOSTRECENTVERSIONS']._serialized_start = 796
+    _globals['_CLEANUPPOLICYMOSTRECENTVERSIONS']._serialized_end = 900
+    _globals['_CLEANUPPOLICY']._serialized_start = 903
+    _globals['_CLEANUPPOLICY']._serialized_end = 1263
+    _globals['_CLEANUPPOLICY_ACTION']._serialized_start = 1191
+    _globals['_CLEANUPPOLICY_ACTION']._serialized_end = 1245
+    _globals['_VIRTUALREPOSITORYCONFIG']._serialized_start = 1265
+    _globals['_VIRTUALREPOSITORYCONFIG']._serialized_end = 1370
+    _globals['_REMOTEREPOSITORYCONFIG']._serialized_start = 1373
+    _globals['_REMOTEREPOSITORYCONFIG']._serialized_end = 5418
+    _globals['_REMOTEREPOSITORYCONFIG_UPSTREAMCREDENTIALS']._serialized_start = 2314
+    _globals['_REMOTEREPOSITORYCONFIG_UPSTREAMCREDENTIALS']._serialized_end = 2633
+    _globals['_REMOTEREPOSITORYCONFIG_UPSTREAMCREDENTIALS_USERNAMEPASSWORDCREDENTIALS']._serialized_start = 2489
+    _globals['_REMOTEREPOSITORYCONFIG_UPSTREAMCREDENTIALS_USERNAMEPASSWORDCREDENTIALS']._serialized_end = 2618
+    _globals['_REMOTEREPOSITORYCONFIG_DOCKERREPOSITORY']._serialized_start = 2636
+    _globals['_REMOTEREPOSITORYCONFIG_DOCKERREPOSITORY']._serialized_end = 3018
+    _globals['_REMOTEREPOSITORYCONFIG_DOCKERREPOSITORY_CUSTOMREPOSITORY']._serialized_start = 2904
+    _globals['_REMOTEREPOSITORYCONFIG_DOCKERREPOSITORY_CUSTOMREPOSITORY']._serialized_end = 2935
+    _globals['_REMOTEREPOSITORYCONFIG_DOCKERREPOSITORY_PUBLICREPOSITORY']._serialized_start = 2937
+    _globals['_REMOTEREPOSITORYCONFIG_DOCKERREPOSITORY_PUBLICREPOSITORY']._serialized_end = 3006
+    _globals['_REMOTEREPOSITORYCONFIG_MAVENREPOSITORY']._serialized_start = 3021
+    _globals['_REMOTEREPOSITORYCONFIG_MAVENREPOSITORY']._serialized_end = 3403
+    _globals['_REMOTEREPOSITORYCONFIG_MAVENREPOSITORY_CUSTOMREPOSITORY']._serialized_start = 2904
+    _globals['_REMOTEREPOSITORYCONFIG_MAVENREPOSITORY_CUSTOMREPOSITORY']._serialized_end = 2935
+    _globals['_REMOTEREPOSITORYCONFIG_MAVENREPOSITORY_PUBLICREPOSITORY']._serialized_start = 3319
+    _globals['_REMOTEREPOSITORYCONFIG_MAVENREPOSITORY_PUBLICREPOSITORY']._serialized_end = 3391
+    _globals['_REMOTEREPOSITORYCONFIG_NPMREPOSITORY']._serialized_start = 3406
+    _globals['_REMOTEREPOSITORYCONFIG_NPMREPOSITORY']._serialized_end = 3774
+    _globals['_REMOTEREPOSITORYCONFIG_NPMREPOSITORY_CUSTOMREPOSITORY']._serialized_start = 2904
+    _globals['_REMOTEREPOSITORYCONFIG_NPMREPOSITORY_CUSTOMREPOSITORY']._serialized_end = 2935
+    _globals['_REMOTEREPOSITORYCONFIG_NPMREPOSITORY_PUBLICREPOSITORY']._serialized_start = 3698
+    _globals['_REMOTEREPOSITORYCONFIG_NPMREPOSITORY_PUBLICREPOSITORY']._serialized_end = 3762
+    _globals['_REMOTEREPOSITORYCONFIG_PYTHONREPOSITORY']._serialized_start = 3777
+    _globals['_REMOTEREPOSITORYCONFIG_PYTHONREPOSITORY']._serialized_end = 4153
+    _globals['_REMOTEREPOSITORYCONFIG_PYTHONREPOSITORY_CUSTOMREPOSITORY']._serialized_start = 2904
+    _globals['_REMOTEREPOSITORYCONFIG_PYTHONREPOSITORY_CUSTOMREPOSITORY']._serialized_end = 2935
+    _globals['_REMOTEREPOSITORYCONFIG_PYTHONREPOSITORY_PUBLICREPOSITORY']._serialized_start = 4078
+    _globals['_REMOTEREPOSITORYCONFIG_PYTHONREPOSITORY_PUBLICREPOSITORY']._serialized_end = 4141
+    _globals['_REMOTEREPOSITORYCONFIG_APTREPOSITORY']._serialized_start = 4156
+    _globals['_REMOTEREPOSITORYCONFIG_APTREPOSITORY']._serialized_end = 4733
+    _globals['_REMOTEREPOSITORYCONFIG_APTREPOSITORY_PUBLICREPOSITORY']._serialized_start = 4416
+    _globals['_REMOTEREPOSITORYCONFIG_APTREPOSITORY_PUBLICREPOSITORY']._serialized_end = 4688
+    _globals['_REMOTEREPOSITORYCONFIG_APTREPOSITORY_PUBLICREPOSITORY_REPOSITORYBASE']._serialized_start = 4594
+    _globals['_REMOTEREPOSITORYCONFIG_APTREPOSITORY_PUBLICREPOSITORY_REPOSITORYBASE']._serialized_end = 4688
+    _globals['_REMOTEREPOSITORYCONFIG_APTREPOSITORY_CUSTOMREPOSITORY']._serialized_start = 2904
+    _globals['_REMOTEREPOSITORYCONFIG_APTREPOSITORY_CUSTOMREPOSITORY']._serialized_end = 2935
+    _globals['_REMOTEREPOSITORYCONFIG_YUMREPOSITORY']._serialized_start = 4736
+    _globals['_REMOTEREPOSITORYCONFIG_YUMREPOSITORY']._serialized_end = 5357
+    _globals['_REMOTEREPOSITORYCONFIG_YUMREPOSITORY_PUBLICREPOSITORY']._serialized_start = 4996
+    _globals['_REMOTEREPOSITORYCONFIG_YUMREPOSITORY_PUBLICREPOSITORY']._serialized_end = 5312
+    _globals['_REMOTEREPOSITORYCONFIG_YUMREPOSITORY_PUBLICREPOSITORY_REPOSITORYBASE']._serialized_start = 5175
+    _globals['_REMOTEREPOSITORYCONFIG_YUMREPOSITORY_PUBLICREPOSITORY_REPOSITORYBASE']._serialized_end = 5312
+    _globals['_REMOTEREPOSITORYCONFIG_YUMREPOSITORY_CUSTOMREPOSITORY']._serialized_start = 2904
+    _globals['_REMOTEREPOSITORYCONFIG_YUMREPOSITORY_CUSTOMREPOSITORY']._serialized_end = 2935
+    _globals['_REMOTEREPOSITORYCONFIG_COMMONREMOTEREPOSITORY']._serialized_start = 5359
+    _globals['_REMOTEREPOSITORYCONFIG_COMMONREMOTEREPOSITORY']._serialized_end = 5401
+    _globals['_REPOSITORY']._serialized_start = 5421
+    _globals['_REPOSITORY']._serialized_end = 8033
+    _globals['_REPOSITORY_MAVENREPOSITORYCONFIG']._serialized_start = 6623
+    _globals['_REPOSITORY_MAVENREPOSITORYCONFIG']._serialized_end = 6866
+    _globals['_REPOSITORY_MAVENREPOSITORYCONFIG_VERSIONPOLICY']._serialized_start = 6792
+    _globals['_REPOSITORY_MAVENREPOSITORYCONFIG_VERSIONPOLICY']._serialized_end = 6866
+    _globals['_REPOSITORY_DOCKERREPOSITORYCONFIG']._serialized_start = 6868
+    _globals['_REPOSITORY_DOCKERREPOSITORYCONFIG']._serialized_end = 6916
+    _globals['_REPOSITORY_VULNERABILITYSCANNINGCONFIG']._serialized_start = 6919
+    _globals['_REPOSITORY_VULNERABILITYSCANNINGCONFIG']._serialized_end = 7502
+    _globals['_REPOSITORY_VULNERABILITYSCANNINGCONFIG_ENABLEMENTCONFIG']._serialized_start = 7297
+    _globals['_REPOSITORY_VULNERABILITYSCANNINGCONFIG_ENABLEMENTCONFIG']._serialized_end = 7379
+    _globals['_REPOSITORY_VULNERABILITYSCANNINGCONFIG_ENABLEMENTSTATE']._serialized_start = 7381
+    _globals['_REPOSITORY_VULNERABILITYSCANNINGCONFIG_ENABLEMENTSTATE']._serialized_end = 7502
+    _globals['_REPOSITORY_LABELSENTRY']._serialized_start = 7504
+    _globals['_REPOSITORY_LABELSENTRY']._serialized_end = 7549
+    _globals['_REPOSITORY_CLEANUPPOLICIESENTRY']._serialized_start = 7551
+    _globals['_REPOSITORY_CLEANUPPOLICIESENTRY']._serialized_end = 7657
+    _globals['_REPOSITORY_FORMAT']._serialized_start = 7659
+    _globals['_REPOSITORY_FORMAT']._serialized_end = 7783
+    _globals['_REPOSITORY_MODE']._serialized_start = 7785
+    _globals['_REPOSITORY_MODE']._serialized_end = 7885
+    _globals['_LISTREPOSITORIESREQUEST']._serialized_start = 8036
+    _globals['_LISTREPOSITORIESREQUEST']._serialized_end = 8212
+    _globals['_LISTREPOSITORIESRESPONSE']._serialized_start = 8214
+    _globals['_LISTREPOSITORIESRESPONSE']._serialized_end = 8336
+    _globals['_GETREPOSITORYREQUEST']._serialized_start = 8338
+    _globals['_GETREPOSITORYREQUEST']._serialized_end = 8426
+    _globals['_CREATEREPOSITORYREQUEST']._serialized_start = 8429
+    _globals['_CREATEREPOSITORYREQUEST']._serialized_end = 8624
+    _globals['_UPDATEREPOSITORYREQUEST']._serialized_start = 8627
+    _globals['_UPDATEREPOSITORYREQUEST']._serialized_end = 8770
+    _globals['_DELETEREPOSITORYREQUEST']._serialized_start = 8772
+    _globals['_DELETEREPOSITORYREQUEST']._serialized_end = 8863

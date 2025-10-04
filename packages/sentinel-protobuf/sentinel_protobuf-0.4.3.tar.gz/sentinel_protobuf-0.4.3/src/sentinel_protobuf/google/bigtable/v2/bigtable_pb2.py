@@ -1,0 +1,195 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/bigtable/v2/bigtable.proto')
+_sym_db = _symbol_database.Default()
+from ....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from ....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from ....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from ....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from ....google.api import routing_pb2 as google_dot_api_dot_routing__pb2
+from ....google.bigtable.v2 import data_pb2 as google_dot_bigtable_dot_v2_dot_data__pb2
+from ....google.bigtable.v2 import request_stats_pb2 as google_dot_bigtable_dot_v2_dot_request__stats__pb2
+from ....google.bigtable.v2 import types_pb2 as google_dot_bigtable_dot_v2_dot_types__pb2
+from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from google.protobuf import wrappers_pb2 as google_dot_protobuf_dot_wrappers__pb2
+from ....google.rpc import status_pb2 as google_dot_rpc_dot_status__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!google/bigtable/v2/bigtable.proto\x12\x12google.bigtable.v2\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a\x18google/api/routing.proto\x1a\x1dgoogle/bigtable/v2/data.proto\x1a&google/bigtable/v2/request_stats.proto\x1a\x1egoogle/bigtable/v2/types.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/wrappers.proto\x1a\x17google/rpc/status.proto"\xcc\x04\n\x0fReadRowsRequest\x12>\n\ntable_name\x18\x01 \x01(\tB*\xe0A\x01\xfaA$\n"bigtableadmin.googleapis.com/Table\x12Q\n\x14authorized_view_name\x18\t \x01(\tB3\xe0A\x01\xfaA-\n+bigtableadmin.googleapis.com/AuthorizedView\x12U\n\x16materialized_view_name\x18\x0b \x01(\tB5\xe0A\x01\xfaA/\n-bigtableadmin.googleapis.com/MaterializedView\x12\x16\n\x0eapp_profile_id\x18\x05 \x01(\t\x12(\n\x04rows\x18\x02 \x01(\x0b2\x1a.google.bigtable.v2.RowSet\x12-\n\x06filter\x18\x03 \x01(\x0b2\x1d.google.bigtable.v2.RowFilter\x12\x12\n\nrows_limit\x18\x04 \x01(\x03\x12P\n\x12request_stats_view\x18\x06 \x01(\x0e24.google.bigtable.v2.ReadRowsRequest.RequestStatsView\x12\x10\n\x08reversed\x18\x07 \x01(\x08"f\n\x10RequestStatsView\x12"\n\x1eREQUEST_STATS_VIEW_UNSPECIFIED\x10\x00\x12\x16\n\x12REQUEST_STATS_NONE\x10\x01\x12\x16\n\x12REQUEST_STATS_FULL\x10\x02"\xb1\x03\n\x10ReadRowsResponse\x12>\n\x06chunks\x18\x01 \x03(\x0b2..google.bigtable.v2.ReadRowsResponse.CellChunk\x12\x1c\n\x14last_scanned_row_key\x18\x02 \x01(\x0c\x127\n\rrequest_stats\x18\x03 \x01(\x0b2 .google.bigtable.v2.RequestStats\x1a\x85\x02\n\tCellChunk\x12\x0f\n\x07row_key\x18\x01 \x01(\x0c\x121\n\x0bfamily_name\x18\x02 \x01(\x0b2\x1c.google.protobuf.StringValue\x12.\n\tqualifier\x18\x03 \x01(\x0b2\x1b.google.protobuf.BytesValue\x12\x18\n\x10timestamp_micros\x18\x04 \x01(\x03\x12\x0e\n\x06labels\x18\x05 \x03(\t\x12\r\n\x05value\x18\x06 \x01(\x0c\x12\x12\n\nvalue_size\x18\x07 \x01(\x05\x12\x13\n\treset_row\x18\x08 \x01(\x08H\x00\x12\x14\n\ncommit_row\x18\t \x01(\x08H\x00B\x0c\n\nrow_status"\x98\x02\n\x14SampleRowKeysRequest\x12>\n\ntable_name\x18\x01 \x01(\tB*\xe0A\x01\xfaA$\n"bigtableadmin.googleapis.com/Table\x12Q\n\x14authorized_view_name\x18\x04 \x01(\tB3\xe0A\x01\xfaA-\n+bigtableadmin.googleapis.com/AuthorizedView\x12U\n\x16materialized_view_name\x18\x05 \x01(\tB5\xe0A\x01\xfaA/\n-bigtableadmin.googleapis.com/MaterializedView\x12\x16\n\x0eapp_profile_id\x18\x02 \x01(\t">\n\x15SampleRowKeysResponse\x12\x0f\n\x07row_key\x18\x01 \x01(\x0c\x12\x14\n\x0coffset_bytes\x18\x02 \x01(\x03"\xbf\x02\n\x10MutateRowRequest\x12>\n\ntable_name\x18\x01 \x01(\tB*\xe0A\x01\xfaA$\n"bigtableadmin.googleapis.com/Table\x12Q\n\x14authorized_view_name\x18\x06 \x01(\tB3\xe0A\x01\xfaA-\n+bigtableadmin.googleapis.com/AuthorizedView\x12\x16\n\x0eapp_profile_id\x18\x04 \x01(\t\x12\x14\n\x07row_key\x18\x02 \x01(\x0cB\x03\xe0A\x02\x124\n\tmutations\x18\x03 \x03(\x0b2\x1c.google.bigtable.v2.MutationB\x03\xe0A\x02\x124\n\x0bidempotency\x18\x08 \x01(\x0b2\x1f.google.bigtable.v2.Idempotency"\x13\n\x11MutateRowResponse"\x88\x03\n\x11MutateRowsRequest\x12>\n\ntable_name\x18\x01 \x01(\tB*\xe0A\x01\xfaA$\n"bigtableadmin.googleapis.com/Table\x12Q\n\x14authorized_view_name\x18\x05 \x01(\tB3\xe0A\x01\xfaA-\n+bigtableadmin.googleapis.com/AuthorizedView\x12\x16\n\x0eapp_profile_id\x18\x03 \x01(\t\x12A\n\x07entries\x18\x02 \x03(\x0b2+.google.bigtable.v2.MutateRowsRequest.EntryB\x03\xe0A\x02\x1a\x84\x01\n\x05Entry\x12\x0f\n\x07row_key\x18\x01 \x01(\x0c\x124\n\tmutations\x18\x02 \x03(\x0b2\x1c.google.bigtable.v2.MutationB\x03\xe0A\x02\x124\n\x0bidempotency\x18\x03 \x01(\x0b2\x1f.google.bigtable.v2.Idempotency"\xe4\x01\n\x12MutateRowsResponse\x12=\n\x07entries\x18\x01 \x03(\x0b2,.google.bigtable.v2.MutateRowsResponse.Entry\x12?\n\x0frate_limit_info\x18\x03 \x01(\x0b2!.google.bigtable.v2.RateLimitInfoH\x00\x88\x01\x01\x1a:\n\x05Entry\x12\r\n\x05index\x18\x01 \x01(\x03\x12"\n\x06status\x18\x02 \x01(\x0b2\x12.google.rpc.StatusB\x12\n\x10_rate_limit_info"J\n\rRateLimitInfo\x12)\n\x06period\x18\x01 \x01(\x0b2\x19.google.protobuf.Duration\x12\x0e\n\x06factor\x18\x02 \x01(\x01"\x81\x03\n\x18CheckAndMutateRowRequest\x12>\n\ntable_name\x18\x01 \x01(\tB*\xe0A\x01\xfaA$\n"bigtableadmin.googleapis.com/Table\x12Q\n\x14authorized_view_name\x18\t \x01(\tB3\xe0A\x01\xfaA-\n+bigtableadmin.googleapis.com/AuthorizedView\x12\x16\n\x0eapp_profile_id\x18\x07 \x01(\t\x12\x14\n\x07row_key\x18\x02 \x01(\x0cB\x03\xe0A\x02\x127\n\x10predicate_filter\x18\x06 \x01(\x0b2\x1d.google.bigtable.v2.RowFilter\x124\n\x0etrue_mutations\x18\x04 \x03(\x0b2\x1c.google.bigtable.v2.Mutation\x125\n\x0ffalse_mutations\x18\x05 \x03(\x0b2\x1c.google.bigtable.v2.Mutation"6\n\x19CheckAndMutateRowResponse\x12\x19\n\x11predicate_matched\x18\x01 \x01(\x08"i\n\x12PingAndWarmRequest\x12;\n\x04name\x18\x01 \x01(\tB-\xe0A\x02\xfaA\'\n%bigtableadmin.googleapis.com/Instance\x12\x16\n\x0eapp_profile_id\x18\x02 \x01(\t"\x15\n\x13PingAndWarmResponse"\x99\x02\n\x19ReadModifyWriteRowRequest\x12>\n\ntable_name\x18\x01 \x01(\tB*\xe0A\x01\xfaA$\n"bigtableadmin.googleapis.com/Table\x12Q\n\x14authorized_view_name\x18\x06 \x01(\tB3\xe0A\x01\xfaA-\n+bigtableadmin.googleapis.com/AuthorizedView\x12\x16\n\x0eapp_profile_id\x18\x04 \x01(\t\x12\x14\n\x07row_key\x18\x02 \x01(\x0cB\x03\xe0A\x02\x12;\n\x05rules\x18\x03 \x03(\x0b2\'.google.bigtable.v2.ReadModifyWriteRuleB\x03\xe0A\x02"B\n\x1aReadModifyWriteRowResponse\x12$\n\x03row\x18\x01 \x01(\x0b2\x17.google.bigtable.v2.Row"\x86\x01\n,GenerateInitialChangeStreamPartitionsRequest\x12>\n\ntable_name\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"bigtableadmin.googleapis.com/Table\x12\x16\n\x0eapp_profile_id\x18\x02 \x01(\t"g\n-GenerateInitialChangeStreamPartitionsResponse\x126\n\tpartition\x18\x01 \x01(\x0b2#.google.bigtable.v2.StreamPartition"\x9b\x03\n\x17ReadChangeStreamRequest\x12>\n\ntable_name\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"bigtableadmin.googleapis.com/Table\x12\x16\n\x0eapp_profile_id\x18\x02 \x01(\t\x126\n\tpartition\x18\x03 \x01(\x0b2#.google.bigtable.v2.StreamPartition\x120\n\nstart_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampH\x00\x12K\n\x13continuation_tokens\x18\x06 \x01(\x0b2,.google.bigtable.v2.StreamContinuationTokensH\x00\x12,\n\x08end_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.Timestamp\x125\n\x12heartbeat_duration\x18\x07 \x01(\x0b2\x19.google.protobuf.DurationB\x0c\n\nstart_from"\xa9\n\n\x18ReadChangeStreamResponse\x12N\n\x0bdata_change\x18\x01 \x01(\x0b27.google.bigtable.v2.ReadChangeStreamResponse.DataChangeH\x00\x12K\n\theartbeat\x18\x02 \x01(\x0b26.google.bigtable.v2.ReadChangeStreamResponse.HeartbeatH\x00\x12P\n\x0cclose_stream\x18\x03 \x01(\x0b28.google.bigtable.v2.ReadChangeStreamResponse.CloseStreamH\x00\x1a\xf4\x01\n\rMutationChunk\x12X\n\nchunk_info\x18\x01 \x01(\x0b2D.google.bigtable.v2.ReadChangeStreamResponse.MutationChunk.ChunkInfo\x12.\n\x08mutation\x18\x02 \x01(\x0b2\x1c.google.bigtable.v2.Mutation\x1aY\n\tChunkInfo\x12\x1a\n\x12chunked_value_size\x18\x01 \x01(\x05\x12\x1c\n\x14chunked_value_offset\x18\x02 \x01(\x05\x12\x12\n\nlast_chunk\x18\x03 \x01(\x08\x1a\xc6\x03\n\nDataChange\x12J\n\x04type\x18\x01 \x01(\x0e2<.google.bigtable.v2.ReadChangeStreamResponse.DataChange.Type\x12\x19\n\x11source_cluster_id\x18\x02 \x01(\t\x12\x0f\n\x07row_key\x18\x03 \x01(\x0c\x124\n\x10commit_timestamp\x18\x04 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12\x12\n\ntiebreaker\x18\x05 \x01(\x05\x12J\n\x06chunks\x18\x06 \x03(\x0b2:.google.bigtable.v2.ReadChangeStreamResponse.MutationChunk\x12\x0c\n\x04done\x18\x08 \x01(\x08\x12\r\n\x05token\x18\t \x01(\t\x12;\n\x17estimated_low_watermark\x18\n \x01(\x0b2\x1a.google.protobuf.Timestamp"P\n\x04Type\x12\x14\n\x10TYPE_UNSPECIFIED\x10\x00\x12\x08\n\x04USER\x10\x01\x12\x16\n\x12GARBAGE_COLLECTION\x10\x02\x12\x10\n\x0cCONTINUATION\x10\x03\x1a\x91\x01\n\tHeartbeat\x12G\n\x12continuation_token\x18\x01 \x01(\x0b2+.google.bigtable.v2.StreamContinuationToken\x12;\n\x17estimated_low_watermark\x18\x02 \x01(\x0b2\x1a.google.protobuf.Timestamp\x1a\xb8\x01\n\x0bCloseStream\x12"\n\x06status\x18\x01 \x01(\x0b2\x12.google.rpc.Status\x12H\n\x13continuation_tokens\x18\x02 \x03(\x0b2+.google.bigtable.v2.StreamContinuationToken\x12;\n\x0enew_partitions\x18\x03 \x03(\x0b2#.google.bigtable.v2.StreamPartitionB\x0f\n\rstream_record"\xa1\x03\n\x13ExecuteQueryRequest\x12D\n\rinstance_name\x18\x01 \x01(\tB-\xe0A\x02\xfaA\'\n%bigtableadmin.googleapis.com/Instance\x12\x1b\n\x0eapp_profile_id\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x14\n\x05query\x18\x03 \x01(\tB\x05\x18\x01\xe0A\x02\x12\x16\n\x0eprepared_query\x18\t \x01(\x0c\x12;\n\x0cproto_format\x18\x04 \x01(\x0b2\x1f.google.bigtable.v2.ProtoFormatB\x02\x18\x01H\x00\x12\x19\n\x0cresume_token\x18\x08 \x01(\x0cB\x03\xe0A\x01\x12H\n\x06params\x18\x07 \x03(\x0b23.google.bigtable.v2.ExecuteQueryRequest.ParamsEntryB\x03\xe0A\x02\x1aH\n\x0bParamsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12(\n\x05value\x18\x02 \x01(\x0b2\x19.google.bigtable.v2.Value:\x028\x01B\r\n\x0bdata_format"\x96\x01\n\x14ExecuteQueryResponse\x129\n\x08metadata\x18\x01 \x01(\x0b2%.google.bigtable.v2.ResultSetMetadataH\x00\x127\n\x07results\x18\x02 \x01(\x0b2$.google.bigtable.v2.PartialResultSetH\x00B\n\n\x08response"\xf4\x02\n\x13PrepareQueryRequest\x12D\n\rinstance_name\x18\x01 \x01(\tB-\xe0A\x02\xfaA\'\n%bigtableadmin.googleapis.com/Instance\x12\x1b\n\x0eapp_profile_id\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x12\n\x05query\x18\x03 \x01(\tB\x03\xe0A\x02\x127\n\x0cproto_format\x18\x04 \x01(\x0b2\x1f.google.bigtable.v2.ProtoFormatH\x00\x12Q\n\x0bparam_types\x18\x06 \x03(\x0b27.google.bigtable.v2.PrepareQueryRequest.ParamTypesEntryB\x03\xe0A\x02\x1aK\n\x0fParamTypesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\'\n\x05value\x18\x02 \x01(\x0b2\x18.google.bigtable.v2.Type:\x028\x01B\r\n\x0bdata_format"\x98\x01\n\x14PrepareQueryResponse\x127\n\x08metadata\x18\x01 \x01(\x0b2%.google.bigtable.v2.ResultSetMetadata\x12\x16\n\x0eprepared_query\x18\x02 \x01(\x0c\x12/\n\x0bvalid_until\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp2\xdb\'\n\x08Bigtable\x12\xd5\x04\n\x08ReadRows\x12#.google.bigtable.v2.ReadRowsRequest\x1a$.google.bigtable.v2.ReadRowsResponse"\xfb\x03\xdaA\ntable_name\xdaA\x19table_name,app_profile_id\x82\xd3\xe4\x93\x02\xf1\x01"9/v2/{table_name=projects/*/instances/*/tables/*}:readRows:\x01*ZZ"U/v2/{authorized_view_name=projects/*/instances/*/tables/*/authorizedViews/*}:readRows:\x01*ZU"P/v2/{materialized_view_name=projects/*/instances/*/materializedViews/*}:readRows:\x01*\x8a\xd3\xe4\x93\x02\xd3\x01\x12:\n\ntable_name\x12,{table_name=projects/*/instances/*/tables/*}\x12\x10\n\x0eapp_profile_id\x12G\n\x14authorized_view_name\x12/{table_name=projects/*/instances/*/tables/*}/**\x12:\n\x16materialized_view_name\x12 {name=projects/*/instances/*}/**0\x01\x12\xea\x04\n\rSampleRowKeys\x12(.google.bigtable.v2.SampleRowKeysRequest\x1a).google.bigtable.v2.SampleRowKeysResponse"\x81\x04\xdaA\ntable_name\xdaA\x19table_name,app_profile_id\x82\xd3\xe4\x93\x02\xf7\x01\x12>/v2/{table_name=projects/*/instances/*/tables/*}:sampleRowKeysZ\\\x12Z/v2/{authorized_view_name=projects/*/instances/*/tables/*/authorizedViews/*}:sampleRowKeysZW\x12U/v2/{materialized_view_name=projects/*/instances/*/materializedViews/*}:sampleRowKeys\x8a\xd3\xe4\x93\x02\xd3\x01\x12:\n\ntable_name\x12,{table_name=projects/*/instances/*/tables/*}\x12\x10\n\x0eapp_profile_id\x12G\n\x14authorized_view_name\x12/{table_name=projects/*/instances/*/tables/*}/**\x12:\n\x16materialized_view_name\x12 {name=projects/*/instances/*}/**0\x01\x12\xe9\x03\n\tMutateRow\x12$.google.bigtable.v2.MutateRowRequest\x1a%.google.bigtable.v2.MutateRowResponse"\x8e\x03\xdaA\x1ctable_name,row_key,mutations\xdaA+table_name,row_key,mutations,app_profile_id\x82\xd3\xe4\x93\x02\x9c\x01":/v2/{table_name=projects/*/instances/*/tables/*}:mutateRow:\x01*Z["V/v2/{authorized_view_name=projects/*/instances/*/tables/*/authorizedViews/*}:mutateRow:\x01*\x8a\xd3\xe4\x93\x02\x97\x01\x12:\n\ntable_name\x12,{table_name=projects/*/instances/*/tables/*}\x12\x10\n\x0eapp_profile_id\x12G\n\x14authorized_view_name\x12/{table_name=projects/*/instances/*/tables/*}/**\x12\xdc\x03\n\nMutateRows\x12%.google.bigtable.v2.MutateRowsRequest\x1a&.google.bigtable.v2.MutateRowsResponse"\xfc\x02\xdaA\x12table_name,entries\xdaA!table_name,entries,app_profile_id\x82\xd3\xe4\x93\x02\x9e\x01";/v2/{table_name=projects/*/instances/*/tables/*}:mutateRows:\x01*Z\\"W/v2/{authorized_view_name=projects/*/instances/*/tables/*/authorizedViews/*}:mutateRows:\x01*\x8a\xd3\xe4\x93\x02\x97\x01\x12:\n\ntable_name\x12,{table_name=projects/*/instances/*/tables/*}\x12\x10\n\x0eapp_profile_id\x12G\n\x14authorized_view_name\x12/{table_name=projects/*/instances/*/tables/*}/**0\x01\x12\xdd\x04\n\x11CheckAndMutateRow\x12,.google.bigtable.v2.CheckAndMutateRowRequest\x1a-.google.bigtable.v2.CheckAndMutateRowResponse"\xea\x03\xdaABtable_name,row_key,predicate_filter,true_mutations,false_mutations\xdaAQtable_name,row_key,predicate_filter,true_mutations,false_mutations,app_profile_id\x82\xd3\xe4\x93\x02\xac\x01"B/v2/{table_name=projects/*/instances/*/tables/*}:checkAndMutateRow:\x01*Zc"^/v2/{authorized_view_name=projects/*/instances/*/tables/*/authorizedViews/*}:checkAndMutateRow:\x01*\x8a\xd3\xe4\x93\x02\x97\x01\x12:\n\ntable_name\x12,{table_name=projects/*/instances/*/tables/*}\x12\x10\n\x0eapp_profile_id\x12G\n\x14authorized_view_name\x12/{table_name=projects/*/instances/*/tables/*}/**\x12\xee\x01\n\x0bPingAndWarm\x12&.google.bigtable.v2.PingAndWarmRequest\x1a\'.google.bigtable.v2.PingAndWarmResponse"\x8d\x01\xdaA\x04name\xdaA\x13name,app_profile_id\x82\xd3\xe4\x93\x02+"&/v2/{name=projects/*/instances/*}:ping:\x01*\x8a\xd3\xe4\x93\x029\x12%\n\x04name\x12\x1d{name=projects/*/instances/*}\x12\x10\n\x0eapp_profile_id\x12\x8e\x04\n\x12ReadModifyWriteRow\x12-.google.bigtable.v2.ReadModifyWriteRowRequest\x1a..google.bigtable.v2.ReadModifyWriteRowResponse"\x98\x03\xdaA\x18table_name,row_key,rules\xdaA\'table_name,row_key,rules,app_profile_id\x82\xd3\xe4\x93\x02\xae\x01"C/v2/{table_name=projects/*/instances/*/tables/*}:readModifyWriteRow:\x01*Zd"_/v2/{authorized_view_name=projects/*/instances/*/tables/*/authorizedViews/*}:readModifyWriteRow:\x01*\x8a\xd3\xe4\x93\x02\x97\x01\x12:\n\ntable_name\x12,{table_name=projects/*/instances/*/tables/*}\x12\x10\n\x0eapp_profile_id\x12G\n\x14authorized_view_name\x12/{table_name=projects/*/instances/*/tables/*}/**\x12\xbb\x02\n%GenerateInitialChangeStreamPartitions\x12@.google.bigtable.v2.GenerateInitialChangeStreamPartitionsRequest\x1aA.google.bigtable.v2.GenerateInitialChangeStreamPartitionsResponse"\x8a\x01\xdaA\ntable_name\xdaA\x19table_name,app_profile_id\x82\xd3\xe4\x93\x02["V/v2/{table_name=projects/*/instances/*/tables/*}:generateInitialChangeStreamPartitions:\x01*0\x01\x12\xe6\x01\n\x10ReadChangeStream\x12+.google.bigtable.v2.ReadChangeStreamRequest\x1a,.google.bigtable.v2.ReadChangeStreamResponse"u\xdaA\ntable_name\xdaA\x19table_name,app_profile_id\x82\xd3\xe4\x93\x02F"A/v2/{table_name=projects/*/instances/*/tables/*}:readChangeStream:\x01*0\x01\x12\xa9\x02\n\x0cPrepareQuery\x12\'.google.bigtable.v2.PrepareQueryRequest\x1a(.google.bigtable.v2.PrepareQueryResponse"\xc5\x01\xdaA\x13instance_name,query\xdaA"instance_name,query,app_profile_id\x82\xd3\xe4\x93\x02<"7/v2/{instance_name=projects/*/instances/*}:prepareQuery:\x01*\x8a\xd3\xe4\x93\x02B\x12.\n\rinstance_name\x12\x1d{name=projects/*/instances/*}\x12\x10\n\x0eapp_profile_id\x12\xab\x02\n\x0cExecuteQuery\x12\'.google.bigtable.v2.ExecuteQueryRequest\x1a(.google.bigtable.v2.ExecuteQueryResponse"\xc5\x01\xdaA\x13instance_name,query\xdaA"instance_name,query,app_profile_id\x82\xd3\xe4\x93\x02<"7/v2/{instance_name=projects/*/instances/*}:executeQuery:\x01*\x8a\xd3\xe4\x93\x02B\x12.\n\rinstance_name\x12\x1d{name=projects/*/instances/*}\x12\x10\n\x0eapp_profile_id0\x01\x1a\xdb\x02\xcaA\x17bigtable.googleapis.com\xd2A\xbd\x02https://www.googleapis.com/auth/bigtable.data,https://www.googleapis.com/auth/bigtable.data.readonly,https://www.googleapis.com/auth/cloud-bigtable.data,https://www.googleapis.com/auth/cloud-bigtable.data.readonly,https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/cloud-platform.read-onlyB\xf5\x04\n\x16com.google.bigtable.v2B\rBigtableProtoP\x01Z8cloud.google.com/go/bigtable/apiv2/bigtablepb;bigtablepb\xaa\x02\x18Google.Cloud.Bigtable.V2\xca\x02\x18Google\\Cloud\\Bigtable\\V2\xea\x02\x1bGoogle::Cloud::Bigtable::V2\xeaAP\n%bigtableadmin.googleapis.com/Instance\x12\'projects/{project}/instances/{instance}\xeaA\\\n"bigtableadmin.googleapis.com/Table\x126projects/{project}/instances/{instance}/tables/{table}\xeaA\x87\x01\n+bigtableadmin.googleapis.com/AuthorizedView\x12Xprojects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}\xeaA~\n-bigtableadmin.googleapis.com/MaterializedView\x12Mprojects/{project}/instances/{instance}/materializedViews/{materialized_view}b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.bigtable.v2.bigtable_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x16com.google.bigtable.v2B\rBigtableProtoP\x01Z8cloud.google.com/go/bigtable/apiv2/bigtablepb;bigtablepb\xaa\x02\x18Google.Cloud.Bigtable.V2\xca\x02\x18Google\\Cloud\\Bigtable\\V2\xea\x02\x1bGoogle::Cloud::Bigtable::V2\xeaAP\n%bigtableadmin.googleapis.com/Instance\x12\'projects/{project}/instances/{instance}\xeaA\\\n"bigtableadmin.googleapis.com/Table\x126projects/{project}/instances/{instance}/tables/{table}\xeaA\x87\x01\n+bigtableadmin.googleapis.com/AuthorizedView\x12Xprojects/{project}/instances/{instance}/tables/{table}/authorizedViews/{authorized_view}\xeaA~\n-bigtableadmin.googleapis.com/MaterializedView\x12Mprojects/{project}/instances/{instance}/materializedViews/{materialized_view}'
+    _globals['_READROWSREQUEST'].fields_by_name['table_name']._loaded_options = None
+    _globals['_READROWSREQUEST'].fields_by_name['table_name']._serialized_options = b'\xe0A\x01\xfaA$\n"bigtableadmin.googleapis.com/Table'
+    _globals['_READROWSREQUEST'].fields_by_name['authorized_view_name']._loaded_options = None
+    _globals['_READROWSREQUEST'].fields_by_name['authorized_view_name']._serialized_options = b'\xe0A\x01\xfaA-\n+bigtableadmin.googleapis.com/AuthorizedView'
+    _globals['_READROWSREQUEST'].fields_by_name['materialized_view_name']._loaded_options = None
+    _globals['_READROWSREQUEST'].fields_by_name['materialized_view_name']._serialized_options = b'\xe0A\x01\xfaA/\n-bigtableadmin.googleapis.com/MaterializedView'
+    _globals['_SAMPLEROWKEYSREQUEST'].fields_by_name['table_name']._loaded_options = None
+    _globals['_SAMPLEROWKEYSREQUEST'].fields_by_name['table_name']._serialized_options = b'\xe0A\x01\xfaA$\n"bigtableadmin.googleapis.com/Table'
+    _globals['_SAMPLEROWKEYSREQUEST'].fields_by_name['authorized_view_name']._loaded_options = None
+    _globals['_SAMPLEROWKEYSREQUEST'].fields_by_name['authorized_view_name']._serialized_options = b'\xe0A\x01\xfaA-\n+bigtableadmin.googleapis.com/AuthorizedView'
+    _globals['_SAMPLEROWKEYSREQUEST'].fields_by_name['materialized_view_name']._loaded_options = None
+    _globals['_SAMPLEROWKEYSREQUEST'].fields_by_name['materialized_view_name']._serialized_options = b'\xe0A\x01\xfaA/\n-bigtableadmin.googleapis.com/MaterializedView'
+    _globals['_MUTATEROWREQUEST'].fields_by_name['table_name']._loaded_options = None
+    _globals['_MUTATEROWREQUEST'].fields_by_name['table_name']._serialized_options = b'\xe0A\x01\xfaA$\n"bigtableadmin.googleapis.com/Table'
+    _globals['_MUTATEROWREQUEST'].fields_by_name['authorized_view_name']._loaded_options = None
+    _globals['_MUTATEROWREQUEST'].fields_by_name['authorized_view_name']._serialized_options = b'\xe0A\x01\xfaA-\n+bigtableadmin.googleapis.com/AuthorizedView'
+    _globals['_MUTATEROWREQUEST'].fields_by_name['row_key']._loaded_options = None
+    _globals['_MUTATEROWREQUEST'].fields_by_name['row_key']._serialized_options = b'\xe0A\x02'
+    _globals['_MUTATEROWREQUEST'].fields_by_name['mutations']._loaded_options = None
+    _globals['_MUTATEROWREQUEST'].fields_by_name['mutations']._serialized_options = b'\xe0A\x02'
+    _globals['_MUTATEROWSREQUEST_ENTRY'].fields_by_name['mutations']._loaded_options = None
+    _globals['_MUTATEROWSREQUEST_ENTRY'].fields_by_name['mutations']._serialized_options = b'\xe0A\x02'
+    _globals['_MUTATEROWSREQUEST'].fields_by_name['table_name']._loaded_options = None
+    _globals['_MUTATEROWSREQUEST'].fields_by_name['table_name']._serialized_options = b'\xe0A\x01\xfaA$\n"bigtableadmin.googleapis.com/Table'
+    _globals['_MUTATEROWSREQUEST'].fields_by_name['authorized_view_name']._loaded_options = None
+    _globals['_MUTATEROWSREQUEST'].fields_by_name['authorized_view_name']._serialized_options = b'\xe0A\x01\xfaA-\n+bigtableadmin.googleapis.com/AuthorizedView'
+    _globals['_MUTATEROWSREQUEST'].fields_by_name['entries']._loaded_options = None
+    _globals['_MUTATEROWSREQUEST'].fields_by_name['entries']._serialized_options = b'\xe0A\x02'
+    _globals['_CHECKANDMUTATEROWREQUEST'].fields_by_name['table_name']._loaded_options = None
+    _globals['_CHECKANDMUTATEROWREQUEST'].fields_by_name['table_name']._serialized_options = b'\xe0A\x01\xfaA$\n"bigtableadmin.googleapis.com/Table'
+    _globals['_CHECKANDMUTATEROWREQUEST'].fields_by_name['authorized_view_name']._loaded_options = None
+    _globals['_CHECKANDMUTATEROWREQUEST'].fields_by_name['authorized_view_name']._serialized_options = b'\xe0A\x01\xfaA-\n+bigtableadmin.googleapis.com/AuthorizedView'
+    _globals['_CHECKANDMUTATEROWREQUEST'].fields_by_name['row_key']._loaded_options = None
+    _globals['_CHECKANDMUTATEROWREQUEST'].fields_by_name['row_key']._serialized_options = b'\xe0A\x02'
+    _globals['_PINGANDWARMREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_PINGANDWARMREQUEST'].fields_by_name['name']._serialized_options = b"\xe0A\x02\xfaA'\n%bigtableadmin.googleapis.com/Instance"
+    _globals['_READMODIFYWRITEROWREQUEST'].fields_by_name['table_name']._loaded_options = None
+    _globals['_READMODIFYWRITEROWREQUEST'].fields_by_name['table_name']._serialized_options = b'\xe0A\x01\xfaA$\n"bigtableadmin.googleapis.com/Table'
+    _globals['_READMODIFYWRITEROWREQUEST'].fields_by_name['authorized_view_name']._loaded_options = None
+    _globals['_READMODIFYWRITEROWREQUEST'].fields_by_name['authorized_view_name']._serialized_options = b'\xe0A\x01\xfaA-\n+bigtableadmin.googleapis.com/AuthorizedView'
+    _globals['_READMODIFYWRITEROWREQUEST'].fields_by_name['row_key']._loaded_options = None
+    _globals['_READMODIFYWRITEROWREQUEST'].fields_by_name['row_key']._serialized_options = b'\xe0A\x02'
+    _globals['_READMODIFYWRITEROWREQUEST'].fields_by_name['rules']._loaded_options = None
+    _globals['_READMODIFYWRITEROWREQUEST'].fields_by_name['rules']._serialized_options = b'\xe0A\x02'
+    _globals['_GENERATEINITIALCHANGESTREAMPARTITIONSREQUEST'].fields_by_name['table_name']._loaded_options = None
+    _globals['_GENERATEINITIALCHANGESTREAMPARTITIONSREQUEST'].fields_by_name['table_name']._serialized_options = b'\xe0A\x02\xfaA$\n"bigtableadmin.googleapis.com/Table'
+    _globals['_READCHANGESTREAMREQUEST'].fields_by_name['table_name']._loaded_options = None
+    _globals['_READCHANGESTREAMREQUEST'].fields_by_name['table_name']._serialized_options = b'\xe0A\x02\xfaA$\n"bigtableadmin.googleapis.com/Table'
+    _globals['_EXECUTEQUERYREQUEST_PARAMSENTRY']._loaded_options = None
+    _globals['_EXECUTEQUERYREQUEST_PARAMSENTRY']._serialized_options = b'8\x01'
+    _globals['_EXECUTEQUERYREQUEST'].fields_by_name['instance_name']._loaded_options = None
+    _globals['_EXECUTEQUERYREQUEST'].fields_by_name['instance_name']._serialized_options = b"\xe0A\x02\xfaA'\n%bigtableadmin.googleapis.com/Instance"
+    _globals['_EXECUTEQUERYREQUEST'].fields_by_name['app_profile_id']._loaded_options = None
+    _globals['_EXECUTEQUERYREQUEST'].fields_by_name['app_profile_id']._serialized_options = b'\xe0A\x01'
+    _globals['_EXECUTEQUERYREQUEST'].fields_by_name['query']._loaded_options = None
+    _globals['_EXECUTEQUERYREQUEST'].fields_by_name['query']._serialized_options = b'\x18\x01\xe0A\x02'
+    _globals['_EXECUTEQUERYREQUEST'].fields_by_name['proto_format']._loaded_options = None
+    _globals['_EXECUTEQUERYREQUEST'].fields_by_name['proto_format']._serialized_options = b'\x18\x01'
+    _globals['_EXECUTEQUERYREQUEST'].fields_by_name['resume_token']._loaded_options = None
+    _globals['_EXECUTEQUERYREQUEST'].fields_by_name['resume_token']._serialized_options = b'\xe0A\x01'
+    _globals['_EXECUTEQUERYREQUEST'].fields_by_name['params']._loaded_options = None
+    _globals['_EXECUTEQUERYREQUEST'].fields_by_name['params']._serialized_options = b'\xe0A\x02'
+    _globals['_PREPAREQUERYREQUEST_PARAMTYPESENTRY']._loaded_options = None
+    _globals['_PREPAREQUERYREQUEST_PARAMTYPESENTRY']._serialized_options = b'8\x01'
+    _globals['_PREPAREQUERYREQUEST'].fields_by_name['instance_name']._loaded_options = None
+    _globals['_PREPAREQUERYREQUEST'].fields_by_name['instance_name']._serialized_options = b"\xe0A\x02\xfaA'\n%bigtableadmin.googleapis.com/Instance"
+    _globals['_PREPAREQUERYREQUEST'].fields_by_name['app_profile_id']._loaded_options = None
+    _globals['_PREPAREQUERYREQUEST'].fields_by_name['app_profile_id']._serialized_options = b'\xe0A\x01'
+    _globals['_PREPAREQUERYREQUEST'].fields_by_name['query']._loaded_options = None
+    _globals['_PREPAREQUERYREQUEST'].fields_by_name['query']._serialized_options = b'\xe0A\x02'
+    _globals['_PREPAREQUERYREQUEST'].fields_by_name['param_types']._loaded_options = None
+    _globals['_PREPAREQUERYREQUEST'].fields_by_name['param_types']._serialized_options = b'\xe0A\x02'
+    _globals['_BIGTABLE']._loaded_options = None
+    _globals['_BIGTABLE']._serialized_options = b'\xcaA\x17bigtable.googleapis.com\xd2A\xbd\x02https://www.googleapis.com/auth/bigtable.data,https://www.googleapis.com/auth/bigtable.data.readonly,https://www.googleapis.com/auth/cloud-bigtable.data,https://www.googleapis.com/auth/cloud-bigtable.data.readonly,https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/cloud-platform.read-only'
+    _globals['_BIGTABLE'].methods_by_name['ReadRows']._loaded_options = None
+    _globals['_BIGTABLE'].methods_by_name['ReadRows']._serialized_options = b'\xdaA\ntable_name\xdaA\x19table_name,app_profile_id\x82\xd3\xe4\x93\x02\xf1\x01"9/v2/{table_name=projects/*/instances/*/tables/*}:readRows:\x01*ZZ"U/v2/{authorized_view_name=projects/*/instances/*/tables/*/authorizedViews/*}:readRows:\x01*ZU"P/v2/{materialized_view_name=projects/*/instances/*/materializedViews/*}:readRows:\x01*\x8a\xd3\xe4\x93\x02\xd3\x01\x12:\n\ntable_name\x12,{table_name=projects/*/instances/*/tables/*}\x12\x10\n\x0eapp_profile_id\x12G\n\x14authorized_view_name\x12/{table_name=projects/*/instances/*/tables/*}/**\x12:\n\x16materialized_view_name\x12 {name=projects/*/instances/*}/**'
+    _globals['_BIGTABLE'].methods_by_name['SampleRowKeys']._loaded_options = None
+    _globals['_BIGTABLE'].methods_by_name['SampleRowKeys']._serialized_options = b'\xdaA\ntable_name\xdaA\x19table_name,app_profile_id\x82\xd3\xe4\x93\x02\xf7\x01\x12>/v2/{table_name=projects/*/instances/*/tables/*}:sampleRowKeysZ\\\x12Z/v2/{authorized_view_name=projects/*/instances/*/tables/*/authorizedViews/*}:sampleRowKeysZW\x12U/v2/{materialized_view_name=projects/*/instances/*/materializedViews/*}:sampleRowKeys\x8a\xd3\xe4\x93\x02\xd3\x01\x12:\n\ntable_name\x12,{table_name=projects/*/instances/*/tables/*}\x12\x10\n\x0eapp_profile_id\x12G\n\x14authorized_view_name\x12/{table_name=projects/*/instances/*/tables/*}/**\x12:\n\x16materialized_view_name\x12 {name=projects/*/instances/*}/**'
+    _globals['_BIGTABLE'].methods_by_name['MutateRow']._loaded_options = None
+    _globals['_BIGTABLE'].methods_by_name['MutateRow']._serialized_options = b'\xdaA\x1ctable_name,row_key,mutations\xdaA+table_name,row_key,mutations,app_profile_id\x82\xd3\xe4\x93\x02\x9c\x01":/v2/{table_name=projects/*/instances/*/tables/*}:mutateRow:\x01*Z["V/v2/{authorized_view_name=projects/*/instances/*/tables/*/authorizedViews/*}:mutateRow:\x01*\x8a\xd3\xe4\x93\x02\x97\x01\x12:\n\ntable_name\x12,{table_name=projects/*/instances/*/tables/*}\x12\x10\n\x0eapp_profile_id\x12G\n\x14authorized_view_name\x12/{table_name=projects/*/instances/*/tables/*}/**'
+    _globals['_BIGTABLE'].methods_by_name['MutateRows']._loaded_options = None
+    _globals['_BIGTABLE'].methods_by_name['MutateRows']._serialized_options = b'\xdaA\x12table_name,entries\xdaA!table_name,entries,app_profile_id\x82\xd3\xe4\x93\x02\x9e\x01";/v2/{table_name=projects/*/instances/*/tables/*}:mutateRows:\x01*Z\\"W/v2/{authorized_view_name=projects/*/instances/*/tables/*/authorizedViews/*}:mutateRows:\x01*\x8a\xd3\xe4\x93\x02\x97\x01\x12:\n\ntable_name\x12,{table_name=projects/*/instances/*/tables/*}\x12\x10\n\x0eapp_profile_id\x12G\n\x14authorized_view_name\x12/{table_name=projects/*/instances/*/tables/*}/**'
+    _globals['_BIGTABLE'].methods_by_name['CheckAndMutateRow']._loaded_options = None
+    _globals['_BIGTABLE'].methods_by_name['CheckAndMutateRow']._serialized_options = b'\xdaABtable_name,row_key,predicate_filter,true_mutations,false_mutations\xdaAQtable_name,row_key,predicate_filter,true_mutations,false_mutations,app_profile_id\x82\xd3\xe4\x93\x02\xac\x01"B/v2/{table_name=projects/*/instances/*/tables/*}:checkAndMutateRow:\x01*Zc"^/v2/{authorized_view_name=projects/*/instances/*/tables/*/authorizedViews/*}:checkAndMutateRow:\x01*\x8a\xd3\xe4\x93\x02\x97\x01\x12:\n\ntable_name\x12,{table_name=projects/*/instances/*/tables/*}\x12\x10\n\x0eapp_profile_id\x12G\n\x14authorized_view_name\x12/{table_name=projects/*/instances/*/tables/*}/**'
+    _globals['_BIGTABLE'].methods_by_name['PingAndWarm']._loaded_options = None
+    _globals['_BIGTABLE'].methods_by_name['PingAndWarm']._serialized_options = b'\xdaA\x04name\xdaA\x13name,app_profile_id\x82\xd3\xe4\x93\x02+"&/v2/{name=projects/*/instances/*}:ping:\x01*\x8a\xd3\xe4\x93\x029\x12%\n\x04name\x12\x1d{name=projects/*/instances/*}\x12\x10\n\x0eapp_profile_id'
+    _globals['_BIGTABLE'].methods_by_name['ReadModifyWriteRow']._loaded_options = None
+    _globals['_BIGTABLE'].methods_by_name['ReadModifyWriteRow']._serialized_options = b'\xdaA\x18table_name,row_key,rules\xdaA\'table_name,row_key,rules,app_profile_id\x82\xd3\xe4\x93\x02\xae\x01"C/v2/{table_name=projects/*/instances/*/tables/*}:readModifyWriteRow:\x01*Zd"_/v2/{authorized_view_name=projects/*/instances/*/tables/*/authorizedViews/*}:readModifyWriteRow:\x01*\x8a\xd3\xe4\x93\x02\x97\x01\x12:\n\ntable_name\x12,{table_name=projects/*/instances/*/tables/*}\x12\x10\n\x0eapp_profile_id\x12G\n\x14authorized_view_name\x12/{table_name=projects/*/instances/*/tables/*}/**'
+    _globals['_BIGTABLE'].methods_by_name['GenerateInitialChangeStreamPartitions']._loaded_options = None
+    _globals['_BIGTABLE'].methods_by_name['GenerateInitialChangeStreamPartitions']._serialized_options = b'\xdaA\ntable_name\xdaA\x19table_name,app_profile_id\x82\xd3\xe4\x93\x02["V/v2/{table_name=projects/*/instances/*/tables/*}:generateInitialChangeStreamPartitions:\x01*'
+    _globals['_BIGTABLE'].methods_by_name['ReadChangeStream']._loaded_options = None
+    _globals['_BIGTABLE'].methods_by_name['ReadChangeStream']._serialized_options = b'\xdaA\ntable_name\xdaA\x19table_name,app_profile_id\x82\xd3\xe4\x93\x02F"A/v2/{table_name=projects/*/instances/*/tables/*}:readChangeStream:\x01*'
+    _globals['_BIGTABLE'].methods_by_name['PrepareQuery']._loaded_options = None
+    _globals['_BIGTABLE'].methods_by_name['PrepareQuery']._serialized_options = b'\xdaA\x13instance_name,query\xdaA"instance_name,query,app_profile_id\x82\xd3\xe4\x93\x02<"7/v2/{instance_name=projects/*/instances/*}:prepareQuery:\x01*\x8a\xd3\xe4\x93\x02B\x12.\n\rinstance_name\x12\x1d{name=projects/*/instances/*}\x12\x10\n\x0eapp_profile_id'
+    _globals['_BIGTABLE'].methods_by_name['ExecuteQuery']._loaded_options = None
+    _globals['_BIGTABLE'].methods_by_name['ExecuteQuery']._serialized_options = b'\xdaA\x13instance_name,query\xdaA"instance_name,query,app_profile_id\x82\xd3\xe4\x93\x02<"7/v2/{instance_name=projects/*/instances/*}:executeQuery:\x01*\x8a\xd3\xe4\x93\x02B\x12.\n\rinstance_name\x12\x1d{name=projects/*/instances/*}\x12\x10\n\x0eapp_profile_id'
+    _globals['_READROWSREQUEST']._serialized_start = 424
+    _globals['_READROWSREQUEST']._serialized_end = 1012
+    _globals['_READROWSREQUEST_REQUESTSTATSVIEW']._serialized_start = 910
+    _globals['_READROWSREQUEST_REQUESTSTATSVIEW']._serialized_end = 1012
+    _globals['_READROWSRESPONSE']._serialized_start = 1015
+    _globals['_READROWSRESPONSE']._serialized_end = 1448
+    _globals['_READROWSRESPONSE_CELLCHUNK']._serialized_start = 1187
+    _globals['_READROWSRESPONSE_CELLCHUNK']._serialized_end = 1448
+    _globals['_SAMPLEROWKEYSREQUEST']._serialized_start = 1451
+    _globals['_SAMPLEROWKEYSREQUEST']._serialized_end = 1731
+    _globals['_SAMPLEROWKEYSRESPONSE']._serialized_start = 1733
+    _globals['_SAMPLEROWKEYSRESPONSE']._serialized_end = 1795
+    _globals['_MUTATEROWREQUEST']._serialized_start = 1798
+    _globals['_MUTATEROWREQUEST']._serialized_end = 2117
+    _globals['_MUTATEROWRESPONSE']._serialized_start = 2119
+    _globals['_MUTATEROWRESPONSE']._serialized_end = 2138
+    _globals['_MUTATEROWSREQUEST']._serialized_start = 2141
+    _globals['_MUTATEROWSREQUEST']._serialized_end = 2533
+    _globals['_MUTATEROWSREQUEST_ENTRY']._serialized_start = 2401
+    _globals['_MUTATEROWSREQUEST_ENTRY']._serialized_end = 2533
+    _globals['_MUTATEROWSRESPONSE']._serialized_start = 2536
+    _globals['_MUTATEROWSRESPONSE']._serialized_end = 2764
+    _globals['_MUTATEROWSRESPONSE_ENTRY']._serialized_start = 2686
+    _globals['_MUTATEROWSRESPONSE_ENTRY']._serialized_end = 2744
+    _globals['_RATELIMITINFO']._serialized_start = 2766
+    _globals['_RATELIMITINFO']._serialized_end = 2840
+    _globals['_CHECKANDMUTATEROWREQUEST']._serialized_start = 2843
+    _globals['_CHECKANDMUTATEROWREQUEST']._serialized_end = 3228
+    _globals['_CHECKANDMUTATEROWRESPONSE']._serialized_start = 3230
+    _globals['_CHECKANDMUTATEROWRESPONSE']._serialized_end = 3284
+    _globals['_PINGANDWARMREQUEST']._serialized_start = 3286
+    _globals['_PINGANDWARMREQUEST']._serialized_end = 3391
+    _globals['_PINGANDWARMRESPONSE']._serialized_start = 3393
+    _globals['_PINGANDWARMRESPONSE']._serialized_end = 3414
+    _globals['_READMODIFYWRITEROWREQUEST']._serialized_start = 3417
+    _globals['_READMODIFYWRITEROWREQUEST']._serialized_end = 3698
+    _globals['_READMODIFYWRITEROWRESPONSE']._serialized_start = 3700
+    _globals['_READMODIFYWRITEROWRESPONSE']._serialized_end = 3766
+    _globals['_GENERATEINITIALCHANGESTREAMPARTITIONSREQUEST']._serialized_start = 3769
+    _globals['_GENERATEINITIALCHANGESTREAMPARTITIONSREQUEST']._serialized_end = 3903
+    _globals['_GENERATEINITIALCHANGESTREAMPARTITIONSRESPONSE']._serialized_start = 3905
+    _globals['_GENERATEINITIALCHANGESTREAMPARTITIONSRESPONSE']._serialized_end = 4008
+    _globals['_READCHANGESTREAMREQUEST']._serialized_start = 4011
+    _globals['_READCHANGESTREAMREQUEST']._serialized_end = 4422
+    _globals['_READCHANGESTREAMRESPONSE']._serialized_start = 4425
+    _globals['_READCHANGESTREAMRESPONSE']._serialized_end = 5746
+    _globals['_READCHANGESTREAMRESPONSE_MUTATIONCHUNK']._serialized_start = 4693
+    _globals['_READCHANGESTREAMRESPONSE_MUTATIONCHUNK']._serialized_end = 4937
+    _globals['_READCHANGESTREAMRESPONSE_MUTATIONCHUNK_CHUNKINFO']._serialized_start = 4848
+    _globals['_READCHANGESTREAMRESPONSE_MUTATIONCHUNK_CHUNKINFO']._serialized_end = 4937
+    _globals['_READCHANGESTREAMRESPONSE_DATACHANGE']._serialized_start = 4940
+    _globals['_READCHANGESTREAMRESPONSE_DATACHANGE']._serialized_end = 5394
+    _globals['_READCHANGESTREAMRESPONSE_DATACHANGE_TYPE']._serialized_start = 5314
+    _globals['_READCHANGESTREAMRESPONSE_DATACHANGE_TYPE']._serialized_end = 5394
+    _globals['_READCHANGESTREAMRESPONSE_HEARTBEAT']._serialized_start = 5397
+    _globals['_READCHANGESTREAMRESPONSE_HEARTBEAT']._serialized_end = 5542
+    _globals['_READCHANGESTREAMRESPONSE_CLOSESTREAM']._serialized_start = 5545
+    _globals['_READCHANGESTREAMRESPONSE_CLOSESTREAM']._serialized_end = 5729
+    _globals['_EXECUTEQUERYREQUEST']._serialized_start = 5749
+    _globals['_EXECUTEQUERYREQUEST']._serialized_end = 6166
+    _globals['_EXECUTEQUERYREQUEST_PARAMSENTRY']._serialized_start = 6079
+    _globals['_EXECUTEQUERYREQUEST_PARAMSENTRY']._serialized_end = 6151
+    _globals['_EXECUTEQUERYRESPONSE']._serialized_start = 6169
+    _globals['_EXECUTEQUERYRESPONSE']._serialized_end = 6319
+    _globals['_PREPAREQUERYREQUEST']._serialized_start = 6322
+    _globals['_PREPAREQUERYREQUEST']._serialized_end = 6694
+    _globals['_PREPAREQUERYREQUEST_PARAMTYPESENTRY']._serialized_start = 6604
+    _globals['_PREPAREQUERYREQUEST_PARAMTYPESENTRY']._serialized_end = 6679
+    _globals['_PREPAREQUERYRESPONSE']._serialized_start = 6697
+    _globals['_PREPAREQUERYRESPONSE']._serialized_end = 6849
+    _globals['_BIGTABLE']._serialized_start = 6852
+    _globals['_BIGTABLE']._serialized_end = 11935

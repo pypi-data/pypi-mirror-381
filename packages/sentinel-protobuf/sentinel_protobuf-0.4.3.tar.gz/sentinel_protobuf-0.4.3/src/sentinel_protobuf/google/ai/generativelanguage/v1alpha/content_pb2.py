@@ -1,0 +1,137 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 29, 0, '', 'google/ai/generativelanguage/v1alpha/content.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from google.protobuf import struct_pb2 as google_dot_protobuf_dot_struct__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n2google/ai/generativelanguage/v1alpha/content.proto\x12$google.ai.generativelanguage.v1alpha\x1a\x1fgoogle/api/field_behavior.proto\x1a\x1cgoogle/protobuf/struct.proto"W\n\x07Content\x129\n\x05parts\x18\x01 \x03(\x0b2*.google.ai.generativelanguage.v1alpha.Part\x12\x11\n\x04role\x18\x02 \x01(\tB\x03\xe0A\x01"\xf5\x03\n\x04Part\x12\x0e\n\x04text\x18\x02 \x01(\tH\x00\x12A\n\x0binline_data\x18\x03 \x01(\x0b2*.google.ai.generativelanguage.v1alpha.BlobH\x00\x12K\n\rfunction_call\x18\x04 \x01(\x0b22.google.ai.generativelanguage.v1alpha.FunctionCallH\x00\x12S\n\x11function_response\x18\x05 \x01(\x0b26.google.ai.generativelanguage.v1alpha.FunctionResponseH\x00\x12C\n\tfile_data\x18\x06 \x01(\x0b2..google.ai.generativelanguage.v1alpha.FileDataH\x00\x12O\n\x0fexecutable_code\x18\t \x01(\x0b24.google.ai.generativelanguage.v1alpha.ExecutableCodeH\x00\x12Z\n\x15code_execution_result\x18\n \x01(\x0b29.google.ai.generativelanguage.v1alpha.CodeExecutionResultH\x00B\x06\n\x04data"\'\n\x04Blob\x12\x11\n\tmime_type\x18\x01 \x01(\t\x12\x0c\n\x04data\x18\x02 \x01(\x0c"9\n\x08FileData\x12\x16\n\tmime_type\x18\x01 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08file_uri\x18\x02 \x01(\tB\x03\xe0A\x02"\xab\x01\n\x0eExecutableCode\x12T\n\x08language\x18\x01 \x01(\x0e2=.google.ai.generativelanguage.v1alpha.ExecutableCode.LanguageB\x03\xe0A\x02\x12\x11\n\x04code\x18\x02 \x01(\tB\x03\xe0A\x02"0\n\x08Language\x12\x18\n\x14LANGUAGE_UNSPECIFIED\x10\x00\x12\n\n\x06PYTHON\x10\x01"\xea\x01\n\x13CodeExecutionResult\x12W\n\x07outcome\x18\x01 \x01(\x0e2A.google.ai.generativelanguage.v1alpha.CodeExecutionResult.OutcomeB\x03\xe0A\x02\x12\x13\n\x06output\x18\x02 \x01(\tB\x03\xe0A\x01"e\n\x07Outcome\x12\x17\n\x13OUTCOME_UNSPECIFIED\x10\x00\x12\x0e\n\nOUTCOME_OK\x10\x01\x12\x12\n\x0eOUTCOME_FAILED\x10\x02\x12\x1d\n\x19OUTCOME_DEADLINE_EXCEEDED\x10\x03"\xff\x02\n\x04Tool\x12]\n\x15function_declarations\x18\x01 \x03(\x0b29.google.ai.generativelanguage.v1alpha.FunctionDeclarationB\x03\xe0A\x01\x12a\n\x17google_search_retrieval\x18\x02 \x01(\x0b2;.google.ai.generativelanguage.v1alpha.GoogleSearchRetrievalB\x03\xe0A\x01\x12P\n\x0ecode_execution\x18\x03 \x01(\x0b23.google.ai.generativelanguage.v1alpha.CodeExecutionB\x03\xe0A\x01\x12S\n\rgoogle_search\x18\x04 \x01(\x0b27.google.ai.generativelanguage.v1alpha.Tool.GoogleSearchB\x03\xe0A\x01\x1a\x0e\n\x0cGoogleSearch"w\n\x15GoogleSearchRetrieval\x12^\n\x18dynamic_retrieval_config\x18\x01 \x01(\x0b2<.google.ai.generativelanguage.v1alpha.DynamicRetrievalConfig"\xcf\x01\n\x16DynamicRetrievalConfig\x12O\n\x04mode\x18\x01 \x01(\x0e2A.google.ai.generativelanguage.v1alpha.DynamicRetrievalConfig.Mode\x12\x1e\n\x11dynamic_threshold\x18\x02 \x01(\x02H\x00\x88\x01\x01".\n\x04Mode\x12\x14\n\x10MODE_UNSPECIFIED\x10\x00\x12\x10\n\x0cMODE_DYNAMIC\x10\x01B\x14\n\x12_dynamic_threshold"\x0f\n\rCodeExecution"o\n\nToolConfig\x12a\n\x17function_calling_config\x18\x01 \x01(\x0b2;.google.ai.generativelanguage.v1alpha.FunctionCallingConfigB\x03\xe0A\x01"\xcc\x01\n\x15FunctionCallingConfig\x12S\n\x04mode\x18\x01 \x01(\x0e2@.google.ai.generativelanguage.v1alpha.FunctionCallingConfig.ModeB\x03\xe0A\x01\x12#\n\x16allowed_function_names\x18\x02 \x03(\tB\x03\xe0A\x01"9\n\x04Mode\x12\x14\n\x10MODE_UNSPECIFIED\x10\x00\x12\x08\n\x04AUTO\x10\x01\x12\x07\n\x03ANY\x10\x02\x12\x08\n\x04NONE\x10\x03"\xf4\x01\n\x13FunctionDeclaration\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x18\n\x0bdescription\x18\x02 \x01(\tB\x03\xe0A\x02\x12J\n\nparameters\x18\x03 \x01(\x0b2,.google.ai.generativelanguage.v1alpha.SchemaB\x03\xe0A\x01H\x00\x88\x01\x01\x12H\n\x08response\x18\x04 \x01(\x0b2,.google.ai.generativelanguage.v1alpha.SchemaB\x03\xe0A\x01H\x01\x88\x01\x01B\r\n\x0b_parametersB\x0b\n\t_response"l\n\x0cFunctionCall\x12\x0f\n\x02id\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02\x12/\n\x04args\x18\x02 \x01(\x0b2\x17.google.protobuf.StructB\x03\xe0A\x01H\x00\x88\x01\x01B\x07\n\x05_args"f\n\x10FunctionResponse\x12\x0f\n\x02id\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02\x12.\n\x08response\x18\x02 \x01(\x0b2\x17.google.protobuf.StructB\x03\xe0A\x02"\xf0\x03\n\x06Schema\x12=\n\x04type\x18\x01 \x01(\x0e2*.google.ai.generativelanguage.v1alpha.TypeB\x03\xe0A\x02\x12\x13\n\x06format\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x18\n\x0bdescription\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08nullable\x18\x04 \x01(\x08B\x03\xe0A\x01\x12\x11\n\x04enum\x18\x05 \x03(\tB\x03\xe0A\x01\x12E\n\x05items\x18\x06 \x01(\x0b2,.google.ai.generativelanguage.v1alpha.SchemaB\x03\xe0A\x01H\x00\x88\x01\x01\x12\x16\n\tmax_items\x18\x15 \x01(\x03B\x03\xe0A\x01\x12\x16\n\tmin_items\x18\x16 \x01(\x03B\x03\xe0A\x01\x12U\n\nproperties\x18\x07 \x03(\x0b2<.google.ai.generativelanguage.v1alpha.Schema.PropertiesEntryB\x03\xe0A\x01\x12\x15\n\x08required\x18\x08 \x03(\tB\x03\xe0A\x01\x1a_\n\x0fPropertiesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12;\n\x05value\x18\x02 \x01(\x0b2,.google.ai.generativelanguage.v1alpha.Schema:\x028\x01B\x08\n\x06_items"^\n\x10GroundingPassage\x12\n\n\x02id\x18\x01 \x01(\t\x12>\n\x07content\x18\x02 \x01(\x0b2-.google.ai.generativelanguage.v1alpha.Content"]\n\x11GroundingPassages\x12H\n\x08passages\x18\x01 \x03(\x0b26.google.ai.generativelanguage.v1alpha.GroundingPassage*e\n\x04Type\x12\x14\n\x10TYPE_UNSPECIFIED\x10\x00\x12\n\n\x06STRING\x10\x01\x12\n\n\x06NUMBER\x10\x02\x12\x0b\n\x07INTEGER\x10\x03\x12\x0b\n\x07BOOLEAN\x10\x04\x12\t\n\x05ARRAY\x10\x05\x12\n\n\x06OBJECT\x10\x06B\x9a\x01\n(com.google.ai.generativelanguage.v1alphaB\x0cContentProtoP\x01Z^cloud.google.com/go/ai/generativelanguage/apiv1alpha/generativelanguagepb;generativelanguagepbb\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.ai.generativelanguage.v1alpha.content_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n(com.google.ai.generativelanguage.v1alphaB\x0cContentProtoP\x01Z^cloud.google.com/go/ai/generativelanguage/apiv1alpha/generativelanguagepb;generativelanguagepb'
+    _globals['_CONTENT'].fields_by_name['role']._loaded_options = None
+    _globals['_CONTENT'].fields_by_name['role']._serialized_options = b'\xe0A\x01'
+    _globals['_FILEDATA'].fields_by_name['mime_type']._loaded_options = None
+    _globals['_FILEDATA'].fields_by_name['mime_type']._serialized_options = b'\xe0A\x01'
+    _globals['_FILEDATA'].fields_by_name['file_uri']._loaded_options = None
+    _globals['_FILEDATA'].fields_by_name['file_uri']._serialized_options = b'\xe0A\x02'
+    _globals['_EXECUTABLECODE'].fields_by_name['language']._loaded_options = None
+    _globals['_EXECUTABLECODE'].fields_by_name['language']._serialized_options = b'\xe0A\x02'
+    _globals['_EXECUTABLECODE'].fields_by_name['code']._loaded_options = None
+    _globals['_EXECUTABLECODE'].fields_by_name['code']._serialized_options = b'\xe0A\x02'
+    _globals['_CODEEXECUTIONRESULT'].fields_by_name['outcome']._loaded_options = None
+    _globals['_CODEEXECUTIONRESULT'].fields_by_name['outcome']._serialized_options = b'\xe0A\x02'
+    _globals['_CODEEXECUTIONRESULT'].fields_by_name['output']._loaded_options = None
+    _globals['_CODEEXECUTIONRESULT'].fields_by_name['output']._serialized_options = b'\xe0A\x01'
+    _globals['_TOOL'].fields_by_name['function_declarations']._loaded_options = None
+    _globals['_TOOL'].fields_by_name['function_declarations']._serialized_options = b'\xe0A\x01'
+    _globals['_TOOL'].fields_by_name['google_search_retrieval']._loaded_options = None
+    _globals['_TOOL'].fields_by_name['google_search_retrieval']._serialized_options = b'\xe0A\x01'
+    _globals['_TOOL'].fields_by_name['code_execution']._loaded_options = None
+    _globals['_TOOL'].fields_by_name['code_execution']._serialized_options = b'\xe0A\x01'
+    _globals['_TOOL'].fields_by_name['google_search']._loaded_options = None
+    _globals['_TOOL'].fields_by_name['google_search']._serialized_options = b'\xe0A\x01'
+    _globals['_TOOLCONFIG'].fields_by_name['function_calling_config']._loaded_options = None
+    _globals['_TOOLCONFIG'].fields_by_name['function_calling_config']._serialized_options = b'\xe0A\x01'
+    _globals['_FUNCTIONCALLINGCONFIG'].fields_by_name['mode']._loaded_options = None
+    _globals['_FUNCTIONCALLINGCONFIG'].fields_by_name['mode']._serialized_options = b'\xe0A\x01'
+    _globals['_FUNCTIONCALLINGCONFIG'].fields_by_name['allowed_function_names']._loaded_options = None
+    _globals['_FUNCTIONCALLINGCONFIG'].fields_by_name['allowed_function_names']._serialized_options = b'\xe0A\x01'
+    _globals['_FUNCTIONDECLARATION'].fields_by_name['name']._loaded_options = None
+    _globals['_FUNCTIONDECLARATION'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_FUNCTIONDECLARATION'].fields_by_name['description']._loaded_options = None
+    _globals['_FUNCTIONDECLARATION'].fields_by_name['description']._serialized_options = b'\xe0A\x02'
+    _globals['_FUNCTIONDECLARATION'].fields_by_name['parameters']._loaded_options = None
+    _globals['_FUNCTIONDECLARATION'].fields_by_name['parameters']._serialized_options = b'\xe0A\x01'
+    _globals['_FUNCTIONDECLARATION'].fields_by_name['response']._loaded_options = None
+    _globals['_FUNCTIONDECLARATION'].fields_by_name['response']._serialized_options = b'\xe0A\x01'
+    _globals['_FUNCTIONCALL'].fields_by_name['id']._loaded_options = None
+    _globals['_FUNCTIONCALL'].fields_by_name['id']._serialized_options = b'\xe0A\x01'
+    _globals['_FUNCTIONCALL'].fields_by_name['name']._loaded_options = None
+    _globals['_FUNCTIONCALL'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_FUNCTIONCALL'].fields_by_name['args']._loaded_options = None
+    _globals['_FUNCTIONCALL'].fields_by_name['args']._serialized_options = b'\xe0A\x01'
+    _globals['_FUNCTIONRESPONSE'].fields_by_name['id']._loaded_options = None
+    _globals['_FUNCTIONRESPONSE'].fields_by_name['id']._serialized_options = b'\xe0A\x01'
+    _globals['_FUNCTIONRESPONSE'].fields_by_name['name']._loaded_options = None
+    _globals['_FUNCTIONRESPONSE'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_FUNCTIONRESPONSE'].fields_by_name['response']._loaded_options = None
+    _globals['_FUNCTIONRESPONSE'].fields_by_name['response']._serialized_options = b'\xe0A\x02'
+    _globals['_SCHEMA_PROPERTIESENTRY']._loaded_options = None
+    _globals['_SCHEMA_PROPERTIESENTRY']._serialized_options = b'8\x01'
+    _globals['_SCHEMA'].fields_by_name['type']._loaded_options = None
+    _globals['_SCHEMA'].fields_by_name['type']._serialized_options = b'\xe0A\x02'
+    _globals['_SCHEMA'].fields_by_name['format']._loaded_options = None
+    _globals['_SCHEMA'].fields_by_name['format']._serialized_options = b'\xe0A\x01'
+    _globals['_SCHEMA'].fields_by_name['description']._loaded_options = None
+    _globals['_SCHEMA'].fields_by_name['description']._serialized_options = b'\xe0A\x01'
+    _globals['_SCHEMA'].fields_by_name['nullable']._loaded_options = None
+    _globals['_SCHEMA'].fields_by_name['nullable']._serialized_options = b'\xe0A\x01'
+    _globals['_SCHEMA'].fields_by_name['enum']._loaded_options = None
+    _globals['_SCHEMA'].fields_by_name['enum']._serialized_options = b'\xe0A\x01'
+    _globals['_SCHEMA'].fields_by_name['items']._loaded_options = None
+    _globals['_SCHEMA'].fields_by_name['items']._serialized_options = b'\xe0A\x01'
+    _globals['_SCHEMA'].fields_by_name['max_items']._loaded_options = None
+    _globals['_SCHEMA'].fields_by_name['max_items']._serialized_options = b'\xe0A\x01'
+    _globals['_SCHEMA'].fields_by_name['min_items']._loaded_options = None
+    _globals['_SCHEMA'].fields_by_name['min_items']._serialized_options = b'\xe0A\x01'
+    _globals['_SCHEMA'].fields_by_name['properties']._loaded_options = None
+    _globals['_SCHEMA'].fields_by_name['properties']._serialized_options = b'\xe0A\x01'
+    _globals['_SCHEMA'].fields_by_name['required']._loaded_options = None
+    _globals['_SCHEMA'].fields_by_name['required']._serialized_options = b'\xe0A\x01'
+    _globals['_TYPE']._serialized_start = 3464
+    _globals['_TYPE']._serialized_end = 3565
+    _globals['_CONTENT']._serialized_start = 155
+    _globals['_CONTENT']._serialized_end = 242
+    _globals['_PART']._serialized_start = 245
+    _globals['_PART']._serialized_end = 746
+    _globals['_BLOB']._serialized_start = 748
+    _globals['_BLOB']._serialized_end = 787
+    _globals['_FILEDATA']._serialized_start = 789
+    _globals['_FILEDATA']._serialized_end = 846
+    _globals['_EXECUTABLECODE']._serialized_start = 849
+    _globals['_EXECUTABLECODE']._serialized_end = 1020
+    _globals['_EXECUTABLECODE_LANGUAGE']._serialized_start = 972
+    _globals['_EXECUTABLECODE_LANGUAGE']._serialized_end = 1020
+    _globals['_CODEEXECUTIONRESULT']._serialized_start = 1023
+    _globals['_CODEEXECUTIONRESULT']._serialized_end = 1257
+    _globals['_CODEEXECUTIONRESULT_OUTCOME']._serialized_start = 1156
+    _globals['_CODEEXECUTIONRESULT_OUTCOME']._serialized_end = 1257
+    _globals['_TOOL']._serialized_start = 1260
+    _globals['_TOOL']._serialized_end = 1643
+    _globals['_TOOL_GOOGLESEARCH']._serialized_start = 1629
+    _globals['_TOOL_GOOGLESEARCH']._serialized_end = 1643
+    _globals['_GOOGLESEARCHRETRIEVAL']._serialized_start = 1645
+    _globals['_GOOGLESEARCHRETRIEVAL']._serialized_end = 1764
+    _globals['_DYNAMICRETRIEVALCONFIG']._serialized_start = 1767
+    _globals['_DYNAMICRETRIEVALCONFIG']._serialized_end = 1974
+    _globals['_DYNAMICRETRIEVALCONFIG_MODE']._serialized_start = 1906
+    _globals['_DYNAMICRETRIEVALCONFIG_MODE']._serialized_end = 1952
+    _globals['_CODEEXECUTION']._serialized_start = 1976
+    _globals['_CODEEXECUTION']._serialized_end = 1991
+    _globals['_TOOLCONFIG']._serialized_start = 1993
+    _globals['_TOOLCONFIG']._serialized_end = 2104
+    _globals['_FUNCTIONCALLINGCONFIG']._serialized_start = 2107
+    _globals['_FUNCTIONCALLINGCONFIG']._serialized_end = 2311
+    _globals['_FUNCTIONCALLINGCONFIG_MODE']._serialized_start = 2254
+    _globals['_FUNCTIONCALLINGCONFIG_MODE']._serialized_end = 2311
+    _globals['_FUNCTIONDECLARATION']._serialized_start = 2314
+    _globals['_FUNCTIONDECLARATION']._serialized_end = 2558
+    _globals['_FUNCTIONCALL']._serialized_start = 2560
+    _globals['_FUNCTIONCALL']._serialized_end = 2668
+    _globals['_FUNCTIONRESPONSE']._serialized_start = 2670
+    _globals['_FUNCTIONRESPONSE']._serialized_end = 2772
+    _globals['_SCHEMA']._serialized_start = 2775
+    _globals['_SCHEMA']._serialized_end = 3271
+    _globals['_SCHEMA_PROPERTIESENTRY']._serialized_start = 3166
+    _globals['_SCHEMA_PROPERTIESENTRY']._serialized_end = 3261
+    _globals['_GROUNDINGPASSAGE']._serialized_start = 3273
+    _globals['_GROUNDINGPASSAGE']._serialized_end = 3367
+    _globals['_GROUNDINGPASSAGES']._serialized_start = 3369
+    _globals['_GROUNDINGPASSAGES']._serialized_end = 3462
