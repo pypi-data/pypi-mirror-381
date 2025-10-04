@@ -1,0 +1,11 @@
+simulacrum/__init__.py,sha256=yzQa-yO8unFv9uKF0gj-o3VoYT_t51-SAatr-KTKyzk,437
+simulacrum/api.py,sha256=IZ8qNikv81Wd2l3VuaiGcLTjLOIzoxMfrbkQLwK0usg,1889
+simulacrum/client.py,sha256=kjPnb0nAuf9djDCR8DNJ3VtPASrr7aFGDx6upN48ygk,5183
+simulacrum/config.py,sha256=n3iN-cVUF3ucINS3iydDgMnFoMtVxDeVBIQwGiMKNk8,157
+simulacrum/exceptions.py,sha256=6VjdyJaFx9c8nE8iIezJH6pWkdRBHRs5ORdEZUrbJmg,1289
+simulacrum/models.py,sha256=V14jf_dcRGaBbYyKdy8c9w0yDLD5yqqE5qYvgG0ocTk,3157
+simulacrum_sdk-0.2.0.dist-info/licenses/LICENSE,sha256=A7B9zAs2uCAzJoZPPyJW0G86yM-BTyum90vD4nSsOe0,1084
+simulacrum_sdk-0.2.0.dist-info/METADATA,sha256=gFjEmlvV5UALjRP2M5NZpzm6sdIJQdKBlka8cd5NPmY,6329
+simulacrum_sdk-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+simulacrum_sdk-0.2.0.dist-info/top_level.txt,sha256=CLUzfwEa7vZDf6zBAH8eXC2lZLMtj92MlXHOc3-V16o,11
+simulacrum_sdk-0.2.0.dist-info/RECORD,,
