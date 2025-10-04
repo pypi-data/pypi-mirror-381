@@ -1,0 +1,9 @@
+LICENSE
+README.md
+cxxtea.c
+setup.py
+.github/workflows/ci.yml
+cxxtea.egg-info/PKG-INFO
+cxxtea.egg-info/SOURCES.txt
+cxxtea.egg-info/dependency_links.txt
+cxxtea.egg-info/top_level.txt
