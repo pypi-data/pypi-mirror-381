@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "context-local-server"
+version = "0.1.0"
+dependencies = [
+    "fastmcp",
+    "pydantic",
+]
+requires-python = ">=3.8"
+authors = [
+  { name="David Marcas Luna", email="david.marcas@gmail.com" },
+]
+description = "A stdio MCP server to provide long-term memory for AI agents."
+readme = "README.md"
+license = { text="MIT License" }
+
+# This section creates the command-line executable
+[project.scripts]
+context-server = "context_server.main:run"
+
+[tool.setuptools.packages.find]
+where = ["src"]
