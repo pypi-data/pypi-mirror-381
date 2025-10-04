@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scriptthing"
+description = "A tool for managing scripts in various languages with powerful output formatting capabilities"
+readme = "README.md"
+requires-python = ">=3.10"
+dynamic = ["version", "dependencies", "optional-dependencies", "scripts", "entry-points"]
+
+[tool.setuptools]
+# Use setup.py for configuration; keep this minimal until fully migrated

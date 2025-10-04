@@ -1,0 +1,33 @@
+[scriptthing]
+editor = "nvim"
+bin = "~/.local/scriptthing/bin" # legacy global bin (no longer primary)
+
+# List of registered repositories will be stored in ~/.config/scriptthing/repos.json
+# Use `scriptthing repos add <path>` to register a repo.
+
+# Default preference when both environment and scriptthing variables exist
+# Options: "env" (prefer environment variables) or "scriptthing" (prefer scriptthing variables)
+variable_preference = "env"
+
+# Automatically generate IDE support files (.pyi stubs) when variables change
+# Set to false to disable automatic generation (use 'scriptthing vars generate-bindings' manually)
+auto_generate_bindings = true
+
+# Enable single argument convenience for bash scripts
+# When true, scripts with exactly one variable parameter accept both positional and option syntax
+# e.g., both 'script "value"' and 'script --name "value"' work
+# Set to false to disable this convenience feature
+single_arg_convenience = true
+
+[parallel]
+# Default to shell mode for stream command (enables piping and complex commands)
+# Set to false to require script name + template arguments by default
+default_shell_mode = true
+
+# Default maximum number of concurrent workers
+# Set to 0 for auto-detection based on CPU cores
+default_max_workers = 0
+
+# Default timeout for parallel execution (in seconds)
+# Set to 0 for no timeout
+default_timeout = 0

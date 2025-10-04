@@ -1,0 +1,13 @@
+click
+jinja2
+pyyaml
+toml
+humanfriendly>=10.0
+pydantic>=2.0.0
+
+[mcp]
+fastmcp
+shellmcp
+
+[test]
+pytest>=7.0.0
