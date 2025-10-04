@@ -1,0 +1,52 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+runtime: "container"
+build:
+  dockerfile: "Dockerfile"
+  dockerBuildPath: "."
+
+startCommand:
+  type: "http"
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required: []  # No required fields - allows tool scanning without credentials
+    properties:
+      host:
+        type: string
+        description: Vertica host
+      dbPort:
+        type: number
+        default: 5433
+        description: Vertica port
+      database:
+        type: string
+        description: Vertica database
+      user:
+        type: string
+        description: Vertica user
+      password:
+        type: string
+        default: ""
+        description: Vertica password
+      connectionLimit:
+        type: number
+        default: 10
+        description: Connection limit
+      ssl:
+        type: boolean
+        default: false
+        description: Enable SSL
+      sslRejectUnauthorized:
+        type: boolean
+        default: true
+        description: Reject unauthorized SSL certs
+  exampleConfig:
+    host: your-vertica-host.example.com
+    dbPort: 5433
+    database: your_database
+    user: your_user
+    password: ""
+    connectionLimit: 10
+    ssl: false
+    sslRejectUnauthorized: true
