@@ -1,0 +1,12 @@
+maleo/managers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+maleo/managers/application.py,sha256=DQIQyPZs2jxNHOlLjNuRG1VmiMFuKSlIFKJxtOUanfY,4954
+maleo/managers/client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+maleo/managers/client/config.py,sha256=ySx6w9vmFYWHNm3lqO6OY_v1l8pKhQeCtCP7h1txxKE,466
+maleo/managers/client/http.py,sha256=sPPqCbJsNcyIzcZbDv8Sga_fnXJDM812j8qSLLd6QOg,790
+maleo/managers/client/maleo/__init__.py,sha256=1ol9F4Gki3Hh0EzvhhO1QQ83B0He7mFtpZOP1yBFET0,2702
+maleo/managers/client/maleo/config.py,sha256=fRzsTn-LI6lfuxPNjjhhjl8Ag5ovAttUF2E-W9CB91s,2590
+maleo_managers-0.0.57.dist-info/licenses/LICENSE,sha256=aftGsecnk7TWVX-7KW94FqK4Syy6YSZ8PZEF7EcIp3M,2621
+maleo_managers-0.0.57.dist-info/METADATA,sha256=4GEHZTeyW2LFq6lpm1RJlQMPxnvB4Ufw14QaaqaqPmU,4232
+maleo_managers-0.0.57.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+maleo_managers-0.0.57.dist-info/top_level.txt,sha256=3Tpd1siVsfYoeI9FEOJNYnffx_shzZ3wsPpTvz5bljc,6
+maleo_managers-0.0.57.dist-info/RECORD,,
