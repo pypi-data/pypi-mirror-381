@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+entangled = mkdocs_entangled:EntangledPlugin
