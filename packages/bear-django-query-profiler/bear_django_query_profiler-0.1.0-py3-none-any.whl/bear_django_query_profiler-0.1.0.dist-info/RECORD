@@ -1,0 +1,6 @@
+query_profiler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+query_profiler/middleware.py,sha256=FRw_nWxNGaB4_42VlFdKfuNM_pGEsMWXo1vUeG710ys,1292
+bear_django_query_profiler-0.1.0.dist-info/METADATA,sha256=hMjNrien-wS249OJhfsHZVxMVTuCuqj28mbqH1RPa68,1635
+bear_django_query_profiler-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+bear_django_query_profiler-0.1.0.dist-info/top_level.txt,sha256=2ZYWEUV56hiscKkp59g0_3C714DugkXLGexgI27_3mY,15
+bear_django_query_profiler-0.1.0.dist-info/RECORD,,
