@@ -1,0 +1,4 @@
+- ident: hert-ca
+  storage: "ofndockertest1.hert:/srv/yog/ca/hert/"
+  validity_period: 9y
+

@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+
+from yog.host.main import main
+
+# Yog-Sothoth knows the gate. Yog-Sothoth is the gate. Yog-Sothoth is the key and guardian of the gate.
+# Past, present, future, all are one in Yog-Sothoth. He knows where the Old Ones broke through of old,
+# and where They shall break through again. He knows where They have trod earth's fields, and where They
+# still tread them, and why no one can behold Them as They tread.
+
+if __name__ == '__main__':
+    main()
