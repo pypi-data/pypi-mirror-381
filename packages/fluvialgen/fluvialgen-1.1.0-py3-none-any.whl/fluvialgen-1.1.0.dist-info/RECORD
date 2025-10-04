@@ -1,0 +1,16 @@
+fluvialgen/__init__.py,sha256=lrmvjy_8Lnu__2cg9fm5jSCTPxLlxwJ-_-J8bbeIU5c,550
+fluvialgen/base_generator.py,sha256=qOcOo8hTxJg3EfuY-7YeyCGv7OOOFVj-Yr7RHuqR3X8,1554
+fluvialgen/csv_dataset_generator.py,sha256=sCkgTZqHluCWCsJ1giSOUnxkcvUlL-AmG5LztM4JgEw,3110
+fluvialgen/csv_past_forecast_batcher.py,sha256=LpJYhRFhdXD8TemcSaByuLZNp4NCUIBimlzs3MMNYBY,6130
+fluvialgen/movingwindow_generator.py,sha256=xxXKv7E2i1LetVVknWgQ6ezOgGxhydFZfbGenzX5_HQ,4935
+fluvialgen/past_forecast_batcher.py,sha256=Mcqw52XIP_5R5Dt1CxBZKA_I2h1KiWfEK6ViJD_aDck,4998
+fluvialgen/river_dataset_generator.py,sha256=5HgwGaJBalOiDg8xBFMDlBU-aQkO5cG-3YomxmgWeUY,2221
+fluvialgen/tests/__init__.py,sha256=arzRcCKAke1Eex7dORudzbYo49_tWQr5NdgST_3Yjk4,35
+fluvialgen/tests/test_csv_dataset_generator.py,sha256=hglEjX_eoIGvevgwmtJ4T644TretaVPdilUbYbShjzM,3747
+fluvialgen/tests/test_csv_past_forecast_batcher.py,sha256=UYbjsLJKX0sTclwt4jlAssa-2AjUECt34YrZwqAQq2s,6287
+fluvialgen/tests/test_movingwindow_batcher.py,sha256=W8UVoyszsoOqrIlkNX9whXlKTNlh3E2t9XqDM-wUfMg,3865
+fluvialgen/tests/test_past_forecast_batcher.py,sha256=jzX6tueemdDuNhR6MhECdkOv3qeTgLObYHodG20lOAM,4850
+fluvialgen-1.1.0.dist-info/METADATA,sha256=_fG7uAn1kzI4fQEmQU3GKjL-OtZoVsX3DVH3p5bb2vk,6886
+fluvialgen-1.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+fluvialgen-1.1.0.dist-info/top_level.txt,sha256=ab7JnAqc_OeGk3UUvcCpS3t1iIamsoglO04vF-6Aa7U,11
+fluvialgen-1.1.0.dist-info/RECORD,,
