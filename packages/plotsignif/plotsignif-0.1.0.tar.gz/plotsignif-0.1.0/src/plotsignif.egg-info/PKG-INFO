@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: plotsignif
+Version: 0.1.0
+Summary: Add significance bars to a plot.
+Author-email: Devin Austin <devinaustinb@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib
+Dynamic: license-file
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.

@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/plotsignif/__init__.py
+src/plotsignif/core.py
+src/plotsignif.egg-info/PKG-INFO
+src/plotsignif.egg-info/SOURCES.txt
+src/plotsignif.egg-info/dependency_links.txt
+src/plotsignif.egg-info/requires.txt
+src/plotsignif.egg-info/top_level.txt
