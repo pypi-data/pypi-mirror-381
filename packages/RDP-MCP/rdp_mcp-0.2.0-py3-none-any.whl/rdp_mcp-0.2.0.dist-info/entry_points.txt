@@ -1,0 +1,2 @@
+[console_scripts]
+rdp-mcp = riboseq_mcp.server:run
