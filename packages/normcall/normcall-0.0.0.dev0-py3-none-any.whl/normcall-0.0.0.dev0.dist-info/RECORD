@@ -1,0 +1,10 @@
+normcall/__init__.py,sha256=9CZDlrh0sb4g2T5V7TRonDj9IN7Qmj8glSCasKm3uBc,96
+normcall/__main__.py,sha256=CicWk5eKxXAbF6dg3lpwCj8KxgzHaSPuAibHqst7ggA,65
+normcall/core/__init__.py,sha256=Tr3CwIPY695IbF4DrKHrDes1AKd_iJgddUP46jxKHSw,163
+normcall/tests/__init__.py,sha256=LH2f7SvE3pWVhOoZeSI0C7A_MRCkxez_1LKooIt3m8k,387
+normcall/tests/test_1984.py,sha256=_ami0cAP8vU0C8RpQhP1tLWnLFGTaeHlOG5O60RVKv8,222
+normcall-0.0.0.dev0.dist-info/licenses/LICENSE.txt,sha256=fOh9FHccUt9OcJPBaVJ482GX4yrl_FxCUk9YRZ53JOI,1074
+normcall-0.0.0.dev0.dist-info/METADATA,sha256=gR_FWLJIhUFHeJ_y3F-xJhzlcVhjzs5Gr4TPw19_hl8,2645
+normcall-0.0.0.dev0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+normcall-0.0.0.dev0.dist-info/top_level.txt,sha256=STCBFcxkWeR432AxUE6IVrrvO1eXkf-wcuvkcA-iRvY,9
+normcall-0.0.0.dev0.dist-info/RECORD,,
