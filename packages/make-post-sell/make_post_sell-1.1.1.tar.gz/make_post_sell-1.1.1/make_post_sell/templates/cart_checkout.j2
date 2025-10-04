@@ -1,0 +1,188 @@
+{% extends "base.j2" -%}
+{%- import 'snippets/stripe.j2' as stripe with context -%}
+
+{% block content -%}
+
+<section class="two-column">
+
+  <section class="checkout-left well">
+
+  {% if stripe_enabled %}
+    {% if active_card %}
+    <h2><b>Active Card</b></h2>
+
+    {{ stripe.display_card(active_card, actions=False) }}
+
+    <br>
+
+    {% if request.shop and request.shop.is_ready_for_payment(request) %}
+    <a href="/billing" class="product-edit-button mps-button">Use a different card</a>
+    {% endif %}
+    {% else %}
+    <h2><b>Payment</b></h2>
+    <p>No active payment method configured. <a href="/billing">Add a payment method</a>.</p>
+    <br>
+    {% endif %}
+  {% else %}
+  <h2><b>Payment</b></h2>
+  <p>Card payments are disabled by configuration.</p>
+  <br>
+  {% endif %}
+
+ {% if request.user.active_address %}
+  <h2>Active Shipping Address</h2>
+  <pre>{{- request.user.active_address.data -}}</pre>
+ <a href="/u/addresses" class="product-edit-button mps-button">Use a different address</a>
+ {% endif %}
+
+  </section>
+
+  <section class="checkout-right well">
+
+  <h2>Cart Total: ${{ '{:,.2f}'.format(cart.total) }}</h2>
+  
+  <br/>
+  {% if cart.requires_payment %}
+    Are you sure you want to confirm checkout & pay <br/>
+    <b>${{ '{:,.2f}'.format(cart.total) }}</b>?
+  {% else %}
+    Are you sure you want to confirm checkout?
+  {% endif %}
+  
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+   
+  {% if stripe_enabled and active_card %}
+    <form method="POST" action="{{ request.route_url('user_cart_complete_checkout', cart_id=cart.id) }}">
+    {% include "snippets/csrf.j2" %}
+    <button type="submit" class="cart-checkout-button mps-button">Yes, Confirm Checkout with Active Credit Card</button>
+  </form>
+  {% endif %}
+  
+  {# Offer Monero if globally enabled, shop has enabled processor, cart requires payment and is single-shop #}
+  {% if monero_enabled and xmr_processor_enabled and cart.requires_payment and cart.shop_product_dict|length == 1 %}
+  <br/>
+  {% if pending_crypto_quotes %}
+    <button type="button" class="mps-button" style="background:#aaa; cursor:not-allowed;" disabled title="Complete or cancel your pending crypto payments first"><img src="{{ request.static_url('make_post_sell:static/monero-symbol-480.png') }}" style="width:32px; height:32px; margin-right:8px; vertical-align:middle;">Monero (XMR) - Complete Pending Payments First</button>
+  {% else %}
+  <form method="POST" action="{{ request.route_url('crypto_xmr_start') }}">
+    {% include "snippets/csrf.j2" %}
+    <input type="hidden" name="cart_id" value="{{ cart.id }}" />
+    <button type="submit" class="mps-button mps-button-green"><img src="{{ request.static_url('make_post_sell:static/monero-symbol-480.png') }}" style="width:32px; height:32px; margin-right:8px; vertical-align:middle;">Yes, Confirm Checkout with Monero (XMR)</button>
+  </form>
+  {% endif %}
+  {% if not request.has_xmr_refund_address %}
+  <a href="/u/settings/crypto" style="color:#f59e0b; text-decoration:none; display:block; margin-top:10px; font-size:14px;">
+    ⚠️ Configure an XMR refund address to enable automatic refunds during payment errors.
+  </a>
+  {% endif %}
+  {% endif %}
+
+  {# Offer Dogecoin if globally enabled, shop has enabled processor, cart requires payment and is single-shop #}
+  {% if dogecoin_enabled and doge_processor_enabled and cart.requires_payment and cart.shop_product_dict|length == 1 %}
+  <br/>
+  {% if pending_crypto_quotes %}
+    <button type="button" class="mps-button" style="background:#aaa; cursor:not-allowed;" disabled title="Complete or cancel your pending crypto payments first"><img src="{{ request.static_url('make_post_sell:static/dogecoin-logo.png') }}" style="width:32px; height:32px; margin-right:8px; vertical-align:middle;">Dogecoin (DOGE) - Complete Pending Payments First</button>
+  {% else %}
+  <form method="POST" action="{{ request.route_url('crypto_doge_start') }}">
+    {% include "snippets/csrf.j2" %}
+    <input type="hidden" name="cart_id" value="{{ cart.id }}" />
+    <button type="submit" class="mps-button mps-button-green"><img src="{{ request.static_url('make_post_sell:static/dogecoin-logo.png') }}" style="width:32px; height:32px; margin-right:8px; vertical-align:middle;">Yes, Confirm Checkout with Dogecoin (DOGE)</button>
+  </form>
+  {% endif %}
+  {% if not request.has_doge_refund_address %}
+  <a href="/u/settings/crypto" style="color:#f59e0b; text-decoration:none; display:block; margin-top:10px; font-size:14px;">
+    ⚠️ Configure a DOGE refund address to enable automatic refunds during payment errors.
+  </a>
+  {% endif %}
+  {% endif %}
+
+  {# Show sync status messages for enabled but not synced crypto methods #}
+  {% if monero_enabled and not monero_synced and cart.requires_payment and cart.shop_product_dict|length == 1 %}
+  <br/>
+  <div style="background:#fff3cd; border:1px solid #ffeaa7; padding:10px; border-radius:5px; color:#856404;">
+    <p style="margin:0; font-size:14px;">
+      ⏳ <strong>Monero (XMR) payments temporarily unavailable</strong><br/>
+      The Monero wallet is still synchronizing with the blockchain. Please try again later.
+    </p>
+  </div>
+  {% endif %}
+
+  {% if dogecoin_enabled and not dogecoin_synced and cart.requires_payment and cart.shop_product_dict|length == 1 %}
+  <br/>
+  <div style="background:#fff3cd; border:1px solid #ffeaa7; padding:10px; border-radius:5px; color:#856404;">
+    <p style="margin:0; font-size:14px;">
+      ⏳ <strong>Dogecoin (DOGE) payments temporarily unavailable</strong><br/>
+      The Dogecoin node is still synchronizing with the blockchain. Please try again later.
+    </p>
+  </div>
+  {% endif %}
+
+  {% if not stripe_enabled and not (monero_enabled and xmr_processor_enabled) and not (dogecoin_enabled and doge_processor_enabled) %}
+    <br/>
+    <p>No payment methods are enabled. Please contact the shop owner.</p>
+  {% endif %}
+
+  {# Show pending crypto quotes if user has any #}
+  {% if pending_crypto_quotes %}
+  <div style="background:#fff3cd; border:1px solid #ffc107; border-radius:4px; padding:15px; margin:20px 0;">
+    <h3 style="margin-top:0;">📋 {{ pending_crypto_quotes|length }} Pending Crypto Quote{{ 's' if pending_crypto_quotes|length != 1 else '' }}</h3>
+    <p style="margin-bottom:15px;">You have {{ pending_crypto_quotes|length }} pending crypto payment{{ 's' if pending_crypto_quotes|length != 1 else '' }}:</p>
+    {% for quote in pending_crypto_quotes %}
+    <div style="background:#f8f9fa; border:1px solid #dee2e6; border-radius:3px; padding:10px; margin:8px 0;">
+      <div style="display:grid; grid-template-columns: 1fr auto; align-items:start;">
+        <div>
+          <strong>{{ quote.coin_type }}</strong>
+          <span style="color:#666; margin-left:10px;">
+            {{ quote.status.title() }}
+            {% if quote.current_confirmations > 0 %}
+            ({{ quote.confirmation_status }})
+            {% endif %}
+          </span>
+        </div>
+        <div>
+          <a href="{{ request.route_url('crypto_quote', payment_id=quote.id) }}" class="mps-button" style="background:#17a2b8; font-size:12px; padding:5px 10px;">View Quote</a>
+        </div>
+      </div>
+      <div style="font-size:12px; color:#666; margin-top:5px;">
+        Amount: {{ '%.8f' % (quote.expected_amount / (1000000000000 if quote.coin_type == 'XMR' else 100000000)) }} {{ quote.coin_type }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  </section>
+</section>
+
+<script>
+function cancelQuote(paymentId) {
+  if (!confirm('Are you sure you want to cancel this crypto payment quote?')) {
+    return;
+  }
+  
+  fetch(`/crypto/cancel/${paymentId}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': document.querySelector('input[name="csrf_token"]').value
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      alert('Payment quote cancelled successfully');
+      window.location.reload();
+    } else {
+      alert('Failed to cancel quote: ' + (data.message || 'Unknown error'));
+    }
+  })
+  .catch(error => {
+    alert('Error cancelling quote: ' + error.message);
+  });
+}
+</script>
+
+{%- endblock -%}

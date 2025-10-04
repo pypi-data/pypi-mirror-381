@@ -1,0 +1,600 @@
+{% extends "base.j2" -%}
+
+{% block content -%}
+
+<section class="one-column">
+  <section class="shop-settings well">
+
+    <h3>Shop Settings</h3>
+
+    <form method="post" action="/s/{{ request.shop.id }}/settings" onsubmit="submit.disabled = true; return true;">
+      <input type="hidden" name="form_section" value="shop-settings" />
+  
+      <label for="name_input">Shop Name</label>
+      <input
+          name        = "name"
+          type        = "text"
+          id          = "name_input"
+          class       = "mps-shop-name"
+          value       = "{{ name }}"
+          placeholder = "Shop Name"
+          required />
+  
+      <br />
+      <br />
+  
+  
+      <label for="phone_number_input">Phone Number</label>
+      <input
+          name        = "phone_number"
+          type        = "tel"
+          id          = "phone_number_input"
+          class       = "mps-phone-number"
+          value       = "{{ phone_number }}"
+          placeholder = "Phone Number"
+          required />
+  
+  
+      <br />
+      <br />
+  
+      <label for="billing_address_input">Billing Address</label>
+      <textarea
+          name        = "billing_address"
+          id          = "billing_address_input"
+          class       = "mps-billing-address"
+          placeholder = "Billing Address"
+          required />{{ billing_address }}</textarea>
+  
+      <br />
+      <br />
+  
+      <label for="description_input">Shop Description</label>
+      <textarea
+          name        = "description"
+          id          = "description_input"
+          class       = "mps-shop-description"
+          placeholder = "Shop Description"
+          required />{{ description }}</textarea>
+  
+      <br />
+      <br />
+
+      <input type="submit" name="submit" class="mps-submit" value="Save Settings" />
+      <br />
+      <br />
+  
+    </form>
+
+    </section>
+</section>
+
+<br />
+<br />
+
+<section class="one-column">
+  <section class="shop-settings well">
+
+    <h3>Integration Settings</h3>
+
+    <form method="post" action="/s/{{ request.shop.id }}/settings" onsubmit="submit.disabled = true; return true;">
+      <input type="hidden" name="form_section" value="integration-settings" />
+
+      <label for="domain_name_input">Custom Shop Domain Name</label>
+      <input
+          name        = "domain_name"
+          type        = "text"
+          id          = "domain_name_input"
+          class       = "mps-shop-name"
+          value       = "{% if domain_name %}{{ domain_name }}{% endif %}"
+          placeholder = "Domain Name"
+          />
+
+      <br />
+      <br />
+
+      <label for="plausible_domain_name_input">Plausible Analytics Domain Name (optional)</label>
+      <input
+          name        = "plausible_domain_name"
+          type        = "text"
+          id          = "plausible_domain_name"
+          class       = "mps-shop-name"
+          value       = "{% if plausible_domain_name %}{{ plausible_domain_name }}{% endif %}"
+          placeholder = "ex: plausible.io"
+          />
+
+      <br />
+      <br />
+
+      <input type="submit" name="submit" class="mps-submit" value="Save Settings" />
+
+      <br />
+      <br />
+
+    </form>
+     
+  </section>
+</section>
+
+<br />
+<br />
+
+{% if request.stripe_enabled %}
+<section class="one-column">
+  <section class="shop-settings well">
+
+    <h3>Stripe Settings 💳</h3>
+
+    <form method="post" action="/s/{{ request.shop.id }}/settings" onsubmit="submit.disabled = true; return true;">
+      <input type="hidden" name="form_section" value="stripe-settings" />
+
+      <label for="stripe_public_api_key_input">Stripe API Keys</label>
+
+      <br />
+
+      <input type="checkbox" id="toggle-stripe" style="">
+      <label for="toggle-stripe" style="display: inline;" >show values</label>
+
+      <div class="hidden-control">
+
+      <br />
+
+      <label for="stripe_public_api_key_input">Stripe Public API Key</label>
+      <input
+          name        = "stripe_public_api_key"
+          type        = "text"
+          id          = "stripe_public_api_key"
+          class       = "mps-stripe-public-api-key"
+          value       = "{% if stripe_public_api_key %}{{ stripe_public_api_key }}{% endif %}"
+          placeholder = "Stripe Public API Key (pk)"
+          />
+
+      <br />
+      <br />
+
+      <label for="stripe_secret_api_key_input">Stripe Secret API Key</label>
+      <input
+          name        = "stripe_secret_api_key"
+          type        = "text"
+          id          = "stripe_secret_api_key"
+          class       = "mps-stripe-secret-api-key"
+          value       = "{% if stripe_secret_api_key %}{{ stripe_secret_api_key }}{% endif %}"
+          placeholder = "Stripe Secret API Key (sk)"
+          />
+
+      <br />
+      <br />
+      </div>
+      
+      <br />
+
+      <input type="submit" name="submit" class="mps-submit" value="Save Stripe Settings" />
+
+      <br />
+      <br />
+
+    </form>
+
+  </section>
+</section>
+
+<br />
+<br />
+{% endif %}
+
+{% if request.monero_enabled %}
+<section class="one-column">
+  <section class="shop-settings well">
+    
+    <h3>Crypto Settings 🪙</h3>
+    
+    <h4>Payment Risk Thresholds</h4>
+    
+    <form method="post" action="/s/{{ request.shop.id }}/settings" onsubmit="submit.disabled = true; return true;">
+      <input type="hidden" name="form_section" value="crypto-settings" />
+    
+      <label for="payment_risk_threshold_mid_dollars_input">Medium Risk Threshold ($)</label>
+      <input
+          name        = "payment_risk_threshold_mid_dollars"
+          type        = "number"
+          id          = "payment_risk_threshold_mid_dollars_input"
+          class       = "mps-threshold"
+          value       = "{{ payment_risk_threshold_mid_dollars }}"
+          placeholder = "10.00"
+          min         = "1"
+          max         = "1000"
+          step        = "0.01"
+          />
+      <br />
+      <small>Orders below this amount require minimal confirmations. Default: $10.00</small>
+
+      <br />
+      <br />
+      
+      <label for="payment_risk_threshold_high_dollars_input">High Risk Threshold ($)</label>
+      <input
+          name        = "payment_risk_threshold_high_dollars"
+          type        = "number"
+          id          = "payment_risk_threshold_high_dollars_input"
+          class       = "mps-threshold"
+          value       = "{{ payment_risk_threshold_high_dollars }}"
+          placeholder = "100.00"
+          min         = "10"
+          max         = "10000"
+          step        = "0.01"
+          />
+      <br />
+      <small>Orders above this amount require maximum confirmations. Default: $100.00</small>
+
+      <br />
+      <br />
+      
+      <label for="crypto_quote_expiry_seconds_input">Cryptocurrency Quote Expiry Time (seconds)</label>
+      <input
+          name        = "crypto_quote_expiry_seconds"
+          type        = "number"
+          id          = "crypto_quote_expiry_seconds_input"
+          class       = "mps-crypto-quote-expiry"
+          value       = "{{ crypto_quote_expiry_seconds }}"
+          placeholder = "3600"
+          min         = "300"
+          max         = "7200"
+          step        = "60"
+          />
+      <br />
+      <small>How long cryptocurrency payment quotes are valid (300-7200 seconds, default 3600 = 60 minutes)</small>
+
+      <br />
+      <br />
+
+      <input type="submit" name="submit" class="mps-submit" value="Save Crypto Settings" />
+
+      <br />
+      <br />
+
+    </form>
+    
+    <hr />
+
+    <h4>Monero (XMR) Configuration</h4>
+    
+    <form method="post" action="/s/{{ request.shop.id }}/crypto-processor/XMR" onsubmit="submit.disabled = true; return true;">
+
+      <label for="xmr_sweep_to_address_input">Cold Wallet Address (Required to accept Monero)</label>
+      <input
+          name        = "sweep_to_address"
+          type        = "text"
+          id          = "xmr_sweep_to_address_input"
+          class       = "mps-sweep-address"
+          value       = "{% if xmr_processor %}{{ xmr_processor.sweep_to_address }}{% endif %}"
+          placeholder = "Monero address to sweep funds to"
+          style       = "width: 100%;{% if xmr_processor and not xmr_processor.enabled %} opacity: 0.5; background-color: #f5f5f5;{% endif %}"
+          {% if xmr_processor and not xmr_processor.enabled %}readonly{% endif %}
+          {% if xmr_processor and xmr_processor.sweep_to_address %}required{% endif %}
+          />
+      <br />
+      <small>
+        Configure your cold wallet address where this shop's Monero funds will be swept. This is required to accept Monero payments.
+        {% if xmr_processor and xmr_processor.sweep_to_address %}<br /><strong>Note: Once set, the cold wallet address cannot be removed, only replaced with a new address.</strong>{% endif %}
+      </small>
+      
+      {% if xmr_processor %}
+        {% if xmr_processor.enabled %}
+          <br />
+          <br />
+          <small style="color: green;">✓ Monero wallet configured and ready to accept payments</small>
+          <br />
+          <small style="color: #666;">
+            Note: We cannot verify you control this address. Please double-check it's correct!
+            Consider sending a small test amount from another wallet to verify.
+          </small>
+        {% else %}
+          <br />
+          <br />
+          <small style="color: #d44;">✗ Monero payments are currently disabled</small>
+          <br />
+          <small style="color: #666;">
+            Your cold wallet address is preserved but customers cannot select Monero as a payment method.
+          </small>
+        {% endif %}
+      {% endif %}
+
+      <br />
+      <br />
+
+      {% if xmr_processor %}
+        {% if xmr_processor.enabled %}
+          <input type="submit" name="submit" class="mps-submit" value="Update Monero Settings" />
+          <input type="submit" name="disable" class="mps-submit" value="Disable Monero" style="background: #d44; color: white;" />
+        {% else %}
+          <input type="submit" name="submit" class="mps-submit" value="Re-enable Monero" style="background: #4a4;" />
+          <small style="color: #666;">Enter your cold wallet address to re-enable Monero payments</small>
+        {% endif %}
+      {% else %}
+      <input type="submit" name="submit" class="mps-submit" value="Enable Monero Payments" />
+      {% endif %}
+
+      <br />
+      <br />
+
+    </form>
+
+  </section>
+</section>
+
+<br />
+<br />
+{% endif %}
+
+{% if request.dogecoin_enabled %}
+<section class="one-column">
+  <section class="shop-settings well">
+
+    <h4>Dogecoin (DOGE) Configuration 🐕</h4>
+
+    <form method="post" action="/s/{{ request.shop.id }}/crypto-processor/DOGE" onsubmit="submit.disabled = true; return true;">
+      {% include "snippets/csrf.j2" %}
+      <label for="doge_sweep_to_address_input">Cold Wallet Address (Required to accept Dogecoin)</label>
+      <input
+          type        = "text"
+          name        = "sweep_to_address"
+          id          = "doge_sweep_to_address_input"
+          {% if doge_processor and doge_processor.sweep_to_address %}required{% endif %}
+          value       = "{% if doge_processor %}{{ doge_processor.sweep_to_address }}{% endif %}"
+          placeholder = "Dogecoin address to sweep funds to (e.g. DQA4...)"
+          style       = "width: 100%;{% if doge_processor and not doge_processor.enabled %} opacity: 0.5; background-color: #f5f5f5;{% endif %}"
+          {% if doge_processor and not doge_processor.enabled %}readonly{% endif %}
+      />
+      <br/>
+      <small>
+        Configure your cold wallet address where this shop's Dogecoin funds will be swept. This is required to accept Dogecoin payments.
+        {% if doge_processor and doge_processor.sweep_to_address %}<br /><strong>Note: Once set, the cold wallet address cannot be removed, only replaced with a new address.</strong>{% endif %}
+      </small>
+
+      {% if doge_processor %}
+        {% if doge_processor.enabled %}
+        <br />
+        <br />
+        <small style="color: green;">✓ Dogecoin wallet configured and ready to accept payments</small>
+        <br />
+        <br />
+        <small>
+          Your shop can now accept Dogecoin payments! Funds will be automatically swept to:<br/>
+          <code>{{ doge_processor.sweep_to_address }}</code>
+        </small>
+        {% else %}
+        <br />
+        <br />
+        <small style="color: #d44;">✗ Dogecoin payments are currently disabled</small>
+        <br />
+        <br />
+        <small>
+          Your cold wallet address is preserved but customers cannot select Dogecoin as a payment method.
+        </small>
+        {% endif %}
+      {% else %}
+      <br />
+      <br />
+      <small>Enter your Dogecoin address to start accepting DOGE payments. Such wow! Much payments!</small>
+      {% endif %}
+
+      <br />
+      <br />
+
+      {% if doge_processor %}
+        {% if doge_processor.enabled %}
+          <input type="submit" name="submit" class="mps-submit" value="Update Dogecoin Settings" />
+          <input type="submit" name="disable" class="mps-submit" value="Disable Dogecoin" style="background: #d44; color: white;" />
+        {% else %}
+          <input type="submit" name="submit" class="mps-submit" value="Re-enable Dogecoin" style="background: #d4a574;" />
+          <small style="color: #666;">Enter your cold wallet address to re-enable Dogecoin payments</small>
+        {% endif %}
+      {% else %}
+      <input type="submit" name="submit" class="mps-submit" value="Enable Dogecoin Payments" />
+      {% endif %}
+
+      <br />
+      <br />
+
+    </form>
+
+  </section>
+</section>
+
+<br />
+<br />
+{% endif %}
+
+<br />
+<br />
+
+<section class="one-column">
+  <section class="shop-settings well">
+
+    <h3>Branding Settings</h3>
+
+    <label for="logo-banner">Banner Logo</label>
+    <a href="{{ get_endpoints["shop-logo-banner"] }}?ts={{ request.shop.updated_timestamp }}"><img src="{{ get_endpoints["shop-logo-banner"] }}?ts={{ request.shop.updated_timestamp }}" width="420px" /></a>
+    {% set signed_post = signed_posts["shop-logo-banner"] %}
+    <form method="post" action="{{ signed_post["url"] }}" enctype="multipart/form-data" onsubmit="submit.disabled = true; return true;">
+        {% for field_name, field_value in signed_post["fields"].items() %}
+        <input type="hidden" name="{{ field_name }}" value="{{ field_value }}" />
+        {% endfor %}
+        <input type="file" name="file" class="file-input" /> <br />
+        <input type="submit" name="submit" class="mps-upload" value="Upload Shop Banner" />
+    </form>
+
+    <hr />
+
+    <br />
+
+    <label for="logo-banner">favicon.ico</label>
+    <a href="{{ get_endpoints["shop-favicon"] }}?ts={{ request.shop.updated_timestamp }}"><img src="{{ get_endpoints["shop-favicon"] }}?ts={{ request.shop.updated_timestamp }}" style="width: 32px;" /></a>
+    {% set signed_post = signed_posts["shop-favicon"] %}
+    <form method="post" action="{{ signed_post["url"] }}" enctype="multipart/form-data" onsubmit="submit.disabled = true; return true;">
+        {% for field_name, field_value in signed_post["fields"].items() %}
+        <input type="hidden" name="{{ field_name }}" value="{{ field_value }}" />
+        {% endfor %}
+        <input type="file" name="file" class="file-input" /> <br />
+        <input type="submit" name="submit" class="mps-upload" value="Upload favicon.ico" />
+    </form>
+
+  </section>
+</section>
+
+<br />
+<br />
+
+<section class="one-column">
+  <section class="shop-settings well">
+
+    <form method="post" action="/s/{{ request.shop.id }}/settings" onsubmit="submit.disabled = true; return true;">
+      <input type="hidden" name="form_section" value="ribbon-settings" />
+ 
+      <h3>Announcement Ribbon Settings 🎀</h3>
+
+      <label for="ribbon_text_input">Ribbon Text</label>
+      <textarea
+          name        = "ribbon_text"
+          id          = "ribbon_text_input"
+          class       = "mps-shop-ribbon-text"
+          placeholder = "The announcement ribbon is displayed on the top of all shop pages."
+          />{{ ribbon_text }}</textarea>
+
+      <br />
+      <br />
+
+      <label for="ribbon_text_color_input">Ribbon Text Color</label>
+      <input
+          name        = "ribbon_text_color"
+          type        = "text"
+          id          = "ribbon_text_color_input"
+          class       = "mps-shop-ribbon-text-color"
+          value       = "{{ ribbon_text_color }}"
+          placeholder = "#FFFFFF"
+          />
+
+      <br />
+      <br />
+
+      <label for="ribbon_color_1_input">Ribbon Background Color 1</label>
+      <input
+          name        = "ribbon_color_1"
+          type        = "text"
+          id          = "ribbon_color_1_input"
+          class       = "mps-shop-ribbon-color"
+          value       = "{{ ribbon_color_1 }}"
+          placeholder = "#5871AD"
+          />
+
+      <br />
+      <br />
+
+      <label for="ribbon_color_2_input">Ribbon Background Color 2</label>
+      <input
+          name        = "ribbon_color_2"
+          type        = "text"
+          id          = "ribbon_color_2_input"
+          class       = "mps-shop-ribbon-color"
+          value       = "{{ ribbon_color_2 }}"
+          placeholder = "#82A8FF"
+          />
+
+      <br />
+      <br />
+
+      <input type="submit" name="submit" class="mps-submit" value="Save Settings" />
+
+      <br />
+      <br />
+
+    </form>
+
+  </section>
+</section>
+
+<br />
+<br />
+
+
+
+<section class="one-column">
+  <section class="shop-settings well">
+
+    <form method="post" action="/s/{{ request.shop.id }}/settings">
+      <input type="hidden" name="form_section" value="maintenance-settings" />
+
+    <h3>Maintenance Mode 🏗️</h3>
+
+    <input type="checkbox" name="maint-mode-checkbox" id="maint-mode-checkbox" {% if request.shop.maint_mode %}checked{% endif %}></input>
+<b>If checked, enabled maintenance mode.</b>
+
+<br />
+<br />
+
+Temporarily prevent new searches or sales on this shop.
+Existing sales honored for download buy purchasers.
+
+
+    <br />
+    <br />
+
+      <input type="submit" name="submit" class="mps-submit" value="Save Settings" />
+
+    <br />
+    <br />
+
+    </form>
+
+  </section>
+
+</section>
+
+<br />
+<br />
+
+<section class="one-column">
+  <section class="shop-settings well">
+
+    <form method="post" action="/s/{{ request.shop.id }}/settings">
+      <input type="hidden" name="form_section" value="comment-settings" />
+
+    <h3>Comment System Settings 💬</h3>
+
+    <input type="checkbox" name="comments-enabled-checkbox" id="comments-enabled-checkbox" {% if request.shop.comments_enabled %}checked{% endif %}></input>
+    <b>Enable comments and reviews on product pages</b>
+
+    <br />
+    <br />
+
+    <input type="checkbox" name="comments-require-purchase-checkbox" id="comments-require-purchase-checkbox" {% if request.shop.comments_require_purchase %}checked{% endif %}></input>
+    <b>Only allow customers who purchased the product to leave comments</b>
+
+    <br />
+    <br />
+
+    <input type="checkbox" name="comments-require-approval-checkbox" id="comments-require-approval-checkbox" {% if request.shop.comments_require_approval %}checked{% endif %}></input>
+    <b>Hide comments until approved by shop owner/editor</b>
+
+    <br />
+    <br />
+
+    Allow customers to leave comments and reviews on your product pages.
+    Comments appear on both product detail pages and content pages.
+
+    <br />
+    <br />
+
+      <input type="submit" name="submit" class="mps-submit" value="Save Settings" />
+
+    <br />
+    <br />
+
+    </form>
+
+  </section>
+
+</section>
+
+
+{%- endblock -%}
