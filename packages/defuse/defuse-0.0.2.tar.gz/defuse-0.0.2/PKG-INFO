@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: defuse
+Version: 0.0.2
+Summary: Detect unused Python functions and generate usage reports
+Home-page: https://github.com/antsticky/defuse
+Author: Peter Sinkovicz
+Author-email: antsticky@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# DefUse
+
+## Description
+TODO
