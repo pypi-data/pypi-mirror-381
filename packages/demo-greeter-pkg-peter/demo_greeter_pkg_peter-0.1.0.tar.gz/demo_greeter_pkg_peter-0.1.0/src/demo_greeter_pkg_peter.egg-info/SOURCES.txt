@@ -1,0 +1,12 @@
+LICENSE
+LICENSE:Zone.Identifier
+README.md
+pyproject.toml
+src/demo_greeter_pkg/__init__.py
+src/demo_greeter_pkg/greet.py
+src/demo_greeter_pkg_peter.egg-info/PKG-INFO
+src/demo_greeter_pkg_peter.egg-info/SOURCES.txt
+src/demo_greeter_pkg_peter.egg-info/dependency_links.txt
+src/demo_greeter_pkg_peter.egg-info/entry_points.txt
+src/demo_greeter_pkg_peter.egg-info/top_level.txt
+tests/test_greet.py
