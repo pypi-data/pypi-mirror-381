@@ -1,0 +1,5 @@
+jax_rocm7_pjrt/init.py,sha256=Rx59Vm5PLKyyumPJzgy4XwqAIcTMdyF1jH7IhJGM6Js,323
+jax_rocm7_pjrt-0.6.0rc1.dist-info/METADATA,sha256=vvxWL3d2glMk2EPu6kGhd54t1QWB_DzxhD_tigXt7EQ,805
+jax_rocm7_pjrt-0.6.0rc1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+jax_rocm7_pjrt-0.6.0rc1.dist-info/top_level.txt,sha256=bln5nuufRtXmo12PFFLBVlyd2FrtEypmgXi3lMamEMc,15
+jax_rocm7_pjrt-0.6.0rc1.dist-info/RECORD,,
