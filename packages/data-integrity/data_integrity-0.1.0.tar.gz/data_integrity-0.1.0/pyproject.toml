@@ -1,0 +1,14 @@
+[project]
+name = "data-integrity"
+version = "0.1.0"
+description = "Python library to handle W3C VC Data Integrity algorithms."
+readme = "README.md"
+authors = [
+    { name = "PatStLouis", email = "patrick.st-louis@opsecid.ca" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
