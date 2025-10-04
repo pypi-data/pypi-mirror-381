@@ -1,0 +1,11 @@
+vitax/__init__.py,sha256=DkrE0A7xnawVk1xyNeZwVktwixihEjFTU8fyH5kd8XE,204
+vitax/training.py,sha256=Xwz7HMJWkx5ENKjCdb30JVXuWvvExijlZPBg4MujtME,1059
+vitax/models/__init__.py,sha256=YF_ecrChFrow0sEJ54eYh_tXYhLdYyPdb3YUwVe1m8o,74
+vitax/models/modeling.py,sha256=D7eDojNx8Q9bzA4qmPMwSzX6wX_Bv_BfpmRgqefWNaw,1059
+vitax/models/vit.py,sha256=aVebezBRQC1QO-iH2z0HQkCarff4jvydFiNisfLpwAM,4972
+vitax/models/vit_load_weights.py,sha256=hhEN1sxKFJalIokNrJ7ZzIOb0obHOsLstQis5OLbf58,7700
+vitax-0.0.4.dist-info/licenses/LICENSE,sha256=KzkXRiZkuUfLxeh_3_qzAUtlurBPqXUUhUfOltbyksM,1101
+vitax-0.0.4.dist-info/METADATA,sha256=m2rQmstAWtmgN_VGFidPJPxh7EL0fLz3EU5RYYgWTuE,10746
+vitax-0.0.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+vitax-0.0.4.dist-info/top_level.txt,sha256=sk0pMaRYMeNTln2sQVOcfKLdqwO5qVU2_4tbGpwX2QM,6
+vitax-0.0.4.dist-info/RECORD,,
