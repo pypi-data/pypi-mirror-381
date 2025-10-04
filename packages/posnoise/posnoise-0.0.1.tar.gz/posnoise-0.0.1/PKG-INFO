@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: posnoise
+Version: 0.0.1
+Summary: POSNoise: An Effective Countermeasure Against Topic Biases in Authorship Analysis
+Project-URL: Homepage, https://github.com/Halvani/POSNoise
+Project-URL: Bug Tracker, https://github.com/Halvani/POSNoise/issues
+Author: Oren Halvani
+License-File: LICENSE
+Keywords: authorship-analysis,authorship-attribution,authorship-verification,topic-debiasing,topic-masking
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Requires-Dist: numpy>=1.20
+Requires-Dist: spacy>=3.7.4
+Description-Content-Type: text/markdown
+
+# POSNoise
+POSNoise: An Effective Countermeasure Against Topic Biases in Authorship Analysis
