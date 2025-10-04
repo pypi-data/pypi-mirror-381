@@ -1,0 +1,10 @@
+tshu-0.1.3.dist-info/METADATA,sha256=wsGq5XqcD83y6MhvRG4yGEn0Sib_KRULVR-1i1lypiE,3360
+tshu-0.1.3.dist-info/WHEEL,sha256=Mcqdfr9cYnpMTprE1EHRNx4x0sO6b01LR8ORXsO8D5o,131
+tshu-0.1.3.dist-info/licenses/LICENSE,sha256=8EXBRUCG3CvGCVCngE1f_MUTZLJdItsyrdpwjWJj-pI,1074
+tshu/__init__.py,sha256=XcSnKkDSa50ZCdCHGbJOVZ-2eXE47IR4g-3A9MrvLj8,288
+tshu/_command.py,sha256=RzSQG0FEtshiXdC2RnNVmI_F36lM-ODozn_vEuoH0HM,4395
+tshu/_command_error.py,sha256=yxMiEA4-XU98nHDhkhE2kIK-wTEw7sczdP6-67GDKuc,515
+tshu/_completed_command.py,sha256=fC07CiRApuJsQjbQMEfmVztRoc3rk60Gcnik8rPa6_Y,391
+tshu/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tshu/tshu.cpython-314-aarch64-linux-gnu.so,sha256=Rqxmr0N1AZKuBR8Afi15DUc5y23adk4f43fMZLuKNLU,6954472
+tshu-0.1.3.dist-info/RECORD,,
