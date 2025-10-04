@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fp-datatables"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+dependencies = [
+    "sqlalchemy>=2.0.43",
+]
+
+[project.urls]
+Homepage = "https://github.com/Rohit-kumar-raja/fastapi-datatables"

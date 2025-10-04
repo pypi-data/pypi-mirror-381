@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+src/datatables/__init__.py
+src/datatables/contract.py
+src/datatables/core.py
+src/datatables/database.py
+src/datatables/exceptions.py
+src/datatables/schema.py
+src/datatables/utils.py
+src/fp_datatables.egg-info/PKG-INFO
+src/fp_datatables.egg-info/SOURCES.txt
+src/fp_datatables.egg-info/dependency_links.txt
+src/fp_datatables.egg-info/requires.txt
+src/fp_datatables.egg-info/top_level.txt
