@@ -1,0 +1,2 @@
+[console_scripts]
+woom = woom.cli:main
