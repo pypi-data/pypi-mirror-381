@@ -1,0 +1,6 @@
+# ...existing code...
+"""spells package for magic-terminal."""
+
+__all__ = ["spell"]
+__version__ = "0.1"
+# ...existing code...

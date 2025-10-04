@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: hogwarts-terminal
+Version: 0.2
+Summary: Harry Potter-themed Magical Linux/Windows terminal commands
+Author: Ranjana M Suvarna
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: colorama
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+# magic-terminal
+
+A small package that provides Harry Potter-themed terminal commands for Linux/Windows.
+
+Install with:
+
+    pip install -e .
+
+Run the command `magic` after installation to try the demo spell.
