@@ -1,0 +1,10 @@
+vscode_offline/__init__.py,sha256=dr6Jtj0XT9eQEC4fzNigEYsAIEfCsaom3HDbUsS-2O4,57
+vscode_offline/app.py,sha256=OXvwedUn8RepP37Ps-jXCBrBVqsl8Fd5hJni355fRnM,4623
+vscode_offline/download.py,sha256=EpKgNLF6jU26vH-tI9UJx_acTUPIXpDnofGpY6RWmGI,3478
+vscode_offline/install.py,sha256=_LwsxCqSu8_9uaSY1zuJc9nxTYbXo6f9FKzMAL9DeJo,2662
+vscode_offline/loggers.py,sha256=vX91NMtNo1xfxq5y4BCtm_uhCTKtCODqBJHNvcT7JdQ,104
+vscode_offline/utils.py,sha256=Unmb8V-q_s4tyxfzmh7wayyM4OM83K-HqlQKqe49LpI,1749
+vscode_offline-0.1.1.dist-info/WHEEL,sha256=-neZj6nU9KAMg2CnCY6T3w8J53nx1kFGw_9HfoSzM60,79
+vscode_offline-0.1.1.dist-info/entry_points.txt,sha256=zIMeh_ENKKzlt9lDao8icofSI0TeCQxH8eCwxIRI2G8,56
+vscode_offline-0.1.1.dist-info/METADATA,sha256=xzRd7KZw0gVgZPu5ZN8SEv3lDS7r18ql3V-L6IDHJYY,1283
+vscode_offline-0.1.1.dist-info/RECORD,,
