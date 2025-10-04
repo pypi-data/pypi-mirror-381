@@ -1,0 +1,7 @@
+spacy
+sentence-transformers
+transformers
+accelerate
+bitsandbytes
+peft
+torch
