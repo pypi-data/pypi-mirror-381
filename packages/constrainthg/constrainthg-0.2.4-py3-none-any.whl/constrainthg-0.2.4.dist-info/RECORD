@@ -1,0 +1,10 @@
+constrainthg/__init__.py,sha256=ERPD2UrDEcXwqS9udk_r7dohl1Ix30F-DJLjHDGP4_A,434
+constrainthg/hypergraph.py,sha256=9K6L-1PWP9zUBuFgS85JmwfnkkOx2rVxSLiCWH3WM7A,59265
+constrainthg/main_cli.py,sha256=70A5GwHYwJFqSx8H2kUeGVZUo3-HNMhSYfhRF_mitwQ,623
+constrainthg/relations.py,sha256=25PmFLKzaIBuUJTnCDFUgxprhzopowENy9gmXp099SY,7970
+constrainthg-0.2.4.dist-info/licenses/LICENSE,sha256=qpTpo9u-c17h3v6kadAV0fySl6WGwbJAgKkLYuM3nE0,11341
+constrainthg-0.2.4.dist-info/METADATA,sha256=eDEdiRURlhJSDVVCDALQZr4BSHL1W454ZHCsyRZXoYk,8509
+constrainthg-0.2.4.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+constrainthg-0.2.4.dist-info/entry_points.txt,sha256=sl-PFSPLlPo9afQNrYOZBn1bsohsyZhX1733ht0lnj4,59
+constrainthg-0.2.4.dist-info/top_level.txt,sha256=WBFtq48tBB6zapDM68PWiDmIdm72L7XYosXvpwhEUcA,13
+constrainthg-0.2.4.dist-info/RECORD,,
