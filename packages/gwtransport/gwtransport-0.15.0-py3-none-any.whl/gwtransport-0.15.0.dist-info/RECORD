@@ -1,0 +1,14 @@
+gwtransport/__init__.py,sha256=Xj6mHRJzIQnKKJ8rxdjT8fOvNF9pGwEQkcwBuWOjEqk,168
+gwtransport/advection.py,sha256=jfBTbObpZrlgEvFuL829kLWoe-U3Q3nIhcy5yJ0qBXo,37733
+gwtransport/deposition.py,sha256=qGCR29s3EtvQi38sGhJ10t8Ohqagji-i0K-uttlkbmE,14747
+gwtransport/diffusion.py,sha256=dDO_IVeTKkb85SMZkfLUl_t4GPdGw21iLgwqTudsCvs,14119
+gwtransport/examples.py,sha256=R2uMif67igwqpWrMNj21HhctzyyfGoxadGnD3K-QqAA,11044
+gwtransport/gamma.py,sha256=o4anXzFKb5Sywt6-wA_ZM88inPnvNtQvzleFxozPtus,7243
+gwtransport/logremoval.py,sha256=UMgSLzmYbOFK5LcjKV4aVhWZh9KyIFXmMyuZoydd8iM,12468
+gwtransport/residence_time.py,sha256=rt9L2uwT0soIIHdGk9LpE2qZqOgflwd0UUZ5inls8zU,14854
+gwtransport/surfacearea.py,sha256=5IwXlE6_yPSm-bIOKb44o8Br0M9wsilbAPWowGMjxEc,2491
+gwtransport/utils.py,sha256=Mj6JrTm2caHieIaWGAJqBwDLWpZWo-Iu2V8vshXJFe4,36448
+gwtransport-0.15.0.dist-info/METADATA,sha256=b12bA6SW3eLlk0dAE4Fvyk8P_4UQ61_uBVASJacX4cw,49199
+gwtransport-0.15.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gwtransport-0.15.0.dist-info/licenses/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+gwtransport-0.15.0.dist-info/RECORD,,
