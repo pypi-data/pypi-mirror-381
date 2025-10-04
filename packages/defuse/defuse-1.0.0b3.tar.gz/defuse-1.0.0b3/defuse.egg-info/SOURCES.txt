@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+main.py
+setup.py
+.github/workflows/pypi-release.yml
+defuse/__init__.py
+defuse/cli.py
+defuse.egg-info/PKG-INFO
+defuse.egg-info/SOURCES.txt
+defuse.egg-info/dependency_links.txt
+defuse.egg-info/entry_points.txt
+defuse.egg-info/top_level.txt
+defuse/src/__init__.py
+defuse/src/module_file.py
+doc/README.md
