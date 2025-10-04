@@ -1,0 +1,14 @@
+ppge/__init__.py,sha256=4fDzry2LOd7Eolpu1tDHmcChKR7mGnKAsesnP-PRaq0,17450
+ppge/geomet/__init__.py,sha256=nHfrce-j79lyOA6auS03lzKvn-BtXZlERKvhGhSM1_w,767
+ppge/geomet/esri.py,sha256=8x17v5w8jXTS1PEUNdAgwysJPyfTyAGsxSLQyMPmu4Q,6971
+ppge/geomet/geopackage.py,sha256=jvx9X_2yGwnysH2M8ISLKAVEMl8an4u0WbXqaNzoj3w,12109
+ppge/geomet/tool.py,sha256=K42FG8b5EJHdmWD3aeDqbBHSe2Fc1vHUeaNl6p0ArEY,3791
+ppge/geomet/util.py,sha256=TaKPYCUPtl6AYpDabURBM0UeLJwCCW0lL8hKRwjmyRg,4076
+ppge/geomet/wkb.py,sha256=5FQCfh1oXrsADUbvTtB2mx-BZFPKlXqqnk_YIoUtNLI,30871
+ppge/geomet/wkt.py,sha256=m1sWRO3vKFYLElSOB6XTkNZ69PLJIcBvGZLaIWE0yzc,19843
+ppge/pyshp/__init__.py,sha256=XE56aFeerphvwM5673F6X5gl52FKhlKAk5psSVIL8Lc,112746
+ppge/pyshp/setup.py,sha256=hDrCbDikGrrleCULwPlBkZSzIKD2cyfZQQN6Qmj2z-c,38
+pure_python_geospatial_export-0.1.1.dist-info/METADATA,sha256=eFXj9wp2wJNICLIMR31iJY-D9d_xPzGYSaZibM2p4Gw,367
+pure_python_geospatial_export-0.1.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+pure_python_geospatial_export-0.1.1.dist-info/top_level.txt,sha256=WOEtvTIRjAILVi9jzSRKveeJFyDmpTkoRm5zHB0xqQU,5
+pure_python_geospatial_export-0.1.1.dist-info/RECORD,,
