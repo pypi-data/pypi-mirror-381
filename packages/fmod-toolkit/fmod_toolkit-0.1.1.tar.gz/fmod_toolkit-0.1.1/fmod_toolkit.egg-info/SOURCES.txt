@@ -1,0 +1,15 @@
+LICENSE
+README.md
+dummy.c
+pyproject.toml
+setup.py
+fmod_toolkit/__init__.py
+fmod_toolkit/fmod.py
+fmod_toolkit/importer.py
+fmod_toolkit.egg-info/PKG-INFO
+fmod_toolkit.egg-info/SOURCES.txt
+fmod_toolkit.egg-info/dependency_links.txt
+fmod_toolkit.egg-info/not-zip-safe
+fmod_toolkit.egg-info/requires.txt
+fmod_toolkit.egg-info/top_level.txt
+tests/test_load.py
