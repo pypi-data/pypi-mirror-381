@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: RelationApp
+Version: 0.0.2
+Summary: Relation application development library
+Author: Andrii Dovhaliuk
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic>=2.11.9
+Provides-Extra: dev
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: build; extra == "dev"
