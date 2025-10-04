@@ -1,0 +1,2 @@
+[console_scripts]
+surak = surak.cli.main:cli

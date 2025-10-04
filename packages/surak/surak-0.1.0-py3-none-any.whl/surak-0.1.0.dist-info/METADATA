@@ -1,0 +1,93 @@
+Metadata-Version: 2.4
+Name: surak
+Version: 0.1.0
+Summary: Universal Policy Engine for CI/CD - Build policy enforcement into your platform
+Project-URL: Homepage, https://github.com/yourusername/surak
+Project-URL: Documentation, https://surak.dev/docs
+Project-URL: Repository, https://github.com/yourusername/surak
+Project-URL: Issues, https://github.com/yourusername/surak/issues
+Author-email: Your Name <your.email@example.com>
+License: MIT
+License-File: LICENSE
+Keywords: cicd,devops,github-actions,gitlab,policy,policy-engine
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Requires-Dist: click>=8.1.0
+Requires-Dist: httpx>=0.27.0
+Requires-Dist: pydantic>=2.0
+Requires-Dist: python-dateutil>=2.8.0
+Requires-Dist: pyyaml>=6.0
+Provides-Extra: all
+Requires-Dist: black>=23.0.0; extra == 'all'
+Requires-Dist: fastapi>=0.104.0; extra == 'all'
+Requires-Dist: mypy>=1.5.0; extra == 'all'
+Requires-Dist: pytest-asyncio>=0.21.0; extra == 'all'
+Requires-Dist: pytest-cov>=4.1.0; extra == 'all'
+Requires-Dist: pytest>=7.4.0; extra == 'all'
+Requires-Dist: ruff>=0.1.0; extra == 'all'
+Requires-Dist: uvicorn[standard]>=0.24.0; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: black>=23.0.0; extra == 'dev'
+Requires-Dist: mypy>=1.5.0; extra == 'dev'
+Requires-Dist: pytest-asyncio>=0.21.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.1.0; extra == 'dev'
+Requires-Dist: pytest>=7.4.0; extra == 'dev'
+Requires-Dist: ruff>=0.1.0; extra == 'dev'
+Provides-Extra: devserver
+Requires-Dist: fastapi>=0.104.0; extra == 'devserver'
+Requires-Dist: uvicorn[standard]>=0.24.0; extra == 'devserver'
+Description-Content-Type: text/markdown
+
+<div align="center">
+    <h1 align="center">SURAK</h1>
+
+</div>
+
+<div align="center">
+  <h4>Universal CI/CD Policy Engine</h4>
+</div>
+<br/>
+<p align="center">
+<a href="https://pypi.org/project/rbom/"><img alt="SURAK" src="https://img.shields.io/badge/policy-SURAK-ffc900?"></a>
+<a href="https://opensource.org/licenses/Apache-2.0"><img alt="PyPI" src="https://img.shields.io/badge/License-Apache_2.0-blue.svg"></a>
+<a href="https://pypi.org/project/rbom/"><img alt="PyPI" src="https://img.shields.io/pypi/v/rbom"></a>
+
+</p>
+
+### Overview 
+
+Pluggable engine.
+
+
+### Dev
+
+```bash
+# Setup environment
+pyenv install 3.12.0
+pyenv local 3.12.0
+uv venv
+source .venv/bin/activate
+
+# Install dependencies
+uv pip install -e ".[dev]"
+
+# Run tests
+pytest
+
+# Format code
+black surak tests
+ruff check surak tests
+```
+
+
+
+
+
+
+
+03/10/2025
