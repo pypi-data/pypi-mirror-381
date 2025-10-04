@@ -1,0 +1,25 @@
+[project]
+name = "markdown_javadoc_references"
+version = "0.1"
+
+dependencies = [
+    "requests",
+    "markdown",
+    "beautifulsoup4"
+]
+
+authors = [
+    {name = "Nick Hensel"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest-xdist (>=3.8.0,<4.0.0)",
+    "pytest (>=8.4.2,<9.0.0)"
+]
