@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/livecodec/__init__.py
+src/livecodec/codec.py
+src/livecodec/evit.py
+src/livecodec/monarch.py
+src/livecodec.egg-info/PKG-INFO
+src/livecodec.egg-info/SOURCES.txt
+src/livecodec.egg-info/dependency_links.txt
+src/livecodec.egg-info/requires.txt
+src/livecodec.egg-info/top_level.txt
