@@ -1,0 +1,7 @@
+request_normalizer/RequestRepository.py,sha256=qX5DoBQPvwbaQ7BQawe-oXiXJf_t_xtf-gtfofU9sH8,5928
+request_normalizer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+request_normalizer/middleware.py,sha256=Adce5kNDcXUeaXEbjpjOBuQQ0BWl_ruSa5tcqKa9xUI,309
+bear_django_request_normalizer-0.2.0.dist-info/METADATA,sha256=PKpjbb1wOWTtM6_-LBJol7MoVk4RQwcX2LXO7wr5u3w,1935
+bear_django_request_normalizer-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+bear_django_request_normalizer-0.2.0.dist-info/top_level.txt,sha256=7TlYEKaUcJN8eB9oU57HcOGVZC24bSQmFasPs5JnOA8,19
+bear_django_request_normalizer-0.2.0.dist-info/RECORD,,
