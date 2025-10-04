@@ -1,0 +1,7 @@
+philiarabbit/base.py,sha256=_9KyFLDjYcib7w-Cac_IE_KL9TPla44bcs1enyWLFh8,2882
+philiarabbit/connection_pool.py,sha256=BQb_gcZF4ULpyQwMcNUBfXZ1EF9pBtDvLeIHQekG-lM,3935
+philiarabbit/consumer.py,sha256=bkegLXJxjuPJXbCc7vcTgfdPQI2sz76u7en2oVBkEOY,5000
+philiarabbit/producer.py,sha256=v-X9YiNHvrB9MK-lwyM1OoHQ4jD0CyEIdn5mtyjMGIs,5181
+philiarabbit-0.2.2.dist-info/METADATA,sha256=AVoTE3t7eR-fkvWypKOQBBySJekyVruZk56o91LeUFg,2859
+philiarabbit-0.2.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+philiarabbit-0.2.2.dist-info/RECORD,,
