@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+bear_django_db_reconnect.egg-info/PKG-INFO
+bear_django_db_reconnect.egg-info/SOURCES.txt
+bear_django_db_reconnect.egg-info/dependency_links.txt
+bear_django_db_reconnect.egg-info/requires.txt
+bear_django_db_reconnect.egg-info/top_level.txt
+db_reconnect/__init__.py
+db_reconnect/core.py
+db_reconnect/decorators.py
+db_reconnect/middleware.py

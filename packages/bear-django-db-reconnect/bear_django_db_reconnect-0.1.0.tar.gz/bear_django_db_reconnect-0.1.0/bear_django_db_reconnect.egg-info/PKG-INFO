@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: bear-django-db-reconnect
+Version: 0.1.0
+Summary: A Django middleware and decorator to automatically handle database connection losses.
+Author-email: Bohdan Riabunets <bearablyk@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/bearablyk/django-db-reconnect
+Project-URL: Issues, https://github.com/bearablyk/django-db-reconnect/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Framework :: Django :: 4.0
+Classifier: Framework :: Django :: 4.2
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: Django>=3.2
+
+# Django DB Reconnect
+
+A simple Django app that provides a middleware and a decorator to automatically handle database connection losses (e.g., "MySQL server has gone away").
+
+This utility catches specific `OperationalError` exceptions, closes the stale database connections, and retries the operation once. This can help improve the stability of long-running Django applications or applications with intermittent network access to the database.
+
+## Installation
+
+```bash
+pip install bear-django-query-profiler
+```
+
+## Usage
+
+1.  Add the middleware to your `MIDDLEWARE` list in `settings.py`.
+
+```python
+# settings.py
+MIDDLEWARE = [
+    'db_reconnect.middleware.DBConnectionMiddleware',
+]
+```
+
+2.  (Optional) You can override this list by defining DB_RECONNECT_ERROR_CODES in your settings.py.
+
+```python
+# settings.py
+DB_RECONNECT_ERROR_CODES = [2006, 2013]
+```
