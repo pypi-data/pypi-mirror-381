@@ -1,0 +1,19 @@
+# Do not install this version directly
+
+tiledb-cloud 0.0.1 exists to support tiledb-client 3.0 and should not be
+installed except as a dependency of tiledb-client.
+
+The tiledb-client Python package includes both tiledb.client and tiledb.cloud
+modules, the latter providing some degree of backwards compatibility. It is
+a namespace package, which means that these modules are installed into the same
+"tiledb" directory of your environment as the tiledb namespace package.
+
+The legacy tiledb-cloud package on PyPI is also a namespace package, and if
+accidentally installed into an environment where tiledb-client was installed,
+the deprecated tiledb.cloud module could overwrite the current version.
+
+To help prevent this, tiledb-client depends on this artificially historical
+version 0.0.1 of tiledb-cloud.  After installing tiledb-client, you will see
+"tiledb-cloud 0.0.1" in the output of `pip list`, and then other versions of
+tiledb-cloud will not be fetched as a dependency of any other package, unless
+those packages specify an exact version or range of versions.

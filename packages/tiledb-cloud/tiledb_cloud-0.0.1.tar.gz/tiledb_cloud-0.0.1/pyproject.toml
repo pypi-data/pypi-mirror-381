@@ -1,0 +1,10 @@
+[project]
+name = "tiledb-cloud"
+description = "An empty tiledb-cloud package to support tiledb-client 3.0."
+readme = "README.md"
+requires-python = ">=3.9"
+version = "0.0.1"
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+tiledb_cloud.egg-info/PKG-INFO
+tiledb_cloud.egg-info/SOURCES.txt
+tiledb_cloud.egg-info/dependency_links.txt
+tiledb_cloud.egg-info/top_level.txt
