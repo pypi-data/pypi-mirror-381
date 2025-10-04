@@ -1,0 +1,13 @@
+fastapi_swagger_auth/__init__.py,sha256=CyViTKog_HD7YNz6DpxqdmEbGuslDIzbY3O8ScvbfWU,188
+fastapi_swagger_auth/config.py,sha256=9we0Bf2EH44pWiADfznc0yO4rj3vcotvR7rZso0RiCE,873
+fastapi_swagger_auth/core.py,sha256=KFuAdcailCRhLfvPweXLY2MIAnOUoFtvsH03G_ZzdCY,7236
+fastapi_swagger_auth/swagger_ui.py,sha256=4JYJOw6mwAeqLN2PLSBYviYZly9colbP2s0xEJ58WE8,3175
+fastapi_swagger_auth/providers/__init__.py,sha256=gVJuAE1kmsQ11GVaUBJTY8vtV2w03c5Q4vFrX6X4YuA,137
+fastapi_swagger_auth/providers/base.py,sha256=amJ6sMQhT1GVKnHpOskHp4V8L702JsdPDgaIpTUI_C4,1243
+fastapi_swagger_auth/providers/custom.py,sha256=FFN1h3tCEDiIh5GA6uG2s0eq_oLpFQo0TDEvRGCHhA0,2711
+fastapi_swagger_auth/providers/supabase.py,sha256=g5A9Ffu5su627B1I77Enu6fZMX51vjUNzcWUhTFPG5Q,3675
+fastapi_swagger_auth-0.1.0.dist-info/licenses/LICENSE,sha256=pn4VAPGupPrgnk0eWaUJOwT4pbJpkONWa-zTIXCzSkI,1070
+fastapi_swagger_auth-0.1.0.dist-info/METADATA,sha256=95AtV90g6vr1DMqSY0AWjtrHnvmh4MSe0YhYd5LywuY,5558
+fastapi_swagger_auth-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+fastapi_swagger_auth-0.1.0.dist-info/top_level.txt,sha256=_kCYhPH_JouvBbaH4YaBmefCvllLwFCltXUQzdF9jDE,21
+fastapi_swagger_auth-0.1.0.dist-info/RECORD,,
