@@ -1,0 +1,10 @@
+Mastodon.py
+networkx
+nxv
+ipydex
+matplotlib
+bleach
+tabulate
+requests
+bs4
+lxml

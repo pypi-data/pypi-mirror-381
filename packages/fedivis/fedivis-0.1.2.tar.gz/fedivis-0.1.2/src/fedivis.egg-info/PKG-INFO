@@ -1,0 +1,34 @@
+Metadata-Version: 2.4
+Name: fedivis
+Version: 0.1.2
+Summary: simple visualization of fediverse-related data
+Author: Carsten Knoll
+Author-email: firstname.lastname@posteo.de
+License: GPLv3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: Mastodon.py
+Requires-Dist: networkx
+Requires-Dist: nxv
+Requires-Dist: ipydex
+Requires-Dist: matplotlib
+Requires-Dist: bleach
+Requires-Dist: tabulate
+Requires-Dist: requests
+Requires-Dist: bs4
+Requires-Dist: lxml
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
+
+
+    ...
+    
