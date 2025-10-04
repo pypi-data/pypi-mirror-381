@@ -1,0 +1,16 @@
+jules_agent_sdk/__init__.py,sha256=qZq7n_WEgrxk_XbyJlOzHhiYBLhofJRqsXPW6minng0,557
+jules_agent_sdk/activities.py,sha256=-HSUo4h7ODdXAGfYGe29lx69thzWLnpPEJ3paqq-qOs,3492
+jules_agent_sdk/async_base.py,sha256=0-Dosq700w8Wg77ewTTSKYEJXnwCxmPDAMJCPF9kQUI,4809
+jules_agent_sdk/async_client.py,sha256=-NZZYjaes9BoO0K3VmmFfWWM4ulnClIFcl6fwlslc6Y,9881
+jules_agent_sdk/base.py,sha256=vGgFiLeWl2x9rka9Z_2DXFbT7MumOk6XX5yM3Vk2uDQ,11292
+jules_agent_sdk/client.py,sha256=7L2LcJEg6h9rEl4UpF5cB5-Pmd3S4VYIsfVlK6xRvQY,3511
+jules_agent_sdk/config.py,sha256=3a2uEMmPl_OwRhbcHoJ-pi2Yby6IMHw9UAOkANW60Ac,1504
+jules_agent_sdk/exceptions.py,sha256=ctXXcl5u4AIEAiRU3k5bUFU_OHRg-eJj00UYdT0-q9A,1185
+jules_agent_sdk/models.py,sha256=UmRN72ghHfBfGp1ChVe9jfpxDLbmSFVcKFnoKqFimyI,14877
+jules_agent_sdk/sessions.py,sha256=DQKZ1D1rU1f_KmMfS7J95ojjHMRQP-CQUZ8sa3fNp_c,6044
+jules_agent_sdk/sources.py,sha256=W_CYNhj-6sxXAZcbhCfH_xpGmdhFUJEcSOaEu403wxY,3265
+jules_agent_sdk-0.1.0.dist-info/licenses/LICENSE,sha256=JYqoJTmpjXs_gx1iNe5zbVLMQiqOCexPjNWuOW__Siw,1070
+jules_agent_sdk-0.1.0.dist-info/METADATA,sha256=2qMBeT-JHfDWqQPsYjBr0JB2eyQBnGNUlIG34QMmUfQ,12970
+jules_agent_sdk-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+jules_agent_sdk-0.1.0.dist-info/top_level.txt,sha256=5NZ8KpXXWuG8-nkJyDdh5GdByJpn7WD-PjtoRmFAuuw,16
+jules_agent_sdk-0.1.0.dist-info/RECORD,,
