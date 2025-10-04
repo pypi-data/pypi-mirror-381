@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/mlp_kan/__init__.py
+src/mlp_kan/interpolation.py
+src/mlp_kan/kan_layer.py
+src/mlp_kan.egg-info/PKG-INFO
+src/mlp_kan.egg-info/SOURCES.txt
+src/mlp_kan.egg-info/dependency_links.txt
+src/mlp_kan.egg-info/requires.txt
+src/mlp_kan.egg-info/top_level.txt

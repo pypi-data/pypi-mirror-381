@@ -1,0 +1,97 @@
+Metadata-Version: 2.4
+Name: mlp-kan
+Version: 0.1.0
+Summary: Kolmogorov–Arnold Networks layers with MLP and interpolation activations.
+Author: Yanbo Zhang
+License: MIT License
+        
+        Copyright (c) 2024 Yanbo Zhang
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/yanbozhang/MLP-KAN
+Project-URL: Repository, https://github.com/yanbozhang/MLP-KAN
+Project-URL: Issues, https://github.com/yanbozhang/MLP-KAN/issues
+Keywords: kolmogorov-arnold network,neural networks,torch,representation learning
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch>=2.0
+Dynamic: license-file
+
+# MLP-KAN
+
+PyTorch layers for building Kolmogorov–Arnold Networks (KAN) with either learnable sinusoidal features or an interpolation-based parameterisation. The implementation relies on `torch.vmap` for efficient evaluation and exposes utilities to encourage smoothness in interpolated activations.
+
+## Installation
+
+The project follows the PEP 517 `pyproject.toml` layout. Install the package in editable mode while developing:
+
+```bash
+pip install -e .
+```
+
+A pre-existing PyTorch 2.0 (or later) environment is required.
+
+## Quickstart
+
+```python
+import torch
+import torch.nn as nn
+from mlp_kan import KANLayer, KANInterpoLayer, smooth_penalty
+
+# Sinusoidal feature KAN layer stack
+model = nn.Sequential(
+    KANLayer(2, 5),
+    KANLayer(5, 1),
+)
+
+x = torch.randn(16, 2)
+y = model(x)
+assert y.shape == (16, 1)
+
+# Interpolation-based layer with optional smoothness penalty
+interp_model = nn.Sequential(
+    KANInterpoLayer(2, 5, num_x=128, x_min=-3, x_max=3),
+    KANInterpoLayer(5, 1, num_x=256),
+)
+penalty = smooth_penalty(interp_model)
+```
+
+## Experiments
+
+Two reference scripts illustrate training and visualisation workflows:
+
+- `experiment.py` trains a small model using sinusoidal features.
+- `experiment_interpolation.py` explores the interpolation-based variant with the smoothness regulariser.
+
+Run either script after installing the project in editable mode. Generated plots are saved to the `images`/`temp` folders referenced in the notebooks.
+
+## Visualisation
+
+The repository includes example plots captured during the experiments, demonstrating how individual activations learn components of the target function.
