@@ -1,0 +1,14 @@
+mongofy/__init__.py,sha256=qlvohPdLkpNg6MNFFs_JSh6x0mjssFBdyG4pD9m18Ew,92
+mongofy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mongofy/exceptions/__init__.py,sha256=Bpe9Ko8t7_HI4mY9aDb0PcFbt4RlKKci9tqsK1O_jL0,133
+mongofy/exceptions/instance.py,sha256=S5jNLYAQP_jHbzt0OILgLqC8JgMCzfcCYuuOLpOg3zY,240
+mongofy/instances/__init__.py,sha256=yCIQl7UIoz104yMc6QNXQMBGrr2_Cd6MNN7g8221sOw,60
+mongofy/instances/base.py,sha256=WgSAePfuIKGX8d1QgxXS5X_bDoqA_BysOQr9RYJdX-8,2251
+mongofy/instances/sync_instance.py,sha256=zdOQPrNwWxM42sp5KKPyjmLdEVFGMebe1rva_8MnQvA,152
+mongofy/odm/__init__.py,sha256=O9CT1B2F-cVB8elT0EoCJbgkcffjvlmqteqavs4giDg,25
+mongofy/odm/document.py,sha256=kEJU4xHE57WjP50ptA-TEkIVdUPCup3wKavWnm1DLUw,367
+mongofy-0.1.0a2.dist-info/licenses/LICENSE.md,sha256=il3ZsdHdE8ltDr0mIGZS3DSdjFwUujAjLwGgjZJvZto,11349
+mongofy-0.1.0a2.dist-info/METADATA,sha256=ezD96Fe9woQW4A2Ub9HaydIDZdYGqd5Za2QTToHXoio,441
+mongofy-0.1.0a2.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+mongofy-0.1.0a2.dist-info/top_level.txt,sha256=SqXUYGH-Q6HI50LvQyW0StawbMDvj5Tc2Xxta-ZkXqg,8
+mongofy-0.1.0a2.dist-info/RECORD,,
