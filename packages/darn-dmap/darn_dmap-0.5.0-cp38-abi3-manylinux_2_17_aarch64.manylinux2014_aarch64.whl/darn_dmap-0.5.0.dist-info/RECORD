@@ -1,0 +1,7 @@
+darn_dmap-0.5.0.dist-info/METADATA,sha256=TtZLDm7CYZKfAEKM0I5wy5I20_qDNoF5IaCzp3nyl9U,7667
+darn_dmap-0.5.0.dist-info/WHEEL,sha256=6Eoszq0qkVB3xm2B8ECWSsVzSlBQzosbbuZaIYt2urY,129
+darn_dmap-0.5.0.dist-info/licenses/COPYING,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+dmap/__init__.py,sha256=K_PhL_1LgaoVlJZ6cNMjypSYcCcpkg-aFwGcveicCmo,515
+dmap/_wrapper.py,sha256=-NIGc5c0_Q8lTJRLQNXo0eG4hS6G1V5bkJ_nu9LK8SI,17501
+dmap/dmap_rs.abi3.so,sha256=nnsVlWB3JTY9Jf-28dPgz1UzH0-B7ujD6eahLemZnEs,1713296
+darn_dmap-0.5.0.dist-info/RECORD,,
