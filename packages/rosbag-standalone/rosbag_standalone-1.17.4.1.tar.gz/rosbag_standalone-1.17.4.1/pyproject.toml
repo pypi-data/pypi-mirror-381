@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rosbag-standalone"
+version = "1.17.4.1"
+description = "A standalone version of the ROS1 rosbag library - Python package for reading and writing ROS1 bag files"
+readme = "README.md"
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Willow Garage, ROS Community" }
+]
+maintainers = [
+    { name = "Martin Valgur", email = "martin.valgur@gmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "PyYAML",
+    "lz4",
+]
+keywords = ["ros", "ros1", "rosbag", "robotics"]
+
+[project.urls]
+Homepage = "https://github.com/valgur/rosbag-standalone"
+Documentation = "https://wiki.ros.org/rosbag"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["*"]
