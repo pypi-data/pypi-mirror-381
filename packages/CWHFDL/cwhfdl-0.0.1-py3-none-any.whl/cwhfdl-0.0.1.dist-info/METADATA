@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: CWHFDL
+Version: 0.0.1
+Summary: WHFDL for data classification
+Project-URL: source, https://github.com/arman-daliri/WHFDL
+Author-email: Arman Daliri <daliriwork2@gmail.com>
+Maintainer-email: Mohammad Mahdi Mir <standardret@proton.me>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: seaborn
+Requires-Dist: torch
+Requires-Dist: torchvision
+Description-Content-Type: text/markdown
+
+# CWHFDL
+
+A package for data classification with WHFDL.
+
+This package is part of "WHFDL: an explainable method based on World Hyper-heuristic and Fuzzy Deep Learning approaches for gastric cancer detection using metabolomics data" article's experiment.
+
+You can find an example [here](https://github.com/arman-daliri/WHFDL/Example).
