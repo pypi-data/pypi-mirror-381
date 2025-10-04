@@ -1,0 +1,18 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "data": {
+                    "password": "Wachtwurd"
+                },
+                "sections": {
+                    "advanced_settings": {
+                        "data": {
+                            "verify_ssl": "SSL-sertifikaat ferifiearje"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
