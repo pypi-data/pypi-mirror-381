@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+BuzzerboyArchetype.egg-info/PKG-INFO
+BuzzerboyArchetype.egg-info/SOURCES.txt
+BuzzerboyArchetype.egg-info/dependency_links.txt
+BuzzerboyArchetype.egg-info/top_level.txt
+BuzzerboyArchetypeStack/BuzzerboyArchetype.py
+BuzzerboyArchetypeStack/__init__.py
