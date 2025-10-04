@@ -1,0 +1,58 @@
+Metadata-Version: 2.4
+Name: scalebaron
+Version: 1.0.0
+Summary: ScaleBarOn: A Python Tool for Scaling Multiple Elemental Maps
+Author: Tracy Punshon
+Author-email: tracy.punshon@dartmouth.edu
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: matplotlib>=3.5.0
+Requires-Dist: openpyxl>=3.0.9
+Requires-Dist: Pillow>=8.3.1
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# scalebaron
+Python toolkit for composite visualization and scaling of elemental imaging data 
+
+To install:
+```{bash}
+pip install git+https://github.com/twinmum1277/scalebaron
+```
+
+Or from PyPI:
+```{bash}
+pip install scalebaron
+```
+
+To run ScaleBaron: 
+```{bash}
+scalebaron
+```
+
+To run Muad'Data: 
+```{bash}
+muaddata
+```
+
+To download test data for this package:
+```{bash}
+download_test_elemental_images
+```
