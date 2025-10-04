@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "microdag"
+version = "1.0.0"
+description = "Ultra-lightweight DAG blockchain optimized for IoT devices and micropayments"
+readme = "README_PYPI.md"
+license = {text = "MIT"}
+authors = [
+    {name = "MicroDAG Team", email = "team@microdag.org"}
+]
+maintainers = [
+    {name = "MicroDAG Team", email = "team@microdag.org"}
+]
+keywords = ["blockchain", "dag", "iot", "micropayments", "lightweight", "distributed", "cryptocurrency"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Distributed Computing",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Topic :: Database :: Database Engines/Servers",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Office/Business :: Financial",
+]
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0", 
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+]
+full = [
+    "aiohttp>=3.8.0",
+    "cryptography>=3.4.0",
+]
+
+[project.urls]
+Homepage = "https://microdag.org"
+Documentation = "https://microdag.org/docs"
+Repository = "https://github.com/microdag/microdag"
+"Bug Reports" = "https://github.com/microdag/microdag/issues"
+
+[project.scripts]
+microdag = "microdag.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+microdag = ["*.md", "docs/*.html"]
