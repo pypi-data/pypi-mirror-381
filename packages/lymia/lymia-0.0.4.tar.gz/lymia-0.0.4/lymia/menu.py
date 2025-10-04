@@ -1,0 +1,194 @@
+"""Menu (not top menu)"""
+
+# pylint: disable=no-name-in-module,no-member
+
+from collections.abc import Sequence
+from math import inf
+import curses
+from typing import Callable, Generic, TypeAlias, TypeVar
+
+from lymia.colors import ColorPair
+from lymia.forms import Forms
+
+from .data import ReturnType
+from .utils import prepare_windowed
+
+T = TypeVar("T")
+Fields: TypeAlias = (
+    tuple[tuple[str, Callable[[], T]], ...] | tuple[tuple[str, Forms], ...]
+)
+FieldsFn: TypeAlias = Callable[[int], tuple[str, Callable[[], T]]]
+
+
+class Menu(Generic[T]):
+    """Menu helper component
+
+    fields: Menu fields, consists of label/callback
+    selected_style: Style for cursor
+    margin: tuple[int, int], this margin is simplified as margin top and margin bottom
+    max_height: Menu's maximum height
+
+    For fields, callback can have a `.display()` that returns a pre-rendered label data
+    The content returned by `.display()` is displayed as-is.
+    """
+
+    KEYMAP_UP = curses.KEY_UP
+    KEYMAP_DOWN = curses.KEY_DOWN
+
+    def __init__(
+        self,
+        fields: Fields | FieldsFn,
+        prefix: str = "-> ",
+        selected_style: int | ColorPair = 0,
+        margin_height: tuple[int, int] = (0, 0),
+        margin_left: int = 0,
+        max_height: int = -1,
+        count: Callable[[], int] | None = None,
+    ) -> None:
+        self._fields = fields
+        self._cursor = 0
+        self._selected_style = selected_style
+        self._margins = margin_height
+        self._max_height = max_height
+        self._last_maxheight = max_height
+        self._margin_left = margin_left
+        self._prefix = prefix
+
+        if isinstance(fields, Sequence):
+            self._count_fn = lambda: len(fields)
+            for _, field in fields:
+                if isinstance(field, Forms):
+                    field.set_prefix(self._prefix)
+        else:
+            self._count_fn = count if count is not None else lambda: -1
+
+    def _get_field(self, idx: int) -> tuple[str, Callable[[], T]] | tuple[str, Forms]:
+        if isinstance(self._fields, Sequence):
+            return self._fields[idx]
+        return self._fields(idx)
+
+    def draw(self, stdscr: curses.window):
+        """Draw menu component"""
+
+        maxh, _ = stdscr.getmaxyx()
+        self._last_maxheight = maxh
+
+        start, end = prepare_windowed(self._cursor, maxh - self._margins[1])
+
+        for index, relative_index in enumerate(range(start, end)):
+            try:
+                label, content = self._get_field(relative_index)
+            except (IndexError, StopIteration):
+                break
+            data = f"{self._prefix}{label}"
+            style = 0
+            if relative_index == self._cursor:
+                style = curses.color_pair(int(self._selected_style))
+            if hasattr(content, "display") and callable(
+                getattr(content, "display", None)
+            ):
+                data: str = content.display()
+            stdscr.addstr(self._margins[0] + index, self._margin_left, data, style)
+
+    def get_keymap(self) -> dict[str, tuple[int, Callable[[], ReturnType]]]:
+        """Get instance keymap"""
+        return {
+            "move_up": (self.KEYMAP_UP, self.move_up),
+            "move_down": (self.KEYMAP_DOWN, self.move_down),
+        }
+
+    @property
+    def max_height(self):
+        """Menu max height"""
+        if self._max_height == -1:
+            max_height = self._last_maxheight
+            return max(max_height - sum(self._margins), -1)
+        return self._max_height
+
+    @property
+    def height(self):
+        """Menu height"""
+        count = self._count_fn()
+        if count == -1:
+            return inf
+        return count
+
+    def move_down(self):
+        """Move cursor down"""
+        if self._cursor < self.height - 1:
+            self._cursor += 1
+        return ReturnType.CONTINUE
+
+    def move_up(self):
+        """Move cursor up"""
+        if self._cursor > 0:
+            self._cursor -= 1
+        return ReturnType.CONTINUE
+
+    def fetch(self):
+        """Return callback from current cursor"""
+        return self._get_field(self._cursor)
+
+    def __repr__(self) -> str:
+        return f"<{type(self).__name__} size={self.height!r}>"
+
+
+class HorizontalMenu(Menu):
+    """Horizontal Menu"""
+
+    KEYMAP_LEFT = curses.KEY_LEFT
+    KEYMAP_RIGHT = curses.KEY_RIGHT
+
+    def __init__(
+        self,
+        fields: Fields | FieldsFn,
+        prefix: str = "",
+        suffix: str = "",
+        selected_style: int | ColorPair = 0,
+        margin_height: tuple[int, int] = (0, 0),
+        margin_left: int = 0,
+        max_height: int = -1,
+        count: Callable[[], int] | None = None,
+    ) -> None:
+        super().__init__(
+            fields,
+            prefix,
+            selected_style,
+            margin_height,
+            margin_left,
+            max_height,
+            count,
+        )
+        self._suffix = suffix
+
+    def draw(self, stdscr: curses.window):
+
+        # This would definitely screw things over, we don't need "visible rows"
+        # as it's vertical and we don't know the labels.
+        start, end = prepare_windowed(self._cursor, visible_rows=self.max_height)
+        x = 0
+
+        for _, relative_index in enumerate(range(start, end)):
+            try:
+                label, content = self._get_field(relative_index)
+            except (IndexError, StopIteration):
+                break
+            data = f"{self._prefix}{label}{self._suffix}"
+            style = 0
+            if relative_index == self._cursor:
+                style = curses.color_pair(int(self._selected_style))
+            if hasattr(content, "display") and callable(
+                getattr(content, "display", None)
+            ):
+                data: str = content.display()
+            stdscr.addstr(self._margins[0], self._margin_left + x, data, style)
+            x += len(data) + 1
+            # Possible fix, idk yet
+            if x >= stdscr.getmaxyx()[1]:
+                break
+
+    def get_keymap(self) -> dict[str, tuple[int, Callable[[], ReturnType]]]:
+        return {
+            "move_left": (self.KEYMAP_LEFT, self.move_up),
+            "move_right": (self.KEYMAP_RIGHT, self.move_down),
+        }
