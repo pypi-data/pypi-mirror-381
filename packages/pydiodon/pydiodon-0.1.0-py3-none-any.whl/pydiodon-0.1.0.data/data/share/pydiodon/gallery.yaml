@@ -1,0 +1,173 @@
+# ----------------------------------------
+#      Configuration file
+#
+# ---------------------------------------- 
+#
+# 21_février_2025_11:53:17
+#
+# ---------------------------------------- 
+
+
+# ----------------------------------------
+__init__:
+  if_questions: True
+
+# ----------------------------------------
+coa:
+  k: None
+  meth: None
+  transpose: None
+
+# ----------------------------------------
+load_coa_file:
+  coafile: None
+  colnames: None
+  delimiter: None
+  rownames: None
+
+# ----------------------------------------
+load_mds_file:
+  colnames: True
+  delimiter: tab
+  mdsfile: guiana_trees.sw.dis
+  rownames: True
+
+# ----------------------------------------
+load_pca_file:
+  colnames: None
+  delimiter: None
+  pcafile: None
+  rownames: None
+
+# ----------------------------------------
+mds:
+  L_file: False
+  Y_file: False
+  k: -1
+  loop: True
+  meth: svd
+
+# ----------------------------------------
+pca:
+  k: None
+  meth: None
+  pretreatment: None
+
+# ----------------------------------------
+plot_coa:
+  axis_1: None
+  axis_2: None
+  col_col: None
+  col_dsize: None
+  colnames: None
+  datasetname: None
+  delimiter: None
+  dtype: None
+  filename: None
+  fmt: None
+  matrix: None
+  np_fmt: None
+  plotfile: None
+  row_col: None
+  row_dsize: None
+  rownames: None
+  title: None
+  x11: None
+
+# ----------------------------------------
+plot_components_heatmap:
+  axis_1: None
+  axis_2: None
+  bins: None
+  cmap: None
+  fmt: None
+  imfile: None
+  log: None
+  range: None
+  scale: None
+  title: None
+  x11: None
+
+# ----------------------------------------
+plot_components_quality:
+  axis_1: 1
+  axis_2: 2
+  cmap: False
+  diam: 50
+  fmt: png
+  plotfile: False
+  r: 2
+  title: Guiana trees, quality
+  x11: True
+
+# ----------------------------------------
+plot_components_scatter:
+  axis_1: 1
+  axis_2: 2
+  cmap: False
+  color: red
+  dot_size: 20
+  fmt: png
+  names: []
+  plotfile: False
+  title: Guiana trees
+  x11: True
+
+# ----------------------------------------
+plot_components_splines:
+  fmt: png
+  n_axis: 30
+  plotfile: False
+  title: Guiana trees, parallel coordinates
+  v_col: red
+  x11: True
+
+# ----------------------------------------
+plot_correlation_matrix:
+  cmap: None
+  fmt: None
+  plotfile: None
+  x11: None
+
+# ----------------------------------------
+plot_eig:
+  Log: False
+  col: red
+  cum: True
+  dot_size: 20
+  fmt: png
+  frac: True
+  k: 30
+  plotfile: False
+  pr: True
+  title: Guiana trees, eigenvalues
+  x11: True
+
+# ----------------------------------------
+plot_quality:
+  r: 2
+  col: red
+  cum: True
+  fmt: png
+  plotfile: False
+  sort: True
+  title: Guiana trees, quality
+  x11: True
+
+# ----------------------------------------
+plot_var:
+  axis_1: None
+  axis_2: None
+  fmt: None
+  plotfile: None
+  title: None
+  x11: None
+
+# ----------------------------------------
+plot_var_heatmap:
+  cmap: None
+  fmt: None
+  plotfile: None
+  title: None
+  varnames: None
+  x11: None

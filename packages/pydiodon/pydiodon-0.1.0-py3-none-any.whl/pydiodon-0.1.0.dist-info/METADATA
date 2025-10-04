@@ -1,0 +1,215 @@
+Metadata-Version: 2.4
+Name: pydiodon
+Version: 0.1.0
+Summary: numpy library for linear dimension reduction
+Home-page: https://gitlab.inria.fr/diodon/pydiodon
+Author: Alain Franc
+Author-email: Alain Franc <alain.franc@inrae.fr>
+Project-URL: Homepage, https://gitlab.inria.fr/diodon/pydiodon
+Description-Content-Type: text/markdown
+License-File: LICENCE
+License-File: AUTHORS
+Requires-Dist: PyQt5
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: h5py
+Requires-Dist: prompt_toolkit
+Requires-Dist: pyyaml
+Requires-Dist: print_color
+Dynamic: license-file
+
+# pydiodon
+
+## What it is
+
+`numpy` library for linear dimension reduction, part of `diodon` project. Plotting the results is provided with `matplotlib`.
+
+
+
+## Companions
+
+Here are five companions of this library, provided while installing pydiodon, and one companion gitlab:
+
+- the online documentation, available at https://diodon.gitlabpages.inria.fr/pydiodon/
+- a directory `datasets` with some datasets which are used for tutorials
+- a directory `jupyter` with jupyter notebooks, as tutorials (currently for running PCA, CoA, MDS), see file `jupyter.md`
+- a directory `demos` with python programs which can be used as demonstrations or tutorials (currently for PCA, CoA, MDS)
+- a DSL (Domain Specific Language) written in `python`, called `diosh.py` which makes the use of `pydiodon` friendly (no line of python code to write) ; its documentation is available in file `diosh.md`. What it can do is shown in a gallery
+- the presentation of the methods, from linear algebra to pseudocodes, available at  https://arxiv.org/abs/2209.13597
+
+
+The methods are made available in C++ for very large datasets, with distributed memory, task based programming, in gitlab https://gitlab.inria.fr/diodon/cppdiodon
+
+## Overview
+
+The library provides functions to call most common linear dimension reduction methods, currently
+- PCA (Principal Component Analysis)
+- CoA (Correspondence Analysis)
+- MDS (Multidimensional Scaling)
+
+Those three can be considered as parts of the release.
+
+Other methods have been (sometimes partially only) coded too, but tests are ongoing and the result is not garanteed, like:
+- PCA-IV (PCA with Instrulental Variables, equivalent to PLS)
+- PCAmet (PCA with metrics on spaces spanned by the rows and the columns)
+
+or are currently under development for further release
+- CCA (Canonical Correlation Analysis)
+- MCoA (Multiple Correspondence Analysis)
+- MCCA (Multiple Canonical Correspondence Analysis)
+
+Finally, a few tools are available (like plotting or computing indices) to facilitate the interpretaton of the results, like:
+- plotting components for PCA or MDS, and simultaneous plotting of row and columns components for CoA
+- plotting old variables in the space spanned by new axis, for PCA
+- plotting the eigenvalues for PCA
+- plotting the quality of projection of each item on each new axis, and cumuilated values, for PCA and MDS.
+
+## Install
+
+The installation procedure is given for Linux Ubunto 20 and above. The user must have `pip` (version `pip3` ) on his/her computer, as the command `pip install [...]` will be used.
+
+Diodon is written in python 3.10. The user must have `python 3.8` or up in her/his computer. The following python scientific librairies will be used:
+- numpy
+- scipy   
+
+and, for plots:  
+- matplotlib.pyplot
+
+Installation of `pydiodon` is fairly simple. The required dependencies will be installed when installing `pydiodon`as follows (to install the last version of pydiodon from the git repository):
+
+```sh
+git clone https://gitlab.inria.fr/diodon/pydiodon.git
+pip install .
+
+```
+
+
+
+## Checking the installation
+
+To check that intallation has been succesful, open a terminal and type
+
+```sh
+# call python3 interpreter
+python3
+```
+
+Then you have access to the python interactive console, where you can type
+
+```python
+# import pydiodon as in
+>>> import pydiodon as dio
+```
+The following information should be displayed
+
+```python
+loading pydiodon - version 23.05.04
+```
+
+## Online sphinx documentation
+
+`pydiodon` has an online sphix documentation (per function) accessible at
+
+https://diodon.gitlabpages.inria.fr/pydiodon/
+
+
+## To get started ..
+
+
+Here is a simple toy example of Principal Components Analysis on a small random matrix.
+
+First, create a toy matrix:
+
+```python
+# importing library
+>>> import numpy as np # for creating the random matrix
+>>> import pydiodon as dio
+# creating a random matrix
+>>> m = 100
+>>> n = 50
+>>> A = np.random.randn(m,n)
+```
+
+Then, the diodon command to perform PCA:
+
+```python
+# running PCA
+>>> Y, L, V = dio.pca(A)
+
+# this is the command with default values; see the documentation for more options
+```
+
+Followed by a few functions for plotting the results
+
+```python
+# plotting the results
+>>> dio.plot_components_scatter(Y, dot_size=5, title="Principal components")
+>>> dio.plot_var(V, varnames=None)
+# and the quality of the results
+>>> dio.plot_eig(L, frac=True, cum=True, dot_size=20, title = "cumulated eigenvalues")
+>>> Qual_axis, Qual_cum = dio.quality(Y)
+>>> dio.plot_components_quality(Y, Qual_cum, r=2)
+```
+
+## Why another library for Linear Dimension Reduction?
+
+There exists several excellent libraries for PCA and related methods, especially in R, or some methods in Scikit-learn in python (see
+https://scikit-learn.org/stable/modules/decomposition.html#decompositions).
+
+A specific effort has been made for efficiency when analysing large datasets, and motivates the development and disseminatuon of library Diodon. The limiting factors are currently:
+- the time for I/O
+- the available RAM
+and not the calculation time. The effort has focused on computing the SVD of a given matrix, which is a key step providing the results for any method.
+
+Progresses in efficiency have been obtained through three choices, available when useful:
+- use Random projection methods for computing the SVD of a large matrix
+- bind numpy calls of functions with codes written in C++ with xxxx
+- task based programming with Chameleon (for MDS only, on HPC architectures with distributed memory)
+
+Using random projection methods is not new here. See e.g.https://scikit-learn.org/stable/modules/random_projection.html in scikit learn. In diodon, Gaussian Random Projectkon only has been implemented.   
+
+For a presentation of the methods, see    
+- A. Franc - Linear Dimensionality Reduction, _Lecture Notes in Statistics, vol 228_ Springer, 2025.   
+
+For the connection between MDS and rSVD, see
+- P. Blanchard, P. Chaumeil, J.-M. Frigerio, F. Rimet, F. Salin, S. Thérond,
+O. Coulaud, and A. Franc. A geometric view of Biodiversity: scaling to metage-
+nomics. Research Report RR-9144, INRIA ; INRA, January 2018
+
+For development of this approach with task based programming, distributed memory and chameleon, see
+- E. Agullo, O. Coulaud, A. Denis, M. Faverge, A. Franc, J.-M. Frigerio, N. Furmento, A. Guilbaud, E. Jeannot, R. Peressoni, F. Pruvost, and S. Thibault. Task-based randomized singular value decomposition and multidimensional scaling. Research Report RR-9482, Inria Bordeaux - Sud Ouest ; Inrae - BioGeCo, September 2022.
+
+
+## Datasets for tutorials
+Some small data sets are available for tutorials, demos or Jupyter notebooks for PCA, CoA and MDS.   
+
+See the documentation in file `datasets.md` 
+
+
+
+
+
+## ID card
+
+**authors:** Alain Franc & Jean-Marc Frigerio
+
+**contributors:**
+
+- Olivier Coulaud
+- Violaine Louvet
+- Romain Peressoni
+- Florent Pruvost
+
+**maintainer and contact:** Alain Franc
+
+*mail:* alain.franc@inria.fr
+
+**started:**  21/02/17
+**version:** 25.04.04
+**release:** 0.1.0
+
+**licence:** GPL-3
+
+
+
