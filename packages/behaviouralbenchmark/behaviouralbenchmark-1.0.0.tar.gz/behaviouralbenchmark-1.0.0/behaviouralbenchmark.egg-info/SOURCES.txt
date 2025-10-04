@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+behavioural_benchmark/__init__.py
+behavioural_benchmark/indicators.py
+behavioural_benchmark/mean_indicators.py
+behavioural_benchmark/network_indicators.py
+behavioural_benchmark/regression_indicators.py
+behavioural_benchmark/stn.py
+behavioural_benchmark/tst/test.py
+behavioural_benchmark/tutorials/comparison_guide_utils.py
+behaviouralbenchmark.egg-info/PKG-INFO
+behaviouralbenchmark.egg-info/SOURCES.txt
+behaviouralbenchmark.egg-info/dependency_links.txt
+behaviouralbenchmark.egg-info/requires.txt
+behaviouralbenchmark.egg-info/top_level.txt
