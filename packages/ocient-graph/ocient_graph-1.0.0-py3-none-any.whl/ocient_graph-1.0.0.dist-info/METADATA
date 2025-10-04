@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ocient_graph
+Author: Ocient Inc
+Author-email: info@ocient.com
+Home-page: https://www.ocient.com/
+License: Apache License, Version 2.0
+Description-Content-Type: text/markdown
+Summary: Ocient Graph Utilities built on top of pyocient
+Requires-Python: >=3.7,<4
+Requires-Dist: pyocient
+Version: 1.0.0
+
+# Ocient Graph
+
+The ocient_graph module provides the same operations as the Spark GraphX library,
+but for an Ocient database. Graphs are represented as tables in the database,
+with vertices and edges stored in separate tables.
+
