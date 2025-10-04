@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: webkitapipy
+Version: 0.1.0
+Summary: Tools for analyzing API and SPI usage of Mach-O binaries on Apple platforms.
+Author-email: Elliott Williams <emw@apple.com>
+License-Expression: BSD-2-Clause
+Project-URL: Homepage, https://github.com/WebKit/WebKit/tree/main/Tools/Scripts/libraries/webkitapipy
+Project-URL: Issues, https://bugs.webkit.org
+Project-URL: Repository, https://github.com/WebKit/WebKit
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: MacOS
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Provides-Extra: internal
+Requires-Dist: webkitapipy_additions; extra == "internal"
