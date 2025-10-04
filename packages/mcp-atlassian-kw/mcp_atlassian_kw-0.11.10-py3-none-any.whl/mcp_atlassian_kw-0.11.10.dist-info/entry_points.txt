@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-atlassian-kw = mcp_atlassian_kw:main
