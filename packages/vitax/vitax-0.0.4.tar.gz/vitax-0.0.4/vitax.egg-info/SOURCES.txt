@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+vitax/__init__.py
+vitax/training.py
+vitax.egg-info/PKG-INFO
+vitax.egg-info/SOURCES.txt
+vitax.egg-info/dependency_links.txt
+vitax.egg-info/requires.txt
+vitax.egg-info/top_level.txt
+vitax/models/__init__.py
+vitax/models/modeling.py
+vitax/models/vit.py
+vitax/models/vit_load_weights.py
