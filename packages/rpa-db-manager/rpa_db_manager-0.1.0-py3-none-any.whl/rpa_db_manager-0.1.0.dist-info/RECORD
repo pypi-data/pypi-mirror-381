@@ -1,0 +1,8 @@
+db_manager/__init__.py,sha256=KL9_6Pz4E99zUTIOKD0My7qZd1RQst96aKJwlKBED_0,139
+db_manager/dataframe.py,sha256=A_LkBLBzs_yjlqnPd6lWKsvEbgpn7qGcnWNlbvqfasQ,493
+db_manager/manager.py,sha256=SH3NsjESGDDAZ2MwVKU9J7eHg4XBYgLw110_42vBzz0,4155
+rpa_db_manager-0.1.0.dist-info/licenses/LICENSE,sha256=RDHgHDI4rSDq35R4CAC3npy86YUnmZ81ecO7aHfmmGA,1073
+rpa_db_manager-0.1.0.dist-info/METADATA,sha256=iSWP8tO3mIg-7W0THFA2AIvj95LQUkwgnLW_-SRghRw,9806
+rpa_db_manager-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+rpa_db_manager-0.1.0.dist-info/top_level.txt,sha256=STvwowFd4ho93UmfMTtee0jRuIaSrKgDU8JaOCa-47Y,11
+rpa_db_manager-0.1.0.dist-info/RECORD,,
