@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: literate-octo-two-cu12
+Version: 11.4.0
+Summary: Test package for RAPIDS wheel publishing
+Author: RAPIDS Team
+Author-email: rapids@nvidia.com
+Requires-Python: >=3.10
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary
