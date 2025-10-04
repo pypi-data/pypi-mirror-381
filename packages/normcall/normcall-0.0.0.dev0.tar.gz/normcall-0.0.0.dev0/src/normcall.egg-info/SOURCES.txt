@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+src/normcall/__init__.py
+src/normcall/__main__.py
+src/normcall.egg-info/PKG-INFO
+src/normcall.egg-info/SOURCES.txt
+src/normcall.egg-info/dependency_links.txt
+src/normcall.egg-info/top_level.txt
+src/normcall/core/__init__.py
+src/normcall/tests/__init__.py
+src/normcall/tests/test_1984.py
