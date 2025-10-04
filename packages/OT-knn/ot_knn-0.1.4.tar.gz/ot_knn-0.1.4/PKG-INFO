@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: OT_knn
+Version: 0.1.4
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: scanpy
+Requires-Dist: pandas
+Requires-Dist: pot
+Requires-Dist: anndata
+Dynamic: requires-dist
+Dynamic: requires-python
