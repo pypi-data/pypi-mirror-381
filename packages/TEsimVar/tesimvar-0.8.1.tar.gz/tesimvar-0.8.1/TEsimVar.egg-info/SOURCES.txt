@@ -1,0 +1,16 @@
+LICENSE
+setup.py
+TEsimVar/TE_real.py
+TEsimVar/TEpan.py
+TEsimVar/__init__.py
+TEsimVar/__main__.py
+TEsimVar/build_pool.py
+TEsimVar/compare_vcf.py
+TEsimVar/reads.py
+TEsimVar/simulate.py
+TEsimVar.egg-info/PKG-INFO
+TEsimVar.egg-info/SOURCES.txt
+TEsimVar.egg-info/dependency_links.txt
+TEsimVar.egg-info/entry_points.txt
+TEsimVar.egg-info/requires.txt
+TEsimVar.egg-info/top_level.txt
