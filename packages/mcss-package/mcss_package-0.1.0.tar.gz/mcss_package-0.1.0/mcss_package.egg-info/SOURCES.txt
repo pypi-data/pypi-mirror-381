@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mcss_package/__init__.py
+mcss_package/alignment.py
+mcss_package/clustering.py
+mcss_package/config.py
+mcss_package/runner.py
+mcss_package.egg-info/PKG-INFO
+mcss_package.egg-info/SOURCES.txt
+mcss_package.egg-info/dependency_links.txt
+mcss_package.egg-info/requires.txt
+mcss_package.egg-info/top_level.txt
