@@ -1,0 +1,11 @@
+[console_scripts]
+download_data_files = pyuvsim.cli:download_data_files
+download_ref_sims = pyuvsim.cli:download_ref_sims
+im_to_catalog = pyuvsim.cli:im_to_catalog
+plot_csv_antpos = pyuvsim.cli:plot_csv_antpos
+run_param_pyuvsim = pyuvsim.cli:run_param_pyuvsim
+run_pyuvsim = pyuvsim.cli:run_pyuvsim
+run_ref_sim = pyuvsim.cli:run_ref_sim
+text_to_catalog = pyuvsim.cli:text_to_catalog
+uvdata_to_config = pyuvsim.cli:uvdata_to_config
+uvdata_to_telescope_config = pyuvsim.cli:uvdata_to_telescope_config
