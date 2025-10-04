@@ -1,0 +1,11 @@
+mm_test_adapters/__init__.py,sha256=5KAFhKTI58BhELgWOOMC6WZS4VDb0KpoXeySxsll8pg,458
+mm_test_adapters/version.py,sha256=_zHE2FKdLVsErFpU9kghDQ5FJZ21V3vdrkPmJ9jR9Es,118
+mm_test_adapters/libs/MMConfig_demo.cfg,sha256=kWvAlJjInM-FMUcdVYyZ5aTU97oRcvcVAmcC5lJ0M-Y,6258
+mm_test_adapters/libs/libmmgr_dal_DemoCamera.so.0,sha256=aVUSh9B475shwLN3X1PR0b9yF2lGvjUnXgyPW8sebdw,942688
+mm_test_adapters/libs/libmmgr_dal_NotificationTester.so.0,sha256=yKdAzNo3gdxxgz23euTFI-sv8_ejFO7j18aquiIIF6M,448496
+mm_test_adapters/libs/libmmgr_dal_SequenceTester.so.0,sha256=A0cayx4gE6QXg4sBDuIKLan6E1NKiCStOE5qxTJLwJU,958056
+mm_test_adapters/libs/libmmgr_dal_Utilities.so.0,sha256=eSEuqy6ahTbA5rzF7GHQCK4_N3GqCfg1X8bkNzGC0k8,1250096
+mm_test_adapters-74.20251003.dist-info/METADATA,sha256=I7lgH59hJ9Fbp1OhOwz5quYlj7sEAkDA_JIqeJk9UQ0,2876
+mm_test_adapters-74.20251003.dist-info/WHEEL,sha256=BLUZmkyzQmLarBLURbJ2BpyKfHeOqUj-d0GPhJysbBQ,146
+mm_test_adapters-74.20251003.dist-info/top_level.txt,sha256=6BD3ZIO5GEZjANHZd5lyY2hZa_bwKTzYC68qVu3oYuo,17
+mm_test_adapters-74.20251003.dist-info/RECORD,,
