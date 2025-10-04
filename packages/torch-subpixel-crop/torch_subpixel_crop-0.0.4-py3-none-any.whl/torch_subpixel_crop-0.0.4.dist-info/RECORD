@@ -1,0 +1,9 @@
+torch_subpixel_crop/__init__.py,sha256=18MpoJ_bcdp6H0pGGk34vv4gpBGwwmZ66BWeZ2NGi8c,402
+torch_subpixel_crop/dft_utils.py,sha256=rDPenaVGtW5jvId_Ka5NJAQW1FXEKw43Sraux6riLZk,905
+torch_subpixel_crop/grid_sample_utils.py,sha256=uhC7Zo4UnfTeK3POv9boPQUzTDWsZ8_vbL9Xeie2o5E,1859
+torch_subpixel_crop/subpixel_crop_2d.py,sha256=ZYNsz-c0OOCXzUs-77S1Bnut9mC5RtylvsbEt3PZOgw,3948
+torch_subpixel_crop/subpixel_crop_3d.py,sha256=LORgMQkhUs87px_3Ncew9WWfn0Z5rUDUalYPCPHAHuo,2595
+torch_subpixel_crop-0.0.4.dist-info/METADATA,sha256=8endMqbtyCiENlPmpPmRGaONLr6X_h0D6r4yfXAVC98,2027
+torch_subpixel_crop-0.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+torch_subpixel_crop-0.0.4.dist-info/licenses/LICENSE,sha256=Kbo_h3sPum8rDAhMerH9fl4hzFn-QUCekJf05zk2epY,1499
+torch_subpixel_crop-0.0.4.dist-info/RECORD,,
