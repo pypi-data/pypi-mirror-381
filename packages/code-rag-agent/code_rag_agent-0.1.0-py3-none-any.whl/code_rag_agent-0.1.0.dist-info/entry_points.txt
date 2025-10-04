@@ -1,0 +1,2 @@
+[console_scripts]
+code-rag-agent = code_rag_agent.cli:main
