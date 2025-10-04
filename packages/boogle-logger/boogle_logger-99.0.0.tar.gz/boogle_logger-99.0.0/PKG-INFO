@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: boogle_logger
+Version: 99.0.0
+Summary: Dependency Confusion Attack Demo
+Author: Attacker
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: requires-python
+Dynamic: summary
