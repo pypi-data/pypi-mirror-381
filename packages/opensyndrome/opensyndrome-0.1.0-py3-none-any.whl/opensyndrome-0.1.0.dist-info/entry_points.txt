@@ -1,0 +1,2 @@
+[console_scripts]
+osi = opensyndrome.cli:main

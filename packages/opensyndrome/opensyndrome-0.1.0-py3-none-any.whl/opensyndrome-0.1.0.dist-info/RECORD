@@ -1,0 +1,11 @@
+opensyndrome/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opensyndrome/cli.py,sha256=pe2nzfgyQLD9DIkyjJjbBzS6S2G1BwmbUKztGcdK1Zw,4688
+opensyndrome/converters.py,sha256=2rk3aOGRMYzbmypU2Y0CoXmJakapzJXbYffcYVkn6Qk,6574
+opensyndrome/filtering.py,sha256=kFsU6o7CmdkQpN8YAjK_pQZAENWSY8ju65q8rQAJMCY,5062
+opensyndrome/schema.py,sha256=EocDXhU9i5VzYN7saKNb2rkMQUqq0ocvmqrTaFDanxE,8740
+opensyndrome/to_be_updated__schema.py,sha256=brBZAFAmMNPsBAgbFfrPbsq30voNgaSdzojaG1hJ0jA,12224
+opensyndrome/validators.py,sha256=27RZEVdJ8hKSSlM3onuGcB0we9SIfQS_jII9tzONzE4,712
+opensyndrome-0.1.0.dist-info/METADATA,sha256=qdGO3JcahRYuzickmBkVkXJOqMVw6IQbfR7KL9PbPbA,3798
+opensyndrome-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+opensyndrome-0.1.0.dist-info/entry_points.txt,sha256=cSqTl-poraaiq-B3Waxw8e7aIOsLgZx0rGv9ApKceH0,46
+opensyndrome-0.1.0.dist-info/RECORD,,
