@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: dockwershell
+Version: 0.6.1
+Summary: 
+License: MIT
+License-File: LICENSE
+Author: Miles Copeland Luce
+Requires-Python: >=3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Dist: pywershell (>=0.3.11,<0.4.0)
