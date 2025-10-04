@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling", "uv-dynamic-versioning>=0.7.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "optimization_test_functions"
+description = "Provides access to test functions from nevergrad often used to test optimization algorithms"
+dynamic = ["version"]
+dependencies = [
+    "nevergrad"
+]
+
+[tool.hatch.build]
+# Include the full namespace path
+include = [
+    "ado_actuators/optimization_test_functions/**",
+]
+
+[tool.hatch.build.targets.wheel]
+only-include = [
+    "ado_actuators/optimization_test_functions"
+]
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
+[tool.uv-dynamic-versioning]
+vcs = "git"
+style = "pep440"
+pattern = "default-unprefixed"
+fallback-version = "0.0.0"
+tagged-metadata = true
+dirty = true
+bump = true
