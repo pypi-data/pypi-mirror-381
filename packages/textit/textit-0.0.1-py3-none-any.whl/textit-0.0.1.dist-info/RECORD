@@ -1,0 +1,11 @@
+textit/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+textit/_modidx.py,sha256=9sBeDIZT_2AjtAeKs2XarEVe7oDbbWcDWsW9U6cbjK0,1315
+textit/core.py,sha256=vgAVyd56yPQAze4MqWepdNyyzPhtSZpXi9DXojHSsMw,3396
+textit/apps/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+textit/apps/clock.py,sha256=OsAnrWGgmRswLx6gPzCW5B9-Lx4bBGJRQ4O1uDCrMw8,1221
+textit-0.0.1.dist-info/licenses/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+textit-0.0.1.dist-info/METADATA,sha256=DEuaKY3EBIbYsYFGSUdggKkbJmOCIgy8-CwxPCDecuI,2274
+textit-0.0.1.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+textit-0.0.1.dist-info/entry_points.txt,sha256=Cdnxs6wafFBKAIQCeQ_npCCpLjWxuFZtlMaMzWclt2Q,34
+textit-0.0.1.dist-info/top_level.txt,sha256=gd7Oaz5O4s6Q_SHy6gZVsdJSk0QhSsBzDtJBMkFqRRk,7
+textit-0.0.1.dist-info/RECORD,,
