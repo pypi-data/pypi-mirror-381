@@ -1,0 +1,6 @@
+libzrod/__init__.py,sha256=dQGQ4FG6EcnrTfhfBcWe0YNwBq_nFOs8NmuNODeHt-8,584
+libzrod/_libzrod.py,sha256=CqZfssOJ_84S5iStWwISr_Lru0Q8XMrw0kFgeSBU8S4,34364
+libzrod/libzrod.cp38-win_amd64.pyd,sha256=Ve9B3_NHpFc9EI6ASQEEh3EzvBsMan8ZnckPD8Fg0LY,6004736
+libzrod-0.1.20.dist-info/METADATA,sha256=1dCneUbUmswL3Tdwzg8lZ1BizVjmGH8ORMJjTTHJ2Hk,1979
+libzrod-0.1.20.dist-info/WHEEL,sha256=7cuQBrKlgrMjywT6nmSZIIhuOog1xNCTkMyVVbw2aow,103
+libzrod-0.1.20.dist-info/RECORD,,
