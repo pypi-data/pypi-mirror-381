@@ -1,0 +1,6 @@
+{
+  "resource": true,
+  "name": "grafana",
+  "version": "2.6.0-alpha.1759503730",
+  "server": "github://api.github.com/pulumiverse"
+}
