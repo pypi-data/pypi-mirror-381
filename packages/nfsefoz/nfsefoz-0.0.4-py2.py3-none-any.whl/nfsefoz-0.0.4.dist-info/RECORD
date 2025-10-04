@@ -1,0 +1,9 @@
+nfsefoz/__init__.py,sha256=nkoxIjB9jMFabEnp5seg6BbR5UmULQ7WOQLZS1WGiX8,1690
+nfsefoz/client.py,sha256=DsXD64HVfI5FxAnUfotIfAGTGYmNDMyCT6iv0g_9sbk,50325
+nfsefoz/utils.py,sha256=z1DxTtorK75OKZJmrWEigsw2PM3TA2L3G6YuedvTiQY,1598
+nfsefoz/xml.py,sha256=ywwbf9dhhOqzNdwnp39a-H-w_ts8czO5-w6F6qoy_QM,9821
+nfsefoz-0.0.4.dist-info/licenses/LICENSE,sha256=Pd-b5cKP4n2tFDpdx27qJSIq0d1ok0oEcGTlbtL6QMU,11560
+nfsefoz-0.0.4.dist-info/METADATA,sha256=1HXLBEcUanw7yk_W3adRAIBYR02io0sDHA-26st4YJE,18051
+nfsefoz-0.0.4.dist-info/WHEEL,sha256=JNWh1Fm1UdwIQV075glCn4MVuCRs0sotJIq-J6rbxCU,109
+nfsefoz-0.0.4.dist-info/top_level.txt,sha256=6hwtOxHKzxEPd_n16d4nLLTUzNr8WimfEW0r_SqHLws,8
+nfsefoz-0.0.4.dist-info/RECORD,,
