@@ -1,0 +1,5 @@
+[console_scripts]
+context-ingest = resume_ui.ingest_cli:main
+context-ui = resume_ui.cli:main
+context-upsert = resume_ui.upsert_cli:main
+resume-ui = resume_ui.cli:main
