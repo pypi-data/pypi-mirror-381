@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "question": "What is the output of print(type([]))?",
+        "options": ["A) <class 'list'>", "B) <class 'tuple'>", "C) <class 'dict'>", "D) <class 'set'>"],
+        "answer": "A",
+        "explanation": "Lists are built-in Python types."
+    },
+    {
+        "id": 2,
+        "question": "Which keyword is used to define a function in Python?",
+        "options": ["A) func", "B) def", "C) lambda", "D) define"],
+        "answer": "B",
+        "explanation": "The `def` keyword defines a function."
+    },
+    {
+        "id": 3,
+        "question": "Which operator is used for exponentiation in Python?",
+        "options": ["A) ^", "B) **", "C) //", "D) %"],
+        "answer": "B",
+        "explanation": "`**` is the exponentiation operator."
+    }
+]
