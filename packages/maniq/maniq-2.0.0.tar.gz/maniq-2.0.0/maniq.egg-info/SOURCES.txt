@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+maniq/__init__.py
+maniq/__main__.py
+maniq/cli.py
+maniq.egg-info/PKG-INFO
+maniq.egg-info/SOURCES.txt
+maniq.egg-info/dependency_links.txt
+maniq.egg-info/entry_points.txt
+maniq.egg-info/requires.txt
+maniq.egg-info/top_level.txt
