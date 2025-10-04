@@ -1,0 +1,3 @@
+[console_scripts]
+dq_dashboard = dq_tester.dashboard:run_dashboard
+dq_tester = dq_tester.cli:main
