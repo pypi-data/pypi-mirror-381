@@ -1,0 +1,15 @@
+pywershell/.deprecated/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pywershell/.deprecated/deprecated_init.py,sha256=BujoBroix29gFHl6HLt-__ZJqqG57VOBVVYp9cXkR_M,154
+pywershell/.deprecated/pywershell.ps1,sha256=EtdkD7pXaf55MkXI9TNd_vmcfQqd6K1ANCMd5K1uxFM,5495
+pywershell/.deprecated/pywersl.py,sha256=BTWTvvqroEAH-JbUCs6ViTGH0Fek0jagQ24hg4oXHmU,2825
+pywershell/.wip/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pywershell/.wip/async_type.py,sha256=yVws3Ik-8ybhqyo3duYdQgs_zPFtLn0sigG-UyBr5qk,7453
+pywershell/__init__.py,sha256=V-TCoAeDOwQw2whXNErEnFRrfKQmiFHYzslIVv1MKaU,53
+pywershell/pkg_wsl/__init__.py,sha256=0BFxeIA_DbIQz5w4R0U7qMFXzOQpgmqgBLKlbiK46LM,56
+pywershell/pkg_wsl/mod_debian.py,sha256=VJRlm_1x4tPTPFtndVohOFaMokKg7bxMotgtgC6FMbo,336
+pywershell/pkg_wsl/mod_util.py,sha256=7pML2-wr4HH3b4XzP5BE3cZqveDWYoOMzV8iCGUmLi4,737
+pywershell/pkg_wsl/mod_wsl.py,sha256=SPChCTz5IwZ-3-ulSdYatjR9prOjzHefehGnIMc3BtQ,3582
+pywershell-0.3.11.dist-info/licenses/LICENSE,sha256=2_3UIphdCSzB4N2Ytlp2wo9L28MGeN-glSIayfgyyEY,495
+pywershell-0.3.11.dist-info/METADATA,sha256=ykQNa04TOEARfymiV65oRi-TUlH2-KgwJ65WV97xaBg,785
+pywershell-0.3.11.dist-info/WHEEL,sha256=zp0Cn7JsFoX2ATtOhtaFYIiE2rmFAD4OcMhtUki8W3U,88
+pywershell-0.3.11.dist-info/RECORD,,

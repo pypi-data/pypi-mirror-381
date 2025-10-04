@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: pywershell
+Version: 0.3.11
+Summary: 
+License-File: LICENSE
+Author: Miles Copeland Luce
+Requires-Python: >=3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Description-Content-Type: text/markdown
+
+<!-- README.md -->
+# Pywershell
+
+Async PowerShell session manager for Python.
+
+## Install
+
+```python
+import asyncio
+from pywershell import PywershellLive
+
+
+async def main():
+    shell = await PywershellLive(verbose=True)
+    # Run a command and await its completion
+    result = await shell.run("Get-Process | Select-Object -First 5")
+    print("Exit code:", result.code)
+    print("Output:", result.str)
+    await shell.close()
+
+
+asyncio.run(main())
+```
