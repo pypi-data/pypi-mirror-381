@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+nfsefoz/__init__.py
+nfsefoz/client.py
+nfsefoz/utils.py
+nfsefoz/xml.py
+nfsefoz.egg-info/PKG-INFO
+nfsefoz.egg-info/SOURCES.txt
+nfsefoz.egg-info/dependency_links.txt
+nfsefoz.egg-info/not-zip-safe
+nfsefoz.egg-info/requires.txt
+nfsefoz.egg-info/top_level.txt
