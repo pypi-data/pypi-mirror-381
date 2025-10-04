@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: calculadora-simples-seu-nome
+Version: 0.1.0
+Summary: Um pacote simples para operações matemáticas básicas.
+Home-page: https://github.com/SeuUsuario/calculadora_simples_project
+Author: Seu Nome Aqui
+Author-email: seu.email@exemplo.com
+Requires-Python: >=3.8
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
