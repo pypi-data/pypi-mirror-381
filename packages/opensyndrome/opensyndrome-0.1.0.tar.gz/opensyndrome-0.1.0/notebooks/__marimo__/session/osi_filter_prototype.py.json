@@ -1,0 +1,287 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.14.13"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "2d40b144376f2ba7deeffe43b7763532",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "6083169412027d8ce39519f2006372ec",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "8334ea7dba97b6f91096dda77f80e1d1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "7e740a0abdaf5e0548280afabc24a033",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "47a9c02f23bdd8208d423b60953b1bc2",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><h1 id=\"open-syndrome-definition\">Open Syndrome Definition \ud83d\udc69\ud83c\udffd\u200d\ud83d\udd2c</h1></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "f90b342e4a3881b5e2c313f4295ace88",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-callout-output data-html='&quot;&lt;span&gt;This is a prototype of how to filter your data using definitions from the Open Syndrome Initiative.&lt;/span&gt;&quot;' data-kind='&quot;neutral&quot;'></marimo-callout-output>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "ac65fd6ebc942de9f5df0cf9ad733ca9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "bc0b4fca462fae5a45d4b68926b00d88",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='SFPL-0' random-id='22a95ee9-6323-ba14-d7d4-eadcdf8d44b6'><marimo-file data-initial-value='[]' data-label='null' data-filetypes='[&quot;.csv&quot;]' data-multiple='false' data-kind='&quot;area&quot;' data-max_size='100000000'></marimo-file></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "efde46c27cb8c6f0aeb9ac4fc7b28203",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "ce8de1afdc70f7fa9ab7ce26b273f5b0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "7ad6b4214f01b480e78e44d9fd242763",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert\"><h3 id=\"data\"><strong>Data</strong></h3></span><marimo-ui-element object-id='Kclp-0' random-id='25b4bd80-2b7a-153c-c511-f696dd48468e'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;_marimo_row_id&#92;&quot;:0,&#92;&quot;ANO&#92;&quot;:2019,&#92;&quot;SEMANA&#92;&quot;:17,&#92;&quot;SG_UF&#92;&quot;:&#92;&quot;AM&#92;&quot;,&#92;&quot;CO_MUNICIPIO_IBGE&#92;&quot;:130260,&#92;&quot;CIDCIAP&#92;&quot;:&#92;&quot;CIAP(A92)&#92;&quot;,&#92;&quot;QT&#92;&quot;:1,&#92;&quot;code_type&#92;&quot;:&#92;&quot;CIAP&#92;&quot;,&#92;&quot;code&#92;&quot;:&#92;&quot;A92&#92;&quot;,&#92;&quot;date&#92;&quot;:&#92;&quot;2019-04-01&#92;&quot;,&#92;&quot;region&#92;&quot;:&#92;&quot;north&#92;&quot;},{&#92;&quot;_marimo_row_id&#92;&quot;:1,&#92;&quot;ANO&#92;&quot;:2016,&#92;&quot;SEMANA&#92;&quot;:27,&#92;&quot;SG_UF&#92;&quot;:&#92;&quot;AM&#92;&quot;,&#92;&quot;CO_MUNICIPIO_IBGE&#92;&quot;:130260,&#92;&quot;CIDCIAP&#92;&quot;:&#92;&quot;CID(B359)&#92;&quot;,&#92;&quot;QT&#92;&quot;:1,&#92;&quot;code_type&#92;&quot;:&#92;&quot;CID&#92;&quot;,&#92;&quot;code&#92;&quot;:&#92;&quot;B359&#92;&quot;,&#92;&quot;date&#92;&quot;:&#92;&quot;2016-07-01&#92;&quot;,&#92;&quot;region&#92;&quot;:&#92;&quot;north&#92;&quot;},{&#92;&quot;_marimo_row_id&#92;&quot;:2,&#92;&quot;ANO&#92;&quot;:2024,&#92;&quot;SEMANA&#92;&quot;:34,&#92;&quot;SG_UF&#92;&quot;:&#92;&quot;BA&#92;&quot;,&#92;&quot;CO_MUNICIPIO_IBGE&#92;&quot;:292740,&#92;&quot;CIDCIAP&#92;&quot;:&#92;&quot;CIAP(A99)&#92;&quot;,&#92;&quot;QT&#92;&quot;:9,&#92;&quot;code_type&#92;&quot;:&#92;&quot;CIAP&#92;&quot;,&#92;&quot;code&#92;&quot;:&#92;&quot;A99&#92;&quot;,&#92;&quot;date&#92;&quot;:&#92;&quot;2024-08-01&#92;&quot;,&#92;&quot;region&#92;&quot;:&#92;&quot;northeast&#92;&quot;},{&#92;&quot;_marimo_row_id&#92;&quot;:3,&#92;&quot;ANO&#92;&quot;:2020,&#92;&quot;SEMANA&#92;&quot;:42,&#92;&quot;SG_UF&#92;&quot;:&#92;&quot;DF&#92;&quot;,&#92;&quot;CO_MUNICIPIO_IBGE&#92;&quot;:530010,&#92;&quot;CIDCIAP&#92;&quot;:&#92;&quot;CID(M54)&#92;&quot;,&#92;&quot;QT&#92;&quot;:1,&#92;&quot;code_type&#92;&quot;:&#92;&quot;CID&#92;&quot;,&#92;&quot;code&#92;&quot;:&#92;&quot;M54&#92;&quot;,&#92;&quot;date&#92;&quot;:&#92;&quot;2020-10-01&#92;&quot;,&#92;&quot;region&#92;&quot;:&#92;&quot;central-west&#92;&quot;},{&#92;&quot;_marimo_row_id&#92;&quot;:4,&#92;&quot;ANO&#92;&quot;:2020,&#92;&quot;SEMANA&#92;&quot;:26,&#92;&quot;SG_UF&#92;&quot;:&#92;&quot;GO&#92;&quot;,&#92;&quot;CO_MUNICIPIO_IBGE&#92;&quot;:520110,&#92;&quot;CIDCIAP&#92;&quot;:&#92;&quot;CID(K529)&#92;&quot;,&#92;&quot;QT&#92;&quot;:1,&#92;&quot;code_type&#92;&quot;:&#92;&quot;CID&#92;&quot;,&#92;&quot;code&#92;&quot;:&#92;&quot;K529&#92;&quot;,&#92;&quot;date&#92;&quot;:&#92;&quot;2020-06-01&#92;&quot;,&#92;&quot;region&#92;&quot;:&#92;&quot;central-west&#92;&quot;},{&#92;&quot;_marimo_row_id&#92;&quot;:5,&#92;&quot;ANO&#92;&quot;:2023,&#92;&quot;SEMANA&#92;&quot;:26,&#92;&quot;SG_UF&#92;&quot;:&#92;&quot;RS&#92;&quot;,&#92;&quot;CO_MUNICIPIO_IBGE&#92;&quot;:431490,&#92;&quot;CIDCIAP&#92;&quot;:&#92;&quot;CIAP(K86)&#92;&quot;,&#92;&quot;QT&#92;&quot;:1,&#92;&quot;code_type&#92;&quot;:&#92;&quot;CIAP&#92;&quot;,&#92;&quot;code&#92;&quot;:&#92;&quot;K86&#92;&quot;,&#92;&quot;date&#92;&quot;:&#92;&quot;2023-06-01&#92;&quot;,&#92;&quot;region&#92;&quot;:&#92;&quot;south&#92;&quot;},{&#92;&quot;_marimo_row_id&#92;&quot;:6,&#92;&quot;ANO&#92;&quot;:2021,&#92;&quot;SEMANA&#92;&quot;:35,&#92;&quot;SG_UF&#92;&quot;:&#92;&quot;MG&#92;&quot;,&#92;&quot;CO_MUNICIPIO_IBGE&#92;&quot;:310620,&#92;&quot;CIDCIAP&#92;&quot;:&#92;&quot;AB(ABP010)&#92;&quot;,&#92;&quot;QT&#92;&quot;:1,&#92;&quot;code_type&#92;&quot;:&#92;&quot;AB&#92;&quot;,&#92;&quot;code&#92;&quot;:&#92;&quot;ABP010&#92;&quot;,&#92;&quot;date&#92;&quot;:&#92;&quot;2021-08-01&#92;&quot;,&#92;&quot;region&#92;&quot;:&#92;&quot;southeast&#92;&quot;},{&#92;&quot;_marimo_row_id&#92;&quot;:7,&#92;&quot;ANO&#92;&quot;:2023,&#92;&quot;SEMANA&#92;&quot;:23,&#92;&quot;SG_UF&#92;&quot;:&#92;&quot;RS&#92;&quot;,&#92;&quot;CO_MUNICIPIO_IBGE&#92;&quot;:431490,&#92;&quot;CIDCIAP&#92;&quot;:&#92;&quot;CID(M755)&#92;&quot;,&#92;&quot;QT&#92;&quot;:1,&#92;&quot;code_type&#92;&quot;:&#92;&quot;CID&#92;&quot;,&#92;&quot;code&#92;&quot;:&#92;&quot;M755&#92;&quot;,&#92;&quot;date&#92;&quot;:&#92;&quot;2023-06-01&#92;&quot;,&#92;&quot;region&#92;&quot;:&#92;&quot;south&#92;&quot;},{&#92;&quot;_marimo_row_id&#92;&quot;:8,&#92;&quot;ANO&#92;&quot;:2019,&#92;&quot;SEMANA&#92;&quot;:2,&#92;&quot;SG_UF&#92;&quot;:&#92;&quot;MG&#92;&quot;,&#92;&quot;CO_MUNICIPIO_IBGE&#92;&quot;:310620,&#92;&quot;CIDCIAP&#92;&quot;:&#92;&quot;CID(J310)&#92;&quot;,&#92;&quot;QT&#92;&quot;:1,&#92;&quot;code_type&#92;&quot;:&#92;&quot;CID&#92;&quot;,&#92;&quot;code&#92;&quot;:&#92;&quot;J310&#92;&quot;,&#92;&quot;date&#92;&quot;:&#92;&quot;2019-01-01&#92;&quot;,&#92;&quot;region&#92;&quot;:&#92;&quot;southeast&#92;&quot;},{&#92;&quot;_marimo_row_id&#92;&quot;:9,&#92;&quot;ANO&#92;&quot;:2023,&#92;&quot;SEMANA&#92;&quot;:42,&#92;&quot;SG_UF&#92;&quot;:&#92;&quot;MG&#92;&quot;,&#92;&quot;CO_MUNICIPIO_IBGE&#92;&quot;:310620,&#92;&quot;CIDCIAP&#92;&quot;:&#92;&quot;CID(I01)&#92;&quot;,&#92;&quot;QT&#92;&quot;:1,&#92;&quot;code_type&#92;&quot;:&#92;&quot;CID&#92;&quot;,&#92;&quot;code&#92;&quot;:&#92;&quot;I01&#92;&quot;,&#92;&quot;date&#92;&quot;:&#92;&quot;2023-10-01&#92;&quot;,&#92;&quot;region&#92;&quot;:&#92;&quot;southeast&#92;&quot;}]&quot;' data-total-rows='100000' data-total-columns='10' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;ANO&quot;, [&quot;integer&quot;, &quot;i64&quot;]], [&quot;SEMANA&quot;, [&quot;integer&quot;, &quot;i64&quot;]], [&quot;SG_UF&quot;, [&quot;string&quot;, &quot;str&quot;]], [&quot;CO_MUNICIPIO_IBGE&quot;, [&quot;integer&quot;, &quot;i64&quot;]], [&quot;CIDCIAP&quot;, [&quot;string&quot;, &quot;str&quot;]], [&quot;QT&quot;, [&quot;integer&quot;, &quot;i64&quot;]], [&quot;code_type&quot;, [&quot;string&quot;, &quot;str&quot;]], [&quot;code&quot;, [&quot;string&quot;, &quot;str&quot;]], [&quot;date&quot;, [&quot;string&quot;, &quot;str&quot;]], [&quot;region&quot;, [&quot;string&quot;, &quot;str&quot;]]]' data-selection='&quot;multi&quot;' data-show-filters='true' data-show-download='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='true' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element><marimo-accordion data-labels='[&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Mapping configuration&lt;/span&gt;&lt;/span&gt;&quot;]' data-multiple='false'><div><marimo-ui-element object-id='Xref-11' random-id='88169453-e93c-2a6b-958a-af1293169ba4'><marimo-form data-initial-value='null' data-label='null' data-element-id='&quot;Xref-10&quot;' data-loading='false' data-bordered='true' data-submit-button-label='&quot;Submit&quot;' data-submit-button-disabled='false' data-clear-on-submit='false' data-show-clear-button='false' data-clear-button-label='&quot;Clear&quot;' data-should-validate='false'><marimo-ui-element object-id='Xref-10' random-id='983b481c-1cf2-dfce-cd26-5976ed1e7903'><marimo-dict data-initial-value='{&quot;date_column&quot;: &quot;&quot;, &quot;code_column&quot;: &quot;&quot;, &quot;mapping&quot;: &quot;[&#92;n  {&#92;n    &#92;&quot;system&#92;&quot;: &#92;&quot;CID 10&#92;&quot;,&#92;n    &#92;&quot;code&#92;&quot;: &#92;&quot;icd_code&#92;&quot;&#92;n  },&#92;n  {&#92;n    &#92;&quot;system&#92;&quot;: &#92;&quot;ICD-10&#92;&quot;,&#92;n    &#92;&quot;code&#92;&quot;: &#92;&quot;icd_code&#92;&quot;&#92;n  },&#92;n  {&#92;n    &#92;&quot;system&#92;&quot;: &#92;&quot;CID&#92;&quot;,&#92;n    &#92;&quot;code&#92;&quot;: &#92;&quot;icd_code&#92;&quot;&#92;n  }&#92;n]&quot;}' data-label='null' data-element-ids='{&quot;Xref-7&quot;: &quot;date_column&quot;, &quot;Xref-8&quot;: &quot;code_column&quot;, &quot;Xref-9&quot;: &quot;mapping&quot;}'><span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\"><marimo-ui-element object-id='Xref-7' random-id='162aa172-dd30-7f0f-b4f2-1058d6304fec'><marimo-text data-initial-value='&quot;&quot;' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Datetime column&lt;/span&gt;&lt;/span&gt;&quot;' data-placeholder='&quot;recording_ts&quot;' data-kind='&quot;text&quot;' data-full-width='false' data-disabled='false' data-debounce='true'></marimo-text></marimo-ui-element></span>\n<span class=\"paragraph\"><marimo-ui-element object-id='Xref-8' random-id='842295b2-afa3-2508-bc3b-27c54b7aaccd'><marimo-text data-initial-value='&quot;&quot;' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Diagnosis code column&lt;/span&gt;&lt;/span&gt;&quot;' data-placeholder='&quot;icd_code&quot;' data-kind='&quot;text&quot;' data-full-width='false' data-disabled='false' data-debounce='true'></marimo-text></marimo-ui-element></span>\n<span class=\"paragraph\"><marimo-ui-element object-id='Xref-9' random-id='86a2095c-4426-b462-e9ee-548827c22afd'><marimo-code-editor data-initial-value='&quot;[&#92;n  {&#92;n    &#92;&quot;system&#92;&quot;: &#92;&quot;CID 10&#92;&quot;,&#92;n    &#92;&quot;code&#92;&quot;: &#92;&quot;icd_code&#92;&quot;&#92;n  },&#92;n  {&#92;n    &#92;&quot;system&#92;&quot;: &#92;&quot;ICD-10&#92;&quot;,&#92;n    &#92;&quot;code&#92;&quot;: &#92;&quot;icd_code&#92;&quot;&#92;n  },&#92;n  {&#92;n    &#92;&quot;system&#92;&quot;: &#92;&quot;CID&#92;&quot;,&#92;n    &#92;&quot;code&#92;&quot;: &#92;&quot;icd_code&#92;&quot;&#92;n  }&#92;n]&quot;' data-label='null' data-language='&quot;javascript&quot;' data-placeholder='&quot;&quot;' data-disabled='false' data-show-copy-button='true' data-debounce='false'></marimo-code-editor></marimo-ui-element></span></span></marimo-dict></marimo-ui-element></marimo-form></marimo-ui-element></div></marimo-accordion></div>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "49e9b89864d6e8171d542dd952f57381",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "0c810806514c637359dd2cacec544c39",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "218c7731696c7eb8fe2beb6397f88d06",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "7ceade6a4e957efdf46ca8cc035e8b15",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "f51ef8316cad418d297a3d70280cb66e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: row;justify-content: space-between;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\"><strong><iconify-icon icon=\"lucide:filter\" inline=\"\"></iconify-icon> Filters:</strong></span></span><marimo-ui-element object-id='nWHF-0' random-id='e8556d72-e3c1-abd5-3892-11ca2dbb05ae'><marimo-multiselect data-initial-value='[]' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Select Syndromic Indicators&lt;/span&gt;&lt;/span&gt;&quot;' data-options='[&quot;arbovirosis_aesop_brazil_sd&quot;, &quot;arbovirosis_aesop_brazil_sd_with_like&quot;, &quot;arbovirosis_paraguay_sd&quot;, &quot;covid_brazil_sd&quot;, &quot;dengue_usa&quot;, &quot;extremetemperaturescold_argentina&quot;, &quot;extremetemperaturesheat_argentina&quot;, &quot;smallpox_costarica&quot;, &quot;syphiliscongenitalandneonatal_greece&quot;, &quot;uri_aesop_brazil_sd&quot;, &quot;zika_paho&quot;]' data-full-width='false'></marimo-multiselect></marimo-ui-element></div>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "6316d171a7609aa83fb097b8830d33cd",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "marimo came across the undefined variable `mapping` during runtime. Definition expected in cell : ",
+          "traceback": []
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;/Users/Gomes-FerreiraA-Dev/workspace/osi-python/.venv/lib/python3.13/site-packages/marimo/_runtime/executor.py&quot;</span>, line <span class=\"m\">138</span>, in <span class=\"n\">execute_cell</span>\n<span class=\"w\">    </span><span class=\"n\">exec</span><span class=\"p\">(</span><span class=\"n\">cell</span><span class=\"o\">.</span><span class=\"n\">body</span><span class=\"p\">,</span> <span class=\"n\">glbls</span><span class=\"p\">)</span>\n<span class=\"w\">    </span><span class=\"pm\">~~~~^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/var/folders/p0/0hqzynfj21zb2ybr_l6r63tr0000gp/T/marimo_93918/__marimo__cell_ROlb_.py&quot;</span>, line <span class=\"m\">5</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"ow\">or</span> <span class=\"n\">mapping</span> <span class=\"ow\">is</span> <span class=\"kc\">None</span>\n<span class=\"w\">       </span><span class=\"pm\">^^^^^^^</span>\n<span class=\"gr\">NameError</span>: <span class=\"n\">name &#39;mapping&#39; is not defined</span>\n</pre></div>\n</span>"
+        }
+      ]
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "7a0821cebe7bdf205415a5eea58f3fcd",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (MarimoExceptionRaisedError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "efcb187cd46b09c7a6fce56df5fb8dbe",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (MarimoExceptionRaisedError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Vxnm",
+      "code_hash": "d8ad9b26f21f9d3d57cce765d3edfc57",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "DnEU",
+      "code_hash": "9f605079b733708d42622c22060b8503",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (MarimoExceptionRaisedError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    }
+  ]
+}
