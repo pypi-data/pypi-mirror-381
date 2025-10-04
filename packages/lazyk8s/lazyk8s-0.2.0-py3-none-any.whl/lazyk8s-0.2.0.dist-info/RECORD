@@ -1,0 +1,11 @@
+lazyk8s/__init__.py,sha256=PPJvsCw-PJHu_Ahp71-AeXm90DtYhhOvDCw6l2jlRk0,75
+lazyk8s/app.py,sha256=NNReQpw346kI152wmpl5w0MVlKrX7JZSFv8CkpTqC0A,956
+lazyk8s/config.py,sha256=tcUACiFpPNNGjWkbdWsFUorp9qylGT_WCuZa67r6ysc,1672
+lazyk8s/gui.py,sha256=sDNeDtH-6K2vqMFgEp4onTmWfi7fTc0_mySbWP2BEGY,35244
+lazyk8s/k8s_client.py,sha256=vsZAGoReGv_EFBN8sfKZ9oV_nY-qKkdHPW3ZB8QS964,11590
+lazyk8s/main.py,sha256=ME5UIohIk77dwYpaymWqoedINwsW2c1q6x1moW3NfB8,1719
+lazyk8s-0.2.0.dist-info/METADATA,sha256=OjSGwDg5eDahT4ImBv548iWPhRUlu3DKiFHEKp7u3lg,1867
+lazyk8s-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+lazyk8s-0.2.0.dist-info/entry_points.txt,sha256=VHdWU41KH5jKhZTiarVDy71hLnApKVI4f8iL_CAjZRk,46
+lazyk8s-0.2.0.dist-info/top_level.txt,sha256=zRfEBZngFq5ICaeQoaZmCov7rGXFF6U6vo2pffmsyh8,8
+lazyk8s-0.2.0.dist-info/RECORD,,
