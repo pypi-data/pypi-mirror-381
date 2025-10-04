@@ -1,0 +1,13 @@
+python_switchos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_switchos/client.py,sha256=xMJ2RXPBLWLx4pUdyc6q8GNe49qhX1m75mHCzoX1Stk,856
+python_switchos/endpoint.py,sha256=eJcFeE0ZBk6nRAgxuoFyQju6632oD__vQ9JqaL8nOtU,2443
+python_switchos/http.py,sha256=7D5f1ojRnmVGB_ZK40ZG5g8kUumheOa66KESjRD6UEQ,3368
+python_switchos/utils.py,sha256=yBN5fu5sJYMrg8scWTfJsClx1By_h2rZgCfZxqdME8E,2096
+python_switchos/endpoints/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_switchos/endpoints/link.py,sha256=EYlF4W7e_Ip73-lb-dncia6yzAM5b3u9A-Bku5p3NAk,1440
+python_switchos/endpoints/poe.py,sha256=YhGTHcVSC_SungCM_FZqjrgublTM2DQPKC01DLqXRn0,1781
+python_switchos/endpoints/sys.py,sha256=_cv0GGzuaLWPlV-mTO402-XVEdAQORn61DBi_hGKRzg,2027
+python_switchos-0.0.7.dist-info/METADATA,sha256=SoAWpz9Mm5UntYHoC-0magONZyZ-blvVAwfD16ot7v0,2157
+python_switchos-0.0.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+python_switchos-0.0.7.dist-info/licenses/LICENSE,sha256=CK3UuIFTp39m-PZMEQ-LsUwTkPoxRhYhSQAVisBevJE,1070
+python_switchos-0.0.7.dist-info/RECORD,,
