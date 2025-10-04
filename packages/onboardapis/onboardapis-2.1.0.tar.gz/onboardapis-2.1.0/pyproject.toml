@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "onboardapis"
+description = "A pure Python wrapper for the on-board APIs of many different transportation providers."
+version = "2.1.0"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.9"
+keywords = [
+    "public-transport",
+    "train",
+    "api",
+]
+license = "MIT"
+authors = [
+    { name = "Felix Zenk", email = "felix.zenk@web.de" },
+]
+dependencies = [
+    "annotated-types>=0.7.0",
+    "beautifulsoup4>=4.14.2",
+    "geopy>=2.4.1",
+    "gql[all]>=4.0.0",
+    "requests>=2.32.5",
+    "restfly>=1.5.1",
+    "PyYAML>=6.0.3",
+]
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Utilities",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Typing :: Typed",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.2.2.post1",
+    "flake8>=7.2.0",
+    "Flake8-pyproject>=1.2.3",
+    "pdoc>=15.0.4",
+    "pytest>=8.4.0",
+    "pytest-cov>=6.1.1",
+]
+
+[project.urls]
+Homepage = "https://felix-zenk.github.io/onboardapis"
+Documentation = "https://felix-zenk.github.io/onboardapis/"
+Repository = "https://github.com/felix-zenk/onboardapis"
+Issues = "https://github.com/felix-zenk/onboardapis/issues"
+
+[tool.setuptools.packages.find]
+include = ["onboardapis", "onboardapis.*"]
+
+[tool.setuptools.package-data]
+onboardapis = ["py.typed"]
+"onboardapis.train" = [
+    "de/db/mappings.yaml",
+    "third_party/unwired/queries/*.graphql",
+    "third_party/unwired/mutations/*.graphql",
+]
+"onboardapis.other" = ["NAMESPACE.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.flake8]
+max-line-length = 120

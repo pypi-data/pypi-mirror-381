@@ -1,0 +1,86 @@
+query splashpage($user_session_id: ID!, $language: String!, $initial: Boolean) {
+    splashpage(
+        user_session_id: $user_session_id
+        language: $language
+        initial: $initial
+    ) {
+        error {
+            ...Error
+            __typename
+        }
+        user_session_id
+        connected
+        online
+        splashpage {
+            ...Splashpage
+        }
+        user_session_info {
+            ...UserSessionInfo
+        }
+    }
+}
+
+fragment Splashpage on Splashpage {
+    pages {
+        ...Page
+    }
+}
+
+fragment Page on Page {
+    page_id
+    widgets {
+        ...Widget
+        __typename
+    }
+}
+
+fragment Widget on Widget {
+    widget_id
+    ... on JourneyInfoWidget {
+        json
+        is_ready
+        __typename
+    }
+    ... on MovingMapWidget {
+        is_ready
+        geo_points {
+            lat
+            long
+        }
+        json
+        __typename
+    }
+    __typename
+}
+
+fragment Error on Error {
+    error_code
+    error_message
+    __typename
+}
+
+fragment UserSessionInfo on UserSessionInfo {
+    user_session_id
+    network_user_policy {
+        network_user_policy_id
+        max_mbytes_down
+        max_mbytes_up
+        daily_max_mbytes_down
+        daily_max_mbytes_up
+        max_bandwidth_down
+        max_bandwidth_up
+        max_pause_time
+        accounting_interval
+        timeout_session
+        daily_max_session_time
+        timeout_idle
+        __typename
+    }
+    mbytes_down
+    mbytes_up
+    session_time
+    daily_mbytes_down
+    daily_mbytes_up
+    daily_session_time
+    __typename
+}

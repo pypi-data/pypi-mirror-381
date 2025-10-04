@@ -1,0 +1,15 @@
+annotated-types>=0.7.0
+beautifulsoup4>=4.14.2
+geopy>=2.4.1
+gql[all]>=4.0.0
+requests>=2.32.5
+restfly>=1.5.1
+PyYAML>=6.0.3
+
+[dev]
+build>=1.2.2.post1
+flake8>=7.2.0
+Flake8-pyproject>=1.2.3
+pdoc>=15.0.4
+pytest>=8.4.0
+pytest-cov>=6.1.1
