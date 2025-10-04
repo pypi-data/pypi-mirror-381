@@ -1,0 +1,9 @@
+sqlite_ai-0.7.55.data/purelib/sqliteai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlite_ai-0.7.55.data/purelib/sqliteai/_version.py,sha256=6zzTaqQSqZIah99N7EMsQh_S-AYnZgOVSjoqZ79J1_E,67
+sqlite_ai-0.7.55.data/purelib/sqliteai/binaries/cpu/ai.dll,sha256=XD42YrFqAD56qbBtAtUAMh4ZStnb5JZOX9QNYyCdk3U,5633251
+sqlite_ai-0.7.55.data/purelib/sqliteai/binaries/gpu/ai.dll,sha256=9UlNuN6i9E-MlDwvIrTNydHIHTdl9LaW8hqBZWiEGXI,50204746
+sqlite_ai-0.7.55.dist-info/licenses/LICENSE.md,sha256=SB3cxwqwiNyHoEpSeR7OyErtoNbR5uWLlzD6xMO3xyg,1831
+sqlite_ai-0.7.55.dist-info/METADATA,sha256=8XVc8Z9whf3BzL0-TWRW8Nnzkar7NdSi7p9yJWMVswc,3091
+sqlite_ai-0.7.55.dist-info/WHEEL,sha256=BlXG8Qkq_mCTKpY-toCToAQAmGPE73xawTOhla8_4pE,98
+sqlite_ai-0.7.55.dist-info/top_level.txt,sha256=_uPq8pm06R7zBj-QjzdqedSw48NANMoGxRDsgGMGl4M,9
+sqlite_ai-0.7.55.dist-info/RECORD,,
