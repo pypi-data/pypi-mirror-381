@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+errorx/__init__.py
+errorx/advanced.py
+errorx/core.py
+errorx/utils.py
+errorx.egg-info/PKG-INFO
+errorx.egg-info/SOURCES.txt
+errorx.egg-info/dependency_links.txt
+errorx.egg-info/top_level.txt
