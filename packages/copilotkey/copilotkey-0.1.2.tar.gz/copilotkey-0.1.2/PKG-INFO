@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: copilotkey
+Version: 0.1.2
+Summary: Send Shift+Win+F23 (Copilot Key) with one call
+Author: Daniel Kramer
+Author-email: dvkramer@outlook.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# copilotkey
+
+Tiny Python package to send **Shift+Win+F23** (the Copilot Key) when called.
+
+## Usage
+```python
+from copilotkey import CopilotKey
+
+CopilotKey()        # sends Shift+Win+F23
+```
+
