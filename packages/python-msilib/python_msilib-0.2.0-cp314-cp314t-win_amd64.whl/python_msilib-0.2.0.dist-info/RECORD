@@ -1,0 +1,13 @@
+msilib/__init__.py,sha256=fm5yUVNBZHd4B5jMZES1GkFfJ5NYREkgn5feuRBuneM,20135
+msilib/_msi.c,sha256=FRB1t_4pjDRDg5r2DuzaqDgr0ymxIiqMCfWWlFtPJ1k,38606
+msilib/_msi.cp314t-win_amd64.pyd,sha256=QPRyDdXiYQ3m9IoMIn26D6vVXP-WadzRCyiZTqh_k48,30720
+msilib/schema.py,sha256=_qBk8geNrA5Iup92yLvv8rgbx4EUSyA0BoPxqT6Q95U,128604
+msilib/sequence.py,sha256=m1Yo_u1JGuGpHydHVNJFHvvXMZ3wBU-yHWq9px6ed1I,4526
+msilib/text.py,sha256=Xd4CFDmgChKgIf6qsc6IFzT4YmJYXH8TqPm1W6GOW10,11039
+msilib/include/_msi.h,sha256=sPtYIxAB6HS6K3_MWHpcd639whVvTqt78Pumt77l_gI,20929
+msilib/include/pythoncapi_compat.h,sha256=xReZ1yVIyHzdoO05n4XKf9iNLqFfDF1WjWV2YtQdREo,72302
+python_msilib-0.2.0.dist-info/licenses/LICENSE,sha256=Wju9Q0A41nBaSfjgklLmLoONJJJSYQD8agr81R5HUnI,2584
+python_msilib-0.2.0.dist-info/METADATA,sha256=skRbJyYS-VjtCM0RixXvCiqvhCWhSrBfoaGb3i11RaE,3578
+python_msilib-0.2.0.dist-info/WHEEL,sha256=IxxXYqBIlKEzFy9ulBJ928Gdqg6XQ3DHti4avqq3myk,102
+python_msilib-0.2.0.dist-info/top_level.txt,sha256=reGDwqhWKgUpH6z4VDR3W4MUnrUixkQv8pFZxMzH4Es,7
+python_msilib-0.2.0.dist-info/RECORD,,
