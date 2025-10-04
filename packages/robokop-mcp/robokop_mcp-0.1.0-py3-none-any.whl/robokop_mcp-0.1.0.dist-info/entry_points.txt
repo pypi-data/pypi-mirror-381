@@ -1,0 +1,2 @@
+[console_scripts]
+robokop-mcp = robokop_mcp.server:main
