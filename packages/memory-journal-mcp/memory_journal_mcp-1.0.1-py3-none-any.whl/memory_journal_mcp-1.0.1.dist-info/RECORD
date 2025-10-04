@@ -1,0 +1,8 @@
+memory_journal_mcp/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+memory_journal_mcp/schema.sql,sha256=FjIk9InJSD0RxIuEW_pFR-8x137KNg9OYD_H2FESzac,7069
+memory_journal_mcp/server.py,sha256=I1OduXygVyRjIFfuDltx7GzTM9dbWpkd-EkIurL1duA,46226
+memory_journal_mcp-1.0.1.dist-info/METADATA,sha256=MiMQ-v0Zm3uPevpE4Mqvfmri74s5pe5URLGAq-VAQ9U,22240
+memory_journal_mcp-1.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+memory_journal_mcp-1.0.1.dist-info/entry_points.txt,sha256=CnQWdQxGSlZBfiKggE_CDsbtZR8GGY4nMGvG8pgzPYo,51
+memory_journal_mcp-1.0.1.dist-info/licenses/LICENSE,sha256=bocElWGWMrnErfVqZsmiOov45p5L3D2vuNeOnmfADSo,1068
+memory_journal_mcp-1.0.1.dist-info/RECORD,,
