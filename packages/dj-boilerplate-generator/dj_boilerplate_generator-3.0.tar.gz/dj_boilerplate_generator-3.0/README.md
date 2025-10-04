@@ -1,0 +1,60 @@
+# Django Enterprise Generator 🚀  
+_The Ultimate Django Boilerplate Generator – Enterprise Edition_
+
+[![Python Versions](https://img.shields.io/pypi/pyversions/dj-boilerplate-generator.svg?logo=python&logoColor=yellow)](https://pypi.org/project/dj-boilerplate-generator/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/contactshaikhwasim/dj-boilerplate-generator/blob/main/LICENSE)
+![Total Downloads](https://static.pepy.tech/badge/dj-boilerplate-generator)
+![Monthly Downloads](https://static.pepy.tech/badge/dj-boilerplate-generator/month)
+![Weekly Downloads](https://static.pepy.tech/badge/dj-boilerplate-generator/week)
+[![Documentation Status](https://readthedocs.org/projects/dj-boilerplate-generator/badge/?version=latest)](https://dj-boilerplate-generator.readthedocs.io/en/latest/?badge=latest)
+[![GitHub Stars](https://img.shields.io/github/stars/contactshaikhwasim/dj-boilerplate-generator?style=flat&logo=github)](https://github.com/contactshaikhwasim/dj-boilerplate-generator/stargazers)
+[![Open Issues](https://img.shields.io/github/issues/contactshaikhwasim/dj-boilerplate-generator?logo=github)](https://github.com/contactshaikhwasim/dj-boilerplate-generator/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/contactshaikhwasim/dj-boilerplate-generator?logo=git)](https://github.com/contactshaikhwasim/dj-boilerplate-generator/commits/main)
+[![Made with Python](https://img.shields.io/badge/Made%20with-Python-blue?logo=python)]()
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/contactshaikhwasim/dj-boilerplate-generator/pulls)
+
+## 📌 Overview
+`dj-boilerplate-generator` (aka **Django Enterprise Generator**) helps you **bootstrap Django projects** in seconds with a production-ready, enterprise-grade structure.  
+It saves you hours of setup time by generating a well-organized boilerplate with best practices baked in.
+
+Perfect for:
+- ✅ Django beginners who want to skip tedious setup  
+- ✅ Teams building enterprise applications with consistent structure  
+- ✅ Hackathon/PoC projects that need a quick start  
+
+---
+
+## ✨ Features
+- 🚀 **Instant Project Scaffolding** – Generate a full Django project with one command  
+- 🏗 **Enterprise-Grade Structure** – Modular apps, reusable templates, clean architecture  
+- ⚡ **Rich CLI** – Interactive prompts powered by [click](https://palletsprojects.com/p/click/) + [questionary](https://github.com/tmbo/questionary)  
+- 🎨 **Jinja2 Templates** – Customizable boilerplate templates for flexibility  
+- 🔑 **Secure by Default** – Built-in support for `python-decouple` & `dj-database-url`  
+- 📂 **Multiple Environments** – Pre-configured settings for dev, testing, and production  
+
+---
+## ☕ Support  
+
+If you find **Enterprise-Grade Structure** helpful, consider supporting me:  
+
+<a href="https://www.buymeacoffee.com/wasimshaikh" target="_blank">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="45" width="170">
+</a>
+
+---
+
+📥 Install via PyPI:
+```bash
+pip install dj-boilerplate-generator
+```
+Or, for the latest development version:
+```bash
+pip install git+https://github.com/contactshaikhwasim/dj-boilerplate-generator.git
+```
+
+
+
+## 🖥️ Launch the Interactive CLI (Recommended)
+```bash
+django-enterprise
+```
