@@ -1,0 +1,70 @@
+[project]
+
+name = "import-cmip6-data-utils"
+
+description = "Utilitary package for building notebooks that import CMIP6 data thanks to csv files, based on intake-esgf."
+
+readme = "README.md"
+
+authors = [{name = "Lucas Giboni", email = "lucas.giboni@univ-grenoble-alpes.fr"},]
+
+classifiers = [
+    "Development Status :: 4 - Beta", 
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+]
+
+
+keywords = ["CMIP6","download","data","notebook","utilities","intake-esgf",]
+
+version = "v2025.10.03b2"
+
+dependencies = [
+  "intake-esgf>=v2025.7.16",
+  "ipykernel",
+  "ipywidgets",
+  "pandas",
+  "xarray",
+  "xcdat",
+  "tabulate",
+]
+
+license = "BSD-3-Clause"
+
+license-files = ["LICEN[CS]E*",]
+
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+
+dev = [
+"pytest",
+]
+
+[project.urls]
+
+Homepage = "https://gricad-gitlab.univ-grenoble-alpes.fr/gibonil/import-cmip6-data-utils"
+
+Issues = "https://gricad-gitlab.univ-grenoble-alpes.fr/gibonil/import-cmip6-data-utils/-/issues"
+
+[build-system]
+
+requires = ["hatchling >= 1.26"]
+
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+
+packages = ["src/import_cmip6_data_utils"]
+
+[tool.ruff.lint]
+
+# Avoid enforcing unused imports ('F401')
+
+ignore = ["F401"]

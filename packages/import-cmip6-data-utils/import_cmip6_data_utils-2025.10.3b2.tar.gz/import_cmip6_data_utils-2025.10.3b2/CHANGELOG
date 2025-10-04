@@ -1,0 +1,21 @@
+# v2025.10.03b2
+
+Corrected a missing variable in a function.
+
+Modified : csv_criteria.py from the tools subpackage.
+
+# v2025.10.03b1
+
+Correct an importation error.
+
+Modified : csv_criteria.py from the tools subpackage.
+
+# v2025.10.03b0
+
+The user now need to give the criteria folder absolute path to avoid error upon the usage of this package.
+
+Modified : csv_criteria.py from the tools subpackage.
+
+# v2025.09.25b0
+
+The package is now downloadable via pip and usable in a jupyter notebook.
