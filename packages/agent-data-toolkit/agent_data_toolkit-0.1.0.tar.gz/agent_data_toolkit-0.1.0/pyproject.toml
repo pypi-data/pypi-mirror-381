@@ -1,0 +1,100 @@
+[build-system]
+requires = ["setuptools>=68", "setuptools_scm[toml]>=8", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-data-toolkit"
+dynamic = ["version"]
+description = "Connect agents to data"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [
+  { name = "Roberto Rodriguez", email = "9653181+Cyb3rWard0g@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+
+dependencies = [
+    "pandas>=2.3.3",
+]
+
+# Optional dependency groups
+[project.optional-dependencies]
+# Dev / CI helpers
+dev = [
+  "pytest>=8.4.2",
+  "pytest-asyncio>=0.23",
+  "ruff",
+  "black",
+  "anyio>=4",
+  "build",
+  "twine",
+  "packaging",
+  "setuptools",
+  "setuptools_scm",
+  "wheel",
+]
+
+# PostgreSQL connector (self-contained)
+# Include pandas/pyarrow here so users get everything they need with one extra.
+postgresql = [
+  "psycopg[binary]>=3.2.10",
+  "psycopg_pool>=3.2.6",
+  "pyarrow>=21.0.0",
+]
+
+# Convenience bundle
+all = [
+  "agent-data-toolkit[postgresql]"
+]
+
+[project.urls]
+Homepage = "https://github.com/your-org/agent-data-toolkit"
+Issues = "https://github.com/your-org/agent-data-toolkit/issues"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools_scm]
+version_scheme = "guess-next-dev"
+local_scheme = "node-and-date"
+write_to = "src/agent_data_toolkit/_version.py"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-ra"
+pythonpath = ["src"]
+norecursedirs = ["repos", ".venv"]
+markers = [
+  "pg: tests that require PostgreSQL extras and a DSN",
+]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+src = ["src", "tests"]
+extend-exclude = [".venv", ".tox", "build", "dist", "__pycache__", ".eggs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = []
+preview = true
+
+[tool.black]
+target-version = ["py313"]
+line-length = 100
+# Match Ruff’s excludes so both tools see the same tree
+exclude = '''
+/(
+  \.venv
+ | \.tox
+ | build
+ | dist
+ | __pycache__
+ | \.eggs
+)/
+'''
