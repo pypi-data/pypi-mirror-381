@@ -1,0 +1,2 @@
+[console_scripts]
+defuse = defuse.cli:main
