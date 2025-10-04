@@ -1,0 +1,39 @@
+name: Publish to PyPI
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  id-token: write  # IMPORTANT: this permission is required for OIDC
+
+jobs:
+  build-and-publish:
+    name: Build and publish
+    runs-on: ubuntu-latest
+    environment: release
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Important for git history but not for static versioning
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+          
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install hatch hatchling
+          # Removed hatch-vcs since we're using static versioning
+      
+      - name: Build package
+        run: python -m hatch build
+      
+      - name: Publish package to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        # No credentials needed with trusted publishing
