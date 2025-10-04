@@ -1,0 +1,4 @@
+[console_scripts]
+generate-init-sql = lablink_allocator_service.generate_init_sql:main
+lablink-allocator = lablink_allocator_service.main:main
+
