@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: wsxtext009
+Version: 0.1.0
+Summary: Paquete de ejemplo subido desde Google Colab
+Home-page: https://github.com/fededimant/wsxtext009
+Author: Tu Nombre
+Author-email: fededimant@hotmail.com
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: summary
+
+Ejemplo minimalista
