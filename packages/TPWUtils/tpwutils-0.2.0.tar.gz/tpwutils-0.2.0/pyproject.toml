@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TPWUtils"
+version = "0.2.0"
+description = "A collection of Python 3 utilities for logging, threading, file monitoring, and geographic calculations"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "GPL-3.0-or-later"
+authors = [
+    {name = "Pat Welch", email = "pat@mousebrains.com"}
+]
+keywords = ["logging", "threading", "inotify", "great-circle", "credentials", "systemd"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Logging",
+    "Topic :: System :: Monitoring",
+]
+dependencies = [
+    "numpy",
+    "pyinotify; sys_platform == 'linux'",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+]
+database = [
+    "psycopg>=3.0",
+]
+analysis = [
+    "pandas",
+    "xarray",
+]
+
+[project.urls]
+Homepage = "https://github.com/mousebrains/TPWUtils"
+Repository = "https://github.com/mousebrains/TPWUtils"
+Issues = "https://github.com/mousebrains/TPWUtils/issues"
+
+[tool.setuptools]
+packages = ["TPWUtils"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+[tool.mypy]
+ignore_missing_imports = true
+explicit_package_bases = true
+# Disable strict optional checking for existing code
+no_implicit_optional = false
+# Allow untyped definitions
+allow_untyped_defs = true
+# Allow variables without type annotations
+allow_untyped_globals = true
+# Don't require annotations for class variables
+disable_error_code = ["var-annotated", "assignment", "arg-type", "union-attr", "attr-defined", "import-untyped"]
+
+[[tool.mypy.overrides]]
+module = ["yaml", "pyinotify", "pandas", "psycopg"]
+ignore_missing_imports = true

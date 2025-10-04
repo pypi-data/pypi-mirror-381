@@ -1,0 +1,16 @@
+numpy
+pyyaml
+
+[:sys_platform == "linux"]
+pyinotify
+
+[analysis]
+pandas
+xarray
+
+[database]
+psycopg>=3.0
+
+[dev]
+pytest
+pytest-cov
