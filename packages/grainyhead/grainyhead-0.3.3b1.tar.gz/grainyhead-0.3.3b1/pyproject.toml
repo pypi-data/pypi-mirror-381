@@ -1,0 +1,56 @@
+[project]
+name = "grainyhead"
+version = "0.3.3b1"
+description = "Helper tools for GitHub"
+authors = [
+    {name="Damien Goutte-Gattat", email="dgouttegattat@incenp.org"}
+]
+readme = "README.md"
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Environment :: Console",
+  "Intended Audience :: Developers"
+]
+requires-python = ">=3.9"
+dependencies = [
+    "click-shell>=2.1",
+    "ghapi",
+    "pyparsing>=3.0.0",
+    "python-dateutil",
+]
+
+[project.urls]
+Homepage = "https://incenp.org/dvlpt/grainyhead.html"
+Documentation = "https://incenp.org/dvlpt/grainyhead/"
+Repository = "https://github.com/gouttegd/grainyhead"
+
+[project.scripts]
+grainyhead = "incenp.grainyhead.main:grh"
+
+[project.optional-dependencies]
+ipython = ["ipython"]
+
+[dependency-groups]
+dev = [
+    "mypy",
+    "ruff",
+    "sphinx",
+    "sphinx-rtd-theme",
+    "types-python-dateutil",
+    "types-click-shell",
+]
+
+[build-system]
+requires = ["uv_build"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "incenp.grainyhead"
+source-include = [
+    "CITATION.cff",
+    "NEWS",
+    "docs/*",
+]
+
+[tool.ruff.lint]
+ignore = ["E741"]
