@@ -1,0 +1,11 @@
+cordra/__init__.py,sha256=ORP8Czr0jtWIYFCYlUl52GNbvsui5CstSCrDo2NrW9o,1440
+cordra/auth.py,sha256=P0CSWBtHUogvTRyb_nBL6bGYrZwgGnCz7VbKlIEQTFk,8880
+cordra/client.py,sha256=Wa7UrcEWx9edNHJIoTtGvenx13MjWTqLMtGT2Yffl2U,28295
+cordra/exceptions.py,sha256=sQb14ZuR7_wcoFjk4hLPhyWNPkdYoXapWRaCTEdn0hY,2257
+cordra/models.py,sha256=FIZJlAJug3DlAOM_reW0UZKVeL3XkMYi4a_rT4vDLAA,7889
+cordra/py.typed,sha256=8PjyZ1aVoQpRVvt71muvuq5qE-jTFZkK-GLHkhdebmc,26
+cordra_python-0.1.0.dist-info/licenses/LICENSE,sha256=4hRLCHM_xGIYbPK4EMycYLr0MjJygXECTkNXW-L3Id0,1105
+cordra_python-0.1.0.dist-info/METADATA,sha256=aTELemvAJGF5wlQ7GM9fiv72TjvpVSLtOJ_6Gg__0PU,18951
+cordra_python-0.1.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+cordra_python-0.1.0.dist-info/top_level.txt,sha256=IkSLH7gHDXaTGQjDcSm_9wU6JCNuWKU-ZoR-A_kWJ4g,7
+cordra_python-0.1.0.dist-info/RECORD,,
