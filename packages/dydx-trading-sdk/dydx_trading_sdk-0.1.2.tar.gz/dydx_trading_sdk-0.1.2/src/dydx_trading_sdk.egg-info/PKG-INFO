@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: dydx-trading-sdk
+Version: 0.1.2
+Summary: The unofficial, actually good, fully-typed async Python SDK for dYdX v4, by Tribulnation.
+Author-email: Marcel Claramunt <marcel@tribulnation.com>
+Project-URL: repo, https://github.com/tribulnation/dydx.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: lazy-loader
+Requires-Dist: httpx
+Requires-Dist: websockets
+Requires-Dist: v4-proto
+Requires-Dist: dydx-v4-client
+Requires-Dist: pydantic
+
+# Dydx
+
+> package_description
