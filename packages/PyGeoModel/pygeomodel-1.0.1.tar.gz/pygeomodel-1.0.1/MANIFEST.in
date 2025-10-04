@@ -1,0 +1,7 @@
+include README.md
+include LICENSE
+recursive-include data *.json *.txt
+recursive-include ogmsServer2/data *.tif
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * .DS_Store
