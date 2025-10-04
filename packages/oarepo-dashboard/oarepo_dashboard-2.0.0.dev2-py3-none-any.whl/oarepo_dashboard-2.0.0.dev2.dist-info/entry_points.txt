@@ -1,0 +1,13 @@
+[invenio_assets.webpack]
+oarepo_dashboard_components_ui_theme = oarepo_dashboard.ui.dashboard_components.webpack:theme
+oarepo_dashboard_i18n = oarepo_dashboard.i18n.webpack:theme
+
+[invenio_base.blueprints]
+invenio_app_rdm_users = invenio_app_rdm.users_ui.views:create_ui_blueprint
+oarepo_dashboard_components = oarepo_dashboard.ui.dashboard_components:create_blueprint
+
+[invenio_base.finalize_app]
+oarepo_dashboard_finalize_app = oarepo_dashboard.ui.dashboard_components:finalize_app
+
+[invenio_i18n.translations]
+oarepo_dashboard_messages = oarepo_dashboard
