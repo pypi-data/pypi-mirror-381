@@ -1,0 +1,7 @@
+Metadata-Version: 2.3
+Name: geoscan-core
+Version: 0.1.0
+Summary: Official core SDK for Geoscan Arena platform - programmatic control of robotic systems including rovers, drones and game infrastructure
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
