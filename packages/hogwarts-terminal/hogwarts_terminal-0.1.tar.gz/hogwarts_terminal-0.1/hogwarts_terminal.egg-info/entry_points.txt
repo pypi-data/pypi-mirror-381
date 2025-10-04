@@ -1,0 +1,2 @@
+[console_scripts]
+magic = spells.spell:main
