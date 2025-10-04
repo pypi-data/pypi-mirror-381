@@ -1,0 +1,8 @@
+
+[test]
+click==8.2.1
+geopandas==1.0.1
+py==1.11.0
+pytest>=3.7
+ruff==0.12.2
+shapely==2.0.7
