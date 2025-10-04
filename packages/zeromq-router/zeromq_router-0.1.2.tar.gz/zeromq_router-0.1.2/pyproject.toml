@@ -1,0 +1,19 @@
+[project]
+name = "zeromq-router"
+version = "0.1.2"
+description = "A package that provide router based endpoint for applications using ZeroMQ"
+readme = "README.md"
+authors = [
+    { name = "Obisike Treasure", email = "obisiket@yahoo.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "pyzmq>=27.1.0",
+]
+
+[project.scripts]
+zeromq-router = "zeromq_router:main"
+
+[build-system]
+requires = ["uv_build>=0.8.22,<0.9.0"]
+build-backend = "uv_build"
