@@ -1,0 +1,13 @@
+plutoprint/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plutoprint/_plutoprint.cp310-win_amd64.dll.a,sha256=ADkxLipRy5pucfa4FaeTiL6Xn9ky1OTiJMnbhO3PyA8,1782
+plutoprint/_plutoprint.cp310-win_amd64.pyd,sha256=if87pF0JRedCECvKQ9mRoweFm-M1w64Hi8AQQXxI9oQ,108019
+plutoprint/__init__.py,sha256=-C1Md8LpRmAvlqWFVu0C1lw8FKOyL6fvzmgMLjHStVY,1747
+plutoprint/__init__.pyi,sha256=WdJfdlOIBKmULCjWugAUE9bOb1GlSh2vmo5GS6pY5cA,30335
+plutoprint/__main__.py,sha256=B1P_xMMqTZ7j_yuJgFRLo2xuumQqh9yccKpD7KCwCYU,7445
+plutoprint-0.12.0.dist-info/DELVEWHEEL,sha256=ASi4cxAvFugzIap993W2YwURv7LbbxrevpdyaU7Mvys,478
+plutoprint-0.12.0.dist-info/entry_points.txt,sha256=0TXwU-bV8efZTU9aim7lovntYla6nazB04DtXYR6F-E,57
+plutoprint-0.12.0.dist-info/LICENSE,sha256=ZvpGkHJbiWmxKSB53K2yszzZdb7wmQ-FlV-df7Ux8GM,1125
+plutoprint-0.12.0.dist-info/METADATA,sha256=-piRJ9WzlYy2gWUuMFFz_3sxRN5ZPVpXQI9WUVVoMrQ,12046
+plutoprint-0.12.0.dist-info/RECORD,,
+plutoprint-0.12.0.dist-info/WHEEL,sha256=1nIT8bOU3dBEtO1OHNUw1PB7s17JH9tAQ93SLqU9JNM,85
+plutoprint.libs/libplutobook-0-91020a011e1dadd1d9a755dddffd67d2.dll,sha256=kQIKAR4drdHZp1Xd3_1n0hLElfBkrVNVmBYTmvsAn08,45444096
