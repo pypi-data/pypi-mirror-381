@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: seminar_message_manager
+Version: 0.0.1
+Summary: A package to automate message generation and sending for seminars from a csv file
+Author-email: Gaëtan Serré <gaetan.serre@ens-paris-saclay.fr>, Gwendal Debaussart-Joniec <gwendal.debaussart@ens-paris-saclay.fr>
+Maintainer-email: Gaëtan Serré <gaetan.serre@ens-paris-saclay.fr>, Gwendal Debaussart-Joniec <gwendal.debaussart@ens-paris-saclay.fr>
+Project-URL: Repository, https://github.com/gaetanserre/seminars_msg_gen
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.3.2
+Requires-Dist: zulip>=0.9.1
+
+# Seminar Message Manager
