@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-transcriptions-server = mcp_transcriptions_server:main

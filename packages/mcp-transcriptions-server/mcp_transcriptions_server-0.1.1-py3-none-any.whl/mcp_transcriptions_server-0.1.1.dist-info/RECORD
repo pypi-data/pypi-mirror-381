@@ -1,0 +1,7 @@
+mcp_transcriptions_server/__init__.py,sha256=SB9odR-v9GQ-1VEbGQNcUkrAb16PCzKfTqjChJz0nt4,46
+mcp_transcriptions_server/openai_transciption.py,sha256=uOQ2VYsNX_e7dkxd271mnp9iCv9wX-0RDO27Z24Efqg,2701
+mcp_transcriptions_server/server.py,sha256=HT_C2SNPLpuJ8QPMhc1jEVGoXpB0FpSGCSaioi2JG44,1482
+mcp_transcriptions_server-0.1.1.dist-info/METADATA,sha256=qwKEnnyIx30-KHKk8aWBl1Oyqy1Dyumf_VqNMDIjJgs,189
+mcp_transcriptions_server-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mcp_transcriptions_server-0.1.1.dist-info/entry_points.txt,sha256=rGU1V3wjtj62iWo07GhV12njzXn1EBss5oQI_J2sftk,77
+mcp_transcriptions_server-0.1.1.dist-info/RECORD,,
