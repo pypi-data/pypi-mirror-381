@@ -1,0 +1,2 @@
+[console_scripts]
+local-context-server = context_server.main:run
