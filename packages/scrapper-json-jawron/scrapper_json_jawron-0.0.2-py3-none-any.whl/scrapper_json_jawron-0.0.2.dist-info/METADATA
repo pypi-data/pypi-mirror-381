@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: scrapper_json_jawron
+Version: 0.0.2
+Summary: A simple scrapper with structured JSON support
+Project-URL: Homepage, https://github.com/TheTasak/ScrapperJson
+Project-URL: Issues, https://github.com/TheTasak/ScrapperJson/issues
+Author-email: Przemysław Tasarz <horushom@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.13
+Requires-Dist: beautifulsoup4==4.13.4
+Requires-Dist: requests==2.32.3
+Description-Content-Type: text/markdown
+
+A simple scrapper with support for JSON structure
