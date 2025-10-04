@@ -1,0 +1,10 @@
+codegnan/__init__.py,sha256=B6u9swYQddPDoAPK6XQh9UPEO8llSkwPM_ctMHfepIA,99
+codegnan/quest_engine.py,sha256=KJvSKC1avPl4-iITPD2Q58-GQIcOkM95Xyd8VSRoz6A,267
+codegnan/quiz.py,sha256=IMaV1Pfu7WddvqaDu2waq5JabQzXpYIXFsxO4G7e9fw,2510
+codegnan/resources/coding_questions.json,sha256=MaxOQZBZ4c1wOg9tHA-E0-X5lwJkXq7Gu1N1X3o_p7w,3179
+codegnan/resources/mcqs.json,sha256=liZ13YMOXt3LxX1e7Kw1bZ68A3wETt1s74WeNjViSBY,4123
+codegnan-0.2.0.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+codegnan-0.2.0.dist-info/METADATA,sha256=ydpFAPeMvmF70_zIZzcL1c8xa0jkFCVqG6_FmIV9sh4,902
+codegnan-0.2.0.dist-info/WHEEL,sha256=_zCd3N1l69ArxyTb8rzEoP9TpbYXkqRFSNOD5OuxnTs,91
+codegnan-0.2.0.dist-info/top_level.txt,sha256=l_1mjNLxwZ8oZy_qEQBGgoJdJsh0txFE0-CdqMYYlU0,9
+codegnan-0.2.0.dist-info/RECORD,,
