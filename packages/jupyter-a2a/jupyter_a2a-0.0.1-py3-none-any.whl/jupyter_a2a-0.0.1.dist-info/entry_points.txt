@@ -1,0 +1,2 @@
+[console_scripts]
+jupyter-a2a = jupyter_a2a.server:server
