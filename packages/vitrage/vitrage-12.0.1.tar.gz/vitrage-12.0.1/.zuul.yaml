@@ -1,0 +1,23 @@
+
+- project:
+    queue: vitrage
+    templates:
+      - check-requirements
+      - openstack-python3-jobs
+      - publish-openstack-docs-pti
+      - release-notes-jobs-python3
+    check:
+      jobs:
+        - openstack-tox-py38
+        - openstack-tox-py310
+        - vitrage-tempest-plugin-api:
+            voting: false
+        - vitrage-tempest-plugin-api-ipv6-only:
+            voting: false
+        - vitrage-tempest-plugin-datasources:
+            voting: false
+
+    gate:
+      jobs:
+        - openstack-tox-py38
+        - openstack-tox-py310
