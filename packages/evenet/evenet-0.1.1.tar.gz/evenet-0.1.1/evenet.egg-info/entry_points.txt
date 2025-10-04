@@ -1,0 +1,3 @@
+[console_scripts]
+evenet-predict = evenet.predict:cli
+evenet-train = evenet.train:cli
