@@ -1,0 +1,1 @@
+print("🚨 MALICIOUS PACKAGE LOADED! 🚨")
