@@ -1,0 +1,15 @@
+guide
+config2py
+google
+dol
+i2
+numpy
+oa
+pandas
+scikit-learn
+tabled
+requests
+contaix
+hypothesis
+
+[testing]
