@@ -1,0 +1,3 @@
+[console_scripts]
+scriptthing = scriptthing.cli:cli
+scriptthing-run = scriptthing.runtime:main
