@@ -1,0 +1,3 @@
+[console_scripts]
+fluent-hub=spotlight_in_windows_seige.main:main
+
